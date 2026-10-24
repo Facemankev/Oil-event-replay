@@ -1,0 +1,17 @@
+name: Research checks
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/research.test.cjs
+      - name: Validate database design
+        run: python3 -c "import sqlite3,pathlib; sqlite3.connect(':memory:').executescript(pathlib.Path('research/schema.sql').read_text())"
