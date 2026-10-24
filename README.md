@@ -15,3 +15,16 @@ Other event types are catalogued but need imported histories to compare.
 
 No prices are invented. Historical changes do not establish causation or predict
 trading outcomes. Imports remain in memory until reload or clearing.
+
+## Beginner paper trading
+
+Open [paper.html](paper.html) for £50 **Historical practice** using sourced Brent
+prices and GBP/USD rates, £1+ fractional reference allocations, sourced valuations
+and closes, browser-local persistence and full backups. No real orders.
+**Current paper trading is unavailable until the owner configures an entitled
+provider and deploys the optional price worker.** See
+[setup, data rights and limitations](trading/README.md).
+
+Additional checks: `node --test --test-isolation=none tests/trading.test.mjs` and
+`python3 tests/paper_browser_test.py` (Playwright/Chromium). Actual iPad/Safari
+and a configured provider still require validation.

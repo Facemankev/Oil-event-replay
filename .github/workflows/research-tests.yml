@@ -12,6 +12,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test tests/research.test.cjs
+      - run: node --test tests/research.test.cjs tests/trading.test.mjs
       - name: Validate database design
         run: python3 -c "import sqlite3,pathlib; sqlite3.connect(':memory:').executescript(pathlib.Path('research/schema.sql').read_text())"

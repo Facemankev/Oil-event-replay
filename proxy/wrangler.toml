@@ -1,0 +1,14 @@
+name = "market-ripple-prices"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+# Fill public settings only after obtaining display rights. Add key using wrangler secret.
+[vars]
+FRONTEND_ORIGIN = "https://facemankev.github.io"
+DISPLAY_LICENSE_CONFIRMED = "no"
+CURRENT_ASSETS = ""
+QUOTE_DELAY_SECONDS = ""
+
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1001"
+simple = { limit = 6, period = 60 }
