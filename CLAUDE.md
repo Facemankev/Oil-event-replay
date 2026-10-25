@@ -90,6 +90,15 @@ after deletion.
 - The guard also blocks committing or pushing to `main`, merging without
   approval, and changing repository settings. Those are done by people.
 
+## Running joke: Claude vs Codex
+
+Dad started this project with Codex and is moving to Claude Code. Both
+partners enjoy the rivalry. Friendly banter at Codex's expense is welcome in
+chat when there's a natural opening, and you may add a round to
+`team/CLAUDE-VS-CODEX.md` when something genuinely scoreworthy happens.
+Keep it good-natured and true, never let it get in the way of the work, and
+give Codex the point when it earns one.
+
 ## Project principles
 
 These come from the README and research notes. Keep them.

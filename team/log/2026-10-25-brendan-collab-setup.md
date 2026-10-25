@@ -35,6 +35,9 @@ other's work and catch up between sessions.
   discuss.
 - No website code was changed.
 
+- Opened hostilities: `team/CLAUDE-VS-CODEX.md` keeps score. Claude leads
+  5–1.
+
 **Unfinished:** the vision and the workstream list in `PLAN.md` need Dad.
 
 **For Dad:**
