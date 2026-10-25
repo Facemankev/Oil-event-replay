@@ -34,14 +34,24 @@ has to remember to.
 
 Work on a branch, never on `main`. Every change goes through a pull request
 the other person approves. Claim a to-do item before starting it. The vision
-and big direction change only when we both agree. `TODO.md` is the only
-to-do list.
+and big direction change only when we both agree. `TODO.md` is the main
+to-do list; GitHub Issues are fine for single bugs, technical tasks and
+feature requests, linked from `TODO.md`.
 
 ## Privacy
 
-This repo is public. A guard checks everything the AI saves to GitHub or
-posts there, and blocks keys, passwords, emails, phone numbers and anything
-in your personal block list (`.claude/private-words.txt`, which stays on your
-computer). GitHub runs the same check on every pull request. The guard also
-stops the AI changing `main` directly, merging without approval, or changing
-repo settings.
+This repo is public for now, so nothing personal, no passwords or keys, and
+nothing commercially sensitive goes in it. If Market Ripple becomes a
+commercial product, we reconsider what stays public.
+
+A guard checks everything Claude saves to GitHub or posts there, and blocks
+keys, passwords, emails, phone numbers and anything in your personal block
+list (`.claude/private-words.txt`, which stays on your computer). GitHub runs
+the same check on every pull request. The guard also stops Claude changing
+`main` directly, merging without approval, or changing repo settings.
+
+**What it can't do:** it spots patterns, not meaning, so something private
+written in ordinary words gets through. It only works inside Claude Code: it
+doesn't cover Codex or anything done by hand on GitHub. GitHub's own
+protection on `main` (pull request, one approval, passing checks) is the
+real backstop, because it applies to everyone.

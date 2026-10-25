@@ -63,6 +63,8 @@ What each of us is on this week. Keep it short. Details live in `TODO.md`.
 ## 6. Open questions
 
 - How do we settle a disagreement, given we have equal say?
+- If Market Ripple becomes a commercial product, which parts stay public?
+  (Decision 5)
 - Does the repo stay on Dad's account, or move to a free GitHub organisation
   where both of us are owners?
 - Who is Market Ripple for: personal learning, family, or the public?

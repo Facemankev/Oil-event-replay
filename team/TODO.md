@@ -1,8 +1,9 @@
 # To-do list
 
-This is our **only** to-do list. We don't track jobs anywhere else: not in
-GitHub Issues, not in chat. The one existing issue (#3, paper trading) is
-covered by the PR #2 item below. No new issues get opened.
+This is our **main** to-do list and roadmap. GitHub Issues can hold the
+detail for individual bugs, technical tasks and feature requests; each one
+gets an item here that links to it (issue #3, paper trading, is covered by
+the PR #2 item below).
 
 Each item: what, **who**, and the date added. Move items between sections as
 they progress. Mark an item *Doing* before starting it, so we never both pick

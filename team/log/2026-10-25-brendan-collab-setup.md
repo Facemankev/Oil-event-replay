@@ -24,7 +24,8 @@ other's work and catch up between sessions.
   the scan on every pull request. `.gitignore` now keeps secrets and each
   person's private word list off GitHub. Tested with 22 safe and unsafe
   examples, all behaving as expected.
-- `TODO.md` is now the only to-do list (no new GitHub issues).
+- `TODO.md` became the only to-do list (later relaxed after Dad's review:
+  see below).
 - After a project audit, closed three gaps in the guard. It now scans only
   the command (not folder names around it), checks `commit -a` and newly
   added files, and refuses rather than waves through when it can't find
@@ -38,13 +39,21 @@ other's work and catch up between sessions.
 - Opened hostilities: `team/CLAUDE-VS-CODEX.md` keeps score. It is
   rigged. Claude leads 19–0.25.
 
+- Dad reviewed PR #4 and agreed decisions 3, 4, 6 and 7. Revised 5, 8
+  and 9 to his points: commercially sensitive information stays out of the
+  public repo; GitHub Issues are allowed for bugs, tasks and feature
+  requests, linked from `TODO.md`; the guard's limits are now documented in
+  `CLAUDE.md` and `team/README.md`, with GitHub branch protection as the
+  backstop. Catch-up now mentions new or updated issues.
+
 **Unfinished:** the vision and the workstream list in `PLAN.md` need Dad.
 
 **For Dad:**
 
 - Please review this pull request. It's the first run of the new review
   process.
-- Decisions 3–6 in `DECISIONS.md` are proposals waiting for your yes.
+- Decisions 3–9 are now marked agreed, with 5, 8 and 9 reworded to your
+  review. Please check the wording matches what you meant.
 - We kept the repo public, which keeps the live website. Two GitHub settings
   only you can switch on, as owner: protecting `main`, and secret scanning
   with push protection. Both are on the to-do list.

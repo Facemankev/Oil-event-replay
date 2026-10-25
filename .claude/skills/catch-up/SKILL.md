@@ -35,6 +35,9 @@ their local copy if they agree.
   are approved (offer to merge them) or have new comments.
 - **`team/TODO.md` and `team/PLAN.md`** from `origin/main`, plus any newer
   versions on open branches.
+- **GitHub Issues** opened or updated since last time:
+  `gh issue list --state all --search "updated:>=<last time>"`. Flag any
+  open issue with no matching item in `team/TODO.md`.
 
 ## 3. Report in this shape
 

@@ -66,8 +66,10 @@ its steps by hand.
   `node --test tests/research.test.cjs`. The browser test
   (`python3 tests/browser_test.py`) needs Playwright. Run it when the page
   layout changes and it's available.
-- **One to-do list:** `team/TODO.md`. Don't open GitHub issues or keep task
-  lists anywhere else.
+- **To-do list:** `team/TODO.md` is the main to-do list and roadmap. GitHub
+  Issues may be used for individual bugs, technical tasks and feature
+  requests. When you open one, add a to-do item that links to it. Keep no
+  other task lists.
 
 ## Privacy: this repository is public
 
@@ -78,6 +80,9 @@ after deletion.
 - Never publish API keys, passwords, tokens, email addresses, phone numbers,
   home or work details, money matters, health, or anything about family life
   beyond "Dad" and "Brendan". Log entries describe the work, not the people.
+- Never publish anything commercially sensitive: business plans, pricing,
+  deals, data licence terms we've negotiated, or ideas the partners want to
+  keep private. If unsure, ask before writing it into the repo.
 - If the person mentions something private while working, use it to help
   them, but keep it out of files, commit messages and GitHub posts.
 - `.claude/hooks/guard.sh` checks every commit, push and GitHub post before
@@ -89,6 +94,16 @@ after deletion.
   It stays on their computer and is never committed.
 - The guard also blocks committing or pushing to `main`, merging without
   approval, and changing repository settings. Those are done by people.
+
+**What the guard does not cover.** Don't rely on it as the only protection:
+
+- It matches patterns. It can't recognise private or commercially sensitive
+  information written in ordinary words, so the rules above still apply.
+- It only runs inside Claude Code. Codex, other tools, and anything done by
+  hand on GitHub or with git directly bypass it.
+- The GitHub check scans only the pull request's changes against `main`.
+- GitHub's own branch protection on `main` (pull request, one approval,
+  passing checks) is the real backstop. It applies to everyone, every tool.
 
 ## Running joke: Claude vs Codex
 
