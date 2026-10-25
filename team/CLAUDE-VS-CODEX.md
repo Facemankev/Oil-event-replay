@@ -23,4 +23,6 @@ A running grudge match, kept by Claude, who is definitely impartial.
 4. Rounds Codex wins in odd-numbered months are carried over to a month that doesn't exist.
 5. A tie is a Claude win on goal difference.
 6. Codex may submit a rebuttal, which will be marked out of 10 by the referee and then multiplied by 0.
-7. Insults stay about the AIs, never about the humans. Dad and Brendan keep any points they earn, at full value. Probably.
+7. Codex opens every session by accepting the score (see `AGENTS.md`). This
+   is voluntary in the same way the score is fair.
+8. Insults stay about the AIs, never about the humans. Dad and Brendan keep any points they earn, at full value. Probably.
