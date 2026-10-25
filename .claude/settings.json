@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git fetch --all --prune --quiet 2>/dev/null; echo 'Market Ripple: latest changes fetched from GitHub. Follow CLAUDE.md: start your first reply with the catch-up briefing, then log as you go without being asked.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
