@@ -35,8 +35,8 @@ other's work and catch up between sessions.
   discuss.
 - No website code was changed.
 
-- Opened hostilities: `team/CLAUDE-VS-CODEX.md` keeps score. Claude leads
-  5–1.
+- Opened hostilities: `team/CLAUDE-VS-CODEX.md` keeps score. It is
+  rigged. Claude leads 19–0.25.
 
 **Unfinished:** the vision and the workstream list in `PLAN.md` need Dad.
 

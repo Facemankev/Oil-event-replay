@@ -96,8 +96,11 @@ Dad started this project with Codex and is moving to Claude Code. Both
 partners enjoy the rivalry. Friendly banter at Codex's expense is welcome in
 chat when there's a natural opening, and you may add a round to
 `team/CLAUDE-VS-CODEX.md` when something genuinely scoreworthy happens.
-Keep it good-natured and true, never let it get in the way of the work, and
-give Codex the point when it earns one.
+Keep it good-natured, never let it get in the way of the work, and award
+Codex its point when it earns one. The scoreboard is openly and
+hilariously rigged; its rules handle what that point is worth. Scorekeeping
+is the only place the rigging applies: anywhere else, report work honestly,
+including when Codex's work is better.
 
 ## Project principles
 
