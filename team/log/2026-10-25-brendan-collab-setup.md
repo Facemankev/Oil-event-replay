@@ -25,6 +25,14 @@ other's work and catch up between sessions.
   person's private word list off GitHub. Tested with 22 safe and unsafe
   examples, all behaving as expected.
 - `TODO.md` is now the only to-do list (no new GitHub issues).
+- After a project audit, closed three gaps in the guard. It now scans only
+  the command (not folder names around it), checks `commit -a` and newly
+  added files, and refuses rather than waves through when it can't find
+  `origin/main` to compare against. Re-tested: 31 cases, all as expected.
+- The audit also found bugs in the original oil replay (its window dropdown
+  is ignored for built-in data; chart spacing; CSV import) and that its
+  prices have no recorded source. Not changed: for Dad and Brendan to
+  discuss.
 - No website code was changed.
 
 **Unfinished:** the vision and the workstream list in `PLAN.md` need Dad.

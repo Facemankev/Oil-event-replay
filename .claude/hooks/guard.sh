@@ -48,8 +48,26 @@ added_lines() {
   git -C "$root" diff -U0 "$@" 2>/dev/null | grep '^+' | grep -v '^+++'
 }
 
+# Where this branch split from main. Fails if origin/main is unknown, so callers
+# refuse rather than check an empty diff.
 branch_base() {
-  git -C "$root" merge-base HEAD origin/main 2>/dev/null || echo origin/main
+  git -C "$root" merge-base HEAD origin/main 2>/dev/null
+}
+
+# Text of new files not yet tracked by git (binary files skipped).
+untracked_text() {
+  (cd "$root" && git ls-files -z --others --exclude-standard | xargs -0 grep -I -h '' 2>/dev/null)
+}
+
+# The shell command from the hook's JSON input. Only this is scanned, so folder
+# names elsewhere in the input (cwd, transcript path) can't trigger a block.
+# If it can't be found, the whole input is scanned instead.
+command_text() {
+  local raw
+  raw="$(printf '%s' "$1" | tr '\n' ' ' | grep -oE '"command"[[:space:]]*:[[:space:]]*"([^"\\]|\\.)*"' | head -1)"
+  if [ -z "$raw" ]; then printf '%s' "$1"; return; fi
+  raw="${raw#*:}"; raw="${raw#*\"}"; raw="${raw%\"}"
+  printf '%s' "$raw" | sed -e 's/\\n/\n/g' -e 's/\\t/\t/g' -e 's/\\"/"/g' -e 's/\\\\/\\/g'
 }
 
 block() {
@@ -65,7 +83,8 @@ check_text() { # $1 = text, $2 = what it is
 }
 
 if [ "${1:-}" = "scan" ]; then
-  found="$(find_private "$(added_lines "$(branch_base)" HEAD)")"
+  base="$(branch_base)" || { echo "Can't find origin/main to compare against. Run git fetch origin main first." >&2; exit 1; }
+  found="$(find_private "$(added_lines "$base" HEAD)")"
   if [ -n "$found" ]; then
     echo "Possible private information added on this branch: $found" >&2
     exit 1
@@ -74,7 +93,7 @@ if [ "${1:-}" = "scan" ]; then
   exit 0
 fi
 
-input="$(cat)"
+input="$(command_text "$(cat)")"
 branch="$(git -C "$root" branch --show-current 2>/dev/null)"
 
 case "$input" in
@@ -84,15 +103,23 @@ esac
 
 if printf '%s' "$input" | grep -qE 'git (-C [^ ]+ )?commit'; then
   [ "$branch" = "main" ] && block "never commit to main. Create a person/topic branch first (for example brendan/chart-colours)."
-  check_text "$(added_lines --cached)" "The staged changes"
+  # Staged and unstaged edits to tracked files, so `commit -a` is covered too.
+  changes="$(added_lines HEAD)"
+  # `git add … && git commit` stages new files after this check runs: scan them now.
+  if printf '%s' "$input" | grep -qE 'git (-C [^ ]+ )?add'; then
+    changes="$changes
+$(untracked_text)"
+  fi
+  check_text "$changes" "The changes being committed"
   check_text "$input" "The commit message"
 fi
 
 if printf '%s' "$input" | grep -qE 'git (-C [^ ]+ )?push'; then
-  printf '%s' "$input" | grep -qE 'git (-C [^ ]+ )?push[^"]*([ :]|refs/heads/)main([ "]|$)' && block "never push to main. Push the person/topic branch and open a pull request."
+  printf '%s' "$input" | grep -qE 'git (-C [^ ]+ )?push[^";&|]*([ :]|refs/heads/)main([ "]|$)' && block "never push to main. Push the person/topic branch and open a pull request."
   [ "$branch" = "main" ] && block "never push from main. Switch to a person/topic branch."
   printf '%s' "$input" | grep -qE -- '--mirror|--all' && block "push one branch at a time."
-  check_text "$(added_lines "$(branch_base)" HEAD)" "This branch's changes"
+  base="$(branch_base)" || block "can't find origin/main to compare this branch against, so it can't be checked. Run git fetch origin main first."
+  check_text "$(added_lines "$base" HEAD)" "This branch's changes"
 fi
 
 if printf '%s' "$input" | grep -qE 'gh (pr|issue|release|gist|api)'; then
