@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-- [ ] OPS-1: Set up the shared way of working and privacy guardrails — **Brendan** — 2026-10-25
+_Nothing right now._
 
 ## To do
 
@@ -22,7 +22,6 @@ history).
 - [ ] OPS: Install Claude Code, sign in to GitHub, and download the repo. Push any unsaved Codex work to a branch first — **Dad** — 2026-10-25
 - [ ] OPS-2: Protect `main` on GitHub: changes only by pull request with 1 approval and passing checks — **Dad** — 2026-10-25
 - [ ] OPS-2: Turn on GitHub's secret scanning and push protection (Settings → Code security) — **Dad** — 2026-10-25
-- [ ] OPS-1: Review the collaboration setup pull request — **Dad** — 2026-10-25
 - [ ] OPS: Fill in your own `.claude/private-words.txt` (never shared) — **Brendan** and **Dad**, each on your own computer — 2026-10-25
 - [ ] OPS: Turn on GitHub email notifications for reviews and comments — **Brendan** and **Dad** — 2026-10-25
 - [ ] PRC-1: Review PR #2 (paper trading, issue #3) — **Brendan** — 2026-10-25
@@ -40,4 +39,4 @@ history).
 
 ## Done
 
-_Nothing yet._
+- [x] OPS-1: Shared way of working and privacy guardrails, PR #4 (approved by Dad, merged 2026-10-26) — **Brendan** — 2026-10-25

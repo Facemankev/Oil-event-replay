@@ -85,7 +85,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Brexit multi-market comparison live (PR #1) | CMP | Done | Dad | — |
 | Beginner paper trading (PR #2, issue #3) | PRC-1 | Waiting for review | Dad | Brendan's review |
 | Live prices for paper trading | PRC-2 | Blocked | Dad | A price provider licence and a deployed proxy (see PR #2) |
-| Shared way of working and privacy guardrails set up | OPS-1 | Waiting for review | Brendan | Dad's review |
+| Shared way of working and privacy guardrails set up (PR #4) | OPS-1 | Done | Brendan | Dad's review |
 | Sections and codes for the plan agreed | OPS-4 | Waiting for review | Brendan | Dad's review |
 | Vision written | OPS | Planned | Dad | — |
 | Source-specific data ingestion | DAT-3 | Planned | — | Vision, see `research/ARCHITECTURE.md` |
@@ -95,10 +95,10 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
 - **Dad:** paper trading (PR #2) waiting for Brendan's review. Next: review
-  the collaboration setup (PR #4) and the proposed sections, write the
+  the proposed sections (OPS-4), write the
   vision, then turn on the GitHub protections.
 - **Brendan:** set up the plan's sections and codes (`brendan/plan-sections`),
-  sent to Dad. Next: review PR #2.
+  sent to Dad. Setup (PR #4) merged. Next: review PR #2.
 
 ## 6. Open questions
 

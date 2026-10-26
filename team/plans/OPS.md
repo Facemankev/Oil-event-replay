@@ -5,7 +5,7 @@ rewrite. · **Section owner:** not yet chosen
 
 **Goal (provisional):** Two partners working at different times, each with their own AI, without losing track of anything or publishing anything private.
 
-**Exists today:** The `team/` folder, the four skills, the privacy guard and its GitHub check (PR #4).
+**Exists today:** The `team/` folder, the four skills, the privacy guard and its GitHub check (PR #4, merged 2026-10-26).
 
 **Depends on:** Nothing.
 
@@ -13,7 +13,7 @@ rewrite. · **Section owner:** not yet chosen
 
 | Code | Plan | Status | Owner | Detail |
 | --- | --- | --- | --- | --- |
-| OPS-1 | Collaboration setup and privacy guardrails (PR #4) | In progress | Brendan | — |
+| OPS-1 | Collaboration setup and privacy guardrails (PR #4) | Done | Brendan | — |
 | OPS-2 | GitHub protections: protect `main`, turn on secret scanning | Provisional | Dad | — |
 | OPS-3 | Review the way of working after two weeks | Provisional | Both | — |
 | OPS-4 | Sections and codes for the plan (these pages) | In progress | Brendan | — |

@@ -3,8 +3,7 @@
 **Goal:** set up the structure for the project plan, so detailed plans can
 be written one section at a time later, mostly by Dad.
 
-**What changed:** on branch `brendan/plan-sections` (built on
-`brendan/collab-setup`, because `team/` isn't on `main` yet):
+**What changed:** on branch `brendan/plan-sections` :
 
 - `team/PLAN.md`: the six draft workstreams are replaced by ten coded
   sections: EVT (event library), DAT (market data), BRD (brand), WEB (site
@@ -25,6 +24,7 @@ be written one section at a time later, mostly by Dad.
 - Decision 10 proposed. `TODO.md` items now carry codes. `CLAUDE.md`,
   `AGENTS.md` and `team/README.md` point to the codes and `plans/`.
 - No website code changed.
+- Dad approved PR #4 (collaboration setup); Brendan merged it. OPS-1 marked done.
 
 **Unfinished:** every goal and plan is provisional, waiting for Dad.
 
