@@ -25,7 +25,8 @@ has to remember to.
 
 ## What's in here
 
-- [PLAN.md](PLAN.md): where the project is going (vision, workstreams, milestones) and what's happening now.
+- [PLAN.md](PLAN.md): where the project is going (vision, sections and their codes, milestones) and what's happening now.
+- [plans/](plans/): one page per section (`EVT.md`, `MAT.md`, …) listing its plans, plus a template for writing a plan in detail.
 - [TODO.md](TODO.md): the shared to-do list. Who's doing what.
 - [DECISIONS.md](DECISIONS.md): what we've agreed, and why.
 - [log/](log/): one short note per working session.

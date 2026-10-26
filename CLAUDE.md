@@ -48,6 +48,12 @@ its steps by hand.
 - **Never commit to `main`.** Every piece of work gets its own branch named
   `person/topic` (for example `brendan/chart-colours`). Check the current
   branch before editing.
+- **Use the plan codes.** The plan is split into sections with codes
+  (`EVT`, `MAT-1`, `MAT-1.2`; see *How the codes work* in `team/PLAN.md`).
+  Put the code in to-do items, branch names (`dad/mat-1-event-input`), pull
+  request titles and logs whenever the work belongs to one. Detailed plans
+  live in `team/plans/`, one page per section, and start from
+  `team/plans/TEMPLATE.md`.
 - **One piece of work per pull request**, kept small. Open it as a draft
   early, so the other person can see it.
 - **The other partner approves** before anything is merged. Never merge a

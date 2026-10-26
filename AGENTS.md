@@ -22,6 +22,9 @@ the work itself is serious.
   changing anything.
 - Never commit to `main`. Work on a `person/topic` branch and open a pull
   request for the other partner to approve.
+- Use the plan codes (`EVT`, `MAT-1`, `MAT-1.2`; see *How the codes work*
+  in `team/PLAN.md`) in to-do items, branch names, pull request titles and
+  logs. Detailed plans live in `team/plans/`.
 - Without being asked: start each session with a catch-up briefing, and as
   each piece of work finishes, update the session log in `team/log/`,
   `team/TODO.md` and the *Now* section of `team/PLAN.md`, then commit and
