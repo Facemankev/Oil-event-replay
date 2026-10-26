@@ -16,10 +16,11 @@ rewrite. · **Section owner:** not yet chosen
 | WEB-1 | Run the browser test automatically on every pull request | Provisional | — | — |
 | WEB-2 | Decide where the live site is hosted and how it updates | Provisional | — | — |
 | WEB-3 | Agree how pages are laid out as more sections are added | Provisional | — | — |
+| WEB-4 | Background services: where monitoring (MAT-4) and live prices (PRC-2) run, kept apart from the static site | Provisional | — | — |
 
 ## Notes
 
-- Principle: static website, no build step, no API keys needed to use it.
+- Principle: the website stays static, with no build step and no API keys needed to use it. Background services may run separately, with keys kept on the server, never in this repo (decision 12).
 
 ---
 

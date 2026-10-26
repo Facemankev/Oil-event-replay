@@ -1,23 +1,27 @@
-# AST · AI assistant
+# AST · AI assistant and alerts
 
 **Status:** Provisional. Everything below is a starting point for Dad to
 rewrite. · **Section owner:** not yet chosen
 
-**Goal (provisional):** Ask questions in plain words and get answers that cite sources and real dates.
+**Goal (provisional):** The AI researches matched events and explains the evidence, risks and uncertainty in plain English, citing sources and real dates, and alerts users to potentially significant opportunities.
 
 **Exists today:** Design notes in `research/ARCHITECTURE.md`. The learning guide is scripted, not AI.
 
-**Depends on:** DAT, CMP, and a decision on whether it's wanted.
+**Depends on:** DAT, CMP, and MAT-4 for alerts.
 
 ## Plans
 
 | Code | Plan | Status | Owner | Detail |
 | --- | --- | --- | --- | --- |
-| AST-1 | Decide whether and when we want it | Provisional | — | — |
+| AST-1 | Decide what the AI does first, and which AI service | Provisional | — | — |
 | AST-2 | The read-only research functions it would use | Provisional | — | — |
+| AST-3 | Opportunity write-ups: what the event resembles, what markets did then, evidence, risks, uncertainty | Provisional (core) | Dad | — |
+| AST-4 | Alerts: how and when users are told about a new opportunity | Provisional (core) | Dad | — |
 
 ## Notes
 
+- Dad: alerts are a core part of the vision, not an optional extra.
+- Decision 12: an alert describes past patterns with evidence, risks and uncertainty. It never says what will happen, and never says buy or sell.
 - The assistant may never write prices, or turn a pattern into a claim of cause.
 
 ---

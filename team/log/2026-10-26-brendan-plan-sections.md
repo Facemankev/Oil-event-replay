@@ -26,6 +26,17 @@ be written one section at a time later, mostly by Dad.
 - No website code changed.
 - Dad approved PR #4 (collaboration setup); Brendan merged it. OPS-1 marked done.
 
+- Dad reviewed PR #5: happy with the sections, but wanted live world-event
+  monitoring and opportunity alerts made explicit, inside the existing
+  sections. Added as MAT-4, AST-3, AST-4, PRC-3 and WEB-4, with his
+  long-term objective under the vision. Two clashes resolved in the
+  wording rather than by another round of questions: alerts describe past
+  patterns and never predict or say buy/sell (decision 2 stands), and the
+  website stays static while background services are allowed. Proposed as
+  decision 12.
+- Dad merged the relaxed review rule (PR #6) into this branch. Decisions
+  10 and 11 marked agreed.
+
 **Unfinished:** every goal and plan is provisional, waiting for Dad.
 
 **For Dad:**
@@ -35,5 +46,6 @@ be written one section at a time later, mostly by Dad.
   starting points only.
 - Then choose together which section gets the first detailed plan.
 
-**Plan changes:** workstreams replaced by ten coded sections (decision 10,
-proposed).
+**Plan changes:** workstreams replaced by ten coded sections (decision 10);
+small changes merged by their author (decision 11); monitoring and alerts
+added, two principles reworded (decision 12, proposed).

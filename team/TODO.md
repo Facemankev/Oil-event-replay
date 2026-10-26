@@ -37,8 +37,9 @@ _Nothing right now._
 
 - [ ] PRC-1: Beginner paper trading, PR #2 (issue #3) — **Dad** — waiting on Brendan
 - [ ] OPS-4: Sections and codes for the plan, PR #5 — **Brendan** — waiting on Dad
-- [ ] OPS: Relaxed review rule, decision 11 (`brendan/plan-relaxed-reviews`) — **Brendan** — waiting on Dad
+- [ ] OPS-4: Dad's monitoring and alerts added to PR #5 (decision 12) — **Brendan** — waiting on Dad
 
 ## Done
 
+- [x] OPS: Relaxed review rule, decision 11 (PR #6, merged into PR #5 by Dad) — **Brendan** — 2026-10-26
 - [x] OPS-1: Shared way of working and privacy guardrails, PR #4 (approved by Dad, merged 2026-10-26) — **Brendan** — 2026-10-25

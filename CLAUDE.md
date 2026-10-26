@@ -144,6 +144,10 @@ These come from the README and research notes. Keep them.
 - Missing data is shown as missing, never filled in.
 - The site stays static, with no build step. Open it locally with
   `python3 -m http.server 8000`.
+- Background services (event monitoring, live prices) may run separately
+  from the site, with keys on the server and never in this repo. Alerts
+  describe past patterns with evidence, risks and uncertainty, and never
+  predict or say buy or sell (decision 12).
 
 ## The `team/` folder
 
