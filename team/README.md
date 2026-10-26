@@ -33,8 +33,11 @@ has to remember to.
 
 ## The rules in one breath
 
-Work on a branch, never on `main`. Every change goes through a pull request
-the other person approves. Claim a to-do item before starting it. The vision
+Work on a branch, never on `main`. Every change goes through a pull
+request, so the automatic checks run. Small changes: merge your own once the
+checks pass. Huge changes (the plan's direction, removing something that
+works, privacy and safety, money or licences) wait for the other person's
+approval. Claim a to-do item before starting it. The vision
 and big direction change only when we both agree. `TODO.md` is the main
 to-do list; GitHub Issues are fine for single bugs, technical tasks and
 feature requests, linked from `TODO.md`.
@@ -54,5 +57,5 @@ the same check on every pull request. The guard also stops Claude changing
 **What it can't do:** it spots patterns, not meaning, so something private
 written in ordinary words gets through. It only works inside Claude Code: it
 doesn't cover Codex or anything done by hand on GitHub. GitHub's own
-protection on `main` (pull request, one approval, passing checks) is the
+protection on `main` (pull request and passing checks) is the
 real backstop, because it applies to everyone.

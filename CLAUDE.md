@@ -56,8 +56,18 @@ its steps by hand.
   `team/plans/TEMPLATE.md`.
 - **One piece of work per pull request**, kept small. Open it as a draft
   early, so the other person can see it.
-- **The other partner approves** before anything is merged. Never merge a
-  pull request the other partner hasn't approved. Never enable auto-merge.
+- **Small changes, merge your own; huge changes, the other partner
+  approves** (decision 11). Everything still goes through a pull request,
+  so GitHub's checks run. A **huge** change is: the vision, principles, sections or a
+  decision; removing or replacing something that already works on the live
+  site; anything to do with privacy and safety (the guard,
+  `.claude/settings.json`, `.gitignore`, GitHub settings); or anything that
+  costs money, signs up for a service or involves a data licence. It waits for the
+  other partner's approval. Anything else is small: once GitHub's checks
+  pass, the author merges it without waiting, and the other partner sees it
+  in their next catch-up. If they disagree, a follow-up change fixes it.
+  Never merge the other partner's pull request for them. Never enable
+  auto-merge.
 - **Claim before you start:** mark the to-do item *Doing* with the person's
   name, so the other partner doesn't pick it up too.
 - **Bigger than a small change?** Write a short plan in plain words and get
@@ -108,8 +118,8 @@ after deletion.
 - It only runs inside Claude Code. Codex, other tools, and anything done by
   hand on GitHub or with git directly bypass it.
 - The GitHub check scans only the pull request's changes against `main`.
-- GitHub's own branch protection on `main` (pull request, one approval,
-  passing checks) is the real backstop. It applies to everyone, every tool.
+- GitHub's own branch protection on `main` (pull request and passing
+  checks) is the real backstop. It applies to everyone, every tool.
 
 ## Running joke: Claude vs Codex
 

@@ -8,7 +8,9 @@ description: Send finished Market Ripple work to the other partner. Use when som
 Logging already happens automatically as work finishes (see `CLAUDE.md`).
 Wrap-up tidies that and sends the work for review. Saying "wrap up" is
 permission to commit and push to this person's own branch and open or update
-a pull request. It is never permission to merge.
+a pull request, and, for a small change, to merge it once GitHub's checks
+pass (decision 11). Never merge a huge change without the other partner's
+approval.
 
 ## 1. Make sure the work is on a branch and saved
 
@@ -54,8 +56,18 @@ doesn't, create it now. Make sure it reads as one clear handover:
   person says the work is finished.
 - If there is one, update its description and mark it ready for review if
   the person says it's finished.
+- **Small or huge?** Huge is: the vision, principles, sections or a
+  decision; removing or replacing something that works on the live site;
+  privacy and safety (the guard, `.claude/settings.json`, `.gitignore`,
+  GitHub settings); money, sign-ups or data licences. Anything else is
+  small.
+  - **Small and finished:** once GitHub's checks pass, merge it
+    (`gh pr merge <n> --merge --delete-branch`), then switch to an
+    up-to-date `main`. If a check fails, fix it first.
+  - **Huge:** request the other partner as reviewer and wait for their
+    approval.
 
 ## 5. Tell them
 
-Three or four lines: the pull request link, what's waiting on the other
-partner, and what's next for them.
+Three or four lines: the pull request link, whether it was merged or is
+waiting on the other partner, and what's next for them.

@@ -20,7 +20,8 @@ _Nothing right now._
 - [ ] OPS: Write the vision in `PLAN.md` — **Dad** — 2026-10-25
 - [ ] OPS-4: Check the proposed sections, codes and provisional plans in `PLAN.md` and `plans/`, and rewrite the goals as you see fit — **Dad** — 2026-10-26
 - [ ] OPS: Install Claude Code, sign in to GitHub, and download the repo. Push any unsaved Codex work to a branch first — **Dad** — 2026-10-25
-- [ ] OPS-2: Protect `main` on GitHub: changes only by pull request with 1 approval and passing checks — **Dad** — 2026-10-25
+- [ ] OPS-2: Protect `main` on GitHub: changes only by pull request with passing checks. Leave "require approvals" off if decision 11 is agreed — **Dad** — 2026-10-25
+- [ ] OPS: Once decision 11 is agreed, update the guard (`.claude/hooks/guard.sh`) so it lets a small change be merged without approval once checks pass. A partner decides how, as the guard is privacy and safety — **Brendan** or **Dad** — 2026-10-26
 - [ ] OPS-2: Turn on GitHub's secret scanning and push protection (Settings → Code security) — **Dad** — 2026-10-25
 - [ ] OPS: Fill in your own `.claude/private-words.txt` (never shared) — **Brendan** and **Dad**, each on your own computer — 2026-10-25
 - [ ] OPS: Turn on GitHub email notifications for reviews and comments — **Brendan** and **Dad** — 2026-10-25
@@ -35,7 +36,8 @@ _Nothing right now._
 ## Waiting for review
 
 - [ ] PRC-1: Beginner paper trading, PR #2 (issue #3) — **Dad** — waiting on Brendan
-- [ ] OPS-4: Sections and codes for the plan (`brendan/plan-sections`) — **Brendan** — waiting on Dad
+- [ ] OPS-4: Sections and codes for the plan, PR #5 — **Brendan** — waiting on Dad
+- [ ] OPS: Relaxed review rule, decision 11 (`brendan/plan-relaxed-reviews`) — **Brendan** — waiting on Dad
 
 ## Done
 
