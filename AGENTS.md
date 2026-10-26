@@ -21,7 +21,10 @@ the work itself is serious.
 - Read `team/TODO.md`, `team/PLAN.md` and recent `team/log/` entries before
   changing anything.
 - Never commit to `main`. Work on a `person/topic` branch and open a pull
-  request for the other partner to approve.
+  request. Small changes: the author merges once GitHub's checks pass. Huge
+  changes (vision, principles, sections, decisions; removing something that
+  works on the live site; privacy and safety settings; money, sign-ups or
+  data licences) wait for the other partner's approval (decision 11).
 - Use the plan codes (`EVT`, `MAT-1`, `MAT-1.2`; see *How the codes work*
   in `team/PLAN.md`) in to-do items, branch names, pull request titles and
   logs. Detailed plans live in `team/plans/`.

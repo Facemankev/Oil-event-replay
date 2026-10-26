@@ -98,7 +98,9 @@ What each of us is on this week. Keep it short. Details live in `TODO.md`.
   the proposed sections (OPS-4), write the
   vision, then turn on the GitHub protections.
 - **Brendan:** set up the plan's sections and codes (`brendan/plan-sections`),
-  sent to Dad. Setup (PR #4) merged. Next: review PR #2.
+  sent to Dad. Setup (PR #4) merged. Also proposed decision 11: merge your own small
+  changes, only huge ones need approval (`brendan/plan-relaxed-reviews`).
+  Next: review PR #2.
 
 ## 6. Open questions
 
