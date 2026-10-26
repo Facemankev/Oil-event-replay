@@ -1,2 +1,11 @@
 work/
 __pycache__/
+
+# Never publish: personal word list, local AI settings, secrets
+.claude/private-words.txt
+.claude/settings.local.json
+.env
+.env.*
+.dev.vars
+*.pem
+*.key
