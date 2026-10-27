@@ -105,13 +105,13 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Sections and codes for the plan agreed (PR #5) | OPS-4 | Done | Brendan | Dad's review |
 | House style chosen and written down as a skill | BRD-2 | Waiting for review | Brendan | Dad's approval (decision 13) |
 | Vision written | OPS | Planned | Dad | — |
-| Source-specific data ingestion | DAT-3 | In progress | Dad | Issue #10: working local SQLite importer and static historical export; primary API access still needs a free EIA key |
+| Source-specific data ingestion | DAT-3 | Waiting for review | Dad | PR #12: working local SQLite importer and static historical export; primary API access still needs a free EIA key |
 
 ## 5. Now
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** implementing DAT-3 / issue #10 on `dad/dat-3-historical-sqlite` with existing historical seeds. Primary EIA reconciliation needs a free API key. No live trading or paid services. Also, paper trading (PR #2) waiting for Brendan's review. Next: approve
+- **Dad:** DAT-3 / issue #10 ready in draft PR #12 on `dad/dat-3-historical-sqlite` with existing historical seeds. Primary EIA reconciliation needs a free API key. No live trading or paid services. Also, paper trading (PR #2) waiting for Brendan's review. Next: approve
   the sections with his monitoring and alerts added (PR #5), write the
   vision, then turn on the GitHub protections.
 - **Brendan:** chose the house style, "Gold × Desk", from eight previews, and

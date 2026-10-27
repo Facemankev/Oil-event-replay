@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-- [ ] DAT-3: **Doing** — SQLite Brent/WTI ingestion, provenance, revisions and static export ([issue #10](https://github.com/Facemankev/Oil-event-replay/issues/10)) — **Dad** — 2026-10-27
+_Nothing right now._
 
 ## To do
 
@@ -36,6 +36,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] DAT-3: Review SQLite historical ingestion and static export ([PR #12](https://github.com/Facemankev/Oil-event-replay/pull/12), issue #10); primary EIA reconciliation still needs a free key — **Dad** — 2026-10-27
 
 - [ ] PRC-1: Beginner paper trading, PR #2 (issue #3) — **Dad** — waiting on Brendan
 - [ ] BRD-2: House style "Gold × Desk" and the `market-ripple-design` skill (decision 13) — **Brendan** — waiting on Dad

@@ -2,7 +2,7 @@
 
 **Goal:** implement issue #10 using the Brent/WTI CSVs merged into main.
 
-**What changed:** on `dad/dat-3-historical-sqlite`:
+**What changed:** on `dad/dat-3-historical-sqlite`, [draft PR #12](https://github.com/Facemankev/Oil-event-replay/pull/12):
 - Python standard-library SQLite importer, immutable snapshots, revision history,
   primary-source preference, repeatable backfill and overlapping incremental updates.
 - EIA API v2 adapter with pagination, strict validation and credential redaction.
@@ -21,5 +21,5 @@ claim of a successful authenticated fetch. See `historical/README.md` and import
 static export. No merge is authorized. Event publication/known-at data is the next
 phase, documented with point-in-time limits before any backtesting work.
 
-**Plan changes:** DAT-3 milestone and Now section updated; no vision, section,
+**Plan changes:** DAT-3 milestone and Now section moved to waiting for review; no vision, section,
 principle, negotiated licence or decision changes.
