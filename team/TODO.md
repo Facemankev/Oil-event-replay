@@ -32,14 +32,17 @@ _Nothing right now._
 - [ ] OPS-3: Review this way of working after two weeks of use — **Both** — 2026-10-25
 - [ ] WEB: The oil replay test fails on Windows computers, because Windows changes the line endings in `index.html` when the repo is downloaded. Not a website bug, but it makes local test runs look broken — **unassigned** — 2026-10-26
 - [ ] Pick the first section to plan in detail, and who writes it — **Both** — 2026-10-26
+- [ ] BRD-4: Restyle the live site (`index.html`) in the house style, once decision 13 is agreed. Removing the current look counts as a huge change, so it goes to the other partner — **unassigned** — 2026-10-27
+- [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
 
 - [ ] PRC-1: Beginner paper trading, PR #2 (issue #3) — **Dad** — waiting on Brendan
-- [ ] OPS-4: Sections and codes for the plan, PR #5 — **Brendan** — waiting on Dad
-- [ ] OPS-4: Dad's monitoring and alerts added to PR #5 (decision 12) — **Brendan** — waiting on Dad
+- [ ] BRD-2: House style "Gold × Desk" and the `market-ripple-design` skill (decision 13) — **Brendan** — waiting on Dad
 
 ## Done
+
+- [x] OPS-4: Sections and codes for the plan, with Dad's monitoring and alerts added, PR #5 (merged by Dad) — **Brendan** — 2026-10-26
 
 - [x] OPS: Relaxed review rule, decision 11 (PR #6, merged into PR #5 by Dad) — **Brendan** — 2026-10-26
 - [x] OPS-1: Shared way of working and privacy guardrails, PR #4 (approved by Dad, merged 2026-10-26) — **Brendan** — 2026-10-25

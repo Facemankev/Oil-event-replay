@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-10-26 by Brendan (sections and codes, with Dad's monitoring and alerts added)
+Last updated: 2026-10-27 by Brendan (proposed house style, BRD-2)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -102,7 +102,8 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Beginner paper trading (PR #2, issue #3) | PRC-1 | Waiting for review | Dad | Brendan's review |
 | Live prices for paper trading | PRC-2 | Blocked | Dad | A price provider licence and a deployed proxy (see PR #2) |
 | Shared way of working and privacy guardrails set up (PR #4) | OPS-1 | Done | Brendan | Dad's review |
-| Sections and codes for the plan agreed (PR #5) | OPS-4 | Waiting for review | Brendan | Dad's review |
+| Sections and codes for the plan agreed (PR #5) | OPS-4 | Done | Brendan | Dad's review |
+| House style chosen and written down as a skill | BRD-2 | Waiting for review | Brendan | Dad's approval (decision 13) |
 | Vision written | OPS | Planned | Dad | — |
 | Source-specific data ingestion | DAT-3 | Planned | — | Vision, see `research/ARCHITECTURE.md` |
 
@@ -113,10 +114,9 @@ What each of us is on this week. Keep it short. Details live in `TODO.md`.
 - **Dad:** paper trading (PR #2) waiting for Brendan's review. Next: approve
   the sections with his monitoring and alerts added (PR #5), write the
   vision, then turn on the GitHub protections.
-- **Brendan:** set up the plan's sections and codes (`brendan/plan-sections`),
-  sent to Dad. Setup (PR #4) merged. Decision 11 (merge your own small changes) merged
-  into PR #5 by Dad. Added Dad's monitoring and alerts to PR #5. Next:
-  review PR #2.
+- **Brendan:** chose the house style, "Gold × Desk", from eight previews, and
+  wrote it down as the `market-ripple-design` skill (BRD-2, decision 13), sent
+  to Dad (`brendan/brd-2-design-system`). Next: review PR #2.
 
 ## 6. Open questions
 

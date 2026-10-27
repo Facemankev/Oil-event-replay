@@ -33,3 +33,6 @@ the work itself is serious.
   `team/TODO.md` and the *Now* section of `team/PLAN.md`, then commit and
   push to the person's own branch. The step-by-step versions are in
   `.claude/skills/*/SKILL.md`.
+- For anything visual (pages, charts, colours, fonts, previews), follow the
+  house style in `.claude/skills/market-ripple-design/` (decision 13):
+  `SKILL.md` for the rules, `design.css` for the tokens, `example.html` to see it.

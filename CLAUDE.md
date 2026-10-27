@@ -43,6 +43,9 @@ The commands live in `.claude/skills/`: `catch-up`, `wrap-up`, `plan-change`
 and `review-pr`. If your tool can't run skills, read the skill file and follow
 its steps by hand.
 
+For anything visual (pages, charts, colours, fonts, previews), follow
+`.claude/skills/market-ripple-design/` (the house style, decision 13).
+
 ## House rules
 
 - **Never commit to `main`.** Every piece of work gets its own branch named
