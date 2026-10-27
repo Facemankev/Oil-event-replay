@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-_Nothing right now._
+- [ ] EVT-1: **Doing** — sourced historical world events and reproducible oil-price comparisons ([issue #13](https://github.com/Facemankev/Oil-event-replay/issues/13)) — **Dad** — 2026-10-27
 
 ## To do
 

@@ -1,0 +1,23 @@
+name: World event research checks
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  world-events:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate evidence, revisions and deterministic price joins
+        run: python3 -m unittest discover -s tests -p 'test_world_events.py' -v
+      - name: Exercise actual event import and research commands
+        run: |
+          python3 -m world_events validate
+          python3 -m world_events --db "$RUNNER_TEMP/events.sqlite" import
+          python3 -m world_events --db "$RUNNER_TEMP/events.sqlite" import
+          python3 -m world_events --db "$RUNNER_TEMP/events.sqlite" compare --event ike-2008-galveston
+          python3 -m world_events --db "$RUNNER_TEMP/events.sqlite" export --output "$RUNNER_TEMP/events.json"
