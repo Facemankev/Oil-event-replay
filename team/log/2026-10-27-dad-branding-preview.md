@@ -2,10 +2,10 @@
 
 **Goal:** visually review Brendan’s actual Gold × Desk design before live approval.
 
-**What changed:** on `dad/brd-2-branding-preview`:
+**What changed:** on `dad/brd-2-branding-preview`, [draft PR #15](https://github.com/Facemankev/Oil-event-replay/pull/15):
 - Original example.html and design.css copied byte-for-byte to an isolated preview.
 - Review controls show responsive, desktop and iPad portrait/landscape widths.
-- Published only the preview on a separate free public Sites project:
+- Published only the preview on a separate free public Sites project (hosting service confirms success; direct remote inspection is blocked by this environment’s proxy):
   https://market-ripple-gold-desk-review.royaltulip9.chatgpt.site
 - Provenance hashes, local setup and automated browser checks included.
 - Desktop/iPad/phone, light/dark, original market/window controls and price figures

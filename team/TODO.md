@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-- [ ] BRD-2: **Doing** — isolated Gold × Desk branding preview, preserving Brendan’s source files — **Dad** — 2026-10-27
+_Nothing right now._
 
 ## To do
 
@@ -36,6 +36,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] BRD-2: Visual review of the isolated original Gold × Desk preview ([draft PR #15](https://github.com/Facemankev/Oil-event-replay/pull/15)) — **Dad** — 2026-10-27
 
 - [ ] PRC-1: Beginner paper trading, PR #2 (issue #3) — **Dad** — waiting on Brendan
 - [ ] BRD-2: House style "Gold × Desk" and the `market-ripple-design` skill (decision 13) — **Brendan** — waiting on Dad

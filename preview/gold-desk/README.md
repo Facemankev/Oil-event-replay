@@ -25,5 +25,5 @@ Public review URL: https://market-ripple-gold-desk-review.royaltulip9.chatgpt.si
 
 GitHub Pages provisioning could not be used because the environment blocks
 GitHub API access. A separate free Sites project hosts only this preview.
-Production Pages configuration and the live dashboard are untouched. The hosted
-static assets match this preview folder (hosting metadata stays outside this repo).
+Production Pages configuration and the live dashboard are untouched. The hosted page/design assets match this preview; review documentation and screenshots
+are retained in the repository (hosting metadata stays outside it).

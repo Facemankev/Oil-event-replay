@@ -111,7 +111,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** preparing a separate BRD-2 visual preview of Brendan’s original design; no live-site restyle or approval. Also, paper trading (PR #2) waiting for Brendan's review. Next: approve
+- **Dad:** BRD-2 visual preview published separately, draft PR #15, preserving Brendan’s original design; no live-site restyle or approval. Also, paper trading (PR #2) waiting for Brendan's review. Next: approve
   the sections with his monitoring and alerts added (PR #5), write the
   vision, then turn on the GitHub protections.
 - **Brendan:** chose the house style, "Gold × Desk", from eight previews, and
