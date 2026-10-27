@@ -24,6 +24,13 @@ settle on one that every future page can follow.
 - Decision 13 proposed. BRD-2 waiting for review. New to-do items for BRD-4
   (restyle the live site) and BRD-1 (real logo). Tidied the PR #5 items
   into Done, since Dad merged it.
+- Ran UI/UX Pro Max on the example page before sending it, and fixed what it
+  found: the dark-mode grey for dates and captions was just under 4.5:1 on
+  the glass tiles (now `#a6adb5`, 5.1:1); on phones the headline was squeezed
+  beside its icon (icon now sits above it); and on phones the key figures
+  didn't line up when a label wrapped (labels now reserve two lines). Its
+  generated "design system" suggestions (a green wellness style, then gold
+  and purple) didn't fit the brief or decision 13, so they weren't used.
 - No website code changed.
 
 **Unfinished:** the live site still has its old look (BRD-4, after Dad agrees).

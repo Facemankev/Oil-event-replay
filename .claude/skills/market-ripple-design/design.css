@@ -62,10 +62,11 @@
   color-scheme:light;
 }
 
-/* dark: the same note on a charcoal desk */
+/* dark: the same note on a charcoal desk. Muted is checked against the glass
+   tiles too, which are lighter than the page here: 5.1:1 on a tile. */
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --mr-paper:#26292d;--mr-ink:#eceef0;--mr-body:#c4c9cf;--mr-muted:#9aa1a9;--mr-hair:#3b4046;
+    --mr-paper:#26292d;--mr-ink:#eceef0;--mr-body:#c4c9cf;--mr-muted:#a6adb5;--mr-hair:#3b4046;
     --mr-accent:#5cc2b8;--mr-up:#7fd1a1;--mr-down:#ff8f84;
     --mr-dot:rgba(255,255,255,.07);--mr-edge:rgba(255,255,255,.1);--mr-edge-hover:rgba(92,194,184,.5);
     --mr-tint:rgba(92,194,184,.12);--mr-glow:rgba(92,194,184,.16);
@@ -76,7 +77,7 @@
   }
 }
 :root[data-theme="dark"]{
-  --mr-paper:#26292d;--mr-ink:#eceef0;--mr-body:#c4c9cf;--mr-muted:#9aa1a9;--mr-hair:#3b4046;
+  --mr-paper:#26292d;--mr-ink:#eceef0;--mr-body:#c4c9cf;--mr-muted:#a6adb5;--mr-hair:#3b4046;
   --mr-accent:#5cc2b8;--mr-up:#7fd1a1;--mr-down:#ff8f84;
   --mr-dot:rgba(255,255,255,.07);--mr-edge:rgba(255,255,255,.1);--mr-edge-hover:rgba(92,194,184,.5);
   --mr-tint:rgba(92,194,184,.12);--mr-glow:rgba(92,194,184,.16);
@@ -187,6 +188,10 @@
 }
 @media (max-width:640px){
   .mr-figures{grid-template-columns:repeat(2,minmax(0,1fr))}
+  /* labels may wrap to two lines, so reserve two lines and the numbers stay level across a row */
+  .mr-label{min-height:2.6em}
   .mr-panel{padding:var(--mr-space-4)}
   .mr-bar{border-radius:var(--mr-radius-tile);padding:12px 16px}
+  /* the lead headline gets the full width; its icon sits above it */
+  .mr-panel-title:has(.mr-hero){flex-direction:column;align-items:flex-start;gap:var(--mr-space-2)}
 }

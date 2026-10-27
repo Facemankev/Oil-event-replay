@@ -51,7 +51,7 @@ Design never overrides them:
 | `--mr-paper` | `#f7f8f6` | `#26292d` | Page background |
 | `--mr-ink` | `#13233a` | `#eceef0` | Headings, numbers, chart line, chosen button |
 | `--mr-body` | `#3d4856` | `#c4c9cf` | Reading text |
-| `--mr-muted` | `#5b6675` | `#9aa1a9` | Captions, dates, axis labels, sources |
+| `--mr-muted` | `#5b6675` | `#a6adb5` | Captions, dates, axis labels, sources |
 | `--mr-hair` | `#dfe3e8` | `#3b4046` | Gridlines and table rules only |
 | `--mr-accent` | `#0f6e6e` | `#5cc2b8` | Teal: labels, one highlighted phrase, the event marker, icons |
 | `--mr-up` | `#1e6b52` | `#7fd1a1` | Price rose |
@@ -62,8 +62,10 @@ Design never overrides them:
 - Red and green mean price direction and nothing else. Always pair them with
   a sign (−4.0%, +2.1%), so colour is never the only signal.
 - No gold, purple, blue gradients, neon or glowing text.
-- Every text colour above passes 4.5:1 contrast on its background in both
-  themes (lowest: muted at about 5.5:1). If you add a colour, check it first.
+- Every text colour above passes 4.5:1 contrast in both themes, on the page
+  and on the glass tiles, which are slightly lighter than the page in dark
+  mode (lowest: muted, about 5.1:1 on a dark tile). If you add a colour,
+  check it on both surfaces first.
 
 ## Type
 
