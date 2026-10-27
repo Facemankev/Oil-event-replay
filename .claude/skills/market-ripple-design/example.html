@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Market Ripple design example</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="design.css">
+<style>
+  /* only what this example page needs on top of design.css */
+  .theme-switch{display:flex;justify-content:flex-end;gap:8px;margin-bottom:12px}
+</style>
+</head>
+<body class="mr-page">
+<!--
+  A working example of the Market Ripple look, for reference.
+  Open it from the repo folder with: python3 -m http.server 8000
+  then visit http://localhost:8000/.claude/skills/market-ripple-design/example.html
+  Prices: data/brent-brexit-source.csv (EIA Brent spot price, via datasets/oil-prices).
+-->
+<div class="mr-wrap mr-stack">
+
+  <div class="theme-switch" role="group" aria-label="Light or dark">
+    <button type="button" class="mr-btn" data-set-theme="light" aria-pressed="false">Light</button>
+    <button type="button" class="mr-btn" data-set-theme="dark" aria-pressed="false">Dark</button>
+  </div>
+
+  <header class="mr-bar mr-glass mr-enter">
+    <h1 class="mr-brand">
+      <svg viewBox="0 0 30 30" aria-hidden="true">
+        <circle cx="7" cy="23" r="3" fill="currentColor"/>
+        <path d="M7 14a9 9 0 0 1 9 9M7 8a15 15 0 0 1 15 15M7 2a21 21 0 0 1 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Market Ripple
+    </h1>
+    <span class="mr-badge">Historical research, not trading advice</span>
+  </header>
+
+  <section class="mr-panel mr-glass mr-enter">
+    <div class="mr-panel-title">
+      <svg class="mr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg>
+      <h2 class="mr-hero">Brexit referendum, <span class="mr-hl">June 2016</span></h2>
+    </div>
+    <p class="mr-lead">The UK voted on 23 June 2016 to leave the European Union. The result was announced early on 24 June.</p>
+    <div class="mr-actions" role="group" aria-label="Market">
+      <button type="button" class="mr-btn" aria-pressed="true">Brent oil</button>
+    </div>
+  </section>
+
+  <div class="mr-figures">
+    <div class="mr-tile mr-glass mr-enter"><span class="mr-label">Last price before</span><strong class="mr-figure">$48.63</strong><span class="mr-meta">23 Jun 2016</span></div>
+    <div class="mr-tile mr-glass mr-enter"><span class="mr-label">First price after</span><strong class="mr-figure">$46.69</strong><span class="mr-meta">24 Jun 2016</span></div>
+    <div class="mr-tile mr-glass mr-enter"><span class="mr-label">Event-day change*</span><strong class="mr-figure mr-down">−4.0%</strong><span class="mr-meta">23 → 24 Jun</span></div>
+    <div class="mr-tile mr-glass mr-enter"><span class="mr-label">Across the chart</span><strong class="mr-figure mr-down">−12.0%</strong><span class="mr-meta">9 Jun → 8 Jul</span></div>
+  </div>
+
+  <section class="mr-panel mr-glass mr-chart-card mr-enter">
+    <div class="mr-panel-title">
+      <svg class="mr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 20h18M4 16l5-5 4 3 7-8"/></svg>
+      <h2>Brent oil, US dollars per barrel</h2>
+    </div>
+    <div class="mr-chart-wrap">
+      <svg class="mr-chart" id="chart" viewBox="0 0 900 340" role="img"
+        aria-label="Brent oil price from 9 June to 8 July 2016, falling from 50.59 to 44.53 dollars, with a drop the day after the referendum."></svg>
+    </div>
+    <p class="mr-caption">Each point is one trading day's closing price. Weekends and holidays have no price, so they're left out.</p>
+    <details class="mr-disclosure">
+      <summary>Show these prices as a table</summary>
+      <div class="mr-table-scroll">
+        <table class="mr-table">
+          <thead><tr><th scope="col">Date</th><th scope="col">Trading day</th><th scope="col" class="num">Brent ($ per barrel)</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </details>
+    <p class="mr-note">*Event-day change compares the last price before the event with the first price on or after it. It is not proof that the event caused the change, and it doesn't predict future prices. Days without a published price are left out, not filled in.</p>
+    <p class="mr-note">Source: <a href="https://www.eia.gov/dnav/pet/hist/RBRTED.htm">EIA Europe Brent Spot Price FOB</a>, via the <a href="https://github.com/datasets/oil-prices">datasets oil-prices</a> CSV in <code>data/</code>.</p>
+  </section>
+</div>
+
+<script>
+// Brent daily closes from data/brent-brexit-source.csv. Trading days only; nothing filled in.
+const prices=[["2016-06-09",50.59],["2016-06-10",49.7],["2016-06-13",49.36],["2016-06-14",47.88],["2016-06-15",47.47],["2016-06-16",45.66],["2016-06-17",46.57],["2016-06-20",48.68],["2016-06-21",48.18],["2016-06-22",48.43],["2016-06-23",48.63],["2016-06-24",46.69],["2016-06-27",45.07],["2016-06-28",46.29],["2016-06-29",48.4],["2016-06-30",48.05],["2016-07-01",47.65],["2016-07-04",48.02],["2016-07-05",45.64],["2016-07-06",45.7],["2016-07-07",45.93],["2016-07-08",44.53]];
+const ev=prices.findIndex(p=>p[0]==="2016-06-24");   // T0: first trading day after the result
+const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const fmt=d=>+d.slice(8)+" "+months[+d.slice(5,7)-1];
+const tLabel=i=>{const t=i-ev;return "T"+(t===0?"0":(t>0?"+":"−")+Math.abs(t))};
+
+const W=900,H=340,L=56,R=24,T=28,B=40,lo=44,hi=52;
+const x=i=>L+i*(W-L-R)/(prices.length-1), y=v=>T+(hi-v)*(H-T-B)/(hi-lo);
+let s="";
+for(let v=lo;v<=hi;v+=2)s+=`<line class="gridline" x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L-10}" y="${y(v)+5}" text-anchor="end">$${v}</text>`;
+s+=`<rect class="evband" x="${x(ev-1)}" y="${T-6}" width="${x(ev)-x(ev-1)}" height="${H-B-T+6}"/>`;
+s+=`<line class="event" x1="${x(ev)}" x2="${x(ev)}" y1="${T-6}" y2="${H-B}"/><text class="event-label" x="${x(ev)+8}" y="${T+6}">Result announced</text>`;
+s+=`<polyline class="price" points="${prices.map((p,i)=>x(i)+","+y(p[1])).join(" ")}"/>`;
+[ev-1,ev].forEach(i=>s+=`<circle class="key" cx="${x(i)}" cy="${y(prices[i][1])}" r="5"><title>${fmt(prices[i][0])} 2016: $${prices[i][1].toFixed(2)}</title></circle>`);
+[1,6,11,16,21].forEach(i=>s+=`<text class="t" x="${x(i)}" y="${H-22}" text-anchor="middle">${tLabel(i)}</text><text class="date" x="${x(i)}" y="${H-5}" text-anchor="middle">${fmt(prices[i][0])}</text>`);
+document.getElementById("chart").innerHTML=s;
+document.getElementById("rows").innerHTML=prices.map((p,i)=>`<tr><td>${fmt(p[0])} 2016</td><td>${tLabel(i)}</td><td class="num">${p[1].toFixed(2)}</td></tr>`).join("");
+
+// Light/dark: follows the device until a button is pressed
+const themeBtns=document.querySelectorAll("[data-set-theme]");
+function showTheme(t){themeBtns.forEach(b=>b.setAttribute("aria-pressed",b.dataset.setTheme===t))}
+showTheme(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+themeBtns.forEach(b=>b.addEventListener("click",()=>{document.documentElement.dataset.theme=b.dataset.setTheme;showTheme(b.dataset.setTheme)}));
+</script>
+</body>
+</html>
