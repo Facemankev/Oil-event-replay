@@ -31,6 +31,10 @@ settle on one that every future page can follow.
   didn't line up when a label wrapped (labels now reserve two lines). Its
   generated "design system" suggestions (a green wellness style, then gold
   and purple) didn't fit the brief or decision 13, so they weren't used.
+- Polished the example after Brendan's review: the market and time-window
+  buttons are back and work with the real Brent and Apple prices; chart
+  labels no longer overlap; icons are their true 48px size and line up with
+  the heading text; the headline no longer has an icon beside it.
 - No website code changed.
 
 **Unfinished:** the live site still has its old look (BRD-4, after Dad agrees).

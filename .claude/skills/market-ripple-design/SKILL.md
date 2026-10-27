@@ -94,10 +94,10 @@ Design never overrides them:
   (`.mr-chart-card`). One per page.
 - **Shapes:** header bar is a pill (999px), panels have 32px corners, tiles
   have 24px corners, and buttons are pills.
-- **Order on an event page:** header bar, then the event panel (icon square,
-  headline, one-paragraph summary, market buttons), then a row of key-figure
-  tiles, then the chart card with its caption, price table, caveat and
-  source.
+- **Order on an event page:** header bar, then the event panel (headline on
+  its own with no icon, one-paragraph summary, market and time-window
+  buttons), then a row of key-figure tiles, then the chart card with its
+  caption, price table, caveat and source.
 - **Phones:** tiles go two across under 640px, panels tighten, and wide
   charts scroll inside their own box. The page itself never scrolls
   sideways.
@@ -107,8 +107,8 @@ Design never overrides them:
 | Class | What it is |
 | --- | --- |
 | `.mr-bar` + `.mr-brand` + `.mr-badge` | Header pill with the ripple mark, the name, and "Historical research, not trading advice" |
-| `.mr-panel`, `.mr-panel-title`, `.mr-icon` | A content block with a 48px teal-tinted icon square that grows slightly on hover |
-| `.mr-hero` + `.mr-hl` | Lead headline. At most one short phrase in teal |
+| `.mr-panel`, `.mr-panel-title`, `.mr-icon` | A content block. Section headings (like the chart's) have a 48px teal-tinted icon square that grows slightly on hover, lined up with the middle of the capital letters |
+| `.mr-hero` + `.mr-hl` | Lead headline, on its own with no icon beside it. At most one short phrase in teal |
 | `.mr-btn` | Pill button. `aria-pressed="true"` (or `.mr-btn-primary`) fills it with ink |
 | `.mr-figures`, `.mr-tile`, `.mr-label`, `.mr-figure`, `.mr-meta` | Key-figure tiles: teal label, big serif number, muted date |
 | `.mr-chart-card`, `.mr-chart` | The chart card with the glow, and the SVG chart styles |

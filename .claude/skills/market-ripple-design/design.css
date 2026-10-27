@@ -88,6 +88,8 @@
 }
 
 /* ---------- page ---------- */
+/* sizes include padding and borders, so a 48px icon square is 48px */
+.mr-page,.mr-page *,.mr-page *::before,.mr-page *::after{box-sizing:border-box}
 .mr-page{
   background-color:var(--mr-paper);
   background-image:radial-gradient(var(--mr-dot) 1px,transparent 1.5px);
@@ -123,6 +125,8 @@
 .mr-icon{display:block;width:48px;height:48px;padding:12px;border-radius:14px;flex:none;
   background:var(--mr-tint);color:var(--mr-accent);transition:transform .3s var(--mr-ease)}
 .mr-panel:hover .mr-icon{transform:scale(1.1)}
+/* line the icon up with the middle of the capital letters, not the text box, which sits lower (about 0.12em) */
+.mr-panel-title .mr-icon{translate:0 calc(var(--mr-size-heading) * -.12)}
 
 /* the lead headline, with at most one short phrase picked out in teal */
 .mr-hero,.mr-panel-title .mr-hero{margin:0;font:500 var(--mr-size-hero)/1.05 var(--mr-display);letter-spacing:-.015em;color:var(--mr-ink);text-wrap:balance}
@@ -192,6 +196,4 @@
   .mr-label{min-height:2.6em}
   .mr-panel{padding:var(--mr-space-4)}
   .mr-bar{border-radius:var(--mr-radius-tile);padding:12px 16px}
-  /* the lead headline gets the full width; its icon sits above it */
-  .mr-panel-title:has(.mr-hero){flex-direction:column;align-items:flex-start;gap:var(--mr-space-2)}
 }
