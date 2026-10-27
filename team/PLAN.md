@@ -111,7 +111,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** building EVT-1 / issue #13 on `dad/evt-1-world-events`, independent of draft PR #12. Also, paper trading (PR #2) waiting for Brendan's review. Next: approve
+- **Dad:** EVT-1 / issue #13 ready in draft PR #14 on `dad/evt-1-world-events`, independent of draft PR #12. Also, paper trading (PR #2) waiting for Brendan's review. Next: approve
   the sections with his monitoring and alerts added (PR #5), write the
   vision, then turn on the GitHub protections.
 - **Brendan:** chose the house style, "Gold × Desk", from eight previews, and

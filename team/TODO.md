@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-- [ ] EVT-1: **Doing** — sourced historical world events and reproducible oil-price comparisons ([issue #13](https://github.com/Facemankev/Oil-event-replay/issues/13)) — **Dad** — 2026-10-27
+_Nothing right now._
 
 ## To do
 
@@ -36,6 +36,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] EVT-1: Review the 24-event database and reproducible Brent/WTI research ([PR #14](https://github.com/Facemankev/Oil-event-replay/pull/14), issue #13) — **Dad** — waiting on Brendan, 2026-10-27
 
 - [ ] PRC-1: Beginner paper trading, PR #2 (issue #3) — **Dad** — waiting on Brendan
 - [ ] BRD-2: House style "Gold × Desk" and the `market-ripple-design` skill (decision 13) — **Brendan** — waiting on Dad

@@ -2,7 +2,7 @@
 
 **Goal:** implement issue #13 independently of draft PR #12.
 
-**What changed:** on `dad/evt-1-world-events`:
+**What changed:** on `dad/evt-1-world-events`, [draft PR #14](https://github.com/Facemankev/Oil-event-replay/pull/14), review requested from Brendan:
 - Working SQLite event database with 24 genuine sourced records, stable IDs,
   immutable revisions and atomic/idempotent imports. Repeat imports add no versions.
 - Validated occurrence time, earliest located supporting publication, timezone,
@@ -25,5 +25,5 @@ retrospective Saudi source aligns to its later evidence date, not the attack dat
 explicitly descriptive comparisons. All pairings have backtest eligibility false.
 PR #12 and PR #2 must remain untouched. No merge is authorized.
 
-**Plan changes:** added EVT-1 work to Doing/Now; no changes to vision, principles,
+**Plan changes:** moved EVT-1 work to Waiting for review/Now; no changes to vision, principles,
 section definitions or recorded decisions.
