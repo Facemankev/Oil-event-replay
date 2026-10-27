@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-10-27 by Brendan (proposed house style, BRD-2)
+Last updated: 2026-10-27 by Brendan (house style agreed, BRD-2)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -103,7 +103,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Live prices for paper trading | PRC-2 | Blocked | Dad | A price provider licence and a deployed proxy (see PR #2) |
 | Shared way of working and privacy guardrails set up (PR #4) | OPS-1 | Done | Brendan | Dad's review |
 | Sections and codes for the plan agreed (PR #5) | OPS-4 | Done | Brendan | Dad's review |
-| House style chosen and written down as a skill | BRD-2 | Waiting for review | Brendan | Dad's approval (decision 13) |
+| House style chosen and written down as a skill (PR #8) | BRD-2 | Done | Brendan | Dad merged it (decision 13) |
 | Vision written | OPS | Planned | Dad | — |
 | Source-specific data ingestion | DAT-3 | Planned | — | Vision, see `research/ARCHITECTURE.md` |
 
@@ -114,9 +114,9 @@ What each of us is on this week. Keep it short. Details live in `TODO.md`.
 - **Dad:** paper trading (PR #2) waiting for Brendan's review. Next: approve
   the sections with his monitoring and alerts added (PR #5), write the
   vision, then turn on the GitHub protections.
-- **Brendan:** chose the house style, "Gold × Desk", from eight previews, and
-  wrote it down as the `market-ripple-design` skill (BRD-2, decision 13), sent
-  to Dad (`brendan/brd-2-design-system`). Next: review PR #2.
+- **Brendan:** the house style, "Gold × Desk", is agreed: Dad merged it (PR #8,
+  BRD-2, decision 13), and every session now follows the `market-ripple-design`
+  skill for visual work. Next: review PR #2, then BRD-4 (restyle the live site).
 
 ## 6. Open questions
 
