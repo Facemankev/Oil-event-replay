@@ -1,0 +1,254 @@
+{
+  "backfill": {
+    "imports": [
+      {
+        "series": "brent",
+        "source_kind": "seed",
+        "snapshot_id": "3ad77ec9c8f42d2f22f670f8a82de8000ff4657a1b8d65071b8e2cf3b620641f",
+        "inserted": 5231,
+        "revised": 0,
+        "unchanged": 0,
+        "ignored_lower_priority": 0,
+        "numeric_rows": 5231,
+        "missing_rows": 0,
+        "snapshot_reused": false
+      },
+      {
+        "series": "wti",
+        "source_kind": "seed",
+        "snapshot_id": "d602ca94503cd81efc5430195a68410650f6af3dfd602198815bd2abbcd98712",
+        "inserted": 5137,
+        "revised": 0,
+        "unchanged": 0,
+        "ignored_lower_priority": 0,
+        "numeric_rows": 5137,
+        "missing_rows": 0,
+        "snapshot_reused": false
+      }
+    ],
+    "coverage": {
+      "brent": {
+        "count": 5231,
+        "first": "2006-01-03",
+        "last": "2026-10-20",
+        "explicit_missing": 0
+      },
+      "wti": {
+        "count": 5137,
+        "first": "2006-01-03",
+        "last": "2026-10-20",
+        "explicit_missing": 0
+      }
+    }
+  },
+  "repeat_update": {
+    "imports": [
+      {
+        "series": "brent",
+        "source_kind": "seed",
+        "snapshot_id": "3ad77ec9c8f42d2f22f670f8a82de8000ff4657a1b8d65071b8e2cf3b620641f",
+        "inserted": 0,
+        "revised": 0,
+        "unchanged": 22,
+        "ignored_lower_priority": 0,
+        "numeric_rows": 22,
+        "missing_rows": 0,
+        "snapshot_reused": true
+      },
+      {
+        "series": "wti",
+        "source_kind": "seed",
+        "snapshot_id": "d602ca94503cd81efc5430195a68410650f6af3dfd602198815bd2abbcd98712",
+        "inserted": 0,
+        "revised": 0,
+        "unchanged": 22,
+        "ignored_lower_priority": 0,
+        "numeric_rows": 22,
+        "missing_rows": 0,
+        "snapshot_reused": true
+      }
+    ],
+    "coverage": {
+      "brent": {
+        "count": 5231,
+        "first": "2006-01-03",
+        "last": "2026-10-20",
+        "explicit_missing": 0
+      },
+      "wti": {
+        "count": 5137,
+        "first": "2006-01-03",
+        "last": "2026-10-20",
+        "explicit_missing": 0
+      }
+    }
+  },
+  "incremental_before": {
+    "imports": [
+      {
+        "series": "brent",
+        "source_kind": "seed",
+        "snapshot_id": "1b7367e6ea72e8d4a6ef4e7e0c5906e662a9b9583d9103cfd74bd60a6ca45e00",
+        "inserted": 5217,
+        "revised": 0,
+        "unchanged": 0,
+        "ignored_lower_priority": 0,
+        "numeric_rows": 5217,
+        "missing_rows": 0,
+        "snapshot_reused": false
+      },
+      {
+        "series": "wti",
+        "source_kind": "seed",
+        "snapshot_id": "001fdc4d075c56a95ed49f2caf5793ae59e426eeb259fa20bce77ed62f7120a5",
+        "inserted": 5123,
+        "revised": 0,
+        "unchanged": 0,
+        "ignored_lower_priority": 0,
+        "numeric_rows": 5123,
+        "missing_rows": 0,
+        "snapshot_reused": false
+      }
+    ],
+    "coverage": {
+      "brent": {
+        "count": 5217,
+        "first": "2006-01-03",
+        "last": "2026-09-30",
+        "explicit_missing": 0
+      },
+      "wti": {
+        "count": 5123,
+        "first": "2006-01-03",
+        "last": "2026-09-30",
+        "explicit_missing": 0
+      }
+    }
+  },
+  "incremental_update": {
+    "imports": [
+      {
+        "series": "brent",
+        "source_kind": "seed",
+        "snapshot_id": "c63c443b905349685b77bef14abc3483ad50c36da55b905f7905497fe7cc1118",
+        "inserted": 14,
+        "revised": 0,
+        "unchanged": 22,
+        "ignored_lower_priority": 0,
+        "numeric_rows": 36,
+        "missing_rows": 0,
+        "snapshot_reused": false
+      },
+      {
+        "series": "wti",
+        "source_kind": "seed",
+        "snapshot_id": "43e75e728789df4ac97069031ec4fc07b0ed79d8de1bc7d04b9e12f08d8220c8",
+        "inserted": 14,
+        "revised": 0,
+        "unchanged": 22,
+        "ignored_lower_priority": 0,
+        "numeric_rows": 36,
+        "missing_rows": 0,
+        "snapshot_reused": false
+      }
+    ],
+    "coverage": {
+      "brent": {
+        "count": 5231,
+        "first": "2006-01-03",
+        "last": "2026-10-20",
+        "explicit_missing": 0
+      },
+      "wti": {
+        "count": 5137,
+        "first": "2006-01-03",
+        "last": "2026-10-20",
+        "explicit_missing": 0
+      }
+    }
+  },
+  "sample_wti_query": {
+    "series": "wti",
+    "name": "Cushing, OK WTI Spot Price FOB",
+    "eia_series": "RWTC",
+    "original_source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+    "unit": "USD/barrel",
+    "basis": "Daily spot benchmark; not executable trade P&L",
+    "requested_range": [
+      "2020-04-17",
+      "2020-04-24"
+    ],
+    "coverage": {
+      "count": 6,
+      "first": "2020-04-17",
+      "last": "2020-04-24",
+      "explicit_missing": 0
+    },
+    "as_of": null,
+    "point_in_time_safe": false,
+    "known_at_note": "Retrieval time is our knowledge time, not original EIA publication time; historical vintages before ingestion are unknown.",
+    "licence": "EIA public-domain data; acknowledge U.S. Energy Information Administration and publication date. Protected third-party materials and EIA marks are excluded. https://www.eia.gov/about/copyrights_reuse.php",
+    "sources": {
+      "d602ca94503cd81efc5430195a68410650f6af3dfd602198815bd2abbcd98712": {
+        "source_kind": "seed",
+        "source_url": "https://github.com/datasets/oil-prices/blob/main/data/wti-daily.csv",
+        "retrieved_at": "2026-10-27T20:30:09.295632+00:00",
+        "source_revision": "repository seed git blob 09869f9f1ba29f61e3b03a60fa3c4b6032b7d688 (upstream mirror revision unknown)",
+        "sha256": "59676126098611353d24d6d79d7cd56bece11622c68f9837e10a9f9ba22adef0",
+        "source_retrieved_on": "2026-10-27"
+      }
+    },
+    "observations": [
+      {
+        "date": "2020-04-17",
+        "value": "18.31",
+        "missing_code": null,
+        "snapshot_id": "d602ca94503cd81efc5430195a68410650f6af3dfd602198815bd2abbcd98712"
+      },
+      {
+        "date": "2020-04-20",
+        "value": "-36.98",
+        "missing_code": null,
+        "snapshot_id": "d602ca94503cd81efc5430195a68410650f6af3dfd602198815bd2abbcd98712"
+      },
+      {
+        "date": "2020-04-21",
+        "value": "8.91",
+        "missing_code": null,
+        "snapshot_id": "d602ca94503cd81efc5430195a68410650f6af3dfd602198815bd2abbcd98712"
+      },
+      {
+        "date": "2020-04-22",
+        "value": "13.64",
+        "missing_code": null,
+        "snapshot_id": "d602ca94503cd81efc5430195a68410650f6af3dfd602198815bd2abbcd98712"
+      },
+      {
+        "date": "2020-04-23",
+        "value": "15.06",
+        "missing_code": null,
+        "snapshot_id": "d602ca94503cd81efc5430195a68410650f6af3dfd602198815bd2abbcd98712"
+      },
+      {
+        "date": "2020-04-24",
+        "value": "15.99",
+        "missing_code": null,
+        "snapshot_id": "d602ca94503cd81efc5430195a68410650f6af3dfd602198815bd2abbcd98712"
+      }
+    ]
+  },
+  "database_checks": {
+    "integrity_check": "ok",
+    "snapshot_count": 2,
+    "observation_version_count": 10368
+  },
+  "source_status": "Secondary committed CSV seeds; no authenticated EIA reconciliation performed",
+  "primary_fetch_attempt": "Error: Set EIA_API_KEY to a free EIA key for primary-source imports. Seed data is not substituted.",
+  "commands": [
+    "python3 -m historical --db work/issue10/review.sqlite backfill",
+    "python3 -m historical --db work/issue10/review.sqlite update",
+    "python3 -m historical --db work/issue10/incremental.sqlite backfill --end 2026-09-30",
+    "python3 -m historical --db work/issue10/incremental.sqlite update",
+    "python3 -m historical --db work/issue10/review.sqlite query --series wti --start 2020-04-17 --end 2020-04-24"
+  ]
+}

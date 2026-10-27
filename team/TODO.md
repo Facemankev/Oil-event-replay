@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-_Nothing right now._
+- [ ] DAT-3: **Doing** — SQLite Brent/WTI ingestion, provenance, revisions and static export ([issue #10](https://github.com/Facemankev/Oil-event-replay/issues/10)) — **Dad** — 2026-10-27
 
 ## To do
 
