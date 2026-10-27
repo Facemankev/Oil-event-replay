@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-10-26 by Brendan (sections and codes, with Dad's monitoring and alerts added)
+Last updated: 2026-10-27 by Brendan (Dad's trade suggestions and future broker connection added)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -20,6 +20,17 @@ uncertainty in plain English. Users can then explore an opportunity with
 small paper trades before risking real money. This is a core part of the
 product, not an optional extra.
 
+*Added from Dad's later PR #5 comments:* Market Ripple should go further
+than reporting similarities. It ranks potential trades by the strength of
+the evidence, the expected opportunity and the risk, and where the evidence
+supports it suggests a direction (buy/long or sell/short) and an estimated
+timeframe. It highlights the strongest few rather than overwhelming people.
+Users test suggestions with small paper trades, and results are tracked to
+see whether the approach actually works. Later, Market Ripple may connect to
+a broker (possibly Trading 212) and prepare real trades for the user to
+approve or reject one by one. The AI prepares; the human decides. There is
+no unattended, automatic trading.
+
 *Brendan's one-line take:* Market Ripple helps beginner traders compare
 what's happening now with similar events in the past, and see how markets
 moved after them.
@@ -31,9 +42,16 @@ Taken from the README and research notes, which Dad wrote.
 - No invented or interpolated prices. Every number has a visible source.
 - Historical moves around an event don't prove the event caused them, and
   don't predict trading results.
-- An alert or "opportunity" says what a current event resembles and what
-  markets did after those past events, with the evidence, risks and
-  uncertainty. It never says what will happen, and never says buy or sell.
+- Trade suggestions are uncertain and educational, never guaranteed. Where
+  the evidence supports it, Market Ripple may suggest a direction (buy/long
+  or sell/short) and an estimated timeframe, always shown with the
+  historical evidence, how strong it is, the confidence, the uncertainty
+  and the downside risks. The user always makes the final decision.
+- We keep score honestly: every suggestion is recorded with how it turned
+  out, including the ones that went wrong.
+- The AI prepares; the human decides. No real-money order is ever sent
+  without the user explicitly approving that exact order. No unattended
+  trading.
 - Missing data is shown as missing.
 - Beginner-friendly: plain explanations alongside the data.
 - The website stays static, with no build step and no API keys needed to
@@ -43,7 +61,7 @@ Taken from the README and research notes, which Dad wrote.
 
 ## 3. Sections
 
-The project is split into ten sections, each with a three-letter code. Each
+The project is split into eleven sections, each with a three-letter code. Each
 section has its own page in [`plans/`](plans/), holding its goal and its
 list of plans. The goals and plans there are **provisional**: starting
 points for Dad to rewrite, not settled decisions.
@@ -59,12 +77,15 @@ points for Dad to rewrite, not settled decisions.
 | [CMP](plans/CMP.md) | Comparison and charts | Show how markets moved around the matched events | Oil replays and the Brexit lab | 2 |
 | [LRN](plans/LRN.md) | Learning | Plain explanations and honest warnings for beginners | The learning guide | 2 |
 | [PRC](plans/PRC.md) | Practice trading | Pretend-money trading on historical prices, and trying an alert with a small paper trade | Draft (PR #2) | 3 |
-| [AST](plans/AST.md) | AI assistant and alerts | Research matches, explain the evidence, risks and uncertainty in plain English, and alert users | Design notes only | 3 |
+| [AST](plans/AST.md) | AI assistant and alerts | Research matches, rank the strongest potential trades, suggest a direction and timeframe where the evidence supports it, explain the evidence, risks and uncertainty in plain English, and alert users | Design notes only | 3 |
+| [BRK](plans/BRK.md) | Broker connection | Later: connect to a real broker so the user can approve or reject each prepared trade. Read-only first, then demo orders, then real orders | No | 4 |
 
 **Order** is a rough guide. 1 = foundations everything else needs. 2 = the
-heart of the product. 3 = later. Later doesn't mean optional: monitoring
-and alerts (MAT-4, AST-3, AST-4) are core to the vision, they just need
-matching to work first. Work already under way (like PR #2) carries on
+heart of the product. 3 = later. 4 = future, only after paper trading is
+built and proven. Later doesn't mean optional: monitoring, alerts and trade
+suggestions (MAT-4, AST-3 to AST-6) are core to the vision, they just need
+matching to work first. Broker connection (BRK) must not hold up the
+foundations or paper trading. Work already under way (like PR #2) carries on
 regardless.
 
 ### How the codes work
@@ -102,7 +123,8 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Beginner paper trading (PR #2, issue #3) | PRC-1 | Waiting for review | Dad | Brendan's review |
 | Live prices for paper trading | PRC-2 | Blocked | Dad | A price provider licence and a deployed proxy (see PR #2) |
 | Shared way of working and privacy guardrails set up (PR #4) | OPS-1 | Done | Brendan | Dad's review |
-| Sections and codes for the plan agreed (PR #5) | OPS-4 | Waiting for review | Brendan | Dad's review |
+| Sections and codes for the plan agreed (PR #5) | OPS-4 | Done | Brendan | — |
+| Trade suggestions and broker connection added to the plan | OPS-4 | Waiting for review | Brendan | Dad to confirm the wording |
 | Vision written | OPS | Planned | Dad | — |
 | Source-specific data ingestion | DAT-3 | Planned | — | Vision, see `research/ARCHITECTURE.md` |
 
@@ -110,13 +132,12 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** paper trading (PR #2) waiting for Brendan's review. Next: approve
-  the sections with his monitoring and alerts added (PR #5), write the
-  vision, then turn on the GitHub protections.
-- **Brendan:** set up the plan's sections and codes (`brendan/plan-sections`),
-  sent to Dad. Setup (PR #4) merged. Decision 11 (merge your own small changes) merged
-  into PR #5 by Dad. Added Dad's monitoring and alerts to PR #5. Next:
-  review PR #2.
+- **Dad:** paper trading (PR #2) waiting for Brendan's review. Next: check
+  the wording of decisions 13 and 14 (trade suggestions, broker
+  connection), write the vision, then turn on the GitHub protections.
+- **Brendan:** sections and codes (PR #5) merged. Added Dad's trade
+  suggestions and future broker connection to the plan
+  (`brendan/plan-trade-suggestions`), sent to Dad. Next: review PR #2.
 
 ## 6. Open questions
 
@@ -134,10 +155,24 @@ What each of us is on this week. Keep it short. Details live in `TODO.md`.
   cost or license? (MAT-4; a paid feed is a huge change under decision 11)
 - How do alerts reach people: on the site, by email, or something else?
   (AST-4)
+- In the UK, suggesting trades to other people, or placing orders for them,
+  may count as regulated financial advice or activity. Before trade
+  suggestions (AST-5) or the broker connection (BRK) reach anyone beyond the
+  two of us, check what the rules allow. (Not legal advice: we'd need
+  someone qualified, or the regulator's own guidance.)
+- How do we judge whether suggestions "work" (AST-6): over how many trades,
+  compared against what, and what result would make us stop?
 
 ## Change history
 
 Big changes to sections 1–3, newest first. Small updates are in `log/`.
+
+- 2026-10-27: Dad's later PR #5 comments added. Market Ripple may now make
+  evidence-backed, uncertain trade suggestions with a direction and
+  timeframe (AST-5), and tracks how they turn out (AST-6). This replaces
+  the "never says buy or sell" rule (decision 13, replacing decision 2 and
+  part of 12). A new future section, BRK, covers a broker connection where
+  the user approves every real order (decision 14). Brendan agreed both.
 
 - 2026-10-26: Dad's monitoring and opportunity alerts added inside the
   existing sections (MAT-4, AST-3, AST-4, PRC-3, WEB-4), with two

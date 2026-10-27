@@ -139,15 +139,20 @@ These come from the README and research notes. Keep them.
 
 - No invented or interpolated prices. Every price has a visible source (see
   `data/SOURCES.md`).
-- Historical changes don't prove an event caused them, and don't predict
-  trading results. Say so wherever results are shown.
+- Historical changes don't prove an event caused them. Say so wherever
+  results are shown.
 - Missing data is shown as missing, never filled in.
 - The site stays static, with no build step. Open it locally with
   `python3 -m http.server 8000`.
 - Background services (event monitoring, live prices) may run separately
-  from the site, with keys on the server and never in this repo. Alerts
-  describe past patterns with evidence, risks and uncertainty, and never
-  predict or say buy or sell (decision 12).
+  from the site, with keys on the server and never in this repo.
+- Trade suggestions (a direction and timeframe, where the evidence supports
+  it) are always labelled uncertain and educational, never guaranteed, with
+  the evidence, confidence, uncertainty and downside risks. Every
+  suggestion's outcome is recorded honestly (decision 13).
+- The AI prepares; the human decides. Nothing reaches a real broker without
+  the user approving that exact order, and there is no unattended trading.
+  Broker keys stay on a server, never in this repo (decision 14).
 
 ## The `team/` folder
 

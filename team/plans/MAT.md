@@ -23,7 +23,7 @@ rewrite. · **Section owner:** not yet chosen
 - Dad: monitoring is a core part of the vision, not an optional extra.
 - MAT-4 needs a news source (may cost money or need a licence: a huge change) and a background service (WEB-4).
 - A current event has no "after" yet. Matching finds past events whose "after" is known.
-- Similar past events don't predict what happens next (decision 2). Say so wherever matches are shown.
+- Similar past events don't guarantee what happens next. Any suggestion built on a match is uncertain and educational (decision 13). Say so wherever matches are shown.
 
 ---
 

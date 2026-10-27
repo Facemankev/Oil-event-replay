@@ -15,11 +15,12 @@ rewrite. · **Section owner:** not yet chosen
 | --- | --- | --- | --- | --- |
 | PRC-1 | Historical practice with pretend money (PR #2, issue #3) | In progress | Dad | PR #2 |
 | PRC-2 | Live prices for practice | Provisional (blocked: needs a price licence and a deployed proxy) | Dad | PR #2 |
-| PRC-3 | "Try it": open a small paper trade straight from an alert (AST-4) | Provisional | — | — |
+| PRC-3 | "Try it": open a small paper trade straight from an alert or trade suggestion (AST-4, AST-5) | Provisional | — | — |
 
 ## Notes
 
-- No real money, brokers or orders.
+- No real money, brokers or orders here. Real orders belong to BRK, which
+  only starts once paper trading is built and proven (decision 14).
 
 ---
 

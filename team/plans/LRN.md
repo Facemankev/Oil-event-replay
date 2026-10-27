@@ -19,7 +19,7 @@ rewrite. · **Section owner:** not yet chosen
 
 ## Notes
 
-- Decision 2: results never claim an event caused a move or predict trading outcomes.
+- Decision 13 (replaces decision 2): results never claim an event caused a move; trade suggestions are always labelled uncertain and educational, never guaranteed, and the user decides.
 
 ---
 
