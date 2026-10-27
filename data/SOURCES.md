@@ -26,3 +26,33 @@ Event references and the date choice are in `events.js`. Event records are
 research milestones; no market reaction is claimed for events without prices.
 Existing seven oil replay samples are preserved unchanged and have not been
 re-certified by this work.
+
+## Historical-practice FX addition (24 October 2026)
+
+`gbp-usd-brexit-source.csv` contains the United Kingdom rows from 25 May–22 July
+2016 of [datasets/exchange-rates daily.csv](https://github.com/datasets/exchange-rates/blob/main/data/daily.csv),
+retrieved via connected GitHub blob API at SHA
+`ed5f4b490edb0ec0585e40d019c73c33fb03948d`. Empty observations are preserved.
+The source is Federal Reserve Board H.10 / FRED **DEXUSUK**, inverted by the
+[preparation script](https://github.com/datasets/exchange-rates/blob/main/exchange_rates_flow.py)
+(SHA `78e23d8eac7081856d425b943b536c01acafb8ea`). Therefore these particular
+values are **GBP per USD** (e.g. 0.6805 on 25 May), not USD per GBP, despite the
+upstream README's confusing ratio description. We preserve the source's rounded
+precision and use USD price × this rate to obtain GBP price.
+
+Dataset preparation is [PDDL](https://github.com/datasets/exchange-rates#license).
+The [Board disclaimer](https://www.federalreserve.gov/disclaimer.htm) permits
+copying/distribution of Board information in the public domain unless indicated
+otherwise, with source attribution. See [FRED terms](https://fred.stlouisfed.org/legal/)
+for series-specific rights and attribution. This is Federal Reserve data via
+FRED, prepared by datasets/exchange-rates; commercial reuse is permitted for the
+public-domain data/PDDL preparation with attribution and no claim of endorsement.
+The primary H.10 feed was not independently fetched; this verifies the committed
+slice against its secondary source, not a certified FX execution feed.
+
+For paper practice only, Brent and FX are joined on exact shared dates. Both are
+historical daily observations with unknown intraday/publication timestamps.
+End-of-day replay availability is a disclosed assumption, not a sourced time.
+No interpolation, forward fill, contemporary quote claims or synthetic price
+observations are introduced. Apple's unresolved rights keep it out of the
+practice demo; the existing research example remains unchanged.
