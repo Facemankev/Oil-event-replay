@@ -131,6 +131,10 @@ ripples) until BRD-1 settles it.
   and the first price after.
 - Highlight only the two points either side of the event. Label exact values
   in their tooltips.
+- Leave a little room above and below the data, so the line never touches
+  the chart's top or bottom edge. Align the first and last x-axis labels with
+  the chart's edges (not centred), so they never collide with the price
+  labels. No chart label may overlap another, in any market or time window.
 - Under every chart: a one-line caption saying what a point is, a "Show
   these prices as a table" disclosure with every value, the caveat, and the
   source.

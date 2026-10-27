@@ -65,7 +65,7 @@
       <h2 id="chart-title"></h2>
     </div>
     <div class="mr-chart-wrap">
-      <svg class="mr-chart" id="chart" viewBox="0 0 900 340" role="img"></svg>
+      <svg class="mr-chart" id="chart" viewBox="0 0 900 356" role="img"></svg>
     </div>
     <p class="mr-caption" id="caption"></p>
     <details class="mr-disclosure">
@@ -117,9 +117,10 @@ function render(){
   set("f-all",pct(first[1],last[1]),dir(first[1],last[1]));document.getElementById("f-all-d").textContent=fmt(first[0])+" → "+fmt(last[0]);
 
   // chart: y axis on even dollar steps that cover the data
+  // leave a little room above and below the data so the line never sits on the chart's edge
   const vals=rows.map(p=>p[1]),step=Math.max(...vals)-Math.min(...vals)>12?4:2;
-  const lo=Math.floor(Math.min(...vals)/step)*step,hi=Math.ceil(Math.max(...vals)/step)*step;
-  const W=900,H=340,L=60,R=24,T=28,B=40;
+  const lo=Math.floor((Math.min(...vals)-step*.3)/step)*step,hi=Math.ceil((Math.max(...vals)+step*.3)/step)*step;
+  const W=900,H=356,L=60,R=24,T=28,B=58;
   const x=i=>L+i*(W-L-R)/(rows.length-1),y=v=>T+(hi-v)*(H-T-B)/(hi-lo);
   let s="";
   for(let v=lo;v<=hi;v+=step)s+=`<line class="gridline" x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L-10}" y="${y(v)+5}" text-anchor="end">$${v}</text>`;
@@ -128,7 +129,9 @@ function render(){
   s+=`<polyline class="price" points="${rows.map((p,i)=>x(i)+","+y(p[1])).join(" ")}"/>`;
   [ev-1,ev].forEach(i=>s+=`<circle class="key" cx="${x(i)}" cy="${y(rows[i][1])}" r="5"><title>${fmt(rows[i][0])} 2016: ${money(rows[i][1])}</title></circle>`);
   const ticks=[0,Math.round(ev/2),ev,Math.round((ev+rows.length-1)/2),rows.length-1];
-  ticks.forEach(i=>s+=`<text class="t" x="${x(i)}" y="${H-22}" text-anchor="middle">${tLabel(i)}</text><text class="date" x="${x(i)}" y="${H-5}" text-anchor="middle">${fmt(rows[i][0])}</text>`);
+  // the first and last labels line up with the chart's edges so they never collide with the price axis
+  ticks.forEach((i,k)=>{const a=k===0?"start":k===ticks.length-1?"end":"middle";
+    s+=`<text class="t" x="${x(i)}" y="${H-24}" text-anchor="${a}">${tLabel(i)}</text><text class="date" x="${x(i)}" y="${H-6}" text-anchor="${a}">${fmt(rows[i][0])}</text>`});
   const svg=document.getElementById("chart");
   svg.innerHTML=s;
   svg.setAttribute("aria-label",`${m.name} from ${fmt(first[0])} to ${fmt(last[0])} 2016, ${dir(first[1],last[1])==="mr-down"?"falling":"rising"} from ${money(first[1])} to ${money(last[1])}, and ${pct(before[1],after[1])} the day after the referendum.`);
