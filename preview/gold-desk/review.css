@@ -1,0 +1,5 @@
+/* Review controls only. Brendan's design.css and example.html stay unchanged. */
+.mr-panel>*+*{margin-top:var(--mr-space-3)}
+a{color:var(--mr-accent)}
+#stage{position:relative;width:100%;overflow:hidden}
+#design{display:block;border:0;transform-origin:top left;background:var(--mr-paper)}

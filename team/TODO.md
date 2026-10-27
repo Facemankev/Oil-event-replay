@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-_Nothing right now._
+- [ ] BRD-2: **Doing** — isolated Gold × Desk branding preview, preserving Brendan’s source files — **Dad** — 2026-10-27
 
 ## To do
 
