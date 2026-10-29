@@ -71,7 +71,7 @@ function cohortView(analysis,q){
  const body=$('opportunities');body.replaceChildren();
  for(const result of analysis.opportunities){
   const row=node('tr');row.dataset.market=result.market;row.dataset.days=result.days;
-  const cell=node('td'),button=node('button',`${result.market.toUpperCase()} / ${result.days} days`,'mr-btn');button.type='button';button.addEventListener('click',()=>{$('market').value=result.market;$('summary-horizon').value=String(result.days);render();$('cohort-title').scrollIntoView({block:'start',behavior:'instant'});});cell.append(button);row.append(cell);
+  const cell=node('td'),button=node('button',`${result.market.toUpperCase()} / ${result.days} ${result.days===1?'day':'days'}`,'mr-btn');button.type='button';button.addEventListener('click',()=>{$('market').value=result.market;$('summary-horizon').value=String(result.days);render();$('cohort-title').scrollIntoView({block:'start',behavior:'instant'});});cell.append(button);row.append(cell);
   for(const text of [result.evidence,result.window_count,percentText(result.percent.median),result.percent.count?`${percentText(result.percent.minimum)} to ${percentText(result.percent.maximum)}`:'Unavailable',result.risks.slice(0,2).join('; ')+(result.risks.length>2?`; ${result.risks.length-2} more in details`:'')])row.append(node('td',String(text)));
   body.append(row);
  }
