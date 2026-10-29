@@ -39,6 +39,8 @@ _Nothing right now._
 
 ## Waiting for review
 
+- [ ] MAT-2 / MAT-3: Working historical matching, Gold × Desk page and provisional-source gates ([PR #16](https://github.com/Facemankev/Oil-event-replay/pull/16)); primary EIA reconciliation remains blocked — **Dad** — 2026-10-29
+
 
 
 - [ ] PRC-1: Beginner paper trading, PR #2 (issue #3) — **Dad** — waiting on Brendan

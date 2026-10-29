@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-10-29 by Dad (approved foundation integration)
+Last updated: 2026-10-29 by Dad (historical event-matching prototype)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -113,11 +113,12 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** approved PRs #12 and #14 merged; real price-to-event integration
-  verified. Approved BRD-2 preview in PR #15 is public and separate from the
-  dashboard. Next milestone: reconcile all Brent/WTI seeds with primary EIA,
-  then strengthen event disclosure evidence before analogue matching. PR #2
-  remains separate and unmerged. No live trading or broker connection.
+- **Dad:** MAT-2 / MAT-3 working deterministic matching prototype on a separate
+  feature branch. 24 events / 240 provisional reaction windows, with source
+  gating and a reproducible coverage/reconciliation report. Primary EIA access
+  remains blocked (no key and proxy denial); no full verification claimed.
+  Next: review the prototype, reconcile primary prices and improve event timing
+  before expanding evidence or adding monitoring. PR #2 remains separate.
 - **Brendan:** chose the house style, "Gold × Desk", from eight previews, and
   wrote it down as the `market-ripple-design` skill (BRD-2, decision 13), sent
   to Dad (`brendan/brd-2-design-system`). Next: review PR #2.
