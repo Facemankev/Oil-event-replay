@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "measurements": [
+    {
+      "event_id": "gustav-2008-louisiana",
+      "event_sha256": "cdfe65a193800ff531257633d974712258a0727b6577777438e0551d09e1c212",
+      "scale": "advisory_maximum_sustained_wind_mph",
+      "value": 110,
+      "published_at": "2008-09-01T10:00:00-05:00",
+      "url": "https://www.nhc.noaa.gov/archive/2008/al07/al072008.public.032.shtml",
+      "publisher": "NOAA National Hurricane Center",
+      "locator": "Advisory 32, maximum sustained winds; landfall bulletin",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_numeric_fact_from_indexed_primary_bulletin",
+      "limitation": "Operational wind estimate at the printed advisory time. Does not measure flooding, refinery exposure, outage size or realised economic severity.",
+      "sha256": "a84dd464c4ba32094878264356820105178d75f53d9e86fa5d9757bf5becc812"
+    },
+    {
+      "event_id": "ike-2008-galveston",
+      "event_sha256": "e663bfce5da089c72e8ab74e4d3ea2de2b45b31740506d384e175dd71028fb46",
+      "scale": "advisory_maximum_sustained_wind_mph",
+      "value": 110,
+      "published_at": "2008-09-13T02:00:00-05:00",
+      "url": "https://www.nhc.noaa.gov/archive/2008/al09/al092008.public_b.048.shtml",
+      "publisher": "NOAA National Hurricane Center",
+      "locator": "Intermediate advisory 48B; issued before the landfall update",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_numeric_fact_from_indexed_primary_bulletin",
+      "limitation": "Operational wind estimate at the printed advisory time. Does not measure flooding, refinery exposure, outage size or realised economic severity.",
+      "sha256": "d03cdf807a7d78ccdc0e9a4b458cde357d2fdb8dbc448b220300b56ef8059a79"
+    },
+    {
+      "event_id": "sandy-2012-new-jersey",
+      "event_sha256": "3837769ada15c85101ab1cfc08dab9ce2ab5adaabd9fbcfa289bdd0bf33ee089",
+      "scale": "advisory_maximum_sustained_wind_mph",
+      "value": 80,
+      "published_at": "2012-10-29T20:00:00-04:00",
+      "url": "https://www.nhc.noaa.gov/archive/2012/al18/al182012.update.10300002.shtml",
+      "publisher": "NOAA National Hurricane Center",
+      "locator": "20:00 EDT landfall update; post-tropical cyclone",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_numeric_fact_from_indexed_primary_bulletin",
+      "limitation": "Operational wind estimate at the printed advisory time. Does not measure flooding, refinery exposure, outage size or realised economic severity.",
+      "sha256": "a20693f835111a8805c5089d8fa08dbcb8996d951a68318b437799e3bb29c1d0"
+    },
+    {
+      "event_id": "harvey-2017-texas",
+      "event_sha256": "1afc1325601b7d8d6aeb104ead07d269f7aea96ad6f6df9de6aa2d9ce597c297",
+      "scale": "advisory_maximum_sustained_wind_mph",
+      "value": 125,
+      "published_at": "2017-08-25T16:00:00-05:00",
+      "url": "https://www.nhc.noaa.gov/archive/2017/al09/al092017.public.022.shtml",
+      "publisher": "NOAA National Hurricane Center",
+      "locator": "Advisory 22; six hours before the event bulletin, not a landfall best-track estimate",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_numeric_fact_from_indexed_primary_bulletin",
+      "limitation": "Operational wind estimate at the printed advisory time. Does not measure flooding, refinery exposure, outage size or realised economic severity.",
+      "sha256": "e070f47d8b082201e9b4fe75f1d49c52539b21a5409df90b6e49d8fd416c0120"
+    },
+    {
+      "event_id": "laura-2020-louisiana",
+      "event_sha256": "ff66d9a36018114d9b3f9ca1a3969780a9d06cc3652b3a42366ae76cb02f3745",
+      "scale": "advisory_maximum_sustained_wind_mph",
+      "value": 150,
+      "published_at": "2020-08-26T22:00:00-05:00",
+      "url": "https://www.nhc.noaa.gov/archive/2020/al13/al132020.public.029.shtml",
+      "publisher": "NOAA National Hurricane Center",
+      "locator": "Advisory 29; three hours before the event bulletin",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_numeric_fact_from_indexed_primary_bulletin",
+      "limitation": "Operational wind estimate at the printed advisory time. Does not measure flooding, refinery exposure, outage size or realised economic severity.",
+      "sha256": "8525fa99919135870063ec5dcc327c24005ef1c856c2fbcd1ff61a6d2bba9422"
+    },
+    {
+      "event_id": "ida-2021-louisiana",
+      "event_sha256": "abf7509283d28190012fd79368acd26cb4e480fea47859f9b73c1ab289f307b2",
+      "scale": "advisory_maximum_sustained_wind_mph",
+      "value": 150,
+      "published_at": "2021-08-29T10:00:00-05:00",
+      "url": "https://www.nhc.noaa.gov/archive/2021/al09/al092021.public.014.shtml",
+      "publisher": "NOAA National Hurricane Center",
+      "locator": "Advisory 14; issued before the landfall update",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_numeric_fact_from_indexed_primary_bulletin",
+      "limitation": "Operational wind estimate at the printed advisory time. Does not measure flooding, refinery exposure, outage size or realised economic severity.",
+      "sha256": "dd8f8a97d1b65906cd9aaa83baee700d1da75439fd726668f34463a8fe55a8b3"
+    }
+  ]
+}

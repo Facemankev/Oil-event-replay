@@ -1,0 +1,2078 @@
+{
+  "methodology": "cohort-summary-v1",
+  "catalog_sha256": "fba66f3b67cd77c40bb4f4dcef008b05c4f1e24a91ad3b74055f1a26c6f49cb6",
+  "note": "Queries are explicitly hypothetical or historical demonstrations. No invented events or probability forecasts are added to the historical library.",
+  "demonstrations": [
+    {
+      "query": {
+        "market": "brent",
+        "severity": "",
+        "windSpeed": 110,
+        "occurred": "2026-10-29",
+        "publicDate": "2026-10-29",
+        "title": "Hypothetical Gulf storm with 110 mph advisory winds",
+        "category": "weather",
+        "location": "Gulf of Mexico",
+        "mechanism": "landfall",
+        "impact": "mixed"
+      },
+      "opportunities": [
+        {
+          "market": "wti",
+          "days": 1,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 2,
+          "location_excluded": 1,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": -5.1233,
+            "minimum": -5.6033,
+            "maximum": -2.6233,
+            "positive": 0,
+            "negative": 3,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": -5.67,
+            "minimum": -5.92,
+            "maximum": -1.25,
+            "positive": 0,
+            "negative": 3,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 3,
+          "severity_matched_count": 3,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 2,
+          "movement_component": 2.0493200000000003,
+          "research_priority": 9.0493,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston",
+            "harvey-2017-texas"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 1,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 2,
+          "location_excluded": 1,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": -4.1539,
+            "minimum": -7.5337,
+            "maximum": 0,
+            "positive": 0,
+            "negative": 2,
+            "flat": 1
+          },
+          "absolute": {
+            "count": 3,
+            "median": -3.92,
+            "minimum": -8.55,
+            "maximum": 0,
+            "positive": 0,
+            "negative": 2,
+            "flat": 1
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 3,
+          "severity_matched_count": 3,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 2,
+          "movement_component": 1.6615600000000001,
+          "research_priority": 8.6616,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston",
+            "harvey-2017-texas"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 3,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 2,
+          "location_excluded": 1,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": -8.774,
+            "minimum": -8.8818,
+            "maximum": 0.0771,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": -8.28,
+            "minimum": -10.08,
+            "maximum": 0.04,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 3,
+          "severity_matched_count": 3,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Past price directions were mixed",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 3.5096,
+          "research_priority": 8.5096,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston",
+            "harvey-2017-texas"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 3,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 2,
+          "location_excluded": 1,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": -3.7553,
+            "minimum": -6.5426,
+            "maximum": -3.5467,
+            "positive": 0,
+            "negative": 3,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": -3.8,
+            "minimum": -7.56,
+            "maximum": -1.69,
+            "positive": 0,
+            "negative": 3,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 3,
+          "severity_matched_count": 3,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 2,
+          "movement_component": 1.5021200000000001,
+          "research_priority": 8.5021,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston",
+            "harvey-2017-texas"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 5,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 2,
+          "location_excluded": 1,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": -0.9643,
+            "minimum": -10.9349,
+            "maximum": 2.4677,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": -0.91,
+            "minimum": -12.41,
+            "maximum": 1.28,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 3,
+          "severity_matched_count": 3,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Past price directions were mixed",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0.38572000000000006,
+          "research_priority": 5.3857,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston",
+            "harvey-2017-texas"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 5,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 2,
+          "location_excluded": 1,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": -0.6925,
+            "minimum": -7.9619,
+            "maximum": 2.8264,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": -0.33,
+            "minimum": -9.2,
+            "maximum": 2.86,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 3,
+          "severity_matched_count": 3,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Past price directions were mixed",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0.277,
+          "research_priority": 5.277,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston",
+            "harvey-2017-texas"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 10,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 2,
+          "location_excluded": 1,
+          "window_count": 2,
+          "percent": {
+            "count": 2,
+            "median": -8.23705,
+            "minimum": -17.3345,
+            "maximum": 0.8604,
+            "positive": 1,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 2,
+            "median": -9.81,
+            "minimum": -20.03,
+            "maximum": 0.41,
+            "positive": 1,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 2,
+          "severity_matched_count": 2,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Past price directions were mixed",
+            "Overlapping windows were excluded; events can still be correlated",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 8,
+          "movement_component": 3.29482,
+          "research_priority": 1.2948,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "harvey-2017-texas"
+          ],
+          "excluded": [
+            {
+              "id": "ike-2008-galveston",
+              "reason": "overlapping_price_window"
+            }
+          ],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 10,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 2,
+          "location_excluded": 1,
+          "window_count": 2,
+          "percent": {
+            "count": 2,
+            "median": -7.5672500000000005,
+            "minimum": -20.3013,
+            "maximum": 5.1668,
+            "positive": 1,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 2,
+            "median": -10.18,
+            "minimum": -23.04,
+            "maximum": 2.68,
+            "positive": 1,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 2,
+          "severity_matched_count": 2,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Past price directions were mixed",
+            "Observed percentage range exceeds 20 points",
+            "Overlapping windows were excluded; events can still be correlated",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 11,
+          "movement_component": 3.0269000000000004,
+          "research_priority": -1.9731,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "harvey-2017-texas"
+          ],
+          "excluded": [
+            {
+              "id": "ike-2008-galveston",
+              "reason": "overlapping_price_window"
+            }
+          ],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 20,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 2,
+          "location_excluded": 1,
+          "window_count": 2,
+          "percent": {
+            "count": 2,
+            "median": -3.9269,
+            "minimum": -16.6681,
+            "maximum": 8.8143,
+            "positive": 1,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 2,
+            "median": -7.530000000000001,
+            "minimum": -19.26,
+            "maximum": 4.2,
+            "positive": 1,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 2,
+          "severity_matched_count": 2,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Past price directions were mixed",
+            "Observed percentage range exceeds 20 points",
+            "Overlapping windows were excluded; events can still be correlated",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 11,
+          "movement_component": 1.57076,
+          "research_priority": -3.4292,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "harvey-2017-texas"
+          ],
+          "excluded": [
+            {
+              "id": "ike-2008-galveston",
+              "reason": "overlapping_price_window"
+            }
+          ],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 20,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 2,
+          "location_excluded": 1,
+          "window_count": 2,
+          "percent": {
+            "count": 2,
+            "median": -1.6599000000000004,
+            "minimum": -15.4463,
+            "maximum": 12.1265,
+            "positive": 1,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 2,
+            "median": -5.620000000000001,
+            "minimum": -17.53,
+            "maximum": 6.29,
+            "positive": 1,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 2,
+          "severity_matched_count": 2,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Past price directions were mixed",
+            "Observed percentage range exceeds 20 points",
+            "Overlapping windows were excluded; events can still be correlated",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 11,
+          "movement_component": 0.6639600000000002,
+          "research_priority": -4.336,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "harvey-2017-texas"
+          ],
+          "excluded": [
+            {
+              "id": "ike-2008-galveston",
+              "reason": "overlapping_price_window"
+            }
+          ],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        }
+      ]
+    },
+    {
+      "query": {
+        "market": "brent",
+        "severity": "",
+        "windSpeed": null,
+        "occurred": "2026-10-29",
+        "publicDate": "2026-10-29",
+        "title": "Hypothetical announced production reduction",
+        "category": "production_policy",
+        "location": "Global",
+        "mechanism": "output_cut",
+        "impact": "supply_constraint"
+      },
+      "opportunities": [
+        {
+          "market": "brent",
+          "days": 5,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 3,
+          "location_excluded": 0,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": -6,
+            "minimum": -14.1869,
+            "maximum": -0.32,
+            "positive": 0,
+            "negative": 3,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": -2.46,
+            "minimum": -2.87,
+            "maximum": -0.3,
+            "positive": 0,
+            "negative": 3,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Some first-public clocks are imprecise or unestablished",
+            "Comparable severity is missing for some matches",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 5,
+          "movement_component": 2.4000000000000004,
+          "research_priority": 6.4,
+          "included_ids": [
+            "opec-2020-april",
+            "opec-2020-june",
+            "opec-2022-october"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 20,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 3,
+          "location_excluded": 0,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": 3.6722,
+            "minimum": 2.5829,
+            "maximum": 7.9913,
+            "positive": 3,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": 1.83,
+            "minimum": 1.02,
+            "maximum": 3.19,
+            "positive": 3,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Some first-public clocks are imprecise or unestablished",
+            "Comparable severity is missing for some matches",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 5,
+          "movement_component": 1.4688800000000002,
+          "research_priority": 5.4689,
+          "included_ids": [
+            "opec-2020-april",
+            "opec-2020-june",
+            "opec-2022-october"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 1,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 3,
+          "location_excluded": 0,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": -2.3581,
+            "minimum": -3.3426,
+            "maximum": 2.3368,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": -0.54,
+            "minimum": -1.32,
+            "maximum": 2.03,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Some first-public clocks are imprecise or unestablished",
+            "Comparable severity is missing for some matches",
+            "Past price directions were mixed",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 7,
+          "movement_component": 0.94324,
+          "research_priority": 2.9432,
+          "included_ids": [
+            "opec-2020-april",
+            "opec-2020-june",
+            "opec-2022-october"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 20,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 3,
+          "location_excluded": 0,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": 4.6829,
+            "minimum": 2.4856,
+            "maximum": 31.8339,
+            "positive": 3,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": 2.33,
+            "minimum": 1.92,
+            "maximum": 6.44,
+            "positive": 3,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Some first-public clocks are imprecise or unestablished",
+            "Comparable severity is missing for some matches",
+            "Observed percentage range exceeds 20 points",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 8,
+          "movement_component": 1.8731600000000002,
+          "research_priority": 2.8732,
+          "included_ids": [
+            "opec-2020-april",
+            "opec-2020-june",
+            "opec-2022-october"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 1,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 3,
+          "location_excluded": 0,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": 2.0376,
+            "minimum": -3.2683,
+            "maximum": 7.4642,
+            "positive": 2,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": 1.51,
+            "minimum": -1.34,
+            "maximum": 1.91,
+            "positive": 2,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Some first-public clocks are imprecise or unestablished",
+            "Comparable severity is missing for some matches",
+            "Past price directions were mixed",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 7,
+          "movement_component": 0.81504,
+          "research_priority": 2.815,
+          "included_ids": [
+            "opec-2020-april",
+            "opec-2020-june",
+            "opec-2022-october"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 5,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 3,
+          "location_excluded": 0,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": -8.2299,
+            "minimum": -20.0437,
+            "maximum": 1.1051,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": -3.25,
+            "minimum": -4.59,
+            "maximum": 0.96,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Some first-public clocks are imprecise or unestablished",
+            "Comparable severity is missing for some matches",
+            "Past price directions were mixed",
+            "Observed percentage range exceeds 20 points",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 10,
+          "movement_component": 3.2919600000000004,
+          "research_priority": 2.292,
+          "included_ids": [
+            "opec-2020-april",
+            "opec-2020-june",
+            "opec-2022-october"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 3,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 3,
+          "location_excluded": 0,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": 0.439,
+            "minimum": -7.6125,
+            "maximum": 3.6164,
+            "positive": 2,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": 0.18,
+            "minimum": -1.54,
+            "maximum": 3.39,
+            "positive": 2,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Some first-public clocks are imprecise or unestablished",
+            "Comparable severity is missing for some matches",
+            "Past price directions were mixed",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 7,
+          "movement_component": 0.1756,
+          "research_priority": 2.1756,
+          "included_ids": [
+            "opec-2020-april",
+            "opec-2020-june",
+            "opec-2022-october"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 3,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 3,
+          "location_excluded": 0,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": 0.1266,
+            "minimum": -12.8384,
+            "maximum": 5.4449,
+            "positive": 2,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": 0.05,
+            "minimum": -2.94,
+            "maximum": 4.73,
+            "positive": 2,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Some first-public clocks are imprecise or unestablished",
+            "Comparable severity is missing for some matches",
+            "Past price directions were mixed",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 7,
+          "movement_component": 0.05064,
+          "research_priority": 2.0506,
+          "included_ids": [
+            "opec-2020-april",
+            "opec-2020-june",
+            "opec-2022-october"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 10,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 3,
+          "location_excluded": 0,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": -2.5603,
+            "minimum": -25.0124,
+            "maximum": 3.2439,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": -2.4,
+            "minimum": -5.06,
+            "maximum": 1.33,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Some first-public clocks are imprecise or unestablished",
+            "Comparable severity is missing for some matches",
+            "Past price directions were mixed",
+            "Observed percentage range exceeds 20 points",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 10,
+          "movement_component": 1.02412,
+          "research_priority": 0.0241,
+          "included_ids": [
+            "opec-2020-april",
+            "opec-2020-june",
+            "opec-2022-october"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 10,
+          "eligible_event_count": 6,
+          "comparable_event_count": 3,
+          "weak_excluded": 3,
+          "location_excluded": 0,
+          "window_count": 3,
+          "percent": {
+            "count": 3,
+            "median": -1.0015,
+            "minimum": -30.1747,
+            "maximum": 0.5824,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 3,
+            "median": -0.87,
+            "minimum": -6.91,
+            "maximum": 0.23,
+            "positive": 1,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Some first-public clocks are imprecise or unestablished",
+            "Comparable severity is missing for some matches",
+            "Past price directions were mixed",
+            "Observed percentage range exceeds 20 points",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 10,
+          "movement_component": 0.40060000000000007,
+          "research_priority": -0.5994,
+          "included_ids": [
+            "opec-2020-april",
+            "opec-2020-june",
+            "opec-2022-october"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        }
+      ]
+    },
+    {
+      "query": {
+        "market": "brent",
+        "severity": "",
+        "windSpeed": 125,
+        "occurred": "2017-08-25",
+        "publicDate": "2017-08-26",
+        "title": "Harvey example at its supporting-publication date",
+        "category": "weather",
+        "location": "US Texas / Gulf of Mexico",
+        "mechanism": "landfall",
+        "impact": "mixed",
+        "excludeId": "harvey-2017-texas"
+      },
+      "opportunities": [
+        {
+          "market": "brent",
+          "days": 3,
+          "eligible_event_count": 3,
+          "comparable_event_count": 2,
+          "weak_excluded": 1,
+          "location_excluded": 0,
+          "window_count": 2,
+          "percent": {
+            "count": 2,
+            "median": -8.8279,
+            "minimum": -8.8818,
+            "maximum": -8.774,
+            "positive": 0,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 2,
+            "median": -9.18,
+            "minimum": -10.08,
+            "maximum": -8.28,
+            "positive": 0,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 2,
+          "severity_matched_count": 2,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 6,
+          "movement_component": 3.53116,
+          "research_priority": 3.5312,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 5,
+          "eligible_event_count": 3,
+          "comparable_event_count": 2,
+          "weak_excluded": 1,
+          "location_excluded": 0,
+          "window_count": 2,
+          "percent": {
+            "count": 2,
+            "median": -5.9496,
+            "minimum": -10.9349,
+            "maximum": -0.9643,
+            "positive": 0,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 2,
+            "median": -6.66,
+            "minimum": -12.41,
+            "maximum": -0.91,
+            "positive": 0,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 2,
+          "severity_matched_count": 2,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 6,
+          "movement_component": 2.37984,
+          "research_priority": 2.3798,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 1,
+          "eligible_event_count": 3,
+          "comparable_event_count": 2,
+          "weak_excluded": 1,
+          "location_excluded": 0,
+          "window_count": 2,
+          "percent": {
+            "count": 2,
+            "median": -5.8438,
+            "minimum": -7.5337,
+            "maximum": -4.1539,
+            "positive": 0,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 2,
+            "median": -6.235,
+            "minimum": -8.55,
+            "maximum": -3.92,
+            "positive": 0,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 2,
+          "severity_matched_count": 2,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 6,
+          "movement_component": 2.33752,
+          "research_priority": 2.3375,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 1,
+          "eligible_event_count": 3,
+          "comparable_event_count": 2,
+          "weak_excluded": 1,
+          "location_excluded": 0,
+          "window_count": 2,
+          "percent": {
+            "count": 2,
+            "median": -5.363300000000001,
+            "minimum": -5.6033,
+            "maximum": -5.1233,
+            "positive": 0,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 2,
+            "median": -5.795,
+            "minimum": -5.92,
+            "maximum": -5.67,
+            "positive": 0,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 2,
+          "severity_matched_count": 2,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 6,
+          "movement_component": 2.1453200000000003,
+          "research_priority": 2.1453,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 3,
+          "eligible_event_count": 3,
+          "comparable_event_count": 2,
+          "weak_excluded": 1,
+          "location_excluded": 0,
+          "window_count": 2,
+          "percent": {
+            "count": 2,
+            "median": -5.14895,
+            "minimum": -6.5426,
+            "maximum": -3.7553,
+            "positive": 0,
+            "negative": 2,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 2,
+            "median": -5.68,
+            "minimum": -7.56,
+            "maximum": -3.8,
+            "positive": 0,
+            "negative": 2,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 2,
+          "severity_matched_count": 2,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 6,
+          "movement_component": 2.05958,
+          "research_priority": 2.0596,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 10,
+          "eligible_event_count": 3,
+          "comparable_event_count": 2,
+          "weak_excluded": 1,
+          "location_excluded": 0,
+          "window_count": 1,
+          "percent": {
+            "count": 1,
+            "median": -20.3013,
+            "minimum": -20.3013,
+            "maximum": -20.3013,
+            "positive": 0,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 1,
+            "median": -23.04,
+            "minimum": -23.04,
+            "maximum": -23.04,
+            "positive": 0,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 1,
+          "severity_matched_count": 1,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Overlapping windows were excluded; events can still be correlated",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 6,
+          "movement_component": 4,
+          "research_priority": 1,
+          "included_ids": [
+            "gustav-2008-louisiana"
+          ],
+          "excluded": [
+            {
+              "id": "ike-2008-galveston",
+              "reason": "overlapping_price_window"
+            }
+          ],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 20,
+          "eligible_event_count": 3,
+          "comparable_event_count": 2,
+          "weak_excluded": 1,
+          "location_excluded": 0,
+          "window_count": 1,
+          "percent": {
+            "count": 1,
+            "median": -15.4463,
+            "minimum": -15.4463,
+            "maximum": -15.4463,
+            "positive": 0,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 1,
+            "median": -17.53,
+            "minimum": -17.53,
+            "maximum": -17.53,
+            "positive": 0,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 1,
+          "severity_matched_count": 1,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Overlapping windows were excluded; events can still be correlated",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 6,
+          "movement_component": 4,
+          "research_priority": 1,
+          "included_ids": [
+            "gustav-2008-louisiana"
+          ],
+          "excluded": [
+            {
+              "id": "ike-2008-galveston",
+              "reason": "overlapping_price_window"
+            }
+          ],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 10,
+          "eligible_event_count": 3,
+          "comparable_event_count": 2,
+          "weak_excluded": 1,
+          "location_excluded": 0,
+          "window_count": 1,
+          "percent": {
+            "count": 1,
+            "median": -17.3345,
+            "minimum": -17.3345,
+            "maximum": -17.3345,
+            "positive": 0,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 1,
+            "median": -20.03,
+            "minimum": -20.03,
+            "maximum": -20.03,
+            "positive": 0,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 1,
+          "severity_matched_count": 1,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Overlapping windows were excluded; events can still be correlated",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 6,
+          "movement_component": 4,
+          "research_priority": 1,
+          "included_ids": [
+            "gustav-2008-louisiana"
+          ],
+          "excluded": [
+            {
+              "id": "ike-2008-galveston",
+              "reason": "overlapping_price_window"
+            }
+          ],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 20,
+          "eligible_event_count": 3,
+          "comparable_event_count": 2,
+          "weak_excluded": 1,
+          "location_excluded": 0,
+          "window_count": 1,
+          "percent": {
+            "count": 1,
+            "median": -16.6681,
+            "minimum": -16.6681,
+            "maximum": -16.6681,
+            "positive": 0,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 1,
+            "median": -19.26,
+            "minimum": -19.26,
+            "maximum": -19.26,
+            "positive": 0,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 1,
+          "severity_matched_count": 1,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Overlapping windows were excluded; events can still be correlated",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 6,
+          "movement_component": 4,
+          "research_priority": 1,
+          "included_ids": [
+            "gustav-2008-louisiana"
+          ],
+          "excluded": [
+            {
+              "id": "ike-2008-galveston",
+              "reason": "overlapping_price_window"
+            }
+          ],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 5,
+          "eligible_event_count": 3,
+          "comparable_event_count": 2,
+          "weak_excluded": 1,
+          "location_excluded": 0,
+          "window_count": 2,
+          "percent": {
+            "count": 2,
+            "median": -2.56775,
+            "minimum": -7.9619,
+            "maximum": 2.8264,
+            "positive": 1,
+            "negative": 1,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 2,
+            "median": -3.17,
+            "minimum": -9.2,
+            "maximum": 2.86,
+            "positive": 1,
+            "negative": 1,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 2,
+          "severity_matched_count": 2,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Prices remain provisional pending the EIA reconciliation review",
+            "Past price directions were mixed",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 8,
+          "movement_component": 1.0271000000000001,
+          "research_priority": -0.9729,
+          "included_ids": [
+            "gustav-2008-louisiana",
+            "ike-2008-galveston"
+          ],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        }
+      ]
+    },
+    {
+      "query": {
+        "market": "brent",
+        "severity": "",
+        "windSpeed": null,
+        "occurred": "2000-01-01",
+        "publicDate": "2000-01-01",
+        "title": "No eligible past events before 2000",
+        "category": "weather",
+        "location": "Gulf of Mexico",
+        "mechanism": "landfall",
+        "impact": "mixed"
+      },
+      "opportunities": [
+        {
+          "market": "brent",
+          "days": 1,
+          "eligible_event_count": 0,
+          "comparable_event_count": 0,
+          "weak_excluded": 0,
+          "location_excluded": 0,
+          "window_count": 0,
+          "percent": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0,
+          "research_priority": -4,
+          "included_ids": [],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 3,
+          "eligible_event_count": 0,
+          "comparable_event_count": 0,
+          "weak_excluded": 0,
+          "location_excluded": 0,
+          "window_count": 0,
+          "percent": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0,
+          "research_priority": -4,
+          "included_ids": [],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 5,
+          "eligible_event_count": 0,
+          "comparable_event_count": 0,
+          "weak_excluded": 0,
+          "location_excluded": 0,
+          "window_count": 0,
+          "percent": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0,
+          "research_priority": -4,
+          "included_ids": [],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 10,
+          "eligible_event_count": 0,
+          "comparable_event_count": 0,
+          "weak_excluded": 0,
+          "location_excluded": 0,
+          "window_count": 0,
+          "percent": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0,
+          "research_priority": -4,
+          "included_ids": [],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "brent",
+          "days": 20,
+          "eligible_event_count": 0,
+          "comparable_event_count": 0,
+          "weak_excluded": 0,
+          "location_excluded": 0,
+          "window_count": 0,
+          "percent": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0,
+          "research_priority": -4,
+          "included_ids": [],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 1,
+          "eligible_event_count": 0,
+          "comparable_event_count": 0,
+          "weak_excluded": 0,
+          "location_excluded": 0,
+          "window_count": 0,
+          "percent": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0,
+          "research_priority": -4,
+          "included_ids": [],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 3,
+          "eligible_event_count": 0,
+          "comparable_event_count": 0,
+          "weak_excluded": 0,
+          "location_excluded": 0,
+          "window_count": 0,
+          "percent": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0,
+          "research_priority": -4,
+          "included_ids": [],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 5,
+          "eligible_event_count": 0,
+          "comparable_event_count": 0,
+          "weak_excluded": 0,
+          "location_excluded": 0,
+          "window_count": 0,
+          "percent": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0,
+          "research_priority": -4,
+          "included_ids": [],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 10,
+          "eligible_event_count": 0,
+          "comparable_event_count": 0,
+          "weak_excluded": 0,
+          "location_excluded": 0,
+          "window_count": 0,
+          "percent": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0,
+          "research_priority": -4,
+          "included_ids": [],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        },
+        {
+          "market": "wti",
+          "days": 20,
+          "eligible_event_count": 0,
+          "comparable_event_count": 0,
+          "weak_excluded": 0,
+          "location_excluded": 0,
+          "window_count": 0,
+          "percent": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "absolute": {
+            "count": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null,
+            "positive": 0,
+            "negative": 0,
+            "flat": 0
+          },
+          "undefined_percent_count": 0,
+          "primary_window_count": 0,
+          "precise_event_count": 0,
+          "severity_matched_count": 0,
+          "evidence": "Limited",
+          "evidence_rank": 0,
+          "risks": [
+            "Fewer than three non-overlapping price windows",
+            "Non-overlapping events can still share the same market regime or other news",
+            "Current historical vintages and unknown price publication clocks prevent a point-in-time backtest"
+          ],
+          "risk_penalty": 4,
+          "movement_component": 0,
+          "research_priority": -4,
+          "included_ids": [],
+          "excluded": [],
+          "point_in_time_safe": false,
+          "interpretation": "Descriptive selected-sample history; positive/negative counts are not future probabilities."
+        }
+      ]
+    }
+  ]
+}
