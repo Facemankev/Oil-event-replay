@@ -15,7 +15,11 @@ with sync_playwright() as p:
     page=browser.new_page(viewport={'width':1440,'height':1000})
     errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
     url=f'http://127.0.0.1:{server.server_port}/matching/'
+    page.emulate_media(color_scheme='dark')
     page.goto(url)
+    expect(page.locator('#theme')).to_have_text('Use light mode')
+    page.click('#theme')
+    expect(page.locator('html')).to_have_attribute('data-theme','light')
     expect(page.locator('#verification')).to_contain_text('blocked')
     expect(page.locator('#results article')).to_have_count(6)
     expect(page.locator('#results article').first).to_contain_text('Limited evidence')

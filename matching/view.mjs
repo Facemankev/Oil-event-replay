@@ -57,7 +57,11 @@ function render(event){
  matches.slice(0,6).forEach(m=>$('results').append(card(m,q)));
  }catch(e){$('summary').textContent='No results shown.';$('error').textContent=e.message;}
 }
-$('theme').addEventListener('click',()=>{const dark=document.documentElement.dataset.theme==='dark'||(!document.documentElement.dataset.theme&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dark?'light':'dark';$('theme').textContent=dark?'Use dark mode':'Use light mode';});
+const scheme=matchMedia('(prefers-color-scheme: dark)');
+const isDark=()=>document.documentElement.dataset.theme==='dark'||(!document.documentElement.dataset.theme&&scheme.matches);
+const themeLabel=()=>{$('theme').textContent=isDark()?'Use light mode':'Use dark mode';};
+$('theme').addEventListener('click',()=>{document.documentElement.dataset.theme=isDark()?'light':'dark';themeLabel();});
+scheme.addEventListener('change',themeLabel);themeLabel();
 try{
  const responses=await Promise.all([fetch('catalog.json'),fetch('validation-report.json')]);if(responses.some(r=>!r.ok))throw Error('Data files are unavailable.');[catalog,report]=await Promise.all(responses.map(r=>r.json()));
  $('verification').textContent=report.verified?'Primary reconciliation ran; inspect the report and per-window sources for discrepancies. Original publication times remain unknown.':`Primary EIA verification is ${report.status}. All seed-based reactions are provisional. ${catalog.price_counts.brent.toLocaleString()} Brent / ${catalog.price_counts.wti.toLocaleString()} WTI prices; ${catalog.events.length} sourced events.`;

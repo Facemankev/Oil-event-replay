@@ -25,7 +25,9 @@ The catalogue rebuilds byte-for-byte from unchanged DB inputs. Added CI for full
 unit/browser regressions. The first CI browser dependency setup failed because
 ubuntu-latest now selected an unsupported OS for the pinned Playwright release;
 pinned that job to supported Ubuntu 24.04 and fetched the history needed for
-the existing dashboard preservation regression. Privacy guard initially flagged long dummy credentials
+the existing dashboard preservation regression. The runner already had a Chromium
+path, so the test-only symlink setup now replaces it with the pinned browser.
+Also checked that the theme button describes the right action on a dark device. Privacy guard initially flagged long dummy credentials
 in isolated tests; removed those unnecessary credential-shaped fixtures. No real
 credentials were present and no guard or allowlist was changed.
 

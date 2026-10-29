@@ -32,7 +32,7 @@ jobs:
           python3 -m pip install playwright==1.56.0
           python3 -m playwright install --with-deps chromium
           matching_chromium_path="$(python3 -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')"
-          sudo ln -s "$matching_chromium_path" /usr/bin/chromium
+          sudo ln -sf "$matching_chromium_path" /usr/bin/chromium
       - name: Matching and existing browser regressions
         run: |
           python3 tests/matching_browser_test.py
