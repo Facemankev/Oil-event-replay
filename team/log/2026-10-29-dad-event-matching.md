@@ -27,7 +27,12 @@ ubuntu-latest now selected an unsupported OS for the pinned Playwright release;
 pinned that job to supported Ubuntu 24.04 and fetched the history needed for
 the existing dashboard preservation regression. The runner already had a Chromium
 path, so the test-only symlink setup now replaces it with the pinned browser.
-Also checked that the theme button describes the right action on a dark device. Privacy guard initially flagged long dummy credentials
+Also checked that the theme button describes the right action on a dark device.
+The matching page then passed in CI. The unchanged original dashboard overflowed
+at mobile width in old Chromium 141, although Chromium 154 passes locally with
+no overflowing elements. Updated the browser dependency to current Playwright
+1.64.1; the existing dashboard assertion remains intact and the dashboard itself
+is unchanged. Older-browser/physical Safari compatibility is not claimed. Privacy guard initially flagged long dummy credentials
 in isolated tests; removed those unnecessary credential-shaped fixtures. No real
 credentials were present and no guard or allowlist was changed.
 
