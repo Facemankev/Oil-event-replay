@@ -1,7 +1,7 @@
 # Historical matching prototype (MAT-2 / MAT-3)
 
 Open **matching/index.html through an HTTP server**, or the separate preview URL
-in the pull request. This is functioning deterministic research software, not
+[open the isolated preview](https://market-ripple-event-matching.royaltulip9.chatgpt.site/matching/) (sign in with the same ChatGPT account). This is functioning deterministic research software, not
 monitoring, a forecast or a trading system. The existing dashboard, research
 views, paper-trading branch and original branding preview are unchanged.
 

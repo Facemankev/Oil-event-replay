@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-- [ ] DAT-3 / MAT-2 / MAT-3: Primary-price audit, deterministic event matching and beginner results page — **Dad** — 2026-10-29
+_Nothing right now._
 
 ## To do
 
@@ -38,6 +38,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] MAT-2 / MAT-3: Working historical matching, Gold × Desk page and provisional-source gates ([PR #16](https://github.com/Facemankev/Oil-event-replay/pull/16)); primary EIA reconciliation remains blocked — **Dad** — 2026-10-29
 
 
 

@@ -19,6 +19,21 @@ preview and paper-trading work are unchanged. README/Now/TODO record the work.
 - Exact source observations, hashes and evidence retained; report lists absent
   weekdays without inventing holiday classifications or price corrections.
 
+32 Python tests, matching Node tests and existing research tests passed. All five
+browser suites passed (matching, dashboard, history, events, original branding).
+The catalogue rebuilds byte-for-byte from unchanged DB inputs. Added CI for full
+unit/browser regressions. Privacy guard initially flagged long dummy credentials
+in isolated tests; removed those unnecessary credential-shaped fixtures. No real
+credentials were present and no guard or allowlist was changed.
+
+[Draft PR #16](https://github.com/Facemankev/Oil-event-replay/pull/16) is open for
+Brendan's review; no merge. Isolated owner-private preview published using Sites:
+https://market-ripple-event-matching.royaltulip9.chatgpt.site/matching/
+Sign in with the same ChatGPT account on iPad. Hosting confirms successful
+deployment; local Chromium QA passed. Direct remote HTTP inspection is blocked
+by this environment, so no physical Safari or remote-browser visit is claimed.
+The existing public branding preview and production deployment are untouched.
+
 **Unfinished:** EIA reconciliation is blocked: no free key is configured; actual
 API/download requests returned proxy CONNECT 403. Official documentation/table
 browsing is not full verification. Setup explains hidden local key configuration.
