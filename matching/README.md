@@ -3,7 +3,7 @@
 Open **matching/index.html through an HTTP server**, or the separate preview URL
 [open the isolated preview](https://market-ripple-event-matching.royaltulip9.chatgpt.site/matching/) (sign in with the same ChatGPT account). This is functioning deterministic research software, not
 monitoring, a forecast or a trading system. The existing dashboard content/replay logic, research views, paper-trading branch
-and original branding preview are preserved. One CSS width constraint fixes an
+and original branding preview are preserved. Small CSS width constraints fix an
 inherited dashboard mobile grid overflow found by the combined CI browser suite.
 
 ## Reproduce the data and run
