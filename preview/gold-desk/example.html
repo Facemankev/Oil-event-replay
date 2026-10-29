@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Market Ripple design example</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="design.css">
+<style>
+  /* only what this example page needs on top of design.css */
+  .theme-switch{display:flex;justify-content:flex-end;gap:8px;margin-bottom:12px}
+</style>
+</head>
+<body class="mr-page">
+<!--
+  A working example of the Market Ripple look, for reference.
+  Open it from the repo folder with: python3 -m http.server 8000
+  then visit http://localhost:8000/.claude/skills/market-ripple-design/example.html
+  Prices: data/brent-brexit-source.csv and data/apple-brexit-source.csv (see data/SOURCES.md).
+-->
+<div class="mr-wrap mr-stack">
+
+  <div class="theme-switch" role="group" aria-label="Light or dark">
+    <button type="button" class="mr-btn" data-set-theme="light" aria-pressed="false">Light</button>
+    <button type="button" class="mr-btn" data-set-theme="dark" aria-pressed="false">Dark</button>
+  </div>
+
+  <header class="mr-bar mr-glass mr-enter">
+    <h1 class="mr-brand">
+      <svg viewBox="0 0 30 30" aria-hidden="true">
+        <circle cx="7" cy="23" r="3" fill="currentColor"/>
+        <path d="M7 14a9 9 0 0 1 9 9M7 8a15 15 0 0 1 15 15M7 2a21 21 0 0 1 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Market Ripple
+    </h1>
+    <span class="mr-badge">Historical research, not trading advice</span>
+  </header>
+
+  <section class="mr-panel mr-glass mr-enter">
+    <h2 class="mr-hero">Brexit referendum, <span class="mr-hl">June 2016</span></h2>
+    <p class="mr-lead">The UK voted on 23 June 2016 to leave the European Union. The result was announced early on 24 June.</p>
+    <div class="mr-actions" role="group" aria-label="Market">
+      <button type="button" class="mr-btn" data-market="brent" aria-pressed="true">Brent oil</button>
+      <button type="button" class="mr-btn" data-market="apple" aria-pressed="false">Apple shares</button>
+    </div>
+    <div class="mr-actions" role="group" aria-label="Time around the result" style="margin-top:12px">
+      <button type="button" class="mr-btn" data-window="14" aria-pressed="true">±14 calendar days</button>
+      <button type="button" class="mr-btn" data-window="30" aria-pressed="false">±30 calendar days</button>
+    </div>
+  </section>
+
+  <div class="mr-figures" aria-live="polite">
+    <div class="mr-tile mr-glass mr-enter"><span class="mr-label">Last price before</span><strong class="mr-figure" id="f-before"></strong><span class="mr-meta" id="f-before-d"></span></div>
+    <div class="mr-tile mr-glass mr-enter"><span class="mr-label">First price after</span><strong class="mr-figure" id="f-after"></strong><span class="mr-meta" id="f-after-d"></span></div>
+    <div class="mr-tile mr-glass mr-enter"><span class="mr-label">Event-day change*</span><strong class="mr-figure" id="f-day"></strong><span class="mr-meta" id="f-day-d"></span></div>
+    <div class="mr-tile mr-glass mr-enter"><span class="mr-label">Across the chart</span><strong class="mr-figure" id="f-all"></strong><span class="mr-meta" id="f-all-d"></span></div>
+  </div>
+
+  <section class="mr-panel mr-glass mr-chart-card mr-enter">
+    <div class="mr-panel-title">
+      <svg class="mr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 20h18M4 16l5-5 4 3 7-8"/></svg>
+      <h2 id="chart-title"></h2>
+    </div>
+    <div class="mr-chart-wrap">
+      <svg class="mr-chart" id="chart" viewBox="0 0 900 356" role="img"></svg>
+    </div>
+    <p class="mr-caption" id="caption"></p>
+    <details class="mr-disclosure">
+      <summary>Show these prices as a table</summary>
+      <div class="mr-table-scroll">
+        <table class="mr-table">
+          <thead><tr><th scope="col">Date</th><th scope="col">Trading day</th><th scope="col" class="num" id="col-unit"></th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </details>
+    <p class="mr-note">*Event-day change compares the last price before the event with the first price on or after it. It is not proof that the event caused the change, and it doesn't predict future prices. Days without a published price are left out, not filled in.</p>
+    <p class="mr-note" id="source"></p>
+  </section>
+</div>
+
+<script>
+// Daily closes copied from the project's data files (see data/SOURCES.md). Trading days only; nothing filled in.
+const DATA={"brent":[["2016-05-25",48.87],["2016-05-26",49.52],["2016-05-27",49.09],["2016-05-31",49.26],["2016-06-01",48.81],["2016-06-02",49.05],["2016-06-03",48.5],["2016-06-06",48.94],["2016-06-07",49.76],["2016-06-08",50.73],["2016-06-09",50.59],["2016-06-10",49.7],["2016-06-13",49.36],["2016-06-14",47.88],["2016-06-15",47.47],["2016-06-16",45.66],["2016-06-17",46.57],["2016-06-20",48.68],["2016-06-21",48.18],["2016-06-22",48.43],["2016-06-23",48.63],["2016-06-24",46.69],["2016-06-27",45.07],["2016-06-28",46.29],["2016-06-29",48.4],["2016-06-30",48.05],["2016-07-01",47.65],["2016-07-04",48.02],["2016-07-05",45.64],["2016-07-06",45.7],["2016-07-07",45.93],["2016-07-08",44.53],["2016-07-11",44.04],["2016-07-12",46.72],["2016-07-13",44.67],["2016-07-14",46.01],["2016-07-15",46.25],["2016-07-18",45.35],["2016-07-19",45.7],["2016-07-20",45.82],["2016-07-21",44.99],["2016-07-22",44.24]],"apple":[["2016-05-25",99.62],["2016-05-26",100.41],["2016-05-27",100.35],["2016-05-31",99.86],["2016-06-01",98.46],["2016-06-02",97.72],["2016-06-03",97.92],["2016-06-06",98.63],["2016-06-07",99.03],["2016-06-08",98.94],["2016-06-09",99.65],["2016-06-10",98.83],["2016-06-13",97.34],["2016-06-14",97.46],["2016-06-15",97.14],["2016-06-16",97.55],["2016-06-17",95.33],["2016-06-20",95.1],["2016-06-21",95.91],["2016-06-22",95.55],["2016-06-23",96.1],["2016-06-24",93.4],["2016-06-27",92.04],["2016-06-28",93.59],["2016-06-29",94.4],["2016-06-30",95.6],["2016-07-01",95.89],["2016-07-05",94.99],["2016-07-06",95.53],["2016-07-07",95.94],["2016-07-08",96.68],["2016-07-11",96.98],["2016-07-12",97.42],["2016-07-13",96.87],["2016-07-14",98.79],["2016-07-15",98.78],["2016-07-18",99.83],["2016-07-19",99.87],["2016-07-20",99.96],["2016-07-21",99.43],["2016-07-22",98.66]]};
+const MARKETS={
+  brent:{title:"Brent oil, US dollars per barrel",unit:"Brent ($ per barrel)",name:"Brent oil",
+    source:'Source: <a href="https://www.eia.gov/dnav/pet/hist/RBRTED.htm">EIA Europe Brent Spot Price FOB</a>, via the <a href="https://github.com/datasets/oil-prices">datasets oil-prices</a> CSV in <code>data/</code>.'},
+  apple:{title:"Apple shares, US dollars per share",unit:"Apple ($ per share)",name:"Apple shares",
+    source:'Source: <a href="https://github.com/plotly/datasets/blob/master/finance-charts-apple.csv">Plotly finance-charts-apple</a> CSV in <code>data/</code> (closing price, not adjusted). Prices are on the 2016 share basis, before Apple\'s later stock split, so don\'t compare them with today\'s price. Apple is one company, not the whole technology market.'}
+};
+const EVENT="2016-06-24";   // T0: first trading day on or after the result
+const state={market:"brent",window:14};
+
+const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const fmt=d=>+d.slice(8)+" "+months[+d.slice(5,7)-1];
+const money=v=>"$"+v.toFixed(2);
+const pct=(a,b)=>{const p=(b/a-1)*100;return (p<0?"−":p>0?"+":"")+Math.abs(p).toFixed(1)+"%"};
+const dir=(a,b)=>b<a?"mr-down":b>a?"mr-up":"";
+const addDays=(d,n)=>{const t=new Date(d+"T00:00:00Z");t.setUTCDate(t.getUTCDate()+n);return t.toISOString().slice(0,10)};
+
+function render(){
+  const m=MARKETS[state.market];
+  const from=addDays(EVENT,-state.window),to=addDays(EVENT,state.window);
+  const rows=DATA[state.market].filter(p=>p[0]>=from&&p[0]<=to);
+  const ev=rows.findIndex(p=>p[0]>=EVENT);
+  const tLabel=i=>{const t=i-ev;return "T"+(t===0?"0":(t>0?"+":"−")+Math.abs(t))};
+  const before=rows[ev-1],after=rows[ev],first=rows[0],last=rows[rows.length-1];
+
+  // key figures
+  const set=(id,html,cls)=>{const e=document.getElementById(id);e.innerHTML=html;if(cls!==undefined)e.className="mr-figure "+cls};
+  set("f-before",money(before[1]),"");document.getElementById("f-before-d").textContent=fmt(before[0])+" 2016";
+  set("f-after",money(after[1]),"");document.getElementById("f-after-d").textContent=fmt(after[0])+" 2016";
+  set("f-day",pct(before[1],after[1]),dir(before[1],after[1]));document.getElementById("f-day-d").textContent=fmt(before[0])+" → "+fmt(after[0]);
+  set("f-all",pct(first[1],last[1]),dir(first[1],last[1]));document.getElementById("f-all-d").textContent=fmt(first[0])+" → "+fmt(last[0]);
+
+  // chart: y axis on even dollar steps that cover the data
+  // leave a little room above and below the data so the line never sits on the chart's edge
+  const vals=rows.map(p=>p[1]),step=Math.max(...vals)-Math.min(...vals)>12?4:2;
+  const lo=Math.floor((Math.min(...vals)-step*.3)/step)*step,hi=Math.ceil((Math.max(...vals)+step*.3)/step)*step;
+  const W=900,H=356,L=60,R=24,T=28,B=58;
+  const x=i=>L+i*(W-L-R)/(rows.length-1),y=v=>T+(hi-v)*(H-T-B)/(hi-lo);
+  let s="";
+  for(let v=lo;v<=hi;v+=step)s+=`<line class="gridline" x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L-10}" y="${y(v)+5}" text-anchor="end">$${v}</text>`;
+  s+=`<rect class="evband" x="${x(ev-1)}" y="${T-6}" width="${x(ev)-x(ev-1)}" height="${H-B-T+6}"/>`;
+  s+=`<line class="event" x1="${x(ev)}" x2="${x(ev)}" y1="${T-6}" y2="${H-B}"/><text class="event-label" x="${x(ev)+8}" y="${T+6}">Result announced</text>`;
+  s+=`<polyline class="price" points="${rows.map((p,i)=>x(i)+","+y(p[1])).join(" ")}"/>`;
+  [ev-1,ev].forEach(i=>s+=`<circle class="key" cx="${x(i)}" cy="${y(rows[i][1])}" r="5"><title>${fmt(rows[i][0])} 2016: ${money(rows[i][1])}</title></circle>`);
+  const ticks=[0,Math.round(ev/2),ev,Math.round((ev+rows.length-1)/2),rows.length-1];
+  // the first and last labels line up with the chart's edges so they never collide with the price axis
+  ticks.forEach((i,k)=>{const a=k===0?"start":k===ticks.length-1?"end":"middle";
+    s+=`<text class="t" x="${x(i)}" y="${H-24}" text-anchor="${a}">${tLabel(i)}</text><text class="date" x="${x(i)}" y="${H-6}" text-anchor="${a}">${fmt(rows[i][0])}</text>`});
+  const svg=document.getElementById("chart");
+  svg.innerHTML=s;
+  svg.setAttribute("aria-label",`${m.name} from ${fmt(first[0])} to ${fmt(last[0])} 2016, ${dir(first[1],last[1])==="mr-down"?"falling":"rising"} from ${money(first[1])} to ${money(last[1])}, and ${pct(before[1],after[1])} the day after the referendum.`);
+
+  document.getElementById("chart-title").textContent=m.title;
+  document.getElementById("col-unit").textContent=m.unit;
+  document.getElementById("source").innerHTML=m.source;
+  const partial=to>DATA[state.market][DATA[state.market].length-1][0]||from<DATA[state.market][0][0];
+  document.getElementById("caption").textContent="Each point is one trading day's closing price. Weekends and holidays have no price, so they're left out."+
+    (partial?` The example data ends on ${fmt(last[0])}, so this window is only partly covered.`:"");
+  document.getElementById("rows").innerHTML=rows.map((p,i)=>`<tr><td>${fmt(p[0])} 2016</td><td>${tLabel(i)}</td><td class="num">${p[1].toFixed(2)}</td></tr>`).join("");
+}
+
+function wire(attr,key,parse){
+  const btns=document.querySelectorAll(`[data-${attr}]`);
+  btns.forEach(b=>b.addEventListener("click",()=>{
+    state[key]=parse(b.dataset[attr]);
+    btns.forEach(o=>o.setAttribute("aria-pressed",o===b));
+    render();
+  }));
+}
+wire("market","market",v=>v);
+wire("window","window",Number);
+render();
+
+// Light/dark: follows the device until a button is pressed
+const themeBtns=document.querySelectorAll("[data-set-theme]");
+function showTheme(t){themeBtns.forEach(b=>b.setAttribute("aria-pressed",b.dataset.setTheme===t))}
+showTheme(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+themeBtns.forEach(b=>b.addEventListener("click",()=>{document.documentElement.dataset.theme=b.dataset.setTheme;showTheme(b.dataset.setTheme)}));
+</script>
+</body>
+</html>

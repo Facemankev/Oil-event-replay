@@ -1,0 +1,1301 @@
+{
+  "schema_version": 1,
+  "events": [
+    {
+      "id": "gustav-2008-louisiana",
+      "revision": 1,
+      "title": "Gustav landfall near Cocodrie",
+      "category": "weather",
+      "description": "Contemporaneous NHC bulletin reports landfall in a region exposed to oil production, refining or fuel distribution.",
+      "geography": "US Louisiana / Gulf of Mexico",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2008-09-01",
+        "at": null,
+        "timezone": "America/Chicago",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2008-09-01",
+        "at": "2008-09-01T10:00:00-05:00",
+        "timezone": "America/Chicago",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "gustav-2008-louisiana-source-1"
+      },
+      "public_evidence": "gustav-2008-louisiana-source-1",
+      "evidence": [
+        {
+          "id": "gustav-2008-louisiana-source-1",
+          "url": "https://www.nhc.noaa.gov/archive/2008/al07/al072008.public.032.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "stable_reference": "AL072008 advisory 32, 1000 AM CDT 1 September 2008",
+          "archive_url": "https://www.nhc.noaa.gov/archive/2008/al07/al072008.public.032.shtml",
+          "quality": "primary_release",
+          "published": {
+            "date": "2008-09-01",
+            "at": "2008-09-01T10:00:00-05:00",
+            "timezone": "America/Chicago",
+            "precision": "minute",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "AL072008 advisory 32, 1000 AM CDT 1 September 2008",
+          "summary": "The dated bulletin reports the named landfall and provides its printed local issuance time.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "a18990125ff64c0a59275180278e0b5ef9b004c446d5f0ba7758cd83911c1968"
+        }
+      ],
+      "uncertainty": "Contemporaneous landfall estimates can differ from later best-track analysis. Storm forecasts preceded landfall; anticipation is possible. The located bulletin is not proof that no earlier public report existed.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "ike-2008-galveston",
+      "revision": 1,
+      "title": "Ike landfall at Galveston",
+      "category": "weather",
+      "description": "Contemporaneous NHC bulletin reports landfall in a region exposed to oil production, refining or fuel distribution.",
+      "geography": "US Texas / Gulf of Mexico",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2008-09-13",
+        "at": "2008-09-13T02:10:00-05:00",
+        "timezone": "America/Chicago",
+        "precision": "minute",
+        "approximate": true
+      },
+      "first_public": {
+        "date": "2008-09-13",
+        "at": "2008-09-13T02:30:00-05:00",
+        "timezone": "America/Chicago",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "ike-2008-galveston-source-1"
+      },
+      "public_evidence": "ike-2008-galveston-source-1",
+      "evidence": [
+        {
+          "id": "ike-2008-galveston-source-1",
+          "url": "https://www.nhc.noaa.gov/archive/2008/al09/al092008.update.09130730.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "stable_reference": "AL092008 tropical cyclone update, 230 AM CDT 13 September 2008",
+          "archive_url": "https://www.nhc.noaa.gov/archive/2008/al09/al092008.update.09130730.shtml",
+          "quality": "primary_release",
+          "published": {
+            "date": "2008-09-13",
+            "at": "2008-09-13T02:30:00-05:00",
+            "timezone": "America/Chicago",
+            "precision": "minute",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "AL092008 tropical cyclone update, 230 AM CDT 13 September 2008",
+          "summary": "The dated bulletin reports the named landfall and provides its printed local issuance time.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "69480c05e44b7ebcbd2ced6fe8fc7826bb5ada8ed9a46cb293d762704c58cab3"
+        }
+      ],
+      "uncertainty": "Contemporaneous landfall estimates can differ from later best-track analysis. Storm forecasts preceded landfall; anticipation is possible. The located bulletin is not proof that no earlier public report existed.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "sandy-2012-new-jersey",
+      "revision": 1,
+      "title": "Post-tropical Sandy landfall in New Jersey",
+      "category": "weather",
+      "description": "Contemporaneous NHC bulletin reports landfall in a region exposed to oil production, refining or fuel distribution.",
+      "geography": "US New Jersey / Atlantic coast",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2012-10-29",
+        "at": "2012-10-29T20:00:00-04:00",
+        "timezone": "America/New_York",
+        "precision": "minute",
+        "approximate": true
+      },
+      "first_public": {
+        "date": "2012-10-29",
+        "at": "2012-10-29T20:00:00-04:00",
+        "timezone": "America/New_York",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "sandy-2012-new-jersey-source-1"
+      },
+      "public_evidence": "sandy-2012-new-jersey-source-1",
+      "evidence": [
+        {
+          "id": "sandy-2012-new-jersey-source-1",
+          "url": "https://www.nhc.noaa.gov/archive/2012/al18/al182012.update.10300002.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "stable_reference": "AL182012 tropical cyclone update, 800 PM EDT 29 October 2012",
+          "archive_url": "https://www.nhc.noaa.gov/archive/2012/al18/al182012.update.10300002.shtml",
+          "quality": "primary_release",
+          "published": {
+            "date": "2012-10-29",
+            "at": "2012-10-29T20:00:00-04:00",
+            "timezone": "America/New_York",
+            "precision": "minute",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "AL182012 tropical cyclone update, 800 PM EDT 29 October 2012",
+          "summary": "The dated bulletin reports the named landfall and provides its printed local issuance time.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "5de98c0d1311bd429c4b1a50646c778f0efb3ccf5bfa01b815c389a034e5fa31"
+        }
+      ],
+      "uncertainty": "Contemporaneous landfall estimates can differ from later best-track analysis. Storm forecasts preceded landfall; anticipation is possible. The located bulletin is not proof that no earlier public report existed.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "harvey-2017-texas",
+      "revision": 1,
+      "title": "Harvey landfall on the Texas coast",
+      "category": "weather",
+      "description": "Contemporaneous NHC bulletin reports landfall in a region exposed to oil production, refining or fuel distribution.",
+      "geography": "US Texas / Gulf of Mexico",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2017-08-25",
+        "at": "2017-08-25T22:00:00-05:00",
+        "timezone": "America/Chicago",
+        "precision": "minute",
+        "approximate": true
+      },
+      "first_public": {
+        "date": "2017-08-25",
+        "at": "2017-08-25T22:00:00-05:00",
+        "timezone": "America/Chicago",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "harvey-2017-texas-source-1"
+      },
+      "public_evidence": "harvey-2017-texas-source-1",
+      "evidence": [
+        {
+          "id": "harvey-2017-texas-source-1",
+          "url": "https://www.nhc.noaa.gov/archive/2017/al09/al092017.public.023.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "stable_reference": "AL092017 advisory 23, 1000 PM CDT 25 August 2017",
+          "archive_url": "https://www.nhc.noaa.gov/archive/2017/al09/al092017.public.023.shtml",
+          "quality": "primary_release",
+          "published": {
+            "date": "2017-08-25",
+            "at": "2017-08-25T22:00:00-05:00",
+            "timezone": "America/Chicago",
+            "precision": "minute",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "AL092017 advisory 23, 1000 PM CDT 25 August 2017",
+          "summary": "The dated bulletin reports the named landfall and provides its printed local issuance time.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "778c4faa5e01ebe7268a8d39f1cb5bd1e1a7091199abe135e3557394a047fd21"
+        }
+      ],
+      "uncertainty": "Contemporaneous landfall estimates can differ from later best-track analysis. Storm forecasts preceded landfall; anticipation is possible. The located bulletin is not proof that no earlier public report existed.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "laura-2020-louisiana",
+      "revision": 1,
+      "title": "Laura landfall near Cameron",
+      "category": "weather",
+      "description": "Contemporaneous NHC bulletin reports landfall in a region exposed to oil production, refining or fuel distribution.",
+      "geography": "US Louisiana / Gulf of Mexico",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2020-08-27",
+        "at": "2020-08-27T01:00:00-05:00",
+        "timezone": "America/Chicago",
+        "precision": "minute",
+        "approximate": true
+      },
+      "first_public": {
+        "date": "2020-08-27",
+        "at": "2020-08-27T01:00:00-05:00",
+        "timezone": "America/Chicago",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "laura-2020-louisiana-source-1"
+      },
+      "public_evidence": "laura-2020-louisiana-source-1",
+      "evidence": [
+        {
+          "id": "laura-2020-louisiana-source-1",
+          "url": "https://www.nhc.noaa.gov/archive/2020/al13/al132020.public_a.029.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "stable_reference": "AL132020 intermediate advisory 29A, 100 AM CDT 27 August 2020",
+          "archive_url": "https://www.nhc.noaa.gov/archive/2020/al13/al132020.public_a.029.shtml",
+          "quality": "primary_release",
+          "published": {
+            "date": "2020-08-27",
+            "at": "2020-08-27T01:00:00-05:00",
+            "timezone": "America/Chicago",
+            "precision": "minute",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "AL132020 intermediate advisory 29A, 100 AM CDT 27 August 2020",
+          "summary": "The dated bulletin reports the named landfall and provides its printed local issuance time.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "04d74ff8508a78f18582504f390c1686d8c4b21409599dc5e086189b5bb326ad"
+        }
+      ],
+      "uncertainty": "Contemporaneous landfall estimates can differ from later best-track analysis. Storm forecasts preceded landfall; anticipation is possible. The located bulletin is not proof that no earlier public report existed.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "ida-2021-louisiana",
+      "revision": 1,
+      "title": "Ida landfall near Port Fourchon",
+      "category": "weather",
+      "description": "Contemporaneous NHC bulletin reports landfall in a region exposed to oil production, refining or fuel distribution.",
+      "geography": "US Louisiana / Gulf of Mexico",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2021-08-29",
+        "at": "2021-08-29T11:55:00-05:00",
+        "timezone": "America/Chicago",
+        "precision": "minute",
+        "approximate": true
+      },
+      "first_public": {
+        "date": "2021-08-29",
+        "at": "2021-08-29T11:55:00-05:00",
+        "timezone": "America/Chicago",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "ida-2021-louisiana-source-1"
+      },
+      "public_evidence": "ida-2021-louisiana-source-1",
+      "evidence": [
+        {
+          "id": "ida-2021-louisiana-source-1",
+          "url": "https://www.nhc.noaa.gov/archive/2021/al09/al092021.update.08291653.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "stable_reference": "AL092021 tropical cyclone update, 1155 AM CDT 29 August 2021",
+          "archive_url": "https://www.nhc.noaa.gov/archive/2021/al09/al092021.update.08291653.shtml",
+          "quality": "primary_release",
+          "published": {
+            "date": "2021-08-29",
+            "at": "2021-08-29T11:55:00-05:00",
+            "timezone": "America/Chicago",
+            "precision": "minute",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "AL092021 tropical cyclone update, 1155 AM CDT 29 August 2021",
+          "summary": "The dated bulletin reports the named landfall and provides its printed local issuance time.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "324a5f894ed7ef61dc787b947d58421af5be856e5f756962b1f0d549e8e7393b"
+        }
+      ],
+      "uncertainty": "Landfall times are contemporaneous estimates, not later best-track corrections. Storm forecasts preceded landfall; anticipation is possible. Printed issuance is the earliest supporting bulletin located here, not a guarantee of first public dissemination. Ida archive filename differs by two minutes from its printed 1155 CDT header; use the printed header.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "opec-2014-target",
+      "revision": 1,
+      "title": "OPEC retains its production target",
+      "category": "production_policy",
+      "description": "OPEC retained its 30 million barrel-per-day production level.",
+      "geography": "Austria / OPEC producers",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2014-11-27",
+        "at": null,
+        "timezone": "Europe/Vienna",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2014-11-27",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "opec-2014-target-source-1"
+      },
+      "public_evidence": "opec-2014-target-source-1",
+      "evidence": [
+        {
+          "id": "opec-2014-target-source-1",
+          "url": "https://www.opec.org/pr-detail/84-27-nov-2014.html",
+          "publisher": "OPEC",
+          "stable_reference": "166th OPEC Conference",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2014-11-27",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "166th OPEC Conference",
+          "summary": "OPEC retained its 30 million barrel-per-day production level.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "df9f222f66c2f0ceea621547f86419e3b27904f571d6bbb6380eef4a0b922ebe"
+        }
+      ],
+      "uncertainty": "Release date is available; publication clock and timezone are not established. Venue timezone describes occurrence location only. Decision and effective production dates differ; advance expectations or reporting are possible.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "opec-2016-algiers",
+      "revision": 1,
+      "title": "OPEC agrees an Algiers production target range",
+      "category": "production_policy",
+      "description": "OPEC agreed a production target range of 32.5 to 33.0 million barrels per day.",
+      "geography": "Algeria / OPEC producers",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2016-09-28",
+        "at": null,
+        "timezone": "Africa/Algiers",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2016-09-28",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "opec-2016-algiers-source-1"
+      },
+      "public_evidence": "opec-2016-algiers-source-1",
+      "evidence": [
+        {
+          "id": "opec-2016-algiers-source-1",
+          "url": "https://www.opec.org/pr-detail/495-28-sep-2016.html",
+          "publisher": "OPEC",
+          "stable_reference": "170th Extraordinary OPEC Conference",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2016-09-28",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "170th Extraordinary OPEC Conference",
+          "summary": "OPEC agreed a production target range of 32.5 to 33.0 million barrels per day.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "65af42e2ec94d36ce62b0b970f6c0de1b5db104aacad2fe48108201dda1c251b"
+        }
+      ],
+      "uncertainty": "Release date is available; publication clock and timezone are not established. Venue timezone describes occurrence location only. Decision and effective production dates differ; advance expectations or reporting are possible.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "opec-2016-vienna",
+      "revision": 1,
+      "title": "OPEC agrees the Vienna production target",
+      "category": "production_policy",
+      "description": "OPEC adopted a 32.5 million barrel-per-day target effective January 2017.",
+      "geography": "Austria / OPEC producers",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2016-11-30",
+        "at": null,
+        "timezone": "Europe/Vienna",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2016-11-30",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "opec-2016-vienna-source-1"
+      },
+      "public_evidence": "opec-2016-vienna-source-1",
+      "evidence": [
+        {
+          "id": "opec-2016-vienna-source-1",
+          "url": "https://www.opec.org/pr-detail/458-30-nov-2016.html",
+          "publisher": "OPEC",
+          "stable_reference": "171st OPEC Conference",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2016-11-30",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "171st OPEC Conference",
+          "summary": "OPEC adopted a 32.5 million barrel-per-day target effective January 2017.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "62ba5be0e0f108dba4126a7cc12e6df745a5ff64420dc5eb48a38591d5868e58"
+        }
+      ],
+      "uncertainty": "Release date is available; publication clock and timezone are not established. Venue timezone describes occurrence location only. Decision and effective production dates differ; advance expectations or reporting are possible.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "opec-2016-cooperation",
+      "revision": 1,
+      "title": "OPEC and non-OPEC producers agree cooperation",
+      "category": "production_policy",
+      "description": "OPEC and non-OPEC participants agreed a framework for coordinated production adjustments.",
+      "geography": "Austria / participating producers",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2016-12-10",
+        "at": null,
+        "timezone": "Europe/Vienna",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2016-12-10",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "opec-2016-cooperation-source-1"
+      },
+      "public_evidence": "opec-2016-cooperation-source-1",
+      "evidence": [
+        {
+          "id": "opec-2016-cooperation-source-1",
+          "url": "https://www.opec.org/pr-detail/457-10-dec-2016.html",
+          "publisher": "OPEC",
+          "stable_reference": "OPEC and non-OPEC Ministerial Meeting, 10 December 2016",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2016-12-10",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "OPEC and non-OPEC Ministerial Meeting, 10 December 2016",
+          "summary": "OPEC and non-OPEC participants agreed a framework for coordinated production adjustments.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "6490ce732e29b6dd6459865ed5427ce641c10c0e7ba007998d56b23397b04156"
+        }
+      ],
+      "uncertainty": "Release date is available; publication clock and timezone are not established. Venue timezone describes occurrence location only. Decision and effective production dates differ; advance expectations or reporting are possible.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "opec-2020-april",
+      "revision": 1,
+      "title": "OPEC+ agrees the April 2020 output adjustment",
+      "category": "production_policy",
+      "description": "Participants agreed an initial 9.7 million barrel-per-day production adjustment from May.",
+      "geography": "Global / participating producers",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2020-04-12",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2020-04-12",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "opec-2020-april-source-1"
+      },
+      "public_evidence": "opec-2020-april-source-1",
+      "evidence": [
+        {
+          "id": "opec-2020-april-source-1",
+          "url": "https://www.opec.org/pr-detail/310-12-apr-2020.html",
+          "publisher": "OPEC",
+          "stable_reference": "10th Extraordinary OPEC and non-OPEC Ministerial Meeting",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2020-04-12",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "10th Extraordinary OPEC and non-OPEC Ministerial Meeting",
+          "summary": "Participants agreed an initial 9.7 million barrel-per-day production adjustment from May.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "bbcd7a89b517bcf579541fdf9beb17c38d11e6f35f2c78539c9d548ef1b4c067"
+        }
+      ],
+      "uncertainty": "Release date is available; publication clock and timezone are not established. Meeting date and effective production date differ. Scheduled meetings, leaks and expectations can precede the official release. Videoconference occurrence timezone is not established; UTC is not an inferred meeting time.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "opec-2020-june",
+      "revision": 1,
+      "title": "OPEC+ extends the first adjustment phase",
+      "category": "production_policy",
+      "description": "Participants agreed to extend the first production-adjustment phase by one month.",
+      "geography": "Global / participating producers",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2020-06-06",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2020-06-06",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "opec-2020-june-source-1"
+      },
+      "public_evidence": "opec-2020-june-source-1",
+      "evidence": [
+        {
+          "id": "opec-2020-june-source-1",
+          "url": "https://www.opec.org/pr-detail/306-06-jun-2020.html",
+          "publisher": "OPEC",
+          "stable_reference": "11th OPEC and non-OPEC Ministerial Meeting",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2020-06-06",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "11th OPEC and non-OPEC Ministerial Meeting",
+          "summary": "Participants agreed to extend the first production-adjustment phase by one month.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "b4edf33f2bccbc0797e873d46baeba89edbe8bae72340973f83d299dd9b25b4c"
+        }
+      ],
+      "uncertainty": "Release date is available; publication clock and timezone are not established. Meeting date and effective production date differ. Scheduled meetings, leaks and expectations can precede the official release. Videoconference occurrence timezone is not established; UTC is not an inferred meeting time.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "opec-2021-july",
+      "revision": 1,
+      "title": "OPEC+ agrees monthly production increases",
+      "category": "production_policy",
+      "description": "Participants agreed monthly 0.4 million barrel-per-day increases beginning August 2021.",
+      "geography": "Global / participating producers",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2021-07-18",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2021-07-18",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "opec-2021-july-source-1"
+      },
+      "public_evidence": "opec-2021-july-source-1",
+      "evidence": [
+        {
+          "id": "opec-2021-july-source-1",
+          "url": "https://www.opec.org/pr-detail/209-18-jul-2021.html",
+          "publisher": "OPEC",
+          "stable_reference": "19th OPEC and non-OPEC Ministerial Meeting",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2021-07-18",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "19th OPEC and non-OPEC Ministerial Meeting",
+          "summary": "Participants agreed monthly 0.4 million barrel-per-day increases beginning August 2021.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "b5a82f0599376aaa8f7ddd9377ef2150853e44467ac07a06ed1d4941abf2f50a"
+        }
+      ],
+      "uncertainty": "Release date is available; publication clock and timezone are not established. Meeting date and effective production date differ. Scheduled meetings, leaks and expectations can precede the official release. Videoconference occurrence timezone is not established; UTC is not an inferred meeting time.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "opec-2022-october",
+      "revision": 1,
+      "title": "OPEC+ agrees a lower required production level",
+      "category": "production_policy",
+      "description": "Participants agreed a two million barrel-per-day reduction from required levels, starting November.",
+      "geography": "Austria / participating producers",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2022-10-05",
+        "at": null,
+        "timezone": "Europe/Vienna",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2022-10-05",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "opec-2022-october-source-1"
+      },
+      "public_evidence": "opec-2022-october-source-1",
+      "evidence": [
+        {
+          "id": "opec-2022-october-source-1",
+          "url": "https://www.opec.org/pr-detail/73-05-oct-2022.html",
+          "publisher": "OPEC",
+          "stable_reference": "33rd OPEC and non-OPEC Ministerial Meeting",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2022-10-05",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "33rd OPEC and non-OPEC Ministerial Meeting",
+          "summary": "Participants agreed a two million barrel-per-day reduction from required levels, starting November.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "f994062809bc040539fcc84f544d6f3330c81f988e3304d078e250f525f0af47"
+        }
+      ],
+      "uncertainty": "Release date is available; publication clock and timezone are not established. Venue timezone describes occurrence location only. Decision and effective production dates differ; advance expectations or reporting are possible.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "eu-2012-iran",
+      "revision": 1,
+      "title": "EU adopts Iranian oil import restrictions",
+      "category": "sanctions",
+      "description": "EU foreign ministers adopted restrictions on Iranian crude and petroleum imports.",
+      "geography": "EU / Iran",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2012-01-23",
+        "at": null,
+        "timezone": "Europe/Brussels",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": null,
+        "at": null,
+        "timezone": null,
+        "precision": "unknown",
+        "status": "not_established",
+        "evidence_id": null
+      },
+      "public_evidence": "eu-2012-iran-source-1",
+      "evidence": [
+        {
+          "id": "eu-2012-iran-source-1",
+          "url": "https://home.treasury.gov/news/press-releases/tg1396",
+          "publisher": "US Department of the Treasury",
+          "stable_reference": "Treasury tg1396, 23 January 2012",
+          "archive_url": null,
+          "quality": "official_report",
+          "published": {
+            "date": "2012-01-23",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "Treasury tg1396, 23 January 2012",
+          "summary": "The Treasury welcomed the same-day EU decision to ban Iranian crude and petroleum imports.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "7c05eba57cc8fb0242e25001ef1221da4caec460236b303063000513733bfcff"
+        }
+      ],
+      "uncertainty": "This is a same-day US response, not the originating EU disclosure. Earliest public time is unknown. Implementation involved transition periods and prior policy discussion.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "us-2018-jcpoa",
+      "revision": 1,
+      "title": "US announces withdrawal from the JCPOA",
+      "category": "sanctions",
+      "description": "The US President announced withdrawal from the nuclear agreement and reinstatement of nuclear-related sanctions.",
+      "geography": "US / Iran",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2018-05-08",
+        "at": null,
+        "timezone": "America/New_York",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2018-05-08",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "us-2018-jcpoa-source-1"
+      },
+      "public_evidence": "us-2018-jcpoa-source-1",
+      "evidence": [
+        {
+          "id": "us-2018-jcpoa-source-1",
+          "url": "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-joint-comprehensive-plan-action/",
+          "publisher": "Archived White House",
+          "stable_reference": "White House remarks issued 8 May 2018; speech starts 2:13 PM EDT",
+          "archive_url": "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-joint-comprehensive-plan-action/",
+          "quality": "primary_release",
+          "published": {
+            "date": "2018-05-08",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "White House remarks issued 8 May 2018; speech starts 2:13 PM EDT",
+          "summary": "The archived transcript records the withdrawal announcement and the planned reinstatement of sanctions.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "b1e7505ba83c2f5631784e961aa5658e8e4dc89acf20cece85f63215d08e06c8"
+        }
+      ],
+      "uncertainty": "The transcript gives speech start time, not the precise announcement sentence or web-publication time. Do not treat 2:13 PM as a verified first-disclosure timestamp. Sanctions were phased in later.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "us-2018-iran-reimposition",
+      "revision": 1,
+      "title": "US reimposes remaining Iran nuclear-related sanctions",
+      "category": "sanctions",
+      "description": "The US Treasury announced reimposition of remaining nuclear-related sanctions, including energy and shipping measures.",
+      "geography": "US / Iran",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2018-11-05",
+        "at": null,
+        "timezone": "America/New_York",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2018-11-05",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "us-2018-iran-reimposition-source-1"
+      },
+      "public_evidence": "us-2018-iran-reimposition-source-1",
+      "evidence": [
+        {
+          "id": "us-2018-iran-reimposition-source-1",
+          "url": "https://home.treasury.gov/news/press-releases/sm541",
+          "publisher": "US Department of the Treasury",
+          "stable_reference": "Treasury sm541, 5 November 2018",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2018-11-05",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "Treasury sm541, 5 November 2018",
+          "summary": "Treasury announced reimposition of remaining sanctions and new designations.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "cedf5f7d303b5cbfba974cec0a4a68c171d11af259b795355ca654a3c41cb21f"
+        }
+      ],
+      "uncertainty": "This implementation date was announced in advance. Publication hour is unknown; it is not a surprise-event timestamp.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "eu-2022-oil-embargo",
+      "revision": 1,
+      "title": "EU adopts sixth sanctions package including Russian oil restrictions",
+      "category": "sanctions",
+      "description": "The Council adopted a package prohibiting Russian oil purchases with phase-out periods and exceptions.",
+      "geography": "EU / Russia",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2022-06-03",
+        "at": null,
+        "timezone": "Europe/Brussels",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2022-06-03",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "eu-2022-oil-embargo-source-1"
+      },
+      "public_evidence": "eu-2022-oil-embargo-source-1",
+      "evidence": [
+        {
+          "id": "eu-2022-oil-embargo-source-1",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2022/06/03/russia-s-aggression-against-ukraine-eu-adopts-sixth-package-of-sanctions/",
+          "publisher": "Council of the European Union",
+          "stable_reference": "Council press release 515/22, 3 June 2022",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2022-06-03",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "Council press release 515/22, 3 June 2022",
+          "summary": "The adopted package includes Russian crude and petroleum import restrictions with transitional periods.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "dc018ea0c354794cb3524f4e8805523e22f360863f1f2348911336a84aa2d81f"
+        }
+      ],
+      "uncertainty": "The web page prints 09:50 without an established timezone in the inspected evidence; retain date precision. Political agreement occurred earlier, on 30–31 May. This record concerns formal adoption, not the first proposal.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "g7-2022-oil-cap",
+      "revision": 1,
+      "title": "Coalition announces a Russian crude price cap",
+      "category": "sanctions",
+      "description": "The coalition announced a USD 60-per-barrel cap for services supporting seaborne Russian crude trade.",
+      "geography": "G7 / EU / Australia / Russia",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2022-12-02",
+        "at": null,
+        "timezone": "Europe/London",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2022-12-02",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "g7-2022-oil-cap-source-1"
+      },
+      "public_evidence": "g7-2022-oil-cap-source-1",
+      "evidence": [
+        {
+          "id": "g7-2022-oil-cap-source-1",
+          "url": "https://www.gov.uk/government/news/uk-and-allies-announce-price-cap-of-60-on-russian-oil",
+          "publisher": "HM Treasury",
+          "stable_reference": "HM Treasury news story, published 2 December 2022",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2022-12-02",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "HM Treasury news story, published 2 December 2022",
+          "summary": "The coalition set a USD 60 cap and stated enforcement would begin on 5 December.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "0ed563e16ad6e0fa6917acad693a4f52dd0d53da55fcf0f960f7df0c3fa1ba15"
+        }
+      ],
+      "uncertainty": "The announcement date differs from the 5 December implementation date. The publication hour is unknown and negotiations preceded this release.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "saudi-2019-abqaiq",
+      "revision": 1,
+      "title": "Attacks damage Abqaiq and Khurais facilities",
+      "category": "conflict",
+      "description": "Attacks damaged the Abqaiq oil processing facility and Khurais oil field.",
+      "geography": "Saudi Arabia / Eastern Province",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2019-09-14",
+        "at": null,
+        "timezone": "Asia/Riyadh",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": null,
+        "at": null,
+        "timezone": null,
+        "precision": "unknown",
+        "status": "not_established",
+        "evidence_id": null
+      },
+      "public_evidence": "saudi-2019-abqaiq-source-1",
+      "evidence": [
+        {
+          "id": "saudi-2019-abqaiq-source-1",
+          "url": "https://www.eia.gov/TodayinEnergy/detail.php?id=41413",
+          "publisher": "US Energy Information Administration",
+          "stable_reference": "Today in Energy article 41413, 23 September 2019",
+          "archive_url": null,
+          "quality": "official_retrospective",
+          "published": {
+            "date": "2019-09-23",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "Today in Energy article 41413, 23 September 2019",
+          "summary": "EIA reports that attacks damaged Abqaiq and Khurais on 14 September.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "3f81ca0db94bcc411b38410193f5163474ced21e003b9e2b9d87ac4226bf2d7a"
+        }
+      ],
+      "uncertainty": "The supporting EIA article is nine days later. It does not establish first public reporting on 14 September. Default comparisons align to this evidence date, not backdated occurrence. No attribution of responsibility is inferred.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "russia-2022-invasion",
+      "revision": 1,
+      "title": "Russia launches a full-scale invasion of Ukraine",
+      "category": "conflict",
+      "description": "Russian forces began large-scale military operations across Ukraine.",
+      "geography": "Ukraine / Russia / Black Sea",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2022-02-24",
+        "at": null,
+        "timezone": "Europe/Kyiv",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": null,
+        "at": null,
+        "timezone": null,
+        "precision": "unknown",
+        "status": "not_established",
+        "evidence_id": null
+      },
+      "public_evidence": "russia-2022-invasion-source-1",
+      "evidence": [
+        {
+          "id": "russia-2022-invasion-source-1",
+          "url": "https://ukraine.un.org/en/173250-statement-secretary-general-%E2%80%93-ukraine",
+          "publisher": "United Nations",
+          "stable_reference": "UN Secretary-General statement on Ukraine, 24 February 2022",
+          "archive_url": null,
+          "quality": "official_report",
+          "published": {
+            "date": "2022-02-24",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "UN Secretary-General statement on Ukraine, 24 February 2022",
+          "summary": "The Secretary-General described Russian military operations inside Ukraine on 24 February.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "9ff94d482bb5bad74e9f959eb2c9924995469d256810c73cd135eaddeb69e2ee"
+        }
+      ],
+      "uncertainty": "A same-day institutional statement corroborates occurrence but does not establish the first news report or attack hour. The conflict and market concerns preceded this escalation.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "israel-2023-october",
+      "revision": 1,
+      "title": "Hamas-led attacks on Israel",
+      "category": "conflict",
+      "description": "Hamas-led attacks struck Israeli towns, marking a major escalation in the conflict.",
+      "geography": "Israel / Gaza / Middle East",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2023-10-07",
+        "at": null,
+        "timezone": "Asia/Jerusalem",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": null,
+        "at": null,
+        "timezone": null,
+        "precision": "unknown",
+        "status": "not_established",
+        "evidence_id": null
+      },
+      "public_evidence": "israel-2023-october-source-1",
+      "evidence": [
+        {
+          "id": "israel-2023-october-source-1",
+          "url": "https://unsco.unmissions.org/sites/default/files/statement_attributable_to_the_spokesperson_of_the_sg_on_the_situation_in_the_middle_east_-_7_oct_2023.pdf",
+          "publisher": "United Nations",
+          "stable_reference": "UN Secretary-General spokesperson statement, 7 October 2023, New York",
+          "archive_url": "https://unsco.unmissions.org/sites/default/files/statement_attributable_to_the_spokesperson_of_the_sg_on_the_situation_in_the_middle_east_-_7_oct_2023.pdf",
+          "quality": "official_report",
+          "published": {
+            "date": "2023-10-07",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "UN Secretary-General spokesperson statement, 7 October 2023, New York",
+          "summary": "The statement condemns attacks against Israeli towns on the morning of 7 October.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "37b757afc7c31089f915474e6d07cac1394b5048d1cc9ad0410398599495cd61"
+        }
+      ],
+      "uncertainty": "This same-day statement is not the first public report. The record does not combine later military operations or supply disruptions with the initial attacks; oil relevance is geopolitical exposure, not a proven physical outage.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "iea-2022-emergency-release",
+      "revision": 1,
+      "title": "IEA members announce an emergency stock release",
+      "category": "strategic_stocks",
+      "description": "IEA members agreed an initial coordinated release of 60 million barrels from emergency stocks.",
+      "geography": "IEA members / global oil market",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2022-03-01",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2022-03-01",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "iea-2022-emergency-release-source-1"
+      },
+      "public_evidence": "iea-2022-emergency-release-source-1",
+      "evidence": [
+        {
+          "id": "iea-2022-emergency-release-source-1",
+          "url": "https://www.energy.gov/articles/us-and-30-countries-commit-release-60-million-barrels-oil-strategic-reserves-stabilize",
+          "publisher": "US Department of Energy",
+          "stable_reference": "DOE statement, 1 March 2022",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2022-03-01",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "DOE statement, 1 March 2022",
+          "summary": "The Secretary of Energy announced a collective initial 60 million barrel stock release.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "67315bb62ea302b5b508907de122b8707db36147187b4349a0ef03146620c4d2"
+        }
+      ],
+      "uncertainty": "Publication time is unknown. Initial commitments were revised subsequently; the event retains the announcement as stated on 1 March, not later totals. Videoconference decision hour is not established.",
+      "reviewed_on": "2026-10-27"
+    },
+    {
+      "id": "who-2020-pandemic",
+      "revision": 1,
+      "title": "WHO characterizes COVID-19 as a pandemic",
+      "category": "demand_shock",
+      "description": "WHO characterized COVID-19 as a pandemic during its public media briefing.",
+      "geography": "Global",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "relevance": "Oil supply, transport, policy or demand exposure; inclusion does not establish a measured price effect.",
+      "occurred": {
+        "date": "2020-03-11",
+        "at": null,
+        "timezone": "Europe/Zurich",
+        "precision": "day",
+        "approximate": false
+      },
+      "first_public": {
+        "date": "2020-03-11",
+        "at": null,
+        "timezone": null,
+        "precision": "day",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "who-2020-pandemic-source-1"
+      },
+      "public_evidence": "who-2020-pandemic-source-1",
+      "evidence": [
+        {
+          "id": "who-2020-pandemic-source-1",
+          "url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing-on-covid-19---11-march-2020",
+          "publisher": "World Health Organization",
+          "stable_reference": "WHO Director-General media briefing, 11 March 2020",
+          "archive_url": null,
+          "quality": "primary_release",
+          "published": {
+            "date": "2020-03-11",
+            "at": null,
+            "timezone": null,
+            "precision": "day",
+            "approximate": false
+          },
+          "checked_on": "2026-10-27",
+          "locator": "WHO Director-General media briefing, 11 March 2020",
+          "summary": "The dated briefing characterizes COVID-19 as a pandemic.",
+          "evidence_kind": "curated_fact_card_not_full_page",
+          "reuse_note": "Bibliographic facts and a short paraphrase only; linked publisher retains rights to source material.",
+          "sha256": "1f119226f72296191768e05944bbb8bbe193fd2dcd211a4d93fbb2d7cbf25cc1"
+        }
+      ],
+      "uncertainty": "The label was not the beginning of the outbreak or travel restrictions. Demand effects and expectations predated the briefing. Exact publication hour is not established.",
+      "reviewed_on": "2026-10-27"
+    }
+  ]
+}

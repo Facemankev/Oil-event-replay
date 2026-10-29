@@ -1,0 +1,494 @@
+{
+  "event_count": 24,
+  "seed_file_sha256": "7b74e4b8b76a56040d5d56c86c9dac41abb9d635df2ec1b855c86dc78ea42ef6",
+  "categories": {
+    "conflict": 3,
+    "demand_shock": 1,
+    "production_policy": 8,
+    "sanctions": 5,
+    "strategic_stocks": 1,
+    "weather": 6
+  },
+  "evidence_quality": {
+    "primary_release": 20,
+    "official_report": 3,
+    "official_retrospective": 1
+  },
+  "timing_counts": {
+    "minute_public_evidence": 6,
+    "date_only_public_evidence": 18,
+    "first_public_not_established": 4,
+    "verified_global_first_disclosures": 0
+  },
+  "occurrence_coverage": [
+    "2008-09-01",
+    "2023-10-07"
+  ],
+  "first_import": {
+    "inserted": 24,
+    "reused": 0,
+    "current_events": 24
+  },
+  "repeat_import": {
+    "inserted": 0,
+    "reused": 24,
+    "current_events": 24
+  },
+  "sqlite_integrity": "ok",
+  "retained_event_versions": 24,
+  "comparison_summary": {
+    "completed_events": 24,
+    "benchmark_results": 48,
+    "backtest_eligible": 0
+  },
+  "price_inputs": {
+    "brent": {
+      "filename": "brent-daily-2006-2026.csv",
+      "sha256": "44010589fce049a99024ca0816c27719eddd535e9ebf80d774796e59335aa077",
+      "source_url": "https://github.com/datasets/oil-prices/blob/main/data/brent-daily.csv",
+      "original_source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "series_id": "RBRTE",
+      "source_imported_on": "2026-10-27",
+      "verification": "Existing main-branch mirror seed; not independently reconciled to EIA primary data",
+      "source_kind": "secondary_EIA_derived_seed",
+      "unit": "USD/barrel",
+      "count": 5231,
+      "known_at_utc": null,
+      "point_in_time_safe": false
+    },
+    "wti": {
+      "filename": "wti-daily-2006-2026.csv",
+      "sha256": "59676126098611353d24d6d79d7cd56bece11622c68f9837e10a9f9ba22adef0",
+      "source_url": "https://github.com/datasets/oil-prices/blob/main/data/wti-daily.csv",
+      "original_source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "series_id": "RWTC",
+      "source_imported_on": "2026-10-27",
+      "verification": "Existing main-branch mirror seed; not independently reconciled to EIA primary data",
+      "source_kind": "secondary_EIA_derived_seed",
+      "unit": "USD/barrel",
+      "count": 5137,
+      "known_at_utc": null,
+      "point_in_time_safe": false
+    }
+  },
+  "sample_results": [
+    {
+      "event_id": "ike-2008-galveston",
+      "publication_anchor_date": "2008-09-13",
+      "occurrence_date": "2008-09-13",
+      "evidence_lag_calendar_days": 0,
+      "pre_dates": [
+        "2008-09-08",
+        "2008-09-09",
+        "2008-09-10",
+        "2008-09-11",
+        "2008-09-12"
+      ],
+      "post_dates": [
+        "2008-09-15",
+        "2008-09-16",
+        "2008-09-17",
+        "2008-09-18",
+        "2008-09-19"
+      ],
+      "series": [
+        {
+          "series": "brent",
+          "unit": "USD/barrel",
+          "baseline_date": "2008-09-12",
+          "baseline": "94.37",
+          "end_date": "2008-09-19",
+          "end": "93.46",
+          "absolute_change": "-0.91",
+          "change_percent": "-0.9643",
+          "pre_window_change_percent": "-6.6383",
+          "post_window_change_percent": "3.3278",
+          "percent_note": "Undefined for a zero or negative starting price; absolute changes remain available.",
+          "pre_rows": [
+            [
+              "2008-09-08",
+              "101.08"
+            ],
+            [
+              "2008-09-09",
+              "98.94"
+            ],
+            [
+              "2008-09-10",
+              "96"
+            ],
+            [
+              "2008-09-11",
+              "96.01"
+            ],
+            [
+              "2008-09-12",
+              "94.37"
+            ]
+          ],
+          "post_rows": [
+            [
+              "2008-09-15",
+              "90.45"
+            ],
+            [
+              "2008-09-16",
+              "85.85"
+            ],
+            [
+              "2008-09-17",
+              "86.09"
+            ],
+            [
+              "2008-09-18",
+              "90.89"
+            ],
+            [
+              "2008-09-19",
+              "93.46"
+            ]
+          ]
+        },
+        {
+          "series": "wti",
+          "unit": "USD/barrel",
+          "baseline_date": "2008-09-12",
+          "baseline": "101.19",
+          "end_date": "2008-09-19",
+          "end": "104.05",
+          "absolute_change": "2.86",
+          "change_percent": "2.8264",
+          "pre_window_change_percent": "-4.8519",
+          "post_window_change_percent": "8.9301",
+          "percent_note": "Undefined for a zero or negative starting price; absolute changes remain available.",
+          "pre_rows": [
+            [
+              "2008-09-08",
+              "106.35"
+            ],
+            [
+              "2008-09-09",
+              "103.23"
+            ],
+            [
+              "2008-09-10",
+              "102.66"
+            ],
+            [
+              "2008-09-11",
+              "100.95"
+            ],
+            [
+              "2008-09-12",
+              "101.19"
+            ]
+          ],
+          "post_rows": [
+            [
+              "2008-09-15",
+              "95.52"
+            ],
+            [
+              "2008-09-16",
+              "91.49"
+            ],
+            [
+              "2008-09-17",
+              "97.39"
+            ],
+            [
+              "2008-09-18",
+              "97.5"
+            ],
+            [
+              "2008-09-19",
+              "104.05"
+            ]
+          ]
+        }
+      ],
+      "point_in_time_safe": false
+    },
+    {
+      "event_id": "opec-2014-target",
+      "publication_anchor_date": "2014-11-27",
+      "occurrence_date": "2014-11-27",
+      "evidence_lag_calendar_days": 0,
+      "pre_dates": [
+        "2014-11-20",
+        "2014-11-21",
+        "2014-11-24",
+        "2014-11-25",
+        "2014-11-26"
+      ],
+      "post_dates": [
+        "2014-11-28",
+        "2014-12-01",
+        "2014-12-02",
+        "2014-12-04",
+        "2014-12-05"
+      ],
+      "series": [
+        {
+          "series": "brent",
+          "unit": "USD/barrel",
+          "baseline_date": "2014-11-26",
+          "baseline": "77.39",
+          "end_date": "2014-12-05",
+          "end": "68",
+          "absolute_change": "-9.39",
+          "change_percent": "-12.1334",
+          "pre_window_change_percent": "-0.2835",
+          "post_window_change_percent": "-5.4110",
+          "percent_note": "Undefined for a zero or negative starting price; absolute changes remain available.",
+          "pre_rows": [
+            [
+              "2014-11-20",
+              "77.61"
+            ],
+            [
+              "2014-11-21",
+              "79.2"
+            ],
+            [
+              "2014-11-24",
+              "79.62"
+            ],
+            [
+              "2014-11-25",
+              "77.62"
+            ],
+            [
+              "2014-11-26",
+              "77.39"
+            ]
+          ],
+          "post_rows": [
+            [
+              "2014-11-28",
+              "71.89"
+            ],
+            [
+              "2014-12-01",
+              "70.87"
+            ],
+            [
+              "2014-12-02",
+              "71.13"
+            ],
+            [
+              "2014-12-04",
+              "68.48"
+            ],
+            [
+              "2014-12-05",
+              "68"
+            ]
+          ]
+        },
+        {
+          "series": "wti",
+          "unit": "USD/barrel",
+          "baseline_date": "2014-11-26",
+          "baseline": "73.7",
+          "end_date": "2014-12-05",
+          "end": "65.89",
+          "absolute_change": "-7.81",
+          "change_percent": "-10.5970",
+          "pre_window_change_percent": "-2.5519",
+          "post_window_change_percent": "-0.0758",
+          "percent_note": "Undefined for a zero or negative starting price; absolute changes remain available.",
+          "pre_rows": [
+            [
+              "2014-11-20",
+              "75.63"
+            ],
+            [
+              "2014-11-21",
+              "76.52"
+            ],
+            [
+              "2014-11-24",
+              "75.74"
+            ],
+            [
+              "2014-11-25",
+              "74.04"
+            ],
+            [
+              "2014-11-26",
+              "73.7"
+            ]
+          ],
+          "post_rows": [
+            [
+              "2014-11-28",
+              "65.94"
+            ],
+            [
+              "2014-12-01",
+              "68.98"
+            ],
+            [
+              "2014-12-02",
+              "66.99"
+            ],
+            [
+              "2014-12-04",
+              "66.73"
+            ],
+            [
+              "2014-12-05",
+              "65.89"
+            ]
+          ]
+        }
+      ],
+      "point_in_time_safe": false
+    },
+    {
+      "event_id": "saudi-2019-abqaiq",
+      "publication_anchor_date": "2019-09-23",
+      "occurrence_date": "2019-09-14",
+      "evidence_lag_calendar_days": 9,
+      "pre_dates": [
+        "2019-09-16",
+        "2019-09-17",
+        "2019-09-18",
+        "2019-09-19",
+        "2019-09-20"
+      ],
+      "post_dates": [
+        "2019-09-24",
+        "2019-09-25",
+        "2019-09-26",
+        "2019-09-27",
+        "2019-09-30"
+      ],
+      "series": [
+        {
+          "series": "brent",
+          "unit": "USD/barrel",
+          "baseline_date": "2019-09-20",
+          "baseline": "65.23",
+          "end_date": "2019-09-30",
+          "end": "60.99",
+          "absolute_change": "-4.24",
+          "change_percent": "-6.5001",
+          "pre_window_change_percent": "-4.6624",
+          "post_window_change_percent": "-4.8963",
+          "percent_note": "Undefined for a zero or negative starting price; absolute changes remain available.",
+          "pre_rows": [
+            [
+              "2019-09-16",
+              "68.42"
+            ],
+            [
+              "2019-09-17",
+              "65.59"
+            ],
+            [
+              "2019-09-18",
+              "64.29"
+            ],
+            [
+              "2019-09-19",
+              "64.25"
+            ],
+            [
+              "2019-09-20",
+              "65.23"
+            ]
+          ],
+          "post_rows": [
+            [
+              "2019-09-24",
+              "64.13"
+            ],
+            [
+              "2019-09-25",
+              "62.41"
+            ],
+            [
+              "2019-09-26",
+              "62.08"
+            ],
+            [
+              "2019-09-27",
+              "62.48"
+            ],
+            [
+              "2019-09-30",
+              "60.99"
+            ]
+          ]
+        },
+        {
+          "series": "wti",
+          "unit": "USD/barrel",
+          "baseline_date": "2019-09-20",
+          "baseline": "57.92",
+          "end_date": "2019-09-30",
+          "end": "54.09",
+          "absolute_change": "-3.83",
+          "change_percent": "-6.6126",
+          "pre_window_change_percent": "-8.2092",
+          "post_window_change_percent": "-5.4701",
+          "percent_note": "Undefined for a zero or negative starting price; absolute changes remain available.",
+          "pre_rows": [
+            [
+              "2019-09-16",
+              "63.1"
+            ],
+            [
+              "2019-09-17",
+              "59.26"
+            ],
+            [
+              "2019-09-18",
+              "58.19"
+            ],
+            [
+              "2019-09-19",
+              "58.19"
+            ],
+            [
+              "2019-09-20",
+              "57.92"
+            ]
+          ],
+          "post_rows": [
+            [
+              "2019-09-24",
+              "57.22"
+            ],
+            [
+              "2019-09-25",
+              "56.38"
+            ],
+            [
+              "2019-09-26",
+              "56.24"
+            ],
+            [
+              "2019-09-27",
+              "55.95"
+            ],
+            [
+              "2019-09-30",
+              "54.09"
+            ]
+          ]
+        }
+      ],
+      "point_in_time_safe": false
+    }
+  ],
+  "commands": [
+    "python3 -m world_events validate",
+    "python3 -m world_events --db work/issue13/demonstrated.sqlite import",
+    "python3 -m world_events --db work/issue13/demonstrated.sqlite import",
+    "python3 -m world_events --db work/issue13/demonstrated.sqlite compare --event ike-2008-galveston",
+    "python3 -m world_events --db work/issue13/events.sqlite export"
+  ]
+}
