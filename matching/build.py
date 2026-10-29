@@ -24,7 +24,8 @@ MECHANISMS = {
     "iea-2022-emergency-release": "stock_release", "who-2020-pandemic": "pandemic_declaration"}
 
 
-def reactions(event, series):
+def reactions(event, series, horizons=HORIZONS):
+    events.require(isinstance(horizons, (list,tuple)) and bool(horizons) and list(horizons)==sorted(set(horizons)) and all(type(n) is int and 1<=n<=30 for n in horizons), "Invalid observation horizons")
     anchor, evidence, note = research.comparison_anchor(event)
     result = {"anchor": anchor.isoformat() if anchor else None, "alignment_note": note,
               "evidence_id": evidence["id"], "markets": {}}
@@ -38,7 +39,7 @@ def reactions(event, series):
         after = [r for r in rows if anchor and r["date"] > anchor.isoformat()]
         baseline = before[-1] if before else None
         windows = []
-        for n in HORIZONS:
+        for n in horizons:
             window = after[:n]
             status = "ok"
             if not anchor: status = "publication_time_unknown"
@@ -64,7 +65,7 @@ def reactions(event, series):
     return result
 
 
-def build(price_db, event_db):
+def build(price_db, event_db, horizons=HORIZONS, traits_path=None):
     db = prices.readonly_db(price_db)
     try:
         series = {m: prices.query(db, m, "2006-01-01", "2100-01-01") for m in prices.SERIES}
@@ -72,17 +73,20 @@ def build(price_db, event_db):
     db = events.read_db(event_db)
     try: records = events.list_events(db)
     finally: db.close()
+    from . import traits
+    measurements = traits.load(traits_path) if traits_path else None
     items = []
     for e in records:
         mechanism = MECHANISMS.get(e["id"])
+        features = traits.attach(e, mechanism, measurements) if measurements is not None else {}
         items.append({**e, "features": {"mechanism": mechanism, "severity": None,
-            "basis": "Manual classification from this record's title, description and evidence; severity is not recorded on a comparable scale."},
-            "reactions": reactions(e, series)})
+            "basis": "Manual classification from this record's title, description and evidence; severity is not recorded on a comparable scale.", **features},
+            "reactions": reactions(e, series, horizons)})
     return {"schemaVersion": 1, "methodology": "category-commodity-mechanism-location-v1",
             "event_set_sha256": events.digest(records), "events": items,
             "price_counts": {m: s["coverage"]["count"] for m, s in series.items()},
             "price_sources": {m: s["sources"] for m, s in series.items()},
-            "calendar_note": "1/3/7/14/30 reported observation days after the supporting-publication day; anchor day excluded. No filling. Exchange trading calendar not verified.",
+            "calendar_note": "/".join(str(n) for n in horizons)+" reported observation days after the supporting-publication day; anchor day excluded. No filling. Exchange trading calendar not verified.",
             "point_in_time_safe": False}
 
 
@@ -90,9 +94,11 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--prices-db", default="work/matching-prices.sqlite")
     p.add_argument("--events-db", default="work/matching-events.sqlite")
+    p.add_argument("--horizons", default="1,3,7,14,30")
+    p.add_argument("--traits")
     p.add_argument("--output", default="matching/catalog.json")
     args = p.parse_args()
-    data = build(args.prices_db, args.events_db)
+    data = build(args.prices_db, args.events_db, tuple(int(n) for n in args.horizons.split(",")), args.traits)
     path = Path(args.output); path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, separators=(",", ":"), allow_nan=False)+"\n")
     print(json.dumps({"events": len(data["events"]), "prices": data["price_counts"],

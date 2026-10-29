@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-_Nothing right now._
+- [ ] MAT-3 / CMP-2: Extend PR #16 with 1/3/5/10/20-day cohort summaries, evidence/risk ranking and sourced severity — **Dad** — 2026-10-29
 
 ## To do
 

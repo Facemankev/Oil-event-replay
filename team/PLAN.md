@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-10-29 by Dad (historical event-matching prototype)
+Last updated: 2026-10-29 by Dad (cohort statistics and evidence)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -113,12 +113,12 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** MAT-2 / MAT-3 working deterministic matching prototype on a separate
-  feature branch. 24 events / 240 provisional reaction windows, with source
-  gating and a reproducible coverage/reconciliation report. Primary EIA access
-  remains blocked (no key and proxy denial); no full verification claimed.
-  Next: review the prototype, reconcile primary prices and improve event timing
-  before expanding evidence or adding monitoring. PR #2 remains separate.
+- **Dad:** MAT-3 / CMP-2 extends PR #16 in a separate stacked branch: cohort
+  counts/medians/ranges, 1/3/5/10/20 observation days, sourced advisory wind
+  comparisons and evidence/risk research ranking. Four reproducible demos.
+  All prices remain provisional; PR #19's EIA source review is untouched.
+  Next: review the extension, resolve source conflicts and improve historical
+  publication/vintage evidence before monitoring or trading validation.
 - **Brendan:** chose the house style, "Gold × Desk", from eight previews, and
   wrote it down as the `market-ripple-design` skill (BRD-2, decision 13), sent
   to Dad (`brendan/brd-2-design-system`). Next: review PR #2.
