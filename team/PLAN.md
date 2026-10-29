@@ -113,9 +113,11 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** MAT-3 / CMP-2 extends PR #16 in a separate stacked branch: cohort
+- **Dad:** MAT-3 / CMP-2 extends PR #16 in [draft PR #20](https://github.com/Facemankev/Oil-event-replay/pull/20): cohort
   counts/medians/ranges, 1/3/5/10/20 observation days, sourced advisory wind
-  comparisons and evidence/risk research ranking. Four reproducible demos.
+  comparisons and evidence/risk research ranking. Four reproducible demos;
+  unit/browser CI passed. [Private preview](https://market-ripple-cohort-review.royaltulip9.chatgpt.site/matching/)
+  is deployed for review (same ChatGPT account).
   All prices remain provisional; PR #19's EIA source review is untouched.
   Next: review the extension, resolve source conflicts and improve historical
   publication/vintage evidence before monitoring or trading validation.

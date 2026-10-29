@@ -4,7 +4,7 @@
 1/3/5/10/20 observation-day windows, evidence/risk research ranking and sourced
 severity. Separate draft PR, no merge; leave EIA review untouched.
 
-**What changed:** `dad/mat-3-cohort-evidence`, stacked on PR #16. Reuses the
+**What changed:** `dad/mat-3-cohort-evidence`, [draft PR #20](https://github.com/Facemankev/Oil-event-replay/pull/20), stacked on PR #16. Reuses the
 existing readers, matcher, price-window function, UI and Gold × Desk stylesheet.
 Adds a separate 240-window catalogue, deterministic cohort summaries, precise
 membership/exclusions, both-benchmark research priority and four reproducible
@@ -29,6 +29,15 @@ self/future leakage, opposite channels, pinned severity, overlap membership,
 null/invalid values, denominators, empty states and bounded sign-neutral ranking.
 Four demonstrations reproduce from the catalogue. Canonical data, original
 matching catalogue, price/event modules and EIA-related files are unchanged.
+
+[GitHub Actions](https://github.com/Facemankev/Oil-event-replay/actions/runs/40953376424)
+also passed the combined unit/build/browser checks. Brendan is requested as
+reviewer. Nothing merged; main and the other feature branches are unchanged.
+
+[Working preview](https://market-ripple-cohort-review.royaltulip9.chatgpt.site/matching/)
+published successfully as a separate private Sites deployment. Sign in with
+the same ChatGPT account. Its nine executable/data/style files match the
+tested source bytes. Existing matching and branding previews are untouched.
 
 **Unfinished:** review and physical iPad Safari validation. Existing price
 vintages/publication clocks still prevent a point-in-time backtest. The calendar
