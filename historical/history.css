@@ -1,0 +1,15 @@
+/* Page-specific layout; colours and components come from the house style. */
+*{box-sizing:border-box}
+main{max-width:1100px;margin:auto;padding:24px 16px 48px}
+main>*+*{margin-top:var(--mr-space-4)!important}
+a{color:var(--mr-accent)}
+p{line-height:1.55;overflow-wrap:anywhere;max-width:65ch}
+form{display:grid;grid-template-columns:1fr;gap:var(--mr-space-1)}
+label{color:var(--mr-muted);font-size:var(--mr-size-label)}
+input,select{font:inherit;min-height:48px;padding:12px;max-width:100%;border-radius:var(--mr-radius-tile);border:1px solid var(--mr-muted);background:var(--mr-solid);color:var(--mr-ink);width:100%;margin-bottom:var(--mr-space-2)}
+button:disabled{opacity:.5}
+a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid var(--mr-accent);outline-offset:3px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td,th{text-align:left;padding:12px;border-bottom:1px solid var(--mr-hair)}
+#status{color:var(--mr-accent);font-weight:600}

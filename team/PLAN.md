@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-10-27 by Dad (EVT-1 historical event database)
+Last updated: 2026-10-29 by Dad (DAT-3 / EVT-1 integration)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -105,13 +105,13 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Sections and codes for the plan agreed (PR #5) | OPS-4 | Done | Brendan | Dad's review |
 | House style chosen and written down as a skill | BRD-2 | Waiting for review | Brendan | Dad's approval (decision 13) |
 | Vision written | OPS | Planned | Dad | — |
-| Source-specific data ingestion | DAT-3 | Planned | — | Vision, see `research/ARCHITECTURE.md` |
+| Source-specific data ingestion | DAT-3 | Waiting for review | Dad | PR #12: working local SQLite importer and static historical export; primary API access still needs a free EIA key |
 
 ## 5. Now
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** EVT-1 / issue #13 ready in draft PR #14 on `dad/evt-1-world-events`, independent of draft PR #12. Also, paper trading (PR #2) waiting for Brendan's review. Next: approve
+- **Dad:** PR #12 merged after approval and passing checks; integrating approved PR #14, then PR #15. Primary EIA verification remains outstanding. PR #2 stays separate. Next: approve
   the sections with his monitoring and alerts added (PR #5), write the
   vision, then turn on the GitHub protections.
 - **Brendan:** chose the house style, "Gold × Desk", from eight previews, and

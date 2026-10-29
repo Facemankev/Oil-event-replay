@@ -13,9 +13,11 @@ history).
 
 ## Doing
 
-_Nothing right now._
+- [ ] DAT-3 / EVT-1 / BRD-2: Integrate approved PRs #12, #14 and #15 sequentially with combined tests — **Dad** — 2026-10-29
 
 ## To do
+
+- [ ] DAT-3: Reconcile Brent/WTI against authenticated primary EIA data; retain discrepancy/revision evidence before extending matching — **Dad** — 2026-10-29
 
 - [ ] OPS: Write the vision in `PLAN.md` — **Dad** — 2026-10-25
 - [ ] OPS-4: Check the proposed sections, codes and provisional plans in `PLAN.md` and `plans/`, and rewrite the goals as you see fit — **Dad** — 2026-10-26
@@ -39,10 +41,13 @@ _Nothing right now._
 
 - [ ] EVT-1: Review the 24-event database and reproducible Brent/WTI research ([PR #14](https://github.com/Facemankev/Oil-event-replay/pull/14), issue #13) — **Dad** — waiting on Brendan, 2026-10-27
 
+
 - [ ] PRC-1: Beginner paper trading, PR #2 (issue #3) — **Dad** — waiting on Brendan
 - [ ] BRD-2: House style "Gold × Desk" and the `market-ripple-design` skill (decision 13) — **Brendan** — waiting on Dad
 
 ## Done
+
+- [x] DAT-3: Historical price database, approved PR #12 merged; 10,368 secondary-source prices — **Dad** — 2026-10-29
 
 - [x] OPS-4: Sections and codes for the plan, with Dad's monitoring and alerts added, PR #5 (merged by Dad) — **Brendan** — 2026-10-26
 

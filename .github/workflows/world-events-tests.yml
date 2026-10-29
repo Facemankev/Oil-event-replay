@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate evidence, revisions and deterministic price joins
-        run: python3 -m unittest discover -s tests -p 'test_world_events.py' -v
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
       - name: Exercise actual event import and research commands
         run: |
           python3 -m world_events validate
