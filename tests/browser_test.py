@@ -46,6 +46,9 @@ with sync_playwright() as p:
  page.click('[data-q="ebola"]');assert '8 August 2014' in page.locator('#mr-answer').inner_text()
  page.set_viewport_size({'width':375,'height':812})
  assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+ # Wider Linux system fonts exposed a pre-existing grid intrinsic-width bug.
+ page.add_style_tag(content=":root{font-family:'DejaVu Sans',sans-serif}")
+ assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
  assert not errors,errors
  browser.close()
 server.shutdown()

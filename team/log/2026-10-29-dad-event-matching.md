@@ -5,8 +5,9 @@ starting with an honest primary EIA validation attempt; no merge or live trading
 
 **What changed:** `dad/mat-2-historical-matching` adds the separate `matching/`
 page, pure matching module, SQLite catalogue builder and reconciliation/audit CLI.
-The original dashboard, database modules/exports, event research, branding
-preview and paper-trading work are unchanged. README/Now/TODO record the work.
+The database modules/exports, event research, branding preview and paper-trading
+work are unchanged. Dashboard content, style and replay logic are preserved;
+one CSS min-width constraint fixes an inherited mobile grid overflow. README/Now/TODO record the work.
 
 - Real imports: 5,231 Brent + 5,137 WTI observations and 24 events.
 - 240 windows: 1/3/7/14/30 reported observation days for each event/benchmark.
@@ -32,7 +33,11 @@ The matching page then passed in CI. The unchanged original dashboard overflowed
 at mobile width in old Chromium 141, although Chromium 154 passes locally with
 no overflowing elements. Updated the browser dependency to current Playwright
 1.64.1; the existing dashboard assertion remains intact and the dashboard itself
-is unchanged. Older-browser/physical Safari compatibility is not claimed. Privacy guard initially flagged long dummy credentials
+is unchanged. The current browser also reproduced the failure in CI. Local diagnosis with
+DejaVu Sans isolated the pre-existing grid intrinsic-width issue: input cards
+expanded beyond mobile width. Added min-width:0 to the existing .mr-box class,
+plus a wider-font browser regression. No dashboard content, colours or JavaScript
+changed. Physical Safari compatibility is not claimed. Privacy guard initially flagged long dummy credentials
 in isolated tests; removed those unnecessary credential-shaped fixtures. No real
 credentials were present and no guard or allowlist was changed.
 
