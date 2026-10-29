@@ -100,9 +100,9 @@ class MatchingDataTests(unittest.TestCase):
             self.assertEqual(result['status'],'blocked');self.assertFalse(result['verified'])
             self.assertTrue(all(s['primary_comparison'] is None for s in result['series'].values()))
         # Fixture credential and exception are deliberately never returned.
-        with patch.dict(os.environ,{'EIA_API_KEY':'x'}),patch.object(prices,'fetch_eia',side_effect=prices.DataError('x')):
+        with patch.dict(os.environ,{'EIA_API_KEY':'x'}),patch.object(prices,'fetch_eia',side_effect=prices.DataError('private-fixture-text')):
             result=validate_prices.audit(True)
-            self.assertFalse(result['verified']);self.assertNotIn('x',json.dumps(result))
+            self.assertFalse(result['verified']);self.assertNotIn('private-fixture-text',json.dumps(result))
 
     def test_primary_success_and_discrepancies_are_distinct(self):
         with tempfile.TemporaryDirectory() as directory:
