@@ -3,7 +3,7 @@
 **Goal:** review the supplied successful EIA report and prepare a draft PR,
 without overwriting source data, merging or requiring credentials.
 
-**What changed:** separate `dad/dat-3-eia-reconciliation` branch from current main,
+**What changed:** [draft PR #19](https://github.com/Facemankev/Oil-event-replay/pull/19), separate `dad/dat-3-eia-reconciliation` branch from current main,
 independent of PR #16. Preserved the original report and created a read-only
 review command, 102 curated official EIA table-row transcriptions and a
 reproducible per-date review. Report hash and evidence-file hash are retained.
@@ -25,7 +25,10 @@ All 32 Python database/event/reconciliation tests and the existing research
 suite passed. Review reproduction is byte-for-byte deterministic. Source hashes
 and the read-only audit database remain unchanged under tests; negative/zero/null
 prices, corrupted payloads, source conflicts and existing-output refusal are
-covered. No browser rerun was needed: no page or layout code changed.
+covered. No browser rerun was needed: no page or layout code changed. The original
+Windows report retains its exact CRLF bytes; provenance-bearing CSV/report
+paths are protected against Git line-ending conversion, and the existing
+shell-script LF rule is preserved.
 
 **Unfinished:** resolve the EIA API/HTML disagreement with the retained response
 snapshots or EIA clarification. The raw API snapshot was not attached or fetched
