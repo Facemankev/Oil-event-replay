@@ -1,0 +1,39 @@
+name: Event matching checks
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  matching:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python3 -m unittest discover -s tests -p 'test_*.py' -v
+      - run: node --test tests/*.cjs tests/*.mjs
+      - name: Build from the real databases, safely repeat, and audit without network
+        run: |
+          python3 -m historical --db work/matching-prices.sqlite backfill
+          python3 -m historical --db work/matching-prices.sqlite update
+          python3 -m world_events --db work/matching-events.sqlite import
+          python3 -m world_events --db work/matching-events.sqlite import
+          python3 -m matching.validate_prices --db work/matching-prices.sqlite --output work/audit.json
+          python3 -m matching.build --output work/catalog.json
+      - name: Install browser test dependencies
+        run: |
+          python3 -m pip install playwright==1.56.0
+          python3 -m playwright install --with-deps chromium
+          sudo ln -s "$(find "$HOME/.cache/ms-playwright" -type f -path '*/chrome-linux/chrome' -o -type f -path '*/chrome-linux64/chrome' | head -1)" /usr/bin/chromium
+      - name: Matching and existing browser regressions
+        run: |
+          python3 tests/matching_browser_test.py
+          python3 tests/browser_test.py
+          python3 tests/historical_browser_test.py
+          python3 tests/world_events_browser_test.py
+          python3 tests/branding_preview_browser_test.py

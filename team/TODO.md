@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-_Nothing right now._
+- [ ] DAT-3 / MAT-2 / MAT-3: Primary-price audit, deterministic event matching and beginner results page — **Dad** — 2026-10-29
 
 ## To do
 

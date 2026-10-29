@@ -1,0 +1,10 @@
+{
+  "observed_on": "2026-10-29",
+  "api_key_configured": false,
+  "executable_requests": [
+    {"url": "https://api.eia.gov/v2/petroleum/pri/spt/data/", "result": "Proxy CONNECT returned 403 Forbidden"},
+    {"url": "https://www.eia.gov/dnav/pet/hist_xls/RBRTED.xls", "result": "Proxy CONNECT returned 403 Forbidden"}
+  ],
+  "primary_reconciliation_succeeded": false,
+  "note": "Official EIA documentation and an HTML table were readable through the browsing tool. They were not downloaded as complete machine-readable snapshots or reconciled against all seed rows. No full primary verification is claimed."
+}

@@ -87,3 +87,15 @@ python3 tests/historical_browser_test.py
 python3 tests/world_events_browser_test.py
 python3 tests/branding_preview_browser_test.py
 ```
+
+## Historical event matching (MAT-2 / MAT-3)
+
+Open [the matching prototype](matching/) to describe an oil-relevant event or
+select a historical example, inspect ranked analogues and compare 1/3/7/14/30
+reported-observation-day reactions. No AI or price outcomes influence ranking.
+Price verification is currently **blocked**; seed-based reactions are labelled
+provisional and can be hidden with the primary-only option. Unknown severity,
+first-public times and missing prices remain unknown. This is historical
+research, not a trading recommendation or an estimate of potential earnings.
+See [setup, deterministic rules, EIA configuration and tests](matching/README.md)
+and the [validation report](matching/validation-report.json).
