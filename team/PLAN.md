@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-10-27 by Dad (DAT-3 historical ingestion milestone)
+Last updated: 2026-10-29 by Dad (DAT-3 / EVT-1 integration)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -111,7 +111,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** DAT-3 / issue #10 ready in draft PR #12 on `dad/dat-3-historical-sqlite` with existing historical seeds. Primary EIA reconciliation needs a free API key. No live trading or paid services. Also, paper trading (PR #2) waiting for Brendan's review. Next: approve
+- **Dad:** PR #12 merged after approval and passing checks; integrating approved PR #14, then PR #15. Primary EIA verification remains outstanding. PR #2 stays separate. Next: approve
   the sections with his monitoring and alerts added (PR #5), write the
   vision, then turn on the GitHub protections.
 - **Brendan:** chose the house style, "Gold × Desk", from eight previews, and
