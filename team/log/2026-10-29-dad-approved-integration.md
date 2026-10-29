@@ -16,7 +16,17 @@ browser suites also passed in a separate local compatibility checkout; PR #2
 and its remote branch were not changed. Original dashboard script and Brendan's
 design source files are preserved. No broker or live trading was connected.
 
-**Unfinished:** finish PR #14 / #15 integration after their updated checks pass.
+PR #14 merged as e1e6baa after all four updated Actions passed. PR #15 now
+includes both database foundations and preserves their README/PLAN/TODO entries.
+GitHub dismisses stale reviews on push, so its old approvals were dismissed on
+integration updates. The active ruleset has zero required new approving reviews,
+no bypass actors and current_user_can_bypass=never. No settings were changed,
+no forced push or administrative override was used; the owner explicitly
+requested sequential integration. PR #15 is prepared for normal merge after
+fresh checks. The original dashboard has only PR #12's history link added;
+its existing scripts, prices and replay behavior are unchanged.
+
+**Unfinished:** primary EIA reconciliation and physical iPad Safari review.
 Primary EIA verification needs a free key and permitted API access. Seeds remain
 secondary EIA-derived, not authenticated EIA reconciliation. Original price
 publication/vintages are unknown; 18 event publications are day-only and four

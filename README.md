@@ -70,3 +70,20 @@ results against the original CSV method. Source metadata travels with the export
 These are daily spot-price associations, not executable trading returns.
 Primary EIA reconciliation still requires a free key and network access to
 `api.eia.gov`; original price publication/vintage times remain unavailable.
+
+## Gold × Desk visual preview
+
+[Open the public desktop/iPad branding preview](https://market-ripple-gold-desk-review.royaltulip9.chatgpt.site)
+([original full-screen example](https://market-ripple-gold-desk-review.royaltulip9.chatgpt.site/example.html)).
+This separate static preview preserves Brendan's original example and stylesheet
+byte-for-byte; it does not restyle the existing dashboard. Local copy:
+[preview/gold-desk/](preview/gold-desk/). See its README for provenance.
+
+Browser regressions (Python Playwright plus Chromium at `/usr/bin/chromium`):
+
+```sh
+python3 tests/browser_test.py
+python3 tests/historical_browser_test.py
+python3 tests/world_events_browser_test.py
+python3 tests/branding_preview_browser_test.py
+```

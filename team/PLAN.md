@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-10-29 by Dad (DAT-3 / EVT-1 integration)
+Last updated: 2026-10-29 by Dad (approved foundation integration)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -105,15 +105,19 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Sections and codes for the plan agreed (PR #5) | OPS-4 | Done | Brendan | Dad's review |
 | House style chosen and written down as a skill | BRD-2 | Waiting for review | Brendan | Dad's approval (decision 13) |
 | Vision written | OPS | Planned | Dad | — |
-| Source-specific data ingestion | DAT-3 | Waiting for review | Dad | PR #12: working local SQLite importer and static historical export; primary API access still needs a free EIA key |
+| Source-specific data ingestion | DAT-3 | In progress | Dad | PR #12 merged; primary EIA reconciliation still needs a free key and API access |
+| First sourced world-event database | EVT-1 | Done | Dad | PR #14 merged; 24 events / 48 descriptive benchmark comparisons, timing limits retained |
+| Isolated Gold × Desk visual preview | BRD-2 | Done | Dad | Approved PR #15; public preview, original design preserved |
 
 ## 5. Now
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** PR #12 merged after approval and passing checks; integrating approved PR #14, then PR #15. Primary EIA verification remains outstanding. PR #2 stays separate. Next: approve
-  the sections with his monitoring and alerts added (PR #5), write the
-  vision, then turn on the GitHub protections.
+- **Dad:** approved PRs #12 and #14 merged; real price-to-event integration
+  verified. Approved BRD-2 preview in PR #15 is public and separate from the
+  dashboard. Next milestone: reconcile all Brent/WTI seeds with primary EIA,
+  then strengthen event disclosure evidence before analogue matching. PR #2
+  remains separate and unmerged. No live trading or broker connection.
 - **Brendan:** chose the house style, "Gold × Desk", from eight previews, and
   wrote it down as the `market-ripple-design` skill (BRD-2, decision 13), sent
   to Dad (`brendan/brd-2-design-system`). Next: review PR #2.

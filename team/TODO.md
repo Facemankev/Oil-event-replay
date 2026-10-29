@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-- [ ] DAT-3 / EVT-1 / BRD-2: Integrate approved PRs #12, #14 and #15 sequentially with combined tests — **Dad** — 2026-10-29
+_Nothing right now._
 
 ## To do
 
@@ -39,13 +39,16 @@ history).
 
 ## Waiting for review
 
-- [ ] EVT-1: Review the 24-event database and reproducible Brent/WTI research ([PR #14](https://github.com/Facemankev/Oil-event-replay/pull/14), issue #13) — **Dad** — waiting on Brendan, 2026-10-27
 
 
 - [ ] PRC-1: Beginner paper trading, PR #2 (issue #3) — **Dad** — waiting on Brendan
 - [ ] BRD-2: House style "Gold × Desk" and the `market-ripple-design` skill (decision 13) — **Brendan** — waiting on Dad
 
 ## Done
+
+- [x] DAT-3 / EVT-1 / BRD-2: Combined database and original-preview validation; README/PLAN/TODO conflicts resolved, dashboard and PR #2 preserved — **Dad** — 2026-10-29
+- [x] EVT-1: Approved PR #14 merged; 24 events, 48 descriptive results, real DAT-3 export integration test in CI — **Dad** — 2026-10-29
+- [x] BRD-2: Approved isolated Gold × Desk preview, PR #15; public URL in README, original design unchanged — **Dad** — 2026-10-29
 
 - [x] DAT-3: Historical price database, approved PR #12 merged; 10,368 secondary-source prices — **Dad** — 2026-10-29
 
