@@ -10,8 +10,8 @@ combines Gold's layout (a dot-grid page, very light glass tiles with big
 rounded corners, pill buttons, a soft glow around the chart) with Research
 desk's colours and fonts (navy ink on off-white with one teal accent,
 Newsreader and Public Sans). Brendan chose it on 2026-10-27 from eight
-previews. It is decision 13 in `team/DECISIONS.md`. Until Dad approves it,
-treat it as the proposed house style.
+previews. It is decision 13 in `team/DECISIONS.md`, agreed when Dad merged
+PR #8.
 
 Two files sit next to this one:
 

@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-10-29 by Dad (approved foundation integration)
+Last updated: 2026-10-29 by Dad (approved foundation integration); house style agreed by Brendan 2026-10-27 (BRD-2)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -103,7 +103,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Live prices for paper trading | PRC-2 | Blocked | Dad | A price provider licence and a deployed proxy (see PR #2) |
 | Shared way of working and privacy guardrails set up (PR #4) | OPS-1 | Done | Brendan | Dad's review |
 | Sections and codes for the plan agreed (PR #5) | OPS-4 | Done | Brendan | Dad's review |
-| House style chosen and written down as a skill | BRD-2 | Waiting for review | Brendan | Dad's approval (decision 13) |
+| House style chosen and written down as a skill (PR #8) | BRD-2 | Done | Brendan | Dad merged it (decision 13) |
 | Vision written | OPS | Planned | Dad | — |
 | Source-specific data ingestion | DAT-3 | In progress | Dad | PR #12 merged; primary EIA reconciliation still needs a free key and API access |
 | First sourced world-event database | EVT-1 | Done | Dad | PR #14 merged; 24 events / 48 descriptive benchmark comparisons, timing limits retained |
@@ -118,9 +118,11 @@ What each of us is on this week. Keep it short. Details live in `TODO.md`.
   dashboard. Next milestone: reconcile all Brent/WTI seeds with primary EIA,
   then strengthen event disclosure evidence before analogue matching. PR #2
   remains separate and unmerged. No live trading or broker connection.
-- **Brendan:** chose the house style, "Gold × Desk", from eight previews, and
-  wrote it down as the `market-ripple-design` skill (BRD-2, decision 13), sent
-  to Dad (`brendan/brd-2-design-system`). Next: review PR #2.
+- **Brendan:** the house style, "Gold × Desk", is agreed: Dad merged it (PR #8,
+  BRD-2, decision 13), and every session now follows the `market-ripple-design`
+  skill for visual work. Reviewed Dad's matching work: approved #16, fixed two
+  small things on #20. Next: review #19 and PR #2, then BRD-4 (restyle the
+  live site).
 
 ## 6. Open questions
 

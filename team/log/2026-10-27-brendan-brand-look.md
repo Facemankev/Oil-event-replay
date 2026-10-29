@@ -37,10 +37,10 @@ settle on one that every future page can follow.
   the heading text; the headline no longer has an icon beside it.
 - No website code changed.
 
-**Unfinished:** the live site still has its old look (BRD-4, after Dad agrees).
+**Unfinished:** the live site still has its old look (BRD-4).
 The logo is a placeholder (BRD-1).
 
-**For Dad:** please open `example.html` (see the skill folder) and approve or
-change decision 13. Choosing the look is a decision, so it waits for you.
+**For Dad:** thanks for merging PR #8. Next for the brand: BRD-4 (restyle the
+live site) and BRD-1 (a real logo).
 
-**Plan changes:** decision 13 proposed; BRD-2 now waiting for review.
+**Plan changes:** decision 13 agreed (Dad merged PR #8 at 11:11 on 2026-10-27); BRD-2 done.

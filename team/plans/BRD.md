@@ -5,8 +5,8 @@ rewrite. · **Section owner:** not yet chosen
 
 **Goal (provisional):** One recognisable look and voice for Market Ripple: logo, colours, fonts and how we write.
 
-**Exists today:** The name "Market Ripple", and a proposed house style
-("Gold × Desk", decision 13) written down as the `market-ripple-design`
+**Exists today:** The name "Market Ripple", and the house style
+("Gold × Desk", decision 13, agreed) written down as the `market-ripple-design`
 skill, with tokens in `design.css` and a working `example.html`.
 
 **Depends on:** Nothing. Best settled early, before many more pages are built.
@@ -16,7 +16,7 @@ skill, with tokens in `design.css` and a working `example.html`.
 | Code | Plan | Status | Owner | Detail |
 | --- | --- | --- | --- | --- |
 | BRD-1 | Logo and icon | Provisional | — | — |
-| BRD-2 | Colours and fonts, including chart colours | Waiting for review | Brendan | [`market-ripple-design` skill](../../.claude/skills/market-ripple-design/SKILL.md) |
+| BRD-2 | Colours and fonts, including chart colours | Done (PR #8) | Brendan | [`market-ripple-design` skill](../../.claude/skills/market-ripple-design/SKILL.md) |
 | BRD-3 | Tone of voice: how we write explanations and warnings | Provisional | — | — |
 | BRD-4 | Apply the brand across the site | Provisional | — | — |
 

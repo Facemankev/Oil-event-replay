@@ -34,7 +34,7 @@ _Nothing right now._
 - [ ] OPS-3: Review this way of working after two weeks of use — **Both** — 2026-10-25
 - [ ] WEB: The oil replay test fails on Windows computers, because Windows changes the line endings in `index.html` when the repo is downloaded. Not a website bug, but it makes local test runs look broken — **unassigned** — 2026-10-26
 - [ ] Pick the first section to plan in detail, and who writes it — **Both** — 2026-10-26
-- [ ] BRD-4: Restyle the live site (`index.html`) in the house style, once decision 13 is agreed. Removing the current look counts as a huge change, so it goes to the other partner — **unassigned** — 2026-10-27
+- [ ] BRD-4: Restyle the live site (`index.html`) in the house style (decision 13, agreed). Removing the current look counts as a huge change, so it goes to the other partner — **unassigned** — 2026-10-27
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
@@ -42,17 +42,16 @@ _Nothing right now._
 
 
 - [ ] PRC-1: Beginner paper trading, PR #2 (issue #3) — **Dad** — waiting on Brendan
-- [ ] BRD-2: House style "Gold × Desk" and the `market-ripple-design` skill (decision 13) — **Brendan** — waiting on Dad
 
 ## Done
 
 - [x] DAT-3 / EVT-1 / BRD-2: Combined database and original-preview validation; README/PLAN/TODO conflicts resolved, dashboard and PR #2 preserved — **Dad** — 2026-10-29
 - [x] EVT-1: Approved PR #14 merged; 24 events, 48 descriptive results, real DAT-3 export integration test in CI — **Dad** — 2026-10-29
 - [x] BRD-2: Approved isolated Gold × Desk preview, PR #15; public URL in README, original design unchanged — **Dad** — 2026-10-29
+- [x] BRD-2: House style "Gold × Desk" and the `market-ripple-design` skill, decision 13 (PR #8, merged by Dad) — **Brendan** — 2026-10-27
 
 - [x] DAT-3: Historical price database, approved PR #12 merged; 10,368 secondary-source prices — **Dad** — 2026-10-29
 
 - [x] OPS-4: Sections and codes for the plan, with Dad's monitoring and alerts added, PR #5 (merged by Dad) — **Brendan** — 2026-10-26
-
 - [x] OPS: Relaxed review rule, decision 11 (PR #6, merged into PR #5 by Dad) — **Brendan** — 2026-10-26
 - [x] OPS-1: Shared way of working and privacy guardrails, PR #4 (approved by Dad, merged 2026-10-26) — **Brendan** — 2026-10-25
