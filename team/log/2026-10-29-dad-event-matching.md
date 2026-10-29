@@ -22,7 +22,10 @@ preview and paper-trading work are unchanged. README/Now/TODO record the work.
 32 Python tests, matching Node tests and existing research tests passed. All five
 browser suites passed (matching, dashboard, history, events, original branding).
 The catalogue rebuilds byte-for-byte from unchanged DB inputs. Added CI for full
-unit/browser regressions. Privacy guard initially flagged long dummy credentials
+unit/browser regressions. The first CI browser dependency setup failed because
+ubuntu-latest now selected an unsupported OS for the pinned Playwright release;
+pinned that job to supported Ubuntu 24.04 and fetched the history needed for
+the existing dashboard preservation regression. Privacy guard initially flagged long dummy credentials
 in isolated tests; removed those unnecessary credential-shaped fixtures. No real
 credentials were present and no guard or allowlist was changed.
 
