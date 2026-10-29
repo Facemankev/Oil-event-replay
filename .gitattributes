@@ -1,2 +1,7 @@
 # Shell scripts must keep Unix line endings or bash can't run them on Windows.
 *.sh text eol=lf
+
+# Preserve the exact bytes covered by the provenance SHA-256 hashes on Windows.
+data/historical/brent-daily-2006-2026.csv -text
+data/historical/wti-daily-2006-2026.csv -text
+historical/reconciliation/eia-verification-new.json -text

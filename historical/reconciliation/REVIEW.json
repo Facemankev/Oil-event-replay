@@ -1,0 +1,3194 @@
+{
+  "schema_version": 1,
+  "status": "review_required",
+  "report_sha256": "4b0b690b2a12096789386519dc82d86700b7c9dfa41d68e36a3ba31190ce618b",
+  "web_evidence_sha256": "01feb23d8dbab2d1d6e725670b98b86f39f70c8bfae7ae70b1c23ce294791e21",
+  "primary_reconciliation_succeeded_in_supplied_report": true,
+  "raw_primary_snapshot_checked_here": false,
+  "canonical_data_changed": false,
+  "automatic_apply_supported": false,
+  "confirmed_revision_times": null,
+  "series": {
+    "brent": {
+      "reported_shared_dates": 5222,
+      "reported_matching_values": 5219,
+      "primary_snapshot_sha256_in_report": "6d37f9f33cff29c176a87f22c96f16bb495bfa55c4d8e2d474eb686652f41539",
+      "primary_retrieved_at_in_report": [
+        "2026-10-29T18:00:51.244720+00:00",
+        "2026-10-29T18:01:10.806961+00:00"
+      ],
+      "value_differences": [
+        {
+          "date": "2016-12-28",
+          "seed_value": "54.95",
+          "reported_API_value": "53.93",
+          "HTML_value": "54.95",
+          "reported_delta": "-1.02",
+          "classification": "primary_source_conflict",
+          "recommended_action": "retain_seed_pending_source_resolution",
+          "applied": false,
+          "evidence": {
+            "value": "54.95",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2016-12-26, Mon\u2013Fri columns; displayed line 1849",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          },
+          "revision_cause": "Not established; cross-source disagreement is not proof of an historical revision."
+        },
+        {
+          "date": "2016-12-29",
+          "seed_value": "54.97",
+          "reported_API_value": "54.95",
+          "HTML_value": "54.97",
+          "reported_delta": "-0.02",
+          "classification": "primary_source_conflict",
+          "recommended_action": "retain_seed_pending_source_resolution",
+          "applied": false,
+          "evidence": {
+            "value": "54.97",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2016-12-26, Mon\u2013Fri columns; displayed line 1849",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          },
+          "revision_cause": "Not established; cross-source disagreement is not proof of an historical revision."
+        },
+        {
+          "date": "2018-04-16",
+          "seed_value": "72.05",
+          "reported_API_value": "73.18",
+          "HTML_value": "72.05",
+          "reported_delta": "1.13",
+          "classification": "primary_source_conflict",
+          "recommended_action": "retain_seed_pending_source_resolution",
+          "applied": false,
+          "evidence": {
+            "value": "72.05",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2018-04-16, Mon\u2013Fri columns; displayed line 1930",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          },
+          "revision_cause": "Not established; cross-source disagreement is not proof of an historical revision."
+        }
+      ],
+      "date_review": [
+        {
+          "date": "2006-01-11",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-01-09, Mon\u2013Fri columns; displayed line 1162",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-01-12",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-01-09, Mon\u2013Fri columns; displayed line 1162",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-01-13",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-01-09, Mon\u2013Fri columns; displayed line 1162",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-02-03",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-01-30, Mon\u2013Fri columns; displayed line 1166",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-02",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-02-27, Mon\u2013Fri columns; displayed line 1171",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-03",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-02-27, Mon\u2013Fri columns; displayed line 1171",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-06",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-06, Mon\u2013Fri columns; displayed line 1172",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-09",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-06, Mon\u2013Fri columns; displayed line 1172",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-14",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-13, Mon\u2013Fri columns; displayed line 1173",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-15",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-13, Mon\u2013Fri columns; displayed line 1173",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-16",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-13, Mon\u2013Fri columns; displayed line 1173",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-17",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-13, Mon\u2013Fri columns; displayed line 1173",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-20",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-20, Mon\u2013Fri columns; displayed line 1174",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-21",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-20, Mon\u2013Fri columns; displayed line 1174",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-23",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-20, Mon\u2013Fri columns; displayed line 1174",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-28",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-27, Mon\u2013Fri columns; displayed line 1176",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-29",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-27, Mon\u2013Fri columns; displayed line 1176",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-31",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-03-27, Mon\u2013Fri columns; displayed line 1176",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-04-04",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-04-03, Mon\u2013Fri columns; displayed line 1177",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-04-05",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-04-03, Mon\u2013Fri columns; displayed line 1177",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-04-07",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-04-03, Mon\u2013Fri columns; displayed line 1177",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-04-10",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-04-10, Mon\u2013Fri columns; displayed line 1178",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-04-11",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-04-10, Mon\u2013Fri columns; displayed line 1178",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-05-09",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-05-08, Mon\u2013Fri columns; displayed line 1183",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-05-11",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-05-08, Mon\u2013Fri columns; displayed line 1183",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-05-12",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2006-05-08, Mon\u2013Fri columns; displayed line 1183",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2007-02-06",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2007-02-05, Mon\u2013Fri columns; displayed line 1230",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2007-02-07",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2007-02-05, Mon\u2013Fri columns; displayed line 1230",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2007-03-05",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2007-03-05, Mon\u2013Fri columns; displayed line 1234",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2012-04-03",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2012-04-02, Mon\u2013Fri columns; displayed line 1552",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2014-10-14",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2014-10-13, Mon\u2013Fri columns; displayed line 1711",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-08-31",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2015-08-31, Mon\u2013Fri columns; displayed line 1766",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-12-25",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": "Christmas Day",
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2015-12-21, Mon\u2013Fri columns; displayed line 1785",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2016-01-01",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": "New Year's Day",
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2015-12-28, Mon\u2013Fri columns; displayed line 1786",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2016-12-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2016-12-26, Mon\u2013Fri columns; displayed line 1849",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2018-04-02",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2018-04-02, Mon\u2013Fri columns; displayed line 1928",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2018-05-07",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2018-05-07, Mon\u2013Fri columns; displayed line 1934",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2019-05-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2019-05-27, Mon\u2013Fri columns; displayed line 2000",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2019-12-25",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": "Christmas Day",
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2019-12-23, Mon\u2013Fri columns; displayed line 2036",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2024-12-25",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": "Christmas Day",
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2024-12-23, Mon\u2013Fri columns; displayed line 2349",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2014-09-30",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "94.67",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "94.67",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "94.67",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2014-09-29, Mon\u2013Fri columns; displayed line 1708",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2014-10-01",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "94.57",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "94.57",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "94.57",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2014-09-29, Mon\u2013Fri columns; displayed line 1708",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2014-10-02",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "91.29",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "91.29",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "91.29",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2014-09-29, Mon\u2013Fri columns; displayed line 1708",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2016-11-01",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "45.77",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "45.77",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "45.77",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2016-10-31, Mon\u2013Fri columns; displayed line 1839",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2022-10-25",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "91.76",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "91.76",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "91.76",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2022-10-24, Mon\u2013Fri columns; displayed line 2214",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2022-12-13",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "80.14",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "80.14",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "80.14",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2022-12-12, Mon\u2013Fri columns; displayed line 2222",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2023-03-07",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "83.03",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "83.03",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "83.03",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2023-03-06, Mon\u2013Fri columns; displayed line 2236",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2024-02-06",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "80.46",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "80.46",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "80.46",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2024-02-05, Mon\u2013Fri columns; displayed line 2294",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2024-04-16",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "91.29",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "91.29",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "91.29",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+            "locator": "Week of 2024-04-15, Mon\u2013Fri columns; displayed line 2306",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        }
+      ],
+      "classification_counts": {
+        "API_omission_seed_supported_by_HTML": 9,
+        "HTML_unavailable_API_value_unknown": 40,
+        "primary_source_conflict": 3
+      }
+    },
+    "wti": {
+      "reported_shared_dates": 5129,
+      "reported_matching_values": 5129,
+      "primary_snapshot_sha256_in_report": "5139b1db28d70645a5bb8a811823d80acca7d5ef83d96ef60079f570387a7185",
+      "primary_retrieved_at_in_report": [
+        "2026-10-29T18:00:51.244720+00:00",
+        "2026-10-29T18:01:10.806961+00:00"
+      ],
+      "value_differences": [],
+      "date_review": [
+        {
+          "date": "2006-01-06",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-01-02, Mon\u2013Fri columns; displayed line 1255",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-01-12",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-01-09, Mon\u2013Fri columns; displayed line 1256",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-02-17",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-02-13, Mon\u2013Fri columns; displayed line 1262",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-02-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-02-27, Mon\u2013Fri columns; displayed line 1264",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-02",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-02-27, Mon\u2013Fri columns; displayed line 1264",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-03",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-02-27, Mon\u2013Fri columns; displayed line 1264",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-14",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-03-13, Mon\u2013Fri columns; displayed line 1267",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-03-31",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-03-27, Mon\u2013Fri columns; displayed line 1269",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-04-13",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-04-10, Mon\u2013Fri columns; displayed line 1272",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-04-20",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-04-17, Mon\u2013Fri columns; displayed line 1273",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-05-04",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-05-01, Mon\u2013Fri columns; displayed line 1275",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-05-09",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-05-08, Mon\u2013Fri columns; displayed line 1276",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-06-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-06-26, Mon\u2013Fri columns; displayed line 1285",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-07-12",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-07-10, Mon\u2013Fri columns; displayed line 1287",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-07-13",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-07-10, Mon\u2013Fri columns; displayed line 1287",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-07-14",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-07-10, Mon\u2013Fri columns; displayed line 1287",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-08-29",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-08-28, Mon\u2013Fri columns; displayed line 1296",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-09-18",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-09-18, Mon\u2013Fri columns; displayed line 1299",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-09-20",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-09-18, Mon\u2013Fri columns; displayed line 1299",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-09-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-09-25, Mon\u2013Fri columns; displayed line 1300",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-11-02",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-10-30, Mon\u2013Fri columns; displayed line 1306",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-11-08",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-11-06, Mon\u2013Fri columns; displayed line 1308",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2006-11-14",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2006-11-13, Mon\u2013Fri columns; displayed line 1309",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2007-01-29",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2007-01-29, Mon\u2013Fri columns; displayed line 1322",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2007-02-14",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2007-02-12, Mon\u2013Fri columns; displayed line 1324",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2007-02-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2007-02-26, Mon\u2013Fri columns; displayed line 1327",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2007-04-12",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2007-04-09, Mon\u2013Fri columns; displayed line 1334",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2009-02-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2009-02-23, Mon\u2013Fri columns; displayed line 1452",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2009-07-21",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2009-07-20, Mon\u2013Fri columns; displayed line 1477",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-03-28",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-03-28, Mon\u2013Fri columns; displayed line 1582",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-04-08",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-04-04, Mon\u2013Fri columns; displayed line 1584",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-04-12",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-04-11, Mon\u2013Fri columns; displayed line 1585",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-04-14",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-04-11, Mon\u2013Fri columns; displayed line 1585",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-04-19",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-04-18, Mon\u2013Fri columns; displayed line 1586",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-04-20",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-04-18, Mon\u2013Fri columns; displayed line 1586",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-04-21",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-04-18, Mon\u2013Fri columns; displayed line 1586",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-04-29",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-04-25, Mon\u2013Fri columns; displayed line 1587",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-04",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-02, Mon\u2013Fri columns; displayed line 1588",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-05",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-02, Mon\u2013Fri columns; displayed line 1588",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-06",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-02, Mon\u2013Fri columns; displayed line 1588",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-09",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-09, Mon\u2013Fri columns; displayed line 1590",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-12",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-09, Mon\u2013Fri columns; displayed line 1590",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-13",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-09, Mon\u2013Fri columns; displayed line 1590",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-16",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-16, Mon\u2013Fri columns; displayed line 1591",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-19",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-16, Mon\u2013Fri columns; displayed line 1591",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-20",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-16, Mon\u2013Fri columns; displayed line 1591",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-24",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-23, Mon\u2013Fri columns; displayed line 1592",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-25",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-23, Mon\u2013Fri columns; displayed line 1592",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-26",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-23, Mon\u2013Fri columns; displayed line 1592",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-05-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-23, Mon\u2013Fri columns; displayed line 1592",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-02",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-05-30, Mon\u2013Fri columns; displayed line 1593",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-06",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-06, Mon\u2013Fri columns; displayed line 1594",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-07",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-06, Mon\u2013Fri columns; displayed line 1594",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-09",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-06, Mon\u2013Fri columns; displayed line 1594",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-14",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-13, Mon\u2013Fri columns; displayed line 1596",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-15",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-13, Mon\u2013Fri columns; displayed line 1596",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-16",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-13, Mon\u2013Fri columns; displayed line 1596",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-17",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-13, Mon\u2013Fri columns; displayed line 1596",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-20",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-20, Mon\u2013Fri columns; displayed line 1597",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-22",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-20, Mon\u2013Fri columns; displayed line 1597",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-24",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-20, Mon\u2013Fri columns; displayed line 1597",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-27, Mon\u2013Fri columns; displayed line 1598",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-06-29",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-06-27, Mon\u2013Fri columns; displayed line 1598",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-07-05",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-07-04, Mon\u2013Fri columns; displayed line 1599",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-07-06",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-07-04, Mon\u2013Fri columns; displayed line 1599",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-07-11",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-07-11, Mon\u2013Fri columns; displayed line 1600",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-07-12",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-07-11, Mon\u2013Fri columns; displayed line 1600",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-07-13",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-07-11, Mon\u2013Fri columns; displayed line 1600",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2011-07-22",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2011-07-18, Mon\u2013Fri columns; displayed line 1602",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2013-05-07",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2013-05-06, Mon\u2013Fri columns; displayed line 1714",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2013-12-10",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2013-12-09, Mon\u2013Fri columns; displayed line 1752",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2014-10-14",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2014-10-13, Mon\u2013Fri columns; displayed line 1804",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2014-10-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2014-10-27, Mon\u2013Fri columns; displayed line 1807",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2014-12-03",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2014-12-01, Mon\u2013Fri columns; displayed line 1813",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2014-12-24",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2014-12-22, Mon\u2013Fri columns; displayed line 1816",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-01-08",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2015-01-05, Mon\u2013Fri columns; displayed line 1819",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-01-22",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2015-01-19, Mon\u2013Fri columns; displayed line 1821",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-01-26",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2015-01-26, Mon\u2013Fri columns; displayed line 1822",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-01-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2015-01-26, Mon\u2013Fri columns; displayed line 1822",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-01-28",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2015-01-26, Mon\u2013Fri columns; displayed line 1822",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-01-29",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2015-01-26, Mon\u2013Fri columns; displayed line 1822",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-02-02",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2015-02-02, Mon\u2013Fri columns; displayed line 1824",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-02-04",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2015-02-02, Mon\u2013Fri columns; displayed line 1824",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-11-26",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2015-11-23, Mon\u2013Fri columns; displayed line 1874",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2015-12-25",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": "Christmas Day",
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2015-12-21, Mon\u2013Fri columns; displayed line 1879",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2016-01-01",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": "New Year's Day",
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2015-12-28, Mon\u2013Fri columns; displayed line 1880",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2016-09-05",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2016-09-05, Mon\u2013Fri columns; displayed line 1923",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2019-01-21",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2019-01-21, Mon\u2013Fri columns; displayed line 2072",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2019-02-18",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2019-02-18, Mon\u2013Fri columns; displayed line 2077",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2019-05-27",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2019-05-27, Mon\u2013Fri columns; displayed line 2094",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2019-09-02",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2019-09-02, Mon\u2013Fri columns; displayed line 2110",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2019-11-11",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2019-11-11, Mon\u2013Fri columns; displayed line 2122",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2019-12-25",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": "Christmas Day",
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2019-12-23, Mon\u2013Fri columns; displayed line 2130",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2024-10-14",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2024-10-14, Mon\u2013Fri columns; displayed line 2431",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2024-11-11",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2024-11-11, Mon\u2013Fri columns; displayed line 2436",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2026-06-29, Mon\u2013Fri columns; displayed line 2538",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2026-09-07",
+          "origin": "API_only",
+          "classification": "HTML_unavailable_API_value_unknown",
+          "seed_value": null,
+          "API_value_state": "unknown_from_summary",
+          "API_value": null,
+          "HTML_value": null,
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "leave_missing_no_filling",
+          "evidence": {
+            "value": null,
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2026-09-07, Mon\u2013Fri columns; displayed line 2550",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2014-09-30",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "91.17",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "91.17",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "91.17",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2014-09-29, Mon\u2013Fri columns; displayed line 1802",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2014-10-01",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "90.74",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "90.74",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "90.74",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2014-09-29, Mon\u2013Fri columns; displayed line 1802",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2014-10-02",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "91.02",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "91.02",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "91.02",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2014-09-29, Mon\u2013Fri columns; displayed line 1802",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2022-10-25",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "86.93",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "86.93",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "86.93",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2022-10-24, Mon\u2013Fri columns; displayed line 2307",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2022-12-13",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "75.44",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "75.44",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "75.44",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2022-12-12, Mon\u2013Fri columns; displayed line 2316",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2023-03-07",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "77.45",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "77.45",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "77.45",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2023-03-06, Mon\u2013Fri columns; displayed line 2330",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2024-02-06",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "73.83",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "73.83",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "73.83",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2024-02-05, Mon\u2013Fri columns; displayed line 2388",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        },
+        {
+          "date": "2024-04-16",
+          "origin": "seed_only",
+          "classification": "API_omission_seed_supported_by_HTML",
+          "seed_value": "86.15",
+          "API_value_state": "not_returned",
+          "API_value": null,
+          "HTML_value": "86.15",
+          "calendar_label": null,
+          "holiday_closure_confirmed": false,
+          "cause": "No EIA closure reason established; a calendar label or blank cell does not prove why no price was published.",
+          "recommended_action": "retain_seed_no_deletion",
+          "evidence": {
+            "value": "86.15",
+            "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+            "locator": "Week of 2024-04-15, Mon\u2013Fri columns; displayed line 2400",
+            "checked_on": "2026-10-29",
+            "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+          }
+        }
+      ],
+      "classification_counts": {
+        "API_omission_seed_supported_by_HTML": 8,
+        "HTML_unavailable_API_value_unknown": 97
+      }
+    }
+  },
+  "summary": {
+    "seed_numeric_observations": 10368,
+    "reported_matching_values": 10348,
+    "reported_value_differences": 3,
+    "primary_value_conflicts": 3,
+    "API_only_rows": 137,
+    "API_only_rows_blank_on_HTML": 137,
+    "seed_only_rows_supported_by_HTML": 17,
+    "confirmed_numeric_seed_gaps_from_HTML": 0,
+    "prices_changed": 0,
+    "prices_added": 0,
+    "prices_deleted": 0
+  }
+}

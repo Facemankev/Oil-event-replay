@@ -17,7 +17,7 @@ _Nothing right now._
 
 ## To do
 
-- [ ] DAT-3: Reconcile Brent/WTI against authenticated primary EIA data; retain discrepancy/revision evidence before extending matching — **Dad** — 2026-10-29
+- [ ] DAT-3: Resolve API/HTML source disagreement after successful EIA fetch; inspect the retained sanitized audit snapshot without a key before approving any price changes — **Dad** — 2026-10-29
 
 - [ ] OPS: Write the vision in `PLAN.md` — **Dad** — 2026-10-25
 - [ ] OPS-4: Check the proposed sections, codes and provisional plans in `PLAN.md` and `plans/`, and rewrite the goals as you see fit — **Dad** — 2026-10-26
@@ -38,6 +38,8 @@ _Nothing right now._
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] DAT-3: Successful EIA report and all disputed dates reviewed ([draft PR #19](https://github.com/Facemankev/Oil-event-replay/pull/19)); hold source-conflicting corrections and retain seeds pending resolution — **Dad** — 2026-10-29
 
 
 

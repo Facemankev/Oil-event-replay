@@ -1,0 +1,20 @@
+name: EIA reconciliation review checks
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  reconciliation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate the actual report, evidence, nulls and preservation guards
+        run: python3 -m unittest discover -s tests -p 'test_reconciliation.py' -v
+      - name: Reproduce the complete per-date review without credentials or network
+        run: |
+          python3 -m historical.reconcile --output "$RUNNER_TEMP/eia-review.json"
+          cmp historical/reconciliation/REVIEW.json "$RUNNER_TEMP/eia-review.json"

@@ -211,3 +211,14 @@ and source vintage, never by occurrence date alone. Link events to price evidenc
 without claiming causation; only then consider event-linked research and
 point-in-time backtesting, ahead of portfolio paper-trade evaluation. PR #2 remains
 separate and untouched.
+
+## Review of the completed primary EIA reconciliation
+
+The supplied successful API reconciliation and independent official-table checks
+are preserved in [reconciliation/](reconciliation/README.md). Three Brent API
+values conflict with the official HTML history, which corroborates the seeds.
+Date-set differences do not imply numeric gaps or permission to delete prices.
+The new `python3 -m historical.reconcile` command is read-only; it can also
+inspect the retained sanitized audit database locally without a key. Current
+seeds, imports and static exports remain unchanged pending source resolution
+and explicit review of any later versioned corrections.
