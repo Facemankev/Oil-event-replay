@@ -17,6 +17,8 @@ _Nothing right now._
 
 ## To do
 
+- [ ] DAT-3: Reconcile Brent/WTI against authenticated primary EIA data; retain discrepancy/revision evidence before extending matching — **Dad** — 2026-10-29
+
 - [ ] OPS: Write the vision in `PLAN.md` — **Dad** — 2026-10-25
 - [ ] OPS-4: Check the proposed sections, codes and provisional plans in `PLAN.md` and `plans/`, and rewrite the goals as you see fit — **Dad** — 2026-10-26
 - [ ] OPS: Install Claude Code, sign in to GitHub, and download the repo. Push any unsaved Codex work to a branch first — **Dad** — 2026-10-25
@@ -37,12 +39,18 @@ _Nothing right now._
 
 ## Waiting for review
 
-- [ ] BRD-2: Visual review of the isolated original Gold × Desk preview ([draft PR #15](https://github.com/Facemankev/Oil-event-replay/pull/15)) — **Dad** — 2026-10-27
+
 
 - [ ] PRC-1: Beginner paper trading, PR #2 (issue #3) — **Dad** — waiting on Brendan
 - [ ] BRD-2: House style "Gold × Desk" and the `market-ripple-design` skill (decision 13) — **Brendan** — waiting on Dad
 
 ## Done
+
+- [x] DAT-3 / EVT-1 / BRD-2: Combined database and original-preview validation; README/PLAN/TODO conflicts resolved, dashboard and PR #2 preserved — **Dad** — 2026-10-29
+- [x] EVT-1: Approved PR #14 merged; 24 events, 48 descriptive results, real DAT-3 export integration test in CI — **Dad** — 2026-10-29
+- [x] BRD-2: Approved isolated Gold × Desk preview, PR #15; public URL in README, original design unchanged — **Dad** — 2026-10-29
+
+- [x] DAT-3: Historical price database, approved PR #12 merged; 10,368 secondary-source prices — **Dad** — 2026-10-29
 
 - [x] OPS-4: Sections and codes for the plan, with Dad's monitoring and alerts added, PR #5 (merged by Dad) — **Brendan** — 2026-10-26
 

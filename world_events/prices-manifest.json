@@ -1,0 +1,20 @@
+{
+  "brent": {
+    "filename": "brent-daily-2006-2026.csv",
+    "sha256": "44010589fce049a99024ca0816c27719eddd535e9ebf80d774796e59335aa077",
+    "source_url": "https://github.com/datasets/oil-prices/blob/main/data/brent-daily.csv",
+    "original_source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+    "series_id": "RBRTE",
+    "source_imported_on": "2026-10-27",
+    "verification": "Existing main-branch mirror seed; not independently reconciled to EIA primary data"
+  },
+  "wti": {
+    "filename": "wti-daily-2006-2026.csv",
+    "sha256": "59676126098611353d24d6d79d7cd56bece11622c68f9837e10a9f9ba22adef0",
+    "source_url": "https://github.com/datasets/oil-prices/blob/main/data/wti-daily.csv",
+    "original_source_url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+    "series_id": "RWTC",
+    "source_imported_on": "2026-10-27",
+    "verification": "Existing main-branch mirror seed; not independently reconciled to EIA primary data"
+  }
+}

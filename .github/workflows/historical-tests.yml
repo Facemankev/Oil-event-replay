@@ -1,0 +1,22 @@
+name: Historical database checks
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  historical:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate ingestion, revisions, queries and committed static export
+        run: python3 -m unittest discover -s tests -p 'test_historical.py' -v
+      - name: Exercise actual seed backfill and repeat update
+        run: |
+          python3 -m historical --db "$RUNNER_TEMP/prices.sqlite" backfill
+          python3 -m historical --db "$RUNNER_TEMP/prices.sqlite" update
+          python3 -m historical --db "$RUNNER_TEMP/prices.sqlite" query --series wti --start 2020-04-17 --end 2020-04-24
+          python3 -m historical --db "$RUNNER_TEMP/prices.sqlite" export --output "$RUNNER_TEMP/prices.json"
