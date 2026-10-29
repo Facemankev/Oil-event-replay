@@ -87,3 +87,11 @@ python3 tests/historical_browser_test.py
 python3 tests/world_events_browser_test.py
 python3 tests/branding_preview_browser_test.py
 ```
+
+## Official EIA reconciliation review
+
+The owner's successful API report has been reviewed against EIA's public tables.
+The three reported Brent differences conflict with EIA HTML, which supports the
+existing values. All 17 API-omitted seed observations also appear in EIA HTML;
+all 137 API-only dates have blank HTML price cells. No prices have been changed,
+deleted or filled. See [the per-date review and no-key reproduction commands](historical/reconciliation/README.md).

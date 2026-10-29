@@ -13,11 +13,11 @@ history).
 
 ## Doing
 
-_Nothing right now._
+- [ ] DAT-3: Review successful EIA reconciliation, preserve seeds and stage proposed corrections in a separate database — **Dad** — 2026-10-29
 
 ## To do
 
-- [ ] DAT-3: Reconcile Brent/WTI against authenticated primary EIA data; retain discrepancy/revision evidence before extending matching — **Dad** — 2026-10-29
+- [ ] DAT-3: Resolve API/HTML source disagreement after successful EIA fetch; inspect the retained sanitized audit snapshot without a key before approving any price changes — **Dad** — 2026-10-29
 
 - [ ] OPS: Write the vision in `PLAN.md` — **Dad** — 2026-10-25
 - [ ] OPS-4: Check the proposed sections, codes and provisional plans in `PLAN.md` and `plans/`, and rewrite the goals as you see fit — **Dad** — 2026-10-26

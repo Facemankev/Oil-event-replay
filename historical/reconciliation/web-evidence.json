@@ -1,0 +1,1537 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-29",
+  "method": "Curated numeric/blank cells transcribed from official EIA Mon–Fri weekly HTML history rows via the browsing tool; not raw API snapshots.",
+  "rows": [
+    {
+      "market": "brent",
+      "week_start": "2006-01-09",
+      "values": [
+        "62.51",
+        "62.32",
+        null,
+        null,
+        null
+      ],
+      "locator": "Week of 2006-01-09, Mon–Fri columns; displayed line 1162",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2006-01-30",
+      "values": [
+        "65.14",
+        "63.19",
+        "65.64",
+        "63.49",
+        null
+      ],
+      "locator": "Week of 2006-01-30, Mon–Fri columns; displayed line 1166",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2006-02-27",
+      "values": [
+        "59.44",
+        "59.78",
+        "61.12",
+        null,
+        null
+      ],
+      "locator": "Week of 2006-02-27, Mon–Fri columns; displayed line 1171",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2006-03-06",
+      "values": [
+        null,
+        "59.79",
+        "58.42",
+        null,
+        "59.04"
+      ],
+      "locator": "Week of 2006-03-06, Mon–Fri columns; displayed line 1172",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2006-03-13",
+      "values": [
+        "60.99",
+        null,
+        null,
+        null,
+        null
+      ],
+      "locator": "Week of 2006-03-13, Mon–Fri columns; displayed line 1173",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2006-03-20",
+      "values": [
+        null,
+        null,
+        "61.23",
+        null,
+        "62.78"
+      ],
+      "locator": "Week of 2006-03-20, Mon–Fri columns; displayed line 1174",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2006-03-27",
+      "values": [
+        "62.59",
+        null,
+        null,
+        "65.95",
+        null
+      ],
+      "locator": "Week of 2006-03-27, Mon–Fri columns; displayed line 1176",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2006-04-03",
+      "values": [
+        "67.28",
+        null,
+        null,
+        "67.58",
+        null
+      ],
+      "locator": "Week of 2006-04-03, Mon–Fri columns; displayed line 1177",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2006-04-10",
+      "values": [
+        null,
+        null,
+        "69.54",
+        "69.39",
+        null
+      ],
+      "locator": "Week of 2006-04-10, Mon–Fri columns; displayed line 1178",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2006-05-08",
+      "values": [
+        "68.26",
+        null,
+        "69.83",
+        null,
+        null
+      ],
+      "locator": "Week of 2006-05-08, Mon–Fri columns; displayed line 1183",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2007-02-05",
+      "values": [
+        "58.67",
+        null,
+        null,
+        "57.24",
+        "57.21"
+      ],
+      "locator": "Week of 2007-02-05, Mon–Fri columns; displayed line 1230",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2007-03-05",
+      "values": [
+        null,
+        "59.68",
+        "61.13",
+        "60.90",
+        "60.25"
+      ],
+      "locator": "Week of 2007-03-05, Mon–Fri columns; displayed line 1234",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2012-04-02",
+      "values": [
+        "124.44",
+        null,
+        "123.04",
+        "123.58",
+        null
+      ],
+      "locator": "Week of 2012-04-02, Mon–Fri columns; displayed line 1552",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2014-09-29",
+      "values": [
+        "95.70",
+        "94.67",
+        "94.57",
+        "91.29",
+        "90.80"
+      ],
+      "locator": "Week of 2014-09-29, Mon–Fri columns; displayed line 1708",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2014-10-13",
+      "values": [
+        "87.82",
+        null,
+        "84.02",
+        "84.02",
+        "85.27"
+      ],
+      "locator": "Week of 2014-10-13, Mon–Fri columns; displayed line 1711",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2015-08-31",
+      "values": [
+        null,
+        "48.80",
+        "47.67",
+        "50.41",
+        "48.59"
+      ],
+      "locator": "Week of 2015-08-31, Mon–Fri columns; displayed line 1766",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2015-12-21",
+      "values": [
+        "35.34",
+        "35.26",
+        "35.79",
+        "37.22",
+        null
+      ],
+      "locator": "Week of 2015-12-21, Mon–Fri columns; displayed line 1785",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2015-12-28",
+      "values": [
+        "37.08",
+        "36.85",
+        "35.65",
+        "36.61",
+        null
+      ],
+      "locator": "Week of 2015-12-28, Mon–Fri columns; displayed line 1786",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2016-10-31",
+      "values": [
+        "46.20",
+        "45.77",
+        "44.26",
+        "43.84",
+        "43.06"
+      ],
+      "locator": "Week of 2016-10-31, Mon–Fri columns; displayed line 1839",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2016-12-26",
+      "values": [
+        null,
+        null,
+        "54.95",
+        "54.97",
+        "54.96"
+      ],
+      "locator": "Week of 2016-12-26, Mon–Fri columns; displayed line 1849",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2018-04-02",
+      "values": [
+        null,
+        "69.02",
+        "66.04",
+        "66.54",
+        "66.51"
+      ],
+      "locator": "Week of 2018-04-02, Mon–Fri columns; displayed line 1928",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2018-04-16",
+      "values": [
+        "72.05",
+        "71.71",
+        "73.73",
+        "74.85",
+        "74.62"
+      ],
+      "locator": "Week of 2018-04-16, Mon–Fri columns; displayed line 1930",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2018-05-07",
+      "values": [
+        null,
+        "74.16",
+        "77.60",
+        "77.59",
+        "77.37"
+      ],
+      "locator": "Week of 2018-05-07, Mon–Fri columns; displayed line 1934",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2019-05-27",
+      "values": [
+        null,
+        "70.19",
+        "70.64",
+        "69.55",
+        "66.78"
+      ],
+      "locator": "Week of 2019-05-27, Mon–Fri columns; displayed line 2000",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2019-12-23",
+      "values": [
+        "67.49",
+        "69.26",
+        null,
+        "69.26",
+        "68.91"
+      ],
+      "locator": "Week of 2019-12-23, Mon–Fri columns; displayed line 2036",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2022-10-24",
+      "values": [
+        "91.57",
+        "91.76",
+        "92.93",
+        "94.17",
+        "94.64"
+      ],
+      "locator": "Week of 2022-10-24, Mon–Fri columns; displayed line 2214",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2022-12-12",
+      "values": [
+        "78.00",
+        "80.14",
+        "83.33",
+        "82.34",
+        "80.20"
+      ],
+      "locator": "Week of 2022-12-12, Mon–Fri columns; displayed line 2222",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2023-03-06",
+      "values": [
+        "85.86",
+        "83.03",
+        "82.10",
+        "81.00",
+        "82.30"
+      ],
+      "locator": "Week of 2023-03-06, Mon–Fri columns; displayed line 2236",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2024-02-05",
+      "values": [
+        "79.30",
+        "80.46",
+        "81.18",
+        "83.01",
+        "83.58"
+      ],
+      "locator": "Week of 2024-02-05, Mon–Fri columns; displayed line 2294",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2024-04-15",
+      "values": [
+        "90.84",
+        "91.29",
+        "89.54",
+        "88.34",
+        "87.96"
+      ],
+      "locator": "Week of 2024-04-15, Mon–Fri columns; displayed line 2306",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "brent",
+      "week_start": "2024-12-23",
+      "values": [
+        "72.12",
+        "73.50",
+        null,
+        null,
+        "73.77"
+      ],
+      "locator": "Week of 2024-12-23, Mon–Fri columns; displayed line 2349",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-01-02",
+      "values": [
+        null,
+        "63.11",
+        "63.41",
+        "62.81",
+        null
+      ],
+      "locator": "Week of 2006-01-02, Mon–Fri columns; displayed line 1255",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-01-09",
+      "values": [
+        "63.56",
+        "63.41",
+        "63.91",
+        null,
+        "63.86"
+      ],
+      "locator": "Week of 2006-01-09, Mon–Fri columns; displayed line 1256",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-02-13",
+      "values": [
+        "61.26",
+        "59.61",
+        "57.61",
+        "58.61",
+        null
+      ],
+      "locator": "Week of 2006-02-13, Mon–Fri columns; displayed line 1262",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-02-27",
+      "values": [
+        null,
+        "61.37",
+        "62.01",
+        null,
+        null
+      ],
+      "locator": "Week of 2006-02-27, Mon–Fri columns; displayed line 1264",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-03-13",
+      "values": [
+        "61.81",
+        null,
+        "62.11",
+        "63.46",
+        "62.81"
+      ],
+      "locator": "Week of 2006-03-13, Mon–Fri columns; displayed line 1267",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-03-27",
+      "values": [
+        "63.75",
+        "65.65",
+        "66.00",
+        "66.70",
+        null
+      ],
+      "locator": "Week of 2006-03-27, Mon–Fri columns; displayed line 1269",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-04-10",
+      "values": [
+        "68.29",
+        "69.03",
+        "68.53",
+        null,
+        null
+      ],
+      "locator": "Week of 2006-04-10, Mon–Fri columns; displayed line 1272",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-04-17",
+      "values": [
+        "70.30",
+        "71.28",
+        "72.07",
+        null,
+        "73.73"
+      ],
+      "locator": "Week of 2006-04-17, Mon–Fri columns; displayed line 1273",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-05-01",
+      "values": [
+        "73.75",
+        "74.62",
+        "72.26",
+        null,
+        "70.09"
+      ],
+      "locator": "Week of 2006-05-01, Mon–Fri columns; displayed line 1275",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-05-08",
+      "values": [
+        "69.75",
+        null,
+        "72.15",
+        "73.00",
+        "71.87"
+      ],
+      "locator": "Week of 2006-05-08, Mon–Fri columns; displayed line 1276",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-06-26",
+      "values": [
+        "71.63",
+        null,
+        "72.15",
+        "73.50",
+        "73.94"
+      ],
+      "locator": "Week of 2006-06-26, Mon–Fri columns; displayed line 1285",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-07-10",
+      "values": [
+        "73.50",
+        "74.05",
+        null,
+        null,
+        null
+      ],
+      "locator": "Week of 2006-07-10, Mon–Fri columns; displayed line 1287",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-08-28",
+      "values": [
+        "70.47",
+        null,
+        "70.20",
+        "70.38",
+        "69.24"
+      ],
+      "locator": "Week of 2006-08-28, Mon–Fri columns; displayed line 1296",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-09-18",
+      "values": [
+        null,
+        "61.77",
+        null,
+        "61.62",
+        "59.79"
+      ],
+      "locator": "Week of 2006-09-18, Mon–Fri columns; displayed line 1299",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-09-25",
+      "values": [
+        "60.74",
+        "60.63",
+        null,
+        "62.46",
+        "62.90"
+      ],
+      "locator": "Week of 2006-09-25, Mon–Fri columns; displayed line 1300",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-10-30",
+      "values": [
+        "58.41",
+        "58.72",
+        "58.64",
+        null,
+        "59.13"
+      ],
+      "locator": "Week of 2006-10-30, Mon–Fri columns; displayed line 1306",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-11-06",
+      "values": [
+        "60.11",
+        "58.94",
+        null,
+        "61.18",
+        "59.66"
+      ],
+      "locator": "Week of 2006-11-06, Mon–Fri columns; displayed line 1308",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2006-11-13",
+      "values": [
+        "58.59",
+        null,
+        "58.79",
+        "56.23",
+        "55.90"
+      ],
+      "locator": "Week of 2006-11-13, Mon–Fri columns; displayed line 1309",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2007-01-29",
+      "values": [
+        null,
+        "57.03",
+        "58.17",
+        "57.35",
+        "59.01"
+      ],
+      "locator": "Week of 2007-01-29, Mon–Fri columns; displayed line 1322",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2007-02-12",
+      "values": [
+        "57.76",
+        "58.98",
+        null,
+        "57.92",
+        "59.38"
+      ],
+      "locator": "Week of 2007-02-12, Mon–Fri columns; displayed line 1324",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2007-02-26",
+      "values": [
+        "61.41",
+        null,
+        "61.78",
+        "61.97",
+        "61.58"
+      ],
+      "locator": "Week of 2007-02-26, Mon–Fri columns; displayed line 1327",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2007-04-09",
+      "values": [
+        "61.51",
+        "61.92",
+        "61.98",
+        null,
+        "63.63"
+      ],
+      "locator": "Week of 2007-04-09, Mon–Fri columns; displayed line 1334",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2009-02-23",
+      "values": [
+        "37.66",
+        "38.86",
+        "41.64",
+        "43.18",
+        null
+      ],
+      "locator": "Week of 2009-02-23, Mon–Fri columns; displayed line 1452",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2009-07-20",
+      "values": [
+        "63.93",
+        null,
+        "64.58",
+        "66.10",
+        "66.96"
+      ],
+      "locator": "Week of 2009-07-20, Mon–Fri columns; displayed line 1477",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-03-28",
+      "values": [
+        null,
+        "104.34",
+        "103.80",
+        "106.19",
+        "107.55"
+      ],
+      "locator": "Week of 2011-03-28, Mon–Fri columns; displayed line 1582",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-04-04",
+      "values": [
+        "108.14",
+        "107.82",
+        "108.38",
+        "109.82",
+        null
+      ],
+      "locator": "Week of 2011-04-04, Mon–Fri columns; displayed line 1584",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-04-11",
+      "values": [
+        "109.50",
+        null,
+        "106.60",
+        null,
+        "109.17"
+      ],
+      "locator": "Week of 2011-04-11, Mon–Fri columns; displayed line 1585",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-04-18",
+      "values": [
+        "106.70",
+        null,
+        null,
+        null,
+        null
+      ],
+      "locator": "Week of 2011-04-18, Mon–Fri columns; displayed line 1586",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-04-25",
+      "values": [
+        "111.68",
+        "111.72",
+        "112.31",
+        "112.38",
+        null
+      ],
+      "locator": "Week of 2011-04-25, Mon–Fri columns; displayed line 1587",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-05-02",
+      "values": [
+        "113.03",
+        "110.60",
+        null,
+        null,
+        null
+      ],
+      "locator": "Week of 2011-05-02, Mon–Fri columns; displayed line 1588",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-05-09",
+      "values": [
+        null,
+        "103.39",
+        "97.88",
+        null,
+        null
+      ],
+      "locator": "Week of 2011-05-09, Mon–Fri columns; displayed line 1590",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-05-16",
+      "values": [
+        null,
+        "96.40",
+        "99.52",
+        null,
+        null
+      ],
+      "locator": "Week of 2011-05-16, Mon–Fri columns; displayed line 1591",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-05-23",
+      "values": [
+        "97.06",
+        null,
+        null,
+        null,
+        null
+      ],
+      "locator": "Week of 2011-05-23, Mon–Fri columns; displayed line 1592",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-05-30",
+      "values": [
+        null,
+        "102.70",
+        "100.30",
+        null,
+        "100.28"
+      ],
+      "locator": "Week of 2011-05-30, Mon–Fri columns; displayed line 1593",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-06-06",
+      "values": [
+        null,
+        null,
+        "100.77",
+        null,
+        "99.30"
+      ],
+      "locator": "Week of 2011-06-06, Mon–Fri columns; displayed line 1594",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-06-13",
+      "values": [
+        "97.20",
+        null,
+        null,
+        null,
+        null
+      ],
+      "locator": "Week of 2011-06-13, Mon–Fri columns; displayed line 1596",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-06-20",
+      "values": [
+        null,
+        "93.70",
+        null,
+        "90.70",
+        null
+      ],
+      "locator": "Week of 2011-06-20, Mon–Fri columns; displayed line 1597",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-06-27",
+      "values": [
+        null,
+        "92.90",
+        null,
+        "95.30",
+        "94.81"
+      ],
+      "locator": "Week of 2011-06-27, Mon–Fri columns; displayed line 1598",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-07-04",
+      "values": [
+        null,
+        null,
+        null,
+        "98.70",
+        "96.20"
+      ],
+      "locator": "Week of 2011-07-04, Mon–Fri columns; displayed line 1599",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-07-11",
+      "values": [
+        null,
+        null,
+        null,
+        "95.75",
+        "97.24"
+      ],
+      "locator": "Week of 2011-07-11, Mon–Fri columns; displayed line 1600",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2011-07-18",
+      "values": [
+        "95.94",
+        "97.49",
+        "98.11",
+        "98.96",
+        null
+      ],
+      "locator": "Week of 2011-07-18, Mon–Fri columns; displayed line 1602",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2013-05-06",
+      "values": [
+        "95.80",
+        null,
+        "96.24",
+        "96.09",
+        "95.81"
+      ],
+      "locator": "Week of 2013-05-06, Mon–Fri columns; displayed line 1714",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2013-12-09",
+      "values": [
+        "97.10",
+        null,
+        "97.25",
+        "97.21",
+        "96.27"
+      ],
+      "locator": "Week of 2013-12-09, Mon–Fri columns; displayed line 1752",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2014-09-29",
+      "values": [
+        "94.53",
+        "91.17",
+        "90.74",
+        "91.02",
+        "89.76"
+      ],
+      "locator": "Week of 2014-09-29, Mon–Fri columns; displayed line 1802",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2014-10-13",
+      "values": [
+        "85.73",
+        null,
+        "81.82",
+        "82.33",
+        "82.80"
+      ],
+      "locator": "Week of 2014-10-13, Mon–Fri columns; displayed line 1804",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2014-10-27",
+      "values": [
+        null,
+        "81.36",
+        "82.25",
+        "81.06",
+        "80.53"
+      ],
+      "locator": "Week of 2014-10-27, Mon–Fri columns; displayed line 1807",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2014-12-01",
+      "values": [
+        "68.98",
+        "66.99",
+        null,
+        "66.73",
+        "65.89"
+      ],
+      "locator": "Week of 2014-12-01, Mon–Fri columns; displayed line 1813",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2014-12-22",
+      "values": [
+        "55.25",
+        "56.78",
+        null,
+        null,
+        "54.59"
+      ],
+      "locator": "Week of 2014-12-22, Mon–Fri columns; displayed line 1816",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2015-01-05",
+      "values": [
+        "50.05",
+        "47.98",
+        "48.69",
+        null,
+        "48.35"
+      ],
+      "locator": "Week of 2015-01-05, Mon–Fri columns; displayed line 1819",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2015-01-19",
+      "values": [
+        null,
+        "46.79",
+        "47.85",
+        null,
+        "45.26"
+      ],
+      "locator": "Week of 2015-01-19, Mon–Fri columns; displayed line 1821",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2015-01-26",
+      "values": [
+        null,
+        null,
+        null,
+        null,
+        "47.79"
+      ],
+      "locator": "Week of 2015-01-26, Mon–Fri columns; displayed line 1822",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2015-02-02",
+      "values": [
+        null,
+        "53.04",
+        null,
+        "50.48",
+        "51.66"
+      ],
+      "locator": "Week of 2015-02-02, Mon–Fri columns; displayed line 1824",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2015-11-23",
+      "values": [
+        "39.27",
+        "40.89",
+        "41.22",
+        null,
+        "40.57"
+      ],
+      "locator": "Week of 2015-11-23, Mon–Fri columns; displayed line 1874",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2015-12-21",
+      "values": [
+        "34.55",
+        "36.12",
+        "36.76",
+        "37.62",
+        null
+      ],
+      "locator": "Week of 2015-12-21, Mon–Fri columns; displayed line 1879",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2015-12-28",
+      "values": [
+        "36.36",
+        "37.88",
+        "36.59",
+        "37.13",
+        null
+      ],
+      "locator": "Week of 2015-12-28, Mon–Fri columns; displayed line 1880",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2016-09-05",
+      "values": [
+        null,
+        "44.85",
+        "45.47",
+        "47.63",
+        "45.88"
+      ],
+      "locator": "Week of 2016-09-05, Mon–Fri columns; displayed line 1923",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2019-01-21",
+      "values": [
+        null,
+        "52.59",
+        "52.44",
+        "52.94",
+        "53.53"
+      ],
+      "locator": "Week of 2019-01-21, Mon–Fri columns; displayed line 2072",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2019-02-18",
+      "values": [
+        null,
+        "56.12",
+        "56.90",
+        "56.95",
+        "57.01"
+      ],
+      "locator": "Week of 2019-02-18, Mon–Fri columns; displayed line 2077",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2019-05-27",
+      "values": [
+        null,
+        "58.91",
+        "58.84",
+        "56.47",
+        "53.49"
+      ],
+      "locator": "Week of 2019-05-27, Mon–Fri columns; displayed line 2094",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2019-09-02",
+      "values": [
+        null,
+        "53.91",
+        "56.22",
+        "56.33",
+        "56.45"
+      ],
+      "locator": "Week of 2019-09-02, Mon–Fri columns; displayed line 2110",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2019-11-11",
+      "values": [
+        null,
+        "56.67",
+        "56.88",
+        "56.57",
+        "57.54"
+      ],
+      "locator": "Week of 2019-11-11, Mon–Fri columns; displayed line 2122",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2019-12-23",
+      "values": [
+        "60.51",
+        "61.17",
+        null,
+        "61.72",
+        "61.76"
+      ],
+      "locator": "Week of 2019-12-23, Mon–Fri columns; displayed line 2130",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2022-10-24",
+      "values": [
+        "86.12",
+        "86.93",
+        "89.39",
+        "89.06",
+        "87.85"
+      ],
+      "locator": "Week of 2022-10-24, Mon–Fri columns; displayed line 2307",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2022-12-12",
+      "values": [
+        "72.96",
+        "75.44",
+        "77.14",
+        "75.89",
+        "74.19"
+      ],
+      "locator": "Week of 2022-12-12, Mon–Fri columns; displayed line 2316",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2023-03-06",
+      "values": [
+        "80.39",
+        "77.45",
+        "76.56",
+        "75.60",
+        "76.55"
+      ],
+      "locator": "Week of 2023-03-06, Mon–Fri columns; displayed line 2330",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2024-02-05",
+      "values": [
+        "73.21",
+        "73.83",
+        "74.26",
+        "76.67",
+        "77.26"
+      ],
+      "locator": "Week of 2024-02-05, Mon–Fri columns; displayed line 2388",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2024-04-15",
+      "values": [
+        "86.21",
+        "86.15",
+        "83.58",
+        "83.50",
+        "83.79"
+      ],
+      "locator": "Week of 2024-04-15, Mon–Fri columns; displayed line 2400",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2024-10-14",
+      "values": [
+        null,
+        "71.22",
+        "70.97",
+        "71.26",
+        "69.78"
+      ],
+      "locator": "Week of 2024-10-14, Mon–Fri columns; displayed line 2431",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2024-11-11",
+      "values": [
+        null,
+        "68.43",
+        "68.76",
+        "68.99",
+        "67.33"
+      ],
+      "locator": "Week of 2024-11-11, Mon–Fri columns; displayed line 2436",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2026-06-29",
+      "values": [
+        "71.87",
+        "70.56",
+        "69.74",
+        "69.73",
+        null
+      ],
+      "locator": "Week of 2026-06-29, Mon–Fri columns; displayed line 2538",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    },
+    {
+      "market": "wti",
+      "week_start": "2026-09-07",
+      "values": [
+        null,
+        "94.21",
+        "97.26",
+        "103.57",
+        "101.27"
+      ],
+      "locator": "Week of 2026-09-07, Mon–Fri columns; displayed line 2550",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "checked_on": "2026-10-29",
+      "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+    }
+  ]
+}
