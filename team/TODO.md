@@ -14,6 +14,7 @@ history).
 ## Doing
 
 
+
 ## To do
 
 - [ ] DAT-3: Reconcile Brent/WTI against authenticated primary EIA data; retain discrepancy/revision evidence before extending matching — **Dad** — 2026-10-29
@@ -37,6 +38,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] WEB-2 / MAT-3 / PRC-1: Connected application ([draft PR #22](https://github.com/Facemankev/Oil-event-replay/pull/22), stacked on #20/#16; [Issue #21](https://github.com/Facemankev/Oil-event-replay/issues/21)); [public preview](https://market-ripple-app-review.g86hz2pjsh.chatgpt.site/app/), Chromium/WebKit local and deployed flows passed; physical iPhone acceptance outstanding — **Dad** — 2026-10-30
 
 - [ ] MAT-3 / CMP-2: Cohort summaries, 1/3/5/10/20 observation days, evidence/risk ranking and sourced severity ([draft PR #20](https://github.com/Facemankev/Oil-event-replay/pull/20), stacked on #16); [private working preview](https://market-ripple-cohort-review.royaltulip9.chatgpt.site/matching/), automated checks passed — **Dad** — 2026-10-29
 - [ ] MAT-2 / MAT-3: Working historical matching, Gold × Desk page and provisional-source gates ([PR #16](https://github.com/Facemankev/Oil-event-replay/pull/16)); EIA differences await the separate PR #19 review — **Dad** — 2026-10-29

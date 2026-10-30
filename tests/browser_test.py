@@ -30,7 +30,9 @@ with sync_playwright() as p:
  page.fill('#mr-asset','<img src=x onerror=alert(1)>')
  page.fill('#mr-source','Test publisher')
  page.set_input_files('#mr-file',{'name':'test.csv','mimeType':'text/csv','buffer':b'Date,Close\n2016-06-23,100\n2016-07-01,110\n'})
- assert page.locator('#mr-results tr').count()==3
+ # File.text() finishes asynchronously; wait for the completed import.
+ expect(page.locator('#mr-status')).to_contain_text('Loaded 2 prices')
+ expect(page.locator('#mr-results tr')).to_have_count(3)
  assert page.locator('#mr-results img').count()==0
  assert 'not independently verified' in page.locator('#mr-sources').inner_text()
  page.click('#mr-clear');assert page.locator('#mr-results tr').count()==2

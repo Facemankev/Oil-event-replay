@@ -99,3 +99,16 @@ first-public times and missing prices remain unknown. This is historical
 research, not a trading recommendation or an estimate of potential earnings.
 See [setup, deterministic rules, EIA configuration and tests](matching/README.md)
 and the [validation report](matching/validation-report.json).
+
+## Integrated application preview (Issue #21)
+
+Open [app/](app/) for the connected event → evidence → matching/risk → optional
+historical paper-practice flow. It extends draft PR #20/#16 and reuses the
+paper accounting core from PR #2. No live feed, brokerage or real orders.
+The original dashboard, database records and canonical prices are preserved.
+[Setup, limitations and iPhone/PC acceptance steps](app/README.md).
+EIA reconciliation remains separate in draft PR #19; prices remain provisional.
+
+[Open the public integrated preview](https://market-ripple-app-review.g86hz2pjsh.chatgpt.site/app/)
+(no ChatGPT sign-in). [Draft PR #22](https://github.com/Facemankev/Oil-event-replay/pull/22)
+awaits review. [Automated results and physical-device status](app/VALIDATION.md).

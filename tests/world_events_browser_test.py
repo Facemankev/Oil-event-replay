@@ -35,8 +35,10 @@ with sync_playwright() as p:
  page.screenshot(path=str(ROOT/'work'/'issue13'/'event-research-mobile.png'),full_page=True)
  # Imported text never becomes markup, including an untrusted source URL.
  payload=json.loads((ROOT/'data/world-event-research.json').read_text())
- payload['events'][0]['description']='<img src=x onerror=alert(1)>'
- payload['events'][0]['evidence'][0]['url']='javascript:alert(1)'
+ # Reload now preserves the bookmarked event, so tamper with that record.
+ selected=next(e for e in payload['events'] if e['id']=='ike-2008-galveston')
+ selected['description']='<img src=x onerror=alert(1)>'
+ selected['evidence'][0]['url']='javascript:alert(1)'
  page.route('**/data/world-event-research.json',lambda route:route.fulfill(content_type='application/json',body=json.dumps(payload)))
  page.reload();expect(page.locator('#description')).to_contain_text('<img')
  assert page.locator('#description img').count()==0

@@ -1,17 +1,23 @@
+import {readContext,route,loadJSON} from '../app/context.mjs';
 const $=id=>document.getElementById(id);
 const add=(parent,tag,value)=>{const n=document.createElement(tag);n.textContent=value;parent.append(n);return n;};
 let data;
 const temporal=t=>t.precision==='unknown'?'Unknown':(t.at||`${t.date} (clock unknown)`)+(t.timezone?` [${t.timezone}]`:' [timezone unknown]');
-function choose(){
+function choose(preferred){
  const selected=$('category').value;
  const events=data.events.filter(e=>selected==='all'||e.category===selected);
  $('event').replaceChildren();
  for(const event of events){const o=add($('event'),'option',`${event.occurred.date} — ${event.title}`);o.value=event.id;}
+ if(events.some(e=>e.id===preferred))$('event').value=preferred;
  render();
 }
 function render(){
  const event=data.events.find(e=>e.id===$('event').value);
  const comparison=data.comparisons.find(c=>c.event_id===event.id);
+ const context={...readContext(location.search,data.events),event};
+ const onward=$('matching-link');onward.hidden=false;onward.href=route('matching/',context);
+ history.replaceState(null,'',route('event-research.html',context));
+ window.dispatchEvent(new CustomEvent('mr:context',{detail:context}));
  $('title').textContent=event.title;
  $('description').textContent=event.description;
  $('geography').textContent=`Region: ${event.geography}. Category: ${event.category.replaceAll('_',' ')}.`;
@@ -42,9 +48,10 @@ function render(){
  }
 }
 try{
- const response=await fetch('data/world-event-research.json');if(!response.ok)throw Error('Research export unavailable');
- data=await response.json();if(data.schemaVersion!==1||!Array.isArray(data.events)||!Array.isArray(data.comparisons))throw Error('Unsupported export');
+ data=await loadJSON('data/world-event-research.json','Research export');if(!Array.isArray(data.comparisons))throw Error('Unsupported export');
+ if(!data.events.length){$('status').textContent='No historical events are available.';}else{
  for(const category of [...new Set(data.events.map(e=>e.category))].sort()){const option=add($('category'),'option',category.replaceAll('_',' '));option.value=category;}
  $('status').textContent=`${data.summary.events} events, ${data.summary.successful_comparisons} completed two-benchmark comparisons. ${data.summary.first_public_not_established} first-public times remain unestablished; ${data.summary.minute_public_evidence} supporting publications have minute stamps.`;
- $('event').disabled=false;$('category').onchange=choose;$('event').onchange=render;choose();
+ $('event').disabled=false;$('category').onchange=()=>choose();$('event').onchange=render;const c=readContext(location.search,data.events);choose(c.event?.id);if(c.missing)$('status').textContent+=' Requested event not found; choose an available event.';
+ }
 }catch(error){$('status').textContent='Cannot load event research: '+error.message+'. The existing dashboard remains available via the link above.';}
