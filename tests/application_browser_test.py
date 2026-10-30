@@ -81,6 +81,13 @@ with sync_playwright() as p:
         assert 'Harvey' in backup['journal'][0]['reason']
         page.locator('#positions button').click();expect(page.locator('#summary')).to_contain_text('Virtual cash £50.07')
         page.reload();expect(page.locator('#summary')).to_contain_text('Virtual cash £50.07')
+        page.locator('#research-context a').click()
+        expect(page.locator('#example')).to_have_value('harvey-2017-texas')
+        expect(page.locator('#market')).to_have_value('wti')
+        expect(page.locator('#summary-horizon')).to_have_value('3')
+        page.go_back();expect(page.locator('#summary')).to_contain_text('Virtual cash £50.07')
+        expect(page.locator('#journal p')).to_have_count(2)
+        page.go_forward();expect(page.locator('#market')).to_have_value('wti')
         for route in ['/app/','/event-research.html?event=harvey-2017-texas','/history.html','/paper.html']:
             page.goto(base+route)
             if '/app/' in route:expect(page.locator('#event')).to_be_enabled()

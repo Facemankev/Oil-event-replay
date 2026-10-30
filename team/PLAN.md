@@ -113,10 +113,13 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** WEB-2 / MAT-3 / PRC-1: Issue #21 integration on a new branch stacked
-  on PR #20/#16. Connect dashboard, sourced event research, matching/ranking and
-  explicit historical paper-practice handoff. Prioritise Safari and desktop.
-  Keep EIA PR #19 and canonical historical prices unchanged; no merges.
+- **Dad:** WEB-2 / MAT-3 / PRC-1: Issue #21 connected application is in
+  [draft PR #22](https://github.com/Facemankev/Oil-event-replay/pull/22), stacked
+  on #20/#16. [Public preview](https://market-ripple-app-review.g86hz2pjsh.chatgpt.site/app/)
+  works through sourced event evidence, matching/risk and optional separate Brent
+  paper practice. Unit, regression and deployed Chromium/WebKit checks passed.
+  Next: Brendan's review and physical iPhone Safari acceptance. EIA PR #19 and
+  canonical prices remain unchanged; no merges or current/brokerage connection.
 - **Brendan:** chose the house style, "Gold × Desk", from eight previews, and
   wrote it down as the `market-ripple-design` skill (BRD-2, decision 13), sent
   to Dad (`brendan/brd-2-design-system`). Next: review PR #2.

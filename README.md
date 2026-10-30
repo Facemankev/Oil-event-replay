@@ -108,3 +108,7 @@ paper accounting core from PR #2. No live feed, brokerage or real orders.
 The original dashboard, database records and canonical prices are preserved.
 [Setup, limitations and iPhone/PC acceptance steps](app/README.md).
 EIA reconciliation remains separate in draft PR #19; prices remain provisional.
+
+[Open the public integrated preview](https://market-ripple-app-review.g86hz2pjsh.chatgpt.site/app/)
+(no ChatGPT sign-in). [Draft PR #22](https://github.com/Facemankev/Oil-event-replay/pull/22)
+awaits review. [Automated results and physical-device status](app/VALIDATION.md).

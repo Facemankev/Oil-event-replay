@@ -33,7 +33,7 @@ Local WebKit download was denied by network policy; GitHub Actions will test it.
 The owner explicitly requested a PUBLIC preview without ChatGPT sign-in. A new
 isolated Sites project was registered; existing preview access is unchanged.
 
-**Unfinished:** final regression, CI WebKit, publication and draft PR review.
+**Unfinished:** Brendan review and physical iPhone Safari acceptance.
 Reported iPhone failure has no device/error details yet; diagnosis remains open.
 
 **For Brendan:** check the dependency stack, truthful data limits and mobile flow.
@@ -47,3 +47,27 @@ and access policy confirms public. No original iPhone cause is assumed.
 Visual review found inherited link colour hiding the filled action's text;
 the new app stylesheet now sets its contrasting paper colour explicitly and a
 WCAG 4.5:1 light/dark browser assertion covers that control. Screenshots added.
+
+Second CI confirmed 35 Python and 34 Node tests, every existing browser suite and
+both local Chromium/WebKit end-to-end flows. The deployed HTTP 403 was Cloudflare
+browser-integrity error 1010 against Python urllib, not a confirmed application
+or authentication error. Deployment validation now uses the actual browser
+engines under test; no authentication, proxy or challenge bypass is introduced.
+Public preview: https://market-ripple-app-review.g86hz2pjsh.chatgpt.site/app/ .
+Draft PR #22: https://github.com/Facemankev/Oil-event-replay/pull/22 .
+Brendan is requested as reviewer. Physical Safari/iPhone work remains outstanding.
+
+Final source checks passed in [CI run 41087389133](https://github.com/Facemankev/Oil-event-replay/actions/runs/41087389133):
+35 Python tests, 34 Node tests, all original browser regressions, and complete
+local AND deployed Chromium/WebKit desktop/iPhone-profile flows. Public preview
+version 3 published successfully. All 58 deployed executable/data/style hashes
+match the checkout. No browser errors in the integration flows. Screenshots and
+JSON reports are retained as Actions artifacts. Native back/forward also passed
+locally, with a regression assertion added to the final test update.
+
+Main, PR #16, PR #20, PR #19 and PR #2 heads were checked unchanged. Canonical
+CSV/exports, event records, matching/ranking algorithms, database modules,
+Brendan's tokens/branding preview and PR #2's accounting core are byte-preserved.
+No merge, live feed, broker or orders. The optional research note is not a
+simulation of the selected event or WTI. Issue #21 remains open while physical
+acceptance and partner review are outstanding.
