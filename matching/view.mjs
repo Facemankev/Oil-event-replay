@@ -1,3 +1,4 @@
+import {readContext,route,loadJSON} from '../app/context.mjs';
 import {analyse} from './analysis.mjs';
 import {categories,mechanisms,impacts,visibleReactions,evidenceStrength} from './engine.mjs';
 const $ = id => document.getElementById(id);
@@ -71,7 +72,7 @@ function cohortView(analysis,q){
  const body=$('opportunities');body.replaceChildren();
  for(const result of analysis.opportunities){
   const row=node('tr');row.dataset.market=result.market;row.dataset.days=result.days;
-  const cell=node('td'),button=node('button',`${result.market.toUpperCase()} / ${result.days} ${result.days===1?'day':'days'}`,'mr-btn');button.type='button';button.addEventListener('click',()=>{$('market').value=result.market;$('summary-horizon').value=String(result.days);render();$('cohort-title').scrollIntoView({block:'start',behavior:'instant'});});cell.append(button);row.append(cell);
+  const cell=node('td'),button=node('button',`${result.market.toUpperCase()} / ${result.days} ${result.days===1?'day':'days'}`,'mr-btn');button.type='button';button.addEventListener('click',()=>{$('market').value=result.market;$('summary-horizon').value=String(result.days);render();$('cohort-title').scrollIntoView({block:'start',behavior:'auto'});});cell.append(button);row.append(cell);
   for(const text of [result.evidence,result.window_count,percentText(result.percent.median),result.percent.count?`${percentText(result.percent.minimum)} to ${percentText(result.percent.maximum)}`:'Unavailable',result.risks.slice(0,2).join('; ')+(result.risks.length>2?`; ${result.risks.length-2} more in details`:'')])row.append(node('td',String(text)));
   body.append(row);
  }
@@ -81,7 +82,11 @@ function render(event){
  try{const q=readQuery(),analysis=analyse(q,catalog.events,{verifiedOnly:$('verified-only').checked}),matches=analysis.matchesByMarket[q.market];
  $('summary').textContent=`${q.title} · ${q.market.toUpperCase()} · ${matches.length} eligible historical ${matches.length===1?'match':'matches'}. ${matches.length?'Showing up to six; event similarity never uses price outcomes.':'No sufficiently comparable events in this small library. No replacement is invented.'}`;
  cohortView(analysis,q);matches.slice(0,6).forEach(m=>$('results').append(card(m,q)));
- }catch(e){$('summary').textContent='No results shown.';$('error').textContent=e.message;$('cohort-count').textContent='No valid analysis.';$('cohort-explanation').textContent='';$('cohort-figures').replaceChildren();$('opportunities').replaceChildren();$('cohort-members').replaceChildren();$('cohort-warning').textContent='Correct the event inputs before interpreting any results.';}
+ const c={event:catalog.events.find(e=>e.id===q.excludeId)||null,market:q.market,days:Number($('summary-horizon').value)};
+ $('practice-link').href=route('paper.html',c);$('practice-link').hidden=false;
+ $('event-evidence-link').hidden=!c.event;if(c.event)$('event-evidence-link').href=route('event-research.html',c);
+ history.replaceState(null,'',route('matching/',c));window.dispatchEvent(new CustomEvent('mr:context',{detail:c}));
+ }catch(e){$('practice-link').hidden=true;$('event-evidence-link').hidden=true;$('summary').textContent='No results shown.';$('error').textContent=e.message;$('cohort-count').textContent='No valid analysis.';$('cohort-explanation').textContent='';$('cohort-figures').replaceChildren();$('opportunities').replaceChildren();$('cohort-members').replaceChildren();$('cohort-warning').textContent='Correct the event inputs before interpreting any results.';}
 }
 const scheme=matchMedia('(prefers-color-scheme: dark)');
 const isDark=()=>document.documentElement.dataset.theme==='dark'||(!document.documentElement.dataset.theme&&scheme.matches);
@@ -89,7 +94,7 @@ const themeLabel=()=>{$('theme').textContent=isDark()?'Use light mode':'Use dark
 $('theme').addEventListener('click',()=>{document.documentElement.dataset.theme=isDark()?'light':'dark';themeLabel();});
 scheme.addEventListener('change',themeLabel);themeLabel();
 try{
- const response=await fetch('cohort-catalog.json');if(!response.ok)throw Error('Data files are unavailable.');catalog=await response.json();
+ catalog=await loadJSON('cohort-catalog.json','Data files');
  $('verification').textContent=`Provisional seed prices. Official EIA reconciliation review remains outstanding; no price corrections are applied here. ${catalog.price_counts.brent.toLocaleString()} Brent / ${catalog.price_counts.wti.toLocaleString()} WTI prices; ${catalog.events.length} sourced events.`;
  Object.entries(impacts).forEach(([key,label])=>$('impact').append(new Option(label,key)));$('impact').value='mixed';
  Object.entries(categories).forEach(([k,v])=>$('category').append(new Option(v,k)));mechanismOptions();$('mechanism').value='landfall';
@@ -97,5 +102,7 @@ try{
  const today=new Date().toISOString().slice(0,10);$('occurred').value=today;$('public').value=today;
  $('category').addEventListener('change',()=>{mechanismOptions();$('example').value='';$('wind').value='';$('wind-control').hidden=$('category').value!=='weather';$('impact').value='unknown';});
  $('example').addEventListener('change',()=>{const e=catalog.events.find(e=>e.id===$('example').value);if(!e)return;$('title').value=e.title;$('category').value=e.category;mechanismOptions();$('mechanism').value=e.features.mechanism||'';$('location').value=e.geography;$('wind').value=e.features.severity?.value??'';$('wind-control').hidden=e.category!=='weather';$('impact').value=e.features.impact||'unknown';$('occurred').value=e.occurred.date;$('public').value=e.reactions.anchor||e.occurred.date;render();});
- $('summary-horizon').addEventListener('change',render);$('query').addEventListener('submit',render);$('verified-only').addEventListener('change',render);render();
+ $('summary-horizon').addEventListener('change',render);$('query').addEventListener('submit',render);$('verified-only').addEventListener('change',render);
+ const requested=readContext(location.search,catalog.events);$('market').value=requested.market;$('summary-horizon').value=String(requested.days);
+ if(requested.event){$('example').value=requested.event.id;$('example').dispatchEvent(new Event('change'));}else{render();if(requested.missing)$('error').textContent='Requested event not found. Showing the labelled hypothetical example; no historical record was invented.';}
 }catch(e){$('verification').textContent='The event library could not load. No results are available.';$('summary').textContent='Serve this page over HTTP with all matching files present.';$('error').textContent=e.message;$('query').querySelector('button').disabled=true;}

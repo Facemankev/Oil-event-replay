@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] WEB-2 / MAT-3 / PRC-1: Connect dashboard, event evidence, matching and safe paper practice; iPhone/WebKit checks ([Issue #21](https://github.com/Facemankev/Oil-event-replay/issues/21)) — **Dad** — 2026-10-30
+
 
 ## To do
 

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "source": "data/historical/prices.json",
+  "sha256": "75d7199e0c5267ddd433a249b8de5af659ebdd93cce19d60834b168d27529ff3",
+  "coverage": {
+    "brent": {
+      "count": 5231,
+      "first": "2006-01-03",
+      "last": "2026-10-20",
+      "explicit_missing": 0
+    },
+    "wti": {
+      "count": 5137,
+      "first": "2006-01-03",
+      "last": "2026-10-20",
+      "explicit_missing": 0
+    }
+  },
+  "status": "provisional_historical_snapshot_not_a_current_feed"
+}

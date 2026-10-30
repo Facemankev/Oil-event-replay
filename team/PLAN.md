@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-10-29 by Dad (cohort statistics and evidence)
+Last updated: 2026-10-30 by Dad (integrated application)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -113,14 +113,10 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** MAT-3 / CMP-2 extends PR #16 in [draft PR #20](https://github.com/Facemankev/Oil-event-replay/pull/20): cohort
-  counts/medians/ranges, 1/3/5/10/20 observation days, sourced advisory wind
-  comparisons and evidence/risk research ranking. Four reproducible demos;
-  unit/browser CI passed. [Private preview](https://market-ripple-cohort-review.royaltulip9.chatgpt.site/matching/)
-  is deployed for review (same ChatGPT account).
-  All prices remain provisional; PR #19's EIA source review is untouched.
-  Next: review the extension, resolve source conflicts and improve historical
-  publication/vintage evidence before monitoring or trading validation.
+- **Dad:** WEB-2 / MAT-3 / PRC-1: Issue #21 integration on a new branch stacked
+  on PR #20/#16. Connect dashboard, sourced event research, matching/ranking and
+  explicit historical paper-practice handoff. Prioritise Safari and desktop.
+  Keep EIA PR #19 and canonical historical prices unchanged; no merges.
 - **Brendan:** chose the house style, "Gold × Desk", from eight previews, and
   wrote it down as the `market-ripple-design` skill (BRD-2, decision 13), sent
   to Dad (`brendan/brd-2-design-system`). Next: review PR #2.
