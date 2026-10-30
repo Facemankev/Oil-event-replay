@@ -39,3 +39,11 @@ Reported iPhone failure has no device/error details yet; diagnosis remains open.
 **For Brendan:** check the dependency stack, truthful data limits and mobile flow.
 
 **Plan changes:** Now/status only; vision, decisions and principles unchanged.
+
+CI run 41085877222 passed all unit/build/foundation and local Chromium/WebKit
+flows, including iPhone profiles. Deployed fingerprint fetch returned HTTP 403;
+that remote check remains failing while diagnosed. Native publication succeeded
+and access policy confirms public. No original iPhone cause is assumed.
+Visual review found inherited link colour hiding the filled action's text;
+the new app stylesheet now sets its contrasting paper colour explicitly and a
+WCAG 4.5:1 light/dark browser assertion covers that control. Screenshots added.

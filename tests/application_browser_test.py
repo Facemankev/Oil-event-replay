@@ -23,7 +23,11 @@ else:
 results=[]
 if args.base_url:
     import urllib.request
-    with urllib.request.urlopen(base+'/app/preview-build.json',timeout=30) as response:manifest=json.load(response)
+    try:
+        with urllib.request.urlopen(base+'/app/preview-build.json',timeout=30) as response:manifest=json.load(response)
+    except urllib.error.HTTPError as error:
+        print('DEPLOYED HTTP FAILURE',error.code,'headers',dict(error.headers),'body',error.read(1200).decode('utf-8','replace'))
+        raise
     for name,expected in manifest['files'].items():
         assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==expected,('Deployed source differs from checkout',name)
     assert 'app/home.mjs' in manifest['files'] and 'trading/core.mjs' in manifest['files']
@@ -82,6 +86,18 @@ with sync_playwright() as p:
             for scheme in ['light','dark']:
                 page.emulate_media(color_scheme=scheme)
                 assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(name,scheme,route)
+                if route=='/app/':
+                    colors=page.locator('#matching-link').evaluate('(e)=>({text:getComputedStyle(e).color,background:getComputedStyle(e).backgroundColor})')
+                    import re
+                    def luminance(css):
+                        rgb=[float(v)/255 for v in re.findall(r'[0-9.]+',css)[:3]]
+                        rgb=[v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in rgb]
+                        return sum(a*b for a,b in zip(rgb,[.2126,.7152,.0722]))
+                    values=sorted([luminance(v) for v in colors.values()])
+                    assert (values[1]+.05)/(values[0]+.05)>=4.5,(name,scheme,'primary link contrast',colors)
+                if route in ['/app/','/paper.html']:
+                    shots=ROOT/'work/application';shots.mkdir(parents=True,exist_ok=True)
+                    page.screenshot(path=str(shots/f'{args.browser}-{name}-{scheme}-{"home" if route=="/app/" else "practice"}.png'),full_page=True)
             assert all(box['height']>=44 for box in page.locator('.app-nav a').evaluate_all('(els)=>els.map(e=>({height:e.getBoundingClientRect().height}))'))
         page.goto(base+'/app/?event=not-a-real-event')
         expect(page.locator('#load-status')).to_contain_text('requested event was not found')
