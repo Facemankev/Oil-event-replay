@@ -21,17 +21,6 @@ else:
     threading.Thread(target=server.serve_forever,daemon=True).start()
     base=f'http://127.0.0.1:{server.server_port}/review'
 results=[]
-if args.base_url:
-    import urllib.request
-    try:
-        with urllib.request.urlopen(base+'/app/preview-build.json',timeout=30) as response:manifest=json.load(response)
-    except urllib.error.HTTPError as error:
-        print('DEPLOYED HTTP FAILURE',error.code,'headers',dict(error.headers),'body',error.read(1200).decode('utf-8','replace'))
-        raise
-    for name,expected in manifest['files'].items():
-        assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==expected,('Deployed source differs from checkout',name)
-    assert 'app/home.mjs' in manifest['files'] and 'trading/core.mjs' in manifest['files']
-
 with sync_playwright() as p:
     engine=getattr(p,args.browser)
     browser=engine.launch(**({'executable_path':'/usr/bin/chromium','args':['--no-sandbox']} if args.browser=='chromium' else {}))
@@ -40,6 +29,18 @@ with sync_playwright() as p:
         # Chromium's mobile context can use the same viewport/touch settings.
         context=browser.new_context(**options)
         page=context.new_page();errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+        if args.base_url:
+            # Check the public deployment using the real browser engine under test.
+            # Cloudflare's browser-integrity gate rejects Python urllib (1010).
+            response=page.goto(base+'/app/preview-build.json')
+            assert response and response.ok,('Public deployment unavailable in browser',response.status if response else None)
+            manifest=response.json()
+            required={'app/home.mjs','app/nav.mjs','app/context.mjs','matching/view.mjs','world_events/view.mjs','trading/app.mjs','trading/core.mjs','paper.html'}
+            assert required.issubset(manifest['files'])
+            for filename,expected in manifest['files'].items():
+                source=(ROOT/filename).resolve()
+                assert source.is_relative_to(ROOT), 'Unsafe manifest path'
+                assert hashlib.sha256(source.read_bytes()).hexdigest()==expected,('Deployed source differs from checkout',filename)
         page.goto(base+'/index.html')
         page.get_by_role('navigation').get_by_role('link',name='Application home',exact=True).click()
         expect(page.locator('#event')).to_have_value('harvey-2017-texas')
@@ -124,7 +125,7 @@ with sync_playwright() as p:
     context=browser.new_context();page=context.new_page()
     page.route('**/gbp-usd-brexit-source.csv',lambda r:r.fulfill(status=503,body='unavailable'))
     page.goto(base+'/paper.html');expect(page.locator('#message')).to_contain_text('Cannot start')
-    expect(page.locator('#start')).to_be_disabled();context.close()
+    expect(page.locator('#start')).to_be_disabled();expect(page.locator('#backup')).to_be_disabled();expect(page.locator('#reset')).to_be_disabled();context.close()
     browser.close()
 if server:server.shutdown()
 out=ROOT/'work/application';out.mkdir(parents=True,exist_ok=True)

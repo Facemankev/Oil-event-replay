@@ -99,6 +99,7 @@ try{
  Object.entries(impacts).forEach(([key,label])=>$('impact').append(new Option(label,key)));$('impact').value='mixed';
  Object.entries(categories).forEach(([k,v])=>$('category').append(new Option(v,k)));mechanismOptions();$('mechanism').value='landfall';
  catalog.events.forEach(e=>$('example').append(new Option(e.title,e.id)));
+ $('query').querySelector('button').disabled=false;
  const today=new Date().toISOString().slice(0,10);$('occurred').value=today;$('public').value=today;
  $('category').addEventListener('change',()=>{mechanismOptions();$('example').value='';$('wind').value='';$('wind-control').hidden=$('category').value!=='weather';$('impact').value='unknown';});
  $('example').addEventListener('change',()=>{const e=catalog.events.find(e=>e.id===$('example').value);if(!e)return;$('title').value=e.title;$('category').value=e.category;mechanismOptions();$('mechanism').value=e.features.mechanism||'';$('location').value=e.geography;$('wind').value=e.features.severity?.value??'';$('wind-control').hidden=e.category!=='weather';$('impact').value=e.features.impact||'unknown';$('occurred').value=e.occurred.date;$('public').value=e.reactions.anchor||e.occurred.date;render();});
