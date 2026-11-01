@@ -113,10 +113,13 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 
-- **Dad:** MAT-4 / PRC-1 / WEB-2: Issue #23 two-screen ripple/decision slice,
-  on a separate branch based on PR #22. Align chart and paper prices, retain
-  observed-only history and log justified replay review prompts. Existing
-  research stays optional. PR #19, canonical prices and parents remain unchanged.
+- **Dad:** MAT-4 / PRC-1 / WEB-2: Issue #23 is in [draft PR #24](https://github.com/Facemankev/Oil-event-replay/pull/24),
+  stacked on #22. Two-screen ripples, same-price dated GBP chart and explicit
+  paper entry/exit reviews. [Private preview](https://market-ripple-ripples-review.g86hz2pjsh.chatgpt.site/ripple/)
+  is published. 38 Python/46 Node and Chromium/WebKit flows passed. Next:
+  Brendan review, physical iPhone acceptance and explicit new-preview public
+  access approval (automatic review blocked that audience change). No merges;
+  parent applications, PR #19 and original prices are unchanged.
 - **Brendan:** chose the house style, "Gold × Desk", from eight previews, and
   wrote it down as the `market-ripple-design` skill (BRD-2, decision 13), sent
   to Dad (`brendan/brd-2-design-system`). Next: review PR #2.

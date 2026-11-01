@@ -18,8 +18,8 @@ known-at snapshot, horizon/exit rules, and chronological suggestion decisions/
 outcomes. Evaluate at each available replay observation, never future prices.
 No automatic sell-day claim, brokerage or source-price corrections.
 
-**Unfinished:** implement and test, public preview, draft PR; physical iPhone
-Safari unavailable here and must be explicitly recorded as outstanding.
+**Unfinished:** Brendan review, physical iPhone Safari acceptance and explicit
+new-preview public-access approval.
 
 **For Brendan:** inspect temporal guards, same-price chart/fills, honest weak
 cohorts, ripple labels and visible complexity.
@@ -48,3 +48,23 @@ public access, stating Issue #23 does not explicitly authorise changing the new
 site's audience. Owner-private publication is the safer fallback; no access
 workaround or change to earlier public preview sites is made. Unauthenticated
 new-deployment browser QA remains blocked pending that access decision.
+
+[Draft PR #24](https://github.com/Facemankev/Oil-event-replay/pull/24) is based
+on #22; Brendan is requested as reviewer. The [private preview](https://market-ripple-ripples-review.g86hz2pjsh.chatgpt.site/ripple/)
+published successfully as Sites version 1, preserving owner-only access.
+67 packaged executable/data/style fingerprints match the tested source.
+No authenticated deployed-browser visit is claimed; public access was blocked
+by automatic approval review, not silently worked around.
+
+[CI run 41350485770](https://github.com/Facemankev/Oil-event-replay/actions/runs/41350485770)
+passed 38 Python and 46 Node tests, all existing browser regressions, the original
+application in Chromium/WebKit, and the new two-screen flow in Chromium/WebKit
+desktop/iPhone profiles. Screenshots/reports are Actions artifacts. No physical
+phone or PC was used. Source preservation checks confirm main, #22/#20/#16,
+#19 and #2 heads and original prices/engines/tokens are unchanged.
+
+The working example is a manual £5 virtual entry on 28 August at £40.126632
+GBP reference, Hold through four steps, and Review Sell on 5 September under
+the user's frozen five-step horizon. It does not execute automatically or infer
+a supported historical reversal. Optional explicit close gives about £50.14
+virtual cash. All production comparison support remains Limited/No Action.

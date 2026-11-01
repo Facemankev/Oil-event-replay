@@ -13,7 +13,6 @@ history).
 
 ## Doing
 
-- [ ] MAT-4 / PRC-1 / WEB-2: Two-screen event ripples, aligned dated paper chart and evidence/exit reviews ([Issue #23](https://github.com/Facemankev/Oil-event-replay/issues/23)) — **Dad** — 2026-11-01
 
 
 
@@ -40,6 +39,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] MAT-4 / PRC-1 / WEB-2: Two-screen ripple/decision replay ([draft PR #24](https://github.com/Facemankev/Oil-event-replay/pull/24), stacked on #22; [Issue #23](https://github.com/Facemankev/Oil-event-replay/issues/23)); [private preview](https://market-ripple-ripples-review.g86hz2pjsh.chatgpt.site/ripple/), 38 Python/46 Node plus Chromium/WebKit passed. Physical Safari and public-access approval outstanding — **Dad** — 2026-11-01
 
 - [ ] WEB-2 / MAT-3 / PRC-1: Connected application ([draft PR #22](https://github.com/Facemankev/Oil-event-replay/pull/22), stacked on #20/#16; [Issue #21](https://github.com/Facemankev/Oil-event-replay/issues/21)); [public preview](https://market-ripple-app-review.g86hz2pjsh.chatgpt.site/app/), Chromium/WebKit local and deployed flows passed; physical iPhone acceptance outstanding — **Dad** — 2026-10-30
 
