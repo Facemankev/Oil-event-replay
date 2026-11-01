@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "fx": {
+    "publisher": "Federal Reserve DEXUSUK via datasets/exchange-rates",
+    "unit": "GBP per USD",
+    "commit": "c28e171e36a46bd2941cf66156acd8efaf9906f5",
+    "url": "https://raw.githubusercontent.com/datasets/exchange-rates/c28e171e36a46bd2941cf66156acd8efaf9906f5/data/daily.csv",
+    "upstream_sha256": "5f82c543467ae6398e766fb110fe57abe446b95c4ad13b2eaca8954911c6259d",
+    "preparation_url": "https://github.com/datasets/exchange-rates/blob/c28e171e36a46bd2941cf66156acd8efaf9906f5/exchange_rates_flow.py",
+    "preparation_sha256": "3540d45881ca8e8d7ac0be15682b8cd75cf8c59a130e9142d644f660eb79bd0e",
+    "checked_on": "2026-11-01",
+    "method": "Exact United Kingdom rows, 2017-08-14 to 2017-09-29. Upstream inverts DEXUSUK; these rounded values are GBP per USD. No interpolation. Secondary source, not independently reconciled to the primary H.10 feed.",
+    "reuse": "datasets preparation PDDL; Federal Reserve public-domain data with attribution. Existing data/SOURCES.md records the same source family."
+  },
+  "context": [
+    {
+      "id": "eia-harvey-exposure-2017",
+      "publisher": "U.S. Energy Information Administration",
+      "url": "https://www.eia.gov/TodayinEnergy/detail.php?id=32652",
+      "published_day": "2017-08-25",
+      "available_from": "2017-08-26",
+      "precision": "day",
+      "checked_on": "2026-11-01",
+      "summary": "The pre-landfall article identifies Gulf production and Texas refining exposure and notes precautionary production shutdowns. It does not establish the subsequent price effect.",
+      "locator": "Dated article, paragraphs describing regional oil production, refining and precautionary shutdowns",
+      "kind": "primary_article_curated_card_not_archived_page"
+    }
+  ],
+  "updates": [
+    {
+      "id": "eia-harvey-refinery-update-2017",
+      "publisher": "U.S. Energy Information Administration",
+      "url": "https://www.eia.gov/todayinEnergy/detail.php?id=32852",
+      "published_day": "2017-09-11",
+      "available_from": "2017-09-12",
+      "precision": "day",
+      "checked_on": "2026-11-01",
+      "summary": "EIA reports lower Gulf refinery inputs and fuel-supply disruption after Harvey. Reduced refinery inputs add a crude-demand risk to a simple supply-disruption thesis; they do not prove a future Brent fall.",
+      "locator": "Dated article, refinery inputs and operations paragraphs; weekly period ending September 1 is not the publication date",
+      "kind": "primary_article_curated_card_not_archived_page"
+    }
+  ],
+  "ripple_paths": [
+    {
+      "id": "production",
+      "stages": [
+        "Production may stop",
+        "Crude could tighten",
+        "Buyer costs may rise"
+      ],
+      "basis": "EIA documents regional production exposure; the downstream direction and business effects are hypotheses, not measured correlations.",
+      "source_id": "eia-harvey-exposure-2017",
+      "classification": "hypothesis"
+    },
+    {
+      "id": "refining",
+      "stages": [
+        "Refining may slow",
+        "Crude and fuel may diverge",
+        "Transport costs may rise"
+      ],
+      "basis": "EIA documents refining exposure; opposing crude/fuel channels and downstream margins remain hypotheses. No airline, transport or insurance prices are supplied.",
+      "source_id": "eia-harvey-exposure-2017",
+      "classification": "hypothesis"
+    }
+  ],
+  "timing_note": "Article clocks are unestablished: expose each only from the next UTC date. The curated card-file hash is not an archived-page hash. Later weekly findings are never backdated to their measurement period."
+}

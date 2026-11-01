@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] MAT-4 / PRC-1 / WEB-2: Two-screen event ripples, aligned dated paper chart and evidence/exit reviews ([Issue #23](https://github.com/Facemankev/Oil-event-replay/issues/23)) — **Dad** — 2026-11-01
+
 
 
 ## To do
