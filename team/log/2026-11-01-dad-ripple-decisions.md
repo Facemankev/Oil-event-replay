@@ -18,8 +18,7 @@ known-at snapshot, horizon/exit rules, and chronological suggestion decisions/
 outcomes. Evaluate at each available replay observation, never future prices.
 No automatic sell-day claim, brokerage or source-price corrections.
 
-**Unfinished:** Brendan review, physical iPhone Safari acceptance and explicit
-new-preview public-access approval.
+**Unfinished:** Brendan review and physical iPhone Safari acceptance.
 
 **For Brendan:** inspect temporal guards, same-price chart/fills, honest weak
 cohorts, ripple labels and visible complexity.
@@ -68,3 +67,17 @@ GBP reference, Hold through four steps, and Review Sell on 5 September under
 the user's frozen five-step horizon. It does not execute automatically or infer
 a supported historical reversal. Optional explicit close gives about £50.14
 virtual cash. All production comparison support remains Limited/No Action.
+
+## Public preview approval and publication
+
+The owner explicitly authorised public URL access on 1 November, conditional on
+no private information, API keys/credentials or real-money trading. Audited all
+86 static files: no private workspace files or credential patterns; 67 executable/
+data/style hashes match source. The price-provider config is empty, the real-
+trading control is disabled, no proxy/brokerage endpoint is deployed, and practice
+records remain browser-local. Native Sites access update succeeded: public.
+
+The [public preview](https://market-ripple-ripples-review.g86hz2pjsh.chatgpt.site/ripple/)
+uses the same tested software. New CI checks exercise its actual public flow in
+Chromium and WebKit without sign-in. PR #24 remains draft; no merge, original
+price changes or changes to existing preview audiences/parent branches.

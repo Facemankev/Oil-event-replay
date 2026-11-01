@@ -141,8 +141,11 @@ text, focus, native confirmations, sign-in (for a private preview) and Files
 backup save/restore before physical-device acceptance. Automated WebKit/iPhone
 profiles are engine tests, not physical iOS certification.
 
-The new preview was registered separately. Automatic approval review rejected
-public audience because the current issue did not explicitly authorise that change.
-Until approved, private publication is the safe fallback; old public previews
-and their audiences are untouched. New deployed browser QA may require that
-access decision; source/loopback browser tests still run in both engines.
+The owner explicitly approved public URL access on 1 November 2026 after the
+initial private publication. [Open the public preview](https://market-ripple-ripples-review.g86hz2pjsh.chatgpt.site/ripple/)
+without ChatGPT sign-in. The package contains only public research/code/data and
+no private workspace files, credentials or configured quote provider. Practice
+accounts stay browser-local; no real-money or brokerage functionality is enabled.
+CI checks the deployed public flow in Chromium and WebKit against 67 file hashes.
+PR #24 remains draft; existing production, previews and parent/EIA branches are
+unchanged. Physical iPhone acceptance remains outstanding.

@@ -55,6 +55,10 @@ jobs:
           python3 tests/application_browser_test.py --browser webkit
           python3 tests/ripple_browser_test.py
           python3 tests/ripple_browser_test.py --browser webkit
+      - name: Public preview in Chromium and WebKit, without sign-in
+        run: |
+          python3 tests/ripple_browser_test.py --base-url https://market-ripple-ripples-review.g86hz2pjsh.chatgpt.site
+          python3 tests/ripple_browser_test.py --browser webkit --base-url https://market-ripple-ripples-review.g86hz2pjsh.chatgpt.site
       - uses: actions/upload-artifact@v4
         if: always()
         with:

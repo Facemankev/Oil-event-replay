@@ -115,8 +115,8 @@ awaits review. [Automated results and physical-device status](app/VALIDATION.md)
 
 ## Two-screen ripple decisions (Issue #23)
 
-[Open the new replay locally](ripple/) or use the [private review preview](https://market-ripple-ripples-review.g86hz2pjsh.chatgpt.site/ripple/)
-with the same ChatGPT account. [Draft PR #24](https://github.com/Facemankev/Oil-event-replay/pull/24)
+[Open the new replay locally](ripple/) or use the [public review preview](https://market-ripple-ripples-review.g86hz2pjsh.chatgpt.site/ripple/)
+without ChatGPT sign-in. [Draft PR #24](https://github.com/Facemankev/Oil-event-replay/pull/24)
 builds on #22; no merge. Two sourced-context ripple hypotheses, a dated chart
 aligned with virtual fills, and logged evidence/exit-rule reviews. Current weak
 evidence gives No Action for entry; optional manual paper practice is explicit.
