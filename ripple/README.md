@@ -1,6 +1,6 @@
-# Ripple decisions — Issue #23
+# Three answers and historical events — Issue #25
 
-Additive `ripple/` application, based on draft PR #22 (6fe59ff), on #20/#16.
+Additive `ripple/` application, based on draft PR #24 (9a94749), on #22/#20/#16.
 Existing pages, price/event records, matching/cohort engines, trading/core.mjs,
 design tokens and PR #19 are unchanged. No merge or live provider.
 
@@ -23,9 +23,29 @@ existing immutable Brent export and the new pinned FX slice. No price is filled
 or corrected. A fresh build is byte-identical. Previous PR #22 account storage
 is separate; this feature uses market-ripple-ripple-practice-v1.
 
-## Two screens
+## Three answers, optional history, then paper practice
 
-Opportunities shows one genuine Harvey event and two three-stage mechanisms:
+The main card answers **What happened? Likely outcome? Suggested action?**
+in three short rows. This genuine Harvey sample stays **Brent oil: uncertain** /
+**No action**: Limited evidence cannot manufacture a directional prompt.
+One **View historical events** link opens a compact list; one tap on a row opens
+that event's own dated Brent/WTI USD/barrel chart, occurrence/publication timing,
+primary NHC citation, relevance and weaknesses. Back links and browser history
+return to the list/card. The chart window comes from existing observations;
+prices without evidence, conflicting revisions or unavailable values stay missing.
+The full catalog is not a set of independent comparisons; optional **More detail**
+retains the existing non-overlap cohort statistics and methodology.
+
+`history.mjs` reuses the query from `paths.mjs` and the unchanged deterministic
+matcher. It excludes the replay event, future records and weak comparisons.
+No match gives an honest empty state. Chart observations are bounded by the
+replay date; the dataset remains provisional, not an original-vintage backtest.
+No EIA key or PR #19 correction is used. This preview has no live-event input.
+
+Decision/position retains the original GBP chart and accounting model. A manual
+virtual buy is optional; Hold or Review selling appears for an existing position.
+Buy/close require explicit confirmation. Extra controls, statistics, logs, backup
+and mechanisms are closed disclosures by default. The retained ripples are
 production → crude availability → energy buyers; refining → crude demand/fuel
 supply → transport/airline costs. NHC establishes the located landfall bulletin;
 EIA's dated pre-landfall article establishes infrastructure exposure. Downstream
@@ -137,7 +157,7 @@ tamper-proof. Storage denial uses an explicitly labelled exportable memory sessi
    12 September and prompts a new-source risk review, never before publication.
 
 Physical iPhone Safari remains untested here: check actual touch/rotation, enlarged
-text, focus, native confirmations, sign-in (for a private preview) and Files
+text, focus, native confirmations, and Files
 backup save/restore before physical-device acceptance. Automated WebKit/iPhone
 profiles are engine tests, not physical iOS certification.
 
@@ -149,3 +169,23 @@ accounts stay browser-local; no real-money or brokerage functionality is enabled
 CI checks the deployed public flow in Chromium and WebKit against 67 file hashes.
 PR #24 remains draft; existing production, previews and parent/EIA branches are
 unchanged. Physical iPhone acceptance remains outstanding.
+
+
+## Issue #25 review preview and checks
+
+[Open the new public three-step preview](https://market-ripple-three-step-review.g86hz2pjsh.chatgpt.site/ripple/).
+The earlier PR #24 preview stays unchanged. Public research/code only; browser-local
+practice, no credentials, configured live provider or real orders.
+
+```sh
+python3 tests/ripple_history_browser_test.py
+python3 tests/ripple_history_browser_test.py --browser webkit
+# Add --base-url https://market-ripple-three-step-review.g86hz2pjsh.chatgpt.site
+# to either ripple browser script to exercise the exact published package.
+```
+
+New checks cover list/detail/back, both markets, independent dated windows,
+no future/self details, missing/empty data, text rendering, source links, unchanged
+ledger during research, light/dark, 375px portrait and landscape, desktop/iPad.
+The CI workflow uploads screenshots and JSON reports in `three-step-browser-reports`.
+See [Issue #25 validation](VALIDATION-25.md) for results and physical-device limits.

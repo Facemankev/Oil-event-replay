@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-11-01 by Dad (ripple decisions)
+Last updated: 2026-11-10 by Dad (three-step event review)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -110,6 +110,8 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Isolated Gold × Desk visual preview | BRD-2 | Done | Dad | Approved PR #15; public preview, original design preserved |
 
 ## 5. Now
+
+- **Dad / WEB-2 / MAT-4:** Issue #25 in progress on `dad/web-2-three-step-events`, based on draft #24. Simplify the opportunity card to three answers, add a sourced historical list/detail drilldown, preserve evidence gates and paper ledger. Separate public preview and browser checks; no merges or price corrections.
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 

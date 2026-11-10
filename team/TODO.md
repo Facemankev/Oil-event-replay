@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] WEB-2 / MAT-4 / PRC-1: Three concise opportunity answers and historical event list/detail ([Issue #25](https://github.com/Facemankev/Oil-event-replay/issues/25)), based on draft #24; separate public preview, mobile/desktop checks, no merges — **Dad — Doing** — 2026-11-10
+
 
 
 

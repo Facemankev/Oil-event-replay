@@ -1,46 +1,68 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Market Ripple | Ripples and paper decisions</title>
+<title>Market Ripple | Three answers, then explore</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="../matching/design.css"><link rel="stylesheet" href="style.css"><script type="module" src="ui.mjs"></script></head>
 <body class="mr-page ripple-page"><main class="mr-wrap mr-stack">
 <header class="mr-bar mr-glass"><a class="mr-brand" href="#opportunities"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="3" fill="currentColor"/><circle cx="16" cy="16" r="8" fill="none" stroke="currentColor"/><circle cx="16" cy="16" r="13" fill="none" stroke="currentColor"/></svg>Market Ripple</a><span class="mr-badge">Historical paper replay</span></header>
-<nav class="screen-nav" aria-label="Two-screen application"><a href="#opportunities" class="mr-btn" id="nav-opportunities">Opportunities</a><a href="#decision" class="mr-btn" id="nav-decision">Decision / position</a></nav>
+<nav class="screen-nav" aria-label="Main application"><a href="#opportunities" class="mr-btn" id="nav-opportunities">Opportunities</a><a href="#decision" class="mr-btn" id="nav-decision">Decision / position</a></nav>
 <p id="status" role="status" aria-live="polite">Loading sourced replay data…</p><button id="retry" class="mr-btn" hidden>Retry loading</button><p id="storage" class="small-note" hidden></p>
 <section id="screen-opportunities" class="mr-stack" aria-labelledby="opportunity-title" hidden>
- <h1 id="opportunity-title" class="mr-hero">Follow the <span class="mr-hl">ripple.</span></h1>
- <p id="opportunity-state" class="compact-notice"></p>
- <article class="mr-panel mr-glass mr-stack" aria-labelledby="event-title">
-  <div class="card-heading"><h2 id="event-title">Harvey reaches Texas</h2><span class="mr-badge">Limited evidence</span></div>
-  <p>Production and refining disruption can pull crude prices in opposite directions.</p>
-  <p id="freshness" class="small-note"></p><p class="market-label">Brent and WTI exposure · mixed direction hypothesis</p>
-  <a href="#decision" class="mr-btn mr-btn-primary main-action">See price and paper decision</a>
-  <div id="ripples" class="mr-stack" aria-label="Possible market ripple pathways"></div>
-  <p class="small-note">Storm/exposure sourced; downstream arrows are hypotheses. Only Brent is priced.</p>
-  <details class="mr-disclosure"><summary>Why? See the evidence</summary><div id="opportunity-evidence" class="evidence-body"></div></details>
+ <div class="card-heading"><h1 id="opportunity-title" class="mr-hero">Spot the <span class="mr-hl">ripple.</span></h1><span id="freshness" class="small-note"></span></div>
+ <article class="mr-panel mr-glass opportunity-card" aria-label="Opportunity: three answers">
+  <dl class="three-answers">
+   <div><dt>What happened?</dt><dd id="event-title">Harvey reaches Texas</dd></div>
+   <div><dt>Likely outcome?</dt><dd id="likely-outcome">Brent oil: uncertain</dd></div>
+   <div><dt>Suggested action?</dt><dd><a href="#decision" id="suggested-action" class="mr-btn mr-btn-primary main-action">No action</a></dd></div>
+  </dl>
+  <a href="#history" class="secondary-link" id="view-history">View historical events <span aria-hidden="true">→</span></a>
+  <p id="opportunity-state" class="small-note" role="note">Limited evidence · provisional prices · paper replay, not a prediction.</p>
  </article>
+</section>
+<section id="screen-history" class="mr-stack" aria-labelledby="history-title" hidden>
+ <a href="#opportunities" class="back-link">← Back to opportunity</a>
+ <div><h1 id="history-title" class="mr-hero">Historical events</h1><p id="history-count" class="small-note"></p></div>
+ <ul id="history-list" class="history-list"></ul><p id="history-empty" class="compact-notice" hidden>No comparable historical events are available on this replay date. No pattern can be inferred.</p>
+ <details class="mr-panel mr-glass"><summary>More detail</summary><div id="history-evidence" class="evidence-body"></div></details>
+</section>
+<section id="screen-event" class="mr-stack" aria-labelledby="history-event-title" hidden>
+ <div class="action-row"><a href="#history" class="back-link">← Historical events</a><a href="#opportunities" class="back-link">Back to opportunity</a></div>
+ <h1 id="history-event-title" class="mr-hero" tabindex="-1">Historical event</h1>
+ <p id="event-unavailable" class="compact-notice" hidden>This event is not a comparable public record on the replay date. Choose from the historical list.</p>
+ <div id="event-content" class="mr-stack">
+  <p id="history-event-description"></p><p id="history-event-timing" class="small-note"></p>
+  <div id="history-event-source" class="source-links"></div>
+  <section class="mr-panel mr-glass mr-chart-card mr-stack" aria-labelledby="history-chart-title">
+   <div class="card-heading"><h2 id="history-chart-title">Historical reaction</h2><nav class="market-switch" aria-label="Historical chart market"><a id="history-brent" class="mr-btn">Brent</a><a id="history-wti" class="mr-btn">WTI</a></nav></div>
+   <svg id="history-chart" class="mr-chart" role="img" aria-label="Historical prices"></svg>
+   <p class="small-note">USD per barrel · provisional source · observed history, not a prediction or your GBP paper price.</p>
+   <details class="mr-disclosure"><summary>Prices and sources</summary><div class="table-scroll"><table class="mr-table"><thead><tr><th>Date</th><th>USD per barrel</th></tr></thead><tbody id="history-price-rows"></tbody></table></div><div id="history-price-sources" class="evidence-body"></div></details>
+  </section>
+  <section class="mr-panel mr-glass mr-stack"><h2>Why compare these?</h2><ul id="history-reasons"></ul><h2>Where it is weak</h2><ul id="history-gaps"></ul><p class="small-note">Other forces moved prices too. These events are context, not independent trials or odds of a repeat.</p></section>
+  <details class="mr-panel mr-glass"><summary>More detail</summary><div id="history-event-method" class="evidence-body"></div></details>
+ </div>
 </section>
 <section id="screen-decision" class="mr-stack" aria-labelledby="decision-title" hidden>
  <div><h1 id="decision-title" class="mr-hero">Brent paper decision</h1><p id="replay-date" class="replay-clock"></p></div>
  <div class="mr-figures two-figures"><div class="mr-tile mr-glass"><span class="mr-label">GBP reference price</span><strong id="price" class="mr-figure"></strong><span class="mr-meta">Per virtual Brent reference unit</span></div><div class="mr-tile mr-glass"><span class="mr-label" id="value-label">Virtual cash</span><strong id="position-value" class="mr-figure"></strong><span id="cash" class="mr-meta"></span></div></div>
  <section class="mr-panel mr-glass mr-chart-card mr-stack" aria-labelledby="chart-title"><h2 id="chart-title">The price you practise with</h2>
   <svg id="price-chart" class="mr-chart" role="img" aria-label="Loading observed GBP Brent reference prices"></svg>
-  <p class="small-note">Outlined point: entry. Teal point: replay price.</p>
-  <label class="small-note" for="inspect">Inspect a known observation</label><input id="inspect" type="range" min="0" value="0" aria-label="Inspect a known price observation"><output id="inspection" for="inspect"></output>
+  <p class="small-note">Outlined: your entry · teal: replay price · GBP per virtual unit.</p>
+  <details class="mr-disclosure"><summary>Inspect prices and sources</summary><label class="small-note" for="inspect">Inspect a known observation</label><input id="inspect" type="range" min="0" value="0" aria-label="Inspect a known price observation"><output id="inspection" for="inspect"></output>
   <p class="mr-caption">Same GBP reference as your fill. Known prices only; missing days omitted.</p>
-  <div class="action-row"><button id="next" class="mr-btn" disabled>Next priced day</button><span id="next-note" class="small-note"></span></div>
-  <p class="small-note">Provisional EIA-derived Brent × Fed FX. Day-end availability assumed; original publication times unknown. More below.</p>
+  </details><div class="action-row"><button id="next" class="mr-btn" disabled>Next priced day</button><span id="next-note" class="small-note"></span></div>
+  <p class="small-note">Provisional Brent × sourced FX. Historical simulation only.</p>
   <details class="mr-disclosure"><summary>Show these prices and sources</summary><div class="table-scroll"><table class="mr-table"><thead><tr><th>Date</th><th>Brent USD</th><th>GBP per USD</th><th>GBP reference</th></tr></thead><tbody id="price-rows"></tbody></table></div><div id="price-sources"></div></details>
  </section>
  <section class="mr-panel mr-glass mr-stack" aria-labelledby="action-title"><div class="card-heading"><h2 id="action-title">No Action</h2><span class="mr-badge" id="action-evidence">Limited evidence</span></div>
-  <p id="action-reason" aria-live="polite"></p><p id="action-risk" class="small-note"></p><p id="position-summary"></p>
-  <div class="action-row"><button id="accept-hold" class="mr-btn" hidden>Keep holding in paper practice</button><button id="dismiss" class="mr-btn" disabled>Dismiss this review</button></div><p id="review-response" class="small-note"></p>
-  <div id="entry-controls" class="mr-stack"><label for="amount">Virtual allocation (£)</label><input id="amount" type="number" min="1" max="50" step="0.01" value="5">
+  <p id="action-reason" aria-live="polite"></p><p id="position-summary" class="small-note"></p>
+  <div class="action-row"><button id="accept-hold" class="mr-btn mr-btn-primary" hidden>Hold virtual position</button><span id="primary-sell"></span></div><p id="review-response" class="small-note"></p>
+  <details id="manual-practice" class="mr-disclosure"><summary>Try a virtual buy (your choice)</summary><p class="small-note">No supported buy signal. Manual practice only; zero fees, spread and slippage assumed.</p><div id="entry-controls" class="mr-stack"><label for="amount">Virtual allocation (£)</label><input id="amount" type="number" min="1" max="50" step="0.01" value="5">
    <details class="mr-disclosure"><summary>Paper exit plan</summary><div class="plan-fields"><label>Review after <select id="horizon"><option value="1">1 priced step</option><option value="3">3 priced steps</option><option value="5" selected>5 priced steps</option><option value="10">10 priced steps</option><option value="20">20 priced steps</option></select></label><label>Loss review (%) <input id="loss" type="number" min="1" max="50" value="3"></label><label>Gain review (%) <input id="profit" type="number" min="1" max="100" value="5"></label></div><p class="small-note">Saved at entry. These trigger a review, not an automatic exit or guaranteed loss limit. Daily gaps can pass a threshold. Fees, spread and slippage are assumed zero.</p></details>
    <button id="buy" class="mr-btn mr-btn-primary" disabled>Try a £5 virtual buy</button>
   </div>
-  <button id="sell" class="mr-btn" hidden disabled>Sell virtual position</button>
-  <details class="mr-disclosure"><summary>More evidence, less guesswork</summary><div id="decision-evidence" class="evidence-body"></div></details>
+  </details><details id="other-actions" class="mr-disclosure"><summary>Other paper controls</summary><div class="action-row"><span id="manual-sell"><button id="sell" class="mr-btn mr-btn-primary" hidden disabled>Review virtual sale</button></span><button id="dismiss" class="mr-btn" disabled>Dismiss this review</button></div></details>
+  <details class="mr-disclosure"><summary>More detail</summary><p id="review-explanation"></p><p id="action-risk" class="small-note"></p><div id="ripples" class="mr-stack" aria-label="Possible market ripple pathways"></div><p class="small-note">Storm/exposure sourced; downstream arrows are hypotheses. Only Brent is priced for practice.</p><div id="decision-evidence" class="evidence-body"></div></details>
  </section>
  <details class="mr-panel mr-glass"><summary>Review log and paper outcomes</summary><p class="small-note">Recorded on replay observations, not continuously monitored. Browser timestamps differ from simulated dates. Outcomes appear only after a later explicit virtual close.</p><div class="table-scroll"><table class="mr-table"><thead><tr><th>Replay date</th><th>Review and reason</th><th>Your response</th><th>Later observed outcome</th></tr></thead><tbody id="review-log"></tbody></table></div></details>
  <details class="mr-panel mr-glass"><summary>Keep or reset this practice</summary><div class="backup-controls"><button id="backup" class="mr-btn" disabled>Export practice backup</button><label>Restore this replay’s backup <input id="restore" type="file" accept="application/json,.json"></label><button id="reset" class="mr-btn" disabled>Reset this paper replay</button></div><p class="small-note">Browser-local, separate from the earlier paper account. Backups can be edited and are not a tamper-proof audit. A changed or invalid saved record is preserved until you explicitly reset or replace it.</p></details>
