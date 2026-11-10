@@ -111,7 +111,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 ## 5. Now
 
-- **Dad / WEB-2 / MAT-4:** Issue #25 in progress on `dad/web-2-three-step-events`, based on draft #24. Simplify the opportunity card to three answers, add a sourced historical list/detail drilldown, preserve evidence gates and paper ledger. Separate public preview and browser checks; no merges or price corrections.
+- **Dad / WEB-2 / MAT-4:** Issue #25 implemented in [draft PR #26](https://github.com/Facemankev/Oil-event-replay/pull/26), based on #24. Three concise answers and sourced historical list/detail; evidence gates, ripples and ledger preserved. [Public preview](https://market-ripple-three-step-review.g86hz2pjsh.chatgpt.site/ripple/) published; local 38 Python/51 JavaScript and Chromium checks passed. Full CI linked in PR; Brendan review and physical Safari acceptance remain. No merges or price corrections.
 
 What each of us is on this week. Keep it short. Details live in `TODO.md`.
 

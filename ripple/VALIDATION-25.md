@@ -28,8 +28,8 @@ python3 tests/ripple_history_browser_test.py
 # Repeat both with --browser webkit; add --base-url <preview origin> for deployment.
 ```
 
-Local: 38 Python tests passed. All seven Node files passed (five new history
-unit cases in addition to the existing suite). Chromium desktop/iPhone paper
+Local: 38 Python and 51 JavaScript tests passed across seven Node files (five new
+history unit cases in addition to the existing suite). Chromium desktop/iPhone paper
 flow and desktop/iPhone/iPad list/detail tests passed, with light/dark screenshots.
 Portrait 375px, landscape, 44px targets, no page overflow; memory-only storage,
 failed-load retry, backup tamper, no-match, unavailable prices and unsafe text checked.
@@ -37,7 +37,14 @@ failed-load retry, backup tamper, no-match, unavailable prices and unsafe text c
 WebKit cannot be downloaded in this environment: the network policy returned
 403 Domain forbidden for the official Playwright CDN. The new PR workflow runs
 Chromium and WebKit, all earlier browser regressions and the exact public package.
-CI/deployed results will be recorded after the run; no local WebKit pass claimed.
+[Draft PR #26 checks](https://github.com/Facemankev/Oil-event-replay/pull/26/checks)
+contain the full CI and deployed results. No local WebKit pass is claimed.
+The [first CI run](https://github.com/Facemankev/Oil-event-replay/actions/runs/42784024225)
+passed 38 Python / 51 JavaScript tests, repeatable database imports, preservation
+checks and **all earlier browser regressions plus the paper flow in both engines**.
+It exposed a test race on return from event detail: a synchronous measurement
+ran before the hash view became visible. Explicit visible-view waits fix the
+harness without weakening assertions. The full workflow is repeated on the fix.
 
 Screenshots: workflow artifact `three-step-browser-reports`, or local
 `work/three-step/<engine>/<local|deployed>/` and `work/ripple/`.
@@ -59,3 +66,18 @@ backtest. Only Brent has GBP virtual fills; WTI is historical research only.
 No physical iPhone, iPad or desktop device testing claimed. Remaining human checks:
 actual Safari touch/rotation, large text/VoiceOver, native confirmations and Files
 backup export/restore. This is a historical replay, not live monitoring or trading.
+
+
+## Public package and review
+
+Native Sites publication succeeded on the separate public project. The static
+package contains 88 public files with 73 executable/data/style fingerprints;
+CI compares those fingerprints with its checkout before testing the public flow.
+No configured price provider, credentials, private workspace files or account
+backups are shipped. Browser-local accounts are separate from the older app.
+The Site's own source Git/archive provenance is retained by the hosting service;
+the separate draft targets PR #24 and does not change its branch or preview.
+
+At handoff, Brendan is requested on [draft PR #26](https://github.com/Facemankev/Oil-event-replay/pull/26).
+Original source hashes and remote main/#24/#22/#19 heads were checked unchanged.
+For final CI status and downloadable screenshots use the PR Checks link above.

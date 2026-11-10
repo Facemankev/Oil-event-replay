@@ -50,7 +50,8 @@ with sync_playwright() as p:
             page.emulate_media(color_scheme=theme);assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
             page.screenshot(path=str(out/f'{profile}-{theme}-list.png'),full_page=True)
         for index in range(2):
-            link=page.locator('#history-list a').nth(index);assert link.bounding_box()['height']>=44
+            link=page.locator('#history-list a').nth(index);expect(link).to_be_visible()
+            assert link.bounding_box()['height']>=44
             link.click();expect(page.locator('#history-event-title')).to_have_text(titles[index])
             expect(page.locator('#history-chart')).to_have_attribute('data-market','brent')
             brent=json.loads(page.locator('#history-chart').get_attribute('data-observed-dates'));dates.append(brent)
@@ -62,10 +63,11 @@ with sync_playwright() as p:
             for theme in ['light','dark']:
                 page.emulate_media(color_scheme=theme)
                 assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
-                for selector in ['#history-brent','#history-wti','#screen-event .back-link']:
+                for selector in ['#history-brent','#history-wti','#screen-event .back-link','#history-event-source a']:
                     assert page.locator(selector).first.bounding_box()['height']>=44
                 if index==0:page.screenshot(path=str(out/f'{profile}-{theme}-detail.png'),full_page=True)
             page.locator('#screen-event a[href="#history"]').click()
+            expect(page.locator('#screen-history')).to_be_visible()
         assert dates[0]!=dates[1]  # Separate event observations, not one reused chart.
         page.go_back();expect(page.locator('#screen-event')).to_be_visible()
         page.go_forward();expect(page.locator('#screen-history')).to_be_visible()

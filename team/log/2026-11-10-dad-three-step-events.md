@@ -9,7 +9,7 @@ Reuse the same matcher and account model; simplify the three-answer card and
 add event list/detail routes with sourced Brent/WTI observations. More detail
 stays optional. Preserve the Gold × Desk tokens and existing applications.
 
-**Unfinished:** Implementation, automated mobile/desktop tests and publication.
+**Unfinished:** Final CI on the navigation-wait fix and Brendan review.
 Physical iPhone Safari acceptance will require a person with the device.
 
 **For Brendan:** Review the three-answer flow, evidence labels and event drilldown.
@@ -29,4 +29,23 @@ GitHub Actions will run both browser engines and every previous regression.
 
 A new Site was registered for this specific preview, with identity persisted in
 its separate checkout. Public URL access succeeded under the user's explicit
-request. Earlier Site audiences/previews were not changed. Publication pending.
+request. Earlier Site audiences/previews were not changed. Native publication succeeded.
+
+
+[Draft PR #26](https://github.com/Facemankev/Oil-event-replay/pull/26) targets #24;
+Brendan requested, kept draft. [Public preview](https://market-ripple-three-step-review.g86hz2pjsh.chatgpt.site/ripple/)
+is published with 88 static files / 73 fingerprints. Source scan confirms no
+credentials/private workspace or configured live provider. Accounts stay local.
+
+The first CI run passed 38 Python / 51 JavaScript, safe repeated SQLite imports,
+source preservation and every original browser regression, including application
+and paper flow in both Chromium/WebKit. A new drilldown test measured a link before
+the hash back-navigation made its view visible. Added explicit view/link waits;
+no app evidence/ledger semantics or test assertions weakened. Citation and brand
+links also have 44px touch targets. Full CI repeats on this correction; final
+results/screenshots are in PR Checks and the validation report links there.
+
+Remote main remains b7db2d0, #24 9a94749, #22 6fe59ff and #19 fa8f079.
+Original data/model/core/matching/branding and previous public previews are intact.
+Next: Brendan's interface review, then physical iPhone Safari touch/rotation,
+large text/VoiceOver and Files backup acceptance. No merge or live trading.

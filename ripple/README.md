@@ -140,10 +140,12 @@ tamper-proof. Storage denial uses an explicitly labelled exportable memory sessi
 
 ## Acceptance demo
 
-1. Open the new preview. See one Harvey card and two hypothetical ripple paths.
-   Default is No sufficiently supported opportunities; optional evidence is closed.
+1. Open the new preview. Read the three Harvey answers: uncertain / No action.
+   Tap View historical events, then Gustav or Ike, switch Brent/WTI and go back.
+   The two hypothetical ripple pathways remain under Decision → More detail.
 2. Open Decision / position. Replay starts 28 August 2017, GBP reference £40.13.
-   Move the inspector to 14 August: the trade confirmation must STILL use 28 August.
+   Open Inspect prices and sources; inspect 14 August. Trade confirmation must
+   STILL use 28 August. Open Try a virtual buy (your choice).
 3. Confirm a manual £5 virtual buy. Entry reference is exactly 51.87 × 0.7736 =
    £40.126632; virtual cash is £45. The entry marker appears; Hold is shown.
 4. Advance four priced steps: still Hold. The next available step is 5 September,
@@ -160,6 +162,8 @@ Physical iPhone Safari remains untested here: check actual touch/rotation, enlar
 text, focus, native confirmations, and Files
 backup save/restore before physical-device acceptance. Automated WebKit/iPhone
 profiles are engine tests, not physical iOS certification.
+
+## Earlier PR #24 preview (unchanged)
 
 The owner explicitly approved public URL access on 1 November 2026 after the
 initial private publication. [Open the public preview](https://market-ripple-ripples-review.g86hz2pjsh.chatgpt.site/ripple/)
