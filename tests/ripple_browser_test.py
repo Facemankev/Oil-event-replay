@@ -1,4 +1,4 @@
-"""Two-screen historical replay in real browser engines; device profiles are emulation."""
+"""Three-answer historical replay in real browser engines; device profiles are emulation."""
 import argparse, hashlib, json, threading
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -37,27 +37,31 @@ with sync_playwright() as p:
                 path=(ROOT/name).resolve();assert path.is_relative_to(ROOT)
                 assert hashlib.sha256(path.read_bytes()).hexdigest()==checksum,('Deployed source differs',name)
         page.goto(base+'/ripple/')
-        expect(page.locator('#ripples ol')).to_have_count(2)
-        expect(page.locator('#opportunity-state')).to_contain_text('No sufficiently supported opportunities')
+        expect(page.locator('.three-answers dt')).to_have_text(['What happened?','Likely outcome?','Suggested action?'])
+        expect(page.locator('#likely-outcome')).to_have_text('Brent oil: uncertain')
+        expect(page.locator('#suggested-action')).to_have_text('No action')
+        expect(page.locator('#opportunity-state')).to_contain_text('Limited evidence')
         expect(page.locator('#screen-opportunities')).to_be_visible();expect(page.locator('#screen-decision')).not_to_be_visible()
-        assert page.locator('#ripples li').count()==6
-        assert not page.locator('#opportunity-evidence').is_visible()
-        page.locator('#screen-opportunities details summary').click()
-        expect(page.locator('#opportunity-evidence')).to_contain_text('2 non-overlapping five-day')
-        expect(page.locator('#opportunity-evidence')).to_contain_text('1 usable full historical path')
-        assert page.locator('#opportunity-evidence a[href*="32852"]').count()==0
-        page.locator('#screen-opportunities details summary').click()
+        assert not page.locator('#ripples').is_visible()
         page.locator('.main-action').click()
-        expect(page.locator('#action-title')).to_have_text('No Action')
+        expect(page.locator('#action-title')).to_have_text('No action')
+        page.locator('#screen-decision summary',has_text='More detail').click()
+        assert page.locator('#ripples li').count()==6
+        expect(page.locator('#decision-evidence')).to_contain_text('2 non-overlapping five-day')
+        expect(page.locator('#decision-evidence')).to_contain_text('1 usable full historical path')
+        assert page.locator('#decision-evidence a[href*="32852"]').count()==0
+        page.locator('#screen-decision summary',has_text='More detail').click()
         expect(page.locator('#price')).to_have_text('£40.13')
         expect(page.locator('#replay-date')).to_contain_text('28 Aug 2017')
         assert all(d<='2017-08-28' for d in json.loads(page.locator('#price-chart').get_attribute('data-observed-dates')))
+        page.locator('summary',has_text='Inspect prices and sources').click()
         page.locator('#inspect').evaluate("e=>{e.value='0';e.dispatchEvent(new Event('input'))}")
         expect(page.locator('#inspection')).to_contain_text('14 Aug 2017')
         # Inspection of a prior point must not supply the virtual fill.
         def reject(dialog):
             assert '2017-08-28' in dialog.message and '40.126632' in dialog.message
             dialog.dismiss()
+        page.locator('#manual-practice > summary').click()
         page.once('dialog',reject);page.click('#buy')
         expect(page.locator('#position-value')).to_have_text('£50.00')
         page.once('dialog',lambda d:d.accept());page.click('#buy')
@@ -67,10 +71,11 @@ with sync_playwright() as p:
         for index in range(4):
             page.click('#next');expect(page.locator('#action-title')).to_have_text('Hold')
         page.click('#next');expect(page.locator('#replay-date')).to_contain_text('5 Sept 2017')
-        expect(page.locator('#action-title')).to_have_text('Review Sell')
-        expect(page.locator('#action-reason')).to_contain_text('5-step review horizon')
+        expect(page.locator('#action-title')).to_have_text('Review selling')
+        expect(page.locator('#review-explanation')).to_contain_text('5-step review horizon')
         assert '2017-09-04' not in json.loads(page.locator('#price-chart').get_attribute('data-observed-dates'))
         assert page.locator('#decision-evidence a[href*="32852"]').count()==0
+        page.locator('#other-actions > summary').click()
         page.click('#dismiss');expect(page.locator('#dismiss')).to_be_disabled()
         expect(page.locator('#review-response')).to_contain_text('dismissed')
         assert page.locator('#sell').is_visible()
@@ -82,7 +87,7 @@ with sync_playwright() as p:
             page.screenshot(path=str(out/f'{profile}-{theme}-decision.png'),full_page=True)
         page.once('dialog',lambda d:d.accept());page.click('#sell')
         expect(page.locator('#position-value')).to_have_text('£50.14')
-        expect(page.locator('#action-title')).to_have_text('No Action')
+        expect(page.locator('#action-title')).to_have_text('No action')
         page.locator('summary',has_text='Keep or reset this practice').click()
         with page.expect_download() as event:page.click('#backup')
         backup=json.loads(Path(event.value.path()).read_text())
@@ -124,6 +129,7 @@ with sync_playwright() as p:
     context.add_init_script("Object.defineProperty(window,'localStorage',{get(){throw new DOMException('Denied','SecurityError')}})")
     page=context.new_page();page.goto(base+'/ripple/#decision')
     expect(page.locator('#storage')).to_contain_text('memory-only')
+    page.locator('#manual-practice > summary').click()
     page.once('dialog',lambda d:d.accept());page.click('#buy');expect(page.locator('#action-title')).to_have_text('Hold')
     context.close()
     context=browser.new_context();page=context.new_page()

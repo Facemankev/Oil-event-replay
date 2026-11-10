@@ -31,12 +31,16 @@ export function conditionalPaths(paths,phase,ahead=3){
   note:'Fixed exploratory gates: 8 complete non-overlapping paths; primary prices, clocks, severity and point-in-time evidence; IQR ≤5pp, range ≤15pp; consistent chronological halves/leave-one-out medians and ≥75% signed examples. These are not calibrated odds.'};
 }
 
-export function evidenceAt(data,catalog,cursor){
+export function matchingQueryAt(data,catalog,cursor){
  const event=catalog.events.find(e=>e.id===data.event_id);
  if(!event||!event.reactions.anchor||event.reactions.anchor>=nextDay(cursor))throw Error('Event evidence is not available on this replay date');
- const query={title:event.title,category:event.category,market:'brent',occurred:event.occurred.date,publicDate:nextDay(cursor),
+ return {title:event.title,category:event.category,market:'brent',occurred:event.occurred.date,publicDate:nextDay(cursor),
   location:'Gulf of Mexico',mechanism:event.features.mechanism,severity:'',impact:event.features.impact,
   windSpeed:event.features.severity?.value??null,excludeId:event.id};
+}
+
+export function evidenceAt(data,catalog,cursor){
+ const query=matchingQueryAt(data,catalog,cursor),event=catalog.events.find(e=>e.id===data.event_id);
  const matches=rankMatches(query,catalog.events),cohort=summarize(matches,query,20);
  const paths=[];
  for(const id of cohort.included_ids){
