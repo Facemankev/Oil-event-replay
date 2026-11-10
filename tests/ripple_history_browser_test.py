@@ -33,6 +33,8 @@ with sync_playwright() as p:
                 file=(ROOT/name).resolve();assert file.is_relative_to(ROOT)
                 assert hashlib.sha256(file.read_bytes()).hexdigest()==checksum,name
         page.goto(base+'/ripple/')
+        expect(page.locator('#screen-opportunities')).to_be_visible(timeout=20000)
+        expect(page.locator('#view-history')).to_be_visible()
         expect(page.locator('.three-answers dt')).to_have_text(['What happened?','Likely outcome?','Suggested action?'])
         expect(page.locator('#suggested-action')).to_have_text('No action')
         assert page.locator('#view-history').bounding_box()['y']<settings.get('viewport',{}).get('height',844)

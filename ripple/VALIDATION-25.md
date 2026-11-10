@@ -81,3 +81,14 @@ the separate draft targets PR #24 and does not change its branch or preview.
 At handoff, Brendan is requested on [draft PR #26](https://github.com/Facemankev/Oil-event-replay/pull/26).
 Original source hashes and remote main/#24/#22/#19 heads were checked unchanged.
 For final CI status and downloadable screenshots use the PR Checks link above.
+
+
+The [second run](https://github.com/Facemankev/Oil-event-replay/actions/runs/42785602220)
+passed all database/unit/preservation checks, all original browsers, and **both
+Chromium and WebKit new list/detail tests on desktop/iPhone/iPad**, plus both
+engines' public paper-trading flow and exact asset fingerprints. Its public
+history test measured the initial card before data finished loading; an explicit
+visible-screen wait corrects that harness race. No app or price change was needed.
+The final PR workflow repeats on that test-only correction; final status and
+screenshots are linked above. The public Site remains version 2 with the same
+73 application/data/style hashes tested by the second run.
