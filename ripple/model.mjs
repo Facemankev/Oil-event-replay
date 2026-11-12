@@ -1,6 +1,7 @@
 /** Replay-only controller, composed around PR #2's unchanged accounting core. */
 import {newAccount,buy,close,advance,clone,validateQuote} from '../trading/core.mjs';
 import {evidenceAt} from './paths.mjs';
+import {traceDecision,POLICY} from '../intelligence/engine.mjs';
 export const DEFAULT_PLAN=Object.freeze({horizon:5,loss_percent:3,profit_percent:5});
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 const finite=x=>typeof x==='number'&&Number.isFinite(x);
@@ -44,8 +45,9 @@ function assess(state,data,catalog){
  const cursor=state.account.cursor,evidence=evidenceAt(data,catalog,cursor),quote=quoteAt(data,cursor);
  const position=state.account.positions[0],entry=position?state.entries[position.id]:null;
  const dates=data.quotes.map(q=>q.date),elapsed=position?dates.indexOf(cursor)-dates.indexOf(position.entry.date):0;
- const prompt=suggest({evidence,quote,position,entry,elapsed});
- return {evidence,quote,position,entry,elapsed,prompt};
+ const intelligence=traceDecision({data,catalog,cursor,quote,account:state.account,position,entry,elapsed,evidence});
+ const prompt=state.version===1?suggest({evidence,quote,position,entry,elapsed}):intelligence.prompt;
+ return {evidence,quote,position,entry,elapsed,prompt,intelligence};
 }
 export function current(state,data,catalog){return assess(state,data,catalog);}
 function logReview(state,data,catalog,at){
@@ -53,16 +55,18 @@ function logReview(state,data,catalog,at){
  if(!state.suggestions.some(s=>s.id===key))state.suggestions.push({id:key,as_of:state.account.cursor,recorded_at:at,
   position_id:a.position?.id||null,action:a.prompt.action,codes:a.prompt.codes,reason:a.prompt.reason,
   evidence_snapshot:clone(a.evidence),responses:[],outcome:null});
+ if(state.version===2){const review=state.suggestions.find(s=>s.id===key);review.decision_trace=clone(a.intelligence);}
  state.current_review=key;
 }
 const latest=state=>state.suggestions.find(s=>s.id===state.current_review);
 function response(state,choice,op){
  latest(state).responses.push({choice,recorded_at:op.at,as_of:state.account.cursor});
 }
-function initial(data,catalog,at){
+function initial(data,catalog,at,version=2){
  assert(quoteAt(data,data.start),'No starting price and FX');
- const state={version:1,scenario_id:data.scenario_id,data_snapshot:data.snapshot_id,
+ const state={version,scenario_id:data.scenario_id,data_snapshot:data.snapshot_id,
   account:newAccount(50,'historical',data.start),entries:{},suggestions:[],operations:[]};
+ if(version===2)state.policy_version=POLICY.id;
  const operation={kind:'start',at,before:data.start};state.operations.push(operation);logReview(state,data,catalog,at);return state;
 }
 export function newRun(data,catalog,at=new Date().toISOString()){
@@ -76,6 +80,10 @@ export function transact(previous,operation,data,catalog){
  if(op.kind==='buy'){
   assert(!a.position,'One virtual position at a time');
   const plan=validatePlan(op.plan);
+  if(state.version===2){
+   assert(a.intelligence.audit.practicable,'Price/FX evidence failed; no paper entry');
+   assert(op.amount<=a.intelligence.budget.max_allocation_gbp,`Paper risk budget allows at most £${a.intelligence.budget.max_allocation_gbp.toFixed(2)}. Full allocation is at risk; review rules are not guaranteed stops.`);
+  }
   state.account=buy(state.account,'BRENT',op.amount,a.quote,'Manual historical paper experiment; mixed Gulf production/refining hypothesis',Date.parse(op.at));
   const p=state.account.positions[0];
   state.entries[p.id]={event_id:data.event_id,hypothesis:'Gulf production and refining disruption can pull crude prices in opposing directions.',
@@ -83,11 +91,13 @@ export function transact(previous,operation,data,catalog){
    entry_price_usd:a.quote.price,entry_fx:a.quote.gbpPerUnit,entry_price_gbp:gbpQuote(a.quote),exit_criteria:plan,
    evidence_snapshot:clone(a.evidence),source_references:[...a.evidence.source_ids,a.quote.evidence,a.quote.fx.evidence],
    data_snapshot:data.snapshot_id,outcome:null};
+  if(state.version===2)Object.assign(state.entries[p.id],{risk_budget:clone(a.intelligence.budget),entry_thesis:clone(a.intelligence.thesis),decision_trace:clone(a.intelligence)});
   review.linked_entry_id=p.id;response(state,a.prompt.action==='Consider Buy'?'accepted_paper_buy':'manual_entry_despite_no_buy_prompt',op);
  }else if(op.kind==='advance'){
   state.account=advance(state.account,data.quotes.map(q=>q.date));
  }else if(op.kind==='close'){
   assert(a.position,'No open virtual position');
+  if(state.version===2)assert(a.intelligence.audit.practicable&&a.prompt.codes[0]!=='position_instrument_mismatch','Same-instrument quote evidence is required to close');
   state.account=close(state.account,a.position.id,a.quote,Date.parse(op.at));
   response(state,a.prompt.action==='Review Sell'?'accepted_paper_sell':'manual_paper_exit',op);
   const trade=state.account.journal[state.account.journal.length-1];
@@ -103,10 +113,11 @@ export function transact(previous,operation,data,catalog){
  state.operations.push(op);logReview(state,data,catalog,op.at);return state;
 }
 export function restoreRun(raw,data,catalog){
- assert(raw&&raw.version===1&&raw.scenario_id===data.scenario_id&&raw.data_snapshot===data.snapshot_id,'Unsupported backup or changed source snapshot; the saved record is not overwritten');
+ assert(raw&&[1,2].includes(raw.version)&&raw.scenario_id===data.scenario_id&&raw.data_snapshot===data.snapshot_id,'Unsupported backup or changed source snapshot; the saved record is not overwritten');
  assert(Array.isArray(raw.operations)&&raw.operations.length>0&&raw.operations.length<=1000,'Invalid operation ledger');
  const first=raw.operations[0];assert(first.kind==='start'&&first.before===data.start&&Number.isFinite(Date.parse(first.at)),'Invalid starting record');
- let state=initial(data,catalog,first.at);
+ if(raw.version===2)assert(raw.policy_version===POLICY.id,'Unsupported paper decision policy; saved record preserved');
+ let state=initial(data,catalog,first.at,raw.version);
  for(const op of raw.operations.slice(1))state=transact(state,op,data,catalog);
  for(const key of ['account','entries','suggestions','current_review'])assert(JSON.stringify(raw[key])===JSON.stringify(state[key]),'Backup balances, source evidence or review log differ from their reproducible ledger');
  return state;

@@ -17,6 +17,7 @@ history).
 
 
 
+
 ## To do
 
 - [ ] DAT-3: Reconcile Brent/WTI against authenticated primary EIA data; retain discrepancy/revision evidence before extending matching — **Dad** — 2026-10-29
@@ -40,6 +41,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] INT-1: Evidence/condition gates, reproducible paper traces, risk limits and 24-event walk-forward audit ([draft PR #28](https://github.com/Facemankev/Oil-event-replay/pull/28), stacked on #26; [Issue #27](https://github.com/Facemankev/Oil-event-replay/issues/27)). Local 38 Python/63 JavaScript and Chromium passed; CI and Brendan review in PR Checks. UI, canonical data and previews unchanged — **Dad** — 2026-11-12
 
 - [ ] WEB-2 / MAT-4 / PRC-1: Three-answer opportunity card and historical event list/detail ([draft PR #26](https://github.com/Facemankev/Oil-event-replay/pull/26), based on #24; [Issue #25](https://github.com/Facemankev/Oil-event-replay/issues/25)); [public preview](https://market-ripple-three-step-review.g86hz2pjsh.chatgpt.site/ripple/). Local 38 Python/51 JavaScript and Chromium desktop/iPhone/iPad pass; full CI in PR checks. Brendan review and physical Safari acceptance outstanding — **Dad** — 2026-11-10
 
