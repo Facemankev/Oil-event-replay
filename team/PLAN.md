@@ -111,7 +111,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 ## 5. Now
 
-- **Dad / INT-1:** Issue #27 in progress on `dad/int-1-evidence-decisions`, based on draft #26. Improve evidence gates, causal hypothesis traces, chronological comparisons and position-aware paper policy; keep UI and canonical prices unchanged. PR #19 remains a separate held review.
+- **Dad / INT-1:** Issue #27 implemented in [draft PR #28](https://github.com/Facemankev/Oil-event-replay/pull/28), stacked on #26. Auditable evidence/cohorts, paper risk/decisions and 24-event chronological report; 24 abstentions, no predictive-accuracy claim. Local 38 Python/63 JavaScript and Chromium passed; final CI in PR Checks. Brendan review and physical Safari acceptance remain. UI, canonical data, previews and separate PR #19 are unchanged.
 
 - **Dad / WEB-2 / MAT-4:** Issue #25 implemented in [draft PR #26](https://github.com/Facemankev/Oil-event-replay/pull/26), based on #24. Three concise answers and sourced historical list/detail; evidence gates, ripples and ledger preserved. [Public preview](https://market-ripple-three-step-review.g86hz2pjsh.chatgpt.site/ripple/) published; local 38 Python/51 JavaScript and Chromium checks passed. Full CI linked in PR; Brendan review and physical Safari acceptance remain. No merges or price corrections.
 

@@ -9,7 +9,7 @@ conflicts; it does not establish a corrected point-in-time price series. Current
 Harvey sample is 2 five-day cases / 1 full non-overlapping path, so Buy must abstain.
 Build an auditable vertical slice around existing modules, not a new dashboard.
 
-**Unfinished:** Implementation and test/review handoff.
+**Unfinished:** Brendan review and physical Safari acceptance; final automated results linked in PR Checks.
 
 **For Brendan:** Inspect data/time guards, paper risk policy, abstentions and baselines.
 
@@ -44,3 +44,12 @@ the unreviewed feature commit: removed the generated numeric report from source,
 retained a deterministic checksum and local report generation. No personal data
 or credentials were present; guard/settings/allowlist are unchanged. Future save
 commands stop on any failure. No parent branch, preview or canonical data changed.
+
+
+[Draft PR #28](https://github.com/Facemankev/Oil-event-replay/pull/28) targets #26;
+Brendan requested. Local full suite is 38 Python / 63 JavaScript, with Chromium
+original and INT-1 paper flows passed. CI repeats all database/import/source checks,
+original browser regressions, the three-answer historical drilldown and INT-1
+risk-cap/trace/legacy-restore flows in Chromium/WebKit. Results/screenshots are
+in PR Checks (`intelligence-browser-reports`). The approved previews remain intact;
+run the branch with the documented static server for the new backend policy.
