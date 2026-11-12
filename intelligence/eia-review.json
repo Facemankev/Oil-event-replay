@@ -1,0 +1,62 @@
+{
+  "status": "held_for_source_resolution",
+  "review_pr": "https://github.com/Facemankev/Oil-event-replay/pull/19",
+  "review_commit": "fa8f079ba91a18ce9907026d0b97431d16ca1b1b",
+  "review_path": "historical/reconciliation/REVIEW.json",
+  "review_sha256": "c52c35a04a022ebccee0b0580aa9b448e0da8f76f644c88b2a4848b1ba464e67",
+  "raw_primary_snapshot_checked_here": false,
+  "canonical_prices_modified": false,
+  "reported_equal_values": 10348,
+  "reported_api_only_dates": 137,
+  "reported_api_omitted_observations": 17,
+  "confirmed_numeric_gaps_in_disputed_dates": 0,
+  "revision_causes": "Unknown; source conflict is not proof of a revision.",
+  "conflicts": [
+    {
+      "market": "brent",
+      "date": "2016-12-28",
+      "seed": "54.95",
+      "reported_api": "53.93",
+      "official_html": "54.95",
+      "evidence": {
+        "value": "54.95",
+        "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+        "locator": "Week of 2016-12-26, Mon\u2013Fri columns; displayed line 1849",
+        "checked_on": "2026-10-29",
+        "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+      },
+      "action": "retain_seed_pending_source_resolution"
+    },
+    {
+      "market": "brent",
+      "date": "2016-12-29",
+      "seed": "54.97",
+      "reported_api": "54.95",
+      "official_html": "54.97",
+      "evidence": {
+        "value": "54.97",
+        "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+        "locator": "Week of 2016-12-26, Mon\u2013Fri columns; displayed line 1849",
+        "checked_on": "2026-10-29",
+        "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+      },
+      "action": "retain_seed_pending_source_resolution"
+    },
+    {
+      "market": "brent",
+      "date": "2018-04-16",
+      "seed": "72.05",
+      "reported_api": "73.18",
+      "official_html": "72.05",
+      "evidence": {
+        "value": "72.05",
+        "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+        "locator": "Week of 2018-04-16, Mon\u2013Fri columns; displayed line 1930",
+        "checked_on": "2026-10-29",
+        "evidence_kind": "curated_weekly_table_transcription_not_full_page_snapshot"
+      },
+      "action": "retain_seed_pending_source_resolution"
+    }
+  ],
+  "note": "Reported equal counts attributed to retained owner report; no API key or new primary fetch. API-only dates have blank HTML cells, not established numeric gaps. API omissions retain seed observations backed by HTML. Holidays are not inferred."
+}

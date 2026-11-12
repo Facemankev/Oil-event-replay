@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-11-10 by Dad (three-step event review)
+Last updated: 2026-11-12 by Dad (decision evidence)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -110,6 +110,8 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Isolated Gold × Desk visual preview | BRD-2 | Done | Dad | Approved PR #15; public preview, original design preserved |
 
 ## 5. Now
+
+- **Dad / INT-1:** Issue #27 in progress on `dad/int-1-evidence-decisions`, based on draft #26. Improve evidence gates, causal hypothesis traces, chronological comparisons and position-aware paper policy; keep UI and canonical prices unchanged. PR #19 remains a separate held review.
 
 - **Dad / WEB-2 / MAT-4:** Issue #25 implemented in [draft PR #26](https://github.com/Facemankev/Oil-event-replay/pull/26), based on #24. Three concise answers and sourced historical list/detail; evidence gates, ripples and ledger preserved. [Public preview](https://market-ripple-three-step-review.g86hz2pjsh.chatgpt.site/ripple/) published; local 38 Python/51 JavaScript and Chromium checks passed. Full CI linked in PR; Brendan review and physical Safari acceptance remain. No merges or price corrections.
 

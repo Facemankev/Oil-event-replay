@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] INT-1: Reproducible evidence/cohort/decision traces and honest walk-forward evaluation ([Issue #27](https://github.com/Facemankev/Oil-event-replay/issues/27)), based on draft #26; unchanged three-step UI and canonical data — **Dad — Doing** — 2026-11-12
+
 
 
 
