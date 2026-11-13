@@ -18,6 +18,7 @@ history).
 
 
 
+
 ## To do
 
 - [ ] DAT-3: Reconcile Brent/WTI against authenticated primary EIA data; retain discrepancy/revision evidence before extending matching — **Dad** — 2026-10-29
@@ -41,6 +42,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] DAT-4 / INT-1: Primary oil/FX validation and 24-event rerun ([draft PR #30](https://github.com/Facemankev/Oil-event-replay/pull/30), on #28; [Issue #29](https://github.com/Facemankev/Oil-event-replay/issues/29)). All 10,368 prices match current EIA; 5,224 numeric Fed rates; five-observation coverage Brent 18/24, WTI 22/24; Buy 0 / Hold 0 / No Action 24. Local 47 Python/72 JS passed; CI in PR Checks. Proceeded without waiting for Brendan; no merge or canonical/UI changes — **Dad** — 2026-11-13
 
 - [ ] INT-1: Evidence/condition gates, reproducible paper traces, risk limits and 24-event walk-forward audit ([draft PR #28](https://github.com/Facemankev/Oil-event-replay/pull/28), stacked on #26; [Issue #27](https://github.com/Facemankev/Oil-event-replay/issues/27)). Local 38 Python/63 JavaScript and Chromium passed; CI and Brendan review in PR Checks. UI, canonical data and previews unchanged — **Dad** — 2026-11-12
 

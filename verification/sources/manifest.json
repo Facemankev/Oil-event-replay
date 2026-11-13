@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "capture_method": "Primary visible-table transcription via the supported web reader; all weekday rows in the retained range captured. Locators refer to printed dates/week columns; original HTTP bytes not retained.",
+  "captured_at": "2026-11-13T12:04:41.881464+00:00",
+  "original_historical_publication_times_known": false,
+  "sources": {
+    "brent": {
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "file": "verification/sources/eia-brent.csv",
+      "sha256": "fdbbd3af38c301d86dbc1ab43937614aaf7b286823f2794275af27870dcf2a9d",
+      "unit": "USD per barrel",
+      "rows": 5440,
+      "numeric": 5244,
+      "first": "2006-01-02",
+      "last": "2026-11-06",
+      "release_date": null,
+      "vintage": "Current primary publication captured on the stated date; original daily vintage/revision times unknown.",
+      "original_http_sha256": null
+    },
+    "wti": {
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "file": "verification/sources/eia-wti.csv",
+      "sha256": "6db70699cc349e75fb39bf2ca7f9d243493c1bcd8fab21ad316922f0728fdbc6",
+      "unit": "USD per barrel",
+      "rows": 5440,
+      "numeric": 5150,
+      "first": "2006-01-02",
+      "last": "2026-11-06",
+      "release_date": null,
+      "vintage": "Current primary publication captured on the stated date; original daily vintage/revision times unknown.",
+      "original_http_sha256": null
+    },
+    "fx": {
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_uk.htm",
+      "file": "verification/sources/fed-usd-per-gbp.csv",
+      "sha256": "62ccb7da5a918d2c77eab7f7051377586d7e7003ee7897f8d5e1e9214e72e12e",
+      "unit": "USD per GBP",
+      "rows": 5440,
+      "numeric": 5224,
+      "first": "2006-01-02",
+      "last": "2026-11-06",
+      "release_date": "2026-11-09",
+      "vintage": "Current primary publication captured on the stated date; original daily vintage/revision times unknown.",
+      "original_http_sha256": null
+    }
+  },
+  "prior_review": {
+    "url": "https://github.com/Facemankev/Oil-event-replay/blob/fa8f079ba91a18ce9907026d0b97431d16ca1b1b/historical/reconciliation/REVIEW.json",
+    "original_review_sha256": "c52c35a04a022ebccee0b0580aa9b448e0da8f76f644c88b2a4848b1ba464e67",
+    "file": "verification/sources/pr19-claims.csv",
+    "sha256": "4e8ecb5387834660f283e4e4806989abd1f4572555ef99edb950544f44368de5",
+    "rows": 157,
+    "note": "Claims copied from the reviewed summary; this is not the original API response."
+  }
+}
