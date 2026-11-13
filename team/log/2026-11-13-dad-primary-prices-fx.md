@@ -8,7 +8,7 @@ price replacement. Preserve the simple interface and existing previews.
 changes and EIA importer/review code. Primary EIA/Fed tables are accessible through
 the supported web reader; source/vintage/API-payload limitations remain explicit.
 
-**Unfinished:** Primary capture/validation, integration, tests and review handoff.
+**Unfinished:** Original API cause requires its retained sanitized payload; future as-of evidence and physical Safari acceptance. Final CI linked in PR Checks; Brendan review is non-blocking.
 
 **For Brendan:** Review date alignment, reciprocal FX, missing-value handling,
 coverage/abstentions and absence of invented historical availability.
@@ -47,3 +47,12 @@ Local 47 Python / 72 JavaScript tests pass. Original dashboard, simple UI, prici
 and account modules, PR #28 report and prior previews are byte-unchanged. No merge,
 credential request, paid service, live trading or blocked review dependency.
 Next: draft and full CI; handover for Brendan is non-blocking.
+
+
+[Draft PR #30](https://github.com/Facemankev/Oil-event-replay/pull/30) targets #28.
+The implementation and concise handover are complete without waiting for Brendan.
+Full Actions reruns the 47 Python/72 JavaScript suite, unchanged parent report,
+new pinned primary report, original browsers and paper/list/detail flows in
+Chromium/WebKit. Screenshots/reports are in `dat4-browser-reports`; final status is
+in PR Checks. No original snapshot/account policy was migrated, no preview deployed,
+no key requested and no branch merged. Source/provenance limitations remain explicit.

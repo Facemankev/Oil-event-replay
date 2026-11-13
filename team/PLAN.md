@@ -111,7 +111,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 ## 5. Now
 
-- **Dad / DAT-4 / INT-1:** Review #19/#28, resolve what primary publications establish, extend verified GBP/USD coverage and rerun 24 events. Branch `dad/dat-4-primary-prices-fx` on #28; unchanged UI/canonical observations, separate draft and no merge.
+- **Dad / DAT-4 / INT-1:** Implemented [draft PR #30](https://github.com/Facemankev/Oil-event-replay/pull/30) on #28 / Issue #29. Current EIA matches all 10,368 prices; primary FX numeric coverage 5,224. Default complete windows: Brent 18/24, WTI 22/24; Buy 0 / Hold 0 / No Action 24 because original-as-of evidence/qualified analogues remain insufficient. Local 47 Python/72 JS passed; final CI linked in PR Checks. No review wait, canonical/UI/preview overwrite or merge. Original API conflict cause still needs its sanitized payload.
 
 - **Dad / INT-1:** Issue #27 implemented in [draft PR #28](https://github.com/Facemankev/Oil-event-replay/pull/28), stacked on #26. Auditable evidence/cohorts, paper risk/decisions and 24-event chronological report; 24 abstentions, no predictive-accuracy claim. Local 38 Python/63 JavaScript and Chromium passed; final CI in PR Checks. Brendan review and physical Safari acceptance remain. UI, canonical data, previews and separate PR #19 are unchanged.
 
