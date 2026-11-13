@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] DAT-4 / INT-1: Primary oil-price reconciliation, verified GBP/USD coverage and rerun of all 24 events ([Issue #29](https://github.com/Facemankev/Oil-event-replay/issues/29)); separate draft on #28, no canonical overwrite or merge — **Dad — Doing** — 2026-11-13
+
 
 
 

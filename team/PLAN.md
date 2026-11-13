@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-11-12 by Dad (decision evidence)
+Last updated: 2026-11-13 by Dad (primary prices and FX)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -110,6 +110,8 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Isolated Gold × Desk visual preview | BRD-2 | Done | Dad | Approved PR #15; public preview, original design preserved |
 
 ## 5. Now
+
+- **Dad / DAT-4 / INT-1:** Review #19/#28, resolve what primary publications establish, extend verified GBP/USD coverage and rerun 24 events. Branch `dad/dat-4-primary-prices-fx` on #28; unchanged UI/canonical observations, separate draft and no merge.
 
 - **Dad / INT-1:** Issue #27 implemented in [draft PR #28](https://github.com/Facemankev/Oil-event-replay/pull/28), stacked on #26. Auditable evidence/cohorts, paper risk/decisions and 24-event chronological report; 24 abstentions, no predictive-accuracy claim. Local 38 Python/63 JavaScript and Chromium passed; final CI in PR Checks. Brendan review and physical Safari acceptance remain. UI, canonical data, previews and separate PR #19 are unchanged.
 
