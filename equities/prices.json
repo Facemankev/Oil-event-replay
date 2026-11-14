@@ -1,0 +1,603 @@
+{
+  "schema_version": 1,
+  "rows": [
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-06",
+      "open": "191.10",
+      "close": "186.64",
+      "source_id": "table_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-09",
+      "open": "173.07",
+      "close": "178.67",
+      "source_id": "table_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-10",
+      "open": "173.97",
+      "close": "168.89",
+      "source_id": "table_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-11",
+      "open": "172.80",
+      "close": "173.73",
+      "source_id": "table_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-12",
+      "open": "151.01",
+      "close": "166.19",
+      "source_id": "table_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-13",
+      "open": "169.91",
+      "close": "162.85",
+      "source_id": "table_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-06",
+      "open": "191.10",
+      "close": "186.64",
+      "source_id": "cross_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-09",
+      "open": "173.06",
+      "close": "178.67",
+      "source_id": "cross_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-10",
+      "open": "173.97",
+      "close": "168.89",
+      "source_id": "cross_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-11",
+      "open": "172.80",
+      "close": "173.73",
+      "source_id": "cross_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-12",
+      "open": "151.00",
+      "close": "166.19",
+      "source_id": "cross_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "NVDA",
+      "date": "2026-11-13",
+      "open": "169.91",
+      "close": "162.85",
+      "source_id": "cross_NVDA",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-06",
+      "open": "444.43",
+      "close": "449.04",
+      "source_id": "table_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-09",
+      "open": "473.39",
+      "close": "508.58",
+      "source_id": "table_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-10",
+      "open": "502.80",
+      "close": "515.21",
+      "source_id": "table_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-11",
+      "open": "543.08",
+      "close": "552.90",
+      "source_id": "table_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-12",
+      "open": "569.28",
+      "close": "585.30",
+      "source_id": "table_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-13",
+      "open": "566.79",
+      "close": "534.06",
+      "source_id": "table_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-06",
+      "open": "444.43",
+      "close": "449.04",
+      "source_id": "cross_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-09",
+      "open": "473.39",
+      "close": "508.58",
+      "source_id": "cross_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-10",
+      "open": "502.80",
+      "close": "515.21",
+      "source_id": "cross_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-11",
+      "open": "543.08",
+      "close": "552.90",
+      "source_id": "cross_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-12",
+      "open": "569.28",
+      "close": "585.30",
+      "source_id": "cross_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AMD",
+      "date": "2026-11-13",
+      "open": "566.78",
+      "close": "534.06",
+      "source_id": "cross_AMD",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-06",
+      "open": "311.13",
+      "close": "293.69",
+      "source_id": "table_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-09",
+      "open": "305.29",
+      "close": "319.48",
+      "source_id": "table_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-10",
+      "open": "316.71",
+      "close": "331.98",
+      "source_id": "table_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-11",
+      "open": "350.00",
+      "close": "345.22",
+      "source_id": "table_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-12",
+      "open": "356.80",
+      "close": "364.36",
+      "source_id": "table_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-13",
+      "open": "356.54",
+      "close": "347.01",
+      "source_id": "table_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-06",
+      "open": "311.13",
+      "close": "293.69",
+      "source_id": "cross_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-09",
+      "open": "305.29",
+      "close": "319.48",
+      "source_id": "cross_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-10",
+      "open": "316.71",
+      "close": "331.98",
+      "source_id": "cross_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-11",
+      "open": "350.00",
+      "close": "345.22",
+      "source_id": "cross_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-12",
+      "open": "356.80",
+      "close": "364.36",
+      "source_id": "cross_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "AVGO",
+      "date": "2026-11-13",
+      "open": "356.54",
+      "close": "347.01",
+      "source_id": "cross_AVGO",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-06",
+      "open": "525.69",
+      "close": "530.61",
+      "source_id": "table_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-09",
+      "open": "544.49",
+      "close": "545.18",
+      "source_id": "table_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-10",
+      "open": "542.98",
+      "close": "533.16",
+      "source_id": "table_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-11",
+      "open": "534.24",
+      "close": "521.13",
+      "source_id": "table_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-12",
+      "open": "521.10",
+      "close": "523.00",
+      "source_id": "table_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-13",
+      "open": "519.75",
+      "close": "523.88",
+      "source_id": "table_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-06",
+      "open": "525.69",
+      "close": "530.61",
+      "source_id": "cross_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-09",
+      "open": "544.49",
+      "close": "545.18",
+      "source_id": "cross_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-10",
+      "open": "542.98",
+      "close": "533.16",
+      "source_id": "cross_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-11",
+      "open": "534.24",
+      "close": "521.13",
+      "source_id": "cross_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-12",
+      "open": "521.10",
+      "close": "523.00",
+      "source_id": "cross_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "MSFT",
+      "date": "2026-11-13",
+      "open": "519.75",
+      "close": "523.88",
+      "source_id": "cross_MSFT",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-06",
+      "open": "658.35",
+      "close": "656.10",
+      "source_id": "table_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-09",
+      "open": "662.64",
+      "close": "679.35",
+      "source_id": "table_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-10",
+      "open": "672.54",
+      "close": "674.76",
+      "source_id": "table_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-11",
+      "open": "687.28",
+      "close": "690.38",
+      "source_id": "table_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-12",
+      "open": "680.32",
+      "close": "688.17",
+      "source_id": "table_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-13",
+      "open": "688.54",
+      "close": "679.89",
+      "source_id": "table_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-06",
+      "open": "658.35",
+      "close": "656.10",
+      "source_id": "cross_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-09",
+      "open": "662.64",
+      "close": "679.35",
+      "source_id": "cross_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-10",
+      "open": "672.54",
+      "close": "674.76",
+      "source_id": "cross_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-11",
+      "open": "687.28",
+      "close": "690.38",
+      "source_id": "cross_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-12",
+      "open": "680.32",
+      "close": "688.17",
+      "source_id": "cross_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-13",
+      "open": "688.54",
+      "close": "679.89",
+      "source_id": "cross_QQQ",
+      "basis": "displayed_2026_window",
+      "unit": "USD_per_share"
+    },
+    {
+      "symbol": "IXIC",
+      "date": "2026-11-06",
+      "open": "24602.48",
+      "close": "24579.43",
+      "source_id": "table_IXIC",
+      "basis": "displayed_2026_window",
+      "unit": "index_points"
+    },
+    {
+      "symbol": "IXIC",
+      "date": "2026-11-09",
+      "open": "24777.44",
+      "close": "25253.14",
+      "source_id": "table_IXIC",
+      "basis": "displayed_2026_window",
+      "unit": "index_points"
+    },
+    {
+      "symbol": "IXIC",
+      "date": "2026-11-10",
+      "open": "25047.45",
+      "close": "25065.87",
+      "source_id": "table_IXIC",
+      "basis": "displayed_2026_window",
+      "unit": "index_points"
+    },
+    {
+      "symbol": "IXIC",
+      "date": "2026-11-11",
+      "open": "25448.80",
+      "close": "25466.19",
+      "source_id": "table_IXIC",
+      "basis": "displayed_2026_window",
+      "unit": "index_points"
+    },
+    {
+      "symbol": "IXIC",
+      "date": "2026-11-12",
+      "open": "25092.11",
+      "close": "25366.09",
+      "source_id": "table_IXIC",
+      "basis": "displayed_2026_window",
+      "unit": "index_points"
+    },
+    {
+      "symbol": "IXIC",
+      "date": "2026-11-13",
+      "open": "25408.00",
+      "close": "25136.27",
+      "source_id": "table_IXIC",
+      "basis": "displayed_2026_window",
+      "unit": "index_points"
+    }
+  ],
+  "scope": "66 provider rows (two current-vintage tables for five securities, one index table), six explicitly captured sessions. Open/close only; no intraday or after-hours samples.",
+  "verified_exchange_print_timestamps": false,
+  "original_quote_availability_verified": false,
+  "sources_independent_upstream": false
+}

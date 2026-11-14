@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "selection": "Four genuine corporate cases selected for leadership, governance, security or regulatory exposure, not for returns. No exact leadership/intelligence analogue established. One episode per case; missing prices remain missing.",
+  "cases": [
+    {
+      "id": "intel-2018-ceo",
+      "title": "Intel announces CEO resignation and interim appointment",
+      "symbol": "INTC",
+      "sector": "semiconductors",
+      "categories": [
+        "leadership",
+        "governance"
+      ],
+      "location": [
+        "US"
+      ],
+      "stage": "confirmed_departure",
+      "severity": null,
+      "occurred_day": "2018-06-20",
+      "public_at": "2018-06-21T09:00:00-04:00",
+      "public_day": "2018-06-21",
+      "source_ids": [
+        "intel_release"
+      ],
+      "weaknesses": [
+        "Confirmed departure rather than an unresolved investigation.",
+        "Raised guidance in the same release can offset leadership risk."
+      ],
+      "prices": [
+        {
+          "date": "2018-06-20",
+          "close": "53.46",
+          "source_id": "intel_prices"
+        },
+        {
+          "date": "2018-06-21",
+          "close": "52.19",
+          "source_id": "intel_prices"
+        }
+      ]
+    },
+    {
+      "id": "equifax-2017-security",
+      "title": "Equifax discloses consumer-data security incident",
+      "symbol": "EFX",
+      "sector": "credit_reporting",
+      "categories": [
+        "security",
+        "governance"
+      ],
+      "location": [
+        "US"
+      ],
+      "stage": "confirmed_incident",
+      "severity": null,
+      "occurred_day": null,
+      "public_at": null,
+      "public_day": "2017-09-07",
+      "source_ids": [
+        "equifax_release"
+      ],
+      "weaknesses": [
+        "Different sector and consumer-data exposure.",
+        "Confirmed breach differs from alleged intelligence targeting; original intraday publication clock unknown."
+      ],
+      "prices": [
+        {
+          "date": "2017-09-07",
+          "close": "142.72",
+          "source_id": "equifax_prices"
+        },
+        {
+          "date": "2017-09-08",
+          "close": "123.23",
+          "source_id": "equifax_prices"
+        }
+      ]
+    },
+    {
+      "id": "tesla-2018-governance",
+      "title": "SEC brings civil disclosure charges against Tesla CEO",
+      "symbol": "TSLA",
+      "sector": "automotive",
+      "categories": [
+        "leadership",
+        "governance",
+        "regulatory"
+      ],
+      "location": [
+        "US"
+      ],
+      "stage": "civil_charge",
+      "severity": null,
+      "occurred_day": "2018-09-27",
+      "public_at": null,
+      "public_day": "2018-09-27",
+      "source_ids": [
+        "tesla_charge"
+      ],
+      "weaknesses": [
+        "Different industry and legal mechanism.",
+        "Charges and a later settlement are different stages; no sourced comparable severity."
+      ],
+      "prices": [],
+      "updates": [
+        {
+          "public_day": "2018-09-29",
+          "source_id": "tesla_settlement",
+          "summary": "SEC announces settlement and governance changes; same episode, not a new independent comparison."
+        }
+      ]
+    },
+    {
+      "id": "nvidia-2025-h20",
+      "title": "Nvidia publicly discloses H20 export licence requirement",
+      "symbol": "NVDA",
+      "sector": "semiconductors",
+      "categories": [
+        "regulatory",
+        "security"
+      ],
+      "location": [
+        "US",
+        "China"
+      ],
+      "stage": "confirmed_restriction",
+      "severity": null,
+      "occurred_day": "2025-04-09",
+      "public_at": "2025-04-15T17:22:59-04:00",
+      "public_day": "2025-04-15",
+      "source_ids": [
+        "h20_release",
+        "h20_index"
+      ],
+      "weaknesses": [
+        "Confirmed product restriction rather than an unresolved leadership investigation.",
+        "Tariff and macroeconomic news also affected that session."
+      ],
+      "prices": [
+        {
+          "date": "2025-04-15",
+          "close": "112.20",
+          "source_id": "h20_pre"
+        },
+        {
+          "date": "2025-04-16",
+          "close": "104.49",
+          "source_id": "h20_post"
+        }
+      ]
+    }
+  ]
+}

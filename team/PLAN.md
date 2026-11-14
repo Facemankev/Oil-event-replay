@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-11-14 by Dad (qualified analogues)
+Last updated: 2026-11-14 by Dad (company-news replay)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -110,6 +110,8 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Isolated Gold × Desk visual preview | BRD-2 | Done | Dad | Approved PR #15; public preview, original design preserved |
 
 ## 5. Now
+
+- **Dad / EVT-1 / MAT:** Issue #32 in progress on `dad/evt-2-nvidia-news`, based on #33. Bounded Nvidia news/equity replay, sourced corporate-history cross-check and measured-vs-hypothetical ripple separation. Preserve three-step interface, oil work, original prices and previews. No review wait or merge.
 
 - **Dad / INT-2:** Issue #31 implemented in [draft PR #33](https://github.com/Facemankev/Oil-event-replay/pull/33), stacked on #30. Eight sourced storms (32 total), episode/context exclusions, dated release evidence and read-only original-API recovery inspector. Original 24: Brent 18/WTI 22 complete; expanded 32: Brent 24/WTI 28. All No Action; original-as-of completeness zero. Local 52 Python/83 JS and all Chromium regressions pass; full CI/WebKit in PR Checks. No review wait, UI/source changes, preview overwrite or merge. Next: authentic dated oil/FX vintages and outage/recovery evidence for one bounded cohort.
 

@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] EVT-1 / MAT: Nvidia company-news detection/replay, historical cross-check and equity ripples ([Issue #32](https://github.com/Facemankev/Oil-event-replay/issues/32)), on #33; sourced allegations/responses, strict news and exchange clocks, unchanged three-step UI, draft only — **Dad — Doing** — 2026-11-14
+
 
 
 
