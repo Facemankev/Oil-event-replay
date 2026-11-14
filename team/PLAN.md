@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-11-13 by Dad (primary prices and FX)
+Last updated: 2026-11-14 by Dad (qualified analogues)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -110,6 +110,8 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Isolated Gold × Desk visual preview | BRD-2 | Done | Dad | Approved PR #15; public preview, original design preserved |
 
 ## 5. Now
+
+- **Dad / INT-2:** Issue #31 implemented in [draft PR #33](https://github.com/Facemankev/Oil-event-replay/pull/33), stacked on #30. Eight sourced storms (32 total), episode/context exclusions, dated release evidence and read-only original-API recovery inspector. Original 24: Brent 18/WTI 22 complete; expanded 32: Brent 24/WTI 28. All No Action; original-as-of completeness zero. Local 52 Python/83 JS and all Chromium regressions pass; full CI/WebKit in PR Checks. No review wait, UI/source changes, preview overwrite or merge. Next: authentic dated oil/FX vintages and outage/recovery evidence for one bounded cohort.
 
 - **Dad / DAT-4 / INT-1:** Implemented [draft PR #30](https://github.com/Facemankev/Oil-event-replay/pull/30) on #28 / Issue #29. Current EIA matches all 10,368 prices; primary FX numeric coverage 5,224. Default complete windows: Brent 18/24, WTI 22/24; Buy 0 / Hold 0 / No Action 24 because original-as-of evidence/qualified analogues remain insufficient. Local 47 Python/72 JS passed; final CI linked in PR Checks. No review wait, canonical/UI/preview overwrite or merge. Original API conflict cause still needs its sanitized payload.
 

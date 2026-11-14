@@ -1,0 +1,20 @@
+{
+  "status": "original_sanitized_payload_not_recovered",
+  "checked_on": "2026-11-14",
+  "review_commit": "fa8f079ba91a18ce9907026d0b97431d16ca1b1b",
+  "review_path": "historical/reconciliation/REVIEW.json",
+  "expected_payload_sha256": {
+    "brent": "6d37f9f33cff29c176a87f22c96f16bb495bfa55c4d8e2d474eb686652f41539",
+    "wti": "5139b1db28d70645a5bb8a811823d80acca7d5ef83d96ef60079f570387a7185"
+  },
+  "investigation": [
+    "Read the existing importer: price_snapshots.payload retains normalized, credential-redacted API pages; price_observations retains parsed dates/values.",
+    "Read the separate PR 19 review by immutable commit; did not modify its branch or apply its corrections.",
+    "No original EIA response JSON or SQLite snapshot was located in repository work, attached-file library or task scratch metadata. Existing current-primary table capture is a different artifact.",
+    "Earlier attached reconciliation-report file could not be resolved by the file-download service in this session. The retained PR 19 review supplies expected hashes, not the response itself."
+  ],
+  "cause_resolved": false,
+  "confirmed_revision_times": null,
+  "canonical_changed": false,
+  "next_step": "Use the optional read-only inspector on a locally retained historical SQLite database. It accepts only the expected sanitized payload fingerprint; no key, network request, import or database update. A newer API download is not recovery of the old response."
+}

@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "availability_rule": "For a day-only release with unknown clock/zone, use release date plus two UTC days as a conservative study eligibility boundary, not a claimed actual release time. Strictly earlier than cutoff. Never backdate availability to an observation.",
+  "releases": [
+    {
+      "id": "fed-h10-2017-09-05",
+      "publisher": "Federal Reserve Board",
+      "url": "https://www.federalreserve.gov/releases/h10/20170905/",
+      "release_date": "2017-09-05",
+      "release_at": null,
+      "release_timezone": null,
+      "precision": "day",
+      "original_vintage_at": null,
+      "original_http_sha256": null,
+      "captured_on": "2026-11-14",
+      "capture_kind": "transcribed_GBP_row_from_dated_official_page_via_web_reader",
+      "unit": "USD per GBP",
+      "locator": "Printed Release Date; dated Monday-Friday header; *UNITED KINGDOM POUND row; * U.S. dollars per currency unit footnote.",
+      "observations": [
+        {
+          "date": "2017-08-28",
+          "value": "1.2927",
+          "status": "numeric"
+        },
+        {
+          "date": "2017-08-29",
+          "value": "1.2937",
+          "status": "numeric"
+        },
+        {
+          "date": "2017-08-30",
+          "value": "1.2934",
+          "status": "numeric"
+        },
+        {
+          "date": "2017-08-31",
+          "value": "1.2888",
+          "status": "numeric"
+        },
+        {
+          "date": "2017-09-01",
+          "value": "1.2972",
+          "status": "numeric"
+        }
+      ],
+      "limitation": "Dated official page documents a release, not immutable historical HTTP bytes or proof that this was the original vintage. No release time inferred from observation dates."
+    },
+    {
+      "id": "fed-h10-2017-09-11",
+      "publisher": "Federal Reserve Board",
+      "url": "https://www.federalreserve.gov/releases/h10/20170911/",
+      "release_date": "2017-09-11",
+      "release_at": null,
+      "release_timezone": null,
+      "precision": "day",
+      "original_vintage_at": null,
+      "original_http_sha256": null,
+      "captured_on": "2026-11-14",
+      "capture_kind": "transcribed_GBP_row_from_dated_official_page_via_web_reader",
+      "unit": "USD per GBP",
+      "locator": "Printed Release Date; dated Monday-Friday header; *UNITED KINGDOM POUND row; * U.S. dollars per currency unit footnote.",
+      "observations": [
+        {
+          "date": "2017-09-04",
+          "value": null,
+          "status": "ND"
+        },
+        {
+          "date": "2017-09-05",
+          "value": "1.3013",
+          "status": "numeric"
+        },
+        {
+          "date": "2017-09-06",
+          "value": "1.3073",
+          "status": "numeric"
+        },
+        {
+          "date": "2017-09-07",
+          "value": "1.3094",
+          "status": "numeric"
+        },
+        {
+          "date": "2017-09-08",
+          "value": "1.3211",
+          "status": "numeric"
+        }
+      ],
+      "limitation": "Dated official page documents a release, not immutable historical HTTP bytes or proof that this was the original vintage. No release time inferred from observation dates."
+    },
+    {
+      "id": "fed-h10-2020-10-13",
+      "publisher": "Federal Reserve Board",
+      "url": "https://www.federalreserve.gov/releases/h10/20201013/",
+      "release_date": "2020-10-13",
+      "release_at": null,
+      "release_timezone": null,
+      "precision": "day",
+      "original_vintage_at": null,
+      "original_http_sha256": null,
+      "captured_on": "2026-11-14",
+      "capture_kind": "transcribed_GBP_row_from_dated_official_page_via_web_reader",
+      "unit": "USD per GBP",
+      "locator": "Printed Release Date; dated Monday-Friday header; *UNITED KINGDOM POUND row; * U.S. dollars per currency unit footnote.",
+      "observations": [
+        {
+          "date": "2020-10-05",
+          "value": "1.2972",
+          "status": "numeric"
+        },
+        {
+          "date": "2020-10-06",
+          "value": "1.2945",
+          "status": "numeric"
+        },
+        {
+          "date": "2020-10-07",
+          "value": "1.2914",
+          "status": "numeric"
+        },
+        {
+          "date": "2020-10-08",
+          "value": "1.2944",
+          "status": "numeric"
+        },
+        {
+          "date": "2020-10-09",
+          "value": "1.3003",
+          "status": "numeric"
+        }
+      ],
+      "limitation": "Dated official page documents a release, not immutable historical HTTP bytes or proof that this was the original vintage. No release time inferred from observation dates."
+    },
+    {
+      "id": "fed-h10-2020-11-02",
+      "publisher": "Federal Reserve Board",
+      "url": "https://www.federalreserve.gov/releases/h10/20201102/",
+      "release_date": "2020-11-02",
+      "release_at": null,
+      "release_timezone": null,
+      "precision": "day",
+      "original_vintage_at": null,
+      "original_http_sha256": null,
+      "captured_on": "2026-11-14",
+      "capture_kind": "transcribed_GBP_row_from_dated_official_page_via_web_reader",
+      "unit": "USD per GBP",
+      "locator": "Printed Release Date; dated Monday-Friday header; *UNITED KINGDOM POUND row; * U.S. dollars per currency unit footnote.",
+      "observations": [
+        {
+          "date": "2020-10-26",
+          "value": "1.3021",
+          "status": "numeric"
+        },
+        {
+          "date": "2020-10-27",
+          "value": "1.3067",
+          "status": "numeric"
+        },
+        {
+          "date": "2020-10-28",
+          "value": "1.2997",
+          "status": "numeric"
+        },
+        {
+          "date": "2020-10-29",
+          "value": "1.2890",
+          "status": "numeric"
+        },
+        {
+          "date": "2020-10-30",
+          "value": "1.2933",
+          "status": "numeric"
+        }
+      ],
+      "limitation": "Dated official page documents a release, not immutable historical HTTP bytes or proof that this was the original vintage. No release time inferred from observation dates."
+    }
+  ]
+}

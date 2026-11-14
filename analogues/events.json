@@ -1,0 +1,478 @@
+{
+  "schema_version": 1,
+  "selection": "Eight additional US Gulf landfalls in the existing price range; selected by event mechanism/geography, before reading outcomes. Includes weaker wind comparisons. Not an exhaustive or representative population.",
+  "events": [
+    {
+      "id": "humberto-2007-texas",
+      "title": "Humberto landfall near High Island",
+      "category": "weather",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "episode_id": "AL092007",
+      "exposure_region": "US_Gulf_coast",
+      "geography": "US Texas / Gulf of Mexico",
+      "occurred": {
+        "date": "2007-09-13",
+        "at": "2007-09-13T02:00:00-05:00",
+        "precision": "minute",
+        "approximate": true,
+        "timezone": "America/Chicago"
+      },
+      "first_public": {
+        "date": "2007-09-13",
+        "at": "2007-09-13T02:10:00-05:00",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "humberto-2007-texas-nhc"
+      },
+      "evidence": [
+        {
+          "id": "humberto-2007-texas-nhc",
+          "url": "https://www.nhc.noaa.gov/archive/2007/al09/al092007.update.09130713.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "quality": "primary_release",
+          "locator": "Tropical cyclone update; printed 0210 CDT; landfall around 0200 CDT",
+          "published_at": "2007-09-13T02:10:00-05:00",
+          "retrieved_on": "2026-11-14",
+          "capture_kind": "facts_from_indexed_primary_bulletin; direct archive open returned 403",
+          "original_http_sha256": null,
+          "summary": "Humberto landfall near High Island. Printed operational bulletin supplies timing; forecasts preceded landfall.",
+          "facts_sha256": "8262bd88cabf336b75762882312f1d02722279de695241274d881180b2807500"
+        }
+      ],
+      "features": {
+        "mechanism": "landfall",
+        "impact": "mixed",
+        "impact_basis": "Exposure hypothesis: storm can constrain crude supply and refinery demand; direction not measured.",
+        "severity": {
+          "scale": "advisory_maximum_sustained_wind_mph",
+          "value": 85,
+          "published_at": "2007-09-13T02:10:00-05:00",
+          "url": "https://www.nhc.noaa.gov/archive/2007/al09/al092007.update.09130713.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "limitation": "Operational wind at the cited bulletin time, not flooding, outage size or economic severity. A later best-track estimate is not substituted."
+        }
+      },
+      "reactions": {
+        "anchor": "2007-09-13",
+        "markets": {}
+      },
+      "uncertainty": "Selected research sample, not all Gulf storms. Earlier forecasts and reports existed. First located supporting bulletin is not proof of first dissemination. No sourced outage magnitude, recovery duration or market attribution."
+    },
+    {
+      "id": "dolly-2008-texas",
+      "title": "Dolly landfall on South Padre Island",
+      "category": "weather",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "episode_id": "AL042008",
+      "exposure_region": "US_Gulf_coast",
+      "geography": "US Texas / Gulf of Mexico",
+      "occurred": {
+        "date": "2008-07-23",
+        "at": "2008-07-23T13:00:00-05:00",
+        "precision": "minute",
+        "approximate": true,
+        "timezone": "America/Chicago"
+      },
+      "first_public": {
+        "date": "2008-07-23",
+        "at": "2008-07-23T13:00:00-05:00",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "dolly-2008-texas-nhc"
+      },
+      "evidence": [
+        {
+          "id": "dolly-2008-texas-nhc",
+          "url": "https://www.nhc.noaa.gov/archive/2008/al04/al042008.posest.07231753.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "quality": "primary_release",
+          "locator": "Position estimate, printed 1300 CDT; wind from preceding advisory 13A at 1200 CDT",
+          "published_at": "2008-07-23T13:00:00-05:00",
+          "retrieved_on": "2026-11-14",
+          "capture_kind": "facts_from_indexed_primary_bulletin; direct archive open returned 403",
+          "original_http_sha256": null,
+          "summary": "Dolly landfall on South Padre Island. Printed operational bulletin supplies timing; forecasts preceded landfall.",
+          "facts_sha256": "b945e8e085ebf48825d72456728da9423872346e11bdf0299a25fae10ea4df8c"
+        }
+      ],
+      "features": {
+        "mechanism": "landfall",
+        "impact": "mixed",
+        "impact_basis": "Exposure hypothesis: storm can constrain crude supply and refinery demand; direction not measured.",
+        "severity": {
+          "scale": "advisory_maximum_sustained_wind_mph",
+          "value": 100,
+          "published_at": "2008-07-23T12:00:00-05:00",
+          "url": "https://www.nhc.noaa.gov/archive/2008/al04/al042008.public_a.013.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "limitation": "Operational wind at the cited bulletin time, not flooding, outage size or economic severity. A later best-track estimate is not substituted."
+        }
+      },
+      "reactions": {
+        "anchor": "2008-07-23",
+        "markets": {}
+      },
+      "uncertainty": "Selected research sample, not all Gulf storms. Earlier forecasts and reports existed. First located supporting bulletin is not proof of first dissemination. No sourced outage magnitude, recovery duration or market attribution."
+    },
+    {
+      "id": "isaac-2012-louisiana",
+      "title": "Isaac first Louisiana landfall",
+      "category": "weather",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "episode_id": "AL092012",
+      "exposure_region": "US_Gulf_coast",
+      "geography": "US Louisiana / Gulf of Mexico",
+      "occurred": {
+        "date": "2012-08-28",
+        "at": "2012-08-28T18:45:00-05:00",
+        "precision": "minute",
+        "approximate": true,
+        "timezone": "America/Chicago"
+      },
+      "first_public": {
+        "date": "2012-08-28",
+        "at": "2012-08-28T19:00:00-05:00",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "isaac-2012-louisiana-nhc"
+      },
+      "evidence": [
+        {
+          "id": "isaac-2012-louisiana-nhc",
+          "url": "https://www.nhc.noaa.gov/archive/2012/al09/al092012.posest.08282356.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "quality": "primary_release",
+          "locator": "Position estimate; printed 1900 CDT; estimated landfall 1845 CDT",
+          "published_at": "2012-08-28T19:00:00-05:00",
+          "retrieved_on": "2026-11-14",
+          "capture_kind": "facts_from_indexed_primary_bulletin; direct archive open returned 403",
+          "original_http_sha256": null,
+          "summary": "Isaac first Louisiana landfall. Printed operational bulletin supplies timing; forecasts preceded landfall.",
+          "facts_sha256": "fa752b6845bf22906f4a01cb8f4f205be549e24789616d7a28c80a4d16dbaf00"
+        }
+      ],
+      "features": {
+        "mechanism": "landfall",
+        "impact": "mixed",
+        "impact_basis": "Exposure hypothesis: storm can constrain crude supply and refinery demand; direction not measured.",
+        "severity": {
+          "scale": "advisory_maximum_sustained_wind_mph",
+          "value": 80,
+          "published_at": "2012-08-28T19:00:00-05:00",
+          "url": "https://www.nhc.noaa.gov/archive/2012/al09/al092012.posest.08282356.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "limitation": "Operational wind at the cited bulletin time, not flooding, outage size or economic severity. A later best-track estimate is not substituted."
+        }
+      },
+      "reactions": {
+        "anchor": "2012-08-28",
+        "markets": {}
+      },
+      "uncertainty": "Selected research sample, not all Gulf storms. Earlier forecasts and reports existed. First located supporting bulletin is not proof of first dissemination. No sourced outage magnitude, recovery duration or market attribution."
+    },
+    {
+      "id": "nate-2017-louisiana",
+      "title": "Nate landfall at the Mississippi River mouth",
+      "category": "weather",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "episode_id": "AL162017",
+      "exposure_region": "US_Gulf_coast",
+      "geography": "US Louisiana / Gulf of Mexico",
+      "occurred": {
+        "date": "2017-10-07",
+        "at": "2017-10-07T19:00:00-05:00",
+        "precision": "minute",
+        "approximate": true,
+        "timezone": "America/Chicago"
+      },
+      "first_public": {
+        "date": "2017-10-07",
+        "at": "2017-10-07T19:00:00-05:00",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "nate-2017-louisiana-nhc"
+      },
+      "evidence": [
+        {
+          "id": "nate-2017-louisiana-nhc",
+          "url": "https://www.nhc.noaa.gov/archive/2017/al16/al162017.public_a.014.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "quality": "primary_release",
+          "locator": "Intermediate advisory 14A, printed 1900 CDT; first US landfall, not a second independent Biloxi case",
+          "published_at": "2017-10-07T19:00:00-05:00",
+          "retrieved_on": "2026-11-14",
+          "capture_kind": "facts_from_indexed_primary_bulletin; direct archive open returned 403",
+          "original_http_sha256": null,
+          "summary": "Nate landfall at the Mississippi River mouth. Printed operational bulletin supplies timing; forecasts preceded landfall.",
+          "facts_sha256": "8b604c04ca1acbed12748bcdf3bedc7c66ca78af00972ebcdbc498f80d1ca7f8"
+        }
+      ],
+      "features": {
+        "mechanism": "landfall",
+        "impact": "mixed",
+        "impact_basis": "Exposure hypothesis: storm can constrain crude supply and refinery demand; direction not measured.",
+        "severity": {
+          "scale": "advisory_maximum_sustained_wind_mph",
+          "value": 85,
+          "published_at": "2017-10-07T19:00:00-05:00",
+          "url": "https://www.nhc.noaa.gov/archive/2017/al16/al162017.public_a.014.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "limitation": "Operational wind at the cited bulletin time, not flooding, outage size or economic severity. A later best-track estimate is not substituted."
+        }
+      },
+      "reactions": {
+        "anchor": "2017-10-07",
+        "markets": {}
+      },
+      "uncertainty": "Selected research sample, not all Gulf storms. Earlier forecasts and reports existed. First located supporting bulletin is not proof of first dissemination. No sourced outage magnitude, recovery duration or market attribution."
+    },
+    {
+      "id": "delta-2020-louisiana",
+      "title": "Delta landfall near Creole",
+      "category": "weather",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "episode_id": "AL262020",
+      "exposure_region": "US_Gulf_coast",
+      "geography": "US Louisiana / Gulf of Mexico",
+      "occurred": {
+        "date": "2020-10-09",
+        "at": "2020-10-09T18:00:00-05:00",
+        "precision": "minute",
+        "approximate": true,
+        "timezone": "America/Chicago"
+      },
+      "first_public": {
+        "date": "2020-10-09",
+        "at": "2020-10-09T18:00:00-05:00",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "delta-2020-louisiana-nhc"
+      },
+      "evidence": [
+        {
+          "id": "delta-2020-louisiana-nhc",
+          "url": "https://www.nhc.noaa.gov/archive/2020/al26/al262020.update.10092259.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "quality": "primary_release",
+          "locator": "Tropical cyclone update; printed 1800 CDT, not filename minute",
+          "published_at": "2020-10-09T18:00:00-05:00",
+          "retrieved_on": "2026-11-14",
+          "capture_kind": "facts_from_indexed_primary_bulletin; direct archive open returned 403",
+          "original_http_sha256": null,
+          "summary": "Delta landfall near Creole. Printed operational bulletin supplies timing; forecasts preceded landfall.",
+          "facts_sha256": "ae9c31763f40302f69bf332fc20c620d3a900ac5878e42889f476b5523dc1256"
+        }
+      ],
+      "features": {
+        "mechanism": "landfall",
+        "impact": "mixed",
+        "impact_basis": "Exposure hypothesis: storm can constrain crude supply and refinery demand; direction not measured.",
+        "severity": {
+          "scale": "advisory_maximum_sustained_wind_mph",
+          "value": 100,
+          "published_at": "2020-10-09T18:00:00-05:00",
+          "url": "https://www.nhc.noaa.gov/archive/2020/al26/al262020.update.10092259.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "limitation": "Operational wind at the cited bulletin time, not flooding, outage size or economic severity. A later best-track estimate is not substituted."
+        }
+      },
+      "reactions": {
+        "anchor": "2020-10-09",
+        "markets": {}
+      },
+      "uncertainty": "Selected research sample, not all Gulf storms. Earlier forecasts and reports existed. First located supporting bulletin is not proof of first dissemination. No sourced outage magnitude, recovery duration or market attribution."
+    },
+    {
+      "id": "zeta-2020-louisiana",
+      "title": "Zeta landfall near Cocodrie",
+      "category": "weather",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "episode_id": "AL282020",
+      "exposure_region": "US_Gulf_coast",
+      "geography": "US Louisiana / Gulf of Mexico",
+      "occurred": {
+        "date": "2020-10-28",
+        "at": "2020-10-28T16:00:00-05:00",
+        "precision": "minute",
+        "approximate": true,
+        "timezone": "America/Chicago"
+      },
+      "first_public": {
+        "date": "2020-10-28",
+        "at": "2020-10-28T16:00:00-05:00",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "zeta-2020-louisiana-nhc"
+      },
+      "evidence": [
+        {
+          "id": "zeta-2020-louisiana-nhc",
+          "url": "https://www.nhc.noaa.gov/archive/2020/al28/al282020.public.017.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "quality": "primary_release",
+          "locator": "Advisory 17; printed 1600 CDT; operational 110 mph, not subsequent reanalysis",
+          "published_at": "2020-10-28T16:00:00-05:00",
+          "retrieved_on": "2026-11-14",
+          "capture_kind": "facts_from_indexed_primary_bulletin; direct archive open returned 403",
+          "original_http_sha256": null,
+          "summary": "Zeta landfall near Cocodrie. Printed operational bulletin supplies timing; forecasts preceded landfall.",
+          "facts_sha256": "a287c2a94f5e269b908d71902e1669c52f3976d2953892f51b5b9b1698aca10b"
+        }
+      ],
+      "features": {
+        "mechanism": "landfall",
+        "impact": "mixed",
+        "impact_basis": "Exposure hypothesis: storm can constrain crude supply and refinery demand; direction not measured.",
+        "severity": {
+          "scale": "advisory_maximum_sustained_wind_mph",
+          "value": 110,
+          "published_at": "2020-10-28T16:00:00-05:00",
+          "url": "https://www.nhc.noaa.gov/archive/2020/al28/al282020.public.017.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "limitation": "Operational wind at the cited bulletin time, not flooding, outage size or economic severity. A later best-track estimate is not substituted."
+        }
+      },
+      "reactions": {
+        "anchor": "2020-10-28",
+        "markets": {}
+      },
+      "uncertainty": "Selected research sample, not all Gulf storms. Earlier forecasts and reports existed. First located supporting bulletin is not proof of first dissemination. No sourced outage magnitude, recovery duration or market attribution."
+    },
+    {
+      "id": "nicholas-2021-texas",
+      "title": "Nicholas landfall on Matagorda Peninsula",
+      "category": "weather",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "episode_id": "AL142021",
+      "exposure_region": "US_Gulf_coast",
+      "geography": "US Texas / Gulf of Mexico",
+      "occurred": {
+        "date": "2021-09-14",
+        "at": "2021-09-14T00:30:00-05:00",
+        "precision": "minute",
+        "approximate": true,
+        "timezone": "America/Chicago"
+      },
+      "first_public": {
+        "date": "2021-09-14",
+        "at": "2021-09-14T01:00:00-05:00",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "nicholas-2021-texas-nhc"
+      },
+      "evidence": [
+        {
+          "id": "nicholas-2021-texas-nhc",
+          "url": "https://www.nhc.noaa.gov/archive/2021/al14/al142021.public_a.008.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "quality": "primary_release",
+          "locator": "Intermediate advisory 8A; printed 0100 CDT; landfall near 0030 CDT",
+          "published_at": "2021-09-14T01:00:00-05:00",
+          "retrieved_on": "2026-11-14",
+          "capture_kind": "facts_from_indexed_primary_bulletin; direct archive open returned 403",
+          "original_http_sha256": null,
+          "summary": "Nicholas landfall on Matagorda Peninsula. Printed operational bulletin supplies timing; forecasts preceded landfall.",
+          "facts_sha256": "a26a6cb196f13863aa61c0a84139cdef0dedc8e3c6be98d6d04cae770a15afdd"
+        }
+      ],
+      "features": {
+        "mechanism": "landfall",
+        "impact": "mixed",
+        "impact_basis": "Exposure hypothesis: storm can constrain crude supply and refinery demand; direction not measured.",
+        "severity": {
+          "scale": "advisory_maximum_sustained_wind_mph",
+          "value": 75,
+          "published_at": "2021-09-14T01:00:00-05:00",
+          "url": "https://www.nhc.noaa.gov/archive/2021/al14/al142021.public_a.008.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "limitation": "Operational wind at the cited bulletin time, not flooding, outage size or economic severity. A later best-track estimate is not substituted."
+        }
+      },
+      "reactions": {
+        "anchor": "2021-09-14",
+        "markets": {}
+      },
+      "uncertainty": "Selected research sample, not all Gulf storms. Earlier forecasts and reports existed. First located supporting bulletin is not proof of first dissemination. No sourced outage magnitude, recovery duration or market attribution."
+    },
+    {
+      "id": "francine-2024-louisiana",
+      "title": "Francine landfall in Terrebonne Parish",
+      "category": "weather",
+      "affected_commodities": [
+        "brent",
+        "wti"
+      ],
+      "episode_id": "AL062024",
+      "exposure_region": "US_Gulf_coast",
+      "geography": "US Louisiana / Gulf of Mexico",
+      "occurred": {
+        "date": "2024-09-11",
+        "at": "2024-09-11T17:00:00-05:00",
+        "precision": "minute",
+        "approximate": true,
+        "timezone": "America/Chicago"
+      },
+      "first_public": {
+        "date": "2024-09-11",
+        "at": "2024-09-11T17:00:00-05:00",
+        "precision": "minute",
+        "status": "earliest_located_not_exhaustive",
+        "evidence_id": "francine-2024-louisiana-nhc"
+      },
+      "evidence": [
+        {
+          "id": "francine-2024-louisiana-nhc",
+          "url": "https://www.nhc.noaa.gov/archive/2024/al06/al062024.update.09112157.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "quality": "primary_release",
+          "locator": "Tropical cyclone update; printed 1700 CDT, not filename minute",
+          "published_at": "2024-09-11T17:00:00-05:00",
+          "retrieved_on": "2026-11-14",
+          "capture_kind": "facts_from_indexed_primary_bulletin; direct archive open returned 403",
+          "original_http_sha256": null,
+          "summary": "Francine landfall in Terrebonne Parish. Printed operational bulletin supplies timing; forecasts preceded landfall.",
+          "facts_sha256": "0eae6778eb87003cae115627f226323f507887fff77932f3c57f327d485a4743"
+        }
+      ],
+      "features": {
+        "mechanism": "landfall",
+        "impact": "mixed",
+        "impact_basis": "Exposure hypothesis: storm can constrain crude supply and refinery demand; direction not measured.",
+        "severity": {
+          "scale": "advisory_maximum_sustained_wind_mph",
+          "value": 100,
+          "published_at": "2024-09-11T17:00:00-05:00",
+          "url": "https://www.nhc.noaa.gov/archive/2024/al06/al062024.update.09112157.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "limitation": "Operational wind at the cited bulletin time, not flooding, outage size or economic severity. A later best-track estimate is not substituted."
+        }
+      },
+      "reactions": {
+        "anchor": "2024-09-11",
+        "markets": {}
+      },
+      "uncertainty": "Selected research sample, not all Gulf storms. Earlier forecasts and reports existed. First located supporting bulletin is not proof of first dissemination. No sourced outage magnitude, recovery duration or market attribution."
+    }
+  ]
+}
