@@ -270,6 +270,15 @@
       "capture": "curated facts through supported web reader; original HTTP bytes not retained",
       "original_http_sha256": null,
       "limitation": "Bank pricing supplement citing public market data; not SEC-verified tick data."
+    },
+    "intel_filing": {
+      "url": "https://www.intc.com/filings-reports/all-sec-filings/content/0001193125-18-199045/d598882d8k.htm",
+      "kind": "issuer_filing",
+      "locator": "Item 5.02: June 21 announcement states the resignation occurred June 20, 2018",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Occurrence/private board action is distinct from the June 21 public announcement."
     }
   },
   "limitations": [

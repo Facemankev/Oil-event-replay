@@ -173,7 +173,8 @@ returns, not by selecting the largest declines:
 
 Nvidia's private notice on April 9 is distinct from the April 15
 [public filing/acceptance](https://www.sec.gov/Archives/edgar/data/1045810/0001045810-25-000082-index.html).
-Intel's occurrence date and June 21 public announcement are also distinct.
+Intel's [filing](https://www.intc.com/filings-reports/all-sec-filings/content/0001193125-18-199045/d598882d8k.htm)
+separately records the June 20 occurrence and June 21 public announcement.
 Price references are sourced in `history.json`: a [UBS filing](https://www.sec.gov/Archives/edgar/data/1114446/000111444618007465/tc4570597f_1fwp.htm),
 a [later SEC document citing Equifax closes](https://www.sec.gov/litigation/complaints/2018/comp-pr2018-40.pdf),
 and two bank filings citing Nvidia's [April 15](https://www.sec.gov/Archives/edgar/data/200245/000191870425006605/form424b2.htm)

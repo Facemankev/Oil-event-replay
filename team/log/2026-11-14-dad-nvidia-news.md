@@ -50,3 +50,7 @@ The first Actions run caught a test-fixture dependency on a pre-existing local
 work directory. The new collector-to-detector integration test now creates its
 own workspace before making its temporary snapshot. This fixes clean-checkout
 execution; no production price, news or matching logic changed. Rerun full CI.
+
+Added Intel's retained 8-K citation explicitly supporting its June 20 occurrence,
+separate from the June 21 public release. Updated source/trace fingerprints;
+decisions and all numerical findings remain unchanged.
