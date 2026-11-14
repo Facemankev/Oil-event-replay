@@ -21,6 +21,8 @@ history).
 
 
 
+
+
 ## To do
 
 - [ ] DAT-3: Reconcile Brent/WTI against authenticated primary EIA data; retain discrepancy/revision evidence before extending matching — **Dad** — 2026-10-29
@@ -44,6 +46,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] EVT-1 / MAT: Nvidia company-news replay and corporate-history/ripple cross-check ([draft PR #34](https://github.com/Facemankev/Oil-event-replay/pull/34), on #33; [Issue #32](https://github.com/Facemankev/Oil-event-replay/issues/32)). Six publication cards/four developments, four historical cases, 66 daily provider rows; eight cutoffs all No Action. Intraday prints/original availability unverified; direct RSS tunnel denied, offline path tested. Local 60 Python/99 JS and all Chromium pass; full CI/WebKit in PR Checks. No review wait, UI/account/data changes, preview overwrite or merge — **Dad** — 2026-11-14
 
 - [ ] INT-2: Qualified Gulf-storm analogues and dated release evidence ([draft PR #33](https://github.com/Facemankev/Oil-event-replay/pull/33), on #30; [Issue #31](https://github.com/Facemankev/Oil-event-replay/issues/31)). Eight sourced storms added, 32 total; original 24 and expanded 32 all No Action, zero supported Buy. Local 52 Python / 83 JS and all Chromium regressions pass; full WebKit/CI status in PR Checks. Brendan review is non-blocking. Interface, original prices, parent reports and previews unchanged; no merge — **Dad** — 2026-11-14
 

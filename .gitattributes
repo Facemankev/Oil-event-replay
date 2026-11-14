@@ -2,3 +2,6 @@
 *.sh text eol=lf
 # Retained primary table snapshots have byte-identical hashes on Windows too.
 verification/sources/*.csv -text
+
+# Company-news source snapshots retain their reviewed byte fingerprints on Windows.
+equities/*.json -text

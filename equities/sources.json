@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "board_primary": {
+      "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+      "kind": "issuer_release",
+      "locator": "Article body dated November 8; investigation and no-reason-to-believe-compromise paragraphs",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Supporting release is not first reporting; earlier stories existed. Ignore later-news navigation."
+    },
+    "board_wire": {
+      "url": "https://www.nasdaq.com/press-release/statement-nvidia-board-directors-2026-11-08",
+      "kind": "issuer_syndication",
+      "locator": "Printed Nov 8, 2026 3:00pm EST; Source: NVIDIA",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Same issuer statement, not independent corroboration or an exchange price feed."
+    },
+    "board_ir": {
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/Statement-from-NVIDIA-Board-of-Directors/default.aspx",
+      "kind": "issuer_release",
+      "locator": "Dated November 8 issuer copy",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Date only; shares the same release family."
+    },
+    "prior_response": {
+      "url": "https://abcnews.com/US/nvidia-responds-report-ceo-allegedly-targeted-chinese-spy/story?id=137704250",
+      "kind": "reported_response",
+      "locator": "Article printed October 31, 2026 12:25 PM; spokesperson response and attributed allegations",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Displayed clock timezone not established; retain date precision. Current page not immutable original version."
+    },
+    "counsel_primary": {
+      "url": "https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board",
+      "kind": "issuer_release",
+      "locator": "November 10 dated body; outside counsel retained",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Day-only clock; later fact unavailable at November 8/9 cutoffs."
+    },
+    "transition_primary": {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+      "kind": "issuer_release",
+      "locator": "November 12 dated body; resignation and interim CEO appointment",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Day-only clock; no backdating to the earlier investigation."
+    },
+    "calendar": {
+      "url": "https://www.nasdaq.com/market-activity/stock-market-holiday-schedule",
+      "kind": "exchange_calendar",
+      "locator": "2026 US holiday table and regular 09:30\u201316:00 Eastern hours",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Scheduled session boundaries are verified. Individual prints, intraday feed latency, halts and original quote publication clocks are not."
+    },
+    "rss": {
+      "url": "https://nvidianews.nvidia.com/releases.xml",
+      "kind": "issuer_feed",
+      "locator": "Official newsroom RSS page links press releases",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Web reader reported unsupported XML content type. Optional collector uses standard HTTPS or an owner-supplied local feed file; no credentials."
+    },
+    "rss_directory": {
+      "url": "https://nvidianews.nvidia.com/rss",
+      "kind": "issuer_feed_directory",
+      "locator": "Press Releases RSS link",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": ""
+    },
+    "table_NVDA": {
+      "url": "https://stockanalysis.com/stocks/nvda/history/",
+      "kind": "secondary_daily_table",
+      "locator": "Dated rows November 6 and 9\u201313; Open and Close columns, not Adj Close",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Current visible table; session marks are nominal, not verified exchange print timestamps or original publication/vintage evidence. Index units are points; equities/ETF USD per share."
+    },
+    "cross_NVDA": {
+      "url": "https://chartexchange.com/symbol/nasdaq-nvda/historical/",
+      "kind": "secondary_daily_table",
+      "locator": "Dated rows November 6 and 9\u201313; opening and closing columns",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Cross-provider agreement is not proof of independent upstream data or official exchange execution. Opening differences are retained."
+    },
+    "table_AMD": {
+      "url": "https://stockanalysis.com/stocks/amd/history/",
+      "kind": "secondary_daily_table",
+      "locator": "Dated rows November 6 and 9\u201313; Open and Close columns, not Adj Close",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Current visible table; session marks are nominal, not verified exchange print timestamps or original publication/vintage evidence. Index units are points; equities/ETF USD per share."
+    },
+    "cross_AMD": {
+      "url": "https://chartexchange.com/symbol/nasdaq-amd/historical/",
+      "kind": "secondary_daily_table",
+      "locator": "Dated rows November 6 and 9\u201313; opening and closing columns",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Cross-provider agreement is not proof of independent upstream data or official exchange execution. Opening differences are retained."
+    },
+    "table_AVGO": {
+      "url": "https://stockanalysis.com/stocks/avgo/history/",
+      "kind": "secondary_daily_table",
+      "locator": "Dated rows November 6 and 9\u201313; Open and Close columns, not Adj Close",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Current visible table; session marks are nominal, not verified exchange print timestamps or original publication/vintage evidence. Index units are points; equities/ETF USD per share."
+    },
+    "cross_AVGO": {
+      "url": "https://chartexchange.com/symbol/nasdaq-avgo/historical/",
+      "kind": "secondary_daily_table",
+      "locator": "Dated rows November 6 and 9\u201313; opening and closing columns",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Cross-provider agreement is not proof of independent upstream data or official exchange execution. Opening differences are retained."
+    },
+    "table_MSFT": {
+      "url": "https://stockanalysis.com/stocks/msft/history/",
+      "kind": "secondary_daily_table",
+      "locator": "Dated rows November 6 and 9\u201313; Open and Close columns, not Adj Close",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Current visible table; session marks are nominal, not verified exchange print timestamps or original publication/vintage evidence. Index units are points; equities/ETF USD per share."
+    },
+    "cross_MSFT": {
+      "url": "https://chartexchange.com/symbol/nasdaq-msft/historical/",
+      "kind": "secondary_daily_table",
+      "locator": "Dated rows November 6 and 9\u201313; opening and closing columns",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Cross-provider agreement is not proof of independent upstream data or official exchange execution. Opening differences are retained."
+    },
+    "table_QQQ": {
+      "url": "https://stockanalysis.com/etf/qqq/history/",
+      "kind": "secondary_daily_table",
+      "locator": "Dated rows November 6 and 9\u201313; Open and Close columns, not Adj Close",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Current visible table; session marks are nominal, not verified exchange print timestamps or original publication/vintage evidence. Index units are points; equities/ETF USD per share."
+    },
+    "cross_QQQ": {
+      "url": "https://chartexchange.com/symbol/nasdaq-qqq/historical/",
+      "kind": "secondary_daily_table",
+      "locator": "Dated rows November 6 and 9\u201313; opening and closing columns",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Cross-provider agreement is not proof of independent upstream data or official exchange execution. Opening differences are retained."
+    },
+    "table_IXIC": {
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/history/?p=%5EIXIC",
+      "kind": "secondary_daily_table",
+      "locator": "Dated rows November 6 and 9\u201313; Open and Close columns, not Adj Close",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Current visible table; session marks are nominal, not verified exchange print timestamps or original publication/vintage evidence. Index units are points; equities/ETF USD per share."
+    },
+    "intel_release": {
+      "url": "https://www.intc.com/news-events/press-releases/detail/146/intel-ceo-brian-krzanich-resigns-board-appoints-bob-swan",
+      "kind": "issuer_release",
+      "locator": "Released Jun 21, 2018 9:00 AM EDT; CEO departure and concurrent raised guidance",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Confirmed governance-policy departure; not a national-security finding. Concurrent guidance is a confounder."
+    },
+    "intel_prices": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1114446/000111444618007465/tc4570597f_1fwp.htm",
+      "kind": "filed_third_party_prices",
+      "locator": "Intel price section: June 21 close 52.19; quarterly table through June 20 close 53.46",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "UBS filing explicitly obtains Bloomberg prices without independent verification; SEC hosting does not make these SEC-verified exchange prices."
+    },
+    "equifax_release": {
+      "url": "https://investor.equifax.com/news-events/press-releases/detail/240/equifax-announces-cybersecurity-incident-involving-consumer",
+      "kind": "issuer_release",
+      "locator": "Released September 7, 2017; announced cybersecurity incident",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Confirmed consumer-data incident, not unproven intelligence targeting or a chipmaker."
+    },
+    "equifax_prices": {
+      "url": "https://www.sec.gov/litigation/complaints/2018/comp-pr2018-40.pdf",
+      "kind": "regulator_document_price_reference",
+      "locator": "Complaint paragraphs describing after-close September 7 announcement and September 7/8 closing prices 142.72/123.23",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Later regulatory document cites closes; not raw exchange tape or original quote availability. Other legal allegations in document are not imported."
+    },
+    "tesla_charge": {
+      "url": "https://www.sec.gov/newsroom/press-releases/2018-219",
+      "kind": "regulator_release",
+      "locator": "Dated September 27, 2018; civil charges relating to public communications",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Charges are attributed to SEC; the clock is day-only. Not espionage or a proved analogy to Nvidia."
+    },
+    "tesla_settlement": {
+      "url": "https://www.sec.gov/newsroom/press-releases/2018-226",
+      "kind": "regulator_release",
+      "locator": "September 29, 2018 settlement and governance requirements",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Later counterevidence/update in the same historical episode, not another independent case."
+    },
+    "h20_release": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000082/nvda-20250409.htm",
+      "kind": "issuer_filing",
+      "locator": "Item 8.01: private notice April 9, indefinite requirement April 14, filed April 15",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Occurrence/private notice is not public availability. Restrictions are confirmed, unlike unresolved allegations."
+    },
+    "h20_index": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/0001045810-25-000082-index.html",
+      "kind": "filing_index",
+      "locator": "Accepted April 15, 2025 17:22:59, EDGAR Eastern convention",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Acceptance is not proof of earliest news dissemination."
+    },
+    "h20_pre": {
+      "url": "https://www.sec.gov/Archives/edgar/data/200245/000191870425006605/form424b2.htm",
+      "kind": "filed_third_party_prices",
+      "locator": "Nvidia stock section: closing value April 15, 2025 112.20",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Bank pricing supplement citing public market data; not SEC-verified tick data."
+    },
+    "h20_post": {
+      "url": "https://www.sec.gov/Archives/edgar/data/831001/000095010325005095/dp227960_424b8-us2559653.htm",
+      "kind": "filed_third_party_prices",
+      "locator": "Nvidia stock section: closing value April 16, 2025 104.49",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Bank pricing supplement citing public market data; not SEC-verified tick data."
+    },
+    "intel_filing": {
+      "url": "https://www.intc.com/filings-reports/all-sec-filings/content/0001193125-18-199045/d598882d8k.htm",
+      "kind": "issuer_filing",
+      "locator": "Item 5.02: June 21 announcement states the resignation occurred June 20, 2018",
+      "checked_on": "2026-11-14",
+      "capture": "curated facts through supported web reader; original HTTP bytes not retained",
+      "original_http_sha256": null,
+      "limitation": "Occurrence/private board action is distinct from the June 21 public announcement."
+    }
+  },
+  "limitations": [
+    "Nasdaq historical page displayed unavailable data; public historical API could not be retrieved by supported web reader.",
+    "Nvidia historical-price lookup exposed no prices in the static reader.",
+    "Nasdaq Dorsey Wright dated URL rendered a November 13 heading, so it was rejected as a November 9 historical source.",
+    "No nominal session boundary is presented as an individual verified exchange-print timestamp."
+  ]
+}
