@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] INT-2: Expand independent Gulf-storm comparisons and decision-time evidence ([Issue #31](https://github.com/Facemankev/Oil-event-replay/issues/31)), stacked on draft #30; frozen-policy evaluation, unchanged three-step interface, no merge — **Dad — Doing** — 2026-11-14
+
 
 
 
