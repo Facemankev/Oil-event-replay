@@ -45,3 +45,8 @@ No UI or original oil/source/account work is changed, no preview is overwritten
 and no branch is merged. Continue without waiting for Brendan; review is later.
 Next: retain authentic news receipts/versions and timestamped equity data, then
 expand comparable corporate episodes before reviewing GBP equity paper execution.
+
+The first Actions run caught a test-fixture dependency on a pre-existing local
+work directory. The new collector-to-detector integration test now creates its
+own workspace before making its temporary snapshot. This fixes clean-checkout
+execution; no production price, news or matching logic changed. Rerun full CI.

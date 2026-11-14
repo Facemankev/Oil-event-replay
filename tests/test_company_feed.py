@@ -11,6 +11,10 @@ ATOM = b'''<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>NVIDIA CEO up
 
 
 class CompanyFeedTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        (ROOT / 'work').mkdir(exist_ok=True)
+
     def test_timezone_and_actual_receipt_are_distinct(self):
         r = parse_feed(RSS, '2026-11-14T10:00:00Z')['articles'][0]
         self.assertEqual(r['published_at'], '2026-11-08T20:00:00Z')
