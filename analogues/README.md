@@ -199,6 +199,12 @@ establish a historical revision timestamp.
 
 ## Validation and next stage
 
+Local validation: **52 Python / 83 JavaScript tests passed**, all original and new
+report checks reproduce, real database imports repeat safely, and all ten Chromium
+browser scripts pass (including desktop/iPhone/iPad flows). Local WebKit downloads
+are network-policy blocked; [PR #33 Checks](https://github.com/Facemankev/Oil-event-replay/pull/33/checks)
+run the full WebKit suite and retain evidence/screenshots as an artifact.
+
 New tests cover source facts, conservative release boundaries, missing FX, weaker
 comparisons, duplicate IDs/episodes, full-context overlap, future price mutation,
 late counterevidence, original/expanded counts, cost sensitivity and safe read-only

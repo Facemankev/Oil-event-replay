@@ -13,7 +13,7 @@ history).
 
 ## Doing
 
-- [ ] INT-2: Expand independent Gulf-storm comparisons and decision-time evidence ([Issue #31](https://github.com/Facemankev/Oil-event-replay/issues/31)), stacked on draft #30; frozen-policy evaluation, unchanged three-step interface, no merge — **Dad — Doing** — 2026-11-14
+
 
 
 
@@ -44,6 +44,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] INT-2: Qualified Gulf-storm analogues and dated release evidence ([draft PR #33](https://github.com/Facemankev/Oil-event-replay/pull/33), on #30; [Issue #31](https://github.com/Facemankev/Oil-event-replay/issues/31)). Eight sourced storms added, 32 total; original 24 and expanded 32 all No Action, zero supported Buy. Local 52 Python / 83 JS and all Chromium regressions pass; full WebKit/CI status in PR Checks. Brendan review is non-blocking. Interface, original prices, parent reports and previews unchanged; no merge — **Dad** — 2026-11-14
 
 - [ ] DAT-4 / INT-1: Primary oil/FX validation and 24-event rerun ([draft PR #30](https://github.com/Facemankev/Oil-event-replay/pull/30), on #28; [Issue #29](https://github.com/Facemankev/Oil-event-replay/issues/29)). All 10,368 prices match current EIA; 5,224 numeric Fed rates; five-observation coverage Brent 18/24, WTI 22/24; Buy 0 / Hold 0 / No Action 24. Local 47 Python/72 JS passed; CI in PR Checks. Proceeded without waiting for Brendan; no merge or canonical/UI changes — **Dad** — 2026-11-13
 
