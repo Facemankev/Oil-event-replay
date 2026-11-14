@@ -207,6 +207,11 @@ portfolio performance or executable price is invented. The original paper accoun
 and its manual practice/exit reviews remain untouched. Findings are descriptive
 research, not a recommendation or guarantee.
 
+Local validation: **60 Python / 99 JavaScript tests pass**, all ten Chromium
+browser scripts pass, the original database imports repeat safely and all three
+parent reports reproduce. [Draft PR #34 Checks](https://github.com/Facemankev/Oil-event-replay/pull/34/checks)
+runs the complete WebKit/browser suite and retains the report, demos and screenshots.
+
 Tests cover bounded RSS/Atom parsing and collector-to-detector integration,
 source identity, receipt/version timing, syndication, disputed counterpoints,
 DST/holidays/unknown calendar, stale news, intraday missing data, conflicting opens,

@@ -111,7 +111,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 ## 5. Now
 
-- **Dad / EVT-1 / MAT:** Issue #32 in progress on `dad/evt-2-nvidia-news`, based on #33. Bounded Nvidia news/equity replay, sourced corporate-history cross-check and measured-vs-hypothetical ripple separation. Preserve three-step interface, oil work, original prices and previews. No review wait or merge.
+- **Dad / EVT-1 / MAT:** Issue #32 implemented in [draft PR #34](https://github.com/Facemankev/Oil-event-replay/pull/34), stacked on #33. Company-news detector/collector, receipt/version/dedup controls, four corporate-history cross-checks and daily equity/ripple replay. Initial Nvidia closing comparison -4.27%; peers/baseline positive; all eight cutoffs No Action. No verified intraday or original-availability claim; direct RSS tunnel denied, offline import works. Local 60 Python/99 JS and all Chromium pass; full CI/WebKit in PR Checks. Three-step UI, oil work, prices/accounts/previews unchanged. No merge or review wait; next authentic timestamped equity/news history before GBP execution.
 
 - **Dad / INT-2:** Issue #31 implemented in [draft PR #33](https://github.com/Facemankev/Oil-event-replay/pull/33), stacked on #30. Eight sourced storms (32 total), episode/context exclusions, dated release evidence and read-only original-API recovery inspector. Original 24: Brent 18/WTI 22 complete; expanded 32: Brent 24/WTI 28. All No Action; original-as-of completeness zero. Local 52 Python/83 JS and all Chromium regressions pass; full CI/WebKit in PR Checks. No review wait, UI/source changes, preview overwrite or merge. Next: authentic dated oil/FX vintages and outage/recovery evidence for one bounded cohort.
 
