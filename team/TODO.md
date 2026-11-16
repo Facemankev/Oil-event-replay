@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] EVT-2: Bounded fresh-news collection, receipt/revision journal and controlled alert latency ([Issue #35](https://github.com/Facemankev/Oil-event-replay/issues/35)), on #34; historical/opposing-market cross-checks, same UI and safeguards, draft only — **Dad — Doing** — 2026-11-16
+
 
 
 
