@@ -13,7 +13,6 @@ history).
 
 ## Doing
 
-- [ ] EVT-2: Bounded fresh-news collection, receipt/revision journal and controlled alert latency ([Issue #35](https://github.com/Facemankev/Oil-event-replay/issues/35)), on #34; historical/opposing-market cross-checks, same UI and safeguards, draft only — **Dad — Doing** — 2026-11-16
 
 
 
@@ -48,6 +47,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] EVT-2: Fresh-news receipt/revision journal, history/peer checks and local-card latency ([draft PR #36](https://github.com/Facemankev/Oil-event-replay/pull/36), on #34; [Issue #35](https://github.com/Facemankev/Oil-event-replay/issues/35)). Original Nvidia software feed: ten versions, no original publication clocks, all No Action; first HTTP-to-card 5.320 seconds, conditional 304/reanalysis 3.804 seconds. Financial-news/price sources blocked; no verified intraday prices or publication-to-useful-alert claim. Local 74 Python/109 JS and all Chromium pass; full CI/WebKit in PR Checks. UI, accounts, source snapshots and previews preserved. No review wait or merge — **Dad** — 2026-11-16
 
 - [ ] EVT-1 / MAT: Nvidia company-news replay and corporate-history/ripple cross-check ([draft PR #34](https://github.com/Facemankev/Oil-event-replay/pull/34), on #33; [Issue #32](https://github.com/Facemankev/Oil-event-replay/issues/32)). Six publication cards/four developments, four historical cases, 66 daily provider rows; eight cutoffs all No Action. Intraday prints/original availability unverified; direct RSS tunnel denied, offline path tested. Local 60 Python/99 JS and all Chromium pass; full CI/WebKit in PR Checks. No review wait, UI/account/data changes, preview overwrite or merge — **Dad** — 2026-11-14
 
