@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-11-16",
+  "mode": "manual_controlled_direct_HTTP; no continuous service",
+  "source": "https://github.com/NVIDIA/TensorRT-LLM/releases.atom",
+  "scope": "Original issuer software-release feed, not established financial materiality.",
+  "initial": {
+    "started_at": "2026-11-16T16:29:33.349823Z",
+    "received_at": "2026-11-16T16:29:38.439198Z",
+    "card_ready_at": "2026-11-16T16:29:38.669773Z",
+    "http_status": 200,
+    "response_body_sha256": "5df4da02c2fe8b62bf350909fee39b79458ea220541a07791b708ecee72c1d5e",
+    "bytes": 2472067,
+    "entries": 10,
+    "new_versions": 10,
+    "original_publication_known": 0,
+    "fresh_original_items": 0,
+    "Buy": 0,
+    "No_Action": 10,
+    "phases_ms": {
+      "fetch_ms": 5078.573,
+      "normalize_ms": 152.828,
+      "ingest_total_ms": 5243.439,
+      "analysis_ms": 73.21,
+      "fetch_to_card_ms": 5319.97
+    }
+  },
+  "conditional_repeat": {
+    "http_status": 304,
+    "status": "not_modified",
+    "new_versions": 0,
+    "phases_ms": {
+      "analysis_ms": 123.152,
+      "fetch_to_card_ms": 3804.26
+    }
+  },
+  "blocked_sources": [
+    {
+      "source_id": "nvidia_news",
+      "status": "http_403",
+      "http_status": 403,
+      "started_at": "2026-11-16T16:23:36.070965Z",
+      "received_at": "2026-11-16T16:23:36.086942Z",
+      "new_versions": 0,
+      "transport_denial": true
+    },
+    {
+      "source_id": "fed_news",
+      "status": "http_403",
+      "http_status": 403,
+      "started_at": "2026-11-16T16:23:36.222315Z",
+      "received_at": "2026-11-16T16:23:36.238600Z",
+      "new_versions": 0,
+      "transport_denial": true
+    }
+  ],
+  "price_probe": {
+    "source_url": "https://api.nasdaq.com/api/quote/NVDA/info?assetclass=stocks",
+    "verified_timestamped_price_obtained": false,
+    "http_status": 403,
+    "error_kind": "transport_or_policy_failure"
+  },
+  "publication_to_alert_latency_seconds": null,
+  "verified_intraday_price_observations": 0,
+  "external_alerts_sent": 0,
+  "limitations": [
+    "Publisher feed exposes updated times without original published times; no fresh original financial news established.",
+    "Software release notes are product updates, not demonstrated market-moving corporate announcements.",
+    "Two timing samples do not establish a service level, polling coverage or delivery speed.",
+    "Missing financial-news and exchange access is not replaced by cached/daily or invented evidence."
+  ]
+}

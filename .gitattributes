@@ -5,3 +5,6 @@ verification/sources/*.csv -text
 
 # Company-news source snapshots retain their reviewed byte fingerprints on Windows.
 equities/*.json -text
+
+# Fresh-news pilot source registry keeps consistent bytes on Windows.
+news_pilot/*.json -text

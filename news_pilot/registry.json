@@ -1,0 +1,33 @@
+{
+  "nvidia_releases": {
+    "url": "https://github.com/NVIDIA/TensorRT-LLM/releases.atom",
+    "link_prefix": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/",
+    "company": "NVDA",
+    "kind": "product_release",
+    "family": "NVIDIA/TensorRT-LLM",
+    "min_interval": 60,
+    "scope": "Official software release updates; financial materiality is unestablished."
+  },
+  "nvidia_news": {
+    "url": "https://nvidianews.nvidia.com/releases.xml",
+    "link_prefix": "https://nvidianews.nvidia.com/news/",
+    "company": "NVDA",
+    "kind": "company_news",
+    "family": "NVIDIA/newsroom",
+    "min_interval": 60,
+    "scope": "Issuer news; earlier independent reporting may be absent.",
+    "alternate_article_prefixes": [
+      "https://investor.nvidia.com/news/press-release-details/",
+      "https://www.nasdaq.com/press-release/statement-nvidia-board-directors-2026-11-08"
+    ]
+  },
+  "fed_news": {
+    "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+    "link_prefix": "https://www.federalreserve.gov/newsevents/pressreleases/",
+    "company": null,
+    "kind": "wider_market",
+    "family": "FederalReserve",
+    "min_interval": 60,
+    "scope": "Official central-bank releases; not every release is market-moving."
+  }
+}
