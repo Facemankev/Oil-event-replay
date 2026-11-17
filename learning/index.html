@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Market Ripple — chronological learning research</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../simulations/design.css">
+  <link rel="stylesheet" href="../simulations/view.css">
+</head>
+<body class="mr-page">
+<div class="mr-wrap mr-stack">
+  <header class="mr-bar mr-glass">
+    <h1 class="mr-brand"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="7" cy="23" r="3" fill="currentColor"/><path d="M7 14a9 9 0 0 1 9 9M7 8a15 15 0 0 1 15 15M7 2a21 21 0 0 1 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Market Ripple</h1>
+    <span class="mr-badge">Chronological research only</span>
+  </header>
+  <div class="theme-switch" role="group" aria-label="Colour theme">
+    <button class="mr-btn" type="button" data-theme="light" aria-pressed="true">Light</button>
+    <button class="mr-btn" type="button" data-theme="dark" aria-pressed="false">Dark</button>
+  </div>
+  <section class="mr-panel mr-glass">
+    <h2 class="mr-hero">Learn from <span class="mr-hl">earlier events</span></h2>
+    <p class="mr-lead">Candidate rules are learned from earlier events, checked on a separate validation period, then locked before later outcomes are measured. This small historical sample does not establish a repeatable pattern or validated recommendation.</p>
+    <label class="opt-in"><input type="checkbox" id="opt-in">Show exploratory learning research</label>
+    <p id="load-status" role="status" class="mr-note">Research is off. No practice-account action is available.</p>
+    <div id="controls" hidden><label for="case">Choose a later historical test event</label><select id="case" disabled></select></div>
+  </section>
+  <main id="answers" class="mr-stack" hidden aria-live="polite">
+    <section class="mr-panel mr-glass" data-answer="what_happened"><h2>1. What happened?</h2><p id="what"></p><p id="when" class="mr-note"></p><p id="event-source" class="mr-note"></p></section>
+    <section class="mr-panel mr-glass" data-answer="likely_outcome"><h2>2. What might it mean?</h2><p id="meaning"></p><p id="coverage"></p>
+      <details class="mr-disclosure"><summary>Inspect the earlier learning and validation</summary><p id="method"></p><p id="model"></p><div class="mr-table-scroll"><table class="mr-table"><thead><tr><th>Earlier rule / observations</th><th>Settled / signals</th><th>Positive / negative</th><th>Mean net GBP</th><th>Risk-adjusted score</th></tr></thead><tbody id="training"></tbody></table></div><p id="validation" class="mr-note"></p></details>
+      <details class="mr-disclosure"><summary>Inspect the later dated hypothetical outcome</summary><p id="outcome"></p><div class="mr-table-scroll"><table class="mr-table"><thead><tr><th>Date</th><th>Sourced reference</th><th>GBP value per unit</th><th>Hypothetical action</th></tr></thead><tbody id="path"></tbody></table></div><p id="sources" class="mr-note"></p><p class="mr-note">Daily EIA/Fed reporting references are not executable exchange fills. Missing prices are not filled. For all fixed-rule charts, gains/losses, costs and baselines, <a href="../simulations/">open the separate simulation study</a>.</p></details>
+    </section>
+    <section class="mr-panel mr-glass" data-answer="suggested_action"><h2>3. What should I do?</h2><p id="action" class="mr-figure">No Action</p><p id="suggestion"></p><p class="mr-note">Validated action: No Action. Research Watch is not a supported Buy. No calibrated probability, proven edge, order or practice-account change exists. Historical results do not guarantee a repeat.</p></section>
+  </main>
+  <details class="mr-panel mr-glass mr-disclosure"><summary>Check the complete holdout and limitations</summary><p id="summary"></p><p id="limits" class="mr-note"></p><p class="mr-note">Prediction audit timestamps are actual research-run times recorded now. Historical decision bounds are simulated; they are never relabelled as original past forecasts. Revised later observations append versions without overwriting predictions.</p></details>
+  <footer class="mr-note">Prepared 17 November 2026. Free retained data only. No numerical forecast probability or validated trading recommendation. Historical patterns do not guarantee future results.</footer>
+</div>
+<script type="module" src="view.mjs"></script>
+</body>
+</html>

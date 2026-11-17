@@ -27,9 +27,9 @@ history).
 
 
 
+
 ## To do
 
-- [ ] LEARN-1: Train/validate/held-out candidate learning and immutable prediction audit ([Issue #44](https://github.com/Facemankev/Oil-event-replay/issues/44)); build after SIM-1 #43 — **Dad** — 2026-11-17
 - [ ] IPO-1: Separate IPO discovery/investable-outcome work ([Issue #42](https://github.com/Facemankev/Oil-event-replay/issues/42)); no allocation/IPO price assumptions in SIM-1 — **unassigned** — 2026-11-17
 
 - [ ] DAT-3: Reconcile Brent/WTI against authenticated primary EIA data; retain discrepancy/revision evidence before extending matching — **Dad** — 2026-10-29
@@ -53,6 +53,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] LEARN-1: Chronological candidate fitting and immutable later-event audit ([draft PR #46](https://github.com/Facemankev/Oil-event-replay/pull/46), on #45; [Issue #44](https://github.com/Facemankev/Oil-event-replay/issues/44)). Seven training / eleven validation / 21 later retained primary-event cases, 27 candidate fits; no cohort qualifies. Four diagnostic Watch: one settled gain / one settled loss / two incomplete; seventeen research No Action. Baseline ten settled (six positive/four negative); zero supported entries, no calibration/edge claim. Actual audit 21 predictions then 21 settlements, repeat adds zero. Local 142 Python/112 JS and Chromium profiles pass; final CI/WebKit in PR Checks. [Public learning preview](https://market-ripple-research-lab.g86hz2pjsh.chatgpt.site/learning/) and [SIM-1 preview](https://market-ripple-research-lab.g86hz2pjsh.chatgpt.site/simulations/) are separately published; native hosting confirms deployment, hosted-browser access is restricted in this executor. Full traces local, UI/accounts/prices/gates preserved; £0 data, no merge or review wait — **Dad** — 2026-11-17
 
 - [ ] SIM-1: Retrospective costed hypotheses ([draft PR #45](https://github.com/Facemankev/Oil-event-replay/pull/45), on #41; [Issue #43](https://github.com/Facemankev/Oil-event-replay/issues/43)). 51-event gate diagnosis, 151 target pairs, 69 default settled paths / 34 positive / 35 negative after costs, all 36 rule/cost summaries and optional three-answer charts. Local 126 Python/112 JS and Chromium profiles pass; final full CI/WebKit in PR Checks. Full traces local, compact public evidence; accounts/prices/UI/gates preserved, £0 data, no merge. LEARN-1 follows after checks — **Dad** — 2026-11-17
 
