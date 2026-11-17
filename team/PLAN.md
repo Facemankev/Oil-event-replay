@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-11-16 by Dad (fresh-news pilot)
+Last updated: 2026-11-17 by Dad (cross-market history)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -110,6 +110,8 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Isolated Gold × Desk visual preview | BRD-2 | Done | Dad | Approved PR #15; public preview, original design preserved |
 
 ## 5. Now
+
+- **Dad / HIST-1:** Issue #38 in progress on `dad/hist-1-cross-market-analogues`, based on #36. Expand source-backed history across six market groups with explicit price/vintage gaps, outcome-blind matching and a reusable evidence export for LIVE-1 #37. Preserve the interface, accounts and existing sources/reports/previews. No merge.
 
 - **Dad / EVT-2:** Issue #35 implemented in [draft PR #36](https://github.com/Facemankev/Oil-event-replay/pull/36), stacked on #34. Append-only real receipts/revisions, source cooldown/backoff, history/peer checks and local-card timings. Original software feed: ten context-only / No Action cards; first fetch-to-card 5.320 seconds, conditional 304/reanalysis 3.804 seconds. No fresh original financial items established; financial sources/price probe blocked and publication-to-useful-alert latency unknown. Local 74 Python/109 JS and all Chromium pass; full CI/WebKit in PR Checks. UI, accounts, original data and previews unchanged. No merge/review wait. Next: permitted financial news and verified timestamped prices before an operating-coverage study.
 

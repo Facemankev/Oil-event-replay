@@ -1,0 +1,940 @@
+{
+  "schema_version": 1,
+  "selection": "Purposive, retrospectively curated teaching/research cases selected for mechanisms and counterexamples. Corpus selection is not blinded or representative; deterministic matching alone is outcome-blind.",
+  "sources": {
+    "fed-cut-mar3": {
+      "id": "fed-cut-mar3",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200303a.htm",
+      "publisher": "Federal Reserve",
+      "published_day": "2020-03-03",
+      "published_at": "2020-03-03T10:00:00-05:00",
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "For release at 10:00 a.m. EST; policy paragraph",
+      "summary": "The FOMC reduced its target range by 50 basis points in response to coronavirus risks.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "fed-cut-mar15": {
+      "id": "fed-cut-mar15",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm",
+      "publisher": "Federal Reserve",
+      "published_day": "2020-03-15",
+      "published_at": "2020-03-15T17:00:00-04:00",
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "For release at 5:00 p.m. EDT; target-range and purchase paragraphs",
+      "summary": "The FOMC cut its target range to 0–0.25 percent and announced securities purchases.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "fed-hike-jun22": {
+      "id": "fed-hike-jun22",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm",
+      "publisher": "Federal Reserve",
+      "published_day": "2022-06-15",
+      "published_at": "2022-06-15T14:00:00-04:00",
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "For release at 2:00 p.m. EDT; target-range paragraph",
+      "summary": "The FOMC raised its target range to 1.50–1.75 percent while citing elevated inflation.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "fed-hold-jun23": {
+      "id": "fed-hold-jun23",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a.htm",
+      "publisher": "Federal Reserve",
+      "published_day": "2023-06-14",
+      "published_at": "2023-06-14T14:00:00-04:00",
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "For release at 2:00 p.m. EDT; hold paragraph",
+      "summary": "The FOMC held its 5.00–5.25 percent range while assessing cumulative tightening.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "fed-jun22-transcript": {
+      "id": "fed-jun22-transcript",
+      "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20220615.pdf",
+      "publisher": "Federal Reserve",
+      "published_day": "2022-06-15",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "Opening remarks; 75 basis point rate hike",
+      "summary": "The Chair described the decision as a 75 basis point increase.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "boe-cut-2016": {
+      "id": "boe-cut-2016",
+      "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-august-2016",
+      "publisher": "Bank of England",
+      "published_day": "2016-08-04",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "Published 4 August; meeting ending 3 August; package paragraphs",
+      "summary": "The MPC announced a reduction to 0.25 percent and an asset-purchase package after its meeting ended on 3 August.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "boe-hike-2017": {
+      "id": "boe-hike-2017",
+      "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2017/november-2017",
+      "publisher": "Bank of England",
+      "published_day": "2017-11-02",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "Published 2 November; opening paragraph",
+      "summary": "The MPC announced a 0.25 percentage point increase to 0.5 percent after its meeting ended on 1 November.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "boe-brexit-2016": {
+      "id": "boe-brexit-2016",
+      "url": "https://www.bankofengland.co.uk/news/2016/june/statement-from-the-governor-of-the-boe-following-the-eu-referendum-result",
+      "publisher": "Bank of England",
+      "published_day": "2016-06-24",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "Published 24 June; referendum-result statement",
+      "summary": "The Governor described the Bank’s response to the referendum result and readiness to support financial stability.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "nvda-q1-2023": {
+      "id": "nvda-q1-2023",
+      "url": "https://investor.nvidia.com/news/press-release-details/2023/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2024/default.aspx",
+      "publisher": "NVIDIA",
+      "published_day": "2023-05-24",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "May 24 heading; outlook paragraph",
+      "summary": "Nvidia reported quarterly results and a next-quarter revenue outlook of approximately eleven billion dollars.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "biib-halt-2019": {
+      "id": "biib-halt-2019",
+      "url": "https://investors.biogen.com/news-releases/news-release-details/biogen-and-eisai-discontinue-phase-3-engage-and-emerge-trials",
+      "publisher": "Biogen",
+      "published_day": "2019-03-21",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "March 21 heading; discontinuation and futility paragraphs",
+      "summary": "Biogen and Eisai stopped two Phase 3 aducanumab trials after a futility assessment; the recommendation was not based on safety concerns.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "biib-reanalysis-2019": {
+      "id": "biib-reanalysis-2019",
+      "url": "https://investors.biogen.com/news-releases/news-release-details/biogen-plans-regulatory-filing-aducanumab-alzheimers-disease",
+      "publisher": "Biogen",
+      "published_day": "2019-10-22",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "October 22 heading; larger-dataset and filing paragraphs",
+      "summary": "A larger reanalysis led Biogen to plan a regulatory filing for the same previously stopped aducanumab programme.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "pfe-interim-2020": {
+      "id": "pfe-interim-2020",
+      "url": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-and-biontech-announce-vaccine-candidate-against",
+      "publisher": "Pfizer",
+      "published_day": "2020-11-09",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "November 9 heading; interim analysis was conducted on November 8; printed 06:45am has no explicit timezone",
+      "summary": "An interim Phase 3 analysis suggested vaccine efficacy above ninety percent; safety follow-up and regulatory review remained pending.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "fda-pfe-eua-2020": {
+      "id": "fda-pfe-eua-2020",
+      "url": "https://content.govdelivery.com/accounts/USFDA/bulletins/2b0c5c3",
+      "publisher": "US FDA",
+      "published_day": "2020-12-11",
+      "published_at": "2020-12-11T21:41:00-05:00",
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "Official FDA bulletin sent 12/11/2020 09:41 PM EST",
+      "summary": "The FDA issued emergency authorization for the Pfizer–BioNTech vaccine for people aged sixteen and above.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "gold-fed-report": {
+      "id": "gold-fed-report",
+      "url": "https://ca.investing.com/news/commodities-news/gold-surges-over-3-after-us-feds-emergency-rate-cut-2080399",
+      "publisher": "Reuters via Investing.com",
+      "published_day": "2020-03-03",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "secondary_market_report",
+      "locator": "Settlement paragraph; GCv1; generic front contract, no immutable contract identifier supplied",
+      "summary": "Reuters reported gold futures settling 3.1 percent higher. Spot and futures marks are distinct.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false,
+      "limitation": "Current page with a printed historical date; original article version, receipt time, adjustment factors and exchange print timestamps are not verified."
+    },
+    "gold-vaccine-report": {
+      "id": "gold-vaccine-report",
+      "url": "https://ca.investing.com/news/commodities-news/preciousgold-plunges-5-as-stocks-soar-on-covid19-vaccine-euphoria-2295622",
+      "publisher": "Reuters via Investing.com",
+      "published_day": "2020-11-09",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "secondary_market_report",
+      "locator": "Futures-settlement paragraph; GCv1; do not substitute spot intraday quote",
+      "summary": "Reuters reported gold futures settling five percent lower during the vaccine-news session.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false,
+      "limitation": "Current page with a printed historical date; original article version, receipt time, adjustment factors and exchange print timestamps are not verified."
+    },
+    "biib-fall-report": {
+      "id": "biib-fall-report",
+      "url": "https://za.investing.com/news/stock-market-news/us-stockswall-street-rises-as-apple-tech-shares-climb-1433600",
+      "publisher": "Reuters via Investing.com",
+      "published_day": "2019-03-21",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "secondary_market_report",
+      "locator": "Closing Nasdaq index and Biogen paragraphs",
+      "summary": "The closing market report described Biogen falling 29.2 percent while Nasdaq rose 1.42 percent.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false,
+      "limitation": "Current page with a printed historical date; original article version, receipt time, adjustment factors and exchange print timestamps are not verified."
+    },
+    "biib-rebound-report": {
+      "id": "biib-rebound-report",
+      "url": "https://ca.investing.com/news/stock-market-news/us-shares-lower-at-close-of-trade-dow-jones-industrial-average-down-015-1989319",
+      "publisher": "Investing.com",
+      "published_day": "2019-10-22",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "secondary_market_report",
+      "locator": "NASDAQ Composite component-performance paragraph",
+      "summary": "The closing recap reported Biogen gaining 26.11 percent. This is the same drug programme as the March discontinuation.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false,
+      "limitation": "Current page with a printed historical date; original article version, receipt time, adjustment factors and exchange print timestamps are not verified."
+    },
+    "nvda-session-report": {
+      "id": "nvda-session-report",
+      "url": "https://www.investing.com/news/stock-market-news/us-stocks-mixed-at-close-of-trade-dow-jones-industrial-average-down-011-3091358",
+      "publisher": "Investing.com",
+      "published_day": "2023-05-25",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "secondary_market_report",
+      "locator": "Closing performance paragraph; contemporary nominal share price differs from later split-adjusted histories",
+      "summary": "The session recap reported Nvidia shares rising 24.37 percent.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false,
+      "limitation": "Current page with a printed historical date; original article version, receipt time, adjustment factors and exchange print timestamps are not verified."
+    },
+    "nvda-index-report": {
+      "id": "nvda-index-report",
+      "url": "https://www.investing.com/news/stock-market-news/wall-street-ends-higher-as-nvidia-sparks-rush-for-ai-stocks-3090585",
+      "publisher": "Reuters via Investing.com",
+      "published_day": "2023-05-25",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "secondary_market_report",
+      "locator": "Nasdaq closing paragraph",
+      "summary": "Reuters reported Nasdaq gaining 1.71 percent in the Nvidia-results session.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false,
+      "limitation": "Current page with a printed historical date; original article version, receipt time, adjustment factors and exchange print timestamps are not verified."
+    },
+    "fed-cut-index-report": {
+      "id": "fed-cut-index-report",
+      "url": "https://in.investing.com/news/us-stocksanother-foul-day-on-wall-street-after-surprise-fed-rate-cut-2166477",
+      "publisher": "Reuters via Investing.com",
+      "published_day": "2020-03-03",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "secondary_market_report",
+      "locator": "Closing index paragraph",
+      "summary": "Reuters reported Nasdaq falling 2.99 percent despite the emergency cut.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false,
+      "limitation": "Current page with a printed historical date; original article version, receipt time, adjustment factors and exchange print timestamps are not verified."
+    },
+    "fed-hike-index-report": {
+      "id": "fed-hike-index-report",
+      "url": "https://www.investing.com/news/economy/focus-on-fed-as-futures-edge-higher-ahead-of-rate-decision-2837335",
+      "publisher": "Reuters via Investing.com",
+      "published_day": "2022-06-15",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "secondary_market_report",
+      "locator": "Final closing index paragraph; the report gives a slightly different last index decimal from some tables",
+      "summary": "Reuters reported Nasdaq gaining 2.5 percent in the June policy session.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false,
+      "limitation": "Current page with a printed historical date; original article version, receipt time, adjustment factors and exchange print timestamps are not verified."
+    },
+    "pfe-session-report": {
+      "id": "pfe-session-report",
+      "url": "https://abcnews.com/Business/dow-surges-1500-points-vaccine-hopes/story?id=74104964",
+      "publisher": "ABC News",
+      "published_day": "2020-11-09",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "secondary_market_report",
+      "locator": "Nasdaq closing paragraph",
+      "summary": "The closing recap reported Pfizer gaining 7.7 percent and Nasdaq falling 1.5 percent.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false,
+      "limitation": "Current page with a printed historical date; original article version, receipt time, adjustment factors and exchange print timestamps are not verified."
+    }
+  },
+  "events": [
+    {
+      "id": "fed-2020-emergency-cut",
+      "revision": 1,
+      "title": "Fed emergency 50 bp cut",
+      "category": "monetary_policy",
+      "mechanism": "cut",
+      "primary_group": "stock_indices",
+      "occurred_day": "2020-03-03",
+      "public_day": "2020-03-03",
+      "public_at": "2020-03-03T10:00:00-05:00",
+      "publication_source": "fed-cut-mar3",
+      "episode_id": "covid-fed-2020",
+      "location": [
+        "US"
+      ],
+      "stage": "announced",
+      "impact": "discount_rate_and_liquidity",
+      "regime": "pandemic_policy_response",
+      "severity": {
+        "scale": "policy_change_basis_points",
+        "value": 50,
+        "source_id": "fed-cut-mar3"
+      },
+      "targets": [
+        "nasdaq_composite",
+        "gold_futures_reported",
+        "gbpusd",
+        "brent",
+        "wti"
+      ],
+      "source_ids": [
+        "fed-cut-mar3"
+      ],
+      "summary": "The FOMC reduced its target range by 50 basis points in response to coronavirus risks.",
+      "weaknesses": [
+        "Policy announcement is not a surprise measure; other pandemic/inflation news and guidance may dominate.",
+        "One episode per pandemic policy sequence; cut, hike and hold are different directions."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "fed-2020-zero-range",
+      "revision": 1,
+      "title": "Fed cuts to near zero on Sunday",
+      "category": "monetary_policy",
+      "mechanism": "cut",
+      "primary_group": "stock_indices",
+      "occurred_day": "2020-03-15",
+      "public_day": "2020-03-15",
+      "public_at": "2020-03-15T17:00:00-04:00",
+      "publication_source": "fed-cut-mar15",
+      "episode_id": "covid-fed-2020",
+      "location": [
+        "US"
+      ],
+      "stage": "announced",
+      "impact": "discount_rate_and_liquidity",
+      "regime": "pandemic_policy_response",
+      "severity": {
+        "scale": "policy_change_basis_points",
+        "value": 100,
+        "source_id": "fed-cut-mar15",
+        "basis": "Derived 100 bp difference between the target-range upper bounds published March 3 (1.25%) and March 15 (0.25%); both releases precede this decision cutoff.",
+        "supporting_source_ids": [
+          "fed-cut-mar3",
+          "fed-cut-mar15"
+        ]
+      },
+      "targets": [
+        "nasdaq_composite",
+        "gold_futures_reported",
+        "gbpusd",
+        "brent",
+        "wti"
+      ],
+      "source_ids": [
+        "fed-cut-mar15",
+        "fed-cut-mar3"
+      ],
+      "summary": "The FOMC cut its target range to 0–0.25 percent and announced securities purchases.",
+      "weaknesses": [
+        "Policy announcement is not a surprise measure; other pandemic/inflation news and guidance may dominate.",
+        "One episode per pandemic policy sequence; cut, hike and hold are different directions."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "fed-2022-june-hike",
+      "revision": 1,
+      "title": "Fed June 2022 75 bp increase",
+      "category": "monetary_policy",
+      "mechanism": "hike",
+      "primary_group": "stock_indices",
+      "occurred_day": "2022-06-15",
+      "public_day": "2022-06-15",
+      "public_at": "2022-06-15T14:00:00-04:00",
+      "publication_source": "fed-hike-jun22",
+      "episode_id": "fed-meeting-2022-06",
+      "location": [
+        "US"
+      ],
+      "stage": "announced",
+      "impact": "discount_rate_and_liquidity",
+      "regime": "inflation_tightening",
+      "severity": {
+        "scale": "policy_change_basis_points",
+        "value": 75,
+        "source_id": "fed-jun22-transcript"
+      },
+      "targets": [
+        "nasdaq_composite",
+        "gold_futures_reported",
+        "gbpusd",
+        "brent",
+        "wti"
+      ],
+      "source_ids": [
+        "fed-hike-jun22",
+        "fed-jun22-transcript"
+      ],
+      "summary": "The FOMC raised its target range to 1.50–1.75 percent while citing elevated inflation.",
+      "weaknesses": [
+        "Policy announcement is not a surprise measure; other pandemic/inflation news and guidance may dominate.",
+        "One episode per pandemic policy sequence; cut, hike and hold are different directions."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "fed-2023-june-hold",
+      "revision": 1,
+      "title": "Fed June 2023 unchanged target range",
+      "category": "monetary_policy",
+      "mechanism": "hold",
+      "primary_group": "stock_indices",
+      "occurred_day": "2023-06-14",
+      "public_day": "2023-06-14",
+      "public_at": "2023-06-14T14:00:00-04:00",
+      "publication_source": "fed-hold-jun23",
+      "episode_id": "fed-meeting-2023-06",
+      "location": [
+        "US"
+      ],
+      "stage": "announced",
+      "impact": "discount_rate_and_liquidity",
+      "regime": "inflation_tightening",
+      "severity": {
+        "scale": "policy_change_basis_points",
+        "value": 0,
+        "source_id": "fed-hold-jun23"
+      },
+      "targets": [
+        "nasdaq_composite",
+        "gold_futures_reported",
+        "gbpusd",
+        "brent",
+        "wti"
+      ],
+      "source_ids": [
+        "fed-hold-jun23"
+      ],
+      "summary": "The FOMC held its 5.00–5.25 percent range while assessing cumulative tightening.",
+      "weaknesses": [
+        "Policy announcement is not a surprise measure; other pandemic/inflation news and guidance may dominate.",
+        "One episode per pandemic policy sequence; cut, hike and hold are different directions."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "boe-2016-august-cut",
+      "revision": 1,
+      "title": "Bank of England August 2016 easing package",
+      "category": "monetary_policy",
+      "mechanism": "cut",
+      "primary_group": "currencies",
+      "occurred_day": "2016-08-03",
+      "public_day": "2016-08-04",
+      "public_at": null,
+      "publication_source": "boe-cut-2016",
+      "episode_id": "boe-brexit-2016",
+      "location": [
+        "UK"
+      ],
+      "stage": "announced",
+      "impact": "discount_rate_and_liquidity",
+      "regime": "post_referendum",
+      "severity": {
+        "scale": "policy_change_basis_points",
+        "value": 25,
+        "source_id": "boe-cut-2016"
+      },
+      "targets": [
+        "gbpusd",
+        "brent",
+        "wti"
+      ],
+      "source_ids": [
+        "boe-cut-2016"
+      ],
+      "summary": "The MPC announced a reduction to 0.25 percent and an asset-purchase package after its meeting ended on 3 August.",
+      "weaknesses": [
+        "Cut and asset purchases arrived together. Publication clock is unknown."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "boe-2017-november-hike",
+      "revision": 1,
+      "title": "Bank of England November 2017 increase",
+      "category": "monetary_policy",
+      "mechanism": "hike",
+      "primary_group": "currencies",
+      "occurred_day": "2017-11-01",
+      "public_day": "2017-11-02",
+      "public_at": null,
+      "publication_source": "boe-hike-2017",
+      "episode_id": "boe-meeting-2017-11",
+      "location": [
+        "UK"
+      ],
+      "stage": "announced",
+      "impact": "discount_rate_and_liquidity",
+      "regime": "brexit_uncertainty",
+      "severity": {
+        "scale": "policy_change_basis_points",
+        "value": 25,
+        "source_id": "boe-hike-2017"
+      },
+      "targets": [
+        "gbpusd",
+        "brent",
+        "wti"
+      ],
+      "source_ids": [
+        "boe-hike-2017"
+      ],
+      "summary": "The MPC announced a 0.25 percentage point increase to 0.5 percent after its meeting ended on 1 November.",
+      "weaknesses": [
+        "Guidance and prior expectations differ from an unanticipated policy shock. Publication clock is unknown."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "brexit-2016-boe-response",
+      "revision": 1,
+      "title": "Bank of England responds to referendum result",
+      "category": "political_event",
+      "mechanism": "referendum_response",
+      "primary_group": "currencies",
+      "occurred_day": "2016-06-24",
+      "public_day": "2016-06-24",
+      "public_at": null,
+      "publication_source": "boe-brexit-2016",
+      "episode_id": "boe-brexit-2016",
+      "location": [
+        "UK",
+        "EU"
+      ],
+      "stage": "official_response",
+      "impact": "political_uncertainty",
+      "regime": null,
+      "severity": null,
+      "targets": [
+        "gbpusd",
+        "brent",
+        "wti",
+        "gold_futures_reported",
+        "nasdaq_composite"
+      ],
+      "source_ids": [
+        "boe-brexit-2016"
+      ],
+      "summary": "The Governor described the Bank’s response to the referendum result and readiness to support financial stability.",
+      "weaknesses": [
+        "This is the Bank’s supporting statement, not the first release of the referendum result. Earlier results and anticipation existed."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "nvidia-2023-q1-outlook",
+      "revision": 1,
+      "title": "Nvidia Q1 FY2024 results and revenue outlook",
+      "category": "earnings",
+      "mechanism": "earnings_and_guidance",
+      "primary_group": "technology_equities",
+      "occurred_day": "2023-05-24",
+      "public_day": "2023-05-24",
+      "public_at": null,
+      "publication_source": "nvda-q1-2023",
+      "episode_id": "nvda-earnings-2023-05",
+      "location": [
+        "US"
+      ],
+      "stage": "reported",
+      "impact": "earnings_expectations",
+      "regime": null,
+      "severity": null,
+      "targets": [
+        "NVDA",
+        "nasdaq_composite"
+      ],
+      "source_ids": [
+        "nvda-q1-2023"
+      ],
+      "summary": "Nvidia reported quarterly results and a next-quarter revenue outlook of approximately eleven billion dollars.",
+      "weaknesses": [
+        "No pre-release consensus or surprise magnitude is verified. Original publication clock and adjusted price series are missing."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "biogen-2019-futility",
+      "revision": 1,
+      "title": "Biogen stops aducanumab Phase 3 studies",
+      "category": "drug_development",
+      "mechanism": "clinical_trial",
+      "primary_group": "pharmaceuticals",
+      "occurred_day": null,
+      "public_day": "2019-03-21",
+      "public_at": null,
+      "publication_source": "biib-halt-2019",
+      "episode_id": "aducanumab-development",
+      "location": [
+        "US"
+      ],
+      "stage": "announced_futility_stop",
+      "impact": "product_development",
+      "regime": null,
+      "severity": null,
+      "targets": [
+        "BIIB",
+        "nasdaq_composite"
+      ],
+      "source_ids": [
+        "biib-halt-2019"
+      ],
+      "summary": "Biogen and Eisai stopped two Phase 3 aducanumab trials after a futility assessment; the recommendation was not based on safety concerns.",
+      "weaknesses": [
+        "Different disease, endpoint, trial design, development stage and commercial exposure can invalidate comparisons.",
+        "Later reanalysis/authorization cannot enter earlier decisions; repeated programme stages are not independent cases.",
+        "Announcement day is verified; the private decision/reanalysis completion day is not established."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "biogen-2019-reanalysis",
+      "revision": 1,
+      "title": "Biogen reverses course after larger reanalysis",
+      "category": "drug_development",
+      "mechanism": "clinical_trial",
+      "primary_group": "pharmaceuticals",
+      "occurred_day": null,
+      "public_day": "2019-10-22",
+      "public_at": null,
+      "publication_source": "biib-reanalysis-2019",
+      "episode_id": "aducanumab-development",
+      "location": [
+        "US"
+      ],
+      "stage": "announced_reanalysis_filing_plan",
+      "impact": "product_development",
+      "regime": null,
+      "severity": null,
+      "targets": [
+        "BIIB",
+        "nasdaq_composite"
+      ],
+      "source_ids": [
+        "biib-reanalysis-2019"
+      ],
+      "summary": "A larger reanalysis led Biogen to plan a regulatory filing for the same previously stopped aducanumab programme.",
+      "weaknesses": [
+        "Different disease, endpoint, trial design, development stage and commercial exposure can invalidate comparisons.",
+        "Later reanalysis/authorization cannot enter earlier decisions; repeated programme stages are not independent cases.",
+        "Announcement day is verified; the private decision/reanalysis completion day is not established."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "pfizer-2020-interim",
+      "revision": 1,
+      "title": "Pfizer–BioNTech interim Phase 3 results",
+      "category": "drug_development",
+      "mechanism": "clinical_trial",
+      "primary_group": "pharmaceuticals",
+      "occurred_day": "2020-11-08",
+      "public_day": "2020-11-09",
+      "public_at": null,
+      "publication_source": "pfe-interim-2020",
+      "episode_id": "bnt162b2-development",
+      "location": [
+        "US"
+      ],
+      "stage": "announced_interim_efficacy",
+      "impact": "product_development",
+      "regime": null,
+      "severity": null,
+      "targets": [
+        "PFE",
+        "gold_futures_reported",
+        "nasdaq_composite",
+        "brent",
+        "wti",
+        "gbpusd"
+      ],
+      "source_ids": [
+        "pfe-interim-2020"
+      ],
+      "summary": "An interim Phase 3 analysis suggested vaccine efficacy above ninety percent; safety follow-up and regulatory review remained pending.",
+      "weaknesses": [
+        "Different disease, endpoint, trial design, development stage and commercial exposure can invalidate comparisons.",
+        "Later reanalysis/authorization cannot enter earlier decisions; repeated programme stages are not independent cases."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "pfizer-2020-eua",
+      "revision": 1,
+      "title": "FDA emergency authorization for Pfizer–BioNTech vaccine",
+      "category": "drug_development",
+      "mechanism": "regulatory_authorization",
+      "primary_group": "pharmaceuticals",
+      "occurred_day": "2020-12-11",
+      "public_day": "2020-12-11",
+      "public_at": "2020-12-11T21:41:00-05:00",
+      "publication_source": "fda-pfe-eua-2020",
+      "episode_id": "bnt162b2-development",
+      "location": [
+        "US"
+      ],
+      "stage": "announced_emergency_authorization",
+      "impact": "product_development",
+      "regime": null,
+      "severity": null,
+      "targets": [
+        "PFE",
+        "nasdaq_composite"
+      ],
+      "source_ids": [
+        "fda-pfe-eua-2020"
+      ],
+      "summary": "The FDA issued emergency authorization for the Pfizer–BioNTech vaccine for people aged sixteen and above.",
+      "weaknesses": [
+        "Different disease, endpoint, trial design, development stage and commercial exposure can invalidate comparisons.",
+        "Later reanalysis/authorization cannot enter earlier decisions; repeated programme stages are not independent cases."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    }
+  ],
+  "reported_reactions": [
+    {
+      "id": "gold-fed-cut",
+      "event_id": "fed-2020-emergency-cut",
+      "instrument": "gold_futures_reported",
+      "observation_day": "2020-03-03",
+      "source_id": "gold-fed-report",
+      "reported_percent": "3.1",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_applicable_or_contract_unresolved",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "gold-vaccine",
+      "event_id": "pfizer-2020-interim",
+      "instrument": "gold_futures_reported",
+      "observation_day": "2020-11-09",
+      "source_id": "gold-vaccine-report",
+      "reported_percent": "-5",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_applicable_or_contract_unresolved",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "biib-negative",
+      "event_id": "biogen-2019-futility",
+      "instrument": "BIIB",
+      "observation_day": "2019-03-21",
+      "source_id": "biib-fall-report",
+      "reported_percent": "-29.2",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_verified",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "biib-reversal",
+      "event_id": "biogen-2019-reanalysis",
+      "instrument": "BIIB",
+      "observation_day": "2019-10-22",
+      "source_id": "biib-rebound-report",
+      "reported_percent": "26.11",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_verified",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "biib-opposing-index",
+      "event_id": "biogen-2019-futility",
+      "instrument": "nasdaq_composite",
+      "observation_day": "2019-03-21",
+      "source_id": "biib-fall-report",
+      "reported_percent": "1.42",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_applicable_or_contract_unresolved",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "nvda-earnings-rise",
+      "event_id": "nvidia-2023-q1-outlook",
+      "instrument": "NVDA",
+      "observation_day": "2023-05-25",
+      "source_id": "nvda-session-report",
+      "reported_percent": "24.37",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_verified",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "nvda-index-rise",
+      "event_id": "nvidia-2023-q1-outlook",
+      "instrument": "nasdaq_composite",
+      "observation_day": "2023-05-25",
+      "source_id": "nvda-index-report",
+      "reported_percent": "1.71",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_applicable_or_contract_unresolved",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "fed-cut-index-down",
+      "event_id": "fed-2020-emergency-cut",
+      "instrument": "nasdaq_composite",
+      "observation_day": "2020-03-03",
+      "source_id": "fed-cut-index-report",
+      "reported_percent": "-2.99",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_applicable_or_contract_unresolved",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "fed-hike-index-up",
+      "event_id": "fed-2022-june-hike",
+      "instrument": "nasdaq_composite",
+      "observation_day": "2022-06-15",
+      "source_id": "fed-hike-index-report",
+      "reported_percent": "2.5",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_applicable_or_contract_unresolved",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "pfe-interim-rise",
+      "event_id": "pfizer-2020-interim",
+      "instrument": "PFE",
+      "observation_day": "2020-11-09",
+      "source_id": "pfe-session-report",
+      "reported_percent": "7.7",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_verified",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "pfe-opposing-index",
+      "event_id": "pfizer-2020-interim",
+      "instrument": "nasdaq_composite",
+      "observation_day": "2020-11-09",
+      "source_id": "pfe-session-report",
+      "reported_percent": "-1.5",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_applicable_or_contract_unresolved",
+      "original_available_at": null,
+      "causal_effect_established": false
+    }
+  ]
+}

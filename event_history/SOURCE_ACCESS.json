@@ -1,0 +1,40 @@
+{
+  "checked_on": "2026-11-17",
+  "method": "Supported web reader and existing pinned repository snapshots; no credential or paid connection.",
+  "checks": [
+    {
+      "source": "https://fred.stlouisfed.org/series/GOLDAMGBD228NLBM",
+      "observed": "Reader redirected to FRED's 10 January 2022 removal notice: LBMA gold and other IBA series removed on 31 January 2022.",
+      "notice": "https://fred.stlouisfed.org/news/2022/01/ice-benchmark-administration-ltd-iba-data-to-be-removed-from-fred",
+      "imported": false,
+      "next_requirement": "A permitted gold reference with exact contract/benchmark, timestamp, units, calendar, vintage and redistribution terms. Owner approval before any paid agreement."
+    },
+    {
+      "source": "https://fred.stlouisfed.org/data/SP500",
+      "observed": "The page identifies S&P Dow Jones Indices as source and prohibits reproduction without prior permission.",
+      "imported": false,
+      "next_requirement": "Obtain permission or select a permitted index source in LIVE-1 #37. Do not assume a public page grants redistribution rights."
+    },
+    {
+      "source": "https://finance.yahoo.com/quote/PFE/history/?period1=1604620800&period2=1608336000",
+      "observed": "Reader did not return an accessible table; no adjusted share series captured.",
+      "imported": false,
+      "next_requirement": "Verified instrument identity, adjusted OHLC/close basis, split/dividend factors, original availability, historical exchange calendar and permitted storage/redistribution. Rounded news percentages cannot fill missing rows."
+    },
+    {
+      "source": "verification/sources/manifest.json",
+      "observed": "Reused byte-pinned current primary EIA Brent/WTI and Fed GBP/USD table transcriptions: original HTTP bytes and historical price publication vintages remain unknown.",
+      "imported_into_separate_research_database": true,
+      "next_requirement": "Original dated releases/versions and sanitized historical payload evidence, plus additional major FX pairs with explicit quote direction. Keep the PR #19 review and original canonical prices unchanged."
+    },
+    {
+      "source": "news_pilot/OBSERVATIONS.json",
+      "observed": "Prior PR #36 financial-feed and price-access failures remain prior observations, not new successful source tests or live coverage here.",
+      "next_requirement": "LIVE-1 #37 should obtain an approved permitted source, keep secrets outside code, record actual receipts and verify price timestamps before an observation-only pilot."
+    }
+  ],
+  "reproduction": "No network is needed to validate the retained HIST-1 library. New access and terms should be rechecked when selecting a provider.",
+  "credentials_requested": false,
+  "paid_infrastructure_added": false,
+  "primary_canonical_records_changed": 0
+}

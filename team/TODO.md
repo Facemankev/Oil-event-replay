@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] HIST-1: Sourced cross-market historical events, outcome-blind comparisons, coverage and as-of validation ([Issue #38](https://github.com/Facemankev/Oil-event-replay/issues/38)); coordinate read-only with LIVE-1 #37, on #36, same three-step UI, draft only — **Dad — Doing** — 2026-11-17
+
 
 
 
