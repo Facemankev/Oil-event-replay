@@ -26,7 +26,11 @@ history).
 
 
 
+
 ## To do
+
+- [ ] LEARN-1: Train/validate/held-out candidate learning and immutable prediction audit ([Issue #44](https://github.com/Facemankev/Oil-event-replay/issues/44)); build after SIM-1 #43 — **Dad** — 2026-11-17
+- [ ] IPO-1: Separate IPO discovery/investable-outcome work ([Issue #42](https://github.com/Facemankev/Oil-event-replay/issues/42)); no allocation/IPO price assumptions in SIM-1 — **unassigned** — 2026-11-17
 
 - [ ] DAT-3: Reconcile Brent/WTI against authenticated primary EIA data; retain discrepancy/revision evidence before extending matching — **Dad** — 2026-10-29
 
@@ -49,6 +53,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] SIM-1: Retrospective costed hypotheses ([draft PR #45](https://github.com/Facemankev/Oil-event-replay/pull/45), on #41; [Issue #43](https://github.com/Facemankev/Oil-event-replay/issues/43)). 51-event gate diagnosis, 151 target pairs, 69 default settled paths / 34 positive / 35 negative after costs, all 36 rule/cost summaries and optional three-answer charts. Local 126 Python/112 JS and Chromium profiles pass; final full CI/WebKit in PR Checks. Full traces local, compact public evidence; accounts/prices/UI/gates preserved, £0 data, no merge. LEARN-1 follows after checks — **Dad** — 2026-11-17
 
 - [ ] DATA-FREE-1: Free-source cross-market database and complete observation-only process ([draft PR #41](https://github.com/Facemankev/Oil-event-replay/pull/41), on #39; [Issue #40](https://github.com/Facemankev/Oil-event-replay/issues/40)); [public preview](https://market-ripple-free-data-review.g86hz2pjsh.chatgpt.site). 10,456 new Fed FX observations, 26,074 numeric primary observations total; 66 inherited secondary candidates remain separate. Five demonstrations all No Action, zero supported entries/orders/account changes. Local 110 Python/112 JS and new Chromium desktop/iPhone/iPad profiles pass; final full CI/WebKit in PR Checks. Native preview deployment confirmed; hosted browser access is blocked in this executor and physical Safari acceptance remains outstanding. Free only, no signup/key/billing/API charge; source/vintage/adjusted-series gaps documented, #37 coordinated, #19/UI/prices/accounts preserved. No merge — **Dad** — 2026-11-17
 
