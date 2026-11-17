@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] DATA-FREE-1: Zero-cost source adapters, coverage and end-to-end paper-observation demonstration ([Issue #40](https://github.com/Facemankev/Oil-event-replay/issues/40)), on #39; coordinate with #37, no paid access or merge — **Dad — Doing** — 2026-11-17
+
 
 
 

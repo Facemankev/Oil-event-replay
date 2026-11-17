@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Market Ripple — free-data demonstration</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="design.css">
+  <link rel="stylesheet" href="view.css">
+</head>
+<body class="mr-page">
+<div class="mr-wrap mr-stack">
+  <header class="mr-bar mr-glass">
+    <h1 class="mr-brand"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="7" cy="23" r="3" fill="currentColor"/><path d="M7 14a9 9 0 0 1 9 9M7 8a15 15 0 0 1 15 15M7 2a21 21 0 0 1 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Market Ripple</h1>
+    <span class="mr-badge">Historical replay · paper only</span>
+  </header>
+  <div class="theme-switch" role="group" aria-label="Colour theme">
+    <button class="mr-btn" type="button" data-theme="light" aria-pressed="true">Light</button>
+    <button class="mr-btn" type="button" data-theme="dark" aria-pressed="false">Dark</button>
+  </div>
+  <section class="mr-panel mr-glass">
+    <h2 class="mr-hero">Follow a <span class="mr-hl">market ripple</span></h2>
+    <p class="mr-lead">See a sourced event, compare earlier examples and check dated market evidence. These are historical demonstrations, with no orders or account changes.</p>
+    <label for="case">Choose a demonstration</label>
+    <select id="case" disabled><option>Loading sourced examples…</option></select>
+    <p class="mr-note" id="load-status" role="status">Loading the retained research.</p>
+  </section>
+  <main id="answers" class="mr-stack" aria-live="polite" hidden>
+    <section class="mr-panel mr-glass" data-answer="what_happened">
+      <h2>1. What happened?</h2><p id="what"></p><p class="mr-note" id="when"></p><p class="mr-note" id="event-source"></p>
+    </section>
+    <section class="mr-panel mr-glass" data-answer="likely_outcome">
+      <h2>2. What might it mean?</h2><p id="meaning"></p><p id="reaction"></p>
+      <p class="mr-note" id="price-source"></p>
+      <details class="mr-disclosure"><summary>View historical comparisons and evidence</summary>
+        <p class="mr-note">Matching uses event facts before inspecting later returns. Missing severity, different companies and market conditions weaken a comparison.</p>
+        <ul id="matches"></ul><p id="cohort" class="mr-note"></p><ul id="sources"></ul>
+      </details>
+      <details class="mr-disclosure"><summary>View dated market reactions</summary>
+        <p class="mr-note">These are retrospective current-vintage reference changes. They did not enter the frozen earlier decision. Reporting observations are not intraday quotes or guaranteed exchange sessions. USD/JPY increases mean one US dollar buys more yen.</p>
+        <div class="mr-table-scroll"><table class="mr-table"><thead><tr><th>Market / unit</th><th>Observations</th><th>Baseline</th><th>End</th><th>Change</th></tr></thead><tbody id="reactions"></tbody></table></div>
+        <p class="mr-note">Prices: <a href="https://www.eia.gov/dnav/pet/hist/RBRTED.htm">EIA Brent</a>, <a href="https://www.eia.gov/dnav/pet/hist/RWTCD.htm">EIA WTI</a>, Federal Reserve <a href="https://www.federalreserve.gov/releases/h10/hist/dat00_uk.htm">GBP</a>, <a href="https://www.federalreserve.gov/releases/h10/hist/dat00_eu.htm">EUR</a> and <a href="https://www.federalreserve.gov/releases/h10/hist/dat00_ja.htm">JPY</a>. Missing prices are left missing; no forecast or causal effect is established.</p>
+      </details>
+    </section>
+    <section class="mr-panel mr-glass" data-answer="suggested_action">
+      <h2>3. What should I do?</h2><p class="mr-figure" id="action">No Action</p><p id="suggestion"></p>
+      <p class="mr-note">Original price/news availability and executable quotes are unproven. A larger past move does not make a stronger recommendation. Your practice account remains unchanged.</p>
+    </section>
+  </main>
+  <details class="mr-panel mr-glass mr-disclosure">
+    <summary>Check coverage and free-source limits</summary>
+    <p id="coverage-note"></p>
+    <div class="mr-table-scroll"><table class="mr-table"><thead><tr><th>Market group</th><th>Numeric primary references</th><th>Retained secondary rows</th><th>Reported reactions</th></tr></thead><tbody id="coverage"></tbody></table></div>
+    <p class="mr-note">Gold and adjusted equity/index series remain incomplete. Stooq was challenged/blocked; Yahoo returned 429. Keyed free tiers were assessed but not connected. No paid plan, trial, billing or credentials were configured. This page is not a continuous monitor or a fresh-news alert.</p>
+  </details>
+  <footer class="mr-note">Prepared 17 November 2026. A public research-catalog receipt does not establish first public disclosure. Historical patterns do not guarantee future results.</footer>
+</div>
+<script type="module" src="view.mjs"></script>
+</body>
+</html>

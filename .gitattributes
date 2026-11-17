@@ -8,3 +8,6 @@ equities/*.json -text
 
 # Fresh-news pilot source registry keeps consistent bytes on Windows.
 news_pilot/*.json -text
+
+# New public-domain FX transcriptions retain byte fingerprints on Windows.
+free_pilot/sources/*.csv -text
