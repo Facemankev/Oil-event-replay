@@ -1,0 +1,199 @@
+/*
+ * Market Ripple design system: "Gold × Desk"
+ * Gold's layout and glass, Research desk's colours and fonts.
+ * Chosen by Brendan on 2026-10-27 (decision 13, waiting for Dad's approval).
+ *
+ * Load the fonts in the page <head>:
+ * <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap">
+ *
+ * Light by default. Dark follows the viewer's device, and data-theme="light" or
+ * data-theme="dark" on <html> forces either one.
+ */
+
+/* ---------- tokens ---------- */
+:root{
+  /* colour: navy ink on off-white, one teal accent; red and green only for price moves */
+  --mr-paper:#f7f8f6;
+  --mr-ink:#13233a;      /* headings, numbers, chart line: 14.8:1 on paper */
+  --mr-body:#3d4856;     /* reading text: 8.7:1 */
+  --mr-muted:#5b6675;    /* captions, dates, axis labels: 5.5:1 */
+  --mr-hair:#dfe3e8;     /* gridlines and table rules (decorative only) */
+  --mr-accent:#0f6e6e;   /* teal: labels, highlights, the event marker: 5.7:1 */
+  --mr-up:#1e6b52;       /* price rose: 6.0:1 */
+  --mr-down:#b3261e;     /* price fell: 6.1:1 */
+
+  /* surfaces: a faint dot grid under very light glass tiles */
+  --mr-dot:rgba(19,35,58,.09);
+  --mr-edge:rgba(19,35,58,.12);
+  --mr-edge-hover:rgba(15,110,110,.45);
+  --mr-tint:rgba(15,110,110,.1);
+  --mr-glow:rgba(15,110,110,.14);
+  --mr-sheen:linear-gradient(160deg,rgba(255,255,255,.7),rgba(255,255,255,.38) 55%,rgba(255,255,255,.5));
+  --mr-shine:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(19,35,58,.03),0 1px 2px rgba(19,35,58,.04),0 10px 28px rgba(19,35,58,.06);
+  --mr-solid:#ffffff;    /* replaces glass when the viewer asks for less transparency */
+
+  /* type: Newsreader for headings and key numbers, Public Sans for everything else */
+  --mr-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --mr-text:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mr-size-hero:clamp(2.4rem,5.6vw,4.2rem);
+  --mr-size-figure:clamp(28px,3.4vw,38px);
+  --mr-size-heading:26px;
+  --mr-size-brand:26px;
+  --mr-size-body:17px;
+  --mr-size-ui:14px;
+  --mr-size-label:13px;
+  --mr-size-caption:13px;
+
+  /* shape and space */
+  --mr-radius-tile:24px;
+  --mr-radius-panel:32px;
+  --mr-radius-pill:999px;
+  --mr-space-1:8px;
+  --mr-space-2:12px;
+  --mr-space-3:16px;
+  --mr-space-4:22px;
+  --mr-space-5:28px;
+  --mr-dot-gap:32px;
+
+  /* motion */
+  --mr-ease:cubic-bezier(.4,0,.2,1);
+  --mr-ease-entrance:cubic-bezier(.16,1,.3,1);
+
+  color-scheme:light;
+}
+
+/* dark: the same note on a charcoal desk. Muted is checked against the glass
+   tiles too, which are lighter than the page here: 5.1:1 on a tile. */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --mr-paper:#26292d;--mr-ink:#eceef0;--mr-body:#c4c9cf;--mr-muted:#a6adb5;--mr-hair:#3b4046;
+    --mr-accent:#5cc2b8;--mr-up:#7fd1a1;--mr-down:#ff8f84;
+    --mr-dot:rgba(255,255,255,.07);--mr-edge:rgba(255,255,255,.1);--mr-edge-hover:rgba(92,194,184,.5);
+    --mr-tint:rgba(92,194,184,.12);--mr-glow:rgba(92,194,184,.16);
+    --mr-sheen:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.02) 55%,rgba(255,255,255,.04));
+    --mr-shine:inset 0 1px 0 rgba(255,255,255,.1),0 10px 28px rgba(0,0,0,.25);
+    --mr-solid:#2e3236;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --mr-paper:#26292d;--mr-ink:#eceef0;--mr-body:#c4c9cf;--mr-muted:#a6adb5;--mr-hair:#3b4046;
+  --mr-accent:#5cc2b8;--mr-up:#7fd1a1;--mr-down:#ff8f84;
+  --mr-dot:rgba(255,255,255,.07);--mr-edge:rgba(255,255,255,.1);--mr-edge-hover:rgba(92,194,184,.5);
+  --mr-tint:rgba(92,194,184,.12);--mr-glow:rgba(92,194,184,.16);
+  --mr-sheen:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.02) 55%,rgba(255,255,255,.04));
+  --mr-shine:inset 0 1px 0 rgba(255,255,255,.1),0 10px 28px rgba(0,0,0,.25);
+  --mr-solid:#2e3236;
+  color-scheme:dark;
+}
+
+/* ---------- page ---------- */
+/* sizes include padding and borders, so a 48px icon square is 48px */
+.mr-page,.mr-page *,.mr-page *::before,.mr-page *::after{box-sizing:border-box}
+.mr-page{
+  background-color:var(--mr-paper);
+  background-image:radial-gradient(var(--mr-dot) 1px,transparent 1.5px);
+  background-size:var(--mr-dot-gap) var(--mr-dot-gap);
+  color:var(--mr-ink);font:400 var(--mr-size-body)/1.55 var(--mr-text);
+  min-height:100vh;
+}
+.mr-wrap{max-width:1100px;margin:0 auto;padding-block:24px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mr-page p{color:var(--mr-body);margin:0}
+.mr-stack{display:flex;flex-direction:column;gap:var(--mr-space-3)}
+
+/* ---------- glass: header bar, panels and tiles share one finish ---------- */
+.mr-glass{
+  background:var(--mr-sheen);border:1px solid var(--mr-edge);box-shadow:var(--mr-shine);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);
+  transition:border-color .3s var(--mr-ease);
+}
+.mr-glass:hover{border-color:var(--mr-edge-hover)}
+
+/* header bar */
+.mr-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;
+  border-radius:var(--mr-radius-pill);padding:12px 14px 12px 24px}
+.mr-brand{display:flex;align-items:center;gap:10px;margin:0;font:600 var(--mr-size-brand)/1 var(--mr-display);color:var(--mr-ink)}
+.mr-brand svg{width:28px;height:28px;color:var(--mr-ink);flex:none}
+.mr-badge{font:400 var(--mr-size-ui)/1.2 var(--mr-text);color:var(--mr-muted);
+  border:1px solid var(--mr-edge);border-radius:var(--mr-radius-pill);padding:10px 16px}
+
+/* panel: a block of content (the event, a chart, an explanation) */
+.mr-panel{border-radius:var(--mr-radius-panel);padding:var(--mr-space-5);min-width:0}
+.mr-panel-title{display:flex;align-items:center;gap:var(--mr-space-3)}
+.mr-panel-title h2{margin:0;font:500 var(--mr-size-heading)/1.2 var(--mr-display);color:var(--mr-ink)}
+.mr-icon{display:block;width:48px;height:48px;padding:12px;border-radius:14px;flex:none;
+  background:var(--mr-tint);color:var(--mr-accent);transition:transform .3s var(--mr-ease)}
+.mr-panel:hover .mr-icon{transform:scale(1.1)}
+/* line the icon up with the middle of the capital letters, not the text box, which sits lower (about 0.12em) */
+.mr-panel-title .mr-icon{translate:0 calc(var(--mr-size-heading) * -.12)}
+
+/* the lead headline, with at most one short phrase picked out in teal */
+.mr-hero,.mr-panel-title .mr-hero{margin:0;font:500 var(--mr-size-hero)/1.05 var(--mr-display);letter-spacing:-.015em;color:var(--mr-ink);text-wrap:balance}
+.mr-hl{color:var(--mr-accent)}
+.mr-lead{font-size:var(--mr-size-body);max-width:62ch;margin-top:14px}
+
+/* buttons: pills; the chosen one fills with ink */
+.mr-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.mr-btn{font:600 var(--mr-size-ui)/1 var(--mr-text);color:var(--mr-ink);background:transparent;
+  border:1px solid var(--mr-edge);border-radius:var(--mr-radius-pill);padding:14px 22px;min-height:44px;cursor:pointer;
+  transition:background .3s var(--mr-ease),color .3s var(--mr-ease),border-color .3s var(--mr-ease)}
+.mr-btn:hover{border-color:var(--mr-accent)}
+.mr-btn[aria-pressed="true"],.mr-btn-primary{background:var(--mr-ink);color:var(--mr-paper);border-color:var(--mr-ink)}
+
+/* key figures: a row of tiles */
+.mr-figures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--mr-space-3)}
+.mr-tile{border-radius:var(--mr-radius-tile);padding:var(--mr-space-4)}
+.mr-label{display:block;font:600 var(--mr-size-label)/1.3 var(--mr-text);color:var(--mr-accent)}
+.mr-figure{display:block;margin-top:10px;font:500 var(--mr-size-figure)/1.1 var(--mr-display);color:var(--mr-ink);font-variant-numeric:tabular-nums}
+.mr-meta{display:block;margin-top:6px;font-size:var(--mr-size-caption);color:var(--mr-muted)}
+.mr-up{color:var(--mr-up)}
+.mr-down{color:var(--mr-down)}
+
+/* chart card: the one place with the soft teal glow */
+.mr-chart-card{box-shadow:var(--mr-shine),0 0 100px var(--mr-glow)}
+.mr-chart-wrap{margin-top:12px;overflow-x:auto}
+.mr-chart{display:block;width:100%;min-width:520px;height:auto}
+.mr-chart text{fill:var(--mr-muted);font:400 16px var(--mr-text);font-variant-numeric:tabular-nums}
+.mr-chart .gridline{stroke:var(--mr-hair);stroke-width:1}
+.mr-chart .price{fill:none;stroke:var(--mr-ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.mr-chart .key{fill:var(--mr-ink)}
+.mr-chart .event{stroke:var(--mr-accent);stroke-width:1.5;stroke-dasharray:5 5}
+.mr-chart .event-label{fill:var(--mr-accent);font-weight:600}
+.mr-chart .evband{fill:var(--mr-accent);opacity:.2}
+.mr-chart .t{fill:var(--mr-ink);font-weight:600;font-size:17px}
+.mr-chart .date{font-size:15px}
+.mr-caption{font-size:var(--mr-size-caption);color:var(--mr-muted);margin-top:6px}
+
+/* "Show these prices as a table" */
+.mr-disclosure{margin-top:10px;font-size:var(--mr-size-ui)}
+.mr-disclosure summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600;color:var(--mr-accent)}
+.mr-table-scroll{overflow:auto;max-height:320px}
+.mr-table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+.mr-table th,.mr-table td{text-align:left;padding:7px 12px 7px 0;border-bottom:1px solid var(--mr-hair)}
+.mr-table th{font-weight:600;color:var(--mr-ink)}
+.mr-table .num{text-align:right}
+
+/* the caveat that goes wherever results are shown */
+.mr-note{font-size:13.5px;color:var(--mr-muted);margin-top:14px;max-width:80ch}
+.mr-page a{color:var(--mr-ink);text-decoration-color:var(--mr-accent);text-underline-offset:3px}
+
+/* ---------- states and preferences ---------- */
+.mr-page :focus-visible{outline:2px solid var(--mr-accent);outline-offset:3px}
+
+@keyframes mr-rise{from{transform:translateY(14px)}to{transform:none}}
+.mr-enter{animation:mr-rise .9s var(--mr-ease-entrance) both}   /* content stays visible; it only slides */
+
+@media (prefers-reduced-motion:reduce){
+  .mr-page *{animation:none !important;transition:none !important}
+}
+@media (prefers-reduced-transparency:reduce){
+  .mr-glass{background:var(--mr-solid);-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+@media (max-width:640px){
+  .mr-figures{grid-template-columns:repeat(2,minmax(0,1fr))}
+  /* labels may wrap to two lines, so reserve two lines and the numbers stay level across a row */
+  .mr-label{min-height:2.6em}
+  .mr-panel{padding:var(--mr-space-4)}
+  .mr-bar{border-radius:var(--mr-radius-tile);padding:12px 16px}
+}

@@ -1,0 +1,100 @@
+{
+  "recorded_on": "2026-11-17",
+  "mode": "one_bounded_anonymous_HTTP_historical_research_replay",
+  "ingestion": {
+    "source": "company_news",
+    "url": "https://raw.githubusercontent.com/Facemankev/Oil-event-replay/08aea1b2464969c06f6e53bdc9cc02bef5ff0809/equities/news.json",
+    "status": "ok",
+    "http_status": 200,
+    "received_at": "2026-11-17T21:00:26.334662Z",
+    "payload_sha256": "ae7dc603cd2aefa76061e01a8be3e7fa95ddc15e18e7a430db97f8aa47865dcf",
+    "network_request": true,
+    "cost_GBP": "0.00",
+    "next_attempt_at": "2026-11-17T21:01:26.334662Z",
+    "transport_denial": false,
+    "origin": "actual_anonymous_HTTP_receipt_of_pinned_historical_research_catalog"
+  },
+  "local_request_through_observation_ms": 907.494,
+  "journal_inserted": true,
+  "action": "No Action",
+  "matches": 4,
+  "legacy_daily_cross_check": {
+    "scope": "retained secondary daily context only; not live or original-as-of verified",
+    "publication_at": "2026-11-08T20:00:00Z",
+    "descriptive_cutoff": "2026-11-09T21:01:00Z",
+    "own_percent": "-4.2703",
+    "peers": [
+      {
+        "symbol": "AMD",
+        "percent": "13.2594"
+      },
+      {
+        "symbol": "AVGO",
+        "percent": "8.7814"
+      },
+      {
+        "symbol": "MSFT",
+        "percent": "2.7459"
+      },
+      {
+        "symbol": "QQQ",
+        "percent": "3.5437"
+      }
+    ],
+    "opening_quote_status": null,
+    "verified_exchange_print_timestamps": false,
+    "original_availability_verified": false,
+    "upstream_providers_independent": false,
+    "causal_transmission_established": false
+  },
+  "cost_GBP": "0.00",
+  "orders": 0,
+  "account_mutations": 0,
+  "publication_to_useful_alert_latency_seconds": null,
+  "limitations": [
+    "Fetched record is an existing curated research catalog, not a fresh original issuer feed.",
+    "One timing sample is not an alert SLA or proof of useful financial detection.",
+    "Primary/secondary daily reference prices do not verify original historical availability or live execution."
+  ],
+  "direct_source_probes": [
+    {
+      "source": "stooq_nvda",
+      "url": "https://stooq.com/q/d/l/?s=nvda.us&i=d&d1=20230501&d2=20230630",
+      "status": "http_403",
+      "http_status": 403,
+      "received_at": "2026-11-17T21:00:26.569165Z",
+      "payload_sha256": null,
+      "network_request": true,
+      "cost_GBP": "0.00",
+      "next_attempt_at": "2026-11-17T22:00:26.569165Z",
+      "transport_denial": true,
+      "parsed_metadata": null
+    },
+    {
+      "source": "fed_eurusd",
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_eu.htm",
+      "status": "http_403",
+      "http_status": 403,
+      "received_at": "2026-11-17T21:00:26.645976Z",
+      "payload_sha256": null,
+      "network_request": true,
+      "cost_GBP": "0.00",
+      "next_attempt_at": "2026-11-17T22:00:26.645976Z",
+      "transport_denial": true,
+      "parsed_metadata": null
+    },
+    {
+      "source": "fred_nasdaq",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM&cosd=20230501&coed=20230630",
+      "status": "http_403",
+      "http_status": 403,
+      "received_at": "2026-11-17T21:00:26.726393Z",
+      "payload_sha256": null,
+      "network_request": true,
+      "cost_GBP": "0.00",
+      "next_attempt_at": "2026-11-17T22:00:26.726393Z",
+      "transport_denial": true,
+      "parsed_metadata": null
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-17T20:47:57.363468+00:00",
+  "capture_method": "Normalized visible primary-table transcription through supported web reader. Not original HTTP bytes or proof of historical availability.",
+  "terms_url": "https://www.federalreserve.gov/disclaimer.htm",
+  "reuse": "Board numerical information: public domain unless otherwise indicated; cite Federal Reserve.",
+  "sources": {
+    "eurusd": {
+      "file": "free_pilot/sources/fed-eurusd.csv",
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_eu.htm",
+      "unit": "USD per EUR",
+      "rows": 5445,
+      "numeric": 5228,
+      "ND": 217,
+      "first": "2006-01-02",
+      "last": "2026-11-13",
+      "sha256": "f1d3db1dec0764fa75fefb60c0d4247873b631aa5de2dddb8b874b729545e05d",
+      "release_day": "2026-11-16",
+      "original_available_at": null,
+      "original_http_sha256": null
+    },
+    "usdjpy": {
+      "file": "free_pilot/sources/fed-usdjpy.csv",
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_ja.htm",
+      "unit": "JPY per USD",
+      "rows": 5445,
+      "numeric": 5228,
+      "ND": 217,
+      "first": "2006-01-02",
+      "last": "2026-11-13",
+      "sha256": "2e23539268049e104664850fb45e2ce86469e454d8559d494a0446a0f70ba670",
+      "release_day": "2026-11-16",
+      "original_available_at": null,
+      "original_http_sha256": null
+    }
+  }
+}

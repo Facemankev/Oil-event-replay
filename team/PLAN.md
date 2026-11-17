@@ -1,6 +1,6 @@
 # Market Ripple plan
 
-Last updated: 2026-11-17 by Dad (cross-market history)
+Last updated: 2026-11-17 by Dad (free-data pilot)
 
 This is the living plan. The top sections change rarely and only when we
 both agree (use `plan-change`). *Now* and the milestone statuses are updated
@@ -110,6 +110,8 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 | Isolated Gold × Desk visual preview | BRD-2 | Done | Dad | Approved PR #15; public preview, original design preserved |
 
 ## 5. Now
+
+- **Dad / DATA-FREE-1:** [Draft #41](https://github.com/Facemankev/Oil-event-replay/pull/41), on #39, implements Issue #40 with free-only bounded source adapters, a repeatable 26,074-numeric primary library and complete event/history/price/three-answer observation journal. Five cases all No Action; no supported entries or account changes. [Separate public preview](https://market-ripple-free-data-review.g86hz2pjsh.chatgpt.site) deployed; local profiles pass, full CI/WebKit in PR Checks, hosted-browser/physical Safari limits recorded. LIVE-1 #37 handoff preserves source/vintage/adjustment gaps. No paid access, canonical/UI changes or merge.
 
 - **Dad / HIST-1:** Issue #38 implemented in [draft PR #39](https://github.com/Facemankev/Oil-event-replay/pull/39), on #36. Separate SQLite history: 51 events, 86 source cards, 15,618 numeric oil/GBP observations; 13 reported reactions kept separate from calculated horizons. Six-group coverage, outcome-blind chronological/episode controls and historical-detail/read-only handoff for LIVE-1 #37. All 51 No Action; no original-as-of qualified case or paper entry. Local 94 Python/112 JS and all ten Chromium pass; full CI/WebKit in PR Checks. UI, accounts, original data and previews unchanged; no merge. Next: #37 permitted adjusted/timestamped sources and original availability evidence.
 

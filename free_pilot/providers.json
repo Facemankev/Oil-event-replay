@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-11-17",
+  "budget_GBP": "0.00",
+  "accounts_created": 0,
+  "keys_requested": 0,
+  "paid_connections": 0,
+  "providers": [
+    {
+      "id": "eia",
+      "markets": [
+        "oil"
+      ],
+      "docs": "https://www.eia.gov/about/copyrights_reuse.php",
+      "cost": "No-charge public HTML tables; no key required by the HTML adapter",
+      "terms": "Government numerical data public domain with attribution; third-party materials excluded",
+      "quota": "No HTML quota established; adapter enforces a 60-second minimum and single bounded requests",
+      "access": "Retained primary snapshots usable; direct price refresh domain-restricted in this environment",
+      "active": "Existing pinned Brent/WTI snapshots; no canonical overwrites"
+    },
+    {
+      "id": "fed",
+      "markets": [
+        "currencies"
+      ],
+      "docs": "https://www.federalreserve.gov/disclaimer.htm",
+      "cost": "No-charge public historical tables, no account or API key",
+      "terms": "Board information public domain unless otherwise indicated; numerical rates attributed",
+      "quota": "No HTML quota established; bounded requests and cooldown",
+      "access": "Two complete visible primary tables captured through supported web reader; direct adapter refresh returns policy 403 here",
+      "active": "GBP/USD reused; 10,456 numeric EUR/USD and USD/JPY observations added; 434 ND retained"
+    },
+    {
+      "id": "fred",
+      "markets": [
+        "indices",
+        "currencies",
+        "gold"
+      ],
+      "docs": "https://fred.stlouisfed.org/legal/",
+      "cost": "Free service/API; API key required for web services, not configured here",
+      "terms": "Series-specific rights: third-party copyrighted series need owner permission beyond personal use. S&P reproduction restricted. Former LBMA gold series removed.",
+      "quota": "API quota not independently established; no keyed calls made",
+      "access": "Metadata/terms readable; direct bounded Nasdaq CSV request received policy 403",
+      "active": "No new FRED market-price series imported"
+    },
+    {
+      "id": "stooq",
+      "markets": [
+        "technology_shares",
+        "pharmaceuticals",
+        "indices",
+        "gold"
+      ],
+      "docs": "https://stooq.com/db/",
+      "cost": "Anonymous download endpoint investigated; no account or payment created",
+      "terms": "Retention/redistribution and adjustment basis not verified; not activated for public quote display",
+      "quota": "Publisher quota not established; 60-second minimum plus error backoff in adapter",
+      "access": "Web reader presented browser-verification challenge; anonymous direct probe received policy 403; not bypassed",
+      "active": "CSV parser/adapter tested with labelled fixtures only; no real Stooq rows claimed"
+    },
+    {
+      "id": "alpha_vantage",
+      "markets": [
+        "equities",
+        "FX",
+        "commodities"
+      ],
+      "docs": "https://www.alphavantage.co/support/",
+      "cost": "Free-key service advertised; no signup, key or paid plan configured",
+      "terms": "Service/data terms still apply; adjusted daily endpoint explicitly premium in documentation",
+      "quota": "25 requests/day advertised; verified educational-project exceptions are not assumed",
+      "access": "Documentation reviewed; no data connection tested or claimed",
+      "active": "Keyed API disabled. No premium endpoint or demo key used"
+    },
+    {
+      "id": "twelve_data",
+      "markets": [
+        "equities",
+        "FX",
+        "ETFs"
+      ],
+      "docs": "https://twelvedata.com/pricing",
+      "cost": "Basic advertised at zero monthly cost; no signup or subscription configured",
+      "terms": "Basic lists internal non-display usage; public display/redistribution permission is not assumed. Splits/dividends require higher plan in current matrix.",
+      "quota": "8 API credits/minute, 800/day advertised; endpoint weights vary",
+      "access": "Documentation reviewed only; no data connection claimed",
+      "active": "Keyed API disabled; no billing add-ons, WebSocket trial or upgrade"
+    },
+    {
+      "id": "eodhd",
+      "markets": [
+        "equities",
+        "indices",
+        "FX"
+      ],
+      "docs": "https://eodhd.com/pricing",
+      "cost": "Sandbox Free package advertised at zero cost; no account or subscription configured",
+      "terms": "Exact historical depth/instrument/redistribution entitlements not verified; do not assume complete history",
+      "quota": "20 calls/day and 20 requests/minute advertised; news/intraday cost more credits",
+      "access": "Pricing reviewed; no data connection claimed",
+      "active": "Keyed API disabled; no extra-calls buffer or paid trial"
+    },
+    {
+      "id": "issuer_regulator_releases",
+      "markets": [
+        "company_events",
+        "economic_events"
+      ],
+      "docs": "https://www.federalreserve.gov/newsevents/pressreleases.htm",
+      "cost": "Public announcements and already sourced research facts; no subscription",
+      "terms": "Link primary sources and retain short factual cards, not full article republication. Source versions and first dissemination remain unverified.",
+      "quota": "Publisher-specific quota not established; original feed restrictions respected",
+      "access": "Official announcement facts reused; fresh issuer financial RSS direct access remains blocked as documented by PR #36",
+      "active": "Historical company/oil event records fetched from fixed public research catalogs; not claimed as a live issuer feed"
+    },
+    {
+      "id": "legacy_equity_references",
+      "markets": [
+        "technology_shares",
+        "indices"
+      ],
+      "docs": "https://github.com/Facemankev/Oil-event-replay/blob/08aea1b2464969c06f6e53bdc9cc02bef5ff0809/equities/README.md",
+      "cost": "Reuses retained repository evidence; no new API or account",
+      "terms": "Secondary daily research context only; no licensed live/executable quote, adjustment-factor or broad redistribution claim",
+      "quota": "No fresh provider requests performed",
+      "access": "66 existing candidate rows and official scheduled-session calendar reused through the tested parent engine",
+      "active": "Derived Nvidia/peer comparison; opening conflict retained; not added to the primary price table"
+    }
+  ],
+  "future_paid_limitations_to_evaluate_only_after_free_pilot": [
+    "Complete adjusted shares with corporate actions and historical exchange calendars, if no permitted free source succeeds.",
+    "Contract-specific gold and clearly licensed index history; do not substitute a different instrument.",
+    "Original news versions and price availability timestamps to test genuine alert timeliness.",
+    "Redistribution rights if the project moves beyond a personal research demonstration."
+  ],
+  "restriction": "No paid action is authorized or implemented. Reassess these evidence gaps after measuring the free pilot; no purchase or upgrade recommendation is implied."
+}

@@ -1,0 +1,3627 @@
+{
+  "schema_version": 1,
+  "kind": "reproducible_historical_process_demonstration",
+  "prepared_on": "2026-11-17",
+  "coverage": {
+    "events": 51,
+    "observation_rows": 27210,
+    "numeric_observations": 26074,
+    "new_FX_numeric": 10456,
+    "new_FX_unavailable": 434,
+    "groups": [
+      {
+        "group": "oil",
+        "instruments": [
+          "brent",
+          "wti"
+        ],
+        "numeric_observations": 10394,
+        "explicit_unavailable": 486,
+        "reported_reactions": 0,
+        "retained_secondary_provider_rows": 0,
+        "verified_intraday_quotes": 0,
+        "as_of_qualified_cases": 0
+      },
+      {
+        "group": "technology_equities",
+        "instruments": [
+          "NVDA",
+          "INTC",
+          "EFX",
+          "TSLA"
+        ],
+        "numeric_observations": 0,
+        "explicit_unavailable": 0,
+        "reported_reactions": 3,
+        "retained_secondary_provider_rows": 60,
+        "verified_intraday_quotes": 0,
+        "as_of_qualified_cases": 0
+      },
+      {
+        "group": "gold",
+        "instruments": [
+          "gold_futures_reported"
+        ],
+        "numeric_observations": 0,
+        "explicit_unavailable": 0,
+        "reported_reactions": 2,
+        "retained_secondary_provider_rows": 0,
+        "verified_intraday_quotes": 0,
+        "as_of_qualified_cases": 0
+      },
+      {
+        "group": "pharmaceuticals",
+        "instruments": [
+          "BIIB",
+          "PFE",
+          "MRK"
+        ],
+        "numeric_observations": 0,
+        "explicit_unavailable": 0,
+        "reported_reactions": 3,
+        "retained_secondary_provider_rows": 0,
+        "verified_intraday_quotes": 0,
+        "as_of_qualified_cases": 0
+      },
+      {
+        "group": "stock_indices",
+        "instruments": [
+          "nasdaq_composite"
+        ],
+        "numeric_observations": 0,
+        "explicit_unavailable": 0,
+        "reported_reactions": 5,
+        "retained_secondary_provider_rows": 6,
+        "verified_intraday_quotes": 0,
+        "as_of_qualified_cases": 0
+      },
+      {
+        "group": "currencies",
+        "instruments": [
+          "gbpusd",
+          "eurusd",
+          "usdjpy"
+        ],
+        "numeric_observations": 15680,
+        "explicit_unavailable": 650,
+        "reported_reactions": 0,
+        "retained_secondary_provider_rows": 0,
+        "verified_intraday_quotes": 0,
+        "as_of_qualified_cases": 0
+      }
+    ],
+    "original_availability_verified": false,
+    "cost_GBP": "0.00",
+    "paid_connections": 0,
+    "note": "Numeric observations, reported reactions and instrument coverage are distinct. GBP, EUR and JPY reference quotes are not live FX fills."
+  },
+  "cases": [
+    {
+      "case": "harvey",
+      "event_id": "harvey-2017-texas",
+      "title": "Harvey landfall on the Texas coast",
+      "detected_category": "weather",
+      "mode": "historical_research_replay_not_current_market_news",
+      "occurred_day": "2017-08-25",
+      "supporting_publication_day": "2017-08-25",
+      "supporting_publication_at": "2017-08-25T22:00:00-05:00",
+      "actual_original_receipt_at": null,
+      "frozen_historical_cutoff": "2017-08-26T03:00:00.000001Z",
+      "frozen_historical_decision": {
+        "event_id": "harvey-2017-texas",
+        "as_of": "2017-08-26T03:00:00.000001Z",
+        "action": "No Action",
+        "facts": {
+          "id": "harvey-2017-texas",
+          "title": "Harvey landfall on the Texas coast",
+          "category": "weather",
+          "mechanism": "landfall",
+          "stage": "landfall",
+          "impact": "mixed",
+          "regime": null,
+          "location": [
+            "US_Gulf_coast"
+          ],
+          "primary_group": "oil",
+          "episode_id": "AL092017",
+          "targets": [
+            "brent",
+            "wti",
+            "gbpusd"
+          ],
+          "severity": {
+            "scale": "advisory_maximum_sustained_wind_mph",
+            "value": 125,
+            "source_id": "harvey-2017-texas-scale"
+          },
+          "market_context": {
+            "status": "original_as_of_context_unverified",
+            "price_trend_used_in_matching": false
+          }
+        },
+        "historical_matches": {
+          "matches": [
+            {
+              "id": "dolly-2008-texas",
+              "episode_id": "AL042008",
+              "comparison_instrument": "brent",
+              "public_after": "2008-07-23T18:00:00Z",
+              "dates": {
+                "baseline": "2008-07-22",
+                "end": "2008-07-30",
+                "path": [
+                  "2008-07-22",
+                  "2008-07-24",
+                  "2008-07-25",
+                  "2008-07-28",
+                  "2008-07-29",
+                  "2008-07-30"
+                ],
+                "context_from": "2008-06-23"
+              },
+              "score": 95,
+              "similarity": "Limited",
+              "reasons": [
+                "same_category: weather",
+                "same_mechanism: landfall",
+                "same_stage: landfall",
+                "shared_recorded_location",
+                "comparable_recorded_scale"
+              ],
+              "weaknesses": [
+                "different_or_unestablished_regime"
+              ],
+              "core_comparable": true
+            },
+            {
+              "id": "gustav-2008-louisiana",
+              "episode_id": "AL072008",
+              "comparison_instrument": "brent",
+              "public_after": "2008-09-01T15:00:00Z",
+              "dates": {
+                "baseline": "2008-08-29",
+                "end": "2008-09-08",
+                "path": [
+                  "2008-08-29",
+                  "2008-09-02",
+                  "2008-09-03",
+                  "2008-09-04",
+                  "2008-09-05",
+                  "2008-09-08"
+                ],
+                "context_from": "2008-08-01"
+              },
+              "score": 95,
+              "similarity": "Limited",
+              "reasons": [
+                "same_category: weather",
+                "same_mechanism: landfall",
+                "same_stage: landfall",
+                "shared_recorded_location",
+                "comparable_recorded_scale"
+              ],
+              "weaknesses": [
+                "different_or_unestablished_regime"
+              ],
+              "core_comparable": true
+            },
+            {
+              "id": "ike-2008-galveston",
+              "episode_id": "AL092008",
+              "comparison_instrument": "brent",
+              "public_after": "2008-09-13T07:30:00Z",
+              "dates": {
+                "baseline": "2008-09-12",
+                "end": "2008-09-19",
+                "path": [
+                  "2008-09-12",
+                  "2008-09-15",
+                  "2008-09-16",
+                  "2008-09-17",
+                  "2008-09-18",
+                  "2008-09-19"
+                ],
+                "context_from": "2008-08-14"
+              },
+              "score": 95,
+              "similarity": "Limited",
+              "reasons": [
+                "same_category: weather",
+                "same_mechanism: landfall",
+                "same_stage: landfall",
+                "shared_recorded_location",
+                "comparable_recorded_scale"
+              ],
+              "weaknesses": [
+                "different_or_unestablished_regime"
+              ],
+              "core_comparable": true
+            },
+            {
+              "id": "humberto-2007-texas",
+              "episode_id": "AL092007",
+              "comparison_instrument": "brent",
+              "public_after": "2007-09-13T07:10:00Z",
+              "dates": {
+                "baseline": "2007-09-12",
+                "end": "2007-09-20",
+                "path": [
+                  "2007-09-12",
+                  "2007-09-14",
+                  "2007-09-17",
+                  "2007-09-18",
+                  "2007-09-19",
+                  "2007-09-20"
+                ],
+                "context_from": "2007-08-14"
+              },
+              "score": 85,
+              "similarity": "Weak",
+              "reasons": [
+                "same_category: weather",
+                "same_mechanism: landfall",
+                "same_stage: landfall",
+                "shared_recorded_location"
+              ],
+              "weaknesses": [
+                "different_scale_magnitude",
+                "different_or_unestablished_regime"
+              ],
+              "core_comparable": false
+            },
+            {
+              "id": "isaac-2012-louisiana",
+              "episode_id": "AL092012",
+              "comparison_instrument": "brent",
+              "public_after": "2012-08-29T00:00:00Z",
+              "dates": {
+                "baseline": "2012-08-28",
+                "end": "2012-09-06",
+                "path": [
+                  "2012-08-28",
+                  "2012-08-30",
+                  "2012-08-31",
+                  "2012-09-04",
+                  "2012-09-05",
+                  "2012-09-06"
+                ],
+                "context_from": "2012-07-31"
+              },
+              "score": 85,
+              "similarity": "Weak",
+              "reasons": [
+                "same_category: weather",
+                "same_mechanism: landfall",
+                "same_stage: landfall",
+                "shared_recorded_location"
+              ],
+              "weaknesses": [
+                "different_scale_magnitude",
+                "different_or_unestablished_regime"
+              ],
+              "core_comparable": false
+            },
+            {
+              "id": "sandy-2012-new-jersey",
+              "episode_id": "AL182012",
+              "comparison_instrument": "brent",
+              "public_after": "2012-10-30T00:00:00Z",
+              "dates": {
+                "baseline": "2012-10-29",
+                "end": "2012-11-06",
+                "path": [
+                  "2012-10-29",
+                  "2012-10-31",
+                  "2012-11-01",
+                  "2012-11-02",
+                  "2012-11-05",
+                  "2012-11-06"
+                ],
+                "context_from": "2012-10-01"
+              },
+              "score": 75,
+              "similarity": "Weak",
+              "reasons": [
+                "same_category: weather",
+                "same_mechanism: landfall",
+                "same_stage: landfall"
+              ],
+              "weaknesses": [
+                "different_or_unmatched_location",
+                "different_scale_magnitude",
+                "different_or_unestablished_regime"
+              ],
+              "core_comparable": false
+            }
+          ],
+          "selected": [
+            "dolly-2008-texas",
+            "gustav-2008-louisiana"
+          ],
+          "excluded": [
+            {
+              "id": "eu-2012-iran",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2014-target",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "brexit-2016-boe-response",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "boe-2016-august-cut",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-algiers",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-vienna",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-cooperation",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "merck-2017-epoch",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "harvey-2017-texas",
+              "reason": "self_or_same_episode"
+            },
+            {
+              "id": "ike-2008-galveston",
+              "reason": "overlapping_context_and_response"
+            }
+          ],
+          "independence_established": false,
+          "selection_note": "Outcome-blind taxonomy and dates; 21 prior reporting observations plus response window; one episode. This does not prove statistical independence."
+        },
+        "evidence": "Limited",
+        "reasons": [
+          "original_news_receipt_and_version_unproven",
+          "original_price_and_FX_availability_unproven",
+          "no_verified_executable_quote_or_instrument",
+          "fewer_than_eight_independent_qualified_cases"
+        ],
+        "qualified_cases": 0,
+        "point_in_time_safe": false,
+        "three_answers": {
+          "what_happened": "Harvey landfall on the Texas coast",
+          "likely_outcome": "Uncertain. Comparable cases are limited and original evidence availability is unproven.",
+          "suggested_action": "No Action. Historical patterns do not guarantee a repeat or support a paper entry."
+        }
+      },
+      "frozen_decision_sha256": "69d46675e43834891375d762be48e3191ef4a8562aa9661e245d92b10237cd99",
+      "comparable_events": [
+        {
+          "id": "dolly-2008-texas",
+          "title": "Dolly landfall on South Padre Island",
+          "score": 95,
+          "instrument": "brent",
+          "selected": true,
+          "reasons": [
+            "same_category: weather",
+            "same_mechanism: landfall",
+            "same_stage: landfall",
+            "shared_recorded_location",
+            "comparable_recorded_scale"
+          ],
+          "weaknesses": [
+            "different_or_unestablished_regime"
+          ],
+          "publication_day": "2008-07-23"
+        },
+        {
+          "id": "gustav-2008-louisiana",
+          "title": "Gustav landfall near Cocodrie",
+          "score": 95,
+          "instrument": "brent",
+          "selected": true,
+          "reasons": [
+            "same_category: weather",
+            "same_mechanism: landfall",
+            "same_stage: landfall",
+            "shared_recorded_location",
+            "comparable_recorded_scale"
+          ],
+          "weaknesses": [
+            "different_or_unestablished_regime"
+          ],
+          "publication_day": "2008-09-01"
+        },
+        {
+          "id": "ike-2008-galveston",
+          "title": "Ike landfall at Galveston",
+          "score": 95,
+          "instrument": "brent",
+          "selected": false,
+          "reasons": [
+            "same_category: weather",
+            "same_mechanism: landfall",
+            "same_stage: landfall",
+            "shared_recorded_location",
+            "comparable_recorded_scale"
+          ],
+          "weaknesses": [
+            "different_or_unestablished_regime"
+          ],
+          "publication_day": "2008-09-13"
+        },
+        {
+          "id": "humberto-2007-texas",
+          "title": "Humberto landfall near High Island",
+          "score": 85,
+          "instrument": "brent",
+          "selected": false,
+          "reasons": [
+            "same_category: weather",
+            "same_mechanism: landfall",
+            "same_stage: landfall",
+            "shared_recorded_location"
+          ],
+          "weaknesses": [
+            "different_scale_magnitude",
+            "different_or_unestablished_regime"
+          ],
+          "publication_day": "2007-09-13"
+        },
+        {
+          "id": "isaac-2012-louisiana",
+          "title": "Isaac first Louisiana landfall",
+          "score": 85,
+          "instrument": "brent",
+          "selected": false,
+          "reasons": [
+            "same_category: weather",
+            "same_mechanism: landfall",
+            "same_stage: landfall",
+            "shared_recorded_location"
+          ],
+          "weaknesses": [
+            "different_scale_magnitude",
+            "different_or_unestablished_regime"
+          ],
+          "publication_day": "2012-08-28"
+        },
+        {
+          "id": "sandy-2012-new-jersey",
+          "title": "Post-tropical Sandy landfall in New Jersey",
+          "score": 75,
+          "instrument": "brent",
+          "selected": false,
+          "reasons": [
+            "same_category: weather",
+            "same_mechanism: landfall",
+            "same_stage: landfall"
+          ],
+          "weaknesses": [
+            "different_or_unmatched_location",
+            "different_scale_magnitude",
+            "different_or_unestablished_regime"
+          ],
+          "publication_day": "2012-10-29"
+        }
+      ],
+      "selected_episode_count": 2,
+      "fully_as_of_qualified": 0,
+      "retrospective_cohort": {
+        "selection_cutoff": "2017-08-26T03:00:00.000001Z",
+        "selected_cases": 2,
+        "qualified_as_of_cases": 0,
+        "current_vintage_reference": {
+          "count": 2,
+          "median": "-7.3231",
+          "minimum": "-10.9349",
+          "maximum": "-3.7113",
+          "positive": 0,
+          "negative": 2,
+          "flat": 0
+        },
+        "current_vintage_GBP": {
+          "count": 2,
+          "median": "-5.3623",
+          "minimum": "-7.6501",
+          "maximum": "-3.0745",
+          "positive": 0,
+          "negative": 2,
+          "flat": 0
+        },
+        "excluded_or_missing_paths": 0,
+        "case_ids": [
+          "gustav-2008-louisiana",
+          "dolly-2008-texas"
+        ],
+        "caution": "Retrospective description of the frozen selection, outside the decision. Unknown original vintages prevent historical trading inference; reported news percentages are not pooled."
+      },
+      "dated_reference_reactions": {
+        "brent": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-08-28",
+            "change_percent": "0.0000",
+            "GBP_change_percent": "-0.4177",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-08-30",
+            "change_percent": "0.0771",
+            "GBP_change_percent": "-0.3949",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-01",
+            "change_percent": "2.4677",
+            "GBP_change_percent": "1.6857",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-08",
+            "change_percent": "5.1668",
+            "GBP_change_percent": null,
+            "GBP_status": "missing_exact_date_FX",
+            "missing_FX_dates": [
+              "2017-09-04"
+            ],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-22",
+            "change_percent": "12.1265",
+            "GBP_change_percent": null,
+            "GBP_status": "missing_exact_date_FX",
+            "missing_FX_dates": [
+              "2017-09-04"
+            ],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ],
+        "wti": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-08-28",
+            "change_percent": "-2.6233",
+            "GBP_change_percent": "-3.0301",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-08-30",
+            "change_percent": "-3.5467",
+            "GBP_change_percent": "-4.0016",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-01",
+            "change_percent": "-0.6925",
+            "GBP_change_percent": "-1.4504",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-11",
+            "change_percent": "0.8604",
+            "GBP_change_percent": "-1.4365",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-25",
+            "change_percent": "8.8143",
+            "GBP_change_percent": "4.0920",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ],
+        "gbpusd": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-08-28",
+            "change_percent": "0.4195",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per GBP",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-08-30",
+            "change_percent": "0.4739",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per GBP",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-01",
+            "change_percent": "0.7691",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per GBP",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-11",
+            "change_percent": "2.3305",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per GBP",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-25",
+            "change_percent": "4.5366",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per GBP",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ],
+        "eurusd": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-08-28",
+            "change_percent": "0.8338",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-08-30",
+            "change_percent": "0.4464",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-01",
+            "change_percent": "0.0337",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-11",
+            "change_percent": "0.7580",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-25",
+            "change_percent": "-0.1853",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ],
+        "usdjpy": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-08-28",
+            "change_percent": "-0.0183",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-08-30",
+            "change_percent": "0.8788",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-01",
+            "change_percent": "0.7781",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-11",
+            "change_percent": "-0.1922",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2017-08-25",
+            "end_date": "2017-09-25",
+            "change_percent": "2.1970",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ]
+      },
+      "separately_reported_reactions": [],
+      "legacy_daily_cross_check": null,
+      "sources": [
+        {
+          "id": "oil-harvey-2017-texas-source-1",
+          "url": "https://www.nhc.noaa.gov/archive/2017/al09/al092017.public.023.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "locator": "AL092017 advisory 23, 1000 PM CDT 25 August 2017"
+        },
+        {
+          "id": "harvey-2017-texas-scale",
+          "url": "https://www.nhc.noaa.gov/archive/2017/al09/al092017.public.022.shtml",
+          "publisher": "NOAA National Hurricane Center",
+          "locator": "Advisory 22; six hours before the event bulletin, not a landfall best-track estimate"
+        }
+      ],
+      "action": "No Action",
+      "three_answers": {
+        "what_happened": "Historical replay: Harvey landfall on the Texas coast.",
+        "likely_outcome": "Uncertain. 6 earlier event comparisons were located. Original news and price availability is unproven. Daily reference prices are not timestamped executable quotes.",
+        "suggested_action": "No Action. Observe only; this replay cannot support a paper entry or predict a repeat."
+      },
+      "trace": [
+        "Read and validate a sourced historical event item",
+        "Detect its category with deterministic text rules",
+        "Freeze prior comparisons without reading later returns",
+        "Cross-check dated reference prices, peers and explicit gaps",
+        "Produce three answers and journal an observation-only decision"
+      ],
+      "limitations": [
+        "Retrospective current-vintage reactions are outside the sealed earlier decision.",
+        "EUR/USD and USD/JPY are context references, not asserted event-caused ripples.",
+        "Daily reporting observations are not intraday quotes or an exchange trading calendar.",
+        "A public catalog receipt does not prove first disclosure or a fresh market-moving event."
+      ]
+    },
+    {
+      "case": "nvidia",
+      "event_id": "nvidia-2024-q4-outlook",
+      "title": "Nvidia Q4 FY2024 results and revenue outlook",
+      "detected_category": "earnings",
+      "mode": "historical_research_replay_not_current_market_news",
+      "occurred_day": "2024-02-21",
+      "supporting_publication_day": "2024-02-21",
+      "supporting_publication_at": null,
+      "actual_original_receipt_at": null,
+      "frozen_historical_cutoff": "2024-02-23T00:00:00.000001Z",
+      "frozen_historical_decision": {
+        "event_id": "nvidia-2024-q4-outlook",
+        "as_of": "2024-02-23T00:00:00.000001Z",
+        "action": "No Action",
+        "facts": {
+          "id": "nvidia-2024-q4-outlook",
+          "title": "Nvidia Q4 FY2024 results and revenue outlook",
+          "category": "earnings",
+          "mechanism": "earnings_and_guidance",
+          "stage": "reported",
+          "impact": "earnings_expectations",
+          "regime": null,
+          "location": [
+            "US"
+          ],
+          "primary_group": "technology_equities",
+          "episode_id": "nvda-earnings-2024-02",
+          "targets": [
+            "NVDA",
+            "nasdaq_composite"
+          ],
+          "severity": null,
+          "market_context": {
+            "status": "original_as_of_context_unverified",
+            "price_trend_used_in_matching": false
+          }
+        },
+        "historical_matches": {
+          "matches": [
+            {
+              "id": "nvidia-2023-q1-outlook",
+              "episode_id": "nvda-earnings-2023-05",
+              "comparison_instrument": "NVDA",
+              "public_after": "2023-05-26T00:00:00Z",
+              "dates": null,
+              "score": 85,
+              "similarity": "Limited",
+              "reasons": [
+                "same_category: earnings",
+                "same_mechanism: earnings_and_guidance",
+                "same_stage: reported",
+                "shared_recorded_location"
+              ],
+              "weaknesses": [
+                "severity_unavailable_or_different_scale",
+                "different_or_unestablished_regime",
+                "verified_response_schedule_unavailable"
+              ],
+              "core_comparable": true
+            },
+            {
+              "id": "nvidia-2023-q2-outlook",
+              "episode_id": "nvda-earnings-2023-08",
+              "comparison_instrument": "NVDA",
+              "public_after": "2023-08-25T00:00:00Z",
+              "dates": null,
+              "score": 85,
+              "similarity": "Limited",
+              "reasons": [
+                "same_category: earnings",
+                "same_mechanism: earnings_and_guidance",
+                "same_stage: reported",
+                "shared_recorded_location"
+              ],
+              "weaknesses": [
+                "severity_unavailable_or_different_scale",
+                "different_or_unestablished_regime",
+                "verified_response_schedule_unavailable"
+              ],
+              "core_comparable": true
+            }
+          ],
+          "selected": [],
+          "excluded": [
+            {
+              "id": "humberto-2007-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "dolly-2008-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "gustav-2008-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "ike-2008-galveston",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "eu-2012-iran",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "isaac-2012-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "sandy-2012-new-jersey",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2014-target",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "brexit-2016-boe-response",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "boe-2016-august-cut",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-algiers",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-vienna",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-cooperation",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "merck-2017-epoch",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "harvey-2017-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "equifax-2017-security",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "nate-2017-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "boe-2017-november-hike",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "us-2018-jcpoa",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "intel-2018-ceo",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "tesla-2018-governance",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "us-2018-iran-reimposition",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "biogen-2019-futility",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "saudi-2019-abqaiq",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "biogen-2019-reanalysis",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "fed-2020-emergency-cut",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "who-2020-pandemic",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "fed-2020-zero-range",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2020-april",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2020-june",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "laura-2020-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "delta-2020-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "zeta-2020-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "pfizer-2020-interim",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "pfizer-2020-eua",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2021-july",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "ida-2021-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "nicholas-2021-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "russia-2022-invasion",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "iea-2022-emergency-release",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "eu-2022-oil-embargo",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "fed-2022-june-hike",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2022-october",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "g7-2022-oil-cap",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "fed-2023-june-hold",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "israel-2023-october",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "nvidia-2024-q4-outlook",
+              "reason": "self_or_same_episode"
+            }
+          ],
+          "independence_established": false,
+          "selection_note": "Outcome-blind taxonomy and dates; 21 prior reporting observations plus response window; one episode. This does not prove statistical independence."
+        },
+        "evidence": "Limited",
+        "reasons": [
+          "original_news_receipt_and_version_unproven",
+          "original_price_and_FX_availability_unproven",
+          "no_verified_executable_quote_or_instrument",
+          "fewer_than_eight_independent_qualified_cases"
+        ],
+        "qualified_cases": 0,
+        "point_in_time_safe": false,
+        "three_answers": {
+          "what_happened": "Nvidia Q4 FY2024 results and revenue outlook",
+          "likely_outcome": "Uncertain. Comparable cases are limited and original evidence availability is unproven.",
+          "suggested_action": "No Action. Historical patterns do not guarantee a repeat or support a paper entry."
+        }
+      },
+      "frozen_decision_sha256": "6782dbf9f3e74772ac7461c848586f086ba469ede745129c6f25ceadfc56df5b",
+      "comparable_events": [
+        {
+          "id": "nvidia-2023-q1-outlook",
+          "title": "Nvidia Q1 FY2024 results and revenue outlook",
+          "score": 85,
+          "instrument": "NVDA",
+          "selected": false,
+          "reasons": [
+            "same_category: earnings",
+            "same_mechanism: earnings_and_guidance",
+            "same_stage: reported",
+            "shared_recorded_location"
+          ],
+          "weaknesses": [
+            "severity_unavailable_or_different_scale",
+            "different_or_unestablished_regime",
+            "verified_response_schedule_unavailable"
+          ],
+          "publication_day": "2023-05-24"
+        },
+        {
+          "id": "nvidia-2023-q2-outlook",
+          "title": "Nvidia Q2 FY2024 results and revenue outlook",
+          "score": 85,
+          "instrument": "NVDA",
+          "selected": false,
+          "reasons": [
+            "same_category: earnings",
+            "same_mechanism: earnings_and_guidance",
+            "same_stage: reported",
+            "shared_recorded_location"
+          ],
+          "weaknesses": [
+            "severity_unavailable_or_different_scale",
+            "different_or_unestablished_regime",
+            "verified_response_schedule_unavailable"
+          ],
+          "publication_day": "2023-08-23"
+        }
+      ],
+      "selected_episode_count": 0,
+      "fully_as_of_qualified": 0,
+      "retrospective_cohort": {
+        "selection_cutoff": "2024-02-23T00:00:00.000001Z",
+        "selected_cases": 0,
+        "qualified_as_of_cases": 0,
+        "current_vintage_reference": {
+          "count": 0,
+          "median": null,
+          "minimum": null,
+          "maximum": null,
+          "positive": 0,
+          "negative": 0,
+          "flat": 0
+        },
+        "current_vintage_GBP": {
+          "count": 0,
+          "median": null,
+          "minimum": null,
+          "maximum": null,
+          "positive": 0,
+          "negative": 0,
+          "flat": 0
+        },
+        "excluded_or_missing_paths": 0,
+        "case_ids": [],
+        "caution": "Retrospective description of the frozen selection, outside the decision. Unknown original vintages prevent historical trading inference; reported news percentages are not pooled."
+      },
+      "dated_reference_reactions": {
+        "NVDA": [
+          {
+            "days": 1,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          }
+        ],
+        "nasdaq_composite": [
+          {
+            "days": 1,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          }
+        ],
+        "eurusd": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2024-02-20",
+            "end_date": "2024-02-22",
+            "change_percent": "0.0092",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2024-02-20",
+            "end_date": "2024-02-26",
+            "change_percent": "0.3791",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2024-02-20",
+            "end_date": "2024-02-28",
+            "change_percent": "0.2682",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2024-02-20",
+            "end_date": "2024-03-06",
+            "change_percent": "0.9155",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2024-02-20",
+            "end_date": "2024-03-20",
+            "change_percent": "0.3884",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ],
+        "usdjpy": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2024-02-20",
+            "end_date": "2024-02-22",
+            "change_percent": "0.5004",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2024-02-20",
+            "end_date": "2024-02-26",
+            "change_percent": "0.6139",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2024-02-20",
+            "end_date": "2024-02-28",
+            "change_percent": "0.5405",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2024-02-20",
+            "end_date": "2024-03-06",
+            "change_percent": "-0.4671",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2024-02-20",
+            "end_date": "2024-03-20",
+            "change_percent": "1.1944",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ]
+      },
+      "separately_reported_reactions": [
+        {
+          "id": "nvda-q4-rise",
+          "event_id": "nvidia-2024-q4-outlook",
+          "instrument": "NVDA",
+          "observation_day": "2024-02-22",
+          "source_id": "nvda-q4-session-report",
+          "reported_percent": "16.4",
+          "precision": "rounded_as_published",
+          "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+          "raw_price_series_verified": false,
+          "corporate_action_basis": "not_verified",
+          "original_available_at": null,
+          "causal_effect_established": false
+        }
+      ],
+      "legacy_daily_cross_check": null,
+      "sources": [
+        {
+          "id": "nvda-q4-2024",
+          "url": "https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/default.aspx",
+          "publisher": "NVIDIA",
+          "locator": "Printed announcement date; results and outlook paragraphs"
+        },
+        {
+          "id": "nvda-q4-session-report",
+          "url": "https://www.investing.com/news/stock-market-news/ai-leader-nvidia-rises-as-forecast-tops-wall-streets-lofty-goals-3310840",
+          "publisher": "Reuters via Investing.com",
+          "locator": "Final closing share-performance paragraph"
+        }
+      ],
+      "action": "No Action",
+      "three_answers": {
+        "what_happened": "Historical replay: Nvidia Q4 FY2024 results and revenue outlook.",
+        "likely_outcome": "Uncertain. 2 earlier event comparisons were located. Original news and price availability is unproven. Adjusted company prices and executable quotes are missing.",
+        "suggested_action": "No Action. Observe only; this replay cannot support a paper entry or predict a repeat."
+      },
+      "trace": [
+        "Read and validate a sourced historical event item",
+        "Detect its category with deterministic text rules",
+        "Freeze prior comparisons without reading later returns",
+        "Cross-check dated reference prices, peers and explicit gaps",
+        "Produce three answers and journal an observation-only decision"
+      ],
+      "limitations": [
+        "Retrospective current-vintage reactions are outside the sealed earlier decision.",
+        "EUR/USD and USD/JPY are context references, not asserted event-caused ripples.",
+        "Daily reporting observations are not intraday quotes or an exchange trading calendar.",
+        "A public catalog receipt does not prove first disclosure or a fresh market-moving event."
+      ]
+    },
+    {
+      "case": "biogen",
+      "event_id": "biogen-2019-futility",
+      "title": "Biogen stops aducanumab Phase 3 studies",
+      "detected_category": "drug_development",
+      "mode": "historical_research_replay_not_current_market_news",
+      "occurred_day": null,
+      "supporting_publication_day": "2019-03-21",
+      "supporting_publication_at": null,
+      "actual_original_receipt_at": null,
+      "frozen_historical_cutoff": "2019-03-23T00:00:00.000001Z",
+      "frozen_historical_decision": {
+        "event_id": "biogen-2019-futility",
+        "as_of": "2019-03-23T00:00:00.000001Z",
+        "action": "No Action",
+        "facts": {
+          "id": "biogen-2019-futility",
+          "title": "Biogen stops aducanumab Phase 3 studies",
+          "category": "drug_development",
+          "mechanism": "clinical_trial",
+          "stage": "announced_futility_stop",
+          "impact": "product_development",
+          "regime": null,
+          "location": [
+            "US"
+          ],
+          "primary_group": "pharmaceuticals",
+          "episode_id": "aducanumab-development",
+          "targets": [
+            "BIIB",
+            "nasdaq_composite"
+          ],
+          "severity": null,
+          "market_context": {
+            "status": "original_as_of_context_unverified",
+            "price_trend_used_in_matching": false
+          }
+        },
+        "historical_matches": {
+          "matches": [
+            {
+              "id": "merck-2017-epoch",
+              "episode_id": "verubecestat-development",
+              "comparison_instrument": "MRK",
+              "public_after": "2017-02-14T22:00:00Z",
+              "dates": null,
+              "score": 85,
+              "similarity": "Limited",
+              "reasons": [
+                "same_category: drug_development",
+                "same_mechanism: clinical_trial",
+                "same_stage: announced_futility_stop",
+                "shared_recorded_location"
+              ],
+              "weaknesses": [
+                "severity_unavailable_or_different_scale",
+                "different_or_unestablished_regime",
+                "A shared broad trial stage does not establish the same drug mechanism, patient population or endpoint.",
+                "different_issuer; only its own price response can be measured, never transferred to the query stock",
+                "verified_response_schedule_unavailable"
+              ],
+              "core_comparable": true
+            }
+          ],
+          "selected": [],
+          "excluded": [
+            {
+              "id": "humberto-2007-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "dolly-2008-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "gustav-2008-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "ike-2008-galveston",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "eu-2012-iran",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "isaac-2012-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "sandy-2012-new-jersey",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2014-target",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "brexit-2016-boe-response",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "boe-2016-august-cut",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-algiers",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-vienna",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-cooperation",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "harvey-2017-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "equifax-2017-security",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "nate-2017-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "boe-2017-november-hike",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "us-2018-jcpoa",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "intel-2018-ceo",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "tesla-2018-governance",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "us-2018-iran-reimposition",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "biogen-2019-futility",
+              "reason": "self_or_same_episode"
+            }
+          ],
+          "independence_established": false,
+          "selection_note": "Outcome-blind taxonomy and dates; 21 prior reporting observations plus response window; one episode. This does not prove statistical independence."
+        },
+        "evidence": "Limited",
+        "reasons": [
+          "original_news_receipt_and_version_unproven",
+          "original_price_and_FX_availability_unproven",
+          "no_verified_executable_quote_or_instrument",
+          "fewer_than_eight_independent_qualified_cases"
+        ],
+        "qualified_cases": 0,
+        "point_in_time_safe": false,
+        "three_answers": {
+          "what_happened": "Biogen stops aducanumab Phase 3 studies",
+          "likely_outcome": "Uncertain. Comparable cases are limited and original evidence availability is unproven.",
+          "suggested_action": "No Action. Historical patterns do not guarantee a repeat or support a paper entry."
+        }
+      },
+      "frozen_decision_sha256": "87166b747457c695f4035500bb5013dc47341d0c24527aefddca2fea7a8436d1",
+      "comparable_events": [
+        {
+          "id": "merck-2017-epoch",
+          "title": "Merck stops EPOCH verubecestat study",
+          "score": 85,
+          "instrument": "MRK",
+          "selected": false,
+          "reasons": [
+            "same_category: drug_development",
+            "same_mechanism: clinical_trial",
+            "same_stage: announced_futility_stop",
+            "shared_recorded_location"
+          ],
+          "weaknesses": [
+            "severity_unavailable_or_different_scale",
+            "different_or_unestablished_regime",
+            "A shared broad trial stage does not establish the same drug mechanism, patient population or endpoint.",
+            "different_issuer; only its own price response can be measured, never transferred to the query stock",
+            "verified_response_schedule_unavailable"
+          ],
+          "publication_day": "2017-02-14"
+        }
+      ],
+      "selected_episode_count": 0,
+      "fully_as_of_qualified": 0,
+      "retrospective_cohort": {
+        "selection_cutoff": "2019-03-23T00:00:00.000001Z",
+        "selected_cases": 0,
+        "qualified_as_of_cases": 0,
+        "current_vintage_reference": {
+          "count": 0,
+          "median": null,
+          "minimum": null,
+          "maximum": null,
+          "positive": 0,
+          "negative": 0,
+          "flat": 0
+        },
+        "current_vintage_GBP": {
+          "count": 0,
+          "median": null,
+          "minimum": null,
+          "maximum": null,
+          "positive": 0,
+          "negative": 0,
+          "flat": 0
+        },
+        "excluded_or_missing_paths": 0,
+        "case_ids": [],
+        "caution": "Retrospective description of the frozen selection, outside the decision. Unknown original vintages prevent historical trading inference; reported news percentages are not pooled."
+      },
+      "dated_reference_reactions": {
+        "BIIB": [
+          {
+            "days": 1,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          }
+        ],
+        "nasdaq_composite": [
+          {
+            "days": 1,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          }
+        ],
+        "eurusd": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2019-03-20",
+            "end_date": "2019-03-22",
+            "change_percent": "-0.6166",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2019-03-20",
+            "end_date": "2019-03-26",
+            "change_percent": "-0.6342",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2019-03-20",
+            "end_date": "2019-03-28",
+            "change_percent": "-1.0218",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2019-03-20",
+            "end_date": "2019-04-04",
+            "change_percent": "-1.1980",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2019-03-20",
+            "end_date": "2019-04-18",
+            "change_percent": "-0.9778",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ],
+        "usdjpy": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2019-03-20",
+            "end_date": "2019-03-22",
+            "change_percent": "-1.4810",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2019-03-20",
+            "end_date": "2019-03-26",
+            "change_percent": "-0.8168",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2019-03-20",
+            "end_date": "2019-03-28",
+            "change_percent": "-0.7809",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2019-03-20",
+            "end_date": "2019-04-04",
+            "change_percent": "0.1257",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2019-03-20",
+            "end_date": "2019-04-18",
+            "change_percent": "0.4757",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ]
+      },
+      "separately_reported_reactions": [
+        {
+          "id": "biib-negative",
+          "event_id": "biogen-2019-futility",
+          "instrument": "BIIB",
+          "observation_day": "2019-03-21",
+          "source_id": "biib-fall-report",
+          "reported_percent": "-29.2",
+          "precision": "rounded_as_published",
+          "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+          "raw_price_series_verified": false,
+          "corporate_action_basis": "not_verified",
+          "original_available_at": null,
+          "causal_effect_established": false
+        },
+        {
+          "id": "biib-opposing-index",
+          "event_id": "biogen-2019-futility",
+          "instrument": "nasdaq_composite",
+          "observation_day": "2019-03-21",
+          "source_id": "biib-fall-report",
+          "reported_percent": "1.42",
+          "precision": "rounded_as_published",
+          "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+          "raw_price_series_verified": false,
+          "corporate_action_basis": "not_applicable_or_contract_unresolved",
+          "original_available_at": null,
+          "causal_effect_established": false
+        }
+      ],
+      "legacy_daily_cross_check": null,
+      "sources": [
+        {
+          "id": "biib-halt-2019",
+          "url": "https://investors.biogen.com/news-releases/news-release-details/biogen-and-eisai-discontinue-phase-3-engage-and-emerge-trials",
+          "publisher": "Biogen",
+          "locator": "March 21 heading; discontinuation and futility paragraphs"
+        },
+        {
+          "id": "biib-fall-report",
+          "url": "https://za.investing.com/news/stock-market-news/us-stockswall-street-rises-as-apple-tech-shares-climb-1433600",
+          "publisher": "Reuters via Investing.com",
+          "locator": "Closing Nasdaq index and Biogen paragraphs"
+        }
+      ],
+      "action": "No Action",
+      "three_answers": {
+        "what_happened": "Historical replay: Biogen stops aducanumab Phase 3 studies.",
+        "likely_outcome": "Uncertain. 1 earlier event comparisons were located. Original news and price availability is unproven. Adjusted company prices and executable quotes are missing.",
+        "suggested_action": "No Action. Observe only; this replay cannot support a paper entry or predict a repeat."
+      },
+      "trace": [
+        "Read and validate a sourced historical event item",
+        "Detect its category with deterministic text rules",
+        "Freeze prior comparisons without reading later returns",
+        "Cross-check dated reference prices, peers and explicit gaps",
+        "Produce three answers and journal an observation-only decision"
+      ],
+      "limitations": [
+        "Retrospective current-vintage reactions are outside the sealed earlier decision.",
+        "EUR/USD and USD/JPY are context references, not asserted event-caused ripples.",
+        "Daily reporting observations are not intraday quotes or an exchange trading calendar.",
+        "A public catalog receipt does not prove first disclosure or a fresh market-moving event."
+      ]
+    },
+    {
+      "case": "fed",
+      "event_id": "fed-2020-emergency-cut",
+      "title": "Fed emergency 50 bp cut",
+      "detected_category": "monetary_policy",
+      "mode": "historical_research_replay_not_current_market_news",
+      "occurred_day": "2020-03-03",
+      "supporting_publication_day": "2020-03-03",
+      "supporting_publication_at": "2020-03-03T10:00:00-05:00",
+      "actual_original_receipt_at": null,
+      "frozen_historical_cutoff": "2020-03-03T15:00:00.000001Z",
+      "frozen_historical_decision": {
+        "event_id": "fed-2020-emergency-cut",
+        "as_of": "2020-03-03T15:00:00.000001Z",
+        "action": "No Action",
+        "facts": {
+          "id": "fed-2020-emergency-cut",
+          "title": "Fed emergency 50 bp cut",
+          "category": "monetary_policy",
+          "mechanism": "cut",
+          "stage": "announced",
+          "impact": "discount_rate_and_liquidity",
+          "regime": "pandemic_policy_response",
+          "location": [
+            "US"
+          ],
+          "primary_group": "stock_indices",
+          "episode_id": "covid-fed-2020",
+          "targets": [
+            "nasdaq_composite",
+            "gold_futures_reported",
+            "gbpusd",
+            "brent",
+            "wti"
+          ],
+          "severity": {
+            "scale": "policy_change_basis_points",
+            "value": 50,
+            "source_id": "fed-cut-mar3"
+          },
+          "market_context": {
+            "status": "original_as_of_context_unverified",
+            "price_trend_used_in_matching": false
+          }
+        },
+        "historical_matches": {
+          "matches": [],
+          "selected": [],
+          "excluded": [
+            {
+              "id": "humberto-2007-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "dolly-2008-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "gustav-2008-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "ike-2008-galveston",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "eu-2012-iran",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "isaac-2012-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "sandy-2012-new-jersey",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2014-target",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "brexit-2016-boe-response",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "boe-2016-august-cut",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-algiers",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-vienna",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-cooperation",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "merck-2017-epoch",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "harvey-2017-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "equifax-2017-security",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "nate-2017-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "boe-2017-november-hike",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "us-2018-jcpoa",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "intel-2018-ceo",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "tesla-2018-governance",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "us-2018-iran-reimposition",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "biogen-2019-futility",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "saudi-2019-abqaiq",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "biogen-2019-reanalysis",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "fed-2020-emergency-cut",
+              "reason": "self_or_same_episode"
+            }
+          ],
+          "independence_established": false,
+          "selection_note": "Outcome-blind taxonomy and dates; 21 prior reporting observations plus response window; one episode. This does not prove statistical independence."
+        },
+        "evidence": "Limited",
+        "reasons": [
+          "original_news_receipt_and_version_unproven",
+          "original_price_and_FX_availability_unproven",
+          "no_verified_executable_quote_or_instrument",
+          "fewer_than_eight_independent_qualified_cases"
+        ],
+        "qualified_cases": 0,
+        "point_in_time_safe": false,
+        "three_answers": {
+          "what_happened": "Fed emergency 50 bp cut",
+          "likely_outcome": "Uncertain. Comparable cases are limited and original evidence availability is unproven.",
+          "suggested_action": "No Action. Historical patterns do not guarantee a repeat or support a paper entry."
+        }
+      },
+      "frozen_decision_sha256": "ccec7e545fa9dc1bfee2c12760a8ffd3f3afa6dc814e9592157826767f814640",
+      "comparable_events": [],
+      "selected_episode_count": 0,
+      "fully_as_of_qualified": 0,
+      "retrospective_cohort": {
+        "selection_cutoff": "2020-03-03T15:00:00.000001Z",
+        "selected_cases": 0,
+        "qualified_as_of_cases": 0,
+        "current_vintage_reference": {
+          "count": 0,
+          "median": null,
+          "minimum": null,
+          "maximum": null,
+          "positive": 0,
+          "negative": 0,
+          "flat": 0
+        },
+        "current_vintage_GBP": {
+          "count": 0,
+          "median": null,
+          "minimum": null,
+          "maximum": null,
+          "positive": 0,
+          "negative": 0,
+          "flat": 0
+        },
+        "excluded_or_missing_paths": 0,
+        "case_ids": [],
+        "caution": "Retrospective description of the frozen selection, outside the decision. Unknown original vintages prevent historical trading inference; reported news percentages are not pooled."
+      },
+      "dated_reference_reactions": {
+        "nasdaq_composite": [
+          {
+            "days": 1,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "index points",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          }
+        ],
+        "gold_futures_reported": [
+          {
+            "days": 1,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "reported percent",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "reported percent",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "reported percent",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "reported percent",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "reported percent",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          }
+        ],
+        "gbpusd": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-04",
+            "change_percent": "0.3518",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per GBP",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-06",
+            "change_percent": "1.7121",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per GBP",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-10",
+            "change_percent": "1.1102",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per GBP",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-17",
+            "change_percent": "-6.0511",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per GBP",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-31",
+            "change_percent": "-2.6347",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per GBP",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ],
+        "brent": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-04",
+            "change_percent": "-1.2567",
+            "GBP_change_percent": "-1.6028",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-06",
+            "change_percent": "-13.1759",
+            "GBP_change_percent": "-14.6375",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-10",
+            "change_percent": "-32.2734",
+            "GBP_change_percent": "-33.0170",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-17",
+            "change_percent": "-46.7441",
+            "GBP_change_percent": "-43.3140",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-31",
+            "change_percent": "-71.7251",
+            "GBP_change_percent": "-70.9599",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ],
+        "wti": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-04",
+            "change_percent": "0.0000",
+            "GBP_change_percent": "-0.3506",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-06",
+            "change_percent": "-12.0564",
+            "GBP_change_percent": "-13.5368",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-10",
+            "change_percent": "-26.3147",
+            "GBP_change_percent": "-27.1237",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-17",
+            "change_percent": "-42.3685",
+            "GBP_change_percent": "-38.6566",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-31",
+            "change_percent": "-56.1565",
+            "GBP_change_percent": "-54.9701",
+            "GBP_status": "complete_current_reference_path",
+            "missing_FX_dates": [],
+            "unit": "USD per barrel",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ],
+        "eurusd": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-04",
+            "change_percent": "-0.3046",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-06",
+            "change_percent": "1.3884",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-10",
+            "change_percent": "1.5944",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-17",
+            "change_percent": "-1.7288",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-31",
+            "change_percent": "-1.3257",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ],
+        "usdjpy": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-04",
+            "change_percent": "-0.6295",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-06",
+            "change_percent": "-2.5088",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-10",
+            "change_percent": "-3.9900",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-17",
+            "change_percent": "-0.5647",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "ok",
+            "baseline_date": "2020-03-02",
+            "end_date": "2020-03-31",
+            "change_percent": "-0.4536",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          }
+        ]
+      },
+      "separately_reported_reactions": [
+        {
+          "id": "gold-fed-cut",
+          "event_id": "fed-2020-emergency-cut",
+          "instrument": "gold_futures_reported",
+          "observation_day": "2020-03-03",
+          "source_id": "gold-fed-report",
+          "reported_percent": "3.1",
+          "precision": "rounded_as_published",
+          "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+          "raw_price_series_verified": false,
+          "corporate_action_basis": "not_applicable_or_contract_unresolved",
+          "original_available_at": null,
+          "causal_effect_established": false
+        },
+        {
+          "id": "fed-cut-index-down",
+          "event_id": "fed-2020-emergency-cut",
+          "instrument": "nasdaq_composite",
+          "observation_day": "2020-03-03",
+          "source_id": "fed-cut-index-report",
+          "reported_percent": "-2.99",
+          "precision": "rounded_as_published",
+          "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+          "raw_price_series_verified": false,
+          "corporate_action_basis": "not_applicable_or_contract_unresolved",
+          "original_available_at": null,
+          "causal_effect_established": false
+        }
+      ],
+      "legacy_daily_cross_check": null,
+      "sources": [
+        {
+          "id": "fed-cut-mar3",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200303a.htm",
+          "publisher": "Federal Reserve",
+          "locator": "For release at 10:00 a.m. EST; policy paragraph"
+        },
+        {
+          "id": "gold-fed-report",
+          "url": "https://ca.investing.com/news/commodities-news/gold-surges-over-3-after-us-feds-emergency-rate-cut-2080399",
+          "publisher": "Reuters via Investing.com",
+          "locator": "Settlement paragraph; GCv1; generic front contract, no immutable contract identifier supplied"
+        },
+        {
+          "id": "fed-cut-index-report",
+          "url": "https://in.investing.com/news/us-stocksanother-foul-day-on-wall-street-after-surprise-fed-rate-cut-2166477",
+          "publisher": "Reuters via Investing.com",
+          "locator": "Closing index paragraph"
+        }
+      ],
+      "action": "No Action",
+      "three_answers": {
+        "what_happened": "Historical replay: Fed emergency 50 bp cut.",
+        "likely_outcome": "Uncertain. 0 earlier event comparisons were located. Original news and price availability is unproven. Historical index and gold daily price windows are incomplete.",
+        "suggested_action": "No Action. Observe only; this replay cannot support a paper entry or predict a repeat."
+      },
+      "trace": [
+        "Read and validate a sourced historical event item",
+        "Detect its category with deterministic text rules",
+        "Freeze prior comparisons without reading later returns",
+        "Cross-check dated reference prices, peers and explicit gaps",
+        "Produce three answers and journal an observation-only decision"
+      ],
+      "limitations": [
+        "Retrospective current-vintage reactions are outside the sealed earlier decision.",
+        "EUR/USD and USD/JPY are context references, not asserted event-caused ripples.",
+        "Daily reporting observations are not intraday quotes or an exchange trading calendar.",
+        "A public catalog receipt does not prove first disclosure or a fresh market-moving event."
+      ]
+    },
+    {
+      "case": "nvidia_board",
+      "event_id": "nvidia-2026-board-replay",
+      "title": "Statement from NVIDIA Board of Directors",
+      "detected_category": "corporate_event",
+      "mode": "historical_research_replay_not_current_market_news",
+      "occurred_day": null,
+      "supporting_publication_day": "2026-11-08",
+      "supporting_publication_at": "2026-11-08T15:00:00-05:00",
+      "actual_original_receipt_at": null,
+      "frozen_historical_cutoff": "2026-11-08T20:00:00.000001Z",
+      "frozen_historical_decision": {
+        "event_id": "nvidia-2026-board-replay",
+        "as_of": "2026-11-08T20:00:00.000001Z",
+        "action": "No Action",
+        "facts": {
+          "id": "nvidia-2026-board-replay",
+          "title": "Statement from NVIDIA Board of Directors",
+          "category": "corporate_event",
+          "mechanism": "unresolved_inquiry",
+          "stage": "unresolved_inquiry",
+          "impact": "company_specific",
+          "regime": null,
+          "location": [
+            "US"
+          ],
+          "primary_group": "technology_equities",
+          "episode_id": "nvda-board-2026-11-08",
+          "targets": [
+            "NVDA"
+          ],
+          "severity": null,
+          "market_context": {
+            "status": "original_as_of_context_unverified",
+            "price_trend_used_in_matching": false
+          }
+        },
+        "historical_matches": {
+          "matches": [
+            {
+              "id": "equifax-2017-security",
+              "episode_id": "equifax-2017-security",
+              "comparison_instrument": "EFX",
+              "public_after": "2017-09-09T00:00:00Z",
+              "dates": null,
+              "score": 40,
+              "similarity": "Weak",
+              "reasons": [
+                "same_category: corporate_event",
+                "shared_recorded_location"
+              ],
+              "weaknesses": [
+                "different_mechanism",
+                "different_stage",
+                "severity_unavailable_or_different_scale",
+                "different_or_unestablished_regime",
+                "different_issuer; only its own price response can be measured, never transferred to the query stock",
+                "verified_response_schedule_unavailable"
+              ],
+              "core_comparable": false
+            },
+            {
+              "id": "intel-2018-ceo",
+              "episode_id": "intel-2018-ceo",
+              "comparison_instrument": "INTC",
+              "public_after": "2018-06-21T13:00:00Z",
+              "dates": null,
+              "score": 40,
+              "similarity": "Weak",
+              "reasons": [
+                "same_category: corporate_event",
+                "shared_recorded_location"
+              ],
+              "weaknesses": [
+                "different_mechanism",
+                "different_stage",
+                "severity_unavailable_or_different_scale",
+                "different_or_unestablished_regime",
+                "different_issuer; only its own price response can be measured, never transferred to the query stock",
+                "verified_response_schedule_unavailable"
+              ],
+              "core_comparable": false
+            },
+            {
+              "id": "tesla-2018-governance",
+              "episode_id": "tesla-2018-governance",
+              "comparison_instrument": "TSLA",
+              "public_after": "2018-09-29T00:00:00Z",
+              "dates": null,
+              "score": 40,
+              "similarity": "Weak",
+              "reasons": [
+                "same_category: corporate_event",
+                "shared_recorded_location"
+              ],
+              "weaknesses": [
+                "different_mechanism",
+                "different_stage",
+                "severity_unavailable_or_different_scale",
+                "different_or_unestablished_regime",
+                "different_issuer; only its own price response can be measured, never transferred to the query stock",
+                "verified_response_schedule_unavailable"
+              ],
+              "core_comparable": false
+            },
+            {
+              "id": "nvidia-2025-h20",
+              "episode_id": "nvidia-2025-h20",
+              "comparison_instrument": "NVDA",
+              "public_after": "2025-04-15T21:22:59Z",
+              "dates": null,
+              "score": 40,
+              "similarity": "Weak",
+              "reasons": [
+                "same_category: corporate_event",
+                "shared_recorded_location"
+              ],
+              "weaknesses": [
+                "different_mechanism",
+                "different_stage",
+                "severity_unavailable_or_different_scale",
+                "different_or_unestablished_regime",
+                "verified_response_schedule_unavailable"
+              ],
+              "core_comparable": false
+            }
+          ],
+          "selected": [],
+          "excluded": [
+            {
+              "id": "humberto-2007-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "dolly-2008-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "gustav-2008-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "ike-2008-galveston",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "eu-2012-iran",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "isaac-2012-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "sandy-2012-new-jersey",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2014-target",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "brexit-2016-boe-response",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "boe-2016-august-cut",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-algiers",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-vienna",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2016-cooperation",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "merck-2017-epoch",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "harvey-2017-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "nate-2017-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "boe-2017-november-hike",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "us-2018-jcpoa",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "us-2018-iran-reimposition",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "biogen-2019-futility",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "saudi-2019-abqaiq",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "biogen-2019-reanalysis",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "fed-2020-emergency-cut",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "who-2020-pandemic",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "fed-2020-zero-range",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2020-april",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2020-june",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "laura-2020-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "delta-2020-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "zeta-2020-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "pfizer-2020-interim",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "pfizer-2020-eua",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2021-july",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "ida-2021-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "nicholas-2021-texas",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "russia-2022-invasion",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "iea-2022-emergency-release",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "eu-2022-oil-embargo",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "fed-2022-june-hike",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "opec-2022-october",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "g7-2022-oil-cap",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "nvidia-2023-q1-outlook",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "fed-2023-june-hold",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "nvidia-2023-q2-outlook",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "israel-2023-october",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "nvidia-2024-q4-outlook",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "francine-2024-louisiana",
+              "reason": "different_category_or_instrument"
+            },
+            {
+              "id": "nvidia-2026-board-replay",
+              "reason": "self_or_same_episode"
+            }
+          ],
+          "independence_established": false,
+          "selection_note": "Outcome-blind taxonomy and dates; 21 prior reporting observations plus response window; one episode. This does not prove statistical independence."
+        },
+        "evidence": "Limited",
+        "reasons": [
+          "original_news_receipt_and_version_unproven",
+          "original_price_and_FX_availability_unproven",
+          "no_verified_executable_quote_or_instrument",
+          "fewer_than_eight_independent_qualified_cases"
+        ],
+        "qualified_cases": 0,
+        "point_in_time_safe": false,
+        "three_answers": {
+          "what_happened": "Statement from NVIDIA Board of Directors",
+          "likely_outcome": "Uncertain. Comparable cases are limited and original evidence availability is unproven.",
+          "suggested_action": "No Action. Historical patterns do not guarantee a repeat or support a paper entry."
+        }
+      },
+      "frozen_decision_sha256": "fff1b5a7627b0be13637c7496eaf0593e54c5a3dc8692a4c8407a4cd1aadb25f",
+      "comparable_events": [
+        {
+          "id": "equifax-2017-security",
+          "title": "Equifax discloses consumer-data security incident",
+          "score": 40,
+          "instrument": "EFX",
+          "selected": false,
+          "reasons": [
+            "same_category: corporate_event",
+            "shared_recorded_location"
+          ],
+          "weaknesses": [
+            "different_mechanism",
+            "different_stage",
+            "severity_unavailable_or_different_scale",
+            "different_or_unestablished_regime",
+            "different_issuer; only its own price response can be measured, never transferred to the query stock",
+            "verified_response_schedule_unavailable"
+          ],
+          "publication_day": "2017-09-07"
+        },
+        {
+          "id": "intel-2018-ceo",
+          "title": "Intel announces CEO resignation and interim appointment",
+          "score": 40,
+          "instrument": "INTC",
+          "selected": false,
+          "reasons": [
+            "same_category: corporate_event",
+            "shared_recorded_location"
+          ],
+          "weaknesses": [
+            "different_mechanism",
+            "different_stage",
+            "severity_unavailable_or_different_scale",
+            "different_or_unestablished_regime",
+            "different_issuer; only its own price response can be measured, never transferred to the query stock",
+            "verified_response_schedule_unavailable"
+          ],
+          "publication_day": "2018-06-21"
+        },
+        {
+          "id": "tesla-2018-governance",
+          "title": "SEC brings civil disclosure charges against Tesla CEO",
+          "score": 40,
+          "instrument": "TSLA",
+          "selected": false,
+          "reasons": [
+            "same_category: corporate_event",
+            "shared_recorded_location"
+          ],
+          "weaknesses": [
+            "different_mechanism",
+            "different_stage",
+            "severity_unavailable_or_different_scale",
+            "different_or_unestablished_regime",
+            "different_issuer; only its own price response can be measured, never transferred to the query stock",
+            "verified_response_schedule_unavailable"
+          ],
+          "publication_day": "2018-09-27"
+        },
+        {
+          "id": "nvidia-2025-h20",
+          "title": "Nvidia publicly discloses H20 export licence requirement",
+          "score": 40,
+          "instrument": "NVDA",
+          "selected": false,
+          "reasons": [
+            "same_category: corporate_event",
+            "shared_recorded_location"
+          ],
+          "weaknesses": [
+            "different_mechanism",
+            "different_stage",
+            "severity_unavailable_or_different_scale",
+            "different_or_unestablished_regime",
+            "verified_response_schedule_unavailable"
+          ],
+          "publication_day": "2025-04-15"
+        }
+      ],
+      "selected_episode_count": 0,
+      "fully_as_of_qualified": 0,
+      "retrospective_cohort": {
+        "selection_cutoff": "2026-11-08T20:00:00.000001Z",
+        "selected_cases": 0,
+        "qualified_as_of_cases": 0,
+        "current_vintage_reference": {
+          "count": 0,
+          "median": null,
+          "minimum": null,
+          "maximum": null,
+          "positive": 0,
+          "negative": 0,
+          "flat": 0
+        },
+        "current_vintage_GBP": {
+          "count": 0,
+          "median": null,
+          "minimum": null,
+          "maximum": null,
+          "positive": 0,
+          "negative": 0,
+          "flat": 0
+        },
+        "excluded_or_missing_paths": 0,
+        "case_ids": [],
+        "caution": "Retrospective description of the frozen selection, outside the decision. Unknown original vintages prevent historical trading inference; reported news percentages are not pooled."
+      },
+      "dated_reference_reactions": {
+        "NVDA": [
+          {
+            "days": 1,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per share",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          }
+        ],
+        "eurusd": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2026-11-06",
+            "end_date": "2026-11-09",
+            "change_percent": "0.4483",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2026-11-06",
+            "end_date": "2026-11-12",
+            "change_percent": "-0.8786",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "USD per EUR",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          }
+        ],
+        "usdjpy": [
+          {
+            "days": 1,
+            "status": "ok",
+            "baseline_date": "2026-11-06",
+            "end_date": "2026-11-09",
+            "change_percent": "-0.1517",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 3,
+            "status": "ok",
+            "baseline_date": "2026-11-06",
+            "end_date": "2026-11-12",
+            "change_percent": "0.8658",
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "current_primary_reference",
+            "original_availability_verified": false
+          },
+          {
+            "days": 5,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 10,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          },
+          {
+            "days": 20,
+            "status": "price_series_or_window_unavailable",
+            "baseline_date": null,
+            "end_date": null,
+            "change_percent": null,
+            "GBP_change_percent": null,
+            "GBP_status": null,
+            "missing_FX_dates": [],
+            "unit": "JPY per USD",
+            "evidence": "unavailable",
+            "original_availability_verified": false
+          }
+        ]
+      },
+      "separately_reported_reactions": [],
+      "legacy_daily_cross_check": {
+        "scope": "retained secondary daily context only; not live or original-as-of verified",
+        "publication_at": "2026-11-08T20:00:00Z",
+        "descriptive_cutoff": "2026-11-09T21:01:00Z",
+        "own_percent": "-4.2703",
+        "peers": [
+          {
+            "symbol": "AMD",
+            "percent": "13.2594"
+          },
+          {
+            "symbol": "AVGO",
+            "percent": "8.7814"
+          },
+          {
+            "symbol": "MSFT",
+            "percent": "2.7459"
+          },
+          {
+            "symbol": "QQQ",
+            "percent": "3.5437"
+          }
+        ],
+        "baseline_date": "2026-11-06",
+        "first_close_date": "2026-11-09",
+        "opening_quote_status": "conflicting_provider_values",
+        "exact_opening_percent": null,
+        "verified_exchange_print_timestamps": false,
+        "original_availability_verified": false,
+        "upstream_providers_independent": false,
+        "causal_transmission_established": false
+      },
+      "sources": [
+        {
+          "id": "free-board-wire",
+          "url": "https://www.nasdaq.com/press-release/statement-nvidia-board-directors-2026-11-08",
+          "publisher": "See original source",
+          "locator": "Printed Nov 8, 2026 3:00pm EST; Source: NVIDIA"
+        }
+      ],
+      "action": "No Action",
+      "three_answers": {
+        "what_happened": "Historical replay: Statement from NVIDIA Board of Directors.",
+        "likely_outcome": "Uncertain. 4 earlier event comparisons were located. Original news and price availability is unproven. Adjusted company prices and executable quotes are missing.",
+        "suggested_action": "No Action. Observe only; this replay cannot support a paper entry or predict a repeat."
+      },
+      "trace": [
+        "Read and validate a sourced historical event item",
+        "Detect its category with deterministic text rules",
+        "Freeze prior comparisons without reading later returns",
+        "Cross-check dated reference prices, peers and explicit gaps",
+        "Produce three answers and journal an observation-only decision"
+      ],
+      "limitations": [
+        "Retrospective current-vintage reactions are outside the sealed earlier decision.",
+        "EUR/USD and USD/JPY are context references, not asserted event-caused ripples.",
+        "Daily reporting observations are not intraday quotes or an exchange trading calendar.",
+        "A public catalog receipt does not prove first disclosure or a fresh market-moving event."
+      ]
+    }
+  ],
+  "paper_only": true,
+  "cost_GBP": "0.00",
+  "supported_entries": 0,
+  "fresh_financial_news_connected": false,
+  "continuous_monitoring": false,
+  "warning": "Historical research replay. Missing prices and original availability remain unknown. No guarantees, live alert or executable recommendation."
+}

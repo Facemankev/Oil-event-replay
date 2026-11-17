@@ -1,0 +1,93 @@
+{
+  "events": 51,
+  "observation_rows": 27210,
+  "numeric_observations": 26074,
+  "new_FX_numeric": 10456,
+  "new_FX_unavailable": 434,
+  "groups": [
+    {
+      "group": "oil",
+      "instruments": [
+        "brent",
+        "wti"
+      ],
+      "numeric_observations": 10394,
+      "explicit_unavailable": 486,
+      "reported_reactions": 0,
+      "retained_secondary_provider_rows": 0,
+      "verified_intraday_quotes": 0,
+      "as_of_qualified_cases": 0
+    },
+    {
+      "group": "technology_equities",
+      "instruments": [
+        "NVDA",
+        "INTC",
+        "EFX",
+        "TSLA"
+      ],
+      "numeric_observations": 0,
+      "explicit_unavailable": 0,
+      "reported_reactions": 3,
+      "retained_secondary_provider_rows": 60,
+      "verified_intraday_quotes": 0,
+      "as_of_qualified_cases": 0
+    },
+    {
+      "group": "gold",
+      "instruments": [
+        "gold_futures_reported"
+      ],
+      "numeric_observations": 0,
+      "explicit_unavailable": 0,
+      "reported_reactions": 2,
+      "retained_secondary_provider_rows": 0,
+      "verified_intraday_quotes": 0,
+      "as_of_qualified_cases": 0
+    },
+    {
+      "group": "pharmaceuticals",
+      "instruments": [
+        "BIIB",
+        "PFE",
+        "MRK"
+      ],
+      "numeric_observations": 0,
+      "explicit_unavailable": 0,
+      "reported_reactions": 3,
+      "retained_secondary_provider_rows": 0,
+      "verified_intraday_quotes": 0,
+      "as_of_qualified_cases": 0
+    },
+    {
+      "group": "stock_indices",
+      "instruments": [
+        "nasdaq_composite"
+      ],
+      "numeric_observations": 0,
+      "explicit_unavailable": 0,
+      "reported_reactions": 5,
+      "retained_secondary_provider_rows": 6,
+      "verified_intraday_quotes": 0,
+      "as_of_qualified_cases": 0
+    },
+    {
+      "group": "currencies",
+      "instruments": [
+        "gbpusd",
+        "eurusd",
+        "usdjpy"
+      ],
+      "numeric_observations": 15680,
+      "explicit_unavailable": 650,
+      "reported_reactions": 0,
+      "retained_secondary_provider_rows": 0,
+      "verified_intraday_quotes": 0,
+      "as_of_qualified_cases": 0
+    }
+  ],
+  "original_availability_verified": false,
+  "cost_GBP": "0.00",
+  "paid_connections": 0,
+  "note": "Numeric observations, reported reactions and instrument coverage are distinct. GBP, EUR and JPY reference quotes are not live FX fills."
+}
