@@ -10,7 +10,9 @@
 
 **Validation:** Local 142 Python / 112 JavaScript tests and Chromium desktop/iPhone/iPad light/dark views pass; final full CI/WebKit in the separate draft checks. Later prices/features/cases cannot alter fitted models or complete earlier prediction identities; validation cannot change training metrics. Synthetic controls can qualify numerically while execution stays disabled. Actual local audit committed 21 predictions before 21 settlements; repeat adds zero and preserves first timestamps. Triggers prohibit updates/deletes; revisions append. Actual times are now, never invented historical forecasts. Full traces/journals stay local and excluded from publication.
 
-**Unfinished:** Full final CI in #46 Checks and final preview update; physical Safari acceptance. Keep #42 separate and never assume IPO allocations.
+**Unfinished:** Full final CI in #46 Checks; physical Safari acceptance. Keep #42 separate and never assume IPO allocations.
+
+**Preview:** https://market-ripple-research-lab.g86hz2pjsh.chatgpt.site/learning/ is public and native deployment succeeded. Published assets exactly match tested public-only source; no raw journals, credentials or account controls. SIM-1 remains available at the same preview origin under `/simulations/`. Hosted browser access is restricted in this executor; no deployed-browser test is claimed.
 
 **For Brendan:** Review later; #43 public research at https://market-ripple-research-lab.g86hz2pjsh.chatgpt.site/simulations/. Existing UI/gates/prices/accounts are protected.
 
