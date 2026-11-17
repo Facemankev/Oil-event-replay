@@ -10,20 +10,26 @@
 
 **Plan changes:** Doing and Now only; no principles or workstream changes.
 
-Implemented a dedicated append-only SQLite library and reproducible report: 48
-sourced events (36 inherited, 12 added), 81 source cards, 16,320 primary rows /
-15,618 numeric values, plus 11 separately reported reactions and three inherited
+Implemented a dedicated append-only SQLite library and reproducible report: 51
+sourced events (36 inherited, 15 added), 86 source cards, 16,320 primary rows /
+15,618 numeric values, plus 13 separately reported reactions and three inherited
 corporate reference pairs. Gold is macro-linked reported context, not a verified
 contract series. Currency coverage is GBP/USD; 32 links are conversion references.
 No adjusted equity/index series or original price/news availability is claimed.
 
 Matching uses available category/mechanism/stage/location/scale/regime features,
 then chronological episode/overlap controls before reading outcomes. Future-case,
-episode, price and outcome mutations preserve earlier decisions. All 48 decisions
+episode, price and outcome mutations preserve earlier decisions. All 51 decisions
 are No Action; no supported paper entries or causal downstream claims.
 
-Local 93 Python / 112 JavaScript tests pass; all four parent reports and the pilot
+Local 94 Python / 112 JavaScript tests pass; all four parent reports and the pilot
 demo reproduce unchanged. Node's child-process integration needed the authorized
 execution mode; the initial sandbox EPERM was environmental, not a skipped test.
 All ten Chromium scripts pass. Full GitHub/WebKit checks are in PR #39 Checks. Three-step
 UI, source snapshots, accounts and public previews remain unchanged. No merge.
+
+Final source review added two more Nvidia earnings cases and an independent Merck
+trial-stop case. Cross-issuer matching now identifies the comparison instrument
+explicitly; a peer's price cannot become the query stock's quote. Three earnings
+reactions include a near-flat positive session. Final counts: 51 events / 86 source
+cards / 13 reported reactions; all 51 decisions No Action. Full final checks in #39.

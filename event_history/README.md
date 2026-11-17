@@ -34,10 +34,10 @@ the inherited primary CSVs retain their original strict byte fingerprints.
 
 ## Actual coverage
 
-**48 genuine events:** 32 inherited oil events, four inherited corporate cases,
-and 12 new dated announcements. New events cover Nvidia earnings/guidance,
+**51 genuine events:** 32 inherited oil events, four inherited corporate cases,
+and 15 new dated announcements. New events cover Nvidia earnings/guidance,
 four Fed decisions, two Bank of England decisions, the Bank's referendum
-response, two Biogen trial/reanalysis stages and Pfizer trial/authorization stages.
+response, an independent Merck trial stop, two Biogen trial/reanalysis stages and Pfizer trial/authorization stages.
 The same drug/policy programme is explicitly one episode, not several independent
 training examples. Equifax/Tesla are cross-sector corporate comparisons, not
 semiconductor companies.
@@ -45,13 +45,13 @@ semiconductor companies.
 | Market group | Primary events | Linked events | Numeric series observations | Separately reported session reactions |
 | --- | ---: | ---: | ---: | ---: |
 | Oil / Brent and WTI | 32 | 40 | 10,394 | 0 |
-| Technology / corporate equities | 5 | 5 | 0 | 1 |
+| Technology / corporate equities | 7 | 7 | 0 | 3 |
 | Gold | 0 | 6 | 0 | 2 |
-| Pharma / biotech | 4 | 4 | 0 | 3 |
-| Broad stock indices | 4 | 10 | 0 | 5 |
+| Pharma / biotech | 5 | 5 | 0 | 3 |
+| Broad stock indices | 4 | 13 | 0 | 5 |
 | Currencies / GBP–USD | 3 | 40 | 5,224 | 0 |
 
-These counts overlap: **not 48 independent examples per market**. Gold coverage
+These counts overlap: **not 51 independent examples per market**. Gold coverage
 is macro/political/vaccine exposure, not six gold-industry announcements. Thirty-two
 currency links are GBP conversion references for oil; they are not claimed FX shocks.
 EUR/JPY and other pairs are currently missing. The instrument registry identifies
@@ -65,7 +65,7 @@ and 702 explicitly blank/ND**. These reuse the pinned current EIA/Fed snapshots:
 any of the original 10,368 canonical oil observations. Three inherited corporate
 reference price pairs remain separately labelled, not adjusted daily series.
 
-All 48 frozen event decisions are **No Action; Buy 0, supported paper entries 0**.
+All 51 frozen event decisions are **No Action; Buy 0, supported paper entries 0**.
 Original news versions/receipts, price availability and executable quotes remain
 unproven. No successful strategy or predictive accuracy is claimed.
 
@@ -83,7 +83,7 @@ requires an exact-date numeric Fed rate for a complete GBP path; ND rates are
 not skipped, interpolated or carried forward. Zero/negative oil values survive;
 nonpositive endpoints have an absolute change but no percentage metric.
 
-The 11 checked reported reactions remain outside calculated horizons/cohorts:
+The 13 checked reported reactions remain outside calculated horizons/cohorts:
 
 - Reuters reported gold futures **+3.1%** in the March 2020 emergency-cut session
   and **−5%** in the November vaccine-news session. Generic futures and spot
@@ -96,6 +96,12 @@ The 11 checked reported reactions remain outside calculated horizons/cohorts:
 - Biogen's negative session had a reported positive Nasdaq reaction; Pfizer's
   positive session had negative gold/Nasdaq reactions. Different settlement/close
   times are not a synchronized causal experiment.
+- Nvidia's three earnings announcements share a results/outlook mechanism, yet
+  reported reactions include **+24.37%, +0.1% and +16.4%**. Near-flat +0.1% is
+  positive, not a fabricated zero. Missing adjusted histories prevent a price cohort.
+- Merck's earlier EPOCH stop provides an independent trial-stage cross-check for
+  Biogen. Different biological mechanisms, populations and endpoints remain explicit;
+  MRK prices are never substituted for BIIB.
 - June 2023's unchanged policy rate is a null **policy change**, not an invented
   zero price return. Actual flat price observations and missing prices remain distinct.
 

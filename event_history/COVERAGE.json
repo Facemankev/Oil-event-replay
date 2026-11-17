@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "as_of": "2026-11-17T23:59:59Z",
-  "event_count": 48,
-  "visible_events": 48,
+  "event_count": 51,
+  "visible_events": 51,
   "sampling": "Purposive, retrospectively curated teaching/research cases selected for mechanisms and counterexamples. Corpus selection is not blinded or representative; deterministic matching alone is outcome-blind.",
   "coverage": [
     {
@@ -78,8 +78,8 @@
     },
     {
       "group": "technology_equities",
-      "primary_events": 5,
-      "linked_events": 5,
+      "primary_events": 7,
+      "linked_events": 7,
       "instruments": [
         "EFX",
         "INTC",
@@ -89,13 +89,13 @@
       "conversion_reference_links": 0,
       "statistics_scope": "Coverage distribution across mixed events/instruments, not a comparable cohort or forecast. Linked counts overlap across groups.",
       "numeric_observations": 0,
-      "reported_session_reactions": 1,
+      "reported_session_reactions": 3,
       "reported_signs": {
-        "count": 1,
-        "median": "24.3700",
-        "minimum": "24.3700",
+        "count": 3,
+        "median": "16.4000",
+        "minimum": "0.1000",
         "maximum": "24.3700",
-        "positive": 1,
+        "positive": 3,
         "negative": 0,
         "flat": 0
       },
@@ -221,10 +221,11 @@
     },
     {
       "group": "pharmaceuticals",
-      "primary_events": 4,
-      "linked_events": 4,
+      "primary_events": 5,
+      "linked_events": 5,
       "instruments": [
         "BIIB",
+        "MRK",
         "PFE"
       ],
       "conversion_reference_links": 0,
@@ -293,7 +294,7 @@
     {
       "group": "stock_indices",
       "primary_events": 4,
-      "linked_events": 10,
+      "linked_events": 13,
       "instruments": [
         "nasdaq_composite"
       ],
@@ -433,7 +434,7 @@
   ],
   "decisions_summary": {
     "Buy": 0,
-    "No Action": 48,
+    "No Action": 51,
     "paper_trades": 0
   },
   "point_in_time_safe": false,

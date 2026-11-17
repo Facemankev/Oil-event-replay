@@ -318,6 +318,76 @@
       "original_http_sha256": null,
       "original_version_verified": false,
       "limitation": "Current page with a printed historical date; original article version, receipt time, adjustment factors and exchange print timestamps are not verified."
+    },
+    "nvda-q2-2023": {
+      "id": "nvda-q2-2023",
+      "url": "https://investor.nvidia.com/news/press-release-details/2023/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2024/default.aspx",
+      "publisher": "NVIDIA",
+      "published_day": "2023-08-23",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "Printed announcement date; results and outlook paragraphs",
+      "summary": "Nvidia reported second-quarter results and a third-quarter revenue outlook, alongside a share-buyback authorization.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "nvda-q4-2024": {
+      "id": "nvda-q4-2024",
+      "url": "https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/default.aspx",
+      "publisher": "NVIDIA",
+      "published_day": "2024-02-21",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "Printed announcement date; results and outlook paragraphs",
+      "summary": "Nvidia reported fourth-quarter results and a first-quarter outlook during continued demand for AI computing.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "merck-epoch-2017": {
+      "id": "merck-epoch-2017",
+      "url": "https://www.merck.com/news/merck-announces-epoch-study-of-verubecestat-for-the-treatment-of-people-with-mild-to-moderate-alzheimers-disease-to-stop-for-lack-of-efficacy/",
+      "publisher": "Merck",
+      "published_day": "2017-02-14",
+      "published_at": "2017-02-14T17:00:00-05:00",
+      "checked_on": "2026-11-17",
+      "kind": "primary_release",
+      "locator": "Printed 14 February 2017 5:00 pm EST; EPOCH decision and company identity",
+      "summary": "Merck announced stopping EPOCH verubecestat after a low-probability-of-success assessment. Different disease stage and drug mechanism limit comparison with aducanumab.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "nvda-q2-session-report": {
+      "id": "nvda-q2-session-report",
+      "url": "https://uk.investing.com/news/stock-market-news/nvidias-frankfurt-shares-surge-as-stellar-results-seen-keeping-ai-rally-alive-3133340",
+      "publisher": "Reuters via Investing.com",
+      "published_day": "2023-08-24",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "secondary_market_report",
+      "locator": "Final closing share-performance paragraph",
+      "summary": "Reuters reported Nvidia closing only 0.1 percent higher after its results. The earlier intraday surge is a different observation.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
+    },
+    "nvda-q4-session-report": {
+      "id": "nvda-q4-session-report",
+      "url": "https://www.investing.com/news/stock-market-news/ai-leader-nvidia-rises-as-forecast-tops-wall-streets-lofty-goals-3310840",
+      "publisher": "Reuters via Investing.com",
+      "published_day": "2024-02-22",
+      "published_at": null,
+      "checked_on": "2026-11-17",
+      "kind": "secondary_market_report",
+      "locator": "Final closing share-performance paragraph",
+      "summary": "Reuters reported Nvidia closing 16.4 percent higher in the session after results.",
+      "capture": "curated facts through supported web reader; not original HTTP bytes or an immutable old page",
+      "original_http_sha256": null,
+      "original_version_verified": false
     }
   },
   "events": [
@@ -779,6 +849,110 @@
       ],
       "historical_receipt_at": null,
       "first_disclosure_verified": false
+    },
+    {
+      "id": "nvidia-2023-q2-outlook",
+      "revision": 1,
+      "title": "Nvidia Q2 FY2024 results and revenue outlook",
+      "category": "earnings",
+      "mechanism": "earnings_and_guidance",
+      "primary_group": "technology_equities",
+      "occurred_day": "2023-08-23",
+      "public_day": "2023-08-23",
+      "public_at": null,
+      "publication_source": "nvda-q2-2023",
+      "episode_id": "nvda-earnings-2023-08",
+      "location": [
+        "US"
+      ],
+      "stage": "reported",
+      "impact": "earnings_expectations",
+      "regime": null,
+      "severity": null,
+      "targets": [
+        "NVDA",
+        "nasdaq_composite"
+      ],
+      "source_ids": [
+        "nvda-q2-2023"
+      ],
+      "summary": "Nvidia reported second-quarter results and a third-quarter revenue outlook, alongside a share-buyback authorization.",
+      "weaknesses": [
+        "No pre-release consensus or surprise magnitude is verified. Original publication clock and adjusted price series are missing.",
+        "Same issuer and broad announcement mechanism do not establish the same expectations, valuation, AI demand regime or independent outcomes."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "nvidia-2024-q4-outlook",
+      "revision": 1,
+      "title": "Nvidia Q4 FY2024 results and revenue outlook",
+      "category": "earnings",
+      "mechanism": "earnings_and_guidance",
+      "primary_group": "technology_equities",
+      "occurred_day": "2024-02-21",
+      "public_day": "2024-02-21",
+      "public_at": null,
+      "publication_source": "nvda-q4-2024",
+      "episode_id": "nvda-earnings-2024-02",
+      "location": [
+        "US"
+      ],
+      "stage": "reported",
+      "impact": "earnings_expectations",
+      "regime": null,
+      "severity": null,
+      "targets": [
+        "NVDA",
+        "nasdaq_composite"
+      ],
+      "source_ids": [
+        "nvda-q4-2024"
+      ],
+      "summary": "Nvidia reported fourth-quarter results and a first-quarter outlook during continued demand for AI computing.",
+      "weaknesses": [
+        "No pre-release consensus or surprise magnitude is verified. Original publication clock and adjusted price series are missing.",
+        "Same issuer and broad announcement mechanism do not establish the same expectations, valuation, AI demand regime or independent outcomes."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
+    },
+    {
+      "id": "merck-2017-epoch",
+      "revision": 1,
+      "title": "Merck stops EPOCH verubecestat study",
+      "category": "drug_development",
+      "mechanism": "clinical_trial",
+      "primary_group": "pharmaceuticals",
+      "occurred_day": null,
+      "public_day": "2017-02-14",
+      "public_at": "2017-02-14T17:00:00-05:00",
+      "publication_source": "merck-epoch-2017",
+      "episode_id": "verubecestat-development",
+      "location": [
+        "US"
+      ],
+      "stage": "announced_futility_stop",
+      "impact": "product_development",
+      "regime": null,
+      "severity": null,
+      "targets": [
+        "MRK",
+        "nasdaq_composite"
+      ],
+      "source_ids": [
+        "merck-epoch-2017"
+      ],
+      "summary": "Merck announced stopping EPOCH verubecestat after a low-probability-of-success assessment. Different disease stage and drug mechanism limit comparison with aducanumab.",
+      "weaknesses": [
+        "Different disease, endpoint, trial design, development stage and commercial exposure can invalidate comparisons.",
+        "Later reanalysis/authorization cannot enter earlier decisions; repeated programme stages are not independent cases.",
+        "Announcement day is verified; the private decision/reanalysis completion day is not established.",
+        "Merck’s BACE-inhibitor trial and Biogen’s antibody programme differ in population and biological mechanism. No corresponding adjusted MRK price series was captured."
+      ],
+      "historical_receipt_at": null,
+      "first_disclosure_verified": false
     }
   ],
   "reported_reactions": [
@@ -933,6 +1107,34 @@
       "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
       "raw_price_series_verified": false,
       "corporate_action_basis": "not_applicable_or_contract_unresolved",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "nvda-q2-near-flat",
+      "event_id": "nvidia-2023-q2-outlook",
+      "instrument": "NVDA",
+      "observation_day": "2023-08-24",
+      "source_id": "nvda-q2-session-report",
+      "reported_percent": "0.1",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_verified",
+      "original_available_at": null,
+      "causal_effect_established": false
+    },
+    {
+      "id": "nvda-q4-rise",
+      "event_id": "nvidia-2024-q4-outlook",
+      "instrument": "NVDA",
+      "observation_day": "2024-02-22",
+      "source_id": "nvda-q4-session-report",
+      "reported_percent": "16.4",
+      "precision": "rounded_as_published",
+      "window": "source_reported_session_change; not a computed 1/3/5/10/20-day horizon",
+      "raw_price_series_verified": false,
+      "corporate_action_basis": "not_verified",
       "original_available_at": null,
       "causal_effect_established": false
     }

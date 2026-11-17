@@ -21,10 +21,10 @@ class HistoryTests(unittest.TestCase):
         (ROOT / 'work').mkdir(exist_ok=True)
 
     def test_actual_source_counts_and_six_group_coverage(self):
-        self.assertEqual(len(self.data['events']), 48)
+        self.assertEqual(len(self.data['events']), 51)
         self.assertEqual(len(self.data['observations']), 16320)
         self.assertEqual(sum(p['status'] == 'numeric' for p in self.data['observations']), 15618)
-        self.assertEqual(len(self.data['reported_reactions']), 11)
+        self.assertEqual(len(self.data['reported_reactions']), 13)
         groups = {self.data['instruments'][m]['group'] for e in self.data['events'] for m in e['targets']}
         self.assertEqual(groups, set(GROUPS))
 
@@ -35,8 +35,8 @@ class HistoryTests(unittest.TestCase):
             try:
                 first = import_library(db, self.data)
                 repeated = import_library(db, self.data)
-                self.assertEqual(first['inserted_events'], 48)
-                self.assertEqual(repeated['reused_events'], 48)
+                self.assertEqual(first['inserted_events'], 51)
+                self.assertEqual(repeated['reused_events'], 51)
                 self.assertEqual(repeated['inserted_observation_rows'], 0)
                 self.assertEqual(db.execute('SELECT count(*) FROM observations').fetchone()[0], 16320)
             finally:
@@ -54,7 +54,7 @@ class HistoryTests(unittest.TestCase):
             self.assertEqual(db.execute('SELECT count(*) FROM import_runs').fetchone()[0], 1)
             changed['events'][-1]['revision'] = 2
             import_library(db, changed)
-            self.assertEqual(db.execute('SELECT count(*) FROM event_versions').fetchone()[0], 49)
+            self.assertEqual(db.execute('SELECT count(*) FROM event_versions').fetchone()[0], 52)
             db.close()
 
     def test_old_dataset_revision_can_be_read_after_an_incremental_event_update(self):
@@ -150,6 +150,19 @@ class HistoryTests(unittest.TestCase):
         self.assertIn('different_mechanism', cut['weaknesses'])
         self.assertNotIn(cut['id'], selected['selected'])
 
+    def test_same_announcement_mechanisms_have_real_earlier_cross_checks_but_no_price_permission(self):
+        event = self.events['nvidia-2024-q4-outlook']
+        result = match_history(event, self.data, 'NVDA', '2024-02-24T00:00:00Z')
+        self.assertEqual({m['id'] for m in result['matches']},
+                         {'nvidia-2023-q1-outlook', 'nvidia-2023-q2-outlook'})
+        self.assertTrue(all(m['core_comparable'] for m in result['matches']))
+        self.assertEqual(result['selected'], [])  # No verified adjusted response schedule.
+        earlier = match_history(self.events['biogen-2019-futility'], self.data, 'BIIB', '2019-03-23T00:00:01Z')
+        self.assertEqual([m['id'] for m in earlier['matches']], ['merck-2017-epoch'])
+        self.assertEqual(earlier['matches'][0]['comparison_instrument'], 'MRK')
+        self.assertTrue(any('different_issuer' in gap for gap in earlier['matches'][0]['weaknesses']))
+        self.assertEqual(earlier['selected'], [])  # No fabricated MRK-to-BIIB price transfer.
+
     def test_exact_horizon_prices_and_same_date_FX_formula(self):
         event = self.events['harvey-2017-texas']
         row = response(event, self.data, 'brent', 5, '2026-11-17T00:00:00Z')
@@ -157,6 +170,11 @@ class HistoryTests(unittest.TestCase):
         expected = (Decimal(row['end']) / Decimal(row['baseline']) - 1) * 100
         self.assertEqual(Decimal(row['change_percent']), expected)
         self.assertFalse(row['point_in_time_safe'])
+        fx = {p['date']: Decimal(p['value']) for p in self.data['observations']
+              if p['instrument'] == 'gbpusd' and p['status'] == 'numeric'}
+        expected_gbp = ((Decimal(row['end']) / fx[row['end_date']]) /
+                        (Decimal(row['baseline']) / fx[row['baseline_date']]) - 1) * 100
+        self.assertEqual(Decimal(row['GBP']['change_percent']), expected_gbp)
         # Exact missing intermediate Fed ND cannot be skipped to a later rate.
         ida = response(self.events['ida-2021-louisiana'], self.data, 'brent', 10, '2026-11-17T00:00:00Z')
         self.assertEqual(ida['GBP']['status'], 'missing_exact_date_FX')

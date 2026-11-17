@@ -54,8 +54,9 @@ def visible_facts(event, data, as_of, require_receipt=False):
         return None
     scale = event.get('severity')
     if scale:
-        known = eligible(data['sources'][scale['source_id']])
-        scale = scale if known is not None and known <= cutoff else None
+        ids = {scale['source_id'], *scale.get('supporting_source_ids', [])}
+        clocks = [eligible(data['sources'][id]) for id in ids]
+        scale = scale if all(known is not None and known <= cutoff for known in clocks) else None
     return {key: event.get(key) for key in
             ('id', 'title', 'category', 'mechanism', 'stage', 'impact', 'regime',
              'location', 'primary_group', 'episode_id', 'targets')} | {
@@ -116,6 +117,8 @@ def _similarity(query, candidate):
         reasons.append('same_sourced_regime_label')
     else:
         weaknesses.append('different_or_unestablished_regime')
+    if query['category'] == 'drug_development':
+        weaknesses.append('A shared broad trial stage does not establish the same drug mechanism, patient population or endpoint.')
     core = (query['category'] == candidate['category'] and
             query['mechanism'] == candidate['mechanism'] and
             query['stage'] == candidate['stage'] and
@@ -141,18 +144,26 @@ def match_history(event, data, instrument, as_of, horizon=5):
             excluded.append(dict(id=other['id'], reason='self_or_same_episode'))
             continue
         # Filter before accessing future text/features; mutations cannot leak backwards.
-        if instrument not in facts['targets'] or facts['category'] != query['category']:
+        comparison_instrument = instrument if instrument in facts['targets'] else None
+        group = data['instruments'][instrument]['group']
+        if comparison_instrument is None and group in ('technology_equities', 'pharmaceuticals'):
+            comparison_instrument = next((m for m in facts['targets']
+                                          if data['instruments'][m]['group'] == group), None)
+        if comparison_instrument is None or facts['category'] != query['category']:
             excluded.append(dict(id=other['id'], reason='different_category_or_instrument'))
             continue
-        dates = window_dates(other, data, instrument, horizon,
+        dates = window_dates(other, data, comparison_instrument, horizon,
                              (cutoff.date() - timedelta(days=1)).isoformat())
         result = _similarity(query, facts)
+        if comparison_instrument != instrument:
+            result['weaknesses'].append('different_issuer; only its own price response can be measured, never transferred to the query stock')
         if not dates or not dates['context_from']:
             result['weaknesses'].append('verified_response_schedule_unavailable')
         elif stamp(dates['end'] + 'T23:59:59.999999Z') >= cutoff:
             excluded.append(dict(id=other['id'], reason='response_window_not_mature'))
             continue
         matches.append(dict(id=other['id'], episode_id=other['episode_id'],
+                            comparison_instrument=comparison_instrument,
                             public_after=iso(publication(other, data)), dates=dates, **result))
     # Chronological interval/episode selection is frozen before any outcome is read.
     chosen, episodes, end = [], set(), None
@@ -251,7 +262,8 @@ def pre_event_context(event, data, instrument):
 def descriptive_cohort(event, data, instrument, decision_cutoff):
     selection = match_history(event, data, instrument, decision_cutoff)
     selected = [e for e in data['events'] if e['id'] in selection['selected']]
-    rows = [response(e, data, instrument, 5, decision_cutoff) for e in selected]
+    instruments = {m['id']: m['comparison_instrument'] for m in selection['matches']}
+    rows = [response(e, data, instruments[e['id']], 5, decision_cutoff) for e in selected]
     return dict(selection_cutoff=decision_cutoff, selected_cases=len(selected), qualified_as_of_cases=0,
                 current_vintage_reference=summarize(r['change_percent'] for r in rows),
                 current_vintage_GBP=summarize(r.get('GBP', {}).get('change_percent') for r in rows),

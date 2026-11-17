@@ -78,6 +78,7 @@ def instruments():
         ('TSLA', 'technology_equities', 'Tesla common stock (cross-sector corporate case)', 'Nasdaq'),
         ('BIIB', 'pharmaceuticals', 'Biogen common stock', 'Nasdaq'),
         ('PFE', 'pharmaceuticals', 'Pfizer common stock', 'NYSE'),
+        ('MRK', 'pharmaceuticals', 'Merck common stock', 'NYSE'),
     ]:
         row = instrument(symbol, group, name, 'USD per share',
                          'corporate-action-adjusted series unavailable; no basis mixing',
