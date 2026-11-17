@@ -13,7 +13,6 @@ history).
 
 ## Doing
 
-- [ ] DATA-FREE-1: Zero-cost source adapters, coverage and end-to-end paper-observation demonstration ([Issue #40](https://github.com/Facemankev/Oil-event-replay/issues/40)), on #39; coordinate with #37, no paid access or merge — **Dad — Doing** — 2026-11-17
 
 
 
@@ -50,6 +49,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] DATA-FREE-1: Free-source cross-market database and complete observation-only process ([draft PR #41](https://github.com/Facemankev/Oil-event-replay/pull/41), on #39; [Issue #40](https://github.com/Facemankev/Oil-event-replay/issues/40)); [public preview](https://market-ripple-free-data-review.g86hz2pjsh.chatgpt.site). 10,456 new Fed FX observations, 26,074 numeric primary observations total; 66 inherited secondary candidates remain separate. Five demonstrations all No Action, zero supported entries/orders/account changes. Local 110 Python/112 JS and new Chromium desktop/iPhone/iPad profiles pass; final full CI/WebKit in PR Checks. Native preview deployment confirmed; hosted browser access is blocked in this executor and physical Safari acceptance remains outstanding. Free only, no signup/key/billing/API charge; source/vintage/adjusted-series gaps documented, #37 coordinated, #19/UI/prices/accounts preserved. No merge — **Dad** — 2026-11-17
 
 - [ ] HIST-1: Cross-market event library ([draft PR #39](https://github.com/Facemankev/Oil-event-replay/pull/39), on #36; [Issue #38](https://github.com/Facemankev/Oil-event-replay/issues/38)). 51 events / 86 source cards, 15,618 numeric oil/GBP observations and 13 separately reported reactions. Outcome-blind matches, as-of tests, immutable SQLite imports and read-only #37 handoff. All 51 No Action, no supported entry; original vintages and adjusted wider-asset series missing. Local 94 Python/112 JS and all ten Chromium scripts pass; full CI/WebKit in PR Checks. UI, data, accounts and previews preserved; no merge — **Dad** — 2026-11-17
 

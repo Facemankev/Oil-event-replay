@@ -138,8 +138,13 @@ def summarize_case(case, data, catalog):
                     publisher=data['sources'][s]['publisher'], locator=data['sources'][s]['locator'])
                for s in source_ids]
     count = len(cases)
+    price_limit = ('Adjusted company prices and executable quotes are missing.'
+                   if event['primary_group'] in ('technology_equities', 'pharmaceuticals') else
+                   'Historical index and gold daily price windows are incomplete.'
+                   if event['primary_group'] in ('stock_indices', 'currencies') else
+                   'Daily reference prices are not timestamped executable quotes.')
     reason = (f'{count} earlier event comparisons were located. '
-              'Original news and price availability is unproven; adjusted company prices and executable quotes are missing.')
+              'Original news and price availability is unproven. ' + price_limit)
     legacy = legacy_daily_cross_check() if case == 'nvidia_board' else None
     return dict(case=case, event_id=id, title=event['title'], detected_category=detected,
         mode='historical_research_replay_not_current_market_news',

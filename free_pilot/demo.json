@@ -900,7 +900,7 @@
       "action": "No Action",
       "three_answers": {
         "what_happened": "Historical replay: Harvey landfall on the Texas coast.",
-        "likely_outcome": "Uncertain. 6 earlier event comparisons were located. Original news and price availability is unproven; adjusted company prices and executable quotes are missing.",
+        "likely_outcome": "Uncertain. 6 earlier event comparisons were located. Original news and price availability is unproven. Daily reference prices are not timestamped executable quotes.",
         "suggested_action": "No Action. Observe only; this replay cannot support a paper entry or predict a repeat."
       },
       "trace": [
@@ -1582,7 +1582,7 @@
       "action": "No Action",
       "three_answers": {
         "what_happened": "Historical replay: Nvidia Q4 FY2024 results and revenue outlook.",
-        "likely_outcome": "Uncertain. 2 earlier event comparisons were located. Original news and price availability is unproven; adjusted company prices and executable quotes are missing.",
+        "likely_outcome": "Uncertain. 2 earlier event comparisons were located. Original news and price availability is unproven. Adjusted company prices and executable quotes are missing.",
         "suggested_action": "No Action. Observe only; this replay cannot support a paper entry or predict a repeat."
       },
       "trace": [
@@ -2142,7 +2142,7 @@
       "action": "No Action",
       "three_answers": {
         "what_happened": "Historical replay: Biogen stops aducanumab Phase 3 studies.",
-        "likely_outcome": "Uncertain. 1 earlier event comparisons were located. Original news and price availability is unproven; adjusted company prices and executable quotes are missing.",
+        "likely_outcome": "Uncertain. 1 earlier event comparisons were located. Original news and price availability is unproven. Adjusted company prices and executable quotes are missing.",
         "suggested_action": "No Action. Observe only; this replay cannot support a paper entry or predict a repeat."
       },
       "trace": [
@@ -2886,7 +2886,7 @@
       "action": "No Action",
       "three_answers": {
         "what_happened": "Historical replay: Fed emergency 50 bp cut.",
-        "likely_outcome": "Uncertain. 0 earlier event comparisons were located. Original news and price availability is unproven; adjusted company prices and executable quotes are missing.",
+        "likely_outcome": "Uncertain. 0 earlier event comparisons were located. Original news and price availability is unproven. Historical index and gold daily price windows are incomplete.",
         "suggested_action": "No Action. Observe only; this replay cannot support a paper entry or predict a repeat."
       },
       "trace": [
@@ -3600,7 +3600,7 @@
       "action": "No Action",
       "three_answers": {
         "what_happened": "Historical replay: Statement from NVIDIA Board of Directors.",
-        "likely_outcome": "Uncertain. 4 earlier event comparisons were located. Original news and price availability is unproven; adjusted company prices and executable quotes are missing.",
+        "likely_outcome": "Uncertain. 4 earlier event comparisons were located. Original news and price availability is unproven. Adjusted company prices and executable quotes are missing.",
         "suggested_action": "No Action. Observe only; this replay cannot support a paper entry or predict a repeat."
       },
       "trace": [

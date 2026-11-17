@@ -116,3 +116,4 @@ jobs:
             work/hist1/
             work/free-pilot/reports/
             work/free-pilot/screens/
+            work/free-pilot/history.sqlite
