@@ -1,0 +1,134 @@
+name: LEARN-1 chronological holdout and all regressions
+on:
+  pull_request:
+    branches: [main, dad/sim-1-retrospective-paper]
+permissions:
+  contents: read
+jobs:
+  matching:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python3 -m unittest discover -s tests -p 'test_*.py' -v
+      - run: node --test tests/*.cjs tests/*.mjs
+      - name: Build from the real databases, safely repeat, and audit without network
+        run: |
+          python3 -m historical --db work/matching-prices.sqlite backfill
+          python3 -m historical --db work/matching-prices.sqlite update
+          python3 -m world_events --db work/matching-events.sqlite import
+          python3 -m world_events --db work/matching-events.sqlite import
+          python3 -m matching.validate_prices --db work/matching-prices.sqlite --output work/audit.json
+          python3 -m matching.build --output work/catalog.json
+      - name: Build new horizons and reproduce sample demonstrations
+        run: |
+          python3 -m matching.build --horizons 1,3,5,10,20 --traits matching/traits.json --output work/cohort-catalog.json
+          node matching/demo.mjs --check
+          bash .claude/hooks/guard.sh scan
+          python3 -m app.data_status --check
+          git diff --exit-code 46ef646 -- data/historical data/world-event-research.json data/brent-brexit-source.csv data/apple-brexit-source.csv data/events.js data/research-data.js historical world_events/seed.json world_events/schema.sql world_events/events.py world_events/research.py world_events/design.css preview .claude matching/engine.mjs matching/analysis.mjs matching/build.py matching/catalog.json matching/cohort-catalog.json matching/traits.json matching/design.css
+          git show c2bcb92:trading/core.mjs | cmp - trading/core.mjs
+          python3 -m ripple.build --check
+          git diff --exit-code 6fe59ff -- data historical world_events matching research trading app index.html history.html event-research.html paper.html preview .claude
+      - name: Install browser test dependencies
+        run: |
+          python3 -m pip install playwright==1.64.1
+          python3 -m playwright install --with-deps chromium webkit
+          matching_chromium_path="$(python3 -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')"
+          sudo ln -sf "$matching_chromium_path" /usr/bin/chromium
+      - name: Matching and existing browser regressions
+        run: |
+          python3 tests/matching_browser_test.py
+          python3 tests/browser_test.py
+          python3 tests/historical_browser_test.py
+          python3 tests/world_events_browser_test.py
+          python3 tests/branding_preview_browser_test.py
+          python3 tests/paper_browser_test.py
+          python3 tests/application_browser_test.py
+          python3 tests/application_browser_test.py --browser webkit
+          python3 tests/ripple_browser_test.py
+          python3 tests/ripple_browser_test.py --browser webkit
+      - name: Historical list/detail on desktop, iPhone and iPad
+        run: |
+          python3 tests/ripple_history_browser_test.py
+          python3 tests/ripple_history_browser_test.py --browser webkit
+      - name: Evidence report, compatibility, and unchanged three-step UI
+        run: |
+          node intelligence/evaluate.mjs --check
+          node verification/evaluate.mjs --check
+          python3 tests/intelligence_browser_test.py
+          python3 tests/intelligence_browser_test.py --browser webkit
+          git diff --exit-code d45f3ff -- data historical world_events matching research trading app index.html history.html event-research.html paper.html preview .claude ripple intelligence
+      - name: Reproduce bounded analogue study and retain decision traces
+        run: |
+          node analogues/evaluate.mjs --check
+          node analogues/evaluate.mjs --output work/int2/report.json
+          node analogues/demo.mjs
+          git diff --exit-code 8c417df -- data historical world_events matching research trading app index.html history.html event-research.html paper.html preview .claude ripple intelligence verification
+      - name: Reproduce Nvidia news, historical cross-check and ripple findings
+        run: |
+          node equities/evaluate.mjs --check
+          node equities/evaluate.mjs --output work/equities/report.json
+          node equities/detect.mjs --as-of 2026-11-08T20:01:00Z > work/equities/sunday-monitor.json
+          node equities/detect.mjs --as-of 2026-11-09T21:01:00Z > work/equities/first-close.json
+          git diff --exit-code 4db1d9b -- data historical world_events matching research trading app index.html history.html event-research.html paper.html preview .claude ripple intelligence verification analogues
+      - name: Reproduce controlled ingestion and original-as-of safeguards
+        run: |
+          python3 -m news_pilot.demo --check --output work/news-pilot/controlled-demo.json
+          git diff --exit-code c498d33 -- data historical world_events matching research trading app index.html history.html event-research.html paper.html preview .claude ripple intelligence verification analogues equities
+      - name: Build, repeat and reproduce cross-market historical library
+        run: |
+          python3 -m event_history --db work/hist1/ci.sqlite import
+          python3 -m event_history --db work/hist1/ci.sqlite import
+          python3 -m event_history --db work/hist1/ci.sqlite evaluate --check --output work/hist1/evaluation.json
+          python3 -m event_history --db work/hist1/ci.sqlite export --output work/hist1/historical-events.json
+          python3 -m event_history --db work/hist1/ci.sqlite match --event harvey-2017-texas --instrument brent --as-of 2017-08-27T12:00:00Z > work/hist1/harvey-as-of.json
+          git diff --exit-code 2285073 -- data historical world_events matching research trading app index.html history.html event-research.html paper.html preview .claude ripple intelligence verification analogues equities news_pilot
+      - name: Reproduce zero-charge source coverage and observation-only process
+        run: |
+          python3 -m free_pilot import
+          python3 -m free_pilot import
+          python3 -m free_pilot demo --check --output work/free-pilot/reports/demo.json
+          python3 -m free_pilot run --case nvidia_board --output work/free-pilot/reports/board-observation.json
+          python3 -m free_pilot run --case harvey --output work/free-pilot/reports/oil-observation.json
+          python3 tests/free_pilot_browser_test.py
+          python3 tests/free_pilot_browser_test.py --browser webkit
+          git diff --exit-code 08aea1b -- data historical world_events matching research trading app index.html history.html event-research.html paper.html preview .claude ripple intelligence verification analogues equities news_pilot event_history
+      - name: Reproduce retrospective simulation coverage and isolated research UI
+        run: |
+          python3 -m simulations --check --output work/sim1/ci-report.json
+          python3 tests/simulations_browser_test.py
+          python3 tests/simulations_browser_test.py --browser webkit
+          git diff --exit-code 13cefcd -- data historical world_events matching research trading app index.html history.html event-research.html paper.html preview .claude ripple intelligence verification analogues equities news_pilot event_history free_pilot
+      - name: Reproduce locked training, later holdout and immutable research audit
+        run: |
+          python3 -m learning --check --journal work/learn1/ci-journal --output work/learn1/ci-full-local.json
+          python3 -m learning --check --journal work/learn1/ci-journal --output work/learn1/ci-repeat-local.json
+          python3 tests/learning_browser_test.py
+          python3 tests/learning_browser_test.py --browser webkit
+          git diff --exit-code 6204a23 -- data historical world_events matching research trading app index.html history.html event-research.html paper.html preview .claude ripple intelligence verification analogues equities news_pilot event_history free_pilot simulations
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: learn1-browser-and-public-evidence
+          path: |
+            work/application/
+            work/ripple/
+            work/three-step/
+            work/intelligence/
+            work/int2/
+            work/equities/
+            work/news-pilot/
+            work/hist1/
+            work/free-pilot/reports/
+            work/free-pilot/screens/
+            work/free-pilot/history.sqlite
+            work/sim1/screens/
+            work/learn1/screens/

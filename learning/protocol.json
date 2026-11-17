@@ -1,0 +1,23 @@
+{
+  "version": "LEARN-1/1",
+  "train_from": "2006-01-01",
+  "validation_from": "2016-01-01",
+  "test_from": "2020-01-01",
+  "test_through": "2026-11-17",
+  "embargo_calendar_days": 45,
+  "minimum_training_trades": 5,
+  "minimum_validation_trades": 3,
+  "minimum_test_trades_for_repeatability": 8,
+  "minimum_signal_completion_fraction": "0.80",
+  "training_shortlist": 3,
+  "selection_cost": "declared",
+  "robustness_cost": "stressed",
+  "cohort": "same primary market and event category only; no pooled unrelated asset returns",
+  "universe": "51 retained events, one explicitly primary target per event. Oil conversion and secondary targets never multiply sample size.",
+  "score": "Mean net GBP P&L per retained event, including zero for an untriggered signal, minus one quarter of the worst observed loss. Missing/unsettled outcomes are not zero and invalidate complete-sample scoring.",
+  "selection": "Rank nine predefined SIM-1 rules on training only; at most three train-qualified candidates reach validation. Select on positive validation score and positive stressed validation mean, adequate signal completion and sample counts. Lock before test outcomes. If rejected, show the training leader as a diagnostic hypothesis only.",
+  "purge": "An event must be at least 45 calendar days before the next fold boundary; no observation at/after that boundary enters learning. Greedy earliest-publication episode/45-day selection precedes outcome measurements.",
+  "forecast": "No numerical probability or validated recommendation. Research Watch is conditional and cannot place a paper trade. Original price/news vintages, investable instruments and prospective replication remain unverified.",
+  "bias": "Chronological holdout is untouched by this fitting procedure, not a prospective preregistration or proof that developers never saw these historical outcomes. Corpus selection/survivorship and multiple-testing risks remain. No p-value or predictive-accuracy promise.",
+  "cost_GBP": "0.00"
+}

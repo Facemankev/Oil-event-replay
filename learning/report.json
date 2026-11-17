@@ -1,0 +1,4685 @@
+{
+  "schema_version": 1,
+  "kind": "chronological_candidate_research_only",
+  "protocol": {
+    "version": "LEARN-1/1",
+    "train_from": "2006-01-01",
+    "validation_from": "2016-01-01",
+    "test_from": "2020-01-01",
+    "test_through": "2026-11-17",
+    "embargo_calendar_days": 45,
+    "minimum_training_trades": 5,
+    "minimum_validation_trades": 3,
+    "minimum_test_trades_for_repeatability": 8,
+    "minimum_signal_completion_fraction": "0.80",
+    "training_shortlist": 3,
+    "selection_cost": "declared",
+    "robustness_cost": "stressed",
+    "cohort": "same primary market and event category only; no pooled unrelated asset returns",
+    "universe": "51 retained events, one explicitly primary target per event. Oil conversion and secondary targets never multiply sample size.",
+    "score": "Mean net GBP P&L per retained event, including zero for an untriggered signal, minus one quarter of the worst observed loss. Missing/unsettled outcomes are not zero and invalidate complete-sample scoring.",
+    "selection": "Rank nine predefined SIM-1 rules on training only; at most three train-qualified candidates reach validation. Select on positive validation score and positive stressed validation mean, adequate signal completion and sample counts. Lock before test outcomes. If rejected, show the training leader as a diagnostic hypothesis only.",
+    "purge": "An event must be at least 45 calendar days before the next fold boundary; no observation at/after that boundary enters learning. Greedy earliest-publication episode/45-day selection precedes outcome measurements.",
+    "forecast": "No numerical probability or validated recommendation. Research Watch is conditional and cannot place a paper trade. Original price/news vintages, investable instruments and prospective replication remain unverified.",
+    "bias": "Chronological holdout is untouched by this fitting procedure, not a prospective preregistration or proof that developers never saw these historical outcomes. Corpus selection/survivorship and multiple-testing risks remain. No p-value or predictive-accuracy promise.",
+    "cost_GBP": "0.00"
+  },
+  "locked": {
+    "models": {
+      "brent/production_policy": {
+        "cohort": "brent/production_policy",
+        "training_candidates": [
+          {
+            "rule": "event_long",
+            "horizon": 1,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0176",
+            "worst_net_pnl_gbp": "0.0176",
+            "score": "0.0176",
+            "complete_sample": true,
+            "event_ids": [
+              "opec-2014-target"
+            ],
+            "outcome_end_dates": [
+              "2014-12-02"
+            ]
+          },
+          {
+            "rule": "event_long",
+            "horizon": 5,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 0,
+            "negative": 1,
+            "flat": 0,
+            "mean_net_pnl_gbp": "-0.3620",
+            "worst_net_pnl_gbp": "-0.3620",
+            "score": "-0.4525",
+            "complete_sample": true,
+            "event_ids": [
+              "opec-2014-target"
+            ],
+            "outcome_end_dates": [
+              "2014-12-08"
+            ]
+          },
+          {
+            "rule": "event_long",
+            "horizon": 20,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 0,
+            "negative": 1,
+            "flat": 0,
+            "mean_net_pnl_gbp": "-0.5441",
+            "worst_net_pnl_gbp": "-0.5441",
+            "score": "-0.6801",
+            "complete_sample": true,
+            "event_ids": [
+              "opec-2014-target"
+            ],
+            "outcome_end_dates": [
+              "2014-12-10"
+            ]
+          },
+          {
+            "rule": "momentum_up",
+            "horizon": 1,
+            "cost": "declared",
+            "events": 1,
+            "signals": 0,
+            "settled": 0,
+            "no_signal": 1,
+            "unavailable": [],
+            "completion_fraction": "0.0000",
+            "positive": 0,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0000",
+            "worst_net_pnl_gbp": "0.0000",
+            "score": "0.0000",
+            "complete_sample": true,
+            "event_ids": [
+              "opec-2014-target"
+            ],
+            "outcome_end_dates": []
+          },
+          {
+            "rule": "momentum_up",
+            "horizon": 5,
+            "cost": "declared",
+            "events": 1,
+            "signals": 0,
+            "settled": 0,
+            "no_signal": 1,
+            "unavailable": [],
+            "completion_fraction": "0.0000",
+            "positive": 0,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0000",
+            "worst_net_pnl_gbp": "0.0000",
+            "score": "0.0000",
+            "complete_sample": true,
+            "event_ids": [
+              "opec-2014-target"
+            ],
+            "outcome_end_dates": []
+          },
+          {
+            "rule": "momentum_up",
+            "horizon": 20,
+            "cost": "declared",
+            "events": 1,
+            "signals": 0,
+            "settled": 0,
+            "no_signal": 1,
+            "unavailable": [],
+            "completion_fraction": "0.0000",
+            "positive": 0,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0000",
+            "worst_net_pnl_gbp": "0.0000",
+            "score": "0.0000",
+            "complete_sample": true,
+            "event_ids": [
+              "opec-2014-target"
+            ],
+            "outcome_end_dates": []
+          },
+          {
+            "rule": "reversal_down",
+            "horizon": 1,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0176",
+            "worst_net_pnl_gbp": "0.0176",
+            "score": "0.0176",
+            "complete_sample": true,
+            "event_ids": [
+              "opec-2014-target"
+            ],
+            "outcome_end_dates": [
+              "2014-12-02"
+            ]
+          },
+          {
+            "rule": "reversal_down",
+            "horizon": 5,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 0,
+            "negative": 1,
+            "flat": 0,
+            "mean_net_pnl_gbp": "-0.3620",
+            "worst_net_pnl_gbp": "-0.3620",
+            "score": "-0.4525",
+            "complete_sample": true,
+            "event_ids": [
+              "opec-2014-target"
+            ],
+            "outcome_end_dates": [
+              "2014-12-08"
+            ]
+          },
+          {
+            "rule": "reversal_down",
+            "horizon": 20,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 0,
+            "negative": 1,
+            "flat": 0,
+            "mean_net_pnl_gbp": "-0.5441",
+            "worst_net_pnl_gbp": "-0.5441",
+            "score": "-0.6801",
+            "complete_sample": true,
+            "event_ids": [
+              "opec-2014-target"
+            ],
+            "outcome_end_dates": [
+              "2014-12-10"
+            ]
+          }
+        ],
+        "validation_candidates": [],
+        "selected": null,
+        "diagnostic_leader": {
+          "rule": "reversal_down",
+          "horizon": 1,
+          "cost": "declared",
+          "events": 1,
+          "signals": 1,
+          "settled": 1,
+          "no_signal": 0,
+          "unavailable": [],
+          "completion_fraction": "1.0000",
+          "positive": 1,
+          "negative": 0,
+          "flat": 0,
+          "mean_net_pnl_gbp": "0.0176",
+          "worst_net_pnl_gbp": "0.0176",
+          "score": "0.0176",
+          "complete_sample": true,
+          "event_ids": [
+            "opec-2014-target"
+          ],
+          "outcome_end_dates": [
+            "2014-12-02"
+          ]
+        },
+        "diagnostic_validation": {
+          "rule": "reversal_down",
+          "horizon": 1,
+          "cost": "declared",
+          "events": 1,
+          "signals": 0,
+          "settled": 0,
+          "no_signal": 1,
+          "unavailable": [],
+          "completion_fraction": "0.0000",
+          "positive": 0,
+          "negative": 0,
+          "flat": 0,
+          "mean_net_pnl_gbp": "0.0000",
+          "worst_net_pnl_gbp": "0.0000",
+          "score": "0.0000",
+          "complete_sample": true,
+          "event_ids": [
+            "opec-2016-algiers"
+          ],
+          "outcome_end_dates": []
+        },
+        "status": "insufficient_or_nonrobust_training_validation",
+        "historical_lock_boundary": "2020-01-01"
+      },
+      "brent/sanctions": {
+        "cohort": "brent/sanctions",
+        "training_candidates": [
+          {
+            "rule": "event_long",
+            "horizon": 1,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0315",
+            "worst_net_pnl_gbp": "0.0315",
+            "score": "0.0315",
+            "complete_sample": true,
+            "event_ids": [
+              "eu-2012-iran"
+            ],
+            "outcome_end_dates": [
+              "2012-01-27"
+            ]
+          },
+          {
+            "rule": "event_long",
+            "horizon": 5,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0215",
+            "worst_net_pnl_gbp": "0.0215",
+            "score": "0.0215",
+            "complete_sample": true,
+            "event_ids": [
+              "eu-2012-iran"
+            ],
+            "outcome_end_dates": [
+              "2012-02-02"
+            ]
+          },
+          {
+            "rule": "event_long",
+            "horizon": 20,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.6320",
+            "worst_net_pnl_gbp": "0.6320",
+            "score": "0.6320",
+            "complete_sample": true,
+            "event_ids": [
+              "eu-2012-iran"
+            ],
+            "outcome_end_dates": [
+              "2012-02-24"
+            ]
+          },
+          {
+            "rule": "momentum_up",
+            "horizon": 1,
+            "cost": "declared",
+            "events": 1,
+            "signals": 0,
+            "settled": 0,
+            "no_signal": 1,
+            "unavailable": [],
+            "completion_fraction": "0.0000",
+            "positive": 0,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0000",
+            "worst_net_pnl_gbp": "0.0000",
+            "score": "0.0000",
+            "complete_sample": true,
+            "event_ids": [
+              "eu-2012-iran"
+            ],
+            "outcome_end_dates": []
+          },
+          {
+            "rule": "momentum_up",
+            "horizon": 5,
+            "cost": "declared",
+            "events": 1,
+            "signals": 0,
+            "settled": 0,
+            "no_signal": 1,
+            "unavailable": [],
+            "completion_fraction": "0.0000",
+            "positive": 0,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0000",
+            "worst_net_pnl_gbp": "0.0000",
+            "score": "0.0000",
+            "complete_sample": true,
+            "event_ids": [
+              "eu-2012-iran"
+            ],
+            "outcome_end_dates": []
+          },
+          {
+            "rule": "momentum_up",
+            "horizon": 20,
+            "cost": "declared",
+            "events": 1,
+            "signals": 0,
+            "settled": 0,
+            "no_signal": 1,
+            "unavailable": [],
+            "completion_fraction": "0.0000",
+            "positive": 0,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0000",
+            "worst_net_pnl_gbp": "0.0000",
+            "score": "0.0000",
+            "complete_sample": true,
+            "event_ids": [
+              "eu-2012-iran"
+            ],
+            "outcome_end_dates": []
+          },
+          {
+            "rule": "reversal_down",
+            "horizon": 1,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0315",
+            "worst_net_pnl_gbp": "0.0315",
+            "score": "0.0315",
+            "complete_sample": true,
+            "event_ids": [
+              "eu-2012-iran"
+            ],
+            "outcome_end_dates": [
+              "2012-01-27"
+            ]
+          },
+          {
+            "rule": "reversal_down",
+            "horizon": 5,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0215",
+            "worst_net_pnl_gbp": "0.0215",
+            "score": "0.0215",
+            "complete_sample": true,
+            "event_ids": [
+              "eu-2012-iran"
+            ],
+            "outcome_end_dates": [
+              "2012-02-02"
+            ]
+          },
+          {
+            "rule": "reversal_down",
+            "horizon": 20,
+            "cost": "declared",
+            "events": 1,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.6320",
+            "worst_net_pnl_gbp": "0.6320",
+            "score": "0.6320",
+            "complete_sample": true,
+            "event_ids": [
+              "eu-2012-iran"
+            ],
+            "outcome_end_dates": [
+              "2012-02-24"
+            ]
+          }
+        ],
+        "validation_candidates": [],
+        "selected": null,
+        "diagnostic_leader": {
+          "rule": "reversal_down",
+          "horizon": 20,
+          "cost": "declared",
+          "events": 1,
+          "signals": 1,
+          "settled": 1,
+          "no_signal": 0,
+          "unavailable": [],
+          "completion_fraction": "1.0000",
+          "positive": 1,
+          "negative": 0,
+          "flat": 0,
+          "mean_net_pnl_gbp": "0.6320",
+          "worst_net_pnl_gbp": "0.6320",
+          "score": "0.6320",
+          "complete_sample": true,
+          "event_ids": [
+            "eu-2012-iran"
+          ],
+          "outcome_end_dates": [
+            "2012-02-24"
+          ]
+        },
+        "diagnostic_validation": {
+          "rule": "reversal_down",
+          "horizon": 20,
+          "cost": "declared",
+          "events": 1,
+          "signals": 0,
+          "settled": 0,
+          "no_signal": 1,
+          "unavailable": [],
+          "completion_fraction": "0.0000",
+          "positive": 0,
+          "negative": 0,
+          "flat": 0,
+          "mean_net_pnl_gbp": "0.0000",
+          "worst_net_pnl_gbp": "0.0000",
+          "score": "0.0000",
+          "complete_sample": true,
+          "event_ids": [
+            "us-2018-jcpoa"
+          ],
+          "outcome_end_dates": []
+        },
+        "status": "insufficient_or_nonrobust_training_validation",
+        "historical_lock_boundary": "2020-01-01"
+      },
+      "brent/weather": {
+        "cohort": "brent/weather",
+        "training_candidates": [
+          {
+            "rule": "event_long",
+            "horizon": 1,
+            "cost": "declared",
+            "events": 5,
+            "signals": 5,
+            "settled": 5,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 4,
+            "flat": 0,
+            "mean_net_pnl_gbp": "-0.0822",
+            "worst_net_pnl_gbp": "-0.2628",
+            "score": "-0.1479",
+            "complete_sample": true,
+            "event_ids": [
+              "humberto-2007-texas",
+              "dolly-2008-texas",
+              "ike-2008-galveston",
+              "isaac-2012-louisiana",
+              "sandy-2012-new-jersey"
+            ],
+            "outcome_end_dates": [
+              "2007-09-17",
+              "2008-07-25",
+              "2008-09-16",
+              "2012-08-31",
+              "2012-11-01"
+            ]
+          },
+          {
+            "rule": "event_long",
+            "horizon": 5,
+            "cost": "declared",
+            "events": 5,
+            "signals": 5,
+            "settled": 5,
+            "no_signal": 0,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 4,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0266",
+            "worst_net_pnl_gbp": "-0.0762",
+            "score": "0.0075",
+            "complete_sample": true,
+            "event_ids": [
+              "humberto-2007-texas",
+              "dolly-2008-texas",
+              "ike-2008-galveston",
+              "isaac-2012-louisiana",
+              "sandy-2012-new-jersey"
+            ],
+            "outcome_end_dates": [
+              "2007-09-21",
+              "2008-07-31",
+              "2008-09-22",
+              "2012-09-07",
+              "2012-11-07"
+            ]
+          },
+          {
+            "rule": "event_long",
+            "horizon": 20,
+            "cost": "declared",
+            "events": 5,
+            "signals": 5,
+            "settled": 4,
+            "no_signal": 0,
+            "unavailable": [
+              {
+                "event_id": "sandy-2012-new-jersey",
+                "reason": "missing_exact_date_GBP_FX"
+              }
+            ],
+            "completion_fraction": "0.8000",
+            "positive": 1,
+            "negative": 3,
+            "flat": 0,
+            "mean_net_pnl_gbp": null,
+            "worst_net_pnl_gbp": "-0.6999",
+            "score": null,
+            "complete_sample": false,
+            "event_ids": [
+              "humberto-2007-texas",
+              "dolly-2008-texas",
+              "ike-2008-galveston",
+              "isaac-2012-louisiana",
+              "sandy-2012-new-jersey"
+            ],
+            "outcome_end_dates": [
+              "2007-10-12",
+              "2008-08-21",
+              "2008-10-10",
+              "2012-09-28"
+            ]
+          },
+          {
+            "rule": "momentum_up",
+            "horizon": 1,
+            "cost": "declared",
+            "events": 5,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 4,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 0,
+            "negative": 1,
+            "flat": 0,
+            "mean_net_pnl_gbp": "-0.0022",
+            "worst_net_pnl_gbp": "-0.0112",
+            "score": "-0.0050",
+            "complete_sample": true,
+            "event_ids": [
+              "humberto-2007-texas",
+              "dolly-2008-texas",
+              "ike-2008-galveston",
+              "isaac-2012-louisiana",
+              "sandy-2012-new-jersey"
+            ],
+            "outcome_end_dates": [
+              "2007-09-17"
+            ]
+          },
+          {
+            "rule": "momentum_up",
+            "horizon": 5,
+            "cost": "declared",
+            "events": 5,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 4,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 0,
+            "negative": 1,
+            "flat": 0,
+            "mean_net_pnl_gbp": "-0.0049",
+            "worst_net_pnl_gbp": "-0.0243",
+            "score": "-0.0109",
+            "complete_sample": true,
+            "event_ids": [
+              "humberto-2007-texas",
+              "dolly-2008-texas",
+              "ike-2008-galveston",
+              "isaac-2012-louisiana",
+              "sandy-2012-new-jersey"
+            ],
+            "outcome_end_dates": [
+              "2007-09-21"
+            ]
+          },
+          {
+            "rule": "momentum_up",
+            "horizon": 20,
+            "cost": "declared",
+            "events": 5,
+            "signals": 1,
+            "settled": 1,
+            "no_signal": 4,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 0,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0126",
+            "worst_net_pnl_gbp": "0.0000",
+            "score": "0.0126",
+            "complete_sample": true,
+            "event_ids": [
+              "humberto-2007-texas",
+              "dolly-2008-texas",
+              "ike-2008-galveston",
+              "isaac-2012-louisiana",
+              "sandy-2012-new-jersey"
+            ],
+            "outcome_end_dates": [
+              "2007-10-12"
+            ]
+          },
+          {
+            "rule": "reversal_down",
+            "horizon": 1,
+            "cost": "declared",
+            "events": 5,
+            "signals": 4,
+            "settled": 4,
+            "no_signal": 1,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 3,
+            "flat": 0,
+            "mean_net_pnl_gbp": "-0.0799",
+            "worst_net_pnl_gbp": "-0.2628",
+            "score": "-0.1456",
+            "complete_sample": true,
+            "event_ids": [
+              "humberto-2007-texas",
+              "dolly-2008-texas",
+              "ike-2008-galveston",
+              "isaac-2012-louisiana",
+              "sandy-2012-new-jersey"
+            ],
+            "outcome_end_dates": [
+              "2008-07-25",
+              "2008-09-16",
+              "2012-08-31",
+              "2012-11-01"
+            ]
+          },
+          {
+            "rule": "reversal_down",
+            "horizon": 5,
+            "cost": "declared",
+            "events": 5,
+            "signals": 4,
+            "settled": 4,
+            "no_signal": 1,
+            "unavailable": [],
+            "completion_fraction": "1.0000",
+            "positive": 1,
+            "negative": 3,
+            "flat": 0,
+            "mean_net_pnl_gbp": "0.0314",
+            "worst_net_pnl_gbp": "-0.0762",
+            "score": "0.0124",
+            "complete_sample": true,
+            "event_ids": [
+              "humberto-2007-texas",
+              "dolly-2008-texas",
+              "ike-2008-galveston",
+              "isaac-2012-louisiana",
+              "sandy-2012-new-jersey"
+            ],
+            "outcome_end_dates": [
+              "2008-07-31",
+              "2008-09-22",
+              "2012-09-07",
+              "2012-11-07"
+            ]
+          },
+          {
+            "rule": "reversal_down",
+            "horizon": 20,
+            "cost": "declared",
+            "events": 5,
+            "signals": 4,
+            "settled": 3,
+            "no_signal": 1,
+            "unavailable": [
+              {
+                "event_id": "sandy-2012-new-jersey",
+                "reason": "missing_exact_date_GBP_FX"
+              }
+            ],
+            "completion_fraction": "0.7500",
+            "positive": 0,
+            "negative": 3,
+            "flat": 0,
+            "mean_net_pnl_gbp": null,
+            "worst_net_pnl_gbp": "-0.6999",
+            "score": null,
+            "complete_sample": false,
+            "event_ids": [
+              "humberto-2007-texas",
+              "dolly-2008-texas",
+              "ike-2008-galveston",
+              "isaac-2012-louisiana",
+              "sandy-2012-new-jersey"
+            ],
+            "outcome_end_dates": [
+              "2008-08-21",
+              "2008-10-10",
+              "2012-09-28"
+            ]
+          }
+        ],
+        "validation_candidates": [
+          {
+            "candidate": {
+              "rule": "event_long",
+              "horizon": 5,
+              "cost": "declared",
+              "events": 5,
+              "signals": 5,
+              "settled": 5,
+              "no_signal": 0,
+              "unavailable": [],
+              "completion_fraction": "1.0000",
+              "positive": 1,
+              "negative": 4,
+              "flat": 0,
+              "mean_net_pnl_gbp": "0.0266",
+              "worst_net_pnl_gbp": "-0.0762",
+              "score": "0.0075",
+              "complete_sample": true,
+              "event_ids": [
+                "humberto-2007-texas",
+                "dolly-2008-texas",
+                "ike-2008-galveston",
+                "isaac-2012-louisiana",
+                "sandy-2012-new-jersey"
+              ],
+              "outcome_end_dates": [
+                "2007-09-21",
+                "2008-07-31",
+                "2008-09-22",
+                "2012-09-07",
+                "2012-11-07"
+              ]
+            },
+            "validation": {
+              "rule": "event_long",
+              "horizon": 5,
+              "cost": "declared",
+              "events": 1,
+              "signals": 1,
+              "settled": 0,
+              "no_signal": 0,
+              "unavailable": [
+                {
+                  "event_id": "harvey-2017-texas",
+                  "reason": "missing_exact_date_GBP_FX"
+                }
+              ],
+              "completion_fraction": "0.0000",
+              "positive": 0,
+              "negative": 0,
+              "flat": 0,
+              "mean_net_pnl_gbp": null,
+              "worst_net_pnl_gbp": null,
+              "score": null,
+              "complete_sample": false,
+              "event_ids": [
+                "harvey-2017-texas"
+              ],
+              "outcome_end_dates": []
+            },
+            "stress": {
+              "rule": "event_long",
+              "horizon": 5,
+              "cost": "stressed",
+              "events": 1,
+              "signals": 1,
+              "settled": 0,
+              "no_signal": 0,
+              "unavailable": [
+                {
+                  "event_id": "harvey-2017-texas",
+                  "reason": "missing_exact_date_GBP_FX"
+                }
+              ],
+              "completion_fraction": "0.0000",
+              "positive": 0,
+              "negative": 0,
+              "flat": 0,
+              "mean_net_pnl_gbp": null,
+              "worst_net_pnl_gbp": null,
+              "score": null,
+              "complete_sample": false,
+              "event_ids": [
+                "harvey-2017-texas"
+              ],
+              "outcome_end_dates": []
+            },
+            "qualified": false
+          }
+        ],
+        "selected": null,
+        "diagnostic_leader": {
+          "rule": "momentum_up",
+          "horizon": 20,
+          "cost": "declared",
+          "events": 5,
+          "signals": 1,
+          "settled": 1,
+          "no_signal": 4,
+          "unavailable": [],
+          "completion_fraction": "1.0000",
+          "positive": 1,
+          "negative": 0,
+          "flat": 0,
+          "mean_net_pnl_gbp": "0.0126",
+          "worst_net_pnl_gbp": "0.0000",
+          "score": "0.0126",
+          "complete_sample": true,
+          "event_ids": [
+            "humberto-2007-texas",
+            "dolly-2008-texas",
+            "ike-2008-galveston",
+            "isaac-2012-louisiana",
+            "sandy-2012-new-jersey"
+          ],
+          "outcome_end_dates": [
+            "2007-10-12"
+          ]
+        },
+        "diagnostic_validation": {
+          "rule": "momentum_up",
+          "horizon": 20,
+          "cost": "declared",
+          "events": 1,
+          "signals": 1,
+          "settled": 0,
+          "no_signal": 0,
+          "unavailable": [
+            {
+              "event_id": "harvey-2017-texas",
+              "reason": "missing_exact_date_GBP_FX"
+            }
+          ],
+          "completion_fraction": "0.0000",
+          "positive": 0,
+          "negative": 0,
+          "flat": 0,
+          "mean_net_pnl_gbp": null,
+          "worst_net_pnl_gbp": null,
+          "score": null,
+          "complete_sample": false,
+          "event_ids": [
+            "harvey-2017-texas"
+          ],
+          "outcome_end_dates": []
+        },
+        "status": "insufficient_or_nonrobust_training_validation",
+        "historical_lock_boundary": "2020-01-01"
+      }
+    },
+    "training_event_ids": [
+      "humberto-2007-texas",
+      "dolly-2008-texas",
+      "ike-2008-galveston",
+      "eu-2012-iran",
+      "isaac-2012-louisiana",
+      "sandy-2012-new-jersey",
+      "opec-2014-target"
+    ],
+    "validation_event_ids": [
+      "brexit-2016-boe-response",
+      "opec-2016-algiers",
+      "merck-2017-epoch",
+      "harvey-2017-texas",
+      "equifax-2017-security",
+      "boe-2017-november-hike",
+      "us-2018-jcpoa",
+      "intel-2018-ceo",
+      "tesla-2018-governance",
+      "biogen-2019-futility",
+      "saudi-2019-abqaiq"
+    ],
+    "excluded_training": [
+      {
+        "event_id": "gustav-2008-louisiana",
+        "reason": "same_episode_or_context_response_embargo"
+      }
+    ],
+    "excluded_validation": [
+      {
+        "event_id": "boe-2016-august-cut",
+        "reason": "same_episode_or_context_response_embargo"
+      },
+      {
+        "event_id": "opec-2016-vienna",
+        "reason": "same_episode_or_context_response_embargo"
+      },
+      {
+        "event_id": "opec-2016-cooperation",
+        "reason": "same_episode_or_context_response_embargo"
+      },
+      {
+        "event_id": "nate-2017-louisiana",
+        "reason": "same_episode_or_context_response_embargo"
+      },
+      {
+        "event_id": "us-2018-iran-reimposition",
+        "reason": "same_episode_or_context_response_embargo"
+      },
+      {
+        "event_id": "biogen-2019-reanalysis",
+        "reason": "same_episode_or_context_response_embargo"
+      }
+    ],
+    "multiple_testing": {
+      "candidates_per_cohort": 9,
+      "training_cohorts": 3,
+      "attempted_training_candidates": 27,
+      "selection_only_on_training_validation": true,
+      "significance_established": false
+    },
+    "test_outcomes_used": 0
+  },
+  "excluded_test": [
+    {
+      "event_id": "fed-2020-zero-range",
+      "reason": "same_episode_or_context_response_embargo"
+    },
+    {
+      "event_id": "opec-2020-june",
+      "reason": "same_episode_or_context_response_embargo"
+    },
+    {
+      "event_id": "delta-2020-louisiana",
+      "reason": "same_episode_or_context_response_embargo"
+    },
+    {
+      "event_id": "pfizer-2020-eua",
+      "reason": "same_episode_or_context_response_embargo"
+    },
+    {
+      "event_id": "nicholas-2021-texas",
+      "reason": "same_episode_or_context_response_embargo"
+    }
+  ],
+  "source_links": [
+    {
+      "id": "fed-cut-mar3",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200303a.htm",
+      "publisher": "Federal Reserve"
+    },
+    {
+      "id": "fed-cut-mar15",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm",
+      "publisher": "Federal Reserve"
+    },
+    {
+      "id": "fed-hike-jun22",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm",
+      "publisher": "Federal Reserve"
+    },
+    {
+      "id": "fed-hold-jun23",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a.htm",
+      "publisher": "Federal Reserve"
+    },
+    {
+      "id": "fed-jun22-transcript",
+      "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20220615.pdf",
+      "publisher": "Federal Reserve"
+    },
+    {
+      "id": "boe-cut-2016",
+      "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-august-2016",
+      "publisher": "Bank of England"
+    },
+    {
+      "id": "boe-hike-2017",
+      "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2017/november-2017",
+      "publisher": "Bank of England"
+    },
+    {
+      "id": "boe-brexit-2016",
+      "url": "https://www.bankofengland.co.uk/news/2016/june/statement-from-the-governor-of-the-boe-following-the-eu-referendum-result",
+      "publisher": "Bank of England"
+    },
+    {
+      "id": "nvda-q1-2023",
+      "url": "https://investor.nvidia.com/news/press-release-details/2023/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2024/default.aspx",
+      "publisher": "NVIDIA"
+    },
+    {
+      "id": "biib-halt-2019",
+      "url": "https://investors.biogen.com/news-releases/news-release-details/biogen-and-eisai-discontinue-phase-3-engage-and-emerge-trials",
+      "publisher": "Biogen"
+    },
+    {
+      "id": "biib-reanalysis-2019",
+      "url": "https://investors.biogen.com/news-releases/news-release-details/biogen-plans-regulatory-filing-aducanumab-alzheimers-disease",
+      "publisher": "Biogen"
+    },
+    {
+      "id": "pfe-interim-2020",
+      "url": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-and-biontech-announce-vaccine-candidate-against",
+      "publisher": "Pfizer"
+    },
+    {
+      "id": "fda-pfe-eua-2020",
+      "url": "https://content.govdelivery.com/accounts/USFDA/bulletins/2b0c5c3",
+      "publisher": "US FDA"
+    },
+    {
+      "id": "gold-fed-report",
+      "url": "https://ca.investing.com/news/commodities-news/gold-surges-over-3-after-us-feds-emergency-rate-cut-2080399",
+      "publisher": "Reuters via Investing.com"
+    },
+    {
+      "id": "gold-vaccine-report",
+      "url": "https://ca.investing.com/news/commodities-news/preciousgold-plunges-5-as-stocks-soar-on-covid19-vaccine-euphoria-2295622",
+      "publisher": "Reuters via Investing.com"
+    },
+    {
+      "id": "biib-fall-report",
+      "url": "https://za.investing.com/news/stock-market-news/us-stockswall-street-rises-as-apple-tech-shares-climb-1433600",
+      "publisher": "Reuters via Investing.com"
+    },
+    {
+      "id": "biib-rebound-report",
+      "url": "https://ca.investing.com/news/stock-market-news/us-shares-lower-at-close-of-trade-dow-jones-industrial-average-down-015-1989319",
+      "publisher": "Investing.com"
+    },
+    {
+      "id": "nvda-session-report",
+      "url": "https://www.investing.com/news/stock-market-news/us-stocks-mixed-at-close-of-trade-dow-jones-industrial-average-down-011-3091358",
+      "publisher": "Investing.com"
+    },
+    {
+      "id": "nvda-index-report",
+      "url": "https://www.investing.com/news/stock-market-news/wall-street-ends-higher-as-nvidia-sparks-rush-for-ai-stocks-3090585",
+      "publisher": "Reuters via Investing.com"
+    },
+    {
+      "id": "fed-cut-index-report",
+      "url": "https://in.investing.com/news/us-stocksanother-foul-day-on-wall-street-after-surprise-fed-rate-cut-2166477",
+      "publisher": "Reuters via Investing.com"
+    },
+    {
+      "id": "fed-hike-index-report",
+      "url": "https://www.investing.com/news/economy/focus-on-fed-as-futures-edge-higher-ahead-of-rate-decision-2837335",
+      "publisher": "Reuters via Investing.com"
+    },
+    {
+      "id": "pfe-session-report",
+      "url": "https://abcnews.com/Business/dow-surges-1500-points-vaccine-hopes/story?id=74104964",
+      "publisher": "ABC News"
+    },
+    {
+      "id": "nvda-q2-2023",
+      "url": "https://investor.nvidia.com/news/press-release-details/2023/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2024/default.aspx",
+      "publisher": "NVIDIA"
+    },
+    {
+      "id": "nvda-q4-2024",
+      "url": "https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/default.aspx",
+      "publisher": "NVIDIA"
+    },
+    {
+      "id": "merck-epoch-2017",
+      "url": "https://www.merck.com/news/merck-announces-epoch-study-of-verubecestat-for-the-treatment-of-people-with-mild-to-moderate-alzheimers-disease-to-stop-for-lack-of-efficacy/",
+      "publisher": "Merck"
+    },
+    {
+      "id": "nvda-q2-session-report",
+      "url": "https://uk.investing.com/news/stock-market-news/nvidias-frankfurt-shares-surge-as-stellar-results-seen-keeping-ai-rally-alive-3133340",
+      "publisher": "Reuters via Investing.com"
+    },
+    {
+      "id": "nvda-q4-session-report",
+      "url": "https://www.investing.com/news/stock-market-news/ai-leader-nvidia-rises-as-forecast-tops-wall-streets-lofty-goals-3310840",
+      "publisher": "Reuters via Investing.com"
+    },
+    {
+      "id": "oil-gustav-2008-louisiana-source-1",
+      "url": "https://www.nhc.noaa.gov/archive/2008/al07/al072008.public.032.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "gustav-2008-louisiana-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2008/al07/al072008.public.032.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-ike-2008-galveston-source-1",
+      "url": "https://www.nhc.noaa.gov/archive/2008/al09/al092008.update.09130730.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "ike-2008-galveston-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2008/al09/al092008.public_b.048.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-eu-2012-iran-source-1",
+      "url": "https://home.treasury.gov/news/press-releases/tg1396",
+      "publisher": "US Department of the Treasury"
+    },
+    {
+      "id": "oil-sandy-2012-new-jersey-source-1",
+      "url": "https://www.nhc.noaa.gov/archive/2012/al18/al182012.update.10300002.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "sandy-2012-new-jersey-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2012/al18/al182012.update.10300002.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-opec-2014-target-source-1",
+      "url": "https://www.opec.org/pr-detail/84-27-nov-2014.html",
+      "publisher": "OPEC"
+    },
+    {
+      "id": "oil-opec-2016-algiers-source-1",
+      "url": "https://www.opec.org/pr-detail/495-28-sep-2016.html",
+      "publisher": "OPEC"
+    },
+    {
+      "id": "oil-opec-2016-vienna-source-1",
+      "url": "https://www.opec.org/pr-detail/458-30-nov-2016.html",
+      "publisher": "OPEC"
+    },
+    {
+      "id": "oil-opec-2016-cooperation-source-1",
+      "url": "https://www.opec.org/pr-detail/457-10-dec-2016.html",
+      "publisher": "OPEC"
+    },
+    {
+      "id": "oil-harvey-2017-texas-source-1",
+      "url": "https://www.nhc.noaa.gov/archive/2017/al09/al092017.public.023.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "harvey-2017-texas-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2017/al09/al092017.public.022.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-us-2018-jcpoa-source-1",
+      "url": "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-joint-comprehensive-plan-action/",
+      "publisher": "Archived White House"
+    },
+    {
+      "id": "oil-us-2018-iran-reimposition-source-1",
+      "url": "https://home.treasury.gov/news/press-releases/sm541",
+      "publisher": "US Department of the Treasury"
+    },
+    {
+      "id": "oil-saudi-2019-abqaiq-source-1",
+      "url": "https://www.eia.gov/TodayinEnergy/detail.php?id=41413",
+      "publisher": "US Energy Information Administration"
+    },
+    {
+      "id": "oil-who-2020-pandemic-source-1",
+      "url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing-on-covid-19---11-march-2020",
+      "publisher": "World Health Organization"
+    },
+    {
+      "id": "oil-opec-2020-april-source-1",
+      "url": "https://www.opec.org/pr-detail/310-12-apr-2020.html",
+      "publisher": "OPEC"
+    },
+    {
+      "id": "oil-opec-2020-june-source-1",
+      "url": "https://www.opec.org/pr-detail/306-06-jun-2020.html",
+      "publisher": "OPEC"
+    },
+    {
+      "id": "oil-laura-2020-louisiana-source-1",
+      "url": "https://www.nhc.noaa.gov/archive/2020/al13/al132020.public_a.029.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "laura-2020-louisiana-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2020/al13/al132020.public.029.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-opec-2021-july-source-1",
+      "url": "https://www.opec.org/pr-detail/209-18-jul-2021.html",
+      "publisher": "OPEC"
+    },
+    {
+      "id": "oil-ida-2021-louisiana-source-1",
+      "url": "https://www.nhc.noaa.gov/archive/2021/al09/al092021.update.08291653.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "ida-2021-louisiana-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2021/al09/al092021.public.014.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-russia-2022-invasion-source-1",
+      "url": "https://ukraine.un.org/en/173250-statement-secretary-general-%E2%80%93-ukraine",
+      "publisher": "United Nations"
+    },
+    {
+      "id": "oil-iea-2022-emergency-release-source-1",
+      "url": "https://www.energy.gov/articles/us-and-30-countries-commit-release-60-million-barrels-oil-strategic-reserves-stabilize",
+      "publisher": "US Department of Energy"
+    },
+    {
+      "id": "oil-eu-2022-oil-embargo-source-1",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2022/06/03/russia-s-aggression-against-ukraine-eu-adopts-sixth-package-of-sanctions/",
+      "publisher": "Council of the European Union"
+    },
+    {
+      "id": "oil-opec-2022-october-source-1",
+      "url": "https://www.opec.org/pr-detail/73-05-oct-2022.html",
+      "publisher": "OPEC"
+    },
+    {
+      "id": "oil-g7-2022-oil-cap-source-1",
+      "url": "https://www.gov.uk/government/news/uk-and-allies-announce-price-cap-of-60-on-russian-oil",
+      "publisher": "HM Treasury"
+    },
+    {
+      "id": "oil-israel-2023-october-source-1",
+      "url": "https://unsco.unmissions.org/sites/default/files/statement_attributable_to_the_spokesperson_of_the_sg_on_the_situation_in_the_middle_east_-_7_oct_2023.pdf",
+      "publisher": "United Nations"
+    },
+    {
+      "id": "oil-humberto-2007-texas-nhc",
+      "url": "https://www.nhc.noaa.gov/archive/2007/al09/al092007.update.09130713.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "humberto-2007-texas-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2007/al09/al092007.update.09130713.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-dolly-2008-texas-nhc",
+      "url": "https://www.nhc.noaa.gov/archive/2008/al04/al042008.posest.07231753.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "dolly-2008-texas-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2008/al04/al042008.public_a.013.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-isaac-2012-louisiana-nhc",
+      "url": "https://www.nhc.noaa.gov/archive/2012/al09/al092012.posest.08282356.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "isaac-2012-louisiana-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2012/al09/al092012.posest.08282356.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-nate-2017-louisiana-nhc",
+      "url": "https://www.nhc.noaa.gov/archive/2017/al16/al162017.public_a.014.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "nate-2017-louisiana-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2017/al16/al162017.public_a.014.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-delta-2020-louisiana-nhc",
+      "url": "https://www.nhc.noaa.gov/archive/2020/al26/al262020.update.10092259.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "delta-2020-louisiana-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2020/al26/al262020.update.10092259.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-zeta-2020-louisiana-nhc",
+      "url": "https://www.nhc.noaa.gov/archive/2020/al28/al282020.public.017.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "zeta-2020-louisiana-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2020/al28/al282020.public.017.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-nicholas-2021-texas-nhc",
+      "url": "https://www.nhc.noaa.gov/archive/2021/al14/al142021.public_a.008.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "nicholas-2021-texas-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2021/al14/al142021.public_a.008.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "oil-francine-2024-louisiana-nhc",
+      "url": "https://www.nhc.noaa.gov/archive/2024/al06/al062024.update.09112157.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "francine-2024-louisiana-scale",
+      "url": "https://www.nhc.noaa.gov/archive/2024/al06/al062024.update.09112157.shtml",
+      "publisher": "NOAA National Hurricane Center"
+    },
+    {
+      "id": "company-intel_release",
+      "url": "https://www.intc.com/news-events/press-releases/detail/146/intel-ceo-brian-krzanich-resigns-board-appoints-bob-swan",
+      "publisher": "See original source"
+    },
+    {
+      "id": "company-intel_filing",
+      "url": "https://www.intc.com/filings-reports/all-sec-filings/content/0001193125-18-199045/d598882d8k.htm",
+      "publisher": "See original source"
+    },
+    {
+      "id": "company-intel_prices",
+      "url": "https://www.sec.gov/Archives/edgar/data/1114446/000111444618007465/tc4570597f_1fwp.htm",
+      "publisher": "See original source"
+    },
+    {
+      "id": "company-equifax_release",
+      "url": "https://investor.equifax.com/news-events/press-releases/detail/240/equifax-announces-cybersecurity-incident-involving-consumer",
+      "publisher": "See original source"
+    },
+    {
+      "id": "company-equifax_prices",
+      "url": "https://www.sec.gov/litigation/complaints/2018/comp-pr2018-40.pdf",
+      "publisher": "See original source"
+    },
+    {
+      "id": "company-tesla_charge",
+      "url": "https://www.sec.gov/newsroom/press-releases/2018-219",
+      "publisher": "See original source"
+    },
+    {
+      "id": "company-h20_release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000082/nvda-20250409.htm",
+      "publisher": "See original source"
+    },
+    {
+      "id": "company-h20_index",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/0001045810-25-000082-index.html",
+      "publisher": "See original source"
+    },
+    {
+      "id": "company-h20_pre",
+      "url": "https://www.sec.gov/Archives/edgar/data/200245/000191870425006605/form424b2.htm",
+      "publisher": "See original source"
+    },
+    {
+      "id": "company-h20_post",
+      "url": "https://www.sec.gov/Archives/edgar/data/831001/000095010325005095/dp227960_424b8-us2559653.htm",
+      "publisher": "See original source"
+    },
+    {
+      "id": "primary-brent",
+      "url": "https://www.eia.gov/dnav/pet/hist/RBRTED.htm",
+      "publisher": "US EIA"
+    },
+    {
+      "id": "primary-wti",
+      "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm",
+      "publisher": "US EIA"
+    },
+    {
+      "id": "primary-fx",
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_uk.htm",
+      "publisher": "Federal Reserve"
+    },
+    {
+      "id": "free-primary-eurusd",
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_eu.htm",
+      "publisher": "Federal Reserve"
+    },
+    {
+      "id": "free-primary-usdjpy",
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_ja.htm",
+      "publisher": "Federal Reserve"
+    }
+  ],
+  "records": [
+    {
+      "prediction": {
+        "event_id": "fed-2020-emergency-cut",
+        "title": "Fed emergency 50 bp cut",
+        "market": "nasdaq_composite",
+        "cohort": "nasdaq_composite/monetary_policy",
+        "source_id": "fed-cut-mar3",
+        "simulated_decision_bound": "2020-03-03T15:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "fed-2020-emergency-cut",
+        "market": "nasdaq_composite",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "no_later_numeric_price",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "stressed_cost_outcome": null
+    },
+    {
+      "prediction": {
+        "event_id": "who-2020-pandemic",
+        "title": "WHO characterizes COVID-19 as a pandemic",
+        "market": "brent",
+        "cohort": "brent/demand_shock",
+        "source_id": "oil-who-2020-pandemic-source-1",
+        "simulated_decision_bound": "2020-03-13T00:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "who-2020-pandemic",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2020-03-16",
+        "exit_date": "2020-03-23",
+        "net_pnl_gbp": "-0.4928",
+        "gross_pnl_gbp": "-0.4656",
+        "path": [
+          {
+            "date": "2020-03-16",
+            "reference_gbp": "22.7887",
+            "raw_value": "27.98",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2278",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2020-03-17",
+            "reference_gbp": "23.2754",
+            "raw_value": "27.97",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2017",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.0762",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-03-18",
+            "reference_gbp": "19.3793",
+            "raw_value": "22.79",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.1760",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.2265",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-03-19",
+            "reference_gbp": "20.5625",
+            "raw_value": "23.98",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.1662",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.4845",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-03-20",
+            "reference_gbp": "21.7576",
+            "raw_value": "25.55",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.1743",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7452",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-03-23",
+            "reference_gbp": "20.6666",
+            "raw_value": "23.75",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.1492",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.5072",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2020-03-16",
+            "action": "Hypothetical Buy",
+            "units": "0.2183"
+          },
+          {
+            "date": "2020-03-17",
+            "action": "Hypothetical Hold",
+            "units": "0.2183"
+          },
+          {
+            "date": "2020-03-18",
+            "action": "Hypothetical Hold",
+            "units": "0.2183"
+          },
+          {
+            "date": "2020-03-19",
+            "action": "Hypothetical Hold",
+            "units": "0.2183"
+          },
+          {
+            "date": "2020-03-20",
+            "action": "Hypothetical Hold",
+            "units": "0.2183"
+          },
+          {
+            "date": "2020-03-23",
+            "action": "Hypothetical Sell",
+            "units": "0.2183"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0272",
+        "net_allocation_return_percent": "-9.8556",
+        "gross_return_percent": "-9.3124",
+        "final_cash_gbp": "49.5072",
+        "max_observed_drawdown_percent": "1.6968",
+        "net_outcome": "negative",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "stressed_cost_outcome": null
+    },
+    {
+      "prediction": {
+        "event_id": "opec-2020-april",
+        "title": "OPEC+ agrees the April 2020 output adjustment",
+        "market": "brent",
+        "cohort": "brent/production_policy",
+        "source_id": "oil-opec-2020-april-source-1",
+        "simulated_decision_bound": "2020-04-14T00:00:00.000001Z",
+        "research_action": "Watch",
+        "hypothetical_intent": "Conditional hypothetical Buy",
+        "validated_action": "No Action",
+        "rule": "reversal_down",
+        "horizon": 1,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "insufficient_or_nonrobust_training_validation"
+      },
+      "outcome": {
+        "event_id": "opec-2020-april",
+        "market": "brent",
+        "rule": "reversal_down",
+        "horizon": 1,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2020-04-15",
+        "exit_date": "2020-04-16",
+        "net_pnl_gbp": "-0.2746",
+        "gross_pnl_gbp": "-0.2461",
+        "path": [
+          {
+            "date": "2020-04-15",
+            "reference_gbp": "15.8109",
+            "raw_value": "19.80",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2523",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2020-04-16",
+            "reference_gbp": "15.0326",
+            "raw_value": "18.69",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2433",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7254",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2020-04-15",
+            "action": "Hypothetical Buy",
+            "units": "0.3147"
+          },
+          {
+            "date": "2020-04-16",
+            "action": "Hypothetical Sell",
+            "units": "0.3147"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0285",
+        "net_allocation_return_percent": "-5.4923",
+        "gross_return_percent": "-4.9228",
+        "final_cash_gbp": "49.7254",
+        "max_observed_drawdown_percent": "0.5492",
+        "net_outcome": "negative",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "opec-2020-april",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2020-04-15",
+        "exit_date": "2020-04-22",
+        "net_pnl_gbp": "-1.4900",
+        "gross_pnl_gbp": "-1.4689",
+        "path": [
+          {
+            "date": "2020-04-15",
+            "reference_gbp": "15.8109",
+            "raw_value": "19.80",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2523",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2020-04-16",
+            "reference_gbp": "15.0326",
+            "raw_value": "18.69",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2433",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7254",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-04-17",
+            "reference_gbp": "15.7962",
+            "raw_value": "19.75",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2503",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9654",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-04-20",
+            "reference_gbp": "13.9248",
+            "raw_value": "17.36",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2467",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.3772",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-04-21",
+            "reference_gbp": "7.4352",
+            "raw_value": "9.12",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2266",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "47.3372",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-04-22",
+            "reference_gbp": "11.1661",
+            "raw_value": "13.77",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2332",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "48.5100",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2020-04-15",
+            "action": "Hypothetical Buy",
+            "units": "0.3147"
+          },
+          {
+            "date": "2020-04-16",
+            "action": "Hypothetical Hold",
+            "units": "0.3147"
+          },
+          {
+            "date": "2020-04-17",
+            "action": "Hypothetical Hold",
+            "units": "0.3147"
+          },
+          {
+            "date": "2020-04-20",
+            "action": "Hypothetical Hold",
+            "units": "0.3147"
+          },
+          {
+            "date": "2020-04-21",
+            "action": "Hypothetical Hold",
+            "units": "0.3147"
+          },
+          {
+            "date": "2020-04-22",
+            "action": "Hypothetical Sell",
+            "units": "0.3147"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0212",
+        "net_allocation_return_percent": "-29.8004",
+        "gross_return_percent": "-29.3774",
+        "final_cash_gbp": "48.5100",
+        "max_observed_drawdown_percent": "5.3256",
+        "net_outcome": "negative",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "stressed_cost_outcome": {
+        "event_id": "opec-2020-april",
+        "market": "brent",
+        "rule": "reversal_down",
+        "horizon": 1,
+        "cost": "stressed",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2020-04-15",
+        "exit_date": "2020-04-16",
+        "net_pnl_gbp": "-0.4636",
+        "gross_pnl_gbp": "-0.2461",
+        "path": [
+          {
+            "date": "2020-04-15",
+            "reference_gbp": "15.8109",
+            "raw_value": "19.80",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2523",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7713",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2020-04-16",
+            "reference_gbp": "15.0326",
+            "raw_value": "18.69",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2433",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.5364",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2020-04-15",
+            "action": "Hypothetical Buy",
+            "units": "0.3027"
+          },
+          {
+            "date": "2020-04-16",
+            "action": "Hypothetical Sell",
+            "units": "0.3027"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.10",
+        "total_friction_gbp": "0.2175",
+        "net_allocation_return_percent": "-9.2719",
+        "gross_return_percent": "-4.9228",
+        "final_cash_gbp": "49.5364",
+        "max_observed_drawdown_percent": "0.9272",
+        "net_outcome": "negative",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.10",
+          "spread_bps": "30",
+          "slippage_bps_per_leg": "15"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      }
+    },
+    {
+      "prediction": {
+        "event_id": "laura-2020-louisiana",
+        "title": "Laura landfall near Cameron",
+        "market": "brent",
+        "cohort": "brent/weather",
+        "source_id": "oil-laura-2020-louisiana-source-1",
+        "simulated_decision_bound": "2020-08-27T06:00:00.000001Z",
+        "research_action": "Watch",
+        "hypothetical_intent": "Conditional hypothetical Buy",
+        "validated_action": "No Action",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "insufficient_or_nonrobust_training_validation"
+      },
+      "outcome": {
+        "event_id": "laura-2020-louisiana",
+        "market": "brent",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "cost": "declared",
+        "status": "unsettled_reference_path",
+        "reason": "missing_exact_date_GBP_FX",
+        "entry_date": "2020-08-28",
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [
+          {
+            "date": "2020-08-28",
+            "reference_gbp": "33.8955",
+            "raw_value": "45.22",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3341",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2020-09-01",
+            "reference_gbp": "34.0787",
+            "raw_value": "45.72",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3416",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9969",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-02",
+            "reference_gbp": "32.0691",
+            "raw_value": "42.70",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3315",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7022",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-03",
+            "reference_gbp": "32.2099",
+            "raw_value": "42.72",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3263",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7229",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-04",
+            "reference_gbp": "31.0658",
+            "raw_value": "41.10",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3230",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.5551",
+            "hypothetical_action": "Hypothetical Hold"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2020-08-28",
+            "action": "Hypothetical Buy",
+            "units": "0.1468"
+          },
+          {
+            "date": "2020-09-01",
+            "action": "Hypothetical Hold",
+            "units": "0.1468"
+          },
+          {
+            "date": "2020-09-02",
+            "action": "Hypothetical Hold",
+            "units": "0.1468"
+          },
+          {
+            "date": "2020-09-03",
+            "action": "Hypothetical Hold",
+            "units": "0.1468"
+          },
+          {
+            "date": "2020-09-04",
+            "action": "Hypothetical Hold",
+            "units": "0.1468"
+          }
+        ],
+        "missing_date": "2020-09-07"
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "laura-2020-louisiana",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "unsettled_reference_path",
+        "reason": "missing_exact_date_GBP_FX",
+        "entry_date": "2020-08-28",
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [
+          {
+            "date": "2020-08-28",
+            "reference_gbp": "33.8955",
+            "raw_value": "45.22",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3341",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2020-09-01",
+            "reference_gbp": "34.0787",
+            "raw_value": "45.72",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3416",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9969",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-02",
+            "reference_gbp": "32.0691",
+            "raw_value": "42.70",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3315",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7022",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-03",
+            "reference_gbp": "32.2099",
+            "raw_value": "42.72",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3263",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7229",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-04",
+            "reference_gbp": "31.0658",
+            "raw_value": "41.10",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3230",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.5551",
+            "hypothetical_action": "Hypothetical Hold"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2020-08-28",
+            "action": "Hypothetical Buy",
+            "units": "0.1468"
+          },
+          {
+            "date": "2020-09-01",
+            "action": "Hypothetical Hold",
+            "units": "0.1468"
+          },
+          {
+            "date": "2020-09-02",
+            "action": "Hypothetical Hold",
+            "units": "0.1468"
+          },
+          {
+            "date": "2020-09-03",
+            "action": "Hypothetical Hold",
+            "units": "0.1468"
+          },
+          {
+            "date": "2020-09-04",
+            "action": "Hypothetical Hold",
+            "units": "0.1468"
+          }
+        ],
+        "missing_date": "2020-09-07"
+      },
+      "stressed_cost_outcome": {
+        "event_id": "laura-2020-louisiana",
+        "market": "brent",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "cost": "stressed",
+        "status": "unsettled_reference_path",
+        "reason": "missing_exact_date_GBP_FX",
+        "entry_date": "2020-08-28",
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [
+          {
+            "date": "2020-08-28",
+            "reference_gbp": "33.8955",
+            "raw_value": "45.22",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3341",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7713",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2020-09-01",
+            "reference_gbp": "34.0787",
+            "raw_value": "45.72",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3416",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7971",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-02",
+            "reference_gbp": "32.0691",
+            "raw_value": "42.70",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3315",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.5142",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-03",
+            "reference_gbp": "32.2099",
+            "raw_value": "42.72",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3263",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.5340",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-04",
+            "reference_gbp": "31.0658",
+            "raw_value": "41.10",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3230",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.3730",
+            "hypothetical_action": "Hypothetical Hold"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2020-08-28",
+            "action": "Hypothetical Buy",
+            "units": "0.1412"
+          },
+          {
+            "date": "2020-09-01",
+            "action": "Hypothetical Hold",
+            "units": "0.1412"
+          },
+          {
+            "date": "2020-09-02",
+            "action": "Hypothetical Hold",
+            "units": "0.1412"
+          },
+          {
+            "date": "2020-09-03",
+            "action": "Hypothetical Hold",
+            "units": "0.1412"
+          },
+          {
+            "date": "2020-09-04",
+            "action": "Hypothetical Hold",
+            "units": "0.1412"
+          }
+        ],
+        "missing_date": "2020-09-07"
+      }
+    },
+    {
+      "prediction": {
+        "event_id": "zeta-2020-louisiana",
+        "title": "Zeta landfall near Cocodrie",
+        "market": "brent",
+        "cohort": "brent/weather",
+        "source_id": "oil-zeta-2020-louisiana-nhc",
+        "simulated_decision_bound": "2020-10-28T21:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "insufficient_or_nonrobust_training_validation"
+      },
+      "outcome": {
+        "event_id": "zeta-2020-louisiana",
+        "market": "brent",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "locked_rule_does_not_trigger_or_no_model",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "zeta-2020-louisiana",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2020-10-29",
+        "exit_date": "2020-11-05",
+        "net_pnl_gbp": "0.2732",
+        "gross_pnl_gbp": "0.3050",
+        "path": [
+          {
+            "date": "2020-10-29",
+            "reference_gbp": "28.3631",
+            "raw_value": "36.56",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2890",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2020-10-30",
+            "reference_gbp": "28.0909",
+            "raw_value": "36.33",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2933",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9224",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-11-02",
+            "reference_gbp": "29.2777",
+            "raw_value": "37.78",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2904",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.1303",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-11-03",
+            "reference_gbp": "29.2490",
+            "raw_value": "38.17",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3050",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.1253",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-11-04",
+            "reference_gbp": "30.4738",
+            "raw_value": "39.68",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3021",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.3399",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-11-05",
+            "reference_gbp": "30.0930",
+            "raw_value": "39.47",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3116",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.2732",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2020-10-29",
+            "action": "Hypothetical Buy",
+            "units": "0.1754"
+          },
+          {
+            "date": "2020-10-30",
+            "action": "Hypothetical Hold",
+            "units": "0.1754"
+          },
+          {
+            "date": "2020-11-02",
+            "action": "Hypothetical Hold",
+            "units": "0.1754"
+          },
+          {
+            "date": "2020-11-03",
+            "action": "Hypothetical Hold",
+            "units": "0.1754"
+          },
+          {
+            "date": "2020-11-04",
+            "action": "Hypothetical Hold",
+            "units": "0.1754"
+          },
+          {
+            "date": "2020-11-05",
+            "action": "Hypothetical Sell",
+            "units": "0.1754"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0318",
+        "net_allocation_return_percent": "5.4637",
+        "gross_return_percent": "6.0993",
+        "final_cash_gbp": "50.2732",
+        "max_observed_drawdown_percent": "0.1553",
+        "net_outcome": "positive",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "stressed_cost_outcome": {
+        "event_id": "zeta-2020-louisiana",
+        "market": "brent",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "cost": "stressed",
+        "status": "not_entered",
+        "reason": "locked_rule_does_not_trigger_or_no_model",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      }
+    },
+    {
+      "prediction": {
+        "event_id": "pfizer-2020-interim",
+        "title": "Pfizer\u2013BioNTech interim Phase 3 results",
+        "market": "PFE",
+        "cohort": "PFE/drug_development",
+        "source_id": "pfe-interim-2020",
+        "simulated_decision_bound": "2020-11-11T00:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "pfizer-2020-interim",
+        "market": "PFE",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "no_later_numeric_price",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "stressed_cost_outcome": null
+    },
+    {
+      "prediction": {
+        "event_id": "opec-2021-july",
+        "title": "OPEC+ agrees monthly production increases",
+        "market": "brent",
+        "cohort": "brent/production_policy",
+        "source_id": "oil-opec-2021-july-source-1",
+        "simulated_decision_bound": "2021-07-20T00:00:00.000001Z",
+        "research_action": "Watch",
+        "hypothetical_intent": "Conditional hypothetical Buy",
+        "validated_action": "No Action",
+        "rule": "reversal_down",
+        "horizon": 1,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "insufficient_or_nonrobust_training_validation"
+      },
+      "outcome": {
+        "event_id": "opec-2021-july",
+        "market": "brent",
+        "rule": "reversal_down",
+        "horizon": 1,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2021-07-21",
+        "exit_date": "2021-07-22",
+        "net_pnl_gbp": "0.0669",
+        "gross_pnl_gbp": "0.0974",
+        "path": [
+          {
+            "date": "2021-07-21",
+            "reference_gbp": "52.9682",
+            "raw_value": "72.54",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3695",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2021-07-22",
+            "reference_gbp": "54.0000",
+            "raw_value": "74.25",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3750",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.0669",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2021-07-21",
+            "action": "Hypothetical Buy",
+            "units": "0.0939"
+          },
+          {
+            "date": "2021-07-22",
+            "action": "Hypothetical Sell",
+            "units": "0.0939"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0305",
+        "net_allocation_return_percent": "1.3372",
+        "gross_return_percent": "1.9479",
+        "final_cash_gbp": "50.0669",
+        "max_observed_drawdown_percent": "0.0599",
+        "net_outcome": "positive",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "opec-2021-july",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2021-07-21",
+        "exit_date": "2021-07-28",
+        "net_pnl_gbp": "0.0747",
+        "gross_pnl_gbp": "0.1053",
+        "path": [
+          {
+            "date": "2021-07-21",
+            "reference_gbp": "52.9682",
+            "raw_value": "72.54",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3695",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2021-07-22",
+            "reference_gbp": "54.0000",
+            "raw_value": "74.25",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3750",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.0669",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2021-07-23",
+            "reference_gbp": "54.4476",
+            "raw_value": "74.86",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3749",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.1089",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2021-07-26",
+            "reference_gbp": "54.0820",
+            "raw_value": "74.79",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3829",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.0746",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2021-07-27",
+            "reference_gbp": "53.9254",
+            "raw_value": "74.87",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3884",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.0599",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2021-07-28",
+            "reference_gbp": "54.0838",
+            "raw_value": "75.09",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3884",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.0747",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2021-07-21",
+            "action": "Hypothetical Buy",
+            "units": "0.0939"
+          },
+          {
+            "date": "2021-07-22",
+            "action": "Hypothetical Hold",
+            "units": "0.0939"
+          },
+          {
+            "date": "2021-07-23",
+            "action": "Hypothetical Hold",
+            "units": "0.0939"
+          },
+          {
+            "date": "2021-07-26",
+            "action": "Hypothetical Hold",
+            "units": "0.0939"
+          },
+          {
+            "date": "2021-07-27",
+            "action": "Hypothetical Hold",
+            "units": "0.0939"
+          },
+          {
+            "date": "2021-07-28",
+            "action": "Hypothetical Sell",
+            "units": "0.0939"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0306",
+        "net_allocation_return_percent": "1.4946",
+        "gross_return_percent": "2.1062",
+        "final_cash_gbp": "50.0747",
+        "max_observed_drawdown_percent": "0.0978",
+        "net_outcome": "positive",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "stressed_cost_outcome": {
+        "event_id": "opec-2021-july",
+        "market": "brent",
+        "rule": "reversal_down",
+        "horizon": 1,
+        "cost": "stressed",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2021-07-21",
+        "exit_date": "2021-07-22",
+        "net_pnl_gbp": "-0.1358",
+        "gross_pnl_gbp": "0.0974",
+        "path": [
+          {
+            "date": "2021-07-21",
+            "reference_gbp": "52.9682",
+            "raw_value": "72.54",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3695",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7713",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2021-07-22",
+            "reference_gbp": "54.0000",
+            "raw_value": "74.25",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3750",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.8642",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2021-07-21",
+            "action": "Hypothetical Buy",
+            "units": "0.0903"
+          },
+          {
+            "date": "2021-07-22",
+            "action": "Hypothetical Sell",
+            "units": "0.0903"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.10",
+        "total_friction_gbp": "0.2332",
+        "net_allocation_return_percent": "-2.7155",
+        "gross_return_percent": "1.9479",
+        "final_cash_gbp": "49.8642",
+        "max_observed_drawdown_percent": "0.4574",
+        "net_outcome": "negative",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.10",
+          "spread_bps": "30",
+          "slippage_bps_per_leg": "15"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      }
+    },
+    {
+      "prediction": {
+        "event_id": "ida-2021-louisiana",
+        "title": "Ida landfall near Port Fourchon",
+        "market": "brent",
+        "cohort": "brent/weather",
+        "source_id": "oil-ida-2021-louisiana-source-1",
+        "simulated_decision_bound": "2021-08-29T16:55:00.000001Z",
+        "research_action": "Watch",
+        "hypothetical_intent": "Conditional hypothetical Buy",
+        "validated_action": "No Action",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "insufficient_or_nonrobust_training_validation"
+      },
+      "outcome": {
+        "event_id": "ida-2021-louisiana",
+        "market": "brent",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "cost": "declared",
+        "status": "unsettled_reference_path",
+        "reason": "missing_exact_date_GBP_FX",
+        "entry_date": "2021-08-31",
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [
+          {
+            "date": "2021-08-31",
+            "reference_gbp": "53.4298",
+            "raw_value": "73.45",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3747",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2021-09-01",
+            "reference_gbp": "52.2045",
+            "raw_value": "71.99",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3790",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.8561",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2021-09-02",
+            "reference_gbp": "53.2080",
+            "raw_value": "73.56",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3825",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9494",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2021-09-03",
+            "reference_gbp": "52.7125",
+            "raw_value": "73.07",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3862",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9033",
+            "hypothetical_action": "Hypothetical Hold"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2021-08-31",
+            "action": "Hypothetical Buy",
+            "units": "0.0931"
+          },
+          {
+            "date": "2021-09-01",
+            "action": "Hypothetical Hold",
+            "units": "0.0931"
+          },
+          {
+            "date": "2021-09-02",
+            "action": "Hypothetical Hold",
+            "units": "0.0931"
+          },
+          {
+            "date": "2021-09-03",
+            "action": "Hypothetical Hold",
+            "units": "0.0931"
+          }
+        ],
+        "missing_date": "2021-09-06"
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "ida-2021-louisiana",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "unsettled_reference_path",
+        "reason": "missing_exact_date_GBP_FX",
+        "entry_date": "2021-08-31",
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [
+          {
+            "date": "2021-08-31",
+            "reference_gbp": "53.4298",
+            "raw_value": "73.45",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3747",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2021-09-01",
+            "reference_gbp": "52.2045",
+            "raw_value": "71.99",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3790",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.8561",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2021-09-02",
+            "reference_gbp": "53.2080",
+            "raw_value": "73.56",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3825",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9494",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2021-09-03",
+            "reference_gbp": "52.7125",
+            "raw_value": "73.07",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3862",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9033",
+            "hypothetical_action": "Hypothetical Hold"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2021-08-31",
+            "action": "Hypothetical Buy",
+            "units": "0.0931"
+          },
+          {
+            "date": "2021-09-01",
+            "action": "Hypothetical Hold",
+            "units": "0.0931"
+          },
+          {
+            "date": "2021-09-02",
+            "action": "Hypothetical Hold",
+            "units": "0.0931"
+          },
+          {
+            "date": "2021-09-03",
+            "action": "Hypothetical Hold",
+            "units": "0.0931"
+          }
+        ],
+        "missing_date": "2021-09-06"
+      },
+      "stressed_cost_outcome": {
+        "event_id": "ida-2021-louisiana",
+        "market": "brent",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "cost": "stressed",
+        "status": "unsettled_reference_path",
+        "reason": "missing_exact_date_GBP_FX",
+        "entry_date": "2021-08-31",
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [
+          {
+            "date": "2021-08-31",
+            "reference_gbp": "53.4298",
+            "raw_value": "73.45",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3747",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7713",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2021-09-01",
+            "reference_gbp": "52.2045",
+            "raw_value": "71.99",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3790",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.6619",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2021-09-02",
+            "reference_gbp": "53.2080",
+            "raw_value": "73.56",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3825",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7515",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2021-09-03",
+            "reference_gbp": "52.7125",
+            "raw_value": "73.07",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3862",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7072",
+            "hypothetical_action": "Hypothetical Hold"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2021-08-31",
+            "action": "Hypothetical Buy",
+            "units": "0.0896"
+          },
+          {
+            "date": "2021-09-01",
+            "action": "Hypothetical Hold",
+            "units": "0.0896"
+          },
+          {
+            "date": "2021-09-02",
+            "action": "Hypothetical Hold",
+            "units": "0.0896"
+          },
+          {
+            "date": "2021-09-03",
+            "action": "Hypothetical Hold",
+            "units": "0.0896"
+          }
+        ],
+        "missing_date": "2021-09-06"
+      }
+    },
+    {
+      "prediction": {
+        "event_id": "russia-2022-invasion",
+        "title": "Russia launches a full-scale invasion of Ukraine",
+        "market": "brent",
+        "cohort": "brent/conflict",
+        "source_id": "oil-russia-2022-invasion-source-1",
+        "simulated_decision_bound": "2022-02-26T00:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "russia-2022-invasion",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2022-02-28",
+        "exit_date": "2022-03-07",
+        "net_pnl_gbp": "1.3650",
+        "gross_pnl_gbp": "1.4033",
+        "path": [
+          {
+            "date": "2022-02-28",
+            "reference_gbp": "76.8165",
+            "raw_value": "103.08",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3419",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2022-03-01",
+            "reference_gbp": "83.2933",
+            "raw_value": "110.93",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3318",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.3891",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-03-02",
+            "reference_gbp": "88.9936",
+            "raw_value": "118.94",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3365",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.7579",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-03-03",
+            "reference_gbp": "86.5676",
+            "raw_value": "115.36",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3326",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.6010",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-03-04",
+            "reference_gbp": "93.7339",
+            "raw_value": "123.86",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3214",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "51.0646",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-03-07",
+            "reference_gbp": "98.3759",
+            "raw_value": "129.02",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3115",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "51.3650",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2022-02-28",
+            "action": "Hypothetical Buy",
+            "units": "0.0648"
+          },
+          {
+            "date": "2022-03-01",
+            "action": "Hypothetical Hold",
+            "units": "0.0648"
+          },
+          {
+            "date": "2022-03-02",
+            "action": "Hypothetical Hold",
+            "units": "0.0648"
+          },
+          {
+            "date": "2022-03-03",
+            "action": "Hypothetical Hold",
+            "units": "0.0648"
+          },
+          {
+            "date": "2022-03-04",
+            "action": "Hypothetical Hold",
+            "units": "0.0648"
+          },
+          {
+            "date": "2022-03-07",
+            "action": "Hypothetical Sell",
+            "units": "0.0648"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0384",
+        "net_allocation_return_percent": "27.2991",
+        "gross_return_percent": "28.0662",
+        "final_cash_gbp": "51.3650",
+        "max_observed_drawdown_percent": "0.3092",
+        "net_outcome": "positive",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "stressed_cost_outcome": null
+    },
+    {
+      "prediction": {
+        "event_id": "iea-2022-emergency-release",
+        "title": "IEA members announce an emergency stock release",
+        "market": "brent",
+        "cohort": "brent/strategic_stocks",
+        "source_id": "oil-iea-2022-emergency-release-source-1",
+        "simulated_decision_bound": "2022-03-03T00:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "iea-2022-emergency-release",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2022-03-04",
+        "exit_date": "2022-03-11",
+        "net_pnl_gbp": "-0.2059",
+        "gross_pnl_gbp": "-0.1770",
+        "path": [
+          {
+            "date": "2022-03-04",
+            "reference_gbp": "93.7339",
+            "raw_value": "123.86",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3214",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2022-03-07",
+            "reference_gbp": "98.3759",
+            "raw_value": "129.02",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3115",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.2162",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-03-08",
+            "reference_gbp": "101.6564",
+            "raw_value": "133.18",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3101",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.3901",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-03-09",
+            "reference_gbp": "88.5866",
+            "raw_value": "116.58",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3160",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.6971",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-03-10",
+            "reference_gbp": "87.3818",
+            "raw_value": "114.54",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3108",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.6332",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-03-11",
+            "reference_gbp": "90.4157",
+            "raw_value": "118.11",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3063",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7941",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2022-03-04",
+            "action": "Hypothetical Buy",
+            "units": "0.0531"
+          },
+          {
+            "date": "2022-03-07",
+            "action": "Hypothetical Hold",
+            "units": "0.0531"
+          },
+          {
+            "date": "2022-03-08",
+            "action": "Hypothetical Hold",
+            "units": "0.0531"
+          },
+          {
+            "date": "2022-03-09",
+            "action": "Hypothetical Hold",
+            "units": "0.0531"
+          },
+          {
+            "date": "2022-03-10",
+            "action": "Hypothetical Hold",
+            "units": "0.0531"
+          },
+          {
+            "date": "2022-03-11",
+            "action": "Hypothetical Sell",
+            "units": "0.0531"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0289",
+        "net_allocation_return_percent": "-4.1179",
+        "gross_return_percent": "-3.5401",
+        "final_cash_gbp": "49.7941",
+        "max_observed_drawdown_percent": "1.5020",
+        "net_outcome": "negative",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "stressed_cost_outcome": null
+    },
+    {
+      "prediction": {
+        "event_id": "eu-2022-oil-embargo",
+        "title": "EU adopts sixth sanctions package including Russian oil restrictions",
+        "market": "brent",
+        "cohort": "brent/sanctions",
+        "source_id": "oil-eu-2022-oil-embargo-source-1",
+        "simulated_decision_bound": "2022-06-05T00:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": "reversal_down",
+        "horizon": 20,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "insufficient_or_nonrobust_training_validation"
+      },
+      "outcome": {
+        "event_id": "eu-2022-oil-embargo",
+        "market": "brent",
+        "rule": "reversal_down",
+        "horizon": 20,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "locked_rule_does_not_trigger_or_no_model",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "eu-2022-oil-embargo",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2022-06-06",
+        "exit_date": "2022-06-13",
+        "net_pnl_gbp": "0.2642",
+        "gross_pnl_gbp": "0.2959",
+        "path": [
+          {
+            "date": "2022-06-06",
+            "reference_gbp": "99.6413",
+            "raw_value": "124.99",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2544",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2022-06-07",
+            "reference_gbp": "100.7543",
+            "raw_value": "126.89",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2594",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.0256",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-06-08",
+            "reference_gbp": "102.8908",
+            "raw_value": "129.20",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2557",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.1321",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-06-09",
+            "reference_gbp": "102.6856",
+            "raw_value": "128.47",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2511",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.1219",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-06-10",
+            "reference_gbp": "103.3577",
+            "raw_value": "127.44",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2330",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.1554",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-06-13",
+            "reference_gbp": "105.5382",
+            "raw_value": "128.44",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2170",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.2642",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2022-06-06",
+            "action": "Hypothetical Buy",
+            "units": "0.0499"
+          },
+          {
+            "date": "2022-06-07",
+            "action": "Hypothetical Hold",
+            "units": "0.0499"
+          },
+          {
+            "date": "2022-06-08",
+            "action": "Hypothetical Hold",
+            "units": "0.0499"
+          },
+          {
+            "date": "2022-06-09",
+            "action": "Hypothetical Hold",
+            "units": "0.0499"
+          },
+          {
+            "date": "2022-06-10",
+            "action": "Hypothetical Hold",
+            "units": "0.0499"
+          },
+          {
+            "date": "2022-06-13",
+            "action": "Hypothetical Sell",
+            "units": "0.0499"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0317",
+        "net_allocation_return_percent": "5.2837",
+        "gross_return_percent": "5.9182",
+        "final_cash_gbp": "50.2642",
+        "max_observed_drawdown_percent": "0.0599",
+        "net_outcome": "positive",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "stressed_cost_outcome": {
+        "event_id": "eu-2022-oil-embargo",
+        "market": "brent",
+        "rule": "reversal_down",
+        "horizon": 20,
+        "cost": "stressed",
+        "status": "not_entered",
+        "reason": "locked_rule_does_not_trigger_or_no_model",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      }
+    },
+    {
+      "prediction": {
+        "event_id": "fed-2022-june-hike",
+        "title": "Fed June 2022 75 bp increase",
+        "market": "nasdaq_composite",
+        "cohort": "nasdaq_composite/monetary_policy",
+        "source_id": "fed-hike-jun22",
+        "simulated_decision_bound": "2022-06-15T18:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "fed-2022-june-hike",
+        "market": "nasdaq_composite",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "no_later_numeric_price",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "stressed_cost_outcome": null
+    },
+    {
+      "prediction": {
+        "event_id": "opec-2022-october",
+        "title": "OPEC+ agrees a lower required production level",
+        "market": "brent",
+        "cohort": "brent/production_policy",
+        "source_id": "oil-opec-2022-october-source-1",
+        "simulated_decision_bound": "2022-10-07T00:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": "reversal_down",
+        "horizon": 1,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "insufficient_or_nonrobust_training_validation"
+      },
+      "outcome": {
+        "event_id": "opec-2022-october",
+        "market": "brent",
+        "rule": "reversal_down",
+        "horizon": 1,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "locked_rule_does_not_trigger_or_no_model",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "opec-2022-october",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "missing_exact_date_GBP_FX",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": [],
+        "missing_date": "2022-10-10",
+        "attempted_entry_date": "2022-10-10"
+      },
+      "stressed_cost_outcome": {
+        "event_id": "opec-2022-october",
+        "market": "brent",
+        "rule": "reversal_down",
+        "horizon": 1,
+        "cost": "stressed",
+        "status": "not_entered",
+        "reason": "locked_rule_does_not_trigger_or_no_model",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      }
+    },
+    {
+      "prediction": {
+        "event_id": "g7-2022-oil-cap",
+        "title": "Coalition announces a Russian crude price cap",
+        "market": "brent",
+        "cohort": "brent/sanctions",
+        "source_id": "oil-g7-2022-oil-cap-source-1",
+        "simulated_decision_bound": "2022-12-04T00:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": "reversal_down",
+        "horizon": 20,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "insufficient_or_nonrobust_training_validation"
+      },
+      "outcome": {
+        "event_id": "g7-2022-oil-cap",
+        "market": "brent",
+        "rule": "reversal_down",
+        "horizon": 20,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "locked_rule_does_not_trigger_or_no_model",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "g7-2022-oil-cap",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2022-12-05",
+        "exit_date": "2022-12-12",
+        "net_pnl_gbp": "-0.3934",
+        "gross_pnl_gbp": "-0.3657",
+        "path": [
+          {
+            "date": "2022-12-05",
+            "reference_gbp": "68.5019",
+            "raw_value": "83.36",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2169",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2022-12-06",
+            "reference_gbp": "65.4975",
+            "raw_value": "79.92",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2202",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7521",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-12-07",
+            "reference_gbp": "63.2360",
+            "raw_value": "77.11",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2194",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.5880",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-12-08",
+            "reference_gbp": "62.1332",
+            "raw_value": "76.02",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2235",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.5080",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-12-09",
+            "reference_gbp": "62.0340",
+            "raw_value": "76.37",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2311",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.5008",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2022-12-12",
+            "reference_gbp": "63.4921",
+            "raw_value": "78.00",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2285",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.6066",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2022-12-05",
+            "action": "Hypothetical Buy",
+            "units": "0.0726"
+          },
+          {
+            "date": "2022-12-06",
+            "action": "Hypothetical Hold",
+            "units": "0.0726"
+          },
+          {
+            "date": "2022-12-07",
+            "action": "Hypothetical Hold",
+            "units": "0.0726"
+          },
+          {
+            "date": "2022-12-08",
+            "action": "Hypothetical Hold",
+            "units": "0.0726"
+          },
+          {
+            "date": "2022-12-09",
+            "action": "Hypothetical Hold",
+            "units": "0.0726"
+          },
+          {
+            "date": "2022-12-12",
+            "action": "Hypothetical Sell",
+            "units": "0.0726"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0278",
+        "net_allocation_return_percent": "-7.8687",
+        "gross_return_percent": "-7.3135",
+        "final_cash_gbp": "49.6066",
+        "max_observed_drawdown_percent": "0.9984",
+        "net_outcome": "negative",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "stressed_cost_outcome": {
+        "event_id": "g7-2022-oil-cap",
+        "market": "brent",
+        "rule": "reversal_down",
+        "horizon": 20,
+        "cost": "stressed",
+        "status": "not_entered",
+        "reason": "locked_rule_does_not_trigger_or_no_model",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      }
+    },
+    {
+      "prediction": {
+        "event_id": "nvidia-2023-q1-outlook",
+        "title": "Nvidia Q1 FY2024 results and revenue outlook",
+        "market": "NVDA",
+        "cohort": "NVDA/earnings",
+        "source_id": "nvda-q1-2023",
+        "simulated_decision_bound": "2023-05-26T00:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "nvidia-2023-q1-outlook",
+        "market": "NVDA",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "no_later_numeric_price",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "stressed_cost_outcome": null
+    },
+    {
+      "prediction": {
+        "event_id": "fed-2023-june-hold",
+        "title": "Fed June 2023 unchanged target range",
+        "market": "nasdaq_composite",
+        "cohort": "nasdaq_composite/monetary_policy",
+        "source_id": "fed-hold-jun23",
+        "simulated_decision_bound": "2023-06-14T18:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "fed-2023-june-hold",
+        "market": "nasdaq_composite",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "no_later_numeric_price",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "stressed_cost_outcome": null
+    },
+    {
+      "prediction": {
+        "event_id": "nvidia-2023-q2-outlook",
+        "title": "Nvidia Q2 FY2024 results and revenue outlook",
+        "market": "NVDA",
+        "cohort": "NVDA/earnings",
+        "source_id": "nvda-q2-2023",
+        "simulated_decision_bound": "2023-08-25T00:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "nvidia-2023-q2-outlook",
+        "market": "NVDA",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "no_later_numeric_price",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "stressed_cost_outcome": null
+    },
+    {
+      "prediction": {
+        "event_id": "israel-2023-october",
+        "title": "Hamas-led attacks on Israel",
+        "market": "brent",
+        "cohort": "brent/conflict",
+        "source_id": "oil-israel-2023-october-source-1",
+        "simulated_decision_bound": "2023-10-09T00:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "israel-2023-october",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2023-10-10",
+        "exit_date": "2023-10-17",
+        "net_pnl_gbp": "0.1038",
+        "gross_pnl_gbp": "0.1346",
+        "path": [
+          {
+            "date": "2023-10-10",
+            "reference_gbp": "73.8118",
+            "raw_value": "90.70",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2288",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2023-10-11",
+            "reference_gbp": "71.1801",
+            "raw_value": "87.58",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2304",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7928",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2023-10-12",
+            "reference_gbp": "72.3760",
+            "raw_value": "88.40",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2214",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.8734",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2023-10-13",
+            "reference_gbp": "77.7082",
+            "raw_value": "94.33",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2139",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.2324",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2023-10-16",
+            "reference_gbp": "74.5942",
+            "raw_value": "90.99",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2198",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.0227",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2023-10-17",
+            "reference_gbp": "75.7988",
+            "raw_value": "92.52",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2206",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.1038",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2023-10-10",
+            "action": "Hypothetical Buy",
+            "units": "0.0674"
+          },
+          {
+            "date": "2023-10-11",
+            "action": "Hypothetical Hold",
+            "units": "0.0674"
+          },
+          {
+            "date": "2023-10-12",
+            "action": "Hypothetical Hold",
+            "units": "0.0674"
+          },
+          {
+            "date": "2023-10-13",
+            "action": "Hypothetical Hold",
+            "units": "0.0674"
+          },
+          {
+            "date": "2023-10-16",
+            "action": "Hypothetical Hold",
+            "units": "0.0674"
+          },
+          {
+            "date": "2023-10-17",
+            "action": "Hypothetical Sell",
+            "units": "0.0674"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0308",
+        "net_allocation_return_percent": "2.0768",
+        "gross_return_percent": "2.6919",
+        "final_cash_gbp": "50.1038",
+        "max_observed_drawdown_percent": "0.4174",
+        "net_outcome": "positive",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "stressed_cost_outcome": null
+    },
+    {
+      "prediction": {
+        "event_id": "nvidia-2024-q4-outlook",
+        "title": "Nvidia Q4 FY2024 results and revenue outlook",
+        "market": "NVDA",
+        "cohort": "NVDA/earnings",
+        "source_id": "nvda-q4-2024",
+        "simulated_decision_bound": "2024-02-23T00:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "nvidia-2024-q4-outlook",
+        "market": "NVDA",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "no_later_numeric_price",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "stressed_cost_outcome": null
+    },
+    {
+      "prediction": {
+        "event_id": "francine-2024-louisiana",
+        "title": "Francine landfall in Terrebonne Parish",
+        "market": "brent",
+        "cohort": "brent/weather",
+        "source_id": "oil-francine-2024-louisiana-nhc",
+        "simulated_decision_bound": "2024-09-11T22:00:00.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "insufficient_or_nonrobust_training_validation"
+      },
+      "outcome": {
+        "event_id": "francine-2024-louisiana",
+        "market": "brent",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "locked_rule_does_not_trigger_or_no_model",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "francine-2024-louisiana",
+        "market": "brent",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2024-09-12",
+        "exit_date": "2024-09-19",
+        "net_pnl_gbp": "0.0366",
+        "gross_pnl_gbp": "0.0669",
+        "path": [
+          {
+            "date": "2024-09-12",
+            "reference_gbp": "56.4253",
+            "raw_value": "73.81",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3081",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2024-09-13",
+            "reference_gbp": "56.0731",
+            "raw_value": "73.68",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3140",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9390",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2024-09-16",
+            "reference_gbp": "56.0218",
+            "raw_value": "73.96",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3202",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9345",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2024-09-17",
+            "reference_gbp": "56.6317",
+            "raw_value": "74.55",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3164",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9882",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2024-09-18",
+            "reference_gbp": "56.4588",
+            "raw_value": "74.52",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3199",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9730",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2024-09-19",
+            "reference_gbp": "57.1805",
+            "raw_value": "75.93",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3279",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "50.0366",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2024-09-12",
+            "action": "Hypothetical Buy",
+            "units": "0.0882"
+          },
+          {
+            "date": "2024-09-13",
+            "action": "Hypothetical Hold",
+            "units": "0.0882"
+          },
+          {
+            "date": "2024-09-16",
+            "action": "Hypothetical Hold",
+            "units": "0.0882"
+          },
+          {
+            "date": "2024-09-17",
+            "action": "Hypothetical Hold",
+            "units": "0.0882"
+          },
+          {
+            "date": "2024-09-18",
+            "action": "Hypothetical Hold",
+            "units": "0.0882"
+          },
+          {
+            "date": "2024-09-19",
+            "action": "Hypothetical Sell",
+            "units": "0.0882"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0304",
+        "net_allocation_return_percent": "0.7313",
+        "gross_return_percent": "1.3383",
+        "final_cash_gbp": "50.0366",
+        "max_observed_drawdown_percent": "0.1310",
+        "net_outcome": "positive",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      "stressed_cost_outcome": {
+        "event_id": "francine-2024-louisiana",
+        "market": "brent",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "cost": "stressed",
+        "status": "not_entered",
+        "reason": "locked_rule_does_not_trigger_or_no_model",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      }
+    },
+    {
+      "prediction": {
+        "event_id": "nvidia-2025-h20",
+        "title": "Nvidia publicly discloses H20 export licence requirement",
+        "market": "NVDA",
+        "cohort": "NVDA/corporate_event",
+        "source_id": "company-h20_release",
+        "simulated_decision_bound": "2025-04-15T21:22:59.000001Z",
+        "research_action": "No Action",
+        "hypothetical_intent": "No Action",
+        "validated_action": "No Action",
+        "rule": null,
+        "horizon": null,
+        "candidate_passed_validation": false,
+        "probability": null,
+        "probability_reason": "Sparse selected current-vintage samples do not support a calibrated forecast.",
+        "original_availability_verified": false,
+        "execution_supported": false,
+        "reason": "no_prior_same_market_category_model"
+      },
+      "outcome": {
+        "status": "no_candidate_forecast",
+        "reason": "no_prior_same_market_category_model",
+        "net_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "fixed_buy_and_hold_baseline": {
+        "event_id": "nvidia-2025-h20",
+        "market": "NVDA",
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "status": "not_entered",
+        "reason": "no_later_numeric_price",
+        "entry_date": null,
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [],
+        "actions": []
+      },
+      "stressed_cost_outcome": null
+    }
+  ],
+  "heldout_reference_portfolio": {
+    "unresolved_position": true,
+    "initial_cash_gbp": "50",
+    "final_cash_gbp": null,
+    "net_pnl_gbp": null,
+    "max_observed_drawdown_percent": "1.4342",
+    "trades": 1,
+    "excluded_overlap": 2,
+    "records": [
+      {
+        "event_id": "fed-2020-emergency-cut",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "who-2020-pandemic",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "opec-2020-april",
+        "market": "brent",
+        "rule": "reversal_down",
+        "horizon": 1,
+        "cost": "declared",
+        "status": "simulated_reference_path",
+        "reason": "fixed_horizon",
+        "entry_date": "2020-04-15",
+        "exit_date": "2020-04-16",
+        "net_pnl_gbp": "-0.2746",
+        "gross_pnl_gbp": "-0.2461",
+        "path": [
+          {
+            "date": "2020-04-15",
+            "reference_gbp": "15.8109",
+            "raw_value": "19.80",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2523",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.9700",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2020-04-16",
+            "reference_gbp": "15.0326",
+            "raw_value": "18.69",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.2433",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7254",
+            "hypothetical_action": "Hypothetical Sell"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2020-04-15",
+            "action": "Hypothetical Buy",
+            "units": "0.3147"
+          },
+          {
+            "date": "2020-04-16",
+            "action": "Hypothetical Sell",
+            "units": "0.3147"
+          }
+        ],
+        "allocation_gbp": "5",
+        "initial_cash_gbp": "50",
+        "reserved_exit_fee_gbp": "0.01",
+        "total_friction_gbp": "0.0285",
+        "net_allocation_return_percent": "-5.4923",
+        "gross_return_percent": "-4.9228",
+        "final_cash_gbp": "49.7254",
+        "max_observed_drawdown_percent": "0.5492",
+        "net_outcome": "negative",
+        "calendar": "numeric_reporting_observations_not_verified_exchange_sessions",
+        "skipped_unavailable_dates": [],
+        "costs": {
+          "fee_gbp_per_leg": "0.01",
+          "spread_bps": "10",
+          "slippage_bps_per_leg": "5"
+        },
+        "executable": false,
+        "point_in_time_safe": false
+      },
+      {
+        "event_id": "laura-2020-louisiana",
+        "market": "brent",
+        "rule": "momentum_up",
+        "horizon": 20,
+        "cost": "declared",
+        "status": "unsettled_reference_path",
+        "reason": "missing_exact_date_GBP_FX",
+        "entry_date": "2020-08-28",
+        "exit_date": null,
+        "net_pnl_gbp": null,
+        "gross_pnl_gbp": null,
+        "path": [
+          {
+            "date": "2020-08-28",
+            "reference_gbp": "33.8955",
+            "raw_value": "45.22",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3341",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.6955",
+            "hypothetical_action": "Hypothetical Buy"
+          },
+          {
+            "date": "2020-09-01",
+            "reference_gbp": "34.0787",
+            "raw_value": "45.72",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3416",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.7222",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-02",
+            "reference_gbp": "32.0691",
+            "raw_value": "42.70",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3315",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.4292",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-03",
+            "reference_gbp": "32.2099",
+            "raw_value": "42.72",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3263",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.4497",
+            "hypothetical_action": "Hypothetical Hold"
+          },
+          {
+            "date": "2020-09-04",
+            "reference_gbp": "31.0658",
+            "raw_value": "41.10",
+            "raw_unit": "USD per unit",
+            "fx_USD_per_GBP": "1.3230",
+            "source_id": "primary-brent",
+            "liquidation_equity_gbp": "49.2829",
+            "hypothetical_action": "Hypothetical Hold"
+          }
+        ],
+        "actions": [
+          {
+            "date": "2020-08-28",
+            "action": "Hypothetical Buy",
+            "units": "0.1460"
+          },
+          {
+            "date": "2020-09-01",
+            "action": "Hypothetical Hold",
+            "units": "0.1460"
+          },
+          {
+            "date": "2020-09-02",
+            "action": "Hypothetical Hold",
+            "units": "0.1460"
+          },
+          {
+            "date": "2020-09-03",
+            "action": "Hypothetical Hold",
+            "units": "0.1460"
+          },
+          {
+            "date": "2020-09-04",
+            "action": "Hypothetical Hold",
+            "units": "0.1460"
+          }
+        ],
+        "missing_date": "2020-09-07"
+      },
+      {
+        "event_id": "zeta-2020-louisiana",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "pfizer-2020-interim",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "opec-2021-july",
+        "status": "overlap_or_same_episode"
+      },
+      {
+        "event_id": "ida-2021-louisiana",
+        "status": "overlap_or_same_episode"
+      },
+      {
+        "event_id": "russia-2022-invasion",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "iea-2022-emergency-release",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "eu-2022-oil-embargo",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "fed-2022-june-hike",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "opec-2022-october",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "g7-2022-oil-cap",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "nvidia-2023-q1-outlook",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "fed-2023-june-hold",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "nvidia-2023-q2-outlook",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "israel-2023-october",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "nvidia-2024-q4-outlook",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "francine-2024-louisiana",
+        "status": "no_signal"
+      },
+      {
+        "event_id": "nvidia-2025-h20",
+        "status": "no_signal"
+      }
+    ],
+    "equity": [
+      {
+        "date": "2020-04-15",
+        "cash_if_liquidated_gbp": "49.9700"
+      },
+      {
+        "date": "2020-04-16",
+        "cash_if_liquidated_gbp": "49.7254"
+      },
+      {
+        "date": "2020-08-28",
+        "cash_if_liquidated_gbp": "49.6955"
+      },
+      {
+        "date": "2020-09-01",
+        "cash_if_liquidated_gbp": "49.7222"
+      },
+      {
+        "date": "2020-09-02",
+        "cash_if_liquidated_gbp": "49.4292"
+      },
+      {
+        "date": "2020-09-03",
+        "cash_if_liquidated_gbp": "49.4497"
+      },
+      {
+        "date": "2020-09-04",
+        "cash_if_liquidated_gbp": "49.2829"
+      }
+    ]
+  },
+  "summary": {
+    "retained_test_events": 21,
+    "research_watch": 4,
+    "research_no_action": 17,
+    "settled_diagnostic_hypotheses": 2,
+    "positive": 1,
+    "negative": 1,
+    "flat": 0,
+    "directional_false_positives": 1,
+    "missing_or_unsettled_signals": 2,
+    "conditional_hit_fraction": "0.5000",
+    "fixed_baseline_settled": 10,
+    "fixed_baseline_positive": 6,
+    "fixed_baseline_negative": 4,
+    "calibration": null,
+    "calibration_reason": "No probabilistic forecasts issued; a conditional historical hit fraction is not calibrated predictive accuracy.",
+    "qualified_candidate_cohorts": 0,
+    "supported_entries": 0,
+    "validated_buy": 0,
+    "validated_no_action": 21,
+    "repeatable_pattern_established": false,
+    "point_in_time_safe": false
+  },
+  "no_trade": {
+    "initial_cash_gbp": "50",
+    "final_cash_gbp": "50",
+    "net_pnl_gbp": "0"
+  },
+  "cost_GBP": "0.00",
+  "orders": 0,
+  "account_mutations": 0,
+  "limitations": [
+    "Training 2006\u20132015, validation 2016\u20132019, held-out 2020\u20132026; no test outcomes in fitting or validation selection.",
+    "One primary market per event, same-market/category cohorts, episode/45-day embargo and boundary maturity purge reduce leakage, not establish independence.",
+    "Rejected training leaders are diagnostic hypotheses, not qualified forecasts. No later winner can replace a locked rule.",
+    "Nine candidates per cohort create multiple-testing risk; this is not a prospective preregistration or proof the developers never saw historical outcomes.",
+    "Selected corpus has survivorship/selection/regime bias. Current-vintage source data lacks original news/price availability and executable products.",
+    "No calibrated probability, repeatable pattern, supported Buy, prospective paper fill or live order is established."
+  ]
+}

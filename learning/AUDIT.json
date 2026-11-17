@@ -1,0 +1,32 @@
+{
+  "scope": "Actual local retrospective research runs; no original historical prediction claim",
+  "initial": {
+    "predictions": {
+      "predictions": 21,
+      "new_predictions": 21,
+      "actual_recorded_at": "2026-11-17T23:17:23.186674Z",
+      "timestamp_scope": "Actual current research recording; historical decision bounds are simulated, not original predictions."
+    },
+    "settlements": {
+      "new_settlements": 21,
+      "actual_recorded_at": "2026-11-17T23:17:23.331945Z",
+      "revisions": "Changed later observations append a new settlement version; earlier predictions/outcomes never overwrite."
+    }
+  },
+  "repeat": {
+    "predictions": {
+      "predictions": 21,
+      "new_predictions": 0,
+      "actual_recorded_at": "2026-11-17T23:24:10.052587Z",
+      "timestamp_scope": "Actual current research recording; historical decision bounds are simulated, not original predictions."
+    },
+    "settlements": {
+      "new_settlements": 0,
+      "actual_recorded_at": "2026-11-17T23:24:10.189056Z",
+      "revisions": "Changed later observations append a new settlement version; earlier predictions/outcomes never overwrite."
+    }
+  },
+  "orders": 0,
+  "account_mutations": 0,
+  "cost_GBP": "0.00"
+}
