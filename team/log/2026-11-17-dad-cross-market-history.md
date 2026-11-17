@@ -2,7 +2,7 @@
 
 **Goal:** Implement Issue #38 on draft #36; broaden sourced historical comparisons across six market groups and coordinate evidence with LIVE-1 #37.
 
-**What changed:** Claimed `dad/hist-1-cross-market-analogues` at verified #36 head `2285073`. Issue #37 has no implementation PR yet. Keep a separate additive historical module and a stable read-only evidence contract; do not implement the live provider pilot here.
+**What changed:** [Draft PR #39](https://github.com/Facemankev/Oil-event-replay/pull/39) on `dad/hist-1-cross-market-analogues`, stacked on verified #36 head `2285073`. Issue #37 has no implementation PR yet. Keep a separate additive historical module and a stable read-only evidence contract; do not implement the live provider pilot here.
 
 **Unfinished:** Full Chromium/WebKit CI and later physical-device acceptance. Adjusted equity/contract-specific gold/index series and original news/price vintages remain missing; #37 retains the provider/source-access work.
 
@@ -25,5 +25,5 @@ are No Action; no supported paper entries or causal downstream claims.
 Local 93 Python / 112 JavaScript tests pass; all four parent reports and the pilot
 demo reproduce unchanged. Node's child-process integration needed the authorized
 execution mode; the initial sandbox EPERM was environmental, not a skipped test.
-All ten Chromium scripts and full GitHub/WebKit checks are being run. Three-step
+All ten Chromium scripts pass. Full GitHub/WebKit checks are in PR #39 Checks. Three-step
 UI, source snapshots, accounts and public previews remain unchanged. No merge.

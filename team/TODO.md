@@ -13,7 +13,6 @@ history).
 
 ## Doing
 
-- [ ] HIST-1: Sourced cross-market historical events, outcome-blind comparisons, coverage and as-of validation ([Issue #38](https://github.com/Facemankev/Oil-event-replay/issues/38)); coordinate read-only with LIVE-1 #37, on #36, same three-step UI, draft only — **Dad — Doing** — 2026-11-17
 
 
 
@@ -49,6 +48,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] HIST-1: Cross-market event library ([draft PR #39](https://github.com/Facemankev/Oil-event-replay/pull/39), on #36; [Issue #38](https://github.com/Facemankev/Oil-event-replay/issues/38)). 48 events / 81 source cards, 15,618 numeric oil/GBP observations and 11 separately reported reactions. Outcome-blind matches, as-of tests, immutable SQLite imports and read-only #37 handoff. All 48 No Action, no supported entry; original vintages and adjusted wider-asset series missing. Local 93 Python/112 JS and all ten Chromium scripts pass; full CI/WebKit in PR Checks. UI, data, accounts and previews preserved; no merge — **Dad** — 2026-11-17
 
 - [ ] EVT-2: Fresh-news receipt/revision journal, history/peer checks and local-card latency ([draft PR #36](https://github.com/Facemankev/Oil-event-replay/pull/36), on #34; [Issue #35](https://github.com/Facemankev/Oil-event-replay/issues/35)). Original Nvidia software feed: ten versions, no original publication clocks, all No Action; first HTTP-to-card 5.320 seconds, conditional 304/reanalysis 3.804 seconds. Financial-news/price sources blocked; no verified intraday prices or publication-to-useful-alert claim. Local 74 Python/109 JS and all Chromium pass; full CI/WebKit in PR Checks. UI, accounts, source snapshots and previews preserved. No review wait or merge — **Dad** — 2026-11-16
 
