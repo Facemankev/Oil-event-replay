@@ -1,0 +1,8 @@
+{
+  "matching/cohort-catalog.json": "ecd1d51c37378d116b658efe3610af76afa5c4005c4ebdf894d20e36bede6f63",
+  "analogues/events.json": "db0f89edaf5ce2b1dd5fd6fa5252bdb1572eebc64c420f2e902ef2964a731177",
+  "equities/history.json": "2fdfc82291cb555af01a7ac25a0eaee2d0328fdfe93a661b175a832eb1403b15",
+  "equities/sources.json": "5848cc5c0f080f43a68f87374d064e2d83d074c388c94cf2d254d3268180691b",
+  "verification/sources/manifest.json": "386a7a499c0df20aa13b990fd670dfa82f83d34cbac481ff2b409a0c2b190ffa",
+  "event_history/additions.json": "ac0784a95b71e94bfc8cbec023c744000d49035779123445f87a76f9b6289128"
+}
