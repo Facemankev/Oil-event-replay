@@ -1,0 +1,54 @@
+{
+  "version": "SIM-1/1",
+  "kind": "retrospective_hypothesis_only",
+  "initial_cash_gbp": "50",
+  "allocation_gbp": "5",
+  "max_allocation_fraction": "0.10",
+  "risk_review_loss_fraction": "0.10",
+  "horizons": [
+    1,
+    5,
+    20
+  ],
+  "rules": [
+    "event_long",
+    "momentum_up",
+    "reversal_down"
+  ],
+  "context_observations": 6,
+  "default_rule": "event_long",
+  "default_horizon": 5,
+  "default_cost": "declared",
+  "costs": {
+    "zero": {
+      "fee_gbp_per_leg": "0",
+      "spread_bps": "0",
+      "slippage_bps_per_leg": "0"
+    },
+    "declared": {
+      "fee_gbp_per_leg": "0.01",
+      "spread_bps": "10",
+      "slippage_bps_per_leg": "5"
+    },
+    "stressed": {
+      "fee_gbp_per_leg": "0.10",
+      "spread_bps": "30",
+      "slippage_bps_per_leg": "15"
+    },
+    "small_account_flat_fee": {
+      "fee_gbp_per_leg": "1",
+      "spread_bps": "50",
+      "slippage_bps_per_leg": "25"
+    }
+  },
+  "entry": "First numeric reporting observation on a UTC date strictly later than the supporting-publication eligibility bound. Exact-date FX required; never advance entry to repair missing FX.",
+  "exit": "Fixed 1/5/20 subsequent numeric reporting observations; a 10% loss review exits at that observed reference, not an invented stop price. No intraday fill.",
+  "calendar": "Actual EIA/Fed numeric reporting dates. Blank/ND are unavailable observations, not classified as holidays. No verified exchange-product calendar or executable quote is supplied.",
+  "cost_scope": "Declared illustrative sensitivities, not a quoted broker tariff. Half full spread plus slippage each leg; fixed GBP fee each leg reserved inside the allocation; exact-date GBP conversion. No leverage, shorts, interest or tax; dividends/roll/yield unavailable, so security/derivative execution is unsupported.",
+  "universe": "All 51 retained events and every explicitly targeted instrument. Missing asset histories and failed windows remain in the denominator. No invented IPO allocation or opening fill.",
+  "selection": "Nine predefined rule/horizon combinations; all four cost scenarios, winners and losers reported. No optimization or winner ranking in SIM-1.",
+  "max_entry_delay_calendar_days": 7,
+  "max_reporting_gap_calendar_days": 7,
+  "allocation_scope": "The allocation includes entry fees and a reserved exit fee; no leverage and no greater than 10% of cash.",
+  "currency_exposure": "GBP/USD hypotheses hold unleveraged USD cash funded from GBP, valued at reciprocal USD per GBP. Oil-linked GBP/USD conversion references never become independent FX signals."
+}

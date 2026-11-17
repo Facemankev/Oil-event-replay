@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Market Ripple — exploratory paper simulations</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="design.css">
+  <link rel="stylesheet" href="view.css">
+</head>
+<body class="mr-page">
+<div class="mr-wrap mr-stack">
+  <header class="mr-bar mr-glass">
+    <h1 class="mr-brand"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="7" cy="23" r="3" fill="currentColor"/><path d="M7 14a9 9 0 0 1 9 9M7 8a15 15 0 0 1 15 15M7 2a21 21 0 0 1 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Market Ripple</h1>
+    <span class="mr-badge">Retrospective hypothesis only</span>
+  </header>
+  <div class="theme-switch" role="group" aria-label="Colour theme">
+    <button class="mr-btn" type="button" data-theme="light" aria-pressed="true">Light</button>
+    <button class="mr-btn" type="button" data-theme="dark" aria-pressed="false">Dark</button>
+  </div>
+  <section class="mr-panel mr-glass">
+    <h2 class="mr-hero">Test a <span class="mr-hl">historical hypothesis</span></h2>
+    <p class="mr-lead">Retrospective hypothesis only. These examples explore gains and losses after costs. They are not validated recommendations, executable fills or changes to your practice account.</p>
+    <label class="opt-in"><input type="checkbox" id="opt-in">Show exploratory historical simulations</label>
+    <p id="load-status" role="status" class="mr-note">Research is off. The validated engine remains No Action.</p>
+    <div id="controls" hidden><label for="case">Choose a sourced event and reference exposure</label><select id="case" disabled></select></div>
+  </section>
+  <main id="answers" class="mr-stack" hidden aria-live="polite">
+    <section class="mr-panel mr-glass" data-answer="what_happened"><h2>1. What happened?</h2><p id="what"></p><p class="mr-note" id="when"></p></section>
+    <section class="mr-panel mr-glass" data-answer="likely_outcome"><h2>2. What might it mean?</h2><p id="meaning"></p><p id="costs" class="mr-note"></p>
+      <details class="mr-disclosure"><summary>View the dated hypothetical path</summary>
+        <div class="chart-box"><svg id="chart" class="mr-chart" viewBox="0 0 720 260" role="img" aria-label="Dated hypothetical liquidation values, not predictions"></svg></div>
+        <p class="mr-note">Each point is a dated, sourced reference valued in GBP after assumed liquidation costs. Reporting dates are not verified exchange sessions. Missing values are not filled.</p>
+        <details class="mr-disclosure"><summary>Show these prices as a table</summary><div class="mr-table-scroll"><table class="mr-table"><thead><tr><th>Date</th><th>Raw reference</th><th>GBP reference</th><th>Account if liquidated</th><th>Hypothetical action</th></tr></thead><tbody id="path"></tbody></table></div></details>
+        <p class="mr-note" id="sources"></p>
+      </details>
+      <details class="mr-disclosure"><summary>Check all rules, costs and missing cases</summary><p id="coverage"></p><div class="mr-table-scroll"><table class="mr-table"><thead><tr><th>Rule / observations</th><th>Costs</th><th>Complete / attempted</th><th>Positive / negative / flat</th><th>Median net GBP</th></tr></thead><tbody id="strategies"></tbody></table></div><p id="limits" class="mr-note"></p></details>
+    </section>
+    <section class="mr-panel mr-glass" data-answer="suggested_action"><h2>3. What should I do?</h2><p class="mr-figure" id="action">No Action</p><p id="suggestion"></p><p class="mr-note">Exploratory simulations may display Hypothetical Buy, Hold and Sell. The validated engine remains No Action; no order or practice-account change occurs. Historical reactions do not prove causation or predict a repeat.</p></section>
+  </main>
+  <footer class="mr-note">Prepared 17 November 2026. Costs are illustrative sensitivities, not quoted broker tariffs. Historical patterns do not guarantee future results.</footer>
+</div>
+<script type="module" src="view.mjs"></script>
+</body>
+</html>

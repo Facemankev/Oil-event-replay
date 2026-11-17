@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] SIM-1: Costed retrospective hypothetical simulations, gate diagnosis and three-answer research view ([Issue #43](https://github.com/Facemankev/Oil-event-replay/issues/43)), on #41 — **Dad — Doing** — 2026-11-17
+
 
 
 
@@ -27,6 +29,9 @@ history).
 
 
 ## To do
+
+- [ ] LEARN-1: Train/validate/held-out candidate learning and immutable prediction audit ([Issue #44](https://github.com/Facemankev/Oil-event-replay/issues/44)); build after SIM-1 #43 — **Dad** — 2026-11-17
+- [ ] IPO-1: Separate IPO discovery/investable-outcome work ([Issue #42](https://github.com/Facemankev/Oil-event-replay/issues/42)); no allocation/IPO price assumptions in SIM-1 — **unassigned** — 2026-11-17
 
 - [ ] DAT-3: Reconcile Brent/WTI against authenticated primary EIA data; retain discrepancy/revision evidence before extending matching — **Dad** — 2026-10-29
 

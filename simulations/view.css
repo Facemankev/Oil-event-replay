@@ -1,0 +1,17 @@
+.theme-switch{display:flex;justify-content:flex-end;gap:var(--mr-space-1)}
+label{display:block;margin-bottom:var(--mr-space-1)}
+select{font:inherit;color:var(--mr-ink);background:var(--mr-solid);border:1px solid var(--mr-hair);border-radius:var(--mr-radius-pill);padding:var(--mr-space-2) var(--mr-space-3);min-height:44px;max-width:100%;width:100%}
+select:focus-visible{outline:2px solid var(--mr-accent);outline-offset:4px}
+li{margin-bottom:var(--mr-space-2);overflow-wrap:anywhere}
+details{margin-top:var(--mr-space-3)}
+summary{min-height:44px;cursor:pointer}
+.mr-table-scroll{max-width:100%;overflow:auto}
+.mr-table th,.mr-table td{vertical-align:top}
+[hidden]{display:none!important}
+.opt-in{display:flex;gap:var(--mr-space-2);align-items:center;min-height:44px}
+.opt-in input{min-width:24px;min-height:24px}
+.mr-chart{width:100%;min-width:560px;height:auto;display:block}
+.chart-box{overflow:auto;max-width:100%}
+.chart-label{fill:var(--mr-muted);font:13px 'Public Sans',sans-serif}
+.chart-line{stroke:var(--mr-ink);stroke-width:2.5;fill:none}
+.chart-event{stroke:var(--mr-accent);stroke-dasharray:5 5;fill:none}
