@@ -49,6 +49,10 @@ python3 -m ci.run_browser --browser webkit --only learning
 ```
 
 Each suite has an explicit timeout and a nonzero child/timeout fails the runner.
+The browser job has a 35-minute ceiling, with separate 25-minute installation
+and 8-minute suite-step ceilings. This accommodates observed slow Ubuntu package
+downloads (125 MB took over 18 minutes) without consuming the test budget. A timed
+out installation/test still fails the gate; no flaky retry or skip turns it green.
 `results.json`, `summary.md` and `test.log` give the exact reproduction command.
 Failure screenshots and Playwright trace ZIPs are captured before contexts close;
 `python3 -m playwright show-trace <trace.zip>` opens them locally. An intentional

@@ -25,6 +25,11 @@ class GateTests(unittest.TestCase):
         self.assertEqual(gate['name'],'Market Ripple required checks')
         self.assertEqual(gate['if'],'${{ always() }}')
         self.assertNotIn('continue-on-error',json.dumps(w))
+        browser=w['jobs']['browser']
+        self.assertEqual(browser['timeout-minutes'],35)
+        install=next(s for s in browser['steps'] if s.get('name')=='Install pinned real browser engine')
+        run=next(s for s in browser['steps'] if s.get('name')=='All required fixture-only browser suites')
+        self.assertEqual(install['timeout-minutes'],25);self.assertEqual(run['timeout-minutes'],8)
 
     def test_matching_export_uses_the_databases_built_by_this_job(self):
         from ci.offline_checks import commands
