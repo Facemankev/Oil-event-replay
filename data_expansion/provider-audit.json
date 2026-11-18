@@ -216,5 +216,14 @@
     "No paid endpoint, trial, subscription, authentication or account configured.",
     "CI access receipts never relay/import bodies blocked in runtime. HTTP 200 alone proves neither valid data nor permitted redistribution.",
     "Present-day captures and printed edition dates never promoted as verified original historical vintages."
-  ]
+  ],
+  "actual_CI_access": {
+    "run": "https://github.com/Facemankev/Oil-event-replay/actions/runs/44271482505",
+    "world_bank_monthly_xls": 200,
+    "fed_eurusd": 200,
+    "sec_wework_withdrawal": 403,
+    "imported_rows": 0,
+    "body_saved_or_relayed": false,
+    "note": "Independent current HTTP access, not a parsed price dataset or runtime bypass. All quote/license/vintage gates remain."
+  }
 }

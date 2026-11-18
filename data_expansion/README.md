@@ -128,6 +128,8 @@ python3 -m data_expansion.probe --environment runtime \
   --output work/data2-access/first-runtime.json
 ```
 
+[ci-access.json](ci-access.json) records actual [run 44271482505](https://github.com/Facemankev/Oil-event-replay/actions/runs/44271482505): World Bank XLS **200** (587,760 bytes), Fed EUR/USD **200** (1,134,552 bytes), SEC **403**. These independent CI HTTP successes do not establish a runtime connection, valid parsed price rows or original-vintage verification. No body was published, imported or relayed.
+
 The separate **Anonymous official data access receipts** Actions workflow runs the
 same fixed bounded endpoints independently in CI, keeps only status/size/type/time,
 and uploads its JSON receipt. No body is saved/imported/relayed, no keys, redirects,

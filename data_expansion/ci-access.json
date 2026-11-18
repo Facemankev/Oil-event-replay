@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "environment": "github_actions",
+  "receipts": [
+    {
+      "source": "world_bank_monthly_xls",
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+      "observed_at": "2026-11-18T08:57:55.546537Z",
+      "http_status": 200,
+      "body_bytes_observed": 587760,
+      "transport_denial": false,
+      "result": "http_access_only_not_data_or_licence_verification",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "imported_rows": 0,
+      "original_http_sha256": null
+    },
+    {
+      "source": "sec_wework_withdrawal",
+      "url": "https://www.sec.gov/Archives/edgar/data/1533523/000119312519258913/d808793drw.htm",
+      "observed_at": "2026-11-18T08:57:55.610672Z",
+      "http_status": 403,
+      "body_bytes_observed": 0,
+      "transport_denial": false,
+      "result": "unavailable_no_import",
+      "content_type": "text/html",
+      "imported_rows": 0,
+      "original_http_sha256": null
+    },
+    {
+      "source": "fed_eurusd",
+      "url": "https://www.federalreserve.gov/releases/h10/hist/dat00_eu.htm",
+      "observed_at": "2026-11-18T08:57:55.821731Z",
+      "http_status": 200,
+      "body_bytes_observed": 1134552,
+      "transport_denial": false,
+      "result": "http_access_only_not_data_or_licence_verification",
+      "content_type": "text/html",
+      "imported_rows": 0,
+      "original_http_sha256": null
+    }
+  ],
+  "cost_GBP": "0.00",
+  "note": "Direct bounded no-retry requests, fixed anonymous official URLs. No body/headers/credential saved, no redistribution inference. Reader transcription access is separate from this runtime/CI HTTP test."
+}
