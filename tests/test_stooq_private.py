@@ -104,10 +104,10 @@ class StooqPrivateTests(unittest.TestCase):
 
     def test_horizons_and_benchmark_use_identical_exact_dates(self):
         for h in (1,5,20):
-            r=fixed_window(self.series,self.series,self.days[0],h)
+            r=fixed_window(self.series,self.series,'2015-01-04',h)
             self.assertEqual(r['end_date'],None) # no pre-event close
             r=fixed_window(self.series,self.series,self.days[1],h)
-            self.assertEqual(r['end_date'],self.days[h+1]);self.assertEqual(r['relative_wealth_percent'],'0.0000')
+            self.assertEqual(r['baseline_date'],self.days[1]);self.assertEqual(r['end_date'],self.days[h+1]);self.assertEqual(r['relative_wealth_percent'],'0.0000')
             self.assertEqual(r['excess_percentage_points'],'0.0000')
 
     def test_missing_asset_or_benchmark_never_moves_end_date(self):
@@ -189,7 +189,7 @@ class StooqPrivateTests(unittest.TestCase):
         series={d:dict(status='numeric',close='100') for d in points}
         result=fixed_window(series,series,'2024-01-02',1,days)
         self.assertEqual(result['status'],'missing_exact_session_price');self.assertEqual(result['missing_date'],'2024-01-03')
-        self.assertEqual(fixed_window(series,series,'2024-01-03',1,days)['status'],'provisional_supplied_reporting_sessions')
+        self.assertEqual(fixed_window(series,series,'2024-01-03',1,days)['status'],'missing_exact_session_price')
 
 
 if __name__=='__main__':unittest.main()

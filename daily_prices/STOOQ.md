@@ -89,7 +89,10 @@ horizon windows. New eligible historical examples, independent events, supported
 Buy decisions and genuinely new predictions: **zero**. Private quarantine storage
 is not approval of the adjustment methodology or original price availability.
 
-The private report separates publication-day descriptive reactions, conservative
+Each reaction spans exactly N close-to-close benchmark intervals from the last
+scheduled close on or before its stated anchor day. That is a follow-through
+reference, not an isolated initial intraday reaction. The private report separates
+publication-day descriptive reactions, conservative
 eligibility-window reactions and costed post-eligibility hypotheses. Day-only
 sources retain the original two-day conservative decision bound. Exact dated
 windows are shown; no claim of isolating the first intraday reaction is made.

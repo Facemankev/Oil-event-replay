@@ -26,7 +26,7 @@ def scope(event,symbol):
 
 def fixed_window(series,spy,bound,horizon,calendar=None):
     """Use one fixed reporting-date union; an absent asset date cannot move the goalposts."""
-    days=calendar if calendar is not None else grid({'SPY':spy,'ASSET':series}); before=bisect_left(days,bound)-1; after=bisect_right(days,bound)
+    days=calendar if calendar is not None else grid({'SPY':spy,'ASSET':series}); before=bisect_right(days,bound)-1; after=bisect_right(days,bound)
     base=dict(status='missing_window',change_percent=None,spy_change_percent=None,
               excess_percentage_points=None,relative_wealth_percent=None,
               baseline_date=None,end_date=None,trading_calendar_verified=False)
@@ -110,7 +110,7 @@ def build_study(selections,inspection,data=None):
                 cases.append(record|dict(eligibility_bound=planned['decision_bound'],
                     hypothetical_exposure_override=symbol not in event['targets'],reaction=reaction,
                     supporting_publication_day_reaction=day_reaction,
-                    reaction_timing_note='Eligibility-window and publication-day windows are separate. Day-only timing cannot isolate an intraday first reaction.',costs=outcomes))
+                    reaction_timing_note='Exactly N close-to-close benchmark intervals after the anchor day; eligibility and publication-day anchors differ. This does not isolate an intraday first reaction.',costs=outcomes))
         for h in HORIZONS:
             for category in sorted({r['scope'] for r in cases if r['instrument']==symbol}):
                 selected=[r for r in cases if r['instrument']==symbol and r['horizon']==h and r['scope']==category]
@@ -124,7 +124,7 @@ def build_study(selections,inspection,data=None):
     return dict(schema_version=1,kind='PRIVATE_PROVISIONAL_retrospective_owner_file_review',
         rows_imported=0,inspection=inspection,study_horizons=list(HORIZONS),
         protocol=dict(selection='All six securities across all retained events; exposure scopes remain separate. No selecting winners or adding invented events.',
-          reaction='Last supplied reporting date before eligibility day to 1/5/20th union reporting date strictly after it. Day-only publication uses retained conservative two-day bound.',
+          reaction='Last supplied reporting close on or before eligibility day to 1/5/20th union reporting date strictly after it. Day-only publication uses retained conservative two-day bound.',
           costed='SIM-1 fixed post-eligibility close-to-close exposures for 1/5/20 subsequent union reporting dates; risk_exit=False. All four original illustrative cost assumptions.',
           benchmark='Same exact start/end dates. Percentage-point excess and compounded relative wealth are separate. SPY is an ETF, not Nasdaq Composite.',
           calendar='Reviewed NYSE/Arca 2023-2026 dates; supplied-date union outside that scope. Missing expected asset/benchmark dates block windows; no fill or shifting.',
