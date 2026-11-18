@@ -1,0 +1,140 @@
+{
+  "name": "Market Ripple required checks",
+  "on": {
+    "pull_request": {
+      "types": [
+        "opened",
+        "synchronize",
+        "reopened",
+        "ready_for_review"
+      ]
+    },
+    "merge_group": {}
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "concurrency": {
+    "group": "required-${{ github.event.pull_request.number || github.ref }}",
+    "cancel-in-progress": true
+  },
+  "jobs": {
+    "offline": {
+      "name": "Offline data and unit checks",
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 15,
+      "steps": [
+        {
+          "uses": "actions/checkout@v4",
+          "with": {
+            "fetch-depth": 0
+          }
+        },
+        {
+          "uses": "actions/setup-python@v5",
+          "with": {
+            "python-version": "3.12"
+          }
+        },
+        {
+          "uses": "actions/setup-node@v4",
+          "with": {
+            "node-version": "22"
+          }
+        },
+        {
+          "run": "python3 -m ci.offline_checks"
+        },
+        {
+          "uses": "actions/upload-artifact@v4",
+          "if": "always()",
+          "with": {
+            "name": "required-offline-logs",
+            "path": "work/ci-offline/*.log\nwork/ci-offline/results.json",
+            "retention-days": 3,
+            "compression-level": 9
+          }
+        }
+      ]
+    },
+    "browser": {
+      "name": "Browser ${{ matrix.engine }}",
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 35,
+      "strategy": {
+        "fail-fast": false,
+        "matrix": {
+          "engine": [
+            "chromium",
+            "webkit"
+          ]
+        }
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@v4",
+          "with": {
+            "fetch-depth": 0
+          }
+        },
+        {
+          "uses": "actions/setup-python@v5",
+          "with": {
+            "python-version": "3.12"
+          }
+        },
+        {
+          "uses": "actions/setup-node@v4",
+          "with": {
+            "node-version": "22"
+          }
+        },
+        {
+          "name": "Install pinned real browser engine",
+          "run": "python3 -m pip install playwright==1.64.1\npython3 -m playwright install --with-deps ${{ matrix.engine }}\nif [ \"${{ matrix.engine }}\" = \"chromium\" ]; then\n  ci_chromium_path=\"$(python3 -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')\"\n  sudo ln -sf \"$ci_chromium_path\" /usr/bin/chromium\nfi",
+          "timeout-minutes": 25
+        },
+        {
+          "name": "Prove failure evidence capture",
+          "run": "python3 -m ci.check_capture --browser ${{ matrix.engine }}"
+        },
+        {
+          "name": "All required fixture-only browser suites",
+          "run": "python3 -m ci.run_browser --browser ${{ matrix.engine }}",
+          "timeout-minutes": 8
+        },
+        {
+          "uses": "actions/upload-artifact@v4",
+          "if": "always()",
+          "with": {
+            "name": "browser-evidence-${{ matrix.engine }}",
+            "path": "work/ci-browser/${{ matrix.engine }}/",
+            "if-no-files-found": "error",
+            "retention-days": 3,
+            "compression-level": 9
+          },
+          "timeout-minutes": 3
+        }
+      ]
+    },
+    "required": {
+      "name": "Market Ripple required checks",
+      "if": "${{ always() }}",
+      "needs": [
+        "offline",
+        "browser"
+      ],
+      "runs-on": "ubuntu-24.04",
+      "steps": [
+        {
+          "name": "Fail closed unless every required job passed",
+          "env": {
+            "OFFLINE_RESULT": "${{ needs.offline.result }}",
+            "BROWSER_RESULT": "${{ needs.browser.result }}"
+          },
+          "run": "set -eu\ntest \"$OFFLINE_RESULT\" = \"success\"\ntest \"$BROWSER_RESULT\" = \"success\""
+        }
+      ]
+    }
+  }
+}

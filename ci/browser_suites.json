@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "required_pages": ["ripple", "free_pilot", "simulations", "learning"],
+  "suites": [
+    {"name":"legacy-matching","file":"tests/matching_browser_test.py","engines":["chromium"]},
+    {"name":"original-dashboard","file":"tests/browser_test.py","engines":["chromium"]},
+    {"name":"price-database","file":"tests/historical_browser_test.py","engines":["chromium"]},
+    {"name":"world-events","file":"tests/world_events_browser_test.py","engines":["chromium"]},
+    {"name":"branding","file":"tests/branding_preview_browser_test.py","engines":["chromium"]},
+    {"name":"paper-ledger","file":"tests/paper_browser_test.py","engines":["chromium"]},
+    {"name":"integrated-app","file":"tests/application_browser_test.py","engines":["chromium","webkit"]},
+    {"name":"ripple","file":"tests/ripple_browser_test.py","engines":["chromium","webkit"]},
+    {"name":"three-answers","file":"tests/ripple_history_browser_test.py","engines":["chromium","webkit"]},
+    {"name":"intelligence","file":"tests/intelligence_browser_test.py","engines":["chromium","webkit"]},
+    {"name":"free-data","file":"tests/free_pilot_browser_test.py","engines":["chromium","webkit"]},
+    {"name":"simulations","file":"tests/simulations_browser_test.py","engines":["chromium","webkit"]},
+    {"name":"learning","file":"tests/learning_browser_test.py","engines":["chromium","webkit"]},
+    {"name":"all-page-profiles","file":"ci/profile_smoke.py","engines":["chromium","webkit"]}
+  ],
+  "optional_frontends": [{"directory":"ipo","suite":"tests/ipo_browser_test.py"}],
+  "note":"All existing tests remain intact. Legacy Chromium-only scripts supplement the required two-engine app/three-answer/data/SIM/LEARN suites; they do not silently stand in for WebKit. A new IPO frontend requires an explicit two-engine suite."
+}
