@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] DATA-3 follow-up: inspect six owner-supplied Stooq CSVs, scoped private import, fixed-session event/benchmark studies and unchanged learning holdout; no raw-data publication or merge — **Dad — Doing** — 2026-11-18
+
 - [ ] DATA-3: Verified free daily equity/ETF-index/gold/IPO histories, rights-aware imports, separate historical/new evaluation ([Issue #51](https://github.com/Facemankev/Oil-event-replay/issues/51)), [draft #52](https://github.com/Facemankev/Oil-event-replay/pull/52), stacked on #50; importer/evaluation path built, zero new prices; acquisition blocked pending source-domain grant. Preserve original tests/UI/prices, no paid source/key/merge — **Dad — Doing; source acquisition blocked** — 2026-11-18
 
 

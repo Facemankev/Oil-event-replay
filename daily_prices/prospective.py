@@ -32,6 +32,7 @@ def lock(db,event,features,model,capture_ids,clock=utc):
         require(features.get('context')==[dict(date=r['date'],close=r['close']) for r in expected],'Features must match received earlier quotes')
     for cid in capture_ids:
         c=capture(db,cid)
+        require(c.get('usage_scope')!='private_research','Review-only private history cannot enter the prospective journal')
         require(not c['synthetic_control'] and at(c['retrieved_at'])<=at(features['as_of']),'Only real prices actually received before feature computation')
         require(c['instrument']==event['instrument'],'No peer/index/ETF substitution in a price lock')
     payload=dict(protocol=PROTOCOL,event=event,features=features,model=model,capture_ids=sorted(capture_ids),recorded_at=now,
@@ -53,6 +54,7 @@ def settle(db,lid,outcome_capture_id,clock=utc):
     series=select_captures(db,ids);require(set(series)=={prediction['event']['instrument']},'Exact outcome instrument required')
     for cid in ids:
         c=capture(db,cid)
+        require(c.get('usage_scope')!='private_research','Private history cannot settle prospective predictions')
         require(not c['synthetic_control'],'Synthetic prices cannot settle a real evaluation')
         require(at(prediction['recorded_at'])<at(c['retrieved_at'])<=at(now),'Outcome capture must arrive after the immutable prediction')
     rows=series[prediction['event']['instrument']]['rows']

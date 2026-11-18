@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "source_id": "stooq_owner_csv",
+  "checked_on": "2026-11-18",
+  "private_research_permitted": true,
+  "status": "reviewed_private_quarantine_only",
+  "redistribution_permitted": false,
+  "model_training_permitted": false,
+  "adjustment_basis": "unknown",
+  "evidence_url": "https://stooq.com/t/",
+  "evidence": "Owner supplied the Stooq Terms text. Section 5.3 requires consent for redistribution. Review is limited to owner-requested private, non-commercial diagnostics and quarantine storage; this is not an open, commercial, public-application or model-training licence.",
+  "reviewed_source_document_sha256": "762a1e297c88a3e27a130ffd54d0f36fd7df20d903978a661afe995c62fcd94f",
+  "source_access": [
+    {
+      "url": "https://stooq.com/t/",
+      "result": "browser_verification_page_not_terms"
+    },
+    {
+      "url": "https://stooq.com/db/h/",
+      "result": "browser_verification_page_not_usage_permission"
+    },
+    {
+      "url": "https://stooq.pl/t/",
+      "result": "browser_verification_page_not_terms"
+    }
+  ],
+  "restriction": "Private quarantine only, as supplied. No promotion to approved prices, public reports, prospective predictions, training, dashboard data or raw redistribution. Additional publisher evidence is required for broader use; adjustment method remains unknown.",
+  "price_adjustments_verified": false,
+  "provenance_verified": false,
+  "adjustment_evidence": null,
+  "provenance_evidence": "Owner-supplied named files, exact byte fingerprints and expected CSV schema. Original server identity and download timestamps remain unverified.",
+  "private_quarantine_only": true,
+  "evidence_origin": "Owner-provided primary terms transcription; relevant-excerpt fingerprint, not independently fetched HTML",
+  "source_version_date": null,
+  "allowed_symbols": [
+    "NVDA",
+    "AMD",
+    "MRNA",
+    "BMY",
+    "SPY",
+    "GLD"
+  ]
+}

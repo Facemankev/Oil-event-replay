@@ -111,6 +111,8 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 ## 5. Now
 
+- **Dad / DATA-3 follow-up:** Six supplied Stooq files on `dad/data-3-stooq-event-study`, stacked on #52. Validate source, dates, actions and private-use rights before database admission; preserve the learning holdout and three answers. No raw publication or merge.
+
 - **Dad / DATA-3:** Issue #51 is [draft #52](https://github.com/Facemankev/Oil-event-replay/pull/52), stacked on #50. Import/evaluation code built; zero new daily prices, acquisition blocked by the running source-host policy pending owner grant. Freeze examined evaluation and reserve genuinely new/prospective assessment separately. Free only, no keys or access-control bypass, unchanged three answers/paper safeguards, draft/no merge.
 
 - **Dad / CI-1 and DATA-2:** CI-1 is [draft #49](https://github.com/Facemankev/Oil-event-replay/pull/49), on #46: universal gate, failure evidence, verified #45/#46 metadata. DATA-2 is [draft #50](https://github.com/Facemankev/Oil-event-replay/pull/50), on #49: 99 typed commodity-average values / 51 asset-periods and 8 IPO research episodes; fixed SIM/LEARN rerun shows no predictive improvement or supported Buy. New daily security histories remain unconnected. Final Actions in PR Checks. Preserve original UI, prices, test periods and all paper safeguards; no paid service or merge.
