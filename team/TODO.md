@@ -13,6 +13,9 @@ history).
 
 ## Doing
 
+- [ ] CI-1: Universal draft/stacked-PR browser gate, failure evidence and verified #45/#46 checklists ([Issue #48](https://github.com/Facemankev/Oil-event-replay/issues/48)) — **Dad — Doing** — 2026-11-18
+- [ ] DATA-2: Verified free wider-market/IPO evidence, safe imports and fixed-holdout before/after evaluation ([Issue #47](https://github.com/Facemankev/Oil-event-replay/issues/47)); on CI-1 so its draft receives the universal checks — **Dad — Doing** — 2026-11-18
+
 
 
 
