@@ -13,7 +13,6 @@ history).
 
 ## Doing
 
-- [ ] CI-1: Universal draft/stacked-PR browser gate, failure evidence and verified #45/#46 checklists ([Issue #48](https://github.com/Facemankev/Oil-event-replay/issues/48)) — **Dad — Doing** — 2026-11-18
 - [ ] DATA-2: Verified free wider-market/IPO evidence, safe imports and fixed-holdout before/after evaluation ([Issue #47](https://github.com/Facemankev/Oil-event-replay/issues/47)); on CI-1 so its draft receives the universal checks — **Dad — Doing** — 2026-11-18
 
 
@@ -56,6 +55,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] CI-1: Universal offline/Chromium/WebKit required gate ([draft PR #49](https://github.com/Facemankev/Oil-event-replay/pull/49), on #46; [Issue #48](https://github.com/Facemankev/Oil-event-replay/issues/48)). No branch/path/draft filter; screenshots/traces/logs, failure proof and all-page touch/theme smoke. Existing tests intact. #45/#46 final-head successes verified and stale checklists corrected. Owner activation of protection remains necessary: App read is 403; no settings or merge. Local 14 Chromium suites and capture proof pass; final two-engine CI in PR Checks — **Dad** — 2026-11-18
 
 - [ ] LEARN-1: Chronological candidate fitting and immutable later-event audit ([draft PR #46](https://github.com/Facemankev/Oil-event-replay/pull/46), on #45; [Issue #44](https://github.com/Facemankev/Oil-event-replay/issues/44)). Seven training / eleven validation / 21 later retained primary-event cases, 27 candidate fits; no cohort qualifies. Four diagnostic Watch: one settled gain / one settled loss / two incomplete; seventeen research No Action. Baseline ten settled (six positive/four negative); zero supported entries, no calibration/edge claim. Actual audit 21 predictions then 21 settlements, repeat adds zero. Local 142 Python/112 JS and Chromium profiles pass; final CI/WebKit in PR Checks. [Public learning preview](https://market-ripple-research-lab.g86hz2pjsh.chatgpt.site/learning/) and [SIM-1 preview](https://market-ripple-research-lab.g86hz2pjsh.chatgpt.site/simulations/) are separately published; native hosting confirms deployment, hosted-browser access is restricted in this executor. Full traces local, UI/accounts/prices/gates preserved; £0 data, no merge or review wait — **Dad** — 2026-11-17
 

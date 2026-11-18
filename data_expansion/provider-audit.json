@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-11-18",
+  "cost_GBP": "0.00",
+  "accounts_created": 0,
+  "keys_required": 0,
+  "paid_connections": 0,
+  "existing_actual_coverage": {
+    "primary_numeric_daily_references": 26074,
+    "retained_secondary_company_index_candidates": 66,
+    "reported_reactions": 13,
+    "note": "Primary = retained EIA oil and Fed FX reference data, not adjusted/executable shares. See free_pilot/COVERAGE.json and before/after report for exact group counts."
+  },
+  "providers": [
+    {
+      "id": "eia",
+      "markets": [
+        "oil"
+      ],
+      "docs": "https://www.eia.gov/about/copyrights_reuse.php",
+      "cost": "No-charge public HTML tables; no key required by the HTML adapter",
+      "terms": "Government numerical data public domain with attribution; third-party materials excluded",
+      "quota": "No HTML quota established; adapter enforces a 60-second minimum and single bounded requests",
+      "access": "Retained primary snapshots usable; direct price refresh domain-restricted in this environment",
+      "active": "Existing pinned Brent/WTI snapshots; no canonical overwrites",
+      "additional_connection": "none",
+      "audit_scope": "Existing actual access and retained data audited; no new keyed call/signup/payment."
+    },
+    {
+      "id": "fed",
+      "markets": [
+        "currencies"
+      ],
+      "docs": "https://www.federalreserve.gov/disclaimer.htm",
+      "cost": "No-charge public historical tables, no account or API key",
+      "terms": "Board information public domain unless otherwise indicated; numerical rates attributed",
+      "quota": "No HTML quota established; bounded requests and cooldown",
+      "access": "Two complete visible primary tables captured through supported web reader; direct adapter refresh returns policy 403 here",
+      "active": "GBP/USD reused; 10,456 numeric EUR/USD and USD/JPY observations added; 434 ND retained",
+      "additional_connection": "none",
+      "audit_scope": "Existing actual access and retained data audited; no new keyed call/signup/payment."
+    },
+    {
+      "id": "fred",
+      "markets": [
+        "indices",
+        "currencies",
+        "gold"
+      ],
+      "docs": "https://fred.stlouisfed.org/legal/",
+      "cost": "Free service/API; API key required for web services, not configured here",
+      "terms": "Series-specific rights: third-party copyrighted series need owner permission beyond personal use. S&P reproduction restricted. Former LBMA gold series removed.",
+      "quota": "API quota not independently established; no keyed calls made",
+      "access": "Metadata/terms readable; direct bounded Nasdaq CSV request received policy 403",
+      "active": "No new FRED market-price series imported",
+      "additional_connection": "none",
+      "audit_scope": "Existing actual access and retained data audited; no new keyed call/signup/payment."
+    },
+    {
+      "id": "stooq",
+      "markets": [
+        "technology_shares",
+        "pharmaceuticals",
+        "indices",
+        "gold"
+      ],
+      "docs": "https://stooq.com/db/",
+      "cost": "Anonymous download endpoint investigated; no account or payment created",
+      "terms": "Retention/redistribution and adjustment basis not verified; not activated for public quote display",
+      "quota": "Publisher quota not established; 60-second minimum plus error backoff in adapter",
+      "access": "Web reader presented browser-verification challenge; anonymous direct probe received policy 403; not bypassed",
+      "active": "CSV parser/adapter tested with labelled fixtures only; no real Stooq rows claimed",
+      "additional_connection": "none",
+      "audit_scope": "Existing actual access and retained data audited; no new keyed call/signup/payment."
+    },
+    {
+      "id": "alpha_vantage",
+      "markets": [
+        "equities",
+        "FX",
+        "commodities"
+      ],
+      "docs": "https://www.alphavantage.co/support/",
+      "cost": "Free-key service advertised; no signup, key or paid plan configured",
+      "terms": "Service/data terms still apply; adjusted daily endpoint explicitly premium in documentation",
+      "quota": "25 requests/day advertised; verified educational-project exceptions are not assumed",
+      "access": "Documentation reviewed; no data connection tested or claimed",
+      "active": "Keyed API disabled. No premium endpoint or demo key used",
+      "additional_connection": "none",
+      "audit_scope": "Existing actual access and retained data audited; no new keyed call/signup/payment."
+    },
+    {
+      "id": "twelve_data",
+      "markets": [
+        "equities",
+        "FX",
+        "ETFs"
+      ],
+      "docs": "https://twelvedata.com/pricing",
+      "cost": "Basic advertised at zero monthly cost; no signup or subscription configured",
+      "terms": "Basic lists internal non-display usage; public display/redistribution permission is not assumed. Splits/dividends require higher plan in current matrix.",
+      "quota": "8 API credits/minute, 800/day advertised; endpoint weights vary",
+      "access": "Documentation reviewed only; no data connection claimed",
+      "active": "Keyed API disabled; no billing add-ons, WebSocket trial or upgrade",
+      "additional_connection": "none",
+      "audit_scope": "Existing actual access and retained data audited; no new keyed call/signup/payment."
+    },
+    {
+      "id": "eodhd",
+      "markets": [
+        "equities",
+        "indices",
+        "FX"
+      ],
+      "docs": "https://eodhd.com/pricing",
+      "cost": "Sandbox Free package advertised at zero cost; no account or subscription configured",
+      "terms": "Exact historical depth/instrument/redistribution entitlements not verified; do not assume complete history",
+      "quota": "20 calls/day and 20 requests/minute advertised; news/intraday cost more credits",
+      "access": "Pricing reviewed; no data connection claimed",
+      "active": "Keyed API disabled; no extra-calls buffer or paid trial",
+      "additional_connection": "none",
+      "audit_scope": "Existing actual access and retained data audited; no new keyed call/signup/payment."
+    },
+    {
+      "id": "issuer_regulator_releases",
+      "markets": [
+        "company_events",
+        "economic_events"
+      ],
+      "docs": "https://www.federalreserve.gov/newsevents/pressreleases.htm",
+      "cost": "Public announcements and already sourced research facts; no subscription",
+      "terms": "Link primary sources and retain short factual cards, not full article republication. Source versions and first dissemination remain unverified.",
+      "quota": "Publisher-specific quota not established; original feed restrictions respected",
+      "access": "Official announcement facts reused; fresh issuer financial RSS direct access remains blocked as documented by PR #36",
+      "active": "Historical company/oil event records fetched from fixed public research catalogs; not claimed as a live issuer feed",
+      "additional_connection": "none",
+      "audit_scope": "Existing actual access and retained data audited; no new keyed call/signup/payment."
+    },
+    {
+      "id": "legacy_equity_references",
+      "markets": [
+        "technology_shares",
+        "indices"
+      ],
+      "docs": "https://github.com/Facemankev/Oil-event-replay/blob/08aea1b2464969c06f6e53bdc9cc02bef5ff0809/equities/README.md",
+      "cost": "Reuses retained repository evidence; no new API or account",
+      "terms": "Secondary daily research context only; no licensed live/executable quote, adjustment-factor or broad redistribution claim",
+      "quota": "No fresh provider requests performed",
+      "access": "66 existing candidate rows and official scheduled-session calendar reused through the tested parent engine",
+      "active": "Derived Nvidia/peer comparison; opening conflict retained; not added to the primary price table",
+      "additional_connection": "none",
+      "audit_scope": "Existing actual access and retained data audited; no new keyed call/signup/payment."
+    },
+    {
+      "id": "world_bank_pink_sheet",
+      "markets": [
+        "oil",
+        "gold"
+      ],
+      "docs": "https://datacatalog.worldbank.org/search/dataset/0038238/commodity-prices-history-and-projections",
+      "license_url": "https://datacatalog.worldbank.org/public-licenses",
+      "terms": "Public dataset, CC BY 4.0; attribution and transcription changes stated. Selected published numerical averages, not LBMA raw daily feed or futures/ETF prices.",
+      "cost": "0; anonymous published references; no key or account",
+      "quota": "No publisher quota established; one bounded direct request per endpoint, no retries",
+      "access": "Runtime direct XLS/PDF 403 transport policy; official archived PDF tables visible through supported reader. CI access is independently measured as metadata only.",
+      "active": "99 publication values / 51 asset-frequency-period combinations. 33 gold values, 17 distinct gold periods (8 monthly). No daily quote/feed activated.",
+      "price_basis": "Rounded annual/quarterly/monthly USD period averages; no daily session calendar or corporate adjustments",
+      "range": "Annual 2017-2019; quarters 2019 Q2-2020 Q3; months Apr-Nov 2020",
+      "vintage": "2020 edition document dates retained; original archived version/receipt remains unverified. Captured 2026-11-18."
+    },
+    {
+      "id": "ipos_factual_reserve",
+      "markets": [
+        "equities",
+        "ipo"
+      ],
+      "docs": "data_expansion/sources/ipo-facts.json",
+      "terms": "Factual numerical/event extraction and source links only. No republication of articles/filings or licensed quote series; no general market-data redistribution licence claimed.",
+      "access": "Primary issuer/SEC/exchange pages and attributed AP/PA/Reuters reporting read through supported reader; issuer Deliveroo PDF 403, clearly secondary fact only. SEC runtime probe 403; not bypassed.",
+      "active": "Eight offering episodes, kept outside all old SIM/LEARN folds. No daily price path or first-version availability verified.",
+      "price_basis": "Offer/reference first-close facts only; USD/share, USD/ADS and GBp/share distinct. No corporate-action adjustment or guaranteed retail allocation.",
+      "survivorship": "Withdrawal request and suspended listing retained with null returns; no later SPAC/security substituted. No complete delisting universe or randomized cohort claimed.",
+      "timing": "Event day, document date, first session and reaction-document date separately recorded; unknown intraday/publication clocks remain null.",
+      "cost": "0; no signup, key or subscription",
+      "quota": "No bulk feed activated; publisher-specific limits not inferred."
+    }
+  ],
+  "remaining_targets": [
+    {
+      "market": "NVDA/AMD and technology",
+      "new_daily_prices": 0,
+      "reason": "Retained secondary NVDA/peer windows reused only; no verified freely redistributable adjusted broad history or original availability."
+    },
+    {
+      "market": "Biotech/pharmaceuticals",
+      "new_daily_prices": 0,
+      "reason": "Issuer/regulator event facts retained; absent verified daily quotes/corporate-action/delisted universe."
+    },
+    {
+      "market": "Stock indices",
+      "new_daily_prices": 0,
+      "reason": "FRED NASDAQCOM explicitly copyrighted with pre-approval; S&P restrictions remain. Index is not an executable ETF."
+    },
+    {
+      "market": "Gold daily",
+      "new_daily_prices": 0,
+      "reason": "WB averages admitted only in separate frequency schema. LBMA/feed reuse not assumed; no substitution of spot averages for gold futures/ETF closes."
+    },
+    {
+      "market": "IPOs",
+      "new_daily_prices": 0,
+      "reason": "Offer/reporting facts do not supply full pre/post-session history, allocations, adjustments or unbiased event population."
+    }
+  ],
+  "restrictions": [
+    "No paid endpoint, trial, subscription, authentication or account configured.",
+    "CI access receipts never relay/import bodies blocked in runtime. HTTP 200 alone proves neither valid data nor permitted redistribution.",
+    "Present-day captures and printed edition dates never promoted as verified original historical vintages."
+  ]
+}

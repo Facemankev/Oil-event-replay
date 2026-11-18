@@ -22,6 +22,8 @@ def commands():
       *[[sys.executable,'-m','free_pilot','import'] for _ in range(2)],
       [sys.executable,'-m','free_pilot','demo','--check'],
       [sys.executable,'-m','simulations','--check'],[sys.executable,'-m','learning','--check','--journal','work/ci-offline/journal'],
+      *[[sys.executable,'-m','data_expansion','--db','work/ci-offline/data2.sqlite','import'] for _ in range(2)],
+      [sys.executable,'-m','data_expansion','--db','work/ci-offline/data2.sqlite','evaluate','--check'],
       ['bash','.claude/hooks/guard.sh','scan']]
 
 

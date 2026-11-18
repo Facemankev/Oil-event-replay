@@ -1,0 +1,589 @@
+{
+  "schema_version": 1,
+  "kind": "data_2_reference_expansion_fixed_population_audit",
+  "checked_on": "2026-11-18",
+  "imported": {
+    "publication_values": 99,
+    "distinct_asset_periods": 51,
+    "by_instrument": {
+      "wb-brent-average": {
+        "publication_values": 33,
+        "distinct_periods": 17,
+        "monthly_periods": 8
+      },
+      "wb-gold-average": {
+        "publication_values": 33,
+        "distinct_periods": 17,
+        "monthly_periods": 8
+      },
+      "wb-wti-average": {
+        "publication_values": 33,
+        "distinct_periods": 17,
+        "monthly_periods": 8
+      }
+    },
+    "ipo_episodes": 8,
+    "ipo_outcome_counts": {
+      "missing_reaction": 1,
+      "negative": 2,
+      "no_completed_listing": 2,
+      "positive": 3
+    },
+    "new_daily_security_quotes": 0,
+    "new_verified_original_vintages": 0,
+    "conflicting_published_periods": 0
+  },
+  "before": {
+    "events": 51,
+    "event_market_pairs": 151,
+    "numeric_daily_references": 26074,
+    "simulation_default": {
+      "rule": "event_long",
+      "horizon": 5,
+      "cost": "declared",
+      "attempts": 151,
+      "complete": 69,
+      "missing_or_not_triggered": 82,
+      "positive": 34,
+      "negative": 35,
+      "flat": 0,
+      "median_net_pnl_gbp": "-0.0024",
+      "minimum_net_pnl_gbp": "-1.3305",
+      "maximum_net_pnl_gbp": "1.3650",
+      "reasons": {
+        "conversion_context_not_independent_signal": 32,
+        "missing_exact_date_GBP_FX": 18,
+        "no_later_numeric_price": 31,
+        "nonpositive_price_not_a_supported_fractional_exposure": 1
+      }
+    },
+    "simulation_blockers": {
+      "fewer_than_eight_independent_qualified_cases": 50,
+      "no_verified_executable_quote_or_instrument": 51,
+      "original_news_receipt_and_version_unproven": 51,
+      "original_price_and_FX_availability_unproven": 51
+    },
+    "learning": {
+      "retained_test_events": 21,
+      "research_watch": 4,
+      "research_no_action": 17,
+      "settled_diagnostic_hypotheses": 2,
+      "positive": 1,
+      "negative": 1,
+      "flat": 0,
+      "directional_false_positives": 1,
+      "missing_or_unsettled_signals": 2,
+      "conditional_hit_fraction": "0.5000",
+      "fixed_baseline_settled": 10,
+      "fixed_baseline_positive": 6,
+      "fixed_baseline_negative": 4,
+      "calibration": null,
+      "calibration_reason": "No probabilistic forecasts issued; a conditional historical hit fraction is not calibrated predictive accuracy.",
+      "qualified_candidate_cohorts": 0,
+      "supported_entries": 0,
+      "validated_buy": 0,
+      "validated_no_action": 21,
+      "repeatable_pattern_established": false,
+      "point_in_time_safe": false
+    },
+    "fold_sizes": {
+      "training": 7,
+      "validation": 11
+    },
+    "heldout_event_ids": [
+      "fed-2020-emergency-cut",
+      "who-2020-pandemic",
+      "opec-2020-april",
+      "laura-2020-louisiana",
+      "zeta-2020-louisiana",
+      "pfizer-2020-interim",
+      "opec-2021-july",
+      "ida-2021-louisiana",
+      "russia-2022-invasion",
+      "iea-2022-emergency-release",
+      "eu-2022-oil-embargo",
+      "fed-2022-june-hike",
+      "opec-2022-october",
+      "g7-2022-oil-cap",
+      "nvidia-2023-q1-outlook",
+      "fed-2023-june-hold",
+      "nvidia-2023-q2-outlook",
+      "israel-2023-october",
+      "nvidia-2024-q4-outlook",
+      "francine-2024-louisiana",
+      "nvidia-2025-h20"
+    ],
+    "watch_outcomes": [
+      {
+        "event_id": "opec-2020-april",
+        "status": "simulated_reference_path",
+        "net_pnl_gbp": "-0.2746"
+      },
+      {
+        "event_id": "laura-2020-louisiana",
+        "status": "unsettled_reference_path",
+        "net_pnl_gbp": null
+      },
+      {
+        "event_id": "opec-2021-july",
+        "status": "simulated_reference_path",
+        "net_pnl_gbp": "0.0669"
+      },
+      {
+        "event_id": "ida-2021-louisiana",
+        "status": "unsettled_reference_path",
+        "net_pnl_gbp": null
+      }
+    ]
+  },
+  "after": {
+    "events": 51,
+    "event_market_pairs": 151,
+    "numeric_daily_references": 26074,
+    "simulation_default": {
+      "rule": "event_long",
+      "horizon": 5,
+      "cost": "declared",
+      "attempts": 151,
+      "complete": 69,
+      "missing_or_not_triggered": 82,
+      "positive": 34,
+      "negative": 35,
+      "flat": 0,
+      "median_net_pnl_gbp": "-0.0024",
+      "minimum_net_pnl_gbp": "-1.3305",
+      "maximum_net_pnl_gbp": "1.3650",
+      "reasons": {
+        "conversion_context_not_independent_signal": 32,
+        "missing_exact_date_GBP_FX": 18,
+        "no_later_numeric_price": 31,
+        "nonpositive_price_not_a_supported_fractional_exposure": 1
+      }
+    },
+    "simulation_blockers": {
+      "fewer_than_eight_independent_qualified_cases": 50,
+      "no_verified_executable_quote_or_instrument": 51,
+      "original_news_receipt_and_version_unproven": 51,
+      "original_price_and_FX_availability_unproven": 51
+    },
+    "learning": {
+      "retained_test_events": 21,
+      "research_watch": 4,
+      "research_no_action": 17,
+      "settled_diagnostic_hypotheses": 2,
+      "positive": 1,
+      "negative": 1,
+      "flat": 0,
+      "directional_false_positives": 1,
+      "missing_or_unsettled_signals": 2,
+      "conditional_hit_fraction": "0.5000",
+      "fixed_baseline_settled": 10,
+      "fixed_baseline_positive": 6,
+      "fixed_baseline_negative": 4,
+      "calibration": null,
+      "calibration_reason": "No probabilistic forecasts issued; a conditional historical hit fraction is not calibrated predictive accuracy.",
+      "qualified_candidate_cohorts": 0,
+      "supported_entries": 0,
+      "validated_buy": 0,
+      "validated_no_action": 21,
+      "repeatable_pattern_established": false,
+      "point_in_time_safe": false
+    },
+    "fold_sizes": {
+      "training": 7,
+      "validation": 11
+    },
+    "heldout_event_ids": [
+      "fed-2020-emergency-cut",
+      "who-2020-pandemic",
+      "opec-2020-april",
+      "laura-2020-louisiana",
+      "zeta-2020-louisiana",
+      "pfizer-2020-interim",
+      "opec-2021-july",
+      "ida-2021-louisiana",
+      "russia-2022-invasion",
+      "iea-2022-emergency-release",
+      "eu-2022-oil-embargo",
+      "fed-2022-june-hike",
+      "opec-2022-october",
+      "g7-2022-oil-cap",
+      "nvidia-2023-q1-outlook",
+      "fed-2023-june-hold",
+      "nvidia-2023-q2-outlook",
+      "israel-2023-october",
+      "nvidia-2024-q4-outlook",
+      "francine-2024-louisiana",
+      "nvidia-2025-h20"
+    ],
+    "watch_outcomes": [
+      {
+        "event_id": "opec-2020-april",
+        "status": "simulated_reference_path",
+        "net_pnl_gbp": "-0.2746"
+      },
+      {
+        "event_id": "laura-2020-louisiana",
+        "status": "unsettled_reference_path",
+        "net_pnl_gbp": null
+      },
+      {
+        "event_id": "opec-2021-july",
+        "status": "simulated_reference_path",
+        "net_pnl_gbp": "0.0669"
+      },
+      {
+        "event_id": "ida-2021-louisiana",
+        "status": "unsettled_reference_path",
+        "net_pnl_gbp": null
+      }
+    ]
+  },
+  "comparison": {
+    "exact_simulation_results_unchanged": true,
+    "exact_learning_results_unchanged": true,
+    "heldout_membership_unchanged": true,
+    "new_settled_simulation_cases": 0,
+    "new_settled_learning_signals": 0,
+    "new_supported_entries": 0,
+    "predictive_improvement_demonstrated": false,
+    "reason": "Published period averages and IPO facts add reference context; they cannot replace absent daily adjusted histories, original timestamps or executable quotes. Unchanged performance is a negative result, not evidence of a successful predictor."
+  },
+  "ipo_research_reserve": [
+    {
+      "id": "ipo-etsy-2015",
+      "episode_id": "ipo-etsy-2015",
+      "event_day": "2015-04-15",
+      "document_day": "2015-04-15",
+      "first_session": "2015-04-16",
+      "unit": "USD/share",
+      "offer_price": "16.00",
+      "reported_first_close": null,
+      "evaluation_membership": "separate_research_reserve",
+      "status": "missing_reaction",
+      "offer_to_first_close_percent": null,
+      "direction": null,
+      "historical_research_partition": "pre_2016",
+      "original_vintage_verified": false,
+      "sources": [
+        "https://investors.etsy.com/news-events/press-releases/detail/203/etsy-announces-pricing-of-initial-public-offering"
+      ]
+    },
+    {
+      "id": "ipo-lyft-2019",
+      "episode_id": "ipo-lyft-2019",
+      "event_day": "2019-03-29",
+      "document_day": null,
+      "first_session": "2019-03-29",
+      "unit": "USD/share",
+      "offer_price": "72.00",
+      "reported_first_close": "78.29",
+      "evaluation_membership": "separate_research_reserve",
+      "status": "reported_reference_only_not_a_trade",
+      "offer_to_first_close_percent": "8.7361",
+      "direction": "positive",
+      "historical_research_partition": "2016_2019",
+      "original_vintage_verified": false,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1759509/000175950924000019/lyft-20231231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1759509/000175950924000019/lyft-20231231.htm"
+      ]
+    },
+    {
+      "id": "ipo-uber-2019",
+      "episode_id": "ipo-uber-2019",
+      "event_day": "2019-05-09",
+      "document_day": "2019-05-09",
+      "first_session": "2019-05-10",
+      "unit": "USD/share",
+      "offer_price": "45.00",
+      "reported_first_close": "41.57",
+      "evaluation_membership": "separate_research_reserve",
+      "status": "reported_reference_only_not_a_trade",
+      "offer_to_first_close_percent": "-7.6222",
+      "direction": "negative",
+      "historical_research_partition": "2016_2019",
+      "original_vintage_verified": false,
+      "sources": [
+        "https://investor.uber.com/news-events/news/press-release-details/2019/Uber-Announces-Pricing-of-Initial-Public-Offering/default.aspx",
+        "https://www.investing.com/news/stock-market-news/uber-chief-executive-laments-us-trade-policy-for-lackluster-ipo-1894685"
+      ]
+    },
+    {
+      "id": "ipo-wework-2019",
+      "episode_id": "ipo-wework-2019",
+      "event_day": "2019-09-30",
+      "document_day": "2019-09-30",
+      "first_session": null,
+      "unit": null,
+      "offer_price": null,
+      "reported_first_close": null,
+      "evaluation_membership": "separate_research_reserve",
+      "status": "no_completed_listing",
+      "offer_to_first_close_percent": null,
+      "direction": null,
+      "historical_research_partition": "2016_2019",
+      "original_vintage_verified": false,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1533523/000119312519258913/d808793drw.htm"
+      ]
+    },
+    {
+      "id": "ipo-ant-2020",
+      "episode_id": "ipo-ant-2020",
+      "event_day": "2020-11-03",
+      "document_day": "2020-11-03",
+      "first_session": null,
+      "unit": null,
+      "offer_price": null,
+      "reported_first_close": null,
+      "evaluation_membership": "separate_research_reserve",
+      "status": "no_completed_listing",
+      "offer_to_first_close_percent": null,
+      "direction": null,
+      "historical_research_partition": "2020_onward",
+      "original_vintage_verified": false,
+      "sources": [
+        "https://english.sse.com.cn/news/newsrelease/c/5253317.shtml"
+      ]
+    },
+    {
+      "id": "ipo-airbnb-2020",
+      "episode_id": "ipo-airbnb-2020",
+      "event_day": "2020-12-09",
+      "document_day": "2020-12-09",
+      "first_session": "2020-12-10",
+      "unit": "USD/share",
+      "offer_price": "68.00",
+      "reported_first_close": "144.71",
+      "evaluation_membership": "separate_research_reserve",
+      "status": "reported_reference_only_not_a_trade",
+      "offer_to_first_close_percent": "112.8088",
+      "direction": "positive",
+      "historical_research_partition": "2020_onward",
+      "original_vintage_verified": false,
+      "sources": [
+        "https://www.prnewswire.com/news-releases/airbnb-announces-pricing-of-initial-public-offering-301190081.html",
+        "https://www.sec.gov/Archives/edgar/data/1559720/000155972021000010/airbnb-10k.htm"
+      ]
+    },
+    {
+      "id": "ipo-deliveroo-2021",
+      "episode_id": "ipo-deliveroo-2021",
+      "event_day": "2021-03-31",
+      "document_day": "2021-03-31",
+      "first_session": "2021-03-31",
+      "unit": "GBp/share",
+      "offer_price": "390",
+      "reported_first_close": "287.45",
+      "evaluation_membership": "separate_research_reserve",
+      "status": "reported_reference_only_not_a_trade",
+      "offer_to_first_close_percent": "-26.2949",
+      "direction": "negative",
+      "historical_research_partition": "2020_onward",
+      "original_vintage_verified": false,
+      "sources": [
+        "https://www.standard.co.uk/news/uk/deliveroo-city-traders-london-stock-exchange-city-aj-bell-b927366.html",
+        "https://www.standard.co.uk/news/uk/deliveroo-city-traders-london-stock-exchange-city-aj-bell-b927366.html"
+      ]
+    },
+    {
+      "id": "ipo-arm-2023",
+      "episode_id": "ipo-arm-2023",
+      "event_day": "2023-09-13",
+      "document_day": "2023-09-14",
+      "first_session": "2023-09-14",
+      "unit": "USD/ADS",
+      "offer_price": "51.00",
+      "reported_first_close": "63.59",
+      "evaluation_membership": "separate_research_reserve",
+      "status": "reported_reference_only_not_a_trade",
+      "offer_to_first_close_percent": "24.6863",
+      "direction": "positive",
+      "historical_research_partition": "2020_onward",
+      "original_vintage_verified": false,
+      "sources": [
+        "https://newsroom.arm.com/news/arm-announces-pricing-of-initial-public-offering",
+        "https://apnews.com/article/arm-holdings-softbank-ipo-nasdaq-a85acb60095f29d1c3689c2d669d7cd8"
+      ]
+    }
+  ],
+  "oil_average_crosscheck": [
+    {
+      "instrument": "brent",
+      "period": "2020-04",
+      "world_bank_published_average": "23.3",
+      "EIA_numeric_observations": 20,
+      "EIA_explicit_unavailable": 2,
+      "retained_EIA_arithmetic_average": "18.3785",
+      "difference_USD_per_barrel": "4.9215",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "brent",
+      "period": "2020-05",
+      "world_bank_published_average": "31.0",
+      "EIA_numeric_observations": 19,
+      "EIA_explicit_unavailable": 2,
+      "retained_EIA_arithmetic_average": "29.3789",
+      "difference_USD_per_barrel": "1.6211",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "brent",
+      "period": "2020-06",
+      "world_bank_published_average": "39.9",
+      "EIA_numeric_observations": 22,
+      "EIA_explicit_unavailable": 0,
+      "retained_EIA_arithmetic_average": "40.2668",
+      "difference_USD_per_barrel": "-0.3668",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "brent",
+      "period": "2020-07",
+      "world_bank_published_average": "42.8",
+      "EIA_numeric_observations": 23,
+      "EIA_explicit_unavailable": 0,
+      "retained_EIA_arithmetic_average": "43.2422",
+      "difference_USD_per_barrel": "-0.4422",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "brent",
+      "period": "2020-08",
+      "world_bank_published_average": "44.3",
+      "EIA_numeric_observations": 20,
+      "EIA_explicit_unavailable": 1,
+      "retained_EIA_arithmetic_average": "44.7360",
+      "difference_USD_per_barrel": "-0.4360",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "brent",
+      "period": "2020-09",
+      "world_bank_published_average": "41.1",
+      "EIA_numeric_observations": 22,
+      "EIA_explicit_unavailable": 0,
+      "retained_EIA_arithmetic_average": "40.9095",
+      "difference_USD_per_barrel": "0.1905",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "brent",
+      "period": "2020-10",
+      "world_bank_published_average": "40.5",
+      "EIA_numeric_observations": 22,
+      "EIA_explicit_unavailable": 0,
+      "retained_EIA_arithmetic_average": "40.1895",
+      "difference_USD_per_barrel": "0.3105",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "brent",
+      "period": "2020-11",
+      "world_bank_published_average": "43.2",
+      "EIA_numeric_observations": 21,
+      "EIA_explicit_unavailable": 0,
+      "retained_EIA_arithmetic_average": "42.6924",
+      "difference_USD_per_barrel": "0.5076",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "wti",
+      "period": "2020-04",
+      "world_bank_published_average": "16.5",
+      "EIA_numeric_observations": 21,
+      "EIA_explicit_unavailable": 1,
+      "retained_EIA_arithmetic_average": "16.5476",
+      "difference_USD_per_barrel": "-0.0476",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "wti",
+      "period": "2020-05",
+      "world_bank_published_average": "28.6",
+      "EIA_numeric_observations": 20,
+      "EIA_explicit_unavailable": 1,
+      "retained_EIA_arithmetic_average": "28.5625",
+      "difference_USD_per_barrel": "0.0375",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "wti",
+      "period": "2020-06",
+      "world_bank_published_average": "38.3",
+      "EIA_numeric_observations": 22,
+      "EIA_explicit_unavailable": 0,
+      "retained_EIA_arithmetic_average": "38.3073",
+      "difference_USD_per_barrel": "-0.0073",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "wti",
+      "period": "2020-07",
+      "world_bank_published_average": "40.8",
+      "EIA_numeric_observations": 22,
+      "EIA_explicit_unavailable": 1,
+      "retained_EIA_arithmetic_average": "40.7105",
+      "difference_USD_per_barrel": "0.0895",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "wti",
+      "period": "2020-08",
+      "world_bank_published_average": "42.4",
+      "EIA_numeric_observations": 21,
+      "EIA_explicit_unavailable": 0,
+      "retained_EIA_arithmetic_average": "42.3390",
+      "difference_USD_per_barrel": "0.0610",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "wti",
+      "period": "2020-09",
+      "world_bank_published_average": "39.6",
+      "EIA_numeric_observations": 21,
+      "EIA_explicit_unavailable": 1,
+      "retained_EIA_arithmetic_average": "39.6343",
+      "difference_USD_per_barrel": "-0.0343",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "wti",
+      "period": "2020-10",
+      "world_bank_published_average": "39.5",
+      "EIA_numeric_observations": 22,
+      "EIA_explicit_unavailable": 0,
+      "retained_EIA_arithmetic_average": "39.3959",
+      "difference_USD_per_barrel": "0.1041",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    },
+    {
+      "instrument": "wti",
+      "period": "2020-11",
+      "world_bank_published_average": "41.1",
+      "EIA_numeric_observations": 19,
+      "EIA_explicit_unavailable": 2,
+      "retained_EIA_arithmetic_average": "40.9374",
+      "difference_USD_per_barrel": "0.1626",
+      "status": "different_aggregation_context_not_reconciliation_or_correction"
+    }
+  ],
+  "safeguards": {
+    "frozen_old_population": true,
+    "new_ipo_cases_used_for_fitting": 0,
+    "new_ipo_cases_used_for_evaluation": 0,
+    "account_mutations": 0,
+    "orders": 0,
+    "cost_GBP": "0.00"
+  },
+  "limitations": [
+    "Primary World Bank numerical tables, CC-BY 4.0 with attribution; visible transcription, not original PDF/XLS HTTP bytes.",
+    "Publication editions overlap; annual, quarter and monthly cells are not independent daily samples. No forward-filling or daily session reconstruction.",
+    "Original availability/version unverified even for a printed historical edition. As-of document filtering alone cannot prove a point-in-time backtest.",
+    "IPO cases are manually curated contrasts, not an unbiased cohort. First-day reported closes/offer prices do not establish retail allocations, ongoing returns, corporate actions or survivorship coverage.",
+    "Complete daily adjusted Nvidia/AMD/biotech/index/gold histories remain unconnected under verified public-use terms; no paid/free-tier account assumed.",
+    "Prior heldout outcomes are already examined; rerun is a regression audit, not an independent prospective validation. No predictive performance improvement or calibrated accuracy established."
+  ]
+}
