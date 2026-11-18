@@ -261,4 +261,19 @@ class DailyPricesTests(unittest.TestCase):
         self.assertEqual(result['five_observation_reference_windows'],0)
 
 
+    def test_real_label_cannot_hide_a_synthetic_component_in_an_assembled_history(self):
+        # Fabricated parser controls in a temporary DB only. Exercise both
+        # admission labels without publishing either as actual market history.
+        ids=[]
+        for day,control in [('20261117',False),('20261118',True)]:
+            raw=('Date,Code,Name,TradeVolume,TradeValue,OpeningPrice,HighestPrice,LowestPrice,ClosingPrice,Change,Transaction\n'+day+',2330,synthetic-only,100,10000,100,102,98,100,1,10\n').encode()
+            ident=dict(instrument='TWSE:2330',symbol='2330',venue='TWSE',asset_kind='equity',calendar_basis='SYNTHETIC parser control')
+            c=make_capture('twse_open_equities','https://www.twse.com.tw/exchangeReport/STOCK_DAY_ALL?response=open_data',raw,ident,'2026-11-18T18:00:00Z')
+            c['synthetic_control']=control
+            ids.append(import_capture(self.db,c,parse(raw,c),raw)['capture_id'])
+        for order in (ids,list(reversed(ids))):
+            with self.assertRaisesRegex(ValueError,'Real and synthetic'):
+                select_captures(self.db,order)
+
+
 if __name__=='__main__':unittest.main()

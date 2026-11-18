@@ -90,6 +90,7 @@ def select_captures(db,ids):
             require(first['price_basis']=='unadjusted_close_actions_unknown','Cannot splice unknown provider adjustment vintages')
         for cid,s in parts:
             c=s['capture']
+            require(c['synthetic_control']==first['synthetic_control'],'Real and synthetic captures cannot share an assembled history')
             require(all(c[k]==first[k] for k in ('source_id','symbol','venue','currency','unit','price_basis','asset_kind')),'Mixed identity/provider/currency/price basis')
             for row in s['rows']:
                 previous=by_day.get(row['date'])
