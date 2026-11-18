@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "kind": "daily_price_acquisition_and_separate_evaluation_lanes",
+  "protocol": {
+    "schema_version": 1,
+    "version": "DATA-3/1",
+    "registered_on": "2026-11-18",
+    "examined_historical_test_from": "2020-01-01",
+    "examined_historical_test_through": "2026-11-17",
+    "prospective_from": "2026-11-19T00:00:00Z",
+    "historical_lane": "Expanded current-vintage prices on the same cases are retrospective diagnostics. Preserve the original SIM/LEARN exports and membership. Never label a new result on an examined 2020-2026 event as new validation.",
+    "learning_lane": "Pre-2020 train/validation may be recomputed with admitted observations; training/selection cannot inspect later price or event outcomes. Lock a model and signal before prospective outcome collection. All changed historical results remain exploratory.",
+    "prospective_lane": "Only events first recorded after registration and before outcomes may enter. Source event publication, local receipt and model/signal lock clocks are separate. No enrollment after its outcome window, retrospective backfill or test-set relabeling.",
+    "rules": [
+      "event_long",
+      "momentum_up",
+      "reversal_down"
+    ],
+    "horizons": [
+      1,
+      5,
+      20
+    ],
+    "selection": "Reuse LEARN-1 fixed candidates, train/validation cutoffs and cohort/episode embargo; no selection on old test returns. No threshold tuning in DATA-3.",
+    "costs": "Reuse all SIM-1 declared, zero, stressed and flat-fee cost scenarios; fixed no-trade and same-window hold baselines. Unknown FX/actions/calendar remain blocked.",
+    "minimum_context_observations": 6,
+    "maximum_event_to_lock_seconds": 86400,
+    "safety": "Reference hypotheses only. No numerical probability, supported Buy, paper-account mutation, live order or broker connection. Original availability and executable product checks remain mandatory.",
+    "registered_at": "2026-11-18T18:06:34.448483Z",
+    "max_entry_delay_calendar_days": 7,
+    "max_reporting_gap_calendar_days": 7
+  },
+  "source_acquisition_status": "blocked_no_admitted_daily_data",
+  "original_examined_evaluation": {
+    "preserved": true,
+    "before": {
+      "events": 51,
+      "event_market_pairs": 151,
+      "numeric_daily_observations": 26074,
+      "default_simulation": {
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "attempts": 151,
+        "complete": 69,
+        "missing_or_not_triggered": 82,
+        "positive": 34,
+        "negative": 35,
+        "flat": 0,
+        "median_net_pnl_gbp": "-0.0024",
+        "minimum_net_pnl_gbp": "-1.3305",
+        "maximum_net_pnl_gbp": "1.3650",
+        "reasons": {
+          "conversion_context_not_independent_signal": 32,
+          "missing_exact_date_GBP_FX": 18,
+          "no_later_numeric_price": 31,
+          "nonpositive_price_not_a_supported_fractional_exposure": 1
+        }
+      },
+      "learning": {
+        "retained_test_events": 21,
+        "research_watch": 4,
+        "research_no_action": 17,
+        "settled_diagnostic_hypotheses": 2,
+        "positive": 1,
+        "negative": 1,
+        "flat": 0,
+        "directional_false_positives": 1,
+        "missing_or_unsettled_signals": 2,
+        "conditional_hit_fraction": "0.5000",
+        "fixed_baseline_settled": 10,
+        "fixed_baseline_positive": 6,
+        "fixed_baseline_negative": 4,
+        "calibration": null,
+        "calibration_reason": "No probabilistic forecasts issued; a conditional historical hit fraction is not calibrated predictive accuracy.",
+        "qualified_candidate_cohorts": 0,
+        "supported_entries": 0,
+        "validated_buy": 0,
+        "validated_no_action": 21,
+        "repeatable_pattern_established": false,
+        "point_in_time_safe": false
+      },
+      "test_event_ids": [
+        "fed-2020-emergency-cut",
+        "who-2020-pandemic",
+        "opec-2020-april",
+        "laura-2020-louisiana",
+        "zeta-2020-louisiana",
+        "pfizer-2020-interim",
+        "opec-2021-july",
+        "ida-2021-louisiana",
+        "russia-2022-invasion",
+        "iea-2022-emergency-release",
+        "eu-2022-oil-embargo",
+        "fed-2022-june-hike",
+        "opec-2022-october",
+        "g7-2022-oil-cap",
+        "nvidia-2023-q1-outlook",
+        "fed-2023-june-hold",
+        "nvidia-2023-q2-outlook",
+        "israel-2023-october",
+        "nvidia-2024-q4-outlook",
+        "francine-2024-louisiana",
+        "nvidia-2025-h20"
+      ],
+      "training_event_ids": [
+        "humberto-2007-texas",
+        "dolly-2008-texas",
+        "ike-2008-galveston",
+        "eu-2012-iran",
+        "isaac-2012-louisiana",
+        "sandy-2012-new-jersey",
+        "opec-2014-target"
+      ],
+      "validation_event_ids": [
+        "brexit-2016-boe-response",
+        "opec-2016-algiers",
+        "merck-2017-epoch",
+        "harvey-2017-texas",
+        "equifax-2017-security",
+        "boe-2017-november-hike",
+        "us-2018-jcpoa",
+        "intel-2018-ceo",
+        "tesla-2018-governance",
+        "biogen-2019-futility",
+        "saudi-2019-abqaiq"
+      ],
+      "blocked_decisions": {
+        "fewer_than_eight_independent_qualified_cases": 50,
+        "no_verified_executable_quote_or_instrument": 51,
+        "original_news_receipt_and_version_unproven": 51,
+        "original_price_and_FX_availability_unproven": 51
+      },
+      "independent_training_cohorts": 3
+    }
+  },
+  "expanded_retrospective_diagnostics": {
+    "after": {
+      "events": 51,
+      "event_market_pairs": 151,
+      "numeric_daily_observations": 26074,
+      "default_simulation": {
+        "rule": "event_long",
+        "horizon": 5,
+        "cost": "declared",
+        "attempts": 151,
+        "complete": 69,
+        "missing_or_not_triggered": 82,
+        "positive": 34,
+        "negative": 35,
+        "flat": 0,
+        "median_net_pnl_gbp": "-0.0024",
+        "minimum_net_pnl_gbp": "-1.3305",
+        "maximum_net_pnl_gbp": "1.3650",
+        "reasons": {
+          "conversion_context_not_independent_signal": 32,
+          "missing_exact_date_GBP_FX": 18,
+          "no_later_numeric_price": 31,
+          "nonpositive_price_not_a_supported_fractional_exposure": 1
+        }
+      },
+      "learning": {
+        "retained_test_events": 21,
+        "research_watch": 4,
+        "research_no_action": 17,
+        "settled_diagnostic_hypotheses": 2,
+        "positive": 1,
+        "negative": 1,
+        "flat": 0,
+        "directional_false_positives": 1,
+        "missing_or_unsettled_signals": 2,
+        "conditional_hit_fraction": "0.5000",
+        "fixed_baseline_settled": 10,
+        "fixed_baseline_positive": 6,
+        "fixed_baseline_negative": 4,
+        "calibration": null,
+        "calibration_reason": "No probabilistic forecasts issued; a conditional historical hit fraction is not calibrated predictive accuracy.",
+        "qualified_candidate_cohorts": 0,
+        "supported_entries": 0,
+        "validated_buy": 0,
+        "validated_no_action": 21,
+        "repeatable_pattern_established": false,
+        "point_in_time_safe": false
+      },
+      "test_event_ids": [
+        "fed-2020-emergency-cut",
+        "who-2020-pandemic",
+        "opec-2020-april",
+        "laura-2020-louisiana",
+        "zeta-2020-louisiana",
+        "pfizer-2020-interim",
+        "opec-2021-july",
+        "ida-2021-louisiana",
+        "russia-2022-invasion",
+        "iea-2022-emergency-release",
+        "eu-2022-oil-embargo",
+        "fed-2022-june-hike",
+        "opec-2022-october",
+        "g7-2022-oil-cap",
+        "nvidia-2023-q1-outlook",
+        "fed-2023-june-hold",
+        "nvidia-2023-q2-outlook",
+        "israel-2023-october",
+        "nvidia-2024-q4-outlook",
+        "francine-2024-louisiana",
+        "nvidia-2025-h20"
+      ],
+      "training_event_ids": [
+        "humberto-2007-texas",
+        "dolly-2008-texas",
+        "ike-2008-galveston",
+        "eu-2012-iran",
+        "isaac-2012-louisiana",
+        "sandy-2012-new-jersey",
+        "opec-2014-target"
+      ],
+      "validation_event_ids": [
+        "brexit-2016-boe-response",
+        "opec-2016-algiers",
+        "merck-2017-epoch",
+        "harvey-2017-texas",
+        "equifax-2017-security",
+        "boe-2017-november-hike",
+        "us-2018-jcpoa",
+        "intel-2018-ceo",
+        "tesla-2018-governance",
+        "biogen-2019-futility",
+        "saudi-2019-abqaiq"
+      ],
+      "blocked_decisions": {
+        "fewer_than_eight_independent_qualified_cases": 50,
+        "no_verified_executable_quote_or_instrument": 51,
+        "original_news_receipt_and_version_unproven": 51,
+        "original_price_and_FX_availability_unproven": 51
+      },
+      "independent_training_cohorts": 3
+    },
+    "admission": {
+      "added_instruments": [],
+      "blocked": [],
+      "note": "Provider-adjusted references support retrospective ratios only; reference units are not historical executable share allocations. No raw/adjusted/provider splicing or inferred corporate adjustments."
+    },
+    "label": "EXPLORATORY: same previously examined historical cases; not new validation",
+    "new_numeric_observations": 0,
+    "new_settled_paths": 0,
+    "distinct_curated_episode_ids": 43,
+    "target_pairs_with_daily_series": 0,
+    "new_qualified_cohorts": 0,
+    "supported_entries": 0,
+    "predictive_improvement_demonstrated": false,
+    "explanation": "More historical coverage or changed retrospective P&L cannot establish new predictive performance. No rule or threshold may be selected on examined test returns."
+  },
+  "costs_and_baselines": {
+    "rule_cost_summaries_evaluated": 36,
+    "all_scenarios_unchanged": true,
+    "changed_summaries": [],
+    "passive_original": [
+      {
+        "market": "brent",
+        "status": "unsupported_continuous_path",
+        "start": "2006-01-03",
+        "end": "2026-11-06",
+        "reason": "Every intermediate exact-date FX and positive reference is required; no repairing missing dates.",
+        "gross_return_percent": null
+      },
+      {
+        "market": "wti",
+        "status": "unsupported_continuous_path",
+        "start": "2006-01-03",
+        "end": "2026-11-06",
+        "reason": "Every intermediate exact-date FX and positive reference is required; no repairing missing dates.",
+        "gross_return_percent": null
+      },
+      {
+        "market": "eurusd",
+        "status": "unsupported_continuous_path",
+        "start": "2006-01-03",
+        "end": "2026-11-13",
+        "reason": "Every intermediate exact-date FX and positive reference is required; no repairing missing dates.",
+        "gross_return_percent": null
+      }
+    ],
+    "passive_expanded": [
+      {
+        "market": "brent",
+        "status": "unsupported_continuous_path",
+        "start": "2006-01-03",
+        "end": "2026-11-06",
+        "reason": "Every intermediate exact-date FX and positive reference is required; no repairing missing dates.",
+        "gross_return_percent": null
+      },
+      {
+        "market": "wti",
+        "status": "unsupported_continuous_path",
+        "start": "2006-01-03",
+        "end": "2026-11-06",
+        "reason": "Every intermediate exact-date FX and positive reference is required; no repairing missing dates.",
+        "gross_return_percent": null
+      },
+      {
+        "market": "eurusd",
+        "status": "unsupported_continuous_path",
+        "start": "2006-01-03",
+        "end": "2026-11-13",
+        "reason": "Every intermediate exact-date FX and positive reference is required; no repairing missing dates.",
+        "gross_return_percent": null
+      }
+    ],
+    "no_trade_original": {
+      "initial_cash_gbp": "50",
+      "final_cash_gbp": "50",
+      "net_pnl_gbp": "0",
+      "drawdown_percent": "0"
+    },
+    "no_trade_expanded": {
+      "initial_cash_gbp": "50",
+      "final_cash_gbp": "50",
+      "net_pnl_gbp": "0",
+      "drawdown_percent": "0"
+    },
+    "original_complete_results": "simulations/report.json; frozen parent remains unchanged"
+  },
+  "genuinely_new_evaluation": {
+    "kind": "prospective_pre_outcome_journal",
+    "from_timestamp": "2026-11-19T00:00:00Z",
+    "events": 0,
+    "independent_episodes": 0,
+    "research_watch": 0,
+    "research_no_action": 0,
+    "matured_reference_outcomes": 0,
+    "settlement_versions": 0,
+    "synthetic_control_events": 0,
+    "calibrated_accuracy": null,
+    "predictive_edge_established": false,
+    "note": "Unique pre-outcome locks only; price revisions do not create independent evaluations. Gross reference movements do not establish costed/executable trade outcomes."
+  },
+  "previously_inspected_ipo_reserve": {
+    "events": 8,
+    "five_observation_reference_windows": 0,
+    "used_for_new_validation": false,
+    "records": [
+      {
+        "event_id": "ipo-etsy-2015",
+        "episode_id": "ipo-etsy-2015",
+        "symbol": "ETSY",
+        "source_status": "priced",
+        "status": "missing_daily_price_series",
+        "horizons": {}
+      },
+      {
+        "event_id": "ipo-lyft-2019",
+        "episode_id": "ipo-lyft-2019",
+        "symbol": "LYFT",
+        "source_status": "traded",
+        "status": "original_publication_day_unknown",
+        "horizons": {}
+      },
+      {
+        "event_id": "ipo-uber-2019",
+        "episode_id": "ipo-uber-2019",
+        "symbol": "UBER",
+        "source_status": "traded",
+        "status": "missing_daily_price_series",
+        "horizons": {}
+      },
+      {
+        "event_id": "ipo-wework-2019",
+        "episode_id": "ipo-wework-2019",
+        "symbol": null,
+        "source_status": "withdrawal_requested",
+        "status": "uncompleted_listing_no_invented_fill",
+        "horizons": {}
+      },
+      {
+        "event_id": "ipo-ant-2020",
+        "episode_id": "ipo-ant-2020",
+        "symbol": null,
+        "source_status": "suspended_before_listing",
+        "status": "uncompleted_listing_no_invented_fill",
+        "horizons": {}
+      },
+      {
+        "event_id": "ipo-airbnb-2020",
+        "episode_id": "ipo-airbnb-2020",
+        "symbol": "ABNB",
+        "source_status": "traded",
+        "status": "missing_daily_price_series",
+        "horizons": {}
+      },
+      {
+        "event_id": "ipo-deliveroo-2021",
+        "episode_id": "ipo-deliveroo-2021",
+        "symbol": "ROO",
+        "source_status": "traded",
+        "status": "missing_daily_price_series",
+        "horizons": {}
+      },
+      {
+        "event_id": "ipo-arm-2023",
+        "episode_id": "ipo-arm-2023",
+        "symbol": "ARM",
+        "source_status": "traded",
+        "status": "missing_daily_price_series",
+        "horizons": {}
+      }
+    ],
+    "note": "DATA-2 contrast cases were already inspected. These are exploratory close-reference windows after a conservative publication bound, not offer allocations, total-return guarantees or new holdout results."
+  },
+  "raw_daily_captures": {
+    "instruments": 0,
+    "rows": 0,
+    "real_numeric": 0,
+    "explicit_unavailable": 0,
+    "synthetic_control_rows": 0,
+    "source_rights_verified": null
+  },
+  "missingness": {
+    "scope": "Only wider-asset targets lacking a baseline daily series; existing oil/FX coverage remains in the frozen simulation summary.",
+    "requested_wider_asset_cases": 31,
+    "reasons": {
+      "missing_exact_daily_series": 31
+    },
+    "note": "Absent records remain missing. A blank, missing trade, suspension, delisting and holiday are different; no calendar status inferred."
+  },
+  "safeguards": {
+    "original_price_writes": 0,
+    "parent_report_writes": 0,
+    "account_mutations": 0,
+    "orders": 0,
+    "paid_services": 0,
+    "cost_GBP": "0.00"
+  },
+  "limitations": [
+    "New historical references are current-vintage unless original receipt/version evidence is actually obtained.",
+    "Corporate actions, exact identity/FX, delisted/null observations and actual source gaps must be reviewed; an anonymous HTTP 200 is not validation.",
+    "Source rights are resource-specific; a free download, public repo, third-party CC label or accessible HTML is not proof of permitted daily-price reuse.",
+    "Unique episode IDs and embargoes reduce duplication; they do not prove statistical independence.",
+    "No test on the examined 2020–2026 corpus is advertised as genuinely new. Prospective reserve has no outcomes yet."
+  ]
+}

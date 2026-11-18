@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-11-18",
+  "sources": {
+    "nasdaq_wiki": {
+      "publisher": "Nasdaq Data Link / Quandl community",
+      "metadata": "https://data.nasdaq.com/databases/WIKIP",
+      "rights_url": "https://data.nasdaq.com/databases/WIKIP",
+      "rights": {"status":"verified","license":"public_domain","redistribution":true,"evidence":"Publisher describes WIKI prices, dividends and splits as released into the public domain. This does not cover other Nasdaq products.","checked_on":"2026-11-18"},
+      "host": "data.nasdaq.com", "path_prefix": "/api/v3/datasets/WIKI/", "parser":"wiki",
+      "currency":"USD", "unit":"per_share", "asset_kinds":["equity"],
+      "basis":"unadjusted_close_with_reported_actions",
+      "limitation":"Frozen archive, last observations generally March 2018; publisher withdrew active support in April 2018 and advises against use for investment or analysis. Missingness, errors, survivorship and historical adjustment vintages require review. Current documentation requires login for API/export; no key/account is configured or permitted here.",
+      "probe_url":"https://data.nasdaq.com/api/v3/datasets/WIKI/NVDA.csv?start_date=2015-01-01&end_date=2015-03-31"
+    },
+    "twse_open_index": {
+      "publisher":"Taiwan Stock Exchange / government open-data catalogue",
+      "metadata":"https://data.gov.tw/en/datasets/11755",
+      "rights_url":"https://data.gov.tw/license",
+      "rights":{"status":"verified","license":"OGDL-1.0","redistribution":true,"evidence":"Government catalogue explicitly releases Weighted Stock Price Index Historical Data under Open Government Data License 1.0, free, with attribution. Scope is the linked open-data resource, not every exchange website product.","checked_on":"2026-11-18"},
+      "host":"www.twse.com.tw", "path_prefix":"/indicesReport/MI_5MINS_HIST", "parser":"twse_index",
+      "currency":"TWD", "unit":"index_points", "asset_kinds":["index"],
+      "basis":"unadjusted_close_actions_unknown",
+      "limitation":"TAIEX index points, not an ETF or US/UK benchmark; not executable. ROC dates require exact conversion. Historical/date-parameter coverage must be verified from a real response, never inferred from a current snapshot.",
+      "probe_url":"https://www.twse.com.tw/indicesReport/MI_5MINS_HIST?response=json&date=20200301"
+    },
+    "twse_open_equities": {
+      "publisher":"Taiwan Stock Exchange / government open-data catalogue",
+      "metadata":"https://data.gov.tw/en/datasets/11549",
+      "rights_url":"https://data.gov.tw/license",
+      "rights":{"status":"verified","license":"OGDL-1.0","redistribution":true,"evidence":"Government catalogue explicitly releases daily listed-stock trading information under OGDL 1.0, free with attribution. Only the linked STOCK_DAY_ALL open-data resource is admitted; historic website endpoints are not assumed licensed by association.","checked_on":"2026-11-18"},
+      "host":"www.twse.com.tw", "path_prefix":"/exchangeReport/STOCK_DAY_ALL", "parser":"twse_current",
+      "currency":"TWD", "unit":"per_share", "asset_kinds":["equity","gold_etf_proxy","equity_index_etf_proxy"],
+      "basis":"unadjusted_close_actions_unknown",
+      "limitation":"Current dated snapshot does not establish historical depth. Actions/dividends and delisting coverage are unknown. Taiwan-listed native shares differ from US ADRs. Gold/index ETFs must retain exact identities and proxy/roll/currency risks.",
+      "probe_url":"https://www.twse.com.tw/exchangeReport/STOCK_DAY_ALL?response=open_data"
+    }
+  },
+  "not_admitted": [
+    {"id":"nasdaq_quotes","url":"https://www.nasdaq.com/terms-of-use","reason":"Public historical page/API is not a verified permission for bulk retrieval/redistribution. Actual access must be measured; no changed identities or access-control bypass."},
+    {"id":"yahoo","url":"https://legal.yahoo.com/us/en/yahoo/terms/otos/index.html","reason":"Personal use/access conditions do not establish a public historical-price redistribution licence. No crumb/session/account workarounds or unofficial authenticated route."},
+    {"id":"stooq","url":"https://stooq.com/terms.html","reason":"Actual challenge/policy denials and adjustment/redistribution rights remain unresolved. A third-party CC0 label does not override original rights."},
+    {"id":"spdr_gold_archive","url":"https://www.spdrgoldshares.com/terms-and-conditions/","reason":"Personal non-commercial save/display permission; broader copying, derivative use and redistribution need written permission. LBMA information separately restricted. Downloadable XLSX is not an open licence."},
+    {"id":"hf_data_library","url":"https://hfdatalibrary.com/pages/terms","reason":"CC BY compilation remains subject to IEX terms, academic/educational purpose and required account. Single-venue split-adjusted bars are not a consolidated exchange close. No signup/key is authorized."},
+    {"id":"public_dataset_mirrors","reason":"Require independently verified original rights, identity, adjustment semantics and access. Do not use a mirror/proxy to bypass a denied provider or treat synthetic/testing fixtures as market history."}
+  ]
+}

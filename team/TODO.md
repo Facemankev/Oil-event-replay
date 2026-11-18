@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] DATA-3: Verified free daily equity/ETF-index/gold/IPO histories, rights-aware imports, separate historical/new evaluation ([Issue #51](https://github.com/Facemankev/Oil-event-replay/issues/51)), stacked on #50; preserve original tests/UI/prices, no paid source/key/merge — **Dad — Doing** — 2026-11-18
+
 
 
 
