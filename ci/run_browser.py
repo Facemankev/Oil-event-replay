@@ -61,6 +61,9 @@ def main():
         (output/'results.json').write_text(json.dumps(records,indent=2)+'\n')
         (output/'summary.md').write_text(summary(records))
         print(f'{r["status"].upper()}: {r["suite"]} / {args.browser}',flush=True)
+        if r['exit_code']:
+            # Public local-fixture diagnostics, bounded; full log remains an artifact.
+            print((ROOT/r['log']).read_text(errors='replace')[-6000:],flush=True)
     if os.environ.get('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:f.write(summary(records))
     return 1 if any(r['exit_code']!=0 for r in records) else 0

@@ -18,6 +18,9 @@ class GateTests(unittest.TestCase):
         self.assertNotIn('branches',trigger);self.assertNotIn('paths',trigger)
         self.assertNotIn('pull_request_target',w['on'])
         self.assertEqual(w['permissions'],{'contents':'read'})
+        for job in ('offline','browser'):
+            checkout=next(s for s in w['jobs'][job]['steps'] if s.get('uses')=='actions/checkout@v4')
+            self.assertEqual(checkout['with']['fetch-depth'],0)
         gate=w['jobs']['required'];self.assertEqual(gate['needs'],['offline','browser'])
         self.assertEqual(gate['name'],'Market Ripple required checks')
         self.assertEqual(gate['if'],'${{ always() }}')
