@@ -27,6 +27,9 @@ def number(value,positive=False):
 
 
 def validate_capture(c):
+    if c.get('source_id')=='stooq_owner_csv':
+        from .stooq import validate_private_capture
+        return validate_private_capture(c)
     catalog=json.loads((Path(__file__).with_name('providers.json')).read_text())['sources']
     require(c['source_id'] in catalog,'Unknown source: self-asserted licence cannot admit prices')
     spec=catalog[c['source_id']];url=urlsplit(c['url'])
@@ -57,7 +60,13 @@ def validate_capture(c):
 
 
 def validate_rows(rows,capture):
-    validate_capture(capture);require(rows,'Empty/challenge data is not a successful import');seen=set();last=None
+    validate_capture(capture)
+    return validate_content(rows,capture)
+
+
+def validate_content(rows,capture):
+    """Inspect supplied bytes without granting source rights or database admission."""
+    require(rows,'Empty/challenge data is not a successful import');seen=set();last=None
     for r in rows:
         d=date.fromisoformat(r['date']);require(r['date']<=capture['retrieved_at'][:10],'Source contains a future daily date')
         if capture['source_id']=='nasdaq_wiki':require(r['date']<='2018-04-11','Frozen WIKI archive cannot provide new prices')

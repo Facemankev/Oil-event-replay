@@ -111,6 +111,7 @@ def ipo_coverage(selections):
 
 def build_report(selections=None,new_evaluation=None):
     selections=selections or {}
+    require(all(s['capture'].get('usage_scope')!='private_research' for s in selections.values()),'Private source data cannot enter a public report')
     require(all(not s['capture']['synthetic_control'] for s in selections.values()),'Synthetic controls cannot enter a published historical evaluation')
     before=load_free_library();after,admission=enrich(before,selections)
     s0=simulate(before);l0=learn(before)

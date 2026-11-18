@@ -30,6 +30,12 @@ class GateTests(unittest.TestCase):
         install=next(s for s in browser['steps'] if s.get('name')=='Install pinned real browser engine')
         run=next(s for s in browser['steps'] if s.get('name')=='All required fixture-only browser suites')
         self.assertEqual(install['timeout-minutes'],25);self.assertEqual(run['timeout-minutes'],8)
+        self.assertRegex(browser['container']['image'],r'^mcr\.microsoft\.com/playwright/python:v1\.64\.1-noble@sha256:[a-f0-9]{64}$')
+        self.assertEqual(browser['env']['PLAYWRIGHT_BROWSERS_PATH'],'/ms-playwright')
+        self.assertIn('playwright==1.64.1',install['run'])
+        self.assertIn('executable.is_file()',install['run'])
+        self.assertIn('safe.directory "$GITHUB_WORKSPACE"',install['run'])
+        self.assertNotIn('playwright install --with-deps',install['run'])
 
     def test_matching_export_uses_the_databases_built_by_this_job(self):
         from ci.offline_checks import commands

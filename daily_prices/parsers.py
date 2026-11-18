@@ -65,6 +65,11 @@ def parse_twse_current(payload,capture):
 
 
 def parse(payload,capture):
+    if capture['source_id']=='stooq_owner_csv':
+        from .stooq import parse_supplied
+        from .model import validate_capture
+        validate_capture(capture)
+        return parse_supplied(payload,capture)
     if capture['source_id']=='nasdaq_wiki':return parse_csv(payload,capture,'wiki')
     if capture['source_id']=='twse_open_index':return parse_twse_index(payload,capture)
     if capture['source_id']=='twse_open_equities':return parse_twse_current(payload,capture)

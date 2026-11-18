@@ -91,7 +91,7 @@
         },
         {
           "name": "Install pinned real browser engine",
-          "run": "python3 -m pip install playwright==1.64.1\npython3 -m playwright install --with-deps ${{ matrix.engine }}\nif [ \"${{ matrix.engine }}\" = \"chromium\" ]; then\n  ci_chromium_path=\"$(python3 -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')\"\n  sudo ln -sf \"$ci_chromium_path\" /usr/bin/chromium\nfi",
+          "run": "git config --global --add safe.directory \"$GITHUB_WORKSPACE\"\npython3 -m pip install playwright==1.64.1\npython3 - <<'PYBROWSER'\nimport os\nfrom pathlib import Path\nfrom playwright.sync_api import sync_playwright\nwith sync_playwright() as p:\n    engine = os.environ['CI_BROWSER_ENGINE']\n    executable = Path(getattr(p, engine).executable_path)\n    if not executable.is_file() or not os.access(executable, os.X_OK):\n        raise RuntimeError('Pinned real browser is absent from the official image')\n    if engine == 'chromium':\n        link = Path('/usr/bin/chromium')\n        link.unlink(missing_ok=True)\n        link.symlink_to(executable)\nPYBROWSER",
           "timeout-minutes": 25
         },
         {
@@ -115,7 +115,20 @@
           },
           "timeout-minutes": 3
         }
-      ]
+      ],
+      "container": {
+        "image": "mcr.microsoft.com/playwright/python:v1.64.1-noble@sha256:330d401ae23c905896a0c26c66c36fc971b621519e7b11b435a8328d7bf6e031",
+        "options": "--ipc=host"
+      },
+      "defaults": {
+        "run": {
+          "shell": "bash"
+        }
+      },
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "/ms-playwright",
+        "CI_BROWSER_ENGINE": "${{ matrix.engine }}"
+      }
     },
     "required": {
       "name": "Market Ripple required checks",

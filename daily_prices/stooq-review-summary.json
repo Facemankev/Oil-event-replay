@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "kind": "Stooq_owner_file_admission_audit",
+  "files": [
+    {
+      "symbol": "NVDA",
+      "rows": 6999,
+      "first_date": "1999-01-22",
+      "last_date": "2026-11-18",
+      "missing_volume": 1,
+      "unavailable_closes": 0,
+      "rows_on_reviewed_exchange_closures": [],
+      "missing_dates_relative_to_supplied_SPY": [],
+      "extra_dates_relative_to_supplied_SPY": [
+        "2011-02-17"
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "rows": 11003,
+      "first_date": "1983-03-21",
+      "last_date": "2026-11-18",
+      "missing_volume": 1,
+      "unavailable_closes": 0,
+      "rows_on_reviewed_exchange_closures": [],
+      "missing_dates_relative_to_supplied_SPY": [],
+      "extra_dates_relative_to_supplied_SPY": [
+        "2011-02-17"
+      ]
+    },
+    {
+      "symbol": "MRNA",
+      "rows": 1998,
+      "first_date": "2018-12-07",
+      "last_date": "2026-11-18",
+      "missing_volume": 0,
+      "unavailable_closes": 0,
+      "rows_on_reviewed_exchange_closures": [],
+      "missing_dates_relative_to_supplied_SPY": [],
+      "extra_dates_relative_to_supplied_SPY": []
+    },
+    {
+      "symbol": "BMY",
+      "rows": 12573,
+      "first_date": "1977-01-03",
+      "last_date": "2026-11-18",
+      "missing_volume": 1,
+      "unavailable_closes": 0,
+      "rows_on_reviewed_exchange_closures": [],
+      "missing_dates_relative_to_supplied_SPY": [],
+      "extra_dates_relative_to_supplied_SPY": [
+        "2011-02-17"
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "rows": 5467,
+      "first_date": "2005-02-25",
+      "last_date": "2026-11-18",
+      "missing_volume": 0,
+      "unavailable_closes": 0,
+      "rows_on_reviewed_exchange_closures": [],
+      "missing_dates_relative_to_supplied_SPY": [],
+      "extra_dates_relative_to_supplied_SPY": []
+    },
+    {
+      "symbol": "GLD",
+      "rows": 5467,
+      "first_date": "2005-02-25",
+      "last_date": "2026-11-18",
+      "missing_volume": 0,
+      "unavailable_closes": 0,
+      "rows_on_reviewed_exchange_closures": [],
+      "missing_dates_relative_to_supplied_SPY": [],
+      "extra_dates_relative_to_supplied_SPY": []
+    }
+  ],
+  "rows_inspected": 43507,
+  "rows_imported": 43507,
+  "approved_price_rows": 0,
+  "private_use_scope": "reviewed_private_quarantine_only",
+  "adjustment_basis_verified": false,
+  "source_identity_verified": false,
+  "exchange_calendar_scope": "NYSE/Arca 2023-2026 only",
+  "new_direct_event_pairs_with_price_coverage": 4,
+  "direct_horizon_windows_with_price_coverage": 12,
+  "new_eligible_historical_examples": 0,
+  "new_independent_events": 0,
+  "new_supported_buys": 0,
+  "learning_holdout_changed": false,
+  "prospective_predictions": 0,
+  "actual_price_or_return_values_published": 0,
+  "status": "Private quarantine and diagnostics only. Public redistribution, training and approved-price promotion remain blocked.",
+  "source_terms": "https://stooq.com/t/",
+  "terms_result": "Owner supplied terms text after direct pages returned browser verification. Section 5.3 requires consent for redistribution. No open/public/commercial/training permission claimed.",
+  "results_location": "Private work/ output only; not a GitHub artifact or dashboard dataset."
+}
