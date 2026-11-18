@@ -91,7 +91,7 @@
         },
         {
           "name": "Install pinned real browser engine",
-          "run": "python3 -m pip install playwright==1.64.1\npython3 - <<'PYBROWSER'\nimport os\nfrom pathlib import Path\nfrom playwright.sync_api import sync_playwright\nwith sync_playwright() as p:\n    engine = os.environ['CI_BROWSER_ENGINE']\n    executable = Path(getattr(p, engine).executable_path)\n    if not executable.is_file() or not os.access(executable, os.X_OK):\n        raise RuntimeError('Pinned real browser is absent from the official image')\n    if engine == 'chromium':\n        link = Path('/usr/bin/chromium')\n        link.unlink(missing_ok=True)\n        link.symlink_to(executable)\nPYBROWSER",
+          "run": "git config --global --add safe.directory \"$GITHUB_WORKSPACE\"\npython3 -m pip install playwright==1.64.1\npython3 - <<'PYBROWSER'\nimport os\nfrom pathlib import Path\nfrom playwright.sync_api import sync_playwright\nwith sync_playwright() as p:\n    engine = os.environ['CI_BROWSER_ENGINE']\n    executable = Path(getattr(p, engine).executable_path)\n    if not executable.is_file() or not os.access(executable, os.X_OK):\n        raise RuntimeError('Pinned real browser is absent from the official image')\n    if engine == 'chromium':\n        link = Path('/usr/bin/chromium')\n        link.unlink(missing_ok=True)\n        link.symlink_to(executable)\nPYBROWSER",
           "timeout-minutes": 25
         },
         {

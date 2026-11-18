@@ -34,6 +34,7 @@ class GateTests(unittest.TestCase):
         self.assertEqual(browser['env']['PLAYWRIGHT_BROWSERS_PATH'],'/ms-playwright')
         self.assertIn('playwright==1.64.1',install['run'])
         self.assertIn('executable.is_file()',install['run'])
+        self.assertIn('safe.directory "$GITHUB_WORKSPACE"',install['run'])
         self.assertNotIn('playwright install --with-deps',install['run'])
 
     def test_matching_export_uses_the_databases_built_by_this_job(self):
