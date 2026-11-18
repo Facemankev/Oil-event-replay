@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-11-18",
+  "issue": 51,
+  "new_daily_observations_imported": 0,
+  "source_acquisition_complete": false,
+  "source_checks": {
+    "runtime_requests": 5,
+    "transport_policy_403": 5,
+    "admitted_series": 0,
+    "metadata_is_not_prices": true
+  },
+  "verified_candidate_rights": [
+    {
+      "source": "nasdaq_wiki",
+      "metadata": "https://data.nasdaq.com/databases/WIKIP",
+      "rights": {
+        "status": "verified",
+        "license": "public_domain",
+        "redistribution": true,
+        "evidence": "Publisher describes WIKI prices, dividends and splits as released into the public domain. This does not cover other Nasdaq products.",
+        "checked_on": "2026-11-18"
+      },
+      "limitation": "Frozen archive, last observations generally March 2018; publisher withdrew active support in April 2018 and advises against use for investment or analysis. Missingness, errors, survivorship and historical adjustment vintages require review. Current documentation requires login for API/export; no key/account is configured or permitted here."
+    },
+    {
+      "source": "twse_open_index",
+      "metadata": "https://data.gov.tw/en/datasets/11755",
+      "rights": {
+        "status": "verified",
+        "license": "OGDL-1.0",
+        "redistribution": true,
+        "evidence": "Government catalogue explicitly releases Weighted Stock Price Index Historical Data under Open Government Data License 1.0, free, with attribution. Scope is the linked open-data resource, not every exchange website product.",
+        "checked_on": "2026-11-18"
+      },
+      "limitation": "TAIEX index points, not an ETF or US/UK benchmark; not executable. ROC dates require exact conversion. Historical/date-parameter coverage must be verified from a real response, never inferred from a current snapshot."
+    },
+    {
+      "source": "twse_open_equities",
+      "metadata": "https://data.gov.tw/en/datasets/11549",
+      "rights": {
+        "status": "verified",
+        "license": "OGDL-1.0",
+        "redistribution": true,
+        "evidence": "Government catalogue explicitly releases daily listed-stock trading information under OGDL 1.0, free with attribution. Only the linked STOCK_DAY_ALL open-data resource is admitted; historic website endpoints are not assumed licensed by association.",
+        "checked_on": "2026-11-18"
+      },
+      "limitation": "Current dated snapshot does not establish historical depth. Actions/dividends and delisting coverage are unknown. Taiwan-listed native shares differ from US ADRs. Gold/index ETFs must retain exact identities and proxy/roll/currency risks."
+    }
+  ],
+  "refused_or_unproven": [
+    {
+      "id": "nasdaq_quotes",
+      "url": "https://www.nasdaq.com/terms-of-use",
+      "reason": "Public historical page/API is not a verified permission for bulk retrieval/redistribution. Actual access must be measured; no changed identities or access-control bypass."
+    },
+    {
+      "id": "yahoo",
+      "url": "https://legal.yahoo.com/us/en/yahoo/terms/otos/index.html",
+      "reason": "Personal use/access conditions do not establish a public historical-price redistribution licence. No crumb/session/account workarounds or unofficial authenticated route."
+    },
+    {
+      "id": "stooq",
+      "url": "https://stooq.com/terms.html",
+      "reason": "Actual challenge/policy denials and adjustment/redistribution rights remain unresolved. A third-party CC0 label does not override original rights."
+    },
+    {
+      "id": "spdr_gold_archive",
+      "url": "https://www.spdrgoldshares.com/terms-and-conditions/",
+      "reason": "Personal non-commercial save/display permission; broader copying, derivative use and redistribution need written permission. LBMA information separately restricted. Downloadable XLSX is not an open licence."
+    },
+    {
+      "id": "hf_data_library",
+      "url": "https://hfdatalibrary.com/pages/terms",
+      "reason": "CC BY compilation remains subject to IEX terms, academic/educational purpose and required account. Single-venue split-adjusted bars are not a consolidated exchange close. No signup/key is authorized."
+    },
+    {
+      "id": "public_dataset_mirrors",
+      "reason": "Require independently verified original rights, identity, adjustment semantics and access. Do not use a mirror/proxy to bypass a denied provider or treat synthetic/testing fixtures as market history."
+    }
+  ],
+  "direct_runtime_blocker": "Package/GitHub destination allowlist is enforced. Requested vendor-domain grant is pending; no bypass, alternate identity, paid service, account or key.",
+  "independent_CI_scope": "Anonymous HTTP metadata only; no source body or database import/relay. A successful check job does not certify working numeric prices or source rights.",
+  "supported_reader_limits": [
+    "Official indexed WIKI documentation states public domain/frozen; direct metadata pages returned 404. Current docs require login/API export authentication.",
+    "Government catalogue confirms OGDL scope for linked TWSE open-data resources. Reader unsupported CSV is a tool content-type limitation, not a provider HTTP 400 or evidence of a parsed daily history.",
+    "SPDR archive link points to XLSX; reader cannot consume it. Terms limit reuse and separately restrict LBMA information; no raw gold history is admitted.",
+    "HF Data Library advertises CC BY, but its terms retain IEX/purpose/account conditions. No signup/key and no import."
+  ],
+  "limitations": [
+    "Exact historical adjustment vintage, timestamps, full exchange calendars and delisted identity coverage are not verified for a new series.",
+    "Taiwan index and native ETF/share identities differ from US stocks/ADRs and gold spot. TWD/GBp/index units cannot become USD/executable share quotes.",
+    "No genuine new predictions/outcomes yet. Re-examined histories must remain exploratory, not a fresh holdout."
+  ],
+  "owner_decision": "Enable the named public-source hosts in the running environment, verify saved policy, then test exact anonymous exports and rights. If impossible, run locally with an existing legitimate original permitted export or obtain no-charge written reuse permission; no paid fallback or unapproved account/key.",
+  "cost_GBP": "0.00",
+  "paid_services": 0,
+  "accounts_created": 0,
+  "keys_used": 0,
+  "orders": 0,
+  "original_price_writes": 0,
+  "independent_CI_receipts": {
+    "run_url": "https://github.com/Facemankev/Oil-event-replay/actions/runs/44369725857",
+    "observed_at": "2026-11-18T18:26:36Z",
+    "nasdaq_wiki_http_status": 403,
+    "twse_open_index_http_status": 200,
+    "twse_open_equities_http_status": 200,
+    "daily_rows_validated": 0,
+    "imported_rows": 0,
+    "provider_bodies_retained_or_relayed": false,
+    "note": "Metadata-only measurements in a separate environment. A 200 does not establish actual numeric schema, usable history or price validity. Source acquisition in this runtime remains blocked pending owner network grant."
+  }
+}

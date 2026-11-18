@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "environment": "cloud_runtime",
+  "client": "same anonymous standard client outside process sandbox; proxy and TLS trust retained",
+  "receipts": [
+    {
+      "source": "wiki_nvda",
+      "url": "https://data.nasdaq.com/api/v3/datasets/WIKI/NVDA.csv?start_date=2015-01-01&end_date=2015-03-31",
+      "observed_at": "2026-11-18T17:28:16.910859+00:00",
+      "status": 403,
+      "body_bytes": 0,
+      "transport_denial": true
+    },
+    {
+      "source": "nasdaq_nvda",
+      "url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=05%2F01%2F2023&todate=06%2F30%2F2023&limit=5000",
+      "observed_at": "2026-11-18T17:28:16.922140+00:00",
+      "status": 403,
+      "body_bytes": 0,
+      "transport_denial": true
+    },
+    {
+      "source": "stooq_nvda",
+      "url": "https://stooq.com/q/d/l/?s=nvda.us&i=d&d1=20230501&d2=20230630",
+      "observed_at": "2026-11-18T17:28:16.933898+00:00",
+      "status": 403,
+      "body_bytes": 0,
+      "transport_denial": true
+    },
+    {
+      "source": "yahoo_nvda",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1682899200&period2=1688169600&interval=1d",
+      "observed_at": "2026-11-18T17:28:16.946419+00:00",
+      "status": 403,
+      "body_bytes": 0,
+      "transport_denial": true
+    },
+    {
+      "source": "twse_index",
+      "url": "https://www.twse.com.tw/exchangeReport/FMTQIK?response=json&date=20200301",
+      "observed_at": "2026-11-18T17:28:16.957963+00:00",
+      "status": 403,
+      "body_bytes": 0,
+      "transport_denial": true
+    }
+  ],
+  "note": "All five exploratory requests were denied by current transport policy. These are not claims of vendor HTTP denials or valid series. The exact reviewed MI_5MINS_HIST and STOCK_DAY_ALL resources remain unrequested in this runtime pending the grant."
+}

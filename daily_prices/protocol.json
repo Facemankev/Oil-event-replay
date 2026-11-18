@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "version": "DATA-3/1",
+  "registered_on": "2026-11-18",
+  "examined_historical_test_from": "2020-01-01",
+  "examined_historical_test_through": "2026-11-17",
+  "prospective_from": "2026-11-19T00:00:00Z",
+  "historical_lane": "Expanded current-vintage prices on the same cases are retrospective diagnostics. Preserve the original SIM/LEARN exports and membership. Never label a new result on an examined 2020-2026 event as new validation.",
+  "learning_lane": "Pre-2020 train/validation may be recomputed with admitted observations; training/selection cannot inspect later price or event outcomes. Lock a model and signal before prospective outcome collection. All changed historical results remain exploratory.",
+  "prospective_lane": "Only events first recorded after registration and before outcomes may enter. Source event publication, local receipt and model/signal lock clocks are separate. No enrollment after its outcome window, retrospective backfill or test-set relabeling.",
+  "rules": [
+    "event_long",
+    "momentum_up",
+    "reversal_down"
+  ],
+  "horizons": [
+    1,
+    5,
+    20
+  ],
+  "selection": "Reuse LEARN-1 fixed candidates, train/validation cutoffs and cohort/episode embargo; no selection on old test returns. No threshold tuning in DATA-3.",
+  "costs": "Reuse all SIM-1 declared, zero, stressed and flat-fee cost scenarios; fixed no-trade and same-window hold baselines. Unknown FX/actions/calendar remain blocked.",
+  "minimum_context_observations": 6,
+  "maximum_event_to_lock_seconds": 86400,
+  "safety": "Reference hypotheses only. No numerical probability, supported Buy, paper-account mutation, live order or broker connection. Original availability and executable product checks remain mandatory.",
+  "registered_at": "2026-11-18T18:06:34.448483Z",
+  "max_entry_delay_calendar_days": 7,
+  "max_reporting_gap_calendar_days": 7
+}

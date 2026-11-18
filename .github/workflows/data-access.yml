@@ -18,7 +18,7 @@
     "access": {
       "name": "Measure access without importing prices",
       "runs-on": "ubuntu-24.04",
-      "timeout-minutes": 5,
+      "timeout-minutes": 7,
       "steps": [
         {
           "uses": "actions/checkout@v4"
@@ -33,11 +33,15 @@
           "run": "python3 -m data_expansion.probe --environment github_actions --output work/data2/access/github-actions.json"
         },
         {
+          "name": "Measure daily-source HTTP access without importing or relaying data",
+          "run": "python3 -m daily_prices --db work/data3/access/receipts.sqlite access --environment github_actions --output work/data3/access/github-actions.json"
+        },
+        {
           "uses": "actions/upload-artifact@v4",
           "if": "always()",
           "with": {
             "name": "anonymous-data-access-receipts",
-            "path": "work/data2/access/github-actions.json",
+            "path": "work/data2/access/github-actions.json\nwork/data3/access/github-actions.json",
             "if-no-files-found": "error",
             "retention-days": 3,
             "compression-level": 9
