@@ -29,6 +29,11 @@ are separate requirements. No advertised free tier or HTTP 200 establishes all t
 | SPDR gold archive | Download link exists, but terms limit personal saving/display and restrict wider reproduction/derivatives; LBMA data has separate restrictions. | No public gold-series import. Downloadable workbook is not a licence. |
 | HF/IEX research archive | Compilation CC BY remains subject to IEX terms, academic/educational purpose and required account. It is a single venue, not a consolidated close. | Not admitted under the no-account/no-key controls. |
 
+The independent [Actions access probe](https://github.com/Facemankev/Oil-event-replay/actions/runs/44369725857)
+received WIKI 403 and TWSE index/equity 200. It retained HTTP metadata only:
+zero parsed rows, zero imports, no provider body relay. This does not establish a
+working daily series or change the cloud-runtime grant requirement.
+
 Only the exact reviewed public-domain/OGDL resources can enter this store. A file
 cannot self-certify a different provider as CC0. Licence/identity changes require
 review. OGDL attribution: **Taiwan Stock Exchange / government open-data catalogue,

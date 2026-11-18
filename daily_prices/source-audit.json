@@ -98,5 +98,16 @@
   "accounts_created": 0,
   "keys_used": 0,
   "orders": 0,
-  "original_price_writes": 0
+  "original_price_writes": 0,
+  "independent_CI_receipts": {
+    "run_url": "https://github.com/Facemankev/Oil-event-replay/actions/runs/44369725857",
+    "observed_at": "2026-11-18T18:26:36Z",
+    "nasdaq_wiki_http_status": 403,
+    "twse_open_index_http_status": 200,
+    "twse_open_equities_http_status": 200,
+    "daily_rows_validated": 0,
+    "imported_rows": 0,
+    "provider_bodies_retained_or_relayed": false,
+    "note": "Metadata-only measurements in a separate environment. A 200 does not establish actual numeric schema, usable history or price validity. Source acquisition in this runtime remains blocked pending owner network grant."
+  }
 }
