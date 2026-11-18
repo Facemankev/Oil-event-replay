@@ -1,0 +1,49 @@
+{
+  "name": "Anonymous official data access receipts",
+  "on": {
+    "pull_request": {
+      "types": [
+        "opened",
+        "synchronize",
+        "reopened",
+        "ready_for_review"
+      ]
+    },
+    "workflow_dispatch": {}
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "access": {
+      "name": "Measure access without importing prices",
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 5,
+      "steps": [
+        {
+          "uses": "actions/checkout@v4"
+        },
+        {
+          "uses": "actions/setup-python@v5",
+          "with": {
+            "python-version": "3.12"
+          }
+        },
+        {
+          "run": "python3 -m data_expansion.probe --environment github_actions --output work/data2/access/github-actions.json"
+        },
+        {
+          "uses": "actions/upload-artifact@v4",
+          "if": "always()",
+          "with": {
+            "name": "anonymous-data-access-receipts",
+            "path": "work/data2/access/github-actions.json",
+            "if-no-files-found": "error",
+            "retention-days": 3,
+            "compression-level": 9
+          }
+        }
+      ]
+    }
+  }
+}
