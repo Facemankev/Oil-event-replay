@@ -119,3 +119,14 @@ Public [review metadata](stooq-review-summary.json) intentionally includes count
 coverage, missingness and blockers only. The detailed actual-file results stay
 private under the restricted private-use review scope. Automated checks use fabricated,
 clearly labelled controls; real uploaded prices are never repackaged as fixtures.
+
+## Browser verification environment
+
+An initial WebKit job timed out downloading Ubuntu dependencies before any browser
+suite began. Required browser jobs use the [official Playwright Python testing
+image](https://playwright.dev/python/docs/docker), with the matching version and
+upstream manifest digest pinned. The Python package version remains pinned too;
+the expected real executable must exist. All existing Chromium/WebKit suites,
+failure-evidence controls, timeouts and the required gate remain in place. This
+uses the existing free public-repository runner, not a paid service or remote
+market-data relay. The image receives tracked code and synthetic controls only.
