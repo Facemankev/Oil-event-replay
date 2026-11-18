@@ -12,7 +12,7 @@ def commands():
       [sys.executable,'-m','historical','--db','work/ci-offline/prices.sqlite','update'],
       *[[sys.executable,'-m','world_events','--db','work/ci-offline/events.sqlite','import'] for _ in range(2)],
       [sys.executable,'-m','matching.validate_prices','--db','work/ci-offline/prices.sqlite','--output','work/ci-offline/price-audit.json'],
-      [sys.executable,'-m','matching.build','--output','work/ci-offline/catalog.json'],
+      [sys.executable,'-m','matching.build','--prices-db','work/ci-offline/prices.sqlite','--events-db','work/ci-offline/events.sqlite','--output','work/ci-offline/catalog.json'],
       ['node','matching/demo.mjs','--check'],[sys.executable,'-m','app.data_status','--check'],
       [sys.executable,'-m','ripple.build','--check'],
       *[['node',folder+'/evaluate.mjs','--check'] for folder in ('intelligence','verification','analogues','equities')],

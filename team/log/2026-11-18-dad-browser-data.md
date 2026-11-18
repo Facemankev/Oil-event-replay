@@ -17,3 +17,5 @@
 **For Brendan:** Review later. Existing UI, accounts, historical originals, #19 and other drafts remain separate. No paid data or signup.
 
 **Plan changes:** Doing/Now only.
+
+The first universal offline job failed closed because the new isolated database paths were not passed into the legacy matching exporter. Fixed explicit `--prices-db`/`--events-db`, added a dependency-contract regression and made the CI policy test create its own temporary work root. No application or source-data change; final gate is rerun rather than bypassed.

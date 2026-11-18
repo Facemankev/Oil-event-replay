@@ -6,6 +6,10 @@ from unittest.mock import patch
 from ci.run_browser import ROOT,suites,run_suite,summary
 
 class GateTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        (ROOT/'work').mkdir(exist_ok=True)
+
     def test_every_PR_and_update_including_drafts_and_stacked_bases_is_covered(self):
         # JSON is a YAML subset; parse the actual workflow without another dependency.
         w=json.loads((ROOT/'.github/workflows/required-checks.yml').read_text())
@@ -18,6 +22,17 @@ class GateTests(unittest.TestCase):
         self.assertEqual(gate['name'],'Market Ripple required checks')
         self.assertEqual(gate['if'],'${{ always() }}')
         self.assertNotIn('continue-on-error',json.dumps(w))
+
+    def test_matching_export_uses_the_databases_built_by_this_job(self):
+        from ci.offline_checks import commands
+        planned=commands()
+        price=next(c[c.index('--db')+1] for c in planned if 'historical' in c)
+        events=next(c[c.index('--db')+1] for c in planned if 'world_events' in c)
+        exports=[c for c in planned if 'matching.build' in c]
+        self.assertTrue(exports)
+        for c in exports:
+            self.assertEqual(c[c.index('--prices-db')+1],price)
+            self.assertEqual(c[c.index('--events-db')+1],events)
 
     def test_required_features_have_explicit_both_engine_suites(self):
         for engine in ('chromium','webkit'):
