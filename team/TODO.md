@@ -13,7 +13,6 @@ history).
 
 ## Doing
 
-- [ ] DATA-3 follow-up: inspect six owner-supplied Stooq CSVs, scoped private import, fixed-session event/benchmark studies and unchanged learning holdout; no raw-data publication or merge — **Dad — Doing** — 2026-11-18
 
 - [ ] DATA-3: Verified free daily equity/ETF-index/gold/IPO histories, rights-aware imports, separate historical/new evaluation ([Issue #51](https://github.com/Facemankev/Oil-event-replay/issues/51)), [draft #52](https://github.com/Facemankev/Oil-event-replay/pull/52), stacked on #50; importer/evaluation path built, zero new prices; acquisition blocked pending source-domain grant. Preserve original tests/UI/prices, no paid source/key/merge — **Dad — Doing; source acquisition blocked** — 2026-11-18
 
@@ -58,6 +57,8 @@ history).
 - [ ] BRD-1: Design the real logo (the ripple mark in the skill is a placeholder) — **unassigned** — 2026-10-27
 
 ## Waiting for review
+
+- [ ] DATA-3 follow-up: [draft #53](https://github.com/Facemankev/Oil-event-replay/pull/53), on #52. Six supplied Stooq files: 43507 private quarantine rows, repeat zero; no raw/price-result publication. Source clocks/authentication and adjustment basis unresolved; limited owner-private terms review, no open/public/training licence. Four retained NVDA pairs gain 12 measurable horizons with reviewed 2023–2026 benchmark calendars; zero new independent/eligible trade examples. Fixed cost/benchmark diagnostics, 18 new controls; local 208 Python/112 JS/29 offline/14 Chromium pass. Final two-engine checks in PR Checks; holdout/UI/prices/#19 preserved, no merge — **Dad** — 2026-11-18
 
 - [ ] DATA-2: Verified typed reference import / fixed-population audit ([draft PR #50](https://github.com/Facemankev/Oil-event-replay/pull/50), on #49; [Issue #47](https://github.com/Facemankev/Oil-event-replay/issues/47)). 99 World Bank publication values / 51 distinct asset-periods + 8 IPO reserve episodes; 110 then 0 inserted rows. Zero new daily security quotes/original vintages; broader equity/index/gold coverage blocked. Actual SIM/LEARN rerun unchanged: 69 settled (34 positive/35 negative), retained 21-test 4 Watch/17 No Action, no qualified model or supported Buy. New 16 tests pass; full final-head Actions in PR Checks. Separate #19, unchanged interface, £0/no merge — **Dad** — 2026-11-18
 - [ ] CI-1: Universal offline/Chromium/WebKit required gate ([draft PR #49](https://github.com/Facemankev/Oil-event-replay/pull/49), on #46; [Issue #48](https://github.com/Facemankev/Oil-event-replay/issues/48)). No branch/path/draft filter; screenshots/traces/logs, failure proof and all-page touch/theme smoke. Existing tests intact. #45/#46 final-head successes verified and stale checklists corrected. Owner activation of protection remains necessary: App read is 403; no settings or merge. Local 14 Chromium suites and capture proof pass; final two-engine CI in PR Checks — **Dad** — 2026-11-18

@@ -111,7 +111,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 ## 5. Now
 
-- **Dad / DATA-3 follow-up:** Six supplied Stooq files on `dad/data-3-stooq-event-study`, stacked on #52. Validate source, dates, actions and private-use rights before database admission; preserve the learning holdout and three answers. No raw publication or merge.
+- **Dad / DATA-3 follow-up:** [Draft #53](https://github.com/Facemankev/Oil-event-replay/pull/53), on #52: 43507 private quarantine rows, zero on repeat, no approved/public prices. Private-only event/cost/SPY/GLD diagnostics; 2023–2026 benchmark calendar review, 4 retained direct NVDA pairs / 12 windows, no newly eligible trade examples or predictive claim. Terms reviewed within owner-private scope; authentication/actions unresolved. Preserve holdout/three answers, no raw publication or merge.
 
 - **Dad / DATA-3:** Issue #51 is [draft #52](https://github.com/Facemankev/Oil-event-replay/pull/52), stacked on #50. Import/evaluation code built; zero new daily prices, acquisition blocked by the running source-host policy pending owner grant. Freeze examined evaluation and reserve genuinely new/prospective assessment separately. Free only, no keys or access-control bypass, unchanged three answers/paper safeguards, draft/no merge.
 

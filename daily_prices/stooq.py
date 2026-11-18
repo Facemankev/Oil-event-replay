@@ -11,6 +11,7 @@ from pathlib import Path
 from event_history.library import ROOT, require
 from news_pilot.ingest import utc, at
 from .model import FIELDS, validate_content, public_url
+from .stooq_calendar import is_session
 
 HERE = Path(__file__).resolve().parent
 ASSETS = {
@@ -124,6 +125,7 @@ def inspect_folder(folder, received=None):
         records.append(dict(symbol=symbol,file=name,rows=len(rows),bytes=len(raw),
             payload_sha256=c['payload_sha256'],first_date=rows[0]['date'],last_date=rows[-1]['date'],
             missing_volume=sum(r['volume'] is None for r in rows),
+            rows_on_reviewed_exchange_closures=[r['date'] for r in rows if is_session(r['date']) is False],
             unavailable_closes=sum(r['status']!='numeric' for r in rows),
             currency='USD (declared security identity; not embedded in CSV)',
             source='owner_declared_Stooq; original server/receipt unverified',
@@ -160,12 +162,12 @@ def public_summary(study):
     inspection=study['inspection']
     return dict(schema_version=1,kind='Stooq_owner_file_admission_audit',
         files=[{k:f[k] for k in ('symbol','rows','first_date','last_date','missing_volume',
-               'unavailable_closes','missing_dates_relative_to_supplied_SPY','extra_dates_relative_to_supplied_SPY')}
+               'unavailable_closes','rows_on_reviewed_exchange_closures','missing_dates_relative_to_supplied_SPY','extra_dates_relative_to_supplied_SPY')}
                for f in inspection['files']],
         rows_inspected=inspection['rows_inspected'],rows_imported=study.get('rows_imported',0),
         approved_price_rows=0,
-        private_use_scope='reviewed_owner_private_quarantine_only_not_open_licence',adjustment_basis_verified=False,
-        source_identity_verified=False,exchange_calendar_verified=False,
+        private_use_scope=inspection['policy']['status'],adjustment_basis_verified=False,
+        source_identity_verified=False,exchange_calendar_scope='NYSE/Arca 2023-2026 only',
         new_direct_event_pairs_with_price_coverage=study['newly_covered_direct_event_pairs'],
         direct_horizon_windows_with_price_coverage=study['newly_covered_direct_horizon_windows'],
         new_eligible_historical_examples=0,new_independent_events=0,new_supported_buys=0,

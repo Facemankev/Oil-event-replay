@@ -53,7 +53,7 @@ class StooqPrivateTests(unittest.TestCase):
         self.assertIsNone(self.rows[0]['adjusted_close']);self.assertIsNone(self.c['original_downloaded_at'])
         with self.assertRaises(ValueError):parse_supplied(self.raw+b'\n',self.c)
 
-    def test_unknown_rights_block_database_import_even_with_owner_files(self):
+    def test_unknown_permission_is_blocked_but_reviewed_quarantine_CLI_works(self):
         p=policy();p['private_research_permitted']=False
         with patch('daily_prices.stooq.policy',return_value=p):
             with self.assertRaisesRegex(ValueError,'rights unverified'):validate_private_capture(self.c)
@@ -164,7 +164,7 @@ class StooqPrivateTests(unittest.TestCase):
         self.assertNotIn('net_pnl_gbp',view);self.assertNotIn('payload_sha256',view);self.assertNotIn('change_percent',view)
         self.assertEqual(public_summary(r)['actual_price_or_return_values_published'],0)
 
-    def test_permission_alone_does_not_bypass_adjustment_or_provenance_checks(self):
+    def test_unknown_adjustments_and_provenance_can_never_be_marked_approved(self):
         for field in ('price_adjustments_verified','provenance_verified'):
             p=self.verified_control_policy();p[field]=False
             c=copy.deepcopy(self.c);c['rights']=p;c['adjustment_basis']=p['adjustment_basis']
@@ -172,6 +172,24 @@ class StooqPrivateTests(unittest.TestCase):
                 validate_private_capture(c)
                 c['canonical_prices_approved']=True
                 with self.assertRaises(ValueError):validate_private_capture(c)
+
+    def test_official_calendar_keeps_early_close_and_adds_special_closure(self):
+        from daily_prices.stooq_calendar import is_session
+        self.assertTrue(is_session('2024-07-03'))
+        self.assertFalse(is_session('2024-07-04'))
+        self.assertFalse(is_session('2025-01-09'))
+        self.assertIsNone(is_session('2011-02-17'))
+
+    def test_shared_missing_day_in_reviewed_year_is_not_a_holiday(self):
+        from daily_prices.stooq_calendar import grid
+        # Fabricated input omits a real, officially scheduled benchmark day.
+        points={'2023-12-29':{},'2024-01-02':{},'2024-01-04':{}}
+        days=grid({'SPY':points,'NVDA':points})
+        self.assertEqual(days,['2023-12-29','2024-01-02','2024-01-03','2024-01-04'])
+        series={d:dict(status='numeric',close='100') for d in points}
+        result=fixed_window(series,series,'2024-01-02',1,days)
+        self.assertEqual(result['status'],'missing_exact_session_price');self.assertEqual(result['missing_date'],'2024-01-03')
+        self.assertEqual(fixed_window(series,series,'2024-01-03',1,days)['status'],'provisional_supplied_reporting_sessions')
 
 
 if __name__=='__main__':unittest.main()

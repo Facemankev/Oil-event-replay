@@ -12,6 +12,7 @@ from free_pilot.data import load_free_library
 from simulations.engine import plan, measure, stats, q, PROTOCOL
 from world_events.events import digest
 from .stooq import ASSETS
+from .stooq_calendar import grid, verified, is_session, CALENDAR
 
 HORIZONS=(1,5,20)
 
@@ -25,7 +26,7 @@ def scope(event,symbol):
 
 def fixed_window(series,spy,bound,horizon,calendar=None):
     """Use one fixed reporting-date union; an absent asset date cannot move the goalposts."""
-    days=calendar or sorted(spy); before=bisect_left(days,bound)-1; after=bisect_right(days,bound)
+    days=calendar if calendar is not None else grid({'SPY':spy,'ASSET':series}); before=bisect_left(days,bound)-1; after=bisect_right(days,bound)
     base=dict(status='missing_window',change_percent=None,spy_change_percent=None,
               excess_percentage_points=None,relative_wealth_percent=None,
               baseline_date=None,end_date=None,trading_calendar_verified=False)
@@ -42,7 +43,7 @@ def fixed_window(series,spy,bound,horizon,calendar=None):
     gain=D(series[last]['close'])/D(series[first]['close'])-1
     benchmark=D(spy[last]['close'])/D(spy[first]['close'])-1
     return base|dict(status='provisional_supplied_reporting_sessions',
-        baseline_date=first,end_date=last,change_percent=q(gain*100),
+        baseline_date=first,end_date=last,trading_calendar_verified=verified(selected),change_percent=q(gain*100),
         spy_change_percent=q(benchmark*100),excess_percentage_points=q((gain-benchmark)*100),
         relative_wealth_percent=q(((1+gain)/(1+benchmark)-1)*100),
         basis='as_supplied_Close_adjustments_unknown_not_verified_total_return')
@@ -52,15 +53,18 @@ def costed(planned,data,series,spy,cost,calendar=None):
     # Existing SIM entry is next date after conservative publication eligibility.
     # Validate its whole fixed reporting window BEFORE calling SIM, which otherwise
     # counts numeric source observations. No skip/forward-fill for a missing day.
-    days=calendar or sorted(spy);i=bisect_right(days,planned['decision_bound'][:10]);h=planned['horizon']
+    days=calendar if calendar is not None else grid({'SPY':spy,'ASSET':series});i=bisect_right(days,planned['decision_bound'][:10]);h=planned['horizon']
     chosen=days[i:i+h+1]
     if len(chosen)<h+1:return dict(status='not_entered',reason='incomplete_SPY_window',net_pnl_gbp=None)
+    if any(planned['decision_bound'][:10]<d<=chosen[-1] and is_session(d) is False for d in series):
+        return dict(status='not_entered',reason='source_quote_on_reviewed_market_closure',net_pnl_gbp=None)
     for d in chosen:
         if d not in spy or spy[d]['status']!='numeric':
             return dict(status='not_entered',reason='missing_exact_benchmark_session',net_pnl_gbp=None,missing_date=d)
         if d not in series or series[d]['status']!='numeric':
             return dict(status='not_entered',reason='missing_exact_SPY_session_price',net_pnl_gbp=None,missing_date=d)
     outcome=measure(planned,data,cost,risk_exit=False)
+    outcome['benchmark_sessions_verified']=verified(chosen)
     # SIM may never silently choose different dates for this fixed-window study.
     if outcome['status']=='simulated_reference_path':
         require(outcome['entry_date']==chosen[0] and outcome['exit_date']==chosen[-1], 'Session alignment drift')
@@ -74,7 +78,7 @@ def build_study(selections,inspection,data=None):
     # Keep identities in a separate hypothesis panel, never edit parent targets.
     original=digest(data);rows={m:{r['date']:r for r in s['rows']} for m,s in selections.items()}
     spy=rows['SPY'];cases=[];cost_summaries=[]
-    calendar=sorted({d for r in rows.values() for d in r if min(spy)<=d<=max(spy)})
+    calendar=grid(rows)
     fx=[p for p in data['observations'] if p['instrument']=='gbpusd']
     for symbol in ASSETS:
         c=selections[symbol]['capture'];working=copy.deepcopy(data)
@@ -123,16 +127,17 @@ def build_study(selections,inspection,data=None):
           reaction='Last supplied reporting date before eligibility day to 1/5/20th union reporting date strictly after it. Day-only publication uses retained conservative two-day bound.',
           costed='SIM-1 fixed post-eligibility close-to-close exposures for 1/5/20 subsequent union reporting dates; risk_exit=False. All four original illustrative cost assumptions.',
           benchmark='Same exact start/end dates. Percentage-point excess and compounded relative wealth are separate. SPY is an ETF, not Nasdaq Composite.',
-          calendar='Union of supplied dates within SPY coverage; missing benchmark observations block windows. Shared gaps and independent exchange schedule remain unverified.',
+          calendar='Reviewed NYSE/Arca 2023-2026 dates; supplied-date union outside that scope. Missing expected asset/benchmark dates block windows; no fill or shifting.',
           price_basis='As-supplied Close. Do not label unadjusted, split-adjusted, dividend-adjusted or total return without evidence.'),
         exploratory_protocol_registered_before_outcome_inspection=False,
+        benchmark_calendar=CALENDAR,
         event_count=len(data['events']),panel_pairs=len(data['events'])*len(ASSETS),
         newly_covered_direct_event_pairs=len({(r['event_id'],r['instrument']) for r in covered}),
         newly_covered_direct_horizon_windows=len(covered),
         new_eligible_historical_examples=0,new_independent_events=0,new_supported_buys=0,
         eligibility_blockers=['Private quarantine only; no open/public/application/training licence.',
           'Provider identity/download clock and adjustment basis unverified.',
-          'No independent exchange-session calendar; no original availability/executable product evidence.',
+          'Benchmark calendar verified only for 2023-2026; no original availability/executable product evidence.',
           'Existing inspected events and repeated horizons/peers are not new independent validation.'],
         learning_holdout=dict(changed=False,trained_or_tuned=False,original_report_sha256=(ROOT/'learning/REPORT.sha256').read_text().strip(),
           genuinely_new_predictions=0,prospective_outcomes=0),

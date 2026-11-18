@@ -32,8 +32,12 @@ SPY/GLD omit 2011-02-17 while three other supplied securities include it. This i
 an observed benchmark gap, not a declared holiday. The alignment grid is the
 **union** of supplied dates within benchmark coverage, so this gap blocks affected
 windows. Shared omissions still cannot be distinguished from exchange closures.
-No verified full exchange calendar is supplied; results are labelled provisional
-reporting-session comparisons rather than certified trading-session calculations.
+The [reviewed NYSE/NYSE Arca calendar](stooq-calendar.json) supplies benchmark
+sessions for 2023–2026, including the special Carter closure on 9 January 2025.
+Early closes remain sessions. These years use an independent expected grid, so
+even a date missing in all six files is detected. Outside that scope the union
+remains explicitly unverified. Individual security halts and quote clocks remain
+unresolved. All four direct Nvidia cases have reviewed benchmark-session grids.
 
 Nvidia confirms [four-for-one trading from 20 July 2021](https://investor.nvidia.com/files/doc_downloads/doc_faq/08/Investor-NVIDIA-2021-Stock-Split-FAQ-08.9.2021.pdf)
 and [ten-for-one trading from 10 June 2024](https://investor.nvidia.com/files/doc_downloads/2024/06/nvidia-2024-stock-split_faq_investors.pdf).
@@ -82,7 +86,8 @@ SIM-1 cost assumptions. Hypothetical exposure to another company is labelled
 The existing library directly targets NVDA four times; no AMD/MRNA/BMY events are
 invented from CSVs. New direct price coverage is four existing event pairs / twelve
 horizon windows. New eligible historical examples, independent events, supported
-Buy decisions and genuinely new predictions: **zero**.
+Buy decisions and genuinely new predictions: **zero**. Private quarantine storage
+is not approval of the adjustment methodology or original price availability.
 
 The private report separates publication-day descriptive reactions, conservative
 eligibility-window reactions and costed post-eligibility hypotheses. Day-only
