@@ -1,5 +1,6 @@
 """Dedicated append-only SQLite reference store, versioned by exact capture content."""
 import json,sqlite3
+from decimal import Decimal
 from datetime import date
 from pathlib import Path
 from event_history.library import ROOT,require
@@ -75,8 +76,11 @@ def query(db,instrument,frequency,start,end,as_of=None,require_original_vintage=
 
 
 def revisions(db):
-    return [dict(r) for r in db.execute('''SELECT instrument,frequency,period,count(*) AS editions,count(DISTINCT value) AS different_values
-      FROM averages GROUP BY instrument,frequency,period HAVING count(DISTINCT value)>1 ORDER BY instrument,frequency,period''')]
+    groups={}
+    for r in db.execute('SELECT instrument,frequency,period,value FROM averages ORDER BY instrument,frequency,period'):
+        groups.setdefault((r['instrument'],r['frequency'],r['period']),[]).append(Decimal(r['value']))
+    return [dict(instrument=k[0],frequency=k[1],period=k[2],editions=len(v),different_values=len(set(v)))
+            for k,v in groups.items() if len(set(v))>1]
 
 
 def read_bundle(db):

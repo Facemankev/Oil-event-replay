@@ -68,6 +68,18 @@ class ExpansionTests(unittest.TestCase):
         self.assertEqual(self.db.execute("SELECT count(*) FROM averages WHERE value='54.4'").fetchone()[0],3)
         with self.assertRaises(Exception):read_bundle(self.db)
 
+    def test_formatting_only_revision_is_not_a_price_discrepancy(self):
+        import_bundle(self.db,self.bundle);changed=copy.deepcopy(self.bundle)
+        sid=changed['averages'][0]['source_id'];changed['sources'][sid]['note']='SYNTHETIC formatting revision only'
+        changed['averages'][0]['value']+='0'
+        import_bundle(self.db,changed)
+        self.assertEqual(revisions(self.db),[])
+        self.assertEqual(counts(self.db)['source_versions'],4)
+
+    def test_renamed_duplicate_offering_does_not_inflate_independent_episodes(self):
+        b=copy.deepcopy(self.bundle);extra=copy.deepcopy(b['ipos'][0]);extra.update(id='synthetic-only-copy',episode_id='synthetic-only-copy');b['ipos'].append(extra)
+        with self.assertRaises(Exception):validate(b)
+
     def test_explicit_frequency_overlap_query_and_missing_months(self):
         import_bundle(self.db,self.bundle)
         rows=query(self.db,'wb-gold-average','monthly','2020-01-01','2020-11-30')

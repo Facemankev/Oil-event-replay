@@ -49,9 +49,11 @@ def validate(bundle):
         key=(r['source_id'],r['instrument'],r['frequency'],r['period'])
         require(key not in seen,'Duplicate period within edition');seen.add(key)
         require(bool(r['locator']),'Missing source cell locator')
-    ids=set()
+    ids=set();offerings=set()
     for c in bundle['ipos']:
         require(c['id'] not in ids and c['episode_id']==c['id'],'Repeated offering episode');ids.add(c['id'])
+        offering=(c['issuer'].casefold(),c['first_session'] or c['event_day'])
+        require(offering not in offerings,'Repeated issuer/offering even under a different event ID');offerings.add(offering)
         require(c['evaluation_membership']=='separate_research_reserve','New IPO cannot enter old held-out evaluation')
         require(c['public_at'] is None and c['original_available_at'] is None and c['original_version_verified'] is False,'Unknown original timestamps must remain unknown')
         date.fromisoformat(c['event_day']);date.fromisoformat(c['checked_on'])
