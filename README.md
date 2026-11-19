@@ -133,3 +133,13 @@ in ignored local output. [Actual audit counts](price_catalysts/AUDIT.json) conta
 no price/return values. The public app, original prices and examined learning
 holdout are unchanged. Continuous news monitoring and genuinely new prospective
 evaluation remain the next stage; no validated Buy or live orders.
+
+
+## Historical signal ratings (SIGNAL-1)
+
+[Open the empty private-report viewer](signals/) or [generate your private dashboard](signal_ratings/README.md).
+No Action / Possible / Likely ratings keep the same three questions. Possible is
+exploratory history; Likely requires genuinely independent validation, which is
+not yet available. Direction, 1/5/20-session statistics, SPY/cost comparisons and
+winning/losing examples remain local. No dataset, current forecast or trade
+permission is published with this page; existing paper/source checks remain.
