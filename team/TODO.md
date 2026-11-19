@@ -13,6 +13,8 @@ history).
 
 ## Doing
 
+- [ ] SIGNAL-1: Private ranked historical ratings (No Action / Possible / Likely), direction/timeframe, costs/SPY/controls and unchanged three questions; on #55, genuinely independent evidence required for Likely, all existing trade/source gates retained; new draft only, no merge — **Dad — Doing** — 2026-11-19
+
 - [x] EVT-3: Revised [Issue #54](https://github.com/Facemankev/Oil-event-replay/issues/54) first catalogue/replay stage in draft [#55](https://github.com/Facemankev/Oil-event-replay/pull/55), stacked on #53. Private price-first ledger, dated evidence and independent controls implemented; final-head results in PR Checks; no raw publication or merge — **Dad — Draft review** — 2026-11-19
 - [ ] EVT-3: Remaining #54 staged bounded-feed integration and actual-clock prospective prediction/settlement operation. Catalogue discovery is exploratory, not a deployed monitor or validated predictor; keep source/holdout safeguards — **Not started**
 

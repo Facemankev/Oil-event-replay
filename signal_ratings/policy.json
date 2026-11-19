@@ -1,0 +1,71 @@
+{
+  "version": "SIGNAL-1/1",
+  "registered_at": "2026-11-19T10:01:48.666123+00:00",
+  "scope": "Private fixed-rule historical diagnostics only; all six histories already examined, no training/prospective prediction or source promotion.",
+  "assets": [
+    "NVDA",
+    "AMD",
+    "MRNA",
+    "BMY",
+    "SPY",
+    "GLD"
+  ],
+  "horizons": [
+    1,
+    5,
+    20
+  ],
+  "directions": [
+    "UP",
+    "DOWN"
+  ],
+  "patterns": [
+    "spike",
+    "dip",
+    "gap_up",
+    "gap_down",
+    "trend_up",
+    "trend_down",
+    "volume_up",
+    "volume_down",
+    "spike_volume",
+    "dip_volume"
+  ],
+  "features": "Reuse EVT-3 strictly-prior 60-observation volatility and volume baselines. Daily/gap z at least 3; volume ratio at least 3; prior 20-session trend / (prior daily volatility * sqrt(20)) at least 1 in absolute value. Combined rules fixed, both directions tested, no optimization.",
+  "episodes": "First qualifying bar per pattern/instrument with 20-session cooldown; overlapping patterns/horizons are not independent trials. Cross-pattern totals are not sample sizes.",
+  "controls": "Non-trigger strictly-prior volatility/trend control in preceding 126 sessions and at least 22 sessions earlier, chosen before outcomes with existing EVT-3 matcher; all missing outcomes retained.",
+  "timing": "After complete bar only; next-session close entry, H later intervals; only examples and control outcomes matured strictly before assessment date. Historical receipt/current-vintage limitations preserved.",
+  "costs": [
+    "zero",
+    "declared",
+    "stressed",
+    "small_account_flat_fee"
+  ],
+  "default_cost": "declared",
+  "possible": {
+    "min_complete": 10,
+    "min_later_complete": 5,
+    "min_distinct_years": 3,
+    "min_coverage": "0.60",
+    "min_control_pairs": 10,
+    "tests": "Direction-consistent mean/median price change; mean/median net long profit positive for UP, negative for defensive DOWN; positive median directional SPY excess (SPY self-comparison explicitly exempt, no alpha claim); median paired control difference supports direction; later examined slice agrees. High fees may remove Possible. No forced ratings.",
+    "meaning": "Exploratory historical hypothesis, not a current forecast or approved paper trade; DOWN is risk watch, never a synthetic short profit."
+  },
+  "likely": {
+    "min_independent": 50,
+    "min_time_blocks": 3,
+    "min_coverage": "0.90",
+    "validation": "Reviewed, hash-pinned independent validation artifact registered in repository; genuinely new pre-outcome predictions after frozen training cutoff, audited independent episodes, primary point-in-time prices, permitted usage, positive net stressed-cost and benchmark/control robustness. Historical success rate alone never sufficient. No approved artifact exists."
+  },
+  "ranking": "Rating, complete evidence coverage and sample breadth first, adverse movement/cost fragility next, observed median movement last. Not predicted gain or optimized best rule.",
+  "source_evidence": "Reuse 39 dated EVT-3 source entries and complete 18 issuer/FDA controls; price-first retrospective catalyst tags never become historical signal inputs. Missing/late/unknown clocks remain explicit.",
+  "safeguards": {
+    "original_price_writes": false,
+    "public_price_results": false,
+    "holdout_changed": false,
+    "model_training": false,
+    "orders": false,
+    "paid_services": false
+  },
+  "historical_validation": "All historical slices exploratory, including reference through 2019 and examined 2020-2026; 20-session boundary embargo. No genuinely untouched historical evaluation claimed."
+}
