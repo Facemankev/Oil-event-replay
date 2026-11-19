@@ -1,6 +1,6 @@
 """Dated, sourced facts never become inferred historical receipt timestamps."""
 import json
-from datetime import datetime,time,timezone
+from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
 from event_history.library import require
@@ -40,8 +40,6 @@ def relation(source,day):
     if pubday<day:return 'earlier_publication_receipt_unknown'
     if pubday>day:return 'later_corroboration_not_a_precursor'
     if not source['published_at']:return 'same_day_order_unknown_not_proven_precursor'
-    from zoneinfo import ZoneInfo
-    local=datetime.fromisoformat(source['published_at'].replace('Z','+00:00')).astimezone(ZoneInfo('America/New_York'))
     # The library does not claim historical intraday/early-close calendars outside
     # the reviewed calendar. Same-day clocks are informative, never proven warnings.
     return 'same_day_timestamp_requires_session_clock_review'

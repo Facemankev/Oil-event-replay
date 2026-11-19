@@ -47,7 +47,7 @@ def main():
                     assert 'Not genuinely unseen' in page.locator('#bias').inner_text()
                     page.get_by_text('Subsequent 1-, 5- and 20-session performance and costs',exact=True).click()
                     assert page.locator('#outcomes tr').count()==12
-                    assert 'small_account_flat_fee' in page.locator('#outcomes').inner_text()
+                    assert '£1 per trade leg' in page.locator('#outcomes').inner_text()
                     page.get_by_text('Historical patterns and independent controls',exact=True).click()
                     assert 'Zero validated Buy' in page.locator('#replay').inner_text()
                     assert page.locator('#control-evidence a').count()==1

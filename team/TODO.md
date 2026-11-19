@@ -13,7 +13,8 @@ history).
 
 ## Doing
 
-- [ ] EVT-3: Revised [Issue #54](https://github.com/Facemankev/Oil-event-replay/issues/54), working price-first catalogue/private ledger and controlled replay in draft [#55](https://github.com/Facemankev/Oil-event-replay/pull/55), stacked on #53; final checks, then bounded-feed/prospective stage remains; no raw publication or merge — **Dad — Doing** — 2026-11-19
+- [x] EVT-3: Revised [Issue #54](https://github.com/Facemankev/Oil-event-replay/issues/54) first catalogue/replay stage in draft [#55](https://github.com/Facemankev/Oil-event-replay/pull/55), stacked on #53. Private price-first ledger, dated evidence and independent controls implemented; final-head results in PR Checks; no raw publication or merge — **Dad — Draft review** — 2026-11-19
+- [ ] EVT-3: Remaining #54 staged bounded-feed integration and actual-clock prospective prediction/settlement operation. Catalogue discovery is exploratory, not a deployed monitor or validated predictor; keep source/holdout safeguards — **Not started**
 
 
 - [ ] DATA-3: Verified free daily equity/ETF-index/gold/IPO histories, rights-aware imports, separate historical/new evaluation ([Issue #51](https://github.com/Facemankev/Oil-event-replay/issues/51)), [draft #52](https://github.com/Facemankev/Oil-event-replay/pull/52), stacked on #50; importer/evaluation path built, zero new prices; acquisition blocked pending source-domain grant. Preserve original tests/UI/prices, no paid source/key/merge — **Dad — Doing; source acquisition blocked** — 2026-11-18

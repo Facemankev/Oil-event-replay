@@ -78,6 +78,9 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(relation({'published_day':'2024-02-02'},'2024-02-01'),'later_corroboration_not_a_precursor')
     def test_same_day_unknown_clock_does_not_become_early_warning(self):
         self.assertIn('not_proven_precursor',relation({'published_day':'2024-02-01','published_at':None},'2024-02-01'))
+    def test_same_day_timestamp_requires_clock_review_without_timezone_database(self):
+        self.assertEqual(relation({'published_day':'2024-02-01','published_at':'2024-02-01T23:00:00Z'},'2024-02-01'),
+                         'same_day_timestamp_requires_session_clock_review')
     def test_unexplained_and_uninvestigated_are_retained(self):
         e=load_evidence();self.assertEqual(explanation({'id':'unknown','date':'2024-01-01'},e)['category'],'uninvestigated')
         self.assertEqual(explanation({'id':'BMY-2000-04-19','date':'2000-04-19'},e)['category'],'unexplained')
