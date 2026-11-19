@@ -1,0 +1,73 @@
+{
+  "version": "EVT-3/1",
+  "registered_at": "2026-11-19T07:48:23.550297Z",
+  "source_scope": "Six owner-selected private Stooq captures from draft #53; current-vintage unverified adjustments, no raw/public data or trained/deployed trading model.",
+  "features": {
+    "rolling_observations": 60,
+    "minimum_history": 20,
+    "volatility": "Sample standard deviation of strictly prior daily returns; instrument-specific, not a universal return cutoff.",
+    "anomaly_z": "3",
+    "volume_ratio": "3",
+    "volume_baseline": "Median of strictly previous 60 positive reported volumes; minimum 20. Missing volumes stay missing.",
+    "multi_session_horizons": [
+      5,
+      20
+    ],
+    "benchmark": "Exact-date SPY close returns and prior active-return volatility. GLD descriptive ETF proxy only."
+  },
+  "ranking": {
+    "families": [
+      "rise",
+      "fall",
+      "overnight_gap",
+      "multi_session",
+      "volume",
+      "SPY_abnormal"
+    ],
+    "top_per_family": 3,
+    "investigate_top_per_family": 1,
+    "research_window": "Three preceding reporting sessions through the move date; later sources recorded but cannot be precursor inputs.",
+    "selection": "Price-first outcome-selected discovery; retain suspected actions/bad prints and unexplained or uninvestigated candidates, never invent a headline."
+  },
+  "episodes": {
+    "first_detection": "First chronological trigger, not the later largest move.",
+    "cooldown_sessions": 20,
+    "independence": "Overlapping windows/companies are not independent trials."
+  },
+  "controls": {
+    "price_controls": "Non-trigger bars with similar strictly past volatility/trend in the preceding 126 reporting sessions. Select deterministic date/hash, not future returns. Retain missing outcomes; no retry for winners.",
+    "issuer_controls": "All four fiscal-quarter earnings releases for fiscal 2024 (NVDA fiscal 2025), for each of NVDA/AMD/MRNA/BMY, irrespective of price response. Small/no-move status is an outcome, never a selection filter.",
+    "clinical_controls": "FDA first approval announcements for Moderna mRESVIA and BMY Cobenfy in 2024, irrespective of price response; cannot substitute for earnings or safety-setback controls."
+  },
+  "replay": {
+    "reference_period_through": "2019-12-31",
+    "embargo_sessions": 20,
+    "later_historical_from": "2020-01-01",
+    "classification": "All historical scan/replay and 2020-2026 results are exploratory. The earlier 21-event holdout remains frozen and examined, not unseen.",
+    "rules": [
+      "long_after_positive_close_anomaly",
+      "long_after_negative_close_anomaly"
+    ],
+    "horizons": [
+      1,
+      5,
+      20
+    ],
+    "entry": "First reporting-session close strictly after detection bar date; actual historical bar receipt is unknown. No pre-move fill.",
+    "costs": "All four unchanged SIM-1 cost assumptions; fixed no-trade and exact-window SPY-relative references.",
+    "fitting": "No threshold optimization, model fitting, rule/horizon winner selection or probabilities. Fixed rules compared chronologically and against controls."
+  },
+  "future_evaluation": {
+    "start": "Only genuinely new observations/events first received after actual registration, locked before outcomes.",
+    "actual_predictions": 0,
+    "actual_outcomes": 0,
+    "deployment": "No continuous financial-news service or push alerts are deployed. EVT-2 remains a pilot; bounded feed integration/prospective paper operation is a subsequent staged deliverable."
+  },
+  "safeguards": {
+    "raw_publication": false,
+    "original_price_writes": false,
+    "parent_holdout_changes": false,
+    "live_orders": false,
+    "paid_services": false
+  }
+}
