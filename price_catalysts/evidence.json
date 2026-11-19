@@ -1,0 +1,879 @@
+{
+  "schema_version": 1,
+  "researched_at": "2026-11-19T08:03:35.613826+00:00",
+  "selection": "Price-ranked discovery first; separate complete fiscal-year issuer/FDA controls selected by protocol, never by return. Facts and URLs only; private prices remain local.",
+  "verification": "Official/credible indexed text reviewed through web reader. Current redirects can fail; no claim these are immutable original vintages or earliest possible public reports. Unknown intraday clocks remain null.",
+  "sources": {
+    "amd-verdict": {
+      "id": "amd-verdict",
+      "publisher": "UPI",
+      "published_day": "1992-06-18",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "AMD stock plunges on Intel ruling",
+      "url": "https://www.upi.com/Archives/1992/06/18/AMD-stock-plunges-on-Intel-ruling/4608708840000/",
+      "fact": "Contemporary report links the selloff to an adverse Intel legal verdict.",
+      "kind": "contemporary_reporting",
+      "original_vintage_verified": false
+    },
+    "amd-2002": {
+      "id": "amd-2002",
+      "publisher": "AMD / SEC",
+      "published_day": "2002-10-18",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "AMD quarterly results filing",
+      "url": "https://ir.amd.com/financial-information/sec-filings/content/0001012870-02-004076/d8k.htm",
+      "fact": "Filing says AMD reported quarterly results on October 16; filing date is later than the move.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "amd-outlook": {
+      "id": "amd-outlook",
+      "publisher": "Bloomberg / Washington Post",
+      "published_day": "2002-10-17",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Stocks Spring Back For 4th Gain in 5 Days",
+      "url": "https://www.washingtonpost.com/archive/business/2002/10/18/stocks-spring-back-for-4th-gain-in-5-days/410e1d17-e2ef-4566-9160-efdcc06858c7/",
+      "fact": "AMD forecasts accompanied a broad market rally.",
+      "kind": "contemporary_reporting",
+      "original_vintage_verified": false
+    },
+    "amd-2016": {
+      "id": "amd-2016",
+      "publisher": "AMD",
+      "published_day": "2016-04-21",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "AMD reports first-quarter results and licensing venture",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/683/amd-reports-2016-first-quarter-results",
+      "fact": "Results included an IP licensing agreement and China server joint venture; these are multiple simultaneous developments.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "vanlev": {
+      "id": "vanlev",
+      "publisher": "Drug Discovery Online",
+      "published_day": "2000-04-24",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Bristol-Myers delays Vanlev application",
+      "url": "https://www.drugdiscoveryonline.com/doc/bristol-myers-squibb-delays-vanlev-applicatio-0001",
+      "fact": "Later report describes withdrawal of the Vanlev application on April 19. It cannot establish a prior warning.",
+      "kind": "later_reporting",
+      "original_vintage_verified": false
+    },
+    "bmy-warning": {
+      "id": "bmy-warning",
+      "publisher": "Los Angeles Times",
+      "published_day": "2002-04-04",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Bristol-Myers lowers forecasts",
+      "url": "https://www.latimes.com/archives/la-xpm-2002-apr-04-fi-bms4-story.html",
+      "fact": "Bristol-Myers reduced its earnings forecast.",
+      "kind": "contemporary_reporting",
+      "original_vintage_verified": false
+    },
+    "checkmate": {
+      "id": "checkmate",
+      "publisher": "Bristol Myers Squibb",
+      "published_day": "2016-08-05",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "CheckMate-026 top-line results",
+      "url": "https://news.bms.com/news/details/2016/Bristol-Myers-Squibb-Statement-on-Top-Line-Results-from-CheckMate--026/default.aspx",
+      "fact": "The trial did not meet its progression-free survival primary endpoint.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "celgene": {
+      "id": "celgene",
+      "publisher": "Bristol Myers Squibb",
+      "published_day": "2019-11-20",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Celgene acquisition completed",
+      "url": "https://news.bms.com/news/details/2019/Bristol-Myers-Squibb-Completes-Acquisition-of-Celgene-Creating-a-Leading-Biopharma-Company/default.aspx",
+      "fact": "The company announced completion of its previously agreed Celgene acquisition; completion may create mechanical turnover.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "aig": {
+      "id": "aig",
+      "publisher": "Federal Reserve",
+      "published_day": "2008-09-16",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "AIG credit facility",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20080916a.htm",
+      "fact": "Federal Reserve authorized emergency lending to AIG during the financial crisis.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "liquidity": {
+      "id": "liquidity",
+      "publisher": "Federal Reserve",
+      "published_day": "2008-10-13",
+      "published_at": "2008-10-13T06:00:00Z",
+      "precision": "timestamp",
+      "title": "Coordinated liquidity measures",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20081013a.htm",
+      "fact": "Central banks announced expanded dollar liquidity at full allotment.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "gold-2013": {
+      "id": "gold-2013",
+      "publisher": "Reuters / Stabroek News",
+      "published_day": "2013-04-15",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Gold tumbles as China data hits commodities, stocks",
+      "url": "https://www.stabroeknews.com/2013/04/15/news/world/gold-tumbles-as-china-data-hits-commodities-stocks/",
+      "fact": "Reporting describes weaker Chinese data, gold liquidation and concern about Cyprus reserve sales; several explanations coexist.",
+      "kind": "contemporary_reporting",
+      "original_vintage_verified": false
+    },
+    "gold-2026": {
+      "id": "gold-2026",
+      "publisher": "Investing.com",
+      "published_day": "2026-01-30",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Gold selloff after Warsh nomination",
+      "url": "https://au.investing.com/news/commodities-news/gold-prices-fall-further-from-record-highs-set-for-stellar-january-4231493",
+      "fact": "Contemporary report associates selling with Warsh nomination, a firmer dollar and profit taking; it discusses gold, not an issuer event for GLD.",
+      "kind": "contemporary_reporting",
+      "original_vintage_verified": false
+    },
+    "mrna-ships": {
+      "id": "mrna-ships",
+      "publisher": "Moderna / Nasdaq",
+      "published_day": "2020-02-24",
+      "published_at": "2020-02-24T23:04:00Z",
+      "precision": "timestamp",
+      "title": "First coronavirus vaccine batch shipped",
+      "url": "https://www.nasdaq.com/press-release/moderna-ships-mrna-vaccine-against-novel-coronavirus-mrna-1273-for-phase-1-study-2020",
+      "fact": "Moderna released a first clinical batch for phase-one study; shipment was not proof of efficacy.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "mrna-phase3": {
+      "id": "mrna-phase3",
+      "publisher": "Moderna / Merck",
+      "published_day": "2026-08-19",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "INTerpath-001 phase-three endpoints",
+      "url": "https://news.modernatx.com/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-plus-keytruda-met-endpoints-of-rfs-and-dmfs-in-melanoma",
+      "fact": "Companies announced phase-three melanoma trial endpoints met; this is not regulatory approval.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "mrna-reversal": {
+      "id": "mrna-reversal",
+      "publisher": "NDTV Profit",
+      "published_day": "2026-08-20",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Moderna shares correct after vaccine rally",
+      "url": "https://www.ndtvprofit.com/markets/moderna-shares-correct-20-on-profit-booking-after-177-cancer-vaccine-fueled-surge-11936756/",
+      "fact": "Contemporary commentary describes profit taking after the prior trial announcement; investor motives are an interpretation.",
+      "kind": "contemporary_reporting",
+      "original_vintage_verified": false
+    },
+    "xbox-rumor": {
+      "id": "xbox-rumor",
+      "publisher": "EDN",
+      "published_day": "2000-03-07",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Microsoft pairs with Nvidia on Xbox",
+      "url": "https://www.edn.com/microsoft-pairs-with-nvidia-on-x-box-gaming-console-2/",
+      "fact": "Dated trade reporting associates Nvidia with the Xbox graphics design; the original intraday publication clock is unknown.",
+      "kind": "contemporary_reporting",
+      "original_vintage_verified": false
+    },
+    "xbox-official": {
+      "id": "xbox-official",
+      "publisher": "Microsoft",
+      "published_day": "2000-03-10",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Microsoft unveils plans for Xbox",
+      "url": "https://news.microsoft.com/source/2000/03/10/microsoft-unveils-plans-for-xbox/",
+      "fact": "Microsoft described the console and Nvidia graphics partnership. This announcement cannot explain the March 7 move as advance official news.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "nvda-earnings": {
+      "id": "nvda-earnings",
+      "publisher": "NVIDIA / SEC",
+      "published_day": "2004-08-05",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "NVIDIA second-quarter fiscal 2005 results",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581004000020/q205prfinancials.htm",
+      "fact": "Quarterly results described a challenging desktop GPU quarter with lower profit.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "nvda-defects": {
+      "id": "nvda-defects",
+      "publisher": "NVIDIA / SEC",
+      "published_day": "2008-07-02",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "NVIDIA business update",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119312508145974/d8k.htm",
+      "fact": "Company announced a warranty-related charge for packaging issues and reduced business expectations.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "covid-selloff": {
+      "id": "covid-selloff",
+      "publisher": "AP / PBS",
+      "published_day": "2020-02-27",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Stocks sink amid coronavirus concerns",
+      "url": "https://www.pbs.org/newshour/economy/stock-market-sinks-amid-growing-coronavirus-concerns",
+      "fact": "Contemporary reporting describes a broad fear-driven selloff; publication after the session cannot be a same-session predictor.",
+      "kind": "contemporary_reporting",
+      "original_vintage_verified": false
+    },
+    "fed-covid": {
+      "id": "fed-covid",
+      "publisher": "Federal Reserve",
+      "published_day": "2020-03-15",
+      "published_at": "2020-03-15T21:00:00Z",
+      "precision": "timestamp",
+      "title": "Emergency FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm",
+      "fact": "Emergency rate reduction and asset purchases responded to pandemic disruption. A response to bad conditions is not necessarily bullish.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-NVDA-q1": {
+      "id": "control-NVDA-q1",
+      "publisher": "NVIDIA",
+      "published_day": "2024-05-22",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "NVIDIA fiscal 2025 Q1 results",
+      "url": "https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2025/default.aspx",
+      "fact": "Scheduled quarterly financial results; selected for full fiscal-year coverage, not return direction.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-NVDA-q2": {
+      "id": "control-NVDA-q2",
+      "publisher": "NVIDIA",
+      "published_day": "2024-08-28",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "NVIDIA fiscal 2025 Q2 results",
+      "url": "https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2025/default.aspx",
+      "fact": "Scheduled quarterly financial results; selected for full fiscal-year coverage, not return direction.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-NVDA-q3": {
+      "id": "control-NVDA-q3",
+      "publisher": "NVIDIA",
+      "published_day": "2024-11-20",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "NVIDIA fiscal 2025 Q3 results",
+      "url": "https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2025/default.aspx",
+      "fact": "Scheduled quarterly financial results; selected for full fiscal-year coverage, not return direction.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-NVDA-q4": {
+      "id": "control-NVDA-q4",
+      "publisher": "NVIDIA",
+      "published_day": "2025-02-26",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "NVIDIA fiscal 2025 Q4 results",
+      "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2025/default.aspx",
+      "fact": "Scheduled quarterly financial results; selected for full fiscal-year coverage, not return direction.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-AMD-q1": {
+      "id": "control-AMD-q1",
+      "publisher": "AMD",
+      "published_day": "2024-04-30",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "AMD fiscal 2024 Q1 results",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1192/amd-reports-first-quarter-2024-financial-results",
+      "fact": "Scheduled quarterly results, selected independently of observed price response.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-AMD-q2": {
+      "id": "control-AMD-q2",
+      "publisher": "AMD",
+      "published_day": "2024-07-30",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "AMD fiscal 2024 Q2 results",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1209/amd-reports-second-quarter-2024-financial-results",
+      "fact": "Scheduled quarterly results, selected independently of observed price response.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-AMD-q3": {
+      "id": "control-AMD-q3",
+      "publisher": "AMD",
+      "published_day": "2024-10-29",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "AMD fiscal 2024 Q3 results",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1224/amd-reports-third-quarter-2024-financial-results",
+      "fact": "Scheduled quarterly results, selected independently of observed price response.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-AMD-q4": {
+      "id": "control-AMD-q4",
+      "publisher": "AMD",
+      "published_day": "2025-02-04",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "AMD fiscal 2024 Q4 results",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1236/amd-reports-fourth-quarter-and-full-year-2024-financial-results",
+      "fact": "Scheduled quarterly results, selected independently of observed price response.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-MRNA-q1": {
+      "id": "control-MRNA-q1",
+      "publisher": "Moderna",
+      "published_day": "2024-05-02",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Moderna fiscal 2024 Q1 results",
+      "url": "https://investors.modernatx.com/news/news-details/2024/Moderna-Reports-First-Quarter-2024-Financial-Results-and-Provides-Business-Updates/default.aspx",
+      "fact": "Scheduled financial results and business update; complete fiscal-year membership independent of return size.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-MRNA-q2": {
+      "id": "control-MRNA-q2",
+      "publisher": "Moderna",
+      "published_day": "2024-08-01",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Moderna fiscal 2024 Q2 results",
+      "url": "https://investors.modernatx.com/news/news-details/2024/Moderna-Reports-Second-Quarter-2024-Financial-Results-and-Provides-Business-Updates/default.aspx",
+      "fact": "Scheduled financial results and business update; complete fiscal-year membership independent of return size.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-MRNA-q3": {
+      "id": "control-MRNA-q3",
+      "publisher": "Moderna",
+      "published_day": "2024-11-07",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Moderna fiscal 2024 Q3 results",
+      "url": "https://investors.modernatx.com/news/news-details/2024/Moderna-Reports-Third-Quarter-2024-Financial-Results-and-Provides-Business-Updates/default.aspx",
+      "fact": "Scheduled financial results and business update; complete fiscal-year membership independent of return size.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-MRNA-q4": {
+      "id": "control-MRNA-q4",
+      "publisher": "Moderna",
+      "published_day": "2025-02-14",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "Moderna fiscal 2024 Q4 results",
+      "url": "https://investors.modernatx.com/news/news-details/2025/Moderna-Reports-Fourth-Quarter-and-Fiscal-Year-2024-Financial-Results-and-Provides-Business-Updates/default.aspx",
+      "fact": "Scheduled financial results and business update; complete fiscal-year membership independent of return size.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-BMY-q1": {
+      "id": "control-BMY-q1",
+      "publisher": "Bristol Myers Squibb",
+      "published_day": "2024-04-25",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "BMY fiscal 2024 Q1 results",
+      "url": "https://news.bms.com/news/details/2024/Bristol-Myers-Squibb-Reports-First-Quarter-Financial-Results-for-2024/default.aspx",
+      "fact": "Scheduled quarterly results, selected for full-year coverage regardless of market reaction.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-BMY-q2": {
+      "id": "control-BMY-q2",
+      "publisher": "Bristol Myers Squibb",
+      "published_day": "2024-07-26",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "BMY fiscal 2024 Q2 results",
+      "url": "https://news.bms.com/news/details/2024/Bristol-Myers-Squibb-Reports-Second-Quarter-Financial-Results-for-2024/default.aspx",
+      "fact": "Scheduled quarterly results, selected for full-year coverage regardless of market reaction.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-BMY-q3": {
+      "id": "control-BMY-q3",
+      "publisher": "Bristol Myers Squibb",
+      "published_day": "2024-10-31",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "BMY fiscal 2024 Q3 results",
+      "url": "https://news.bms.com/news/details/2024/Bristol-Myers-Squibb-Reports-Third-Quarter-Financial-Results-for-2024/default.aspx",
+      "fact": "Scheduled quarterly results, selected for full-year coverage regardless of market reaction.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-BMY-q4": {
+      "id": "control-BMY-q4",
+      "publisher": "Bristol Myers Squibb",
+      "published_day": "2025-02-06",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "BMY fiscal 2024 Q4 results",
+      "url": "https://news.bms.com/news/details/2025/Bristol-Myers-Squibb-Reports-Fourth-Quarter-and-Full-Year-Financial-Results-for-2024/default.aspx",
+      "fact": "Scheduled quarterly results, selected for full-year coverage regardless of market reaction.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-mresvia": {
+      "id": "control-mresvia",
+      "publisher": "FDA",
+      "published_day": "2024-05-31",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "FDA Roundup: mRESVIA approval",
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-roundup-may-31-2024",
+      "fact": "FDA approved Moderna mRESVIA for adults aged 60 and older.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    },
+    "control-cobenfy": {
+      "id": "control-cobenfy",
+      "publisher": "FDA",
+      "published_day": "2024-09-26",
+      "published_at": null,
+      "precision": "day_only",
+      "title": "FDA approves Cobenfy",
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-drug-new-mechanism-action-treatment-schizophrenia",
+      "fact": "FDA approved Cobenfy for schizophrenia in adults.",
+      "kind": "primary",
+      "original_vintage_verified": false
+    }
+  },
+  "investigations": {
+    "AMD-1991-08-30": {
+      "sources": [],
+      "category": "unexplained",
+      "explanation": "No reliable contemporary catalyst established for the reported volume spike.",
+      "weakness": "A later legal bibliography mentions an antitrust article; without the original publication it is not timing evidence.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "AMD-1992-06-18": {
+      "sources": [
+        "amd-verdict"
+      ],
+      "category": "plausible",
+      "explanation": "Adverse Intel litigation is a plausible company catalyst.",
+      "weakness": "Reporting is contemporary but the first-public clock and intraday ordering are unknown.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "AMD-2002-10-17": {
+      "sources": [
+        "amd-2002",
+        "amd-outlook"
+      ],
+      "category": "multiple",
+      "explanation": "Quarterly outlook and a broad technology rebound overlap.",
+      "weakness": "The SEC filing is later evidence; it is not an October 16 receipt or a proven gap precursor.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "AMD-2016-04-22": {
+      "sources": [
+        "amd-2016"
+      ],
+      "category": "multiple",
+      "explanation": "Earnings and the China licensing venture plausibly contributed together.",
+      "weakness": "A prior-day announcement supports timing, but does not isolate either effect.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "BMY-1986-12-26": {
+      "sources": [],
+      "category": "unexplained",
+      "explanation": "No dated reliable catalyst found for this apparent jump.",
+      "weakness": "Possible source adjustment or corporate action needs primary review; do not treat it as an investable signal.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "BMY-2000-04-19": {
+      "sources": [
+        "vanlev"
+      ],
+      "category": "unexplained",
+      "explanation": "Later coverage suggests the Vanlev application withdrawal as a lead.",
+      "weakness": "No contemporary source established in the bounded window; later corroboration is not a verified explanation or precursor.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "BMY-2002-04-04": {
+      "sources": [
+        "bmy-warning"
+      ],
+      "category": "plausible",
+      "explanation": "Reduced earnings expectations are a plausible catalyst.",
+      "weakness": "Day-only reporting does not establish the first release time.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "BMY-2016-08-05": {
+      "sources": [
+        "checkmate"
+      ],
+      "category": "plausible",
+      "explanation": "Failure of an important clinical endpoint plausibly changed expectations.",
+      "weakness": "Same-day primary publication has no verified clock here; cannot prove it preceded the opening gap.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "BMY-2019-11-20": {
+      "sources": [
+        "celgene"
+      ],
+      "category": "plausible",
+      "explanation": "Merger completion could help explain turnover without a large directional return.",
+      "weakness": "Mechanical rebalancing and anticipation are alternatives; volume is not directional evidence.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "GLD-2008-09-17": {
+      "sources": [
+        "aig"
+      ],
+      "category": "macro",
+      "explanation": "Emergency financial-system intervention provides safe-haven context.",
+      "weakness": "GLD is an ETF; the AIG rescue does not establish the cause of its entire move.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "GLD-2008-10-13": {
+      "sources": [
+        "liquidity"
+      ],
+      "category": "macro",
+      "explanation": "Dollar liquidity and a broad equity rebound offer cross-market context.",
+      "weakness": "SPY-relative weakness may come from SPY rising rather than gold crashing.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "GLD-2013-04-15": {
+      "sources": [
+        "gold-2013"
+      ],
+      "category": "multiple",
+      "explanation": "China concerns, liquidation and reserve-sale fears coexisted.",
+      "weakness": "No single cause isolated; same-day reporting clock unknown.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "GLD-2026-01-30": {
+      "sources": [
+        "gold-2026"
+      ],
+      "category": "macro",
+      "explanation": "Policy nomination and dollar repricing are plausible macro context.",
+      "weakness": "Secondary reporting is weaker than a primary timestamped event study; gold is not GLD.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "MRNA-2020-02-26": {
+      "sources": [
+        "mrna-ships"
+      ],
+      "category": "plausible",
+      "explanation": "Previously announced clinical shipment plausibly attracted attention and volume.",
+      "weakness": "Not an efficacy result; other pandemic news and momentum overlap.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "MRNA-2026-08-19": {
+      "sources": [
+        "mrna-phase3"
+      ],
+      "category": "plausible",
+      "explanation": "Positive phase-three clinical news plausibly changed expectations.",
+      "weakness": "Unknown release clock cannot prove the announcement preceded the gap; no future approval is assumed.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "MRNA-2026-08-20": {
+      "sources": [
+        "mrna-phase3",
+        "mrna-reversal"
+      ],
+      "category": "plausible",
+      "explanation": "A reversal followed the prior clinical-news surge.",
+      "weakness": "Profit taking is contemporary interpretation, not confirmed investor motivation or a fresh clinical setback.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "NVDA-1999-08-19": {
+      "sources": [],
+      "category": "unexplained",
+      "explanation": "No reliable dated contemporary catalyst established.",
+      "weakness": "Historic archive gaps and volume adjustment uncertainty remain.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "NVDA-2000-03-07": {
+      "sources": [
+        "xbox-rumor",
+        "xbox-official"
+      ],
+      "category": "plausible",
+      "explanation": "Contemporary Xbox reporting offers a plausible catalyst.",
+      "weakness": "Official confirmation came later; the original EDN publication clock is unverified.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "NVDA-2000-03-13": {
+      "sources": [
+        "xbox-official"
+      ],
+      "category": "plausible",
+      "explanation": "Xbox partnership confirmation falls within the research window.",
+      "weakness": "The multi-session move includes earlier rumours and expectations; not a new independent episode.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "NVDA-2004-08-06": {
+      "sources": [
+        "nvda-earnings"
+      ],
+      "category": "plausible",
+      "explanation": "Weak quarterly earnings are a plausible preceding company catalyst.",
+      "weakness": "Current archived release does not establish the original receipt time.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "NVDA-2008-07-03": {
+      "sources": [
+        "nvda-defects"
+      ],
+      "category": "multiple",
+      "explanation": "Warranty charge and weaker outlook were announced together.",
+      "weakness": "Cannot isolate product-defect news from guidance or broad-market effects.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "SPY-2008-10-13": {
+      "sources": [
+        "liquidity"
+      ],
+      "category": "macro",
+      "explanation": "Coordinated emergency liquidity provides plausible market-wide context.",
+      "weakness": "Other rescue measures coincided; no causal attribution to one announcement.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "SPY-2020-02-27": {
+      "sources": [
+        "covid-selloff"
+      ],
+      "category": "macro",
+      "explanation": "Pandemic disruption provides plausible broad-market context.",
+      "weakness": "The report describes a realised selloff, not an earlier warning; exact clock unverified.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "SPY-2020-02-28": {
+      "sources": [
+        "covid-selloff"
+      ],
+      "category": "macro",
+      "explanation": "Continuing pandemic concern offers context for unusual turnover.",
+      "weakness": "One pandemic episode; the prior selloff story is not a validated volume predictor.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    },
+    "SPY-2020-03-16": {
+      "sources": [
+        "fed-covid"
+      ],
+      "category": "macro",
+      "explanation": "Pandemic stress and emergency policy response coincided.",
+      "weakness": "A rate cut responds to distress and does not guarantee a rebound.",
+      "causal_proof": false,
+      "search": "Company/ticker + move date, preceding three reporting sessions and announcement terms; bounded manual search, not an exhaustive archive.",
+      "search_completed_at": "2026-11-19T08:03:35.613826+00:00"
+    }
+  },
+  "controls": [
+    {
+      "id": "control-NVDA-q1",
+      "instrument": "NVDA",
+      "category": "earnings",
+      "source": "control-NVDA-q1",
+      "occurred_day": "2024-05-22"
+    },
+    {
+      "id": "control-NVDA-q2",
+      "instrument": "NVDA",
+      "category": "earnings",
+      "source": "control-NVDA-q2",
+      "occurred_day": "2024-08-28"
+    },
+    {
+      "id": "control-NVDA-q3",
+      "instrument": "NVDA",
+      "category": "earnings",
+      "source": "control-NVDA-q3",
+      "occurred_day": "2024-11-20"
+    },
+    {
+      "id": "control-NVDA-q4",
+      "instrument": "NVDA",
+      "category": "earnings",
+      "source": "control-NVDA-q4",
+      "occurred_day": "2025-02-26"
+    },
+    {
+      "id": "control-AMD-q1",
+      "instrument": "AMD",
+      "category": "earnings",
+      "source": "control-AMD-q1",
+      "occurred_day": "2024-04-30"
+    },
+    {
+      "id": "control-AMD-q2",
+      "instrument": "AMD",
+      "category": "earnings",
+      "source": "control-AMD-q2",
+      "occurred_day": "2024-07-30"
+    },
+    {
+      "id": "control-AMD-q3",
+      "instrument": "AMD",
+      "category": "earnings",
+      "source": "control-AMD-q3",
+      "occurred_day": "2024-10-29"
+    },
+    {
+      "id": "control-AMD-q4",
+      "instrument": "AMD",
+      "category": "earnings",
+      "source": "control-AMD-q4",
+      "occurred_day": "2025-02-04"
+    },
+    {
+      "id": "control-MRNA-q1",
+      "instrument": "MRNA",
+      "category": "earnings",
+      "source": "control-MRNA-q1",
+      "occurred_day": "2024-05-02"
+    },
+    {
+      "id": "control-MRNA-q2",
+      "instrument": "MRNA",
+      "category": "earnings",
+      "source": "control-MRNA-q2",
+      "occurred_day": "2024-08-01"
+    },
+    {
+      "id": "control-MRNA-q3",
+      "instrument": "MRNA",
+      "category": "earnings",
+      "source": "control-MRNA-q3",
+      "occurred_day": "2024-11-07"
+    },
+    {
+      "id": "control-MRNA-q4",
+      "instrument": "MRNA",
+      "category": "earnings",
+      "source": "control-MRNA-q4",
+      "occurred_day": "2025-02-14"
+    },
+    {
+      "id": "control-BMY-q1",
+      "instrument": "BMY",
+      "category": "earnings",
+      "source": "control-BMY-q1",
+      "occurred_day": "2024-04-25"
+    },
+    {
+      "id": "control-BMY-q2",
+      "instrument": "BMY",
+      "category": "earnings",
+      "source": "control-BMY-q2",
+      "occurred_day": "2024-07-26"
+    },
+    {
+      "id": "control-BMY-q3",
+      "instrument": "BMY",
+      "category": "earnings",
+      "source": "control-BMY-q3",
+      "occurred_day": "2024-10-31"
+    },
+    {
+      "id": "control-BMY-q4",
+      "instrument": "BMY",
+      "category": "earnings",
+      "source": "control-BMY-q4",
+      "occurred_day": "2025-02-06"
+    },
+    {
+      "id": "control-mresvia",
+      "instrument": "MRNA",
+      "category": "regulatory_approval",
+      "source": "control-mresvia",
+      "occurred_day": "2024-05-31"
+    },
+    {
+      "id": "control-cobenfy",
+      "instrument": "BMY",
+      "category": "regulatory_approval",
+      "source": "control-cobenfy",
+      "occurred_day": "2024-09-26"
+    }
+  ],
+  "controls_registered_before_price_evaluation": true
+}

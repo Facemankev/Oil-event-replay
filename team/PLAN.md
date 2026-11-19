@@ -111,6 +111,8 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 ## 5. Now
 
+- **Dad / EVT-3:** Revised #54 catalogue stage in draft #55 on dad/evt-3-price-catalyst-ledger, stacked on #53. Read-only scan, dated catalyst ledger, independent controls and fixed-rule replay implemented; local regression and both implementation-head browser jobs pass. Final-head status lives in PR Checks. Keep retrospective explanation and examined holdout separate from genuinely future evaluation. Bounded-feed/prospective operation remains next; no raw publication or merge.
+
 - **Dad / DATA-3 follow-up:** [Draft #53](https://github.com/Facemankev/Oil-event-replay/pull/53), on #52: 43507 private quarantine rows, zero on repeat, no approved/public prices. Private-only event/cost/SPY/GLD diagnostics; 2023–2026 benchmark calendar review, 4 retained direct NVDA pairs / 12 windows, no newly eligible trade examples or predictive claim. Terms reviewed within owner-private scope; authentication/actions unresolved. Preserve holdout/three answers, no raw publication or merge.
 
 - **Dad / DATA-3:** Issue #51 is [draft #52](https://github.com/Facemankev/Oil-event-replay/pull/52), stacked on #50. Import/evaluation code built; zero new daily prices, acquisition blocked by the running source-host policy pending owner grant. Freeze examined evaluation and reserve genuinely new/prospective assessment separately. Free only, no keys or access-control bypass, unchanged three answers/paper safeguards, draft/no merge.

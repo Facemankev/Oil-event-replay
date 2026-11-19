@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="referrer" content="no-referrer"><title>Market Ripple — Private movement ledger</title>
+<style>/* HOUSE_STYLE */
+.mr-stack{gap:22px}.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+select{font:inherit;min-height:48px;max-width:100%;width:100%;padding:12px;border:1px solid var(--mr-edge);border-radius:12px;background:var(--mr-solid);color:var(--mr-ink)}
+a,p,li,td{overflow-wrap:anywhere}summary{min-height:44px;cursor:pointer}.answers{display:grid;gap:22px;grid-template-columns:repeat(3,minmax(0,1fr))}.answers>*{min-width:0}
+h1,h2,h3{line-height:1.2}h2{font:500 26px var(--mr-display)}.value{font:500 38px var(--mr-display)}
+.mr-table-scroll{max-width:100%;overflow-x:auto}table{min-width:600px}.mr-note{max-width:80ch}
+button{min-height:44px}.private{border-left:4px solid var(--mr-accent);padding-left:16px}
+@media(max-width:850px){.answers{grid-template-columns:1fr}.mr-panel{padding:22px}}
+</style></head><body class="mr-page"><main class="mr-wrap mr-stack">
+<header class="mr-bar mr-glass"><h1 class="mr-brand"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="7" cy="23" r="3" fill="currentColor"/><path d="M7 14a9 9 0 0 1 9 9M7 8a15 15 0 0 1 15 15M7 2a21 21 0 0 1 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Market Ripple</h1><span class="mr-badge">Private historical research</span></header>
+<div class="controls" aria-label="Appearance"><button class="mr-btn" data-theme="light">Light</button><button class="mr-btn" data-theme="dark">Dark</button></div>
+<p class="mr-note private">Outcome-selected discovery. These movements already happened. Historical patterns are not predictions. Owner-supplied prices are provisional and private; do not publish this file.</p>
+<section class="mr-panel mr-glass"><h2>Move → Evidence → Explanation</h2><p id="coverage"></p><label for="movement">Choose a ranked movement</label><select id="movement"></select></section>
+<div class="answers" id="answers" aria-live="polite">
+<section class="mr-panel mr-glass" data-answer><p class="mr-label">1 · What moved?</p><h2 id="title"></h2><div id="move" class="value"></div><p id="market"></p><p id="volume"></p><p id="ranking" class="mr-note"></p><p id="flags" class="mr-note"></p></section>
+<section class="mr-panel mr-glass" data-answer><p class="mr-label">2 · What evidence exists?</p><h2 id="confidence"></h2><p id="explanation"></p><p id="weakness" class="mr-note"></p><ul id="sources"></ul></section>
+<section class="mr-panel mr-glass" data-answer><p class="mr-label">3 · What does this mean?</p><h2 id="action">No Action</h2><p id="reason"></p><p id="bias"></p><p class="mr-note">Later-close paper simulations only. The discovery-day jump is never booked as a trade profit. No real orders, account changes or guaranteed outcome.</p></section>
+</div>
+<details class="mr-panel mr-glass"><summary>Subsequent 1-, 5- and 20-session performance and costs</summary><p>Reaction: detection-day close to H later sessions. Hypothetical trade: entry at the next close, then H intervals. Separate windows; exact-date SPY and GBP/USD required, no filling missing prices. Fees are illustrative sensitivities.</p><div class="mr-table-scroll"><table class="mr-table"><thead><tr><th>Sessions</th><th>Reaction</th><th>SPY excess pp</th><th>Cost scenario</th><th>Later entry / exit</th><th>Net GBP</th><th>SPY net GBP</th></tr></thead><tbody id="outcomes"></tbody></table></div></details>
+<details class="mr-panel mr-glass"><summary>Historical patterns and independent controls</summary><p id="replay"></p><p>Fixed rules, chronology and controls were registered before new follow-through calculations. All historical slices remain exploratory: the complete scan exposed realised outcomes. No threshold fitting, probability estimate or best-rule promotion.</p><p id="controls"></p><ul id="control-evidence"></ul><p>Source-selected controls include complete fiscal-year earnings releases and two FDA approvals, irrespective of response. They are not automatically interchangeable catalysts. Reused controls and simultaneous cross-market episodes are not independent trials.</p></details>
+<footer class="mr-note"><details><summary>Data and research limitations</summary><p id="limits"></p></details><p>Original dashboard, prices, parent learning holdout and paper account are unchanged. No continuous monitoring or prospective alert performance is claimed.</p></footer>
+</main>
+<script type="application/json" id="private-data">/* PRIVATE_DATA */</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('private-data').textContent);
+const el=id=>document.getElementById(id);const put=(id,s)=>{el(id).textContent=s};
+const words=s=>String(s).replaceAll('_',' ');
+const categories={unexplained:'Unexplained',plausible:'Plausible association',multiple:'Several possible catalysts',macro:'Market-wide context',uninvestigated:'Not yet investigated'};
+const timing={earlier_publication_receipt_unknown:'Published on an earlier date; original receipt unknown',later_corroboration_not_a_precursor:'Published after the move; later evidence only',same_day_order_unknown_not_proven_precursor:'Same-day publication; order relative to the move unknown',same_day_timestamp_requires_session_clock_review:'Same-day clock recorded; session ordering needs review'};
+const families={rise:'daily rise',fall:'daily fall',overnight_gap:'opening gap',multi_session:'multi-session move',volume:'volume',SPY_abnormal:'SPY-relative move'};
+const costs={zero:'Zero costs',declared:'Low-cost example',stressed:'Higher-cost example',small_account_flat_fee:'£1 per trade leg'};
+const fmt=(v,suffix='')=>v===null||v===undefined?'Unavailable':`${Number(v)>0?'+':''}${Number(v).toFixed(2)}${suffix}`;
+function link(parent,source){const a=document.createElement('a');const u=new URL(source.url);if(u.protocol!=='https:')return;a.href=u.href;a.textContent=source.title;a.target='_blank';a.rel='noopener noreferrer';parent.append(a)}
+function show(id){const r=data.ledger.find(r=>r.id===id);if(!r)return;const e=r.evidence;
+ put('title',r.instrument+' · '+r.date);put('move',fmt(r.close_change_percent,'%'));
+ el('move').className='value '+(Number(r.close_change_percent)>0?'mr-up':Number(r.close_change_percent)<0?'mr-down':'');
+ put('market','Close change; opening gap '+fmt(r.overnight_gap_percent,'%')+'. SPY excess '+fmt(r.SPY_excess_percentage_points,' pp')+'. GLD proxy '+fmt(r.GLD_same_session_change_percent,'%')+'.');
+ put('ranking','Selected by '+r.selected_by.map(x=>(families[x.family]||words(x.family))+' rank '+x.rank).join(', ')+'. Ranking uses realised movement, not predicted gain.');
+ put('volume','Volume / prior median: '+(r.volume_ratio===null?'Unavailable':Number(r.volume_ratio).toFixed(2)+'×')+'. Current bar excluded from baseline.');
+ put('flags',[r.basis,...r.data_flags.map(words),e.data_review||'',r.detection_assumption].filter(Boolean).join(' '));
+ put('confidence',categories[e.category]+' · '+e.confidence+' confidence');put('explanation',e.explanation);put('weakness',e.weakness+' No causal proof.');el('sources').replaceChildren();
+ for(const s of e.sources){const li=document.createElement('li');link(li,s);const text=document.createElement('p');text.textContent=s.publisher+' · '+s.published_day+' · '+(s.published_at||'intraday clock unknown')+' · '+(timing[s.timing]||words(s.timing))+'. Historical receipt unknown.';li.append(text);el('sources').append(li)}
+ if(!e.sources.length){const li=document.createElement('li');li.textContent='No supporting source established. Do not invent a catalyst.';el('sources').append(li)}
+ put('action','No Action');put('reason','Price adjustments, original availability and a useful forecast have not been verified. These examples were selected after their prices moved.');put('bias',({overlaps_prior_study_window:'This date overlaps earlier research',newly_investigated_outcome_selected_history:'Newly investigated historical case',prior_window_audit_not_supplied:'Earlier research-window audit unavailable'}[r.examination.status]||words(r.examination.status))+'. Not genuinely unseen validation.');
+ el('outcomes').replaceChildren();for(const w of r.subsequent){for(const [name,o] of Object.entries(w.costs)){const tr=document.createElement('tr');const benchmark=w.SPY_costs[name];
+ for(const text of [w.horizon,fmt(w.reaction.change_percent,'%'),fmt(w.reaction.SPY_excess_percentage_points,' pp'),costs[name]||words(name),(o.entry_date||'Unavailable')+' / '+(o.exit_date||'Unavailable'),o.net_pnl_gbp===null?'Unavailable: '+words(o.reason):o.net_pnl_gbp,benchmark.net_pnl_gbp===null?'Unavailable: '+words(benchmark.reason):benchmark.net_pnl_gbp]){const td=document.createElement('td');td.textContent=text;tr.append(td)}el('outcomes').append(tr)}}
+}
+put('coverage',data.source_rows.toLocaleString()+' source observations; '+data.ledger.length+' ranked bars; '+data.investigation_summary.focus+' investigated. '+Object.entries(data.investigation_summary.categories).map(([key,n])=>n+' '+({unexplained:'unexplained cases',plausible:'plausible associations',multiple:'cases with several possible catalysts',macro:'cases with market-wide context'}[key]||categories[key].toLowerCase())).join('; ')+'. '+(data.ledger.length-data.investigation_summary.focus)+' ranked bars not yet investigated.');
+for(const r of data.ledger){const o=document.createElement('option');o.value=r.id;o.textContent=r.id+' · '+categories[r.evidence.category];el('movement').append(o)}
+el('movement').addEventListener('change',()=>show(el('movement').value));
+put('replay',data.replay.trigger_bars+' trigger bars; '+data.replay.first_trigger_episodes+' first-trigger episodes; '+data.replay.daily_anomaly_rule_cases+' fixed-rule cases. Zero validated Buy decisions; zero actual prospective predictions. Detailed rule/control/cost summaries remain in the private JSON and report.');
+put('controls',data.independent_catalyst_controls.length+' source-selected controls. Full membership retained, including negative, positive and small reactions.');
+for(const c of data.independent_catalyst_controls){const li=document.createElement('li');link(li,c.source);const text=document.createElement('p');text.textContent=c.instrument+' · '+c.publication_day+' · '+c.category+'; day-only clock uses a conservative later eligibility bound.';li.append(text);el('control-evidence').append(li)}
+put('limits',data.limitations.join(' '));for(const b of document.querySelectorAll('[data-theme]')){b.addEventListener('click',()=>{document.documentElement.dataset.theme=b.dataset.theme;for(const x of document.querySelectorAll('[data-theme]'))x.setAttribute('aria-pressed',String(x===b))})}
+show(data.ledger[0].id);
+</script></body></html>

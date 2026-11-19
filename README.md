@@ -121,3 +121,15 @@ builds on #22; no merge. Two sourced-context ripple hypotheses, a dated chart
 aligned with virtual fills, and logged evidence/exit-rule reviews. Current weak
 evidence gives No Action for entry; optional manual paper practice is explicit.
 [Sources, setup and acceptance steps](ripple/README.md) · [Validation](ripple/VALIDATION.md).
+
+## Private price-first catalyst ledger (EVT-3 / Issue #54)
+
+[Run the scanner and private Move → Evidence → Explanation ledger](price_catalysts/README.md)
+against the six owner-supplied captures from draft #53. It ranks exceptional
+movements before researching catalysts, retains unexplained cases, and compares
+fixed later-entry simulations against source-selected and past-context controls.
+All historical results remain exploratory; detailed prices and performance stay
+in ignored local output. [Actual audit counts](price_catalysts/AUDIT.json) contain
+no price/return values. The public app, original prices and examined learning
+holdout are unchanged. Continuous news monitoring and genuinely new prospective
+evaluation remain the next stage; no validated Buy or live orders.
