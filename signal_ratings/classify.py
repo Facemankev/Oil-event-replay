@@ -5,6 +5,11 @@ from .policy import HERE, POLICY
 from world_events.events import digest
 
 
+def current_time():
+    from datetime import datetime, timezone
+    return datetime.now(timezone.utc)
+
+
 def approved_validation(validation_id, key):
     """Only reviewed repository artifacts can attest independence, never caller flags."""
     registry = json.loads((HERE / 'registry.json').read_text())
@@ -28,6 +33,10 @@ def approved_validation(validation_id, key):
         clocks = [datetime.fromisoformat(artifact[k].replace('Z', '+00:00')) for k in
                   ('training_ended_at', 'registered_at', 'first_prediction_at', 'first_outcome_at')]
         if not all(c.tzinfo is not None for c in clocks) or not all(a < b for a, b in zip(clocks, clocks[1:])):
+            return None
+        registered_policy = datetime.fromisoformat(POLICY['registered_at'].replace('Z', '+00:00'))
+        completed = datetime.fromisoformat(artifact['completed_at'].replace('Z', '+00:00'))
+        if clocks[1] < registered_policy or completed.tzinfo is None or not clocks[-1] < completed <= current_time():
             return None
         if artifact['independent_examples'] < POLICY['likely']['min_independent']:
             return None

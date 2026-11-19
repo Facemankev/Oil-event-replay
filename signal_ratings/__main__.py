@@ -10,7 +10,7 @@ from .engine import build
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('command', choices=['analyse', 'render'])
+    p.add_argument('command', choices=['analyse', 'render', 'screen'])
     p.add_argument('--scan', default='work/evt3/scan-v2.json')
     p.add_argument('--ledger', default='work/evt3/study-paired.json')
     p.add_argument('--db', default='work/stooq-private/prices.sqlite')
@@ -19,11 +19,13 @@ def main():
     p.add_argument('--report')
     p.add_argument('--output', required=True)
     args = p.parse_args()
-    if args.command == 'render':
-        from .view import render_private
+    if args.command in ('render','screen'):
+        from .view import render_private, screen_view
         if not args.report:
             p.error('--report is required for render')
-        render_private(args.output, json.loads(private_path(args.report).read_text()))
+        report=json.loads(private_path(args.report).read_text())
+        if args.command=='render':render_private(args.output, report)
+        else:save_private(args.output,screen_view(report))
     else:
         date.fromisoformat(args.as_of)
         report = build(json.loads(private_path(args.scan).read_text()), load(args.db, args.manifest),

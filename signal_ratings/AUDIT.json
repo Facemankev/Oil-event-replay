@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "scope": "Examined historical hypotheses, not independent opportunities or current signals",
+  "original_observations": 43507,
+  "original_writes": 0,
+  "hypotheses": 360,
+  "pattern_families": 10,
+  "rating_counts": {
+    "zero": {
+      "POSSIBLE": 33,
+      "NO ACTION": 327
+    },
+    "declared": {
+      "POSSIBLE": 20,
+      "NO ACTION": 340
+    },
+    "stressed": {
+      "POSSIBLE": 8,
+      "NO ACTION": 352
+    },
+    "small_account_flat_fee": {
+      "POSSIBLE": 7,
+      "NO ACTION": 353
+    }
+  },
+  "default_possible_directions": {
+    "DOWN": 7,
+    "UP": 13
+  },
+  "approved_current_signals": 0,
+  "independently_validated_patterns": 0,
+  "prospective_predictions": 0,
+  "holdout_changed": false,
+  "model_fitted": false,
+  "public_price_return_or_PNL_values": 0,
+  "detail_location": "Ignored owner-only work/signal1; never publish detailed reports, CSVs or database.",
+  "conclusion": "Possible means exploratory historical evidence. No Likely evidence exists; no source or paper-execution check is relaxed."
+}

@@ -111,7 +111,7 @@ Status: Done · In progress · Waiting for review · Planned · Blocked
 
 ## 5. Now
 
-- **Dad / SIGNAL-1:** New dad/signal-1-ratings branch on draft #55. Fixed historical rating rules registered before new summaries. Build private three-question opportunity/evidence screen, retain execution gates and classify all examined history as exploratory; no Likely without approved independent validation, no merge.
+- **Dad / SIGNAL-1:** Draft #56 on dad/signal-1-ratings, base #55. Fixed registered rules, private three-question historical dashboard, costs/SPY/controls and recurring-catalyst cross-checks implemented; 20 exploratory Possible / zero Likely across 360 overlapping hypotheses. No current signals or execution changes. Local new contracts/browser suite pass; final-head full checks in PR. Genuine independent validation and source evidence remain necessary; no merge.
 
 - **Dad / EVT-3:** Revised #54 catalogue stage in draft #55 on dad/evt-3-price-catalyst-ledger, stacked on #53. Read-only scan, dated catalyst ledger, independent controls and fixed-rule replay implemented; local regression and both implementation-head browser jobs pass. Final-head status lives in PR Checks. Keep retrospective explanation and examined holdout separate from genuinely future evaluation. Bounded-feed/prospective operation remains next; no raw publication or merge.
 

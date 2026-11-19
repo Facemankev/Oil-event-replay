@@ -103,8 +103,8 @@ class RatingTests(unittest.TestCase):
         artifact=dict(candidate_key=c['id'],mode='prospective_independent',
              primary_point_in_time_prices=True,usage_permitted=True,independence_audited=True,
              registered_before_outcomes=True,costs_and_benchmark_audited=True,multiple_testing_reviewed=True,
-             training_ended_at='2025-01-01T00:00:00Z',registered_at='2025-01-02T00:00:00Z',
-             first_prediction_at='2025-01-03T00:00:00Z',first_outcome_at='2025-01-04T00:00:00Z',
+             training_ended_at='2027-01-01T00:00:00Z',registered_at='2027-01-02T00:00:00Z',
+             first_prediction_at='2027-01-03T00:00:00Z',first_outcome_at='2027-01-04T00:00:00Z',completed_at='2027-01-05T00:00:00Z',
              independent_examples=60,time_blocks=4,coverage='0.95',mean_directional_net_stressed='1',
              median_directional_net_stressed='1',benchmark_excess='1',control_excess='1',block_robustness_lower_bound='0.1')
         with tempfile.TemporaryDirectory() as folder:
@@ -113,14 +113,17 @@ class RatingTests(unittest.TestCase):
                 (here/'proof.json').write_text(json.dumps(a))
                 (here/'registry.json').write_text(json.dumps(dict(approved_independent_validations={c['validation_id']:dict(artifact='proof.json',sha256=digest(a),policy_sha256=digest(POLICY))})))
             register(artifact)
-            with patch('signal_ratings.classify.HERE',here):
-                self.assertEqual(classify(c)['rating'],'LIKELY')
-                bad=dict(artifact,first_prediction_at='2025-01-05T00:00:00Z');register(bad)
+            from datetime import datetime,timezone
+            with patch('signal_ratings.classify.HERE',here), patch('signal_ratings.classify.current_time',return_value=datetime(2028,1,1,tzinfo=timezone.utc)):
+                self.assertEqual(classify(c)['rating'],'LIKELY');self.assertEqual(classify(c)['execution_action'],'No Action')
+                bad=dict(artifact,first_prediction_at='2027-01-05T00:00:00Z');register(bad)
                 self.assertEqual(classify(c)['rating'],'POSSIBLE')
                 bad=dict(artifact,benchmark_excess='0');register(bad)
                 self.assertEqual(classify(c)['rating'],'POSSIBLE')
                 bad=dict(artifact,independent_examples=5);register(bad)
                 self.assertEqual(classify(c)['rating'],'POSSIBLE')
+                for changes in [dict(primary_point_in_time_prices=False),dict(completed_at='2030-01-01T00:00:00Z'),dict(registered_at='2025-01-01T00:00:00Z'),dict(block_robustness_lower_bound='NaN')]:
+                    register(dict(artifact,**changes));self.assertEqual(classify(c)['rating'],'POSSIBLE')
 
 
 class PatternTests(unittest.TestCase):
@@ -165,6 +168,51 @@ class AggregationTests(unittest.TestCase):
         r=fixture_report();s=summarize(r['groups'][0]['members'],r['windows'],'DOWN','declared')
         self.assertEqual(s['successful'],5);self.assertFalse(s['short_profit_modelled'])
         self.assertGreater(D(s['mean_net_gbp']),0) # Existing long engine, not sign-flipped profit.
+
+
+
+class PrivateOutputTests(unittest.TestCase):
+    def test_dashboard_stays_private_and_cannot_overwrite(self):
+        from signal_ratings.demo import screen_fixture
+        from signal_ratings.view import render_screen,ROOT
+        (ROOT/'work').mkdir(exist_ok=True)
+        with self.assertRaises(ValueError):render_screen(ROOT/'signals'/'forbidden.html',screen_fixture())
+        with tempfile.TemporaryDirectory(dir=ROOT/'work') as folder:
+            path=Path(folder)/'screen.html';render_screen(path,screen_fixture())
+            self.assertEqual(path.stat().st_mode & 0o777,0o600)
+            with self.assertRaises(FileExistsError):render_screen(path,screen_fixture())
+    def test_data_cannot_close_the_json_script_element(self):
+        from signal_ratings.demo import screen_fixture
+        from signal_ratings.view import render_screen,ROOT
+        data=screen_fixture();data['limitations']=['</script><script>attack()</script>']
+        with tempfile.TemporaryDirectory(dir=ROOT/'work') as folder:
+            path=Path(folder)/'screen.html';render_screen(path,data)
+            self.assertNotIn('</script><script>attack()',path.read_text())
+            self.assertIn('\\u003c/script',path.read_text())
+    def test_no_source_or_execution_policy_was_weakened(self):
+        from daily_prices.stooq import policy
+        p=policy();self.assertFalse(p['redistribution_permitted']);self.assertFalse(p['model_training_permitted'])
+        self.assertFalse(p['price_adjustments_verified']);self.assertTrue(p['private_quarantine_only'])
+        for direction in ['UP','DOWN']:
+            c=card(direction)
+            for cost in POLICY['costs']:self.assertEqual(classify(c,cost)['execution_action'],'No Action')
+    def test_retrospective_catalysts_are_not_fabricated_earlier_features(self):
+        from signal_ratings.catalysts import catalogue
+        ledger=dict(ledger=[dict(investigation_focus=True,instrument='NVDA',date='2024-01-02',close_change_percent='4',
+              evidence=dict(sources=[{'id':'amd-2002'},{'id':'amd-outlook'}],category='multiple',explanation='SYNTHETIC',weakness='SYNTHETIC',confidence='limited'))])
+        groups=catalogue(ledger)
+        self.assertEqual(len(groups),1);self.assertEqual(len(groups[0]['cases']),1)
+        self.assertIn('not independent validation',groups[0]['cases'][0]['selection'])
+    def test_unexplained_catalysts_remain_visible(self):
+        from signal_ratings.catalysts import catalogue
+        ledger=dict(ledger=[dict(investigation_focus=True,instrument='NVDA',date='2024-01-02',close_change_percent='4',
+              evidence=dict(sources=[],category='unexplained',explanation='Unknown.',weakness='No reliable source.',confidence='limited'))])
+        self.assertEqual(catalogue(ledger)[0]['context'],'Unexplained or later-only evidence')
+    def test_appending_future_bars_does_not_reselect_past_pattern_episodes(self):
+        rows=[feature(i) for i in range(25)];calendar=[r['date'] for r in rows]
+        short=select({'NVDA':rows[:20]},calendar[:20])[('NVDA','spike')]
+        long=select({'NVDA':rows},calendar)[('NVDA','spike')]
+        self.assertEqual(short,[r for r in long if r['date']<=rows[19]['date']])
 
 
 if __name__=='__main__':unittest.main()

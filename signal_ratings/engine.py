@@ -11,6 +11,7 @@ from price_catalysts.replay import Evaluator, prior_control, period, reaction
 from simulations.engine import PROTOCOL as SIM, q
 from world_events.events import digest
 from .classify import classify, rank_key
+from .catalysts import catalogue
 from .patterns import select, LABELS
 from .policy import POLICY
 
@@ -86,6 +87,7 @@ def assess(report, as_of):
             key = f"{group['instrument']}:{group['pattern']}:{direction}:{group['horizon']}"
             card = dict(id=key, instrument=group['instrument'], pattern=group['pattern'],
                         title=LABELS[group['pattern']], direction=direction, horizon=group['horizon'],
+                        hypothesis_kind='reversal' if direction != ('DOWN' if group['pattern'] in ('dip','gap_down','trend_down','volume_down','dip_volume') else 'UP') else 'follow-through',
                         as_of=as_of, research_scope='exploratory_examined_history', validation_id=None,
                         member_ids=[m['window'] for m in members], control_ids=[m['control_window'] for m in members],
                         costs={c:summarize(members, windows, direction, c) for c in POLICY['costs']})
@@ -144,7 +146,7 @@ def build(scan, selections, ledger, as_of, data=None):
                   policy_sha256=digest(POLICY), source_rows=scan['source_rows'],
                   capture_fingerprints=scan['capture_fingerprints'], groups=groups, windows=windows,
                   pending=pending, issuer_controls=ledger['independent_catalyst_controls'],
-                  issuer_control_summary=ledger['independent_control_summary'],
+                  issuer_control_summary=ledger['independent_control_summary'],catalyst_catalogue=catalogue(ledger),
                   source_facts=evidence['sources'], all_history_previously_examined=True,
                   holdout_changed=False, trained_model=False, approved_current_signals=0,
                   current_market=dict(rating='NO ACTION', reason='No verified fresh news/price feed or qualified current signal. Historical patterns do not establish a current event.',
