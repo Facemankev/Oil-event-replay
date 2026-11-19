@@ -14,7 +14,7 @@ def bars(n=100,start='2024-01-02'):
     d=date.fromisoformat(start);rows=[];value=D(100)
     while len(rows)<n:
         day=d.isoformat();d+=timedelta(days=1)
-        if is_session(day) is False or d.weekday()==0 and False:continue
+        if is_session(day) is False:continue
         if date.fromisoformat(day).weekday()>4:continue
         i=len(rows);value*=1+D([1,-2,3,-1,2,-3][i%6])/1000
         rows.append(dict(date=day,status='numeric',open=str(value),high=str(value*D('1.01')),low=str(value*D('.99')),close=str(value),volume='100'))
@@ -34,6 +34,11 @@ class DetectorTests(unittest.TestCase):
     def test_blank_volume_is_not_zero_or_inferred(self):
         rows=bars();rows[-1]['volume']=None
         self.assertIsNone(features(rows)[-1]['volume_ratio'])
+    def test_missing_close_bar_is_retained_and_breaks_return_interval(self):
+        rows=bars();rows[-2]=dict(rows[-2],status='ND',close=None)
+        r=features(rows)
+        self.assertEqual(len(r),len(rows));self.assertIn('missing_numeric_close',r[-2]['data_flags'])
+        self.assertIsNone(r[-1]['close_change_percent']);self.assertIsNone(r[-1]['return_z'])
     def test_prior_volatility_is_not_current_move(self):
         rows=bars();a=features(rows)[-1];rows[-1]['close']=str(D(rows[-2]['close'])*D('1.4'));b=features(rows)[-1]
         self.assertEqual(a['prior_volatility'],b['prior_volatility']);self.assertGreater(D(b['return_z']),3)
@@ -111,6 +116,80 @@ class ReplayTests(unittest.TestCase):
     def test_embargo_at_reference_boundary(self):
         cal=[r['date'] for r in bars(100,'2019-11-01')]
         self.assertEqual(period('2019-12-20',cal),'embargo');self.assertEqual(period('2020-01-02',cal),'embargo')
+
+
+
+class PrivateLedgerTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from price_catalysts.demo import synthetic_report
+        cls.report=synthetic_report()
+
+    def test_public_projection_has_only_counts_no_returns_or_source_traces(self):
+        from price_catalysts.ledger import audit
+        public=json.dumps(audit(self.report))
+        for key in ['close_change_percent','net_pnl_gbp','capture_fingerprints','published_at','subsequent','maximum_net_pnl_gbp']:
+            self.assertNotIn(key,public)
+        self.assertEqual(audit(self.report)['published_price_return_or_PNL_values'],0)
+
+    def test_private_render_refuses_public_path_and_overwriting(self):
+        from price_catalysts.view import render_private
+        from event_history.library import ROOT
+        import tempfile
+        with self.assertRaises(ValueError):render_private(ROOT/'price_catalysts'/'forbidden.html',self.report)
+        with tempfile.TemporaryDirectory(dir=ROOT/'work') as folder:
+            p=Path(folder)/'ledger.html';render_private(p,self.report)
+            self.assertEqual(p.stat().st_mode & 0o777,0o600)
+            with self.assertRaises(FileExistsError):render_private(p,self.report)
+
+    def test_inline_json_is_safe_from_closing_script_injection(self):
+        from price_catalysts.view import render_private
+        from event_history.library import ROOT
+        import tempfile
+        r=copy.deepcopy(self.report);r['limitations']=['</script><script>attack()</script>']
+        with tempfile.TemporaryDirectory(dir=ROOT/'work') as folder:
+            p=Path(folder)/'ledger.html';render_private(p,r)
+            self.assertNotIn('</script><script>attack',p.read_text());self.assertIn('\\u003c/script',p.read_text())
+
+    def test_original_learning_and_simulation_reports_stay_separate(self):
+        self.assertFalse(self.report['holdout_changed']);self.assertEqual(self.report['prospective_predictions'],0)
+        self.assertEqual(self.report['validated_buys'],0);self.assertFalse(self.report['continuous_monitor_deployed'])
+        self.assertEqual(set(self.report['parent_report_fingerprints']),{'learning','simulations'})
+
+    def test_fee_sensitivity_keeps_negative_outcomes(self):
+        windows=[w for r in self.report['ledger'] for w in r['subsequent']]
+        comparable=[w for w in windows if w['costs']['zero']['status']==w['costs']['small_account_flat_fee']['status']=='simulated_reference_path']
+        self.assertTrue(comparable)
+        for w in comparable:self.assertGreater(D(w['costs']['zero']['net_pnl_gbp']),D(w['costs']['small_account_flat_fee']['net_pnl_gbp']))
+        self.assertTrue(any(w['costs']['small_account_flat_fee']['net_outcome']=='negative' for w in comparable))
+
+    def test_paired_control_coverage_keeps_missing_pairs(self):
+        from price_catalysts.replay import paired_controls
+        self.assertEqual(self.report['replay']['paired_context_comparisons'],paired_controls(self.report['replay']['cases']))
+        self.assertTrue(all(r['complete_pairs']+r['missing_pairs']==r['attempts'] for r in self.report['replay']['paired_context_comparisons']))
+
+    def test_unresearched_candidates_are_not_dropped_from_denominator(self):
+        self.assertGreater(len(self.report['ledger']),0)
+        self.assertTrue(any(r['evidence']['category']=='uninvestigated' for r in self.report['ledger']))
+        self.assertTrue(all(r['validated_action']=='No Action' for r in self.report['ledger']))
+
+    def test_private_source_database_is_read_only_and_explicit(self):
+        from daily_prices.stooq import ASSETS,capture_for,parse_supplied
+        from daily_prices.database import connect,import_capture
+        from price_catalysts.data import load
+        from event_history.library import ROOT
+        import hashlib,tempfile
+        with tempfile.TemporaryDirectory(dir=ROOT/'work') as folder:
+            folder=Path(folder);dbpath=folder/'prices.sqlite';manifest=folder/'manifest.json'
+            raw=b'Date,Open,High,Low,Close,Volume\n2024-01-02,100,101,99,100,10\n';imports=[]
+            db=connect(dbpath)
+            for symbol in ASSETS:
+                capture=capture_for(symbol,raw,'2026-11-19T08:00:00Z')
+                imports.append(import_capture(db,capture,parse_supplied(raw,capture),raw))
+            db.close();manifest.write_text(json.dumps({'imports':imports}));before=hashlib.sha256(dbpath.read_bytes()).hexdigest()
+            self.assertEqual(set(load(dbpath,manifest)),set(ASSETS));self.assertEqual(before,hashlib.sha256(dbpath.read_bytes()).hexdigest())
+            manifest.write_text(json.dumps({'imports':imports+[imports[0]]}))
+            with self.assertRaisesRegex(ValueError,'duplicate'):load(dbpath,manifest)
 
 
 if __name__=='__main__':unittest.main()

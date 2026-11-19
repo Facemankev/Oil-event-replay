@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "kind": "EVT3_public_audit_metadata_only",
+  "source_observations": 43507,
+  "original_price_writes": 0,
+  "ranked_distinct_bars": 67,
+  "investigation": {
+    "focus": 25,
+    "categories": {
+      "unexplained": 4,
+      "plausible": 10,
+      "multiple": 4,
+      "macro": 7
+    },
+    "explained_means": "A possible sourced association, never proven causality. Unexplained includes later-only evidence."
+  },
+  "independent_source_selected_controls": 18,
+  "trigger_bars": 2463,
+  "first_trigger_episodes": 900,
+  "fixed_daily_rule_cases": 363,
+  "published_price_return_or_PNL_values": 0,
+  "holdout_changed": false,
+  "genuinely_unseen_historical_tests": 0,
+  "actual_prospective_predictions": 0,
+  "qualified_buys": 0,
+  "continuous_monitor_deployed": false,
+  "results_location": "Owner-only ignored work/evt3; private detailed results must not be hosted or uploaded as CI artifacts.",
+  "conclusion": "Exploratory associations and mixed diagnostic outcomes do not establish prospective predictive value. Source adjustment/authentication, original receipt and execution remain unverified.",
+  "next_stage": "Bounded permitted feeds and an actual-clock pre-outcome prediction/settlement journal; not claimed deployed by this catalogue stage."
+}

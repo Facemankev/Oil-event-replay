@@ -99,7 +99,7 @@ class Evaluator:
         self.cache[key]=result;return result
 
     def record(self,record):
-        blocked=any(x in record.get('data_flags',[]) for x in ('possible_corporate_action_or_bad_print_needs_review','quote_on_reviewed_exchange_closure'))
+        blocked=any(x in record.get('data_flags',[]) for x in ('possible_corporate_action_or_bad_print_needs_review','quote_on_reviewed_exchange_closure','missing_numeric_close'))
         return [self.window(record['instrument'],record['date'],h,blocked) for h in HORIZONS]
 
 
@@ -122,6 +122,25 @@ def summary(cases):
     return result
 
 
+def paired_controls(cases):
+    results=[]
+    for p in ('reference_exploratory','later_exploratory_already_examined','embargo'):
+        for rule in PROTOCOL['replay']['rules']:
+            pool=[r for r in cases if r['period']==p and r['rule']==rule]
+            for h in HORIZONS:
+                for cost in COSTS['costs']:
+                    differences=[]
+                    for r in pool:
+                        a=next(w for w in r['signal'] if w['horizon']==h)['costs'][cost]
+                        b=next((w for w in r['context_control'] if w['horizon']==h),None)
+                        if b is not None and a['status']==b['costs'][cost]['status']=='simulated_reference_path':
+                            differences.append(D(a['net_pnl_gbp'])-D(b['costs'][cost]['net_pnl_gbp']))
+                    results.append(dict(period=p,rule=rule,horizon=h,cost=cost,attempts=len(pool),complete_pairs=len(differences),
+                        missing_pairs=len(pool)-len(differences),signal_better=sum(x>0 for x in differences),signal_worse=sum(x<0 for x in differences),
+                        equal=sum(x==0 for x in differences),median_paired_net_difference_gbp=q(median(differences)) if differences else None))
+    return results
+
+
 def replay(scan,evaluator):
     all_epochs=epochs(scan['features'],evaluator.calendar);cases=[]
     for r in all_epochs:
@@ -133,6 +152,8 @@ def replay(scan,evaluator):
     ids=[r['context_control_id'] for r in cases if r['context_control_id']]
     return dict(kind='fixed_rules_exploratory_not_validated_prediction',trigger_bars=sum(r['trigger'] for rows in scan['features'].values() for r in rows),
         first_trigger_episodes=len(all_epochs),daily_anomaly_rule_cases=len(cases),cases=cases,summaries=summary(cases),
+        paired_context_comparisons=paired_controls(cases),
+        instrument_summaries={s:summary([r for r in cases if r['instrument']==s]) for s in scan['features']},
         reused_context_controls=len(ids)-len(set(ids)),actual_prospective_predictions=0,qualified_buys=0,
         limitations=['Complete bar needed; no return from the already realised move is booked as a trade.',
           'All historical slices were exposed to discovery. Later results are exploratory, not an untouched test.',

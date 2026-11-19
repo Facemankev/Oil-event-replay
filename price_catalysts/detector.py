@@ -53,10 +53,11 @@ def one_series(symbol,points,spy_points,calendar):
     for r in points:
         day=r['date'];flags=[];ret=gap=active=None;span=None
         if is_session(day) is False:flags.append('quote_on_reviewed_exchange_closure')
-        if r['status']!='numeric':
-            previous=None;volumes.append(None);continue
-        close=D(r['close']);raw_move=None
-        if previous is not None:
+        numeric=r['status']=='numeric' and r.get('close') is not None
+        if not numeric:flags.append('missing_numeric_close')
+        close=D(r['close']) if numeric else None
+        raw_move=None
+        if previous is not None and numeric:
             prior=previous['date'];span=idx.get(day,0)-idx.get(prior,0)
             raw_move=close/D(previous['close'])-1
             if span!=1:flags.append('missing_intermediate_source_bar_or_calendar_uncertain')
@@ -100,7 +101,7 @@ def one_series(symbol,points,spy_points,calendar):
             detection_assumption='Only after the complete source bar; historical receipt was not recorded.',
             basis='Owner supplied Close/OHLC/Volume; adjustments/source authentication unverified; no re-adjustment.'))
         raw_returns.append(ret);raw_gaps.append(gap);active_returns.append(active);volumes.append(volume)
-        previous=r
+        previous=r if numeric else None
     return output
 
 
@@ -132,6 +133,7 @@ def detect(selections):
     features={symbol:one_series(symbol,s['rows'],selections['SPY']['rows'],calendar) for symbol,s in selections.items()}
     rankings,focus=rank(features)
     return dict(kind='PRIVATE_OUTCOME_SELECTED_price_discovery',protocol=PROTOCOL,
+        capture_fingerprints={symbol:s['capture']['payload_sha256'] for symbol,s in selections.items()},
         source_rows=sum(len(s['rows']) for s in selections.values()),features=features,rankings=rankings,focus=focus,
         untouched_historical_validation=False,prospective_predictions=0,
         limitations=['Ranks use realized bar movements; they are not a forecast or causal explanation.',
