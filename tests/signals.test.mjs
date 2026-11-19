@@ -48,3 +48,8 @@ test('Python and browser agree on every synthetic rating',()=>{
 test('future examples and sources cannot be used in an earlier assessment',()=>{
  for(const change of [d=>d.examples.positive.maturity_day='2030-01-01',d=>d.sources.fixture.published_day='2030-01-01',d=>d.cards[0].as_of='2020-01-01']){const d=clone();change(d);assert.throws(()=>validateReport(d));}
 });
+
+test('cost robustness ranks ahead of the largest observed movement',()=>{
+ const d=clone();const a=structuredClone(d.cards[0]),b=structuredClone(d.cards[0]);a.id='stable';b.id='fragile';b.costs.declared.median_return_percent='90';b.costs.stressed.median_net_gbp='-1';d.cards=[b,a];
+ assert.equal(rankedCards(d,{policy})[0].id,'stable');
+});

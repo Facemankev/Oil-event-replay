@@ -98,6 +98,12 @@ class RatingTests(unittest.TestCase):
         b['costs']['declared']['median_return_percent']='90';b['costs']['declared']['coverage']='0.6'
         for c in [a,b]:c['ratings']={x:classify(c,x) for x in POLICY['costs']}
         self.assertLess(rank_key(a),rank_key(b))
+    def test_cost_fragility_precedes_largest_return_in_ranking(self):
+        stable,fragile=card(),card();stable['id']='stable';fragile['id']='fragile'
+        fragile['costs']['declared']['median_return_percent']='90'
+        fragile['costs']['stressed']['median_net_gbp']='-1'
+        for c in [stable,fragile]:c['ratings']={cost:classify(c,cost) for cost in POLICY['costs']}
+        self.assertLess(rank_key(stable),rank_key(fragile))
     def test_likely_requires_reviewed_clock_bound_robust_artifact(self):
         c=card();c['validation_id']='reviewed-synthetic'
         artifact=dict(candidate_key=c['id'],mode='prospective_independent',

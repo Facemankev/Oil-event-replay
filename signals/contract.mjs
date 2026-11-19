@@ -38,8 +38,8 @@ export function rankedCards(data,{market='all',horizon='all',cost='declared',rat
  const grade={'NO ACTION':0,'POSSIBLE':1,'LIKELY':2};
  const rows=data.cards.filter(c=>(market==='all'||c.instrument===market)&&(horizon==='all'||c.horizon===Number(horizon))&&(rating==='all'||safeRating(c,cost,policy).rating===rating));
  return rows.sort((a,b)=>{const x=a.costs[cost],y=b.costs[cost];
-  const ax=[grade[safeRating(a,cost,policy).rating],Number(x.coverage),Math.min(x.complete,100),x.distinct_years,x.control_pairs,-Math.abs(Math.min(0,Number(x.worst_directional_return_percent||0))),Math.abs(Number(x.median_return_percent||0))];
-  const by=[grade[safeRating(b,cost,policy).rating],Number(y.coverage),Math.min(y.complete,100),y.distinct_years,y.control_pairs,-Math.abs(Math.min(0,Number(y.worst_directional_return_percent||0))),Math.abs(Number(y.median_return_percent||0))];
+  const ax=[grade[safeRating(a,cost,policy).rating],Number(x.coverage),Math.min(x.complete,100),x.distinct_years,x.control_pairs,safeRating(a,'stressed',policy).rating==='NO ACTION'?0:1,-Math.abs(Math.min(0,Number(x.worst_directional_return_percent||0))),Math.abs(Number(x.median_return_percent||0))];
+  const by=[grade[safeRating(b,cost,policy).rating],Number(y.coverage),Math.min(y.complete,100),y.distinct_years,y.control_pairs,safeRating(b,'stressed',policy).rating==='NO ACTION'?0:1,-Math.abs(Math.min(0,Number(y.worst_directional_return_percent||0))),Math.abs(Number(y.median_return_percent||0))];
   for(let i=0;i<ax.length;i++)if(ax[i]!==by[i])return by[i]-ax[i];
   return a.id.localeCompare(b.id);
  });

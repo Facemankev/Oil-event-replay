@@ -64,6 +64,7 @@ def render_screen(path,view):
     code=(ROOT/'signals/contract.mjs').read_text().replace('export ','')+'\n'+(ROOT/'signals/view.mjs').read_text().split('\n',1)[1].replace('export ','')
     encoded=json.dumps(view,ensure_ascii=True,separators=(',',':')).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
     template=template.replace('<link rel="stylesheet" href="../matching/design.css"><link rel="stylesheet" href="../ripple/style.css"><link rel="stylesheet" href="style.css">','<style>'+css+'</style>')
+    template=template.replace('href="../ripple/"','href="../../ripple/index.html"')
     template=template.replace('<script type="module" src="view.mjs"></script>',
         '<script type="application/json" id="embedded-policy">'+json.dumps(POLICY)+'</script><script type="application/json" id="embedded-report">'+encoded+'</script><script>'+code+'</script>')
     p=private_path(path);p.parent.mkdir(parents=True,exist_ok=True)

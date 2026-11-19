@@ -1,6 +1,6 @@
 # Signal ratings screen
 
-This static page is an empty private-report viewer, linked from the existing replay's optional research. It contains no market datasets. Load a locally generated compact SIGNAL-1 screen JSON: reading stays in your browser, with no upload, analytics or persistence.
+This static page is an empty private-report viewer, linked from the repository README; the existing replay remains unchanged. It contains no market datasets. Load a locally generated compact SIGNAL-1 screen JSON: reading stays in your browser, with no upload, analytics or persistence.
 
 [Setup, ratings, calculations and limitations](../signal_ratings/README.md).
 

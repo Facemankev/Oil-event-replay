@@ -30,7 +30,7 @@ function showCard(card){
  const cost=el('cost').value,r=safeRating(card,cost,state.policy),s=card.costs[cost];
  put('signal-rating',r.rating);put('signal-window',r.direction?`${r.direction==='UP'?'↑ UP':'↓ DOWN'} · ${r.horizon} trading session${r.horizon===1?'':'s'}`:'Direction uncertain');
  put('what',`${card.instrument}: ${card.title.toLowerCase()} in past examples.`);
- put('outcome',r.direction?`${r.direction==='UP'?'↑ UP':'↓ DOWN'} hypothesis over ${r.horizon} sessions — exploratory.`:'Uncertain: the tested direction lacks sufficient support.');
+ put('outcome',r.direction?`${r.direction==='UP'?'↑ UP':'↓ DOWN'} ${card.hypothesis_kind==='reversal'?'reversal':'follow-through'} hypothesis over ${r.horizon} session${r.horizon===1?'':'s'} — exploratory.`:'Uncertain: the tested direction lacks sufficient support.');
  put('action',r.rating==='NO ACTION'?'NO ACTION':card.direction==='DOWN'?'POSSIBLE — Watch downside risk':'POSSIBLE — Watch for confirmation');
  put('caveat','Historical research only, not a current forecast. No paper entry or sale is authorised by this rating.');
  put('sample',`${s.complete} complete examples from ${s.attempts} matured attempts across ${s.distinct_years} years. ${s.missing} missing; ${s.control_pairs} matched quiet-period comparisons. Non-overlapping windows are not proven independent.`);
@@ -49,15 +49,16 @@ function renderRanked(){
  el('ranked').replaceChildren();el('empty').hidden=state.rows.length>0;
  if(!state.rows.some(c=>c.id===state.selected?.id))showCard(state.rows[0]||null);else showCard(state.rows.find(c=>c.id===state.selected.id));
  for(const c of state.rows.slice(0,state.limit)){const li=document.createElement('li'),button=document.createElement('button');button.type='button';button.dataset.card=c.id;button.setAttribute('aria-pressed',String(c.id===state.selected?.id));
- const name=document.createElement('span');name.textContent=`${c.instrument}: ${c.title}`;const meta=document.createElement('span');meta.className='rank-meta';meta.textContent=`${safeRating(c,cost,state.policy).rating} · ${c.direction} hypothesis · ${c.horizon} sessions · ${c.costs[cost].complete} complete examples`;
+ const name=document.createElement('span');name.textContent=`${c.instrument}: ${c.title}`;const meta=document.createElement('span');meta.className='rank-meta';meta.textContent=`${safeRating(c,cost,state.policy).rating} · ${c.direction} hypothesis · ${c.horizon} session${c.horizon===1?'':'s'} · ${c.costs[cost].complete} complete examples`;
  button.append(name,meta);button.addEventListener('click',()=>{showCard(c);for(const b of el('ranked').querySelectorAll('button'))b.setAttribute('aria-pressed',String(b.dataset.card===c.id))});li.append(button);el('ranked').append(li)}
  el('show-more').hidden=state.rows.length<=state.limit;
 }
 function loadReport(data){
  state.report=validateReport(data);state.selected=null;state.limit=12;
  put('status',data.synthetic?'SYNTHETIC demonstration — fabricated test examples, not market evidence.':'Private historical analysis loaded locally. No current signal or trade permission.');
- put('scope',`Assessment date ${data.as_of}; ${data.source_rows.toLocaleString()} observations. All historical periods were already examined. ${data.pending_count} unfinished windows remain pending. ${data.source_profile}`);
- items('limitations',data.limitations);el('research').hidden=false;
+ put('scope',`Historical assessment ${data.as_of}. Prices and original availability remain unverified.`);
+ put('coverage',`Assessment date ${data.as_of}; ${data.source_rows.toLocaleString()} observations. All historical periods were already examined. ${data.pending_count} unfinished windows remain pending. ${data.source_profile}`);
+ items('limitations',data.limitations);el('research').hidden=false;document.querySelector('footer').append(el('file-panel'));
  el('issuer-controls').replaceChildren();for(const c of data.issuer_controls){const li=document.createElement('li');li.append(document.createTextNode(`${c.instrument}, ${c.publication_day}: `));sourceLink(li,c.source);if(c.reactions){const text=document.createElement('p');text.textContent='Publication-day close follow-through (not intraday causation): '+c.reactions.map(r=>r.horizon+' sessions '+numeric(r.change_percent,'%',true)).join('; ');li.append(text)}el('issuer-controls').append(li)}
  el('catalyst-contexts').replaceChildren();for(const group of data.catalyst_catalogue||[]){const li=document.createElement('li');const heading=document.createElement('strong');heading.textContent=group.context;li.append(heading);for(const c of group.cases){const p=document.createElement('p');p.textContent=`${c.instrument}, ${c.date}, observed discovery move ${numeric(c.observed_discovery_change_percent,'%',true)}: ${c.explanation} ${c.weakness}`;li.append(p);for(const id of c.sources){const line=document.createElement('p');sourceLink(line,data.sources[id]);li.append(line)}}el('catalyst-contexts').append(li)}
  renderRanked();
@@ -67,6 +68,6 @@ for(const id of ['market','horizon','cost','rating-filter'])el(id).addEventListe
 el('example-filter').addEventListener('change',renderExamples);el('show-more').addEventListener('click',()=>{state.limit+=12;renderRanked()});
 for(const b of document.querySelectorAll('[data-theme]'))b.addEventListener('click',()=>{document.documentElement.dataset.theme=b.dataset.theme;for(const x of document.querySelectorAll('[data-theme]'))x.setAttribute('aria-pressed',String(x===b))});
 for(const id of ['historical','current'])el(id+'-mode').addEventListener('click',()=>{el('history').hidden=id!=='historical';el('current').hidden=id!=='current';el('historical-mode').setAttribute('aria-pressed',String(id==='historical'));el('current-mode').setAttribute('aria-pressed',String(id==='current'))});
-el('private-file').addEventListener('change',async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>16000000)throw new Error('Choose the compact screen JSON, not the full private analysis.');loadReport(JSON.parse(await file.text()))}catch(e){state.report=null;el('research').hidden=true;put('status','Could not load private evidence: '+e.message)}});
+el('private-file').addEventListener('change',async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>16000000)throw new Error('Choose the compact screen JSON, not the full private analysis.');loadReport(JSON.parse(await file.text()))}catch(e){state.report=null;el('research').hidden=true;el('status').after(el('file-panel'));put('status','Could not load private evidence: '+e.message)}});
 async function start(){try{const embedded=document.getElementById('embedded-policy');state.policy=embedded?JSON.parse(embedded.textContent):await (await fetch('../signal_ratings/policy.json')).json();if(state.policy.version!=='SIGNAL-1/1')throw new Error('Unsupported evidence policy');const data=document.getElementById('embedded-report');if(data)loadReport(JSON.parse(data.textContent))}catch(e){el('research').hidden=true;put('status','Could not load the registered policy/evidence: '+e.message)}}
 start();

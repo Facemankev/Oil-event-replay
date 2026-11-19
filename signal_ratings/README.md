@@ -1,6 +1,6 @@
 # SIGNAL-1 — Historical signal ratings
 
-[Draft PR #56](https://github.com/Facemankev/Oil-event-replay/pull/56), stacked on #55. A working private historical opportunity dashboard uses the existing EVT-3 features, catalyst research and SIM cost/FX engine. The original app retains its three questions and paper-trading rules; an optional research link opens the empty SIGNAL-1 shell. No price data is bundled with it.
+[Draft PR #56](https://github.com/Facemankev/Oil-event-replay/pull/56), stacked on #55. A working private historical opportunity dashboard uses the existing EVT-3 features, catalyst research and SIM cost/FX engine. The original app is byte-for-byte unchanged; the new empty SIGNAL-1 shell reuses its three questions and styles. No price data is bundled with it.
 
 ## Run on your PC
 
@@ -17,10 +17,10 @@ Set the assessment date deliberately and adjust the existing private filenames a
 Open the standalone `dashboard.html`, or serve it only on your own PC:
 
 ```sh
-python3 -m http.server 8765 --bind 127.0.0.1 --directory work/signal1
+python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Then open `http://127.0.0.1:8765/dashboard.html`. The generated file embeds Brendan's actual Gold × Desk CSS, the same three-question layout and a compact report, with no automatic external requests. The public `/signals/` page is an empty shell: it can read your compact `screen.json` locally through its file chooser, without uploading or storing it. Never publicly host the generated HTML/JSON, detailed analysis, original CSVs or database. The larger full analysis is deliberately separate from the phone-sized screen projection.
+Then open `http://127.0.0.1:8765/work/signal1/dashboard.html`. The generated file embeds Brendan's actual Gold × Desk CSS, the same three-question layout and a compact report, with no automatic external requests. The public `/signals/` page is an empty shell: it can read your compact `screen.json` locally through its file chooser, without uploading or storing it. Never publicly host the generated HTML/JSON, detailed analysis, original CSVs or database. The larger full analysis is deliberately separate from the phone-sized screen projection.
 
 ## Ratings and safeguards
 

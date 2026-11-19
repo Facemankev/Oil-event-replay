@@ -152,6 +152,7 @@ def build(scan, selections, ledger, as_of, data=None):
                   current_market=dict(rating='NO ACTION', reason='No verified fresh news/price feed or qualified current signal. Historical patterns do not establish a current event.',
                                       direction=None, horizon=None, execution_action='No Action'),
                   limitations=['Private current-vintage files; adjustments, original receipt and executable prices unverified.',
+                               'Six owner-selected surviving assets and many overlapping hypotheses can produce chance patterns; no multiple-testing-adjusted predictive claim.',
                                'All histories already examined; Possible is exploratory, never an untouched test or a forecast.',
                                'Non-overlapping windows are not proven independent. Patterns and horizons share episodes.',
                                'Historical success means observed direction, not forecast probability; DOWN is risk watch, never a modelled short profit.',

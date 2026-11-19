@@ -101,7 +101,7 @@ def classify(card, cost='declared'):
                 current_signal=False, execution_action='No Action',
                 confirmation=['Verify adjusted prices, original availability and realistic instrument costs.',
                               'Find timely, corroborated company or market evidence for a genuinely new event.',
-                              'Lock a new paper prediction before its outcome and validate independent episodes.'],
+                              'Use permitted, verified data to lock a new paper prediction before its outcome and validate independent episodes.'],
                 downside_scope='DOWN means watch for downside risk; no short-profit or short-order model.' if direction < 0 else None,
                 label='Independently validated pattern; no current signal' if rating == 'LIKELY'
                       else 'Exploratory historical pattern' if rating == 'POSSIBLE'
@@ -114,5 +114,6 @@ def rank_key(card, cost='declared'):
     grade = {'LIKELY': 2, 'POSSIBLE': 1, 'NO ACTION': 0}[result['rating']]
     adverse = abs(min(D(0), D(stats['worst_directional_return_percent'] or '0')))
     return (-grade, -D(stats['coverage']), -min(stats['complete'], 100),
-            -stats['distinct_years'], -stats['control_pairs'], adverse,
+            -stats['distinct_years'], -stats['control_pairs'],
+            int(card['ratings']['stressed']['rating']=='NO ACTION'), adverse,
             -abs(D(stats['median_return_percent'] or '0')), card['id'])
